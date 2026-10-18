@@ -182,8 +182,8 @@ export default function App() {
   }
   const atlas = atlases.find(a => a.key === active)
   const second = atlases.find(a => a.key === comparison)
-  const contentSuffix = startup?.atlas_key === active && startup.content_key ? ':content:' + startup.content_key : ''
-  const comparisonSuffix=comparisonStartup?.atlas_key===comparison?':content:'+comparisonStartup.content_key:''
+  const contentSuffix = course ? ':course:' + course.course.id : startup?.atlas_key === active && startup.content_key ? ':content:' + startup.content_key : ''
+  const comparisonSuffix=comparisonStartup?.atlas_key===comparison?(course?':course:'+course.course.id:':content:'+comparisonStartup.content_key):''
   const atlasLabel = (entry: AtlasEntry) => atlases.some(other => other.key !== entry.key && other.title === entry.title)
     ? `${entry.title} · ${entry.package_version}` : entry.title
   return <div className={`app ${comparing && !showWorkspace && !showTeaching && !home ? 'comparing' : ''} ${course&&!showWorkspace&&!showTeaching&&!home?'course-active':''}`}>
@@ -204,12 +204,12 @@ export default function App() {
     {course&&!showWorkspace&&!showTeaching&&!home&&<CoursePresentation saved={course} position={coursePosition} busy={courseBusy} error={courseError} comparisonId={comparing?comparisonStartup?.entry_id:undefined} onCompare={id=>void compareCourseView(id)} onPosition={position=>void changeCoursePosition(position)} onEdit={()=>openTeachingLibrary(course.course.id)} onClose={()=>{setCourse(null);navigate({view:'atlas',atlas:active})}}/>}
     {home && !showWorkspace && !showTeaching && !loadingCatalog && <AnatomyHome atlases={atlases} workspace={workspaceEnabled} dataset={dataset} group={homeGroup} onGroup={value=>{setHomeGroup(value);navigate({view:'anatomy',dataset:dataset??undefined,group:value??undefined})}} onDataset={value=>{setDataset(value);setHomeGroup(null);navigate({view:'anatomy',dataset:value??undefined})}} onManage={value => { setDataset(value); setHomeGroup(null); setShowWorkspace(true);navigate({view:'workspace',dataset:value}) }} onOpen={openWorkspaceAtlas}/>}
     {!home && !showWorkspace && !showTeaching && (atlas ? <main className={`workspace-pair ${comparing ? 'comparison-active' : ''}`}>
-      <section className="atlas-slot" aria-label="Primary atlas workspace">{atlas.representation === 'surface-model' ? <SurfaceModelWorkspace key={atlas.key + (scope?.id ?? '') + contentSuffix} atlas={atlas} scope={scope} memory={modelMemory.current} notebooks={modelNotebooks.current} viewKey={'primary:' + atlas.key + (scope ? ':' + scope.id : '') + contentSuffix} startupContent={startup?.atlas_key === atlas.key ? startup.content : undefined}/> : <AtlasWorkspace key={atlas.key + (scope?.id ?? '') + contentSuffix} atlas={atlas} scope={scope} compact={comparing} memory={memory.current} notebooks={notebooks.current} viewKey={'primary:' + atlas.key + (scope ? ':' + scope.id : '') + contentSuffix} startupContent={startup?.atlas_key === atlas.key ? startup.content : undefined}/>}</section>
-      {comparing && second && <section className="atlas-slot" aria-label="Comparison atlas workspace">{second.representation === 'surface-model' ? <SurfaceModelWorkspace key={second.key+comparisonSuffix} atlas={second} memory={modelMemory.current} notebooks={modelNotebooks.current} viewKey={'comparison:' + second.key+comparisonSuffix} startupContent={comparisonStartup?.atlas_key===second.key?comparisonStartup.content:undefined}/> : <AtlasWorkspace key={second.key+comparisonSuffix} atlas={second} compact memory={memory.current} notebooks={notebooks.current} viewKey={'comparison:' + second.key+comparisonSuffix} startupContent={comparisonStartup?.atlas_key===second.key?comparisonStartup.content:undefined}/>}</section>}
+      <section className="atlas-slot" aria-label="Primary atlas workspace">{atlas.representation === 'surface-model' ? <SurfaceModelWorkspace key={atlas.key + (scope?.id ?? '') + contentSuffix} atlas={atlas} scope={scope} memory={modelMemory.current} notebooks={modelNotebooks.current} viewKey={'primary:' + atlas.key + (scope ? ':' + scope.id : '') + contentSuffix} startupContent={!course&&startup?.atlas_key === atlas.key ? startup.content : undefined} recordedScene={course&&startup?.atlas_key === atlas.key ? startup.content : undefined}/> : <AtlasWorkspace key={atlas.key + (scope?.id ?? '') + contentSuffix} atlas={atlas} scope={scope} compact={comparing} memory={memory.current} notebooks={notebooks.current} viewKey={'primary:' + atlas.key + (scope ? ':' + scope.id : '') + contentSuffix} startupContent={!course&&startup?.atlas_key === atlas.key ? startup.content : undefined} recordedScene={course&&startup?.atlas_key === atlas.key ? startup.content : undefined}/>}</section>
+      {comparing && second && <section className="atlas-slot" aria-label="Comparison atlas workspace">{second.representation === 'surface-model' ? <SurfaceModelWorkspace key={second.key+comparisonSuffix} atlas={second} memory={modelMemory.current} notebooks={modelNotebooks.current} viewKey={'comparison:' + second.key+comparisonSuffix} startupContent={!course&&comparisonStartup?.atlas_key===second.key?comparisonStartup.content:undefined} recordedScene={course&&comparisonStartup?.atlas_key===second.key?comparisonStartup.content:undefined}/> : <AtlasWorkspace key={second.key+comparisonSuffix} atlas={second} compact memory={memory.current} notebooks={notebooks.current} viewKey={'comparison:' + second.key+comparisonSuffix} startupContent={!course&&comparisonStartup?.atlas_key===second.key?comparisonStartup.content:undefined} recordedScene={course&&comparisonStartup?.atlas_key===second.key?comparisonStartup.content:undefined}/>}</section>}
     </main> : <div className="empty">Loading the local atlas catalog…<p>Build a package and run <code>neuroimage serve --atlas path/to/manifest.json</code> to begin.</p></div>)}
   </div>
 }
-function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, scope }: { atlas: AtlasEntry; compact: boolean; scope?: AnatomyScope; memory: Map<string, ViewState>; notebooks: Map<string, NotebookDraft>; viewKey: string; startupContent?: unknown }) {
+function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, recordedScene, scope }: { atlas: AtlasEntry; compact: boolean; scope?: AnatomyScope; memory: Map<string, ViewState>; notebooks: Map<string, NotebookDraft>; viewKey: string; startupContent?: unknown; recordedScene?: unknown }) {
   const [expanded, setExpanded] = useState(false), compact = true
   const [groupOnly, setGroupOnly] = useState(!!scope?.structure_ids.length)
   const workspaceElement = useRef<HTMLElement>(null), expandButton = useRef<HTMLButtonElement>(null)
@@ -250,6 +250,8 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, sco
   const practice = useRef(false)
   practice.current = quiz
   const storageKey = `neuroimage:scene:${viewKey.startsWith('comparison:') ? 'comparison:' : ''}${atlas.key}`
+  const requestedScene = useRef(recordedScene), appliedScene = useRef<unknown>(undefined)
+  requestedScene.current = recordedScene
   function patch(change: Partial<ViewState>) { setState(s => s ? { ...s, ...change } : s) }
   function patchTeaching(change: Partial<TeachingState>) { setState(s => s?.teaching ? { ...s, teaching: { ...s.teaching, ...change } } : s) }
   useEffect(() => { let cancelled = false
@@ -292,6 +294,10 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, sco
           } else initial = readScene(startupContent, m, l.lessons).state
         } catch (error) { setError(`The selected teaching file could not be opened. Your saved browser notebook was retained. ${String(error)}`) }
       }
+      if (requestedScene.current !== undefined) {
+        initial = readScene(requestedScene.current, m, l.lessons).state
+        appliedScene.current = requestedScene.current
+      }
       setManifest(m); setState(initial); stateRef.current = initial; setLessons(l.lessons)
       try { const saved = !!(await readBrowserContent(storageKey)); if (!cancelled) setSaved(saved) } catch { /* Saving remains optional. */ }
     }
@@ -323,6 +329,18 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, sco
     if (state) memory.set(viewKey, state)
     if (state && ready) viewer.current?.apply(state).catch(e => setError(String(e)))
   }, [state, ready, memory, viewKey])
+  useEffect(() => {
+    if (!ready || !manifest || recordedScene === undefined || appliedScene.current === recordedScene) return
+    let current = true
+    try {
+      const restored = readScene(recordedScene, manifest, lessons).state
+      appliedScene.current = recordedScene
+      stateRef.current = restored; setState(restored); setError(''); setStatus('Restoring recorded view…')
+      void viewer.current?.apply(restored).then(() => { if (current) setStatus('Ready') })
+        .catch(error => { if (current) setError(String(error)) })
+    } catch (error) { setError(String(error)) }
+    return () => { current = false }
+  }, [recordedScene, manifest, lessons, ready])
   const selected = manifest?.structures.find(s => s.id === state?.selected)
   const lesson = lessons.find(l => l.id === lessonId)
   const hidden = quiz && !revealed

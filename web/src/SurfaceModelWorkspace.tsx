@@ -15,8 +15,8 @@ import type { AtlasEntry, Lesson, Vec3 } from './types'
 import type { ModelSurface, ModelView, SurfaceManifest } from './modelTypes'
 import type { AnatomyScope } from './anatomyNavigation'
 
-export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,startupContent}: {
-  atlas:AtlasEntry;memory:Map<string,ModelView>;notebooks:Map<string,ModelNotebookDraft>;viewKey:string;scope?:AnatomyScope;startupContent?:unknown
+export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,startupContent,recordedScene}: {
+  atlas:AtlasEntry;memory:Map<string,ModelView>;notebooks:Map<string,ModelNotebookDraft>;viewKey:string;scope?:AnatomyScope;startupContent?:unknown;recordedScene?:unknown
 }) {
   const [manifest,setManifest]=useState<SurfaceManifest|null>(null),[lessons,setLessons]=useState<Lesson[]>([])
   const [state,setState]=useState<ModelView|null>(null)
@@ -33,6 +33,8 @@ export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,star
   },[drawer])
   const sceneUpload=useRef<HTMLInputElement>(null)
   const storageKey='neuroimage:model:'+viewKey,bookKey='neuroimage:model-notebook:'+viewKey
+  const requestedScene=useRef(recordedScene),appliedScene=useRef<unknown>(undefined)
+  requestedScene.current=recordedScene
   const patch=(value:Partial<ModelView>)=>setState(previous=>previous?{...previous,...value}:previous)
   useEffect(()=>{let cancelled=false
     async function load(){
@@ -55,6 +57,7 @@ export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,star
         else initial=readModelScene(startupContent,m,l).state
       }
       if(cancelled)return
+      if(requestedScene.current!==undefined){initial=readModelScene(requestedScene.current,m,l).state;appliedScene.current=requestedScene.current}
       setManifest(m);setLessons(l);setState(initial);stateRef.current=initial
       if(!remembered)notebooks.set(bookKey,{book:notebook,dirty:!!startupContent,activeId:notebook.scenes[0]?.id??null})
       try{const saved=!!(await readBrowserContent(storageKey));if(!cancelled)setSaved(saved)}catch{ /* Scene files work without browser storage. */ }
@@ -76,6 +79,18 @@ export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,star
     return()=>{mounted=false;v?.dispose();viewer.current=null}
   },[manifest,atlas.base_url])
   useEffect(()=>{stateRef.current=state;if(state){memory.set(viewKey,state);if(ready)void viewer.current?.apply(state).catch(error=>setError(String(error)))}},[state,ready,memory,viewKey])
+  useEffect(()=>{
+    if(!ready||!manifest||recordedScene===undefined||appliedScene.current===recordedScene)return
+    let current=true
+    try{
+      const restored=readModelScene(recordedScene,manifest,lessons).state
+      appliedScene.current=recordedScene
+      stateRef.current=restored;setState(restored);setError('');setStatus('Restoring recorded view…')
+      void viewer.current?.apply(restored).then(()=>{if(current)setStatus('Ready')})
+        .catch(error=>{if(current)setError(String(error))})
+    }catch(error){setError(String(error))}
+    return()=>{current=false}
+  },[recordedScene,manifest,lessons,ready])
   const selected=manifest?.structures.find(item=>item.id===state?.selected)
   const structures=manifest?.structures.filter(item=>(!groupOnly||!scope||scope.structure_ids.includes(item.id))&&(!category||item.category===category)&&`${item.name} ${item.id} ${item.source_name}`.toLowerCase().includes(query.toLowerCase()))??[]
   const lesson=lessons.find(item=>item.id===state?.lesson_id),step=state?.lesson_step??0

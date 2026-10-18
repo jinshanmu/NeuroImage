@@ -8,6 +8,7 @@
 - Compact repeated recipe metadata in teaching scenes while retaining source and processing records and compatibility with historical scene files.
 - Load image/model renderers when opened; use a lightweight cached anatomy catalog, conditional asset requests and session validation reuse. Avoid rendering the anatomy again after text-only edits.
 - Restore exact local atlas bookmarks after service restart; keep page-based scrolling and complete wrapping labels.
+- Reuse the current image or model viewer between course entries from the same source, while restoring every recorded view and keeping comparison coordinates independent.
 - Simplify functional labels and remove decorative slogans.
 - Add a resumable Linux installer, pinned runtime bootstrap, source-aware diagnostics, acquisition/construction quickstart, portable storage profile and a complete dataset access table.
 - Remove unused frontend frameworks and their dependencies; retain the four runtime packages used by the application and keep their locked versions unchanged.

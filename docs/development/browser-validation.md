@@ -1,5 +1,13 @@
 # Real browser validation
 
+## Current release checks
+
+The 1.0.0 author-review record is described in [release candidate validation](../release-candidate-validation.md). `scripts/browser_page_flow.js` checks every visible scroll container at desktop and narrow widths. `scripts/browser_course_navigation.js` checks repeated same-source course navigation and retained source state after warming its assets. Run these helpers through Playwright CLI with an isolated browser profile and the matching local anatomy. Current acceptance requires page-owned scrolling throughout the ordinary interface.
+
+## Historical source-specific fixtures
+
+The following records preserve the source and interface assumptions of earlier checks. They complement the current release evidence; old interface selectors may require adaptation.
+
 The reusable `scripts/browser_smoke.js` runs through Playwright CLI against an already running local service with SPL/NAC and CerebrA packages. It is an async function in the CLI's supported `run-code` format, not a Playwright Test runner suite.
 
 The 2026-10-12 run used Playwright CLI 0.1.22, Playwright 1.64.0-alpha-1790635538000 and Chrome for Testing 155.0.8059.12 (Chromium revision 1247). The isolated browser lives under the ignored SSD `tools/playwright-browsers` directory. It was installed through that Playwright version's `install chromium` command with `PLAYWRIGHT_BROWSERS_PATH` set to that directory. It is a development tool, not a bundled application dependency.
@@ -13,7 +21,7 @@ playwright-cli -s=neuroimage run-code --filename=scripts/browser_smoke.js
 
 The script selects a source-labelled target; checks physical coordinates after display changes; switches T1/T2; saves/restores notes and a coordinate annotation; exports/imports a scene; exports a credited image ZIP; rejects a mismatched space; exercises a lesson and identification feedback; then opens the second independent native-space package and rapidly changes contrast. Its outputs are development evidence, excluded from software distributions. Derived export files are placed under the configured HDD data root.
 
-Fixed viewport emulation is for repeatable pointer fixtures. Use `viewport: null` in a headed demonstration context so both page edges follow the real browser window. `scripts/browser_window_layout.js` requires a native viewport context and resizes the actual Chromium window. It checks the header, both drawers, the ordinary and expanded canvas, retained source coordinates and document-owned page scrolling. It restores the original window bounds with native sizing retained. Main-page overflow is tested through the canvas ancestor chain; independently scrollable structure lists and lesson panels remain controls within their own drawers.
+Fixed viewport emulation is for repeatable pointer fixtures. Use `viewport: null` in a headed demonstration context so both page edges follow the real browser window. `scripts/browser_window_layout.js` requires a native viewport context and resizes the actual Chromium window. It checks the header, both drawers, the ordinary and expanded canvas, retained source coordinates and document-owned page scrolling. It restores the original window bounds with native sizing retained. That historical fixture examined the canvas ancestor chain. The current page-flow check also examines structure lists and lesson panels.
 
 Run `playwright-cli -s=neuroimage run-code --filename=scripts/browser_geometry.js` for the inspected real-pointer fixture at 1600 by 1050. It double-clicks an isolated SPL/NAC putamen surface, follows the location into the MRI planes, clicks a source-labelled slice point and enters a coordinate outside the image. Independently map the reported slice RAS point through the inverse NIfTI affine and confirm its actual label value; the 2026-10-12 result was label 12 (Left putamen). Three-dimensional surface proximity and two-dimensional categorical sampling are reported separately.
 

@@ -10,6 +10,8 @@ Browser review uses independently acquired local anatomy in an isolated profile.
 
 `scripts/browser_page_flow.js` repeats the whole-page overflow checks at 1600, 1100, 800 and 390 CSS pixels against an already opened atlas or native model. Run it through Playwright CLI in an isolated profile. It examines every visible scroll container, not just canvas ancestors.
 
+`scripts/browser_course_navigation.js` checks a saved course in an isolated browser profile. It warms two views of the same source and background, then verifies repeated view restoration, reuse of the same canvas and absence of repeated source-asset requests. The check changes the test course position and browser scene saves.
+
 Historical browser scripts retain their documented source and interface assumptions. Their presence does not imply that every historical script was rerun for this candidate. New release evidence distinguishes current software checks from the preserved anatomical-source receipts. Engineering checks do not establish anatomical completeness or educational effectiveness.
 
 ## Distribution verification
