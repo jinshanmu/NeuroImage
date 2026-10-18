@@ -497,7 +497,7 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, rec
         storageKey={`neuroimage:notebook:${viewKey}`} drafts={notebooks}
         capture={async () => { const current = await settled(); return makeScene(manifest, current.state) }}
         restore={scene => { setState({ ...structuredClone(scene.state), panel: 'learn' }); setStatus('Notebook scene restored') }}/></div>}
-      </div><div className="inspector-footer">English terminology · Stable structure IDs<br/>Normal anatomy & anatomical variation</div>
+      </div><div className="inspector-footer">Normal anatomy & anatomical variation</div>
     </aside>
   </section>
 }
