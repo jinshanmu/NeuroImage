@@ -115,9 +115,9 @@ def model_teaching_entry(manifest, step, signature, source_annotation=None):
     if bool(step.get("source_annotation")) != bool(source_annotation):
         raise ValueError("A source annotation view requires its checked original annotation record")
     position = source_annotation["position_native_mm"] if source_annotation else selected.target_native_mm
-    notes = step["note"] + "\n\nSource definition: " + selected.evidence
-    if selected.source_notes:
-        notes += "\n" + "\n".join(selected.source_notes)
+    # Structure definitions remain in the bound manifest and image export.
+    # Editable notes contain the instructor's observation task.
+    notes = step["note"]
     if source_annotation:
         notes += "\n\nOriginal source annotation: " + source_annotation["spec"]["source_object"]
         notes += "; indicated endpoint 1; context: " + source_annotation["context_object"] + "."

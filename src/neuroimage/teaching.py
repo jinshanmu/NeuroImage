@@ -319,10 +319,8 @@ def prepare(manifest_path, recipe_path, data_root, minimum_free_gib=400):
                         memberships.append(ident)
                 scene["state"]["selectionEvidence"] = {"kind": "independent-mask", "candidates": sorted(memberships)}
             anchor_note = f"\n\nSource voxel: {volume.id}, index {list(index)}, recorded value {value:.8g}. This records an explicit source evidence sample."
-        notes = step["note"] + "\n\nSource definition: " + ("Original native image intensity in its delivered spatial grid." if image_only else selected.evidence)
-        if selected is not None and selected.source_notes:
-            notes += "\n" + "\n".join(selected.source_notes)
-        notes += anchor_note + "\n\nEditable teaching view. Expert assessment is tracked separately for individual recorded examples."
+        # Source definitions and review status remain in the bound manifest.
+        notes = step["note"] + anchor_note
         scene["state"].update(visible=visible, background=image.id, window=[image.cal_min, image.cal_max], panel="learn", note=notes,
             showMarkers=True, annotations=[{"id": str(uuid.uuid5(uuid.NAMESPACE_URL, signature + step["id"] + "marker")),
             "text": (regional["label"] + " · regional teaching location in the source image." if regional else "Recorded source evidence sample for " + selected.name + "." if step["source_voxel"] else "Retained source trajectory vertex in " + selected.name + "; recorded computational trajectory sample." if manifest.representation == "mri-streamlines" else "Reference point within the delivered " + selected.name + " label."), "position_ras_mm": target_position, "structure_id": None if regional else selected.id}])
