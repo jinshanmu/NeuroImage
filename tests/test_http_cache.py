@@ -5,6 +5,7 @@ import urllib.error
 import urllib.request
 
 import pytest
+from test_pipeline import source, build
 
 from neuroimage.server import create_server
 from neuroimage.workspace import Workspace
@@ -82,3 +83,31 @@ def test_browse_cache_is_bounded_refreshable_and_keeps_callers_independent(local
     with pytest.raises(urllib.error.HTTPError) as result:
         urllib.request.urlopen(url + "/api/workspace/browse?refresh=invalid")
     assert result.value.code == 400
+
+
+def test_session_verification_reuses_only_unchanged_package_files(source, tmp_path, monkeypatch):
+    import os
+    import neuroimage.server as serving
+    from neuroimage.validation import validate_package
+    manifest_path = build(source)
+    manager = Workspace(source[0], tmp_path.parent / (tmp_path.name + "-state"), data_floor_gib=0, state_floor_gib=0)
+    web = tmp_path / "viewer"; web.mkdir(); (web / "index.html").write_text("<title>Test</title>")
+    calls = []
+    def tracked(path, **kwargs):
+        calls.append(path)
+        return validate_package(path, **kwargs)
+    monkeypatch.setattr(serving, "validate_package", tracked)
+    server = create_server([], web, 0, workspace=manager)
+    try:
+        first = manager.register_package(manifest_path)
+        assert manager.register_package(manifest_path) == first and len(calls) == 1
+        manifest = json.loads(manifest_path.read_text())
+        asset = manifest_path.parent / manifest["assets"][0]["path"]
+        stat = asset.stat()
+        value = bytearray(asset.read_bytes()); value[0] ^= 1; asset.write_bytes(value)
+        os.utime(asset, ns=(stat.st_atime_ns, stat.st_mtime_ns))
+        with pytest.raises(ValueError, match="checksum"):
+            manager.register_package(manifest_path)
+        assert len(calls) == 2
+    finally:
+        server.server_close(); manager.close()

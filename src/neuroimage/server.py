@@ -18,11 +18,37 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
     if not (web_root / "index.html").is_file():
         raise ValueError("Browser assets are missing. Run npm run build before serving, or install the built wheel.")
     packages, routes, roots, identities = [], {}, {}, {}
+    verified_files = {}
     registry_lock = threading.RLock()
+    verification_lock = threading.Lock()
     token = secrets.token_urlsafe(32) if workspace else None
 
     def register_package(path, *, allow_existing=True):
         path = Path(path).resolve()
+        # Saved course views often revisit one package. Within this process,
+        # unchanged files can reuse its completed verification. A replacement,
+        # edit, missing asset or path change always returns to full validation.
+        with verification_lock:
+            previous = verified_files.get(path)
+            if allow_existing and previous:
+                try:
+                    if previous["stamp"] == file_stamp(previous["files"], path.parent):
+                        return previous["key"]
+                except (ValueError, OSError):
+                    pass
+            return verify_and_register(path, allow_existing=allow_existing)
+
+    def file_stamp(files, root):
+        result = []
+        for file in files:
+            resolved = file.resolve()
+            if not resolved.is_relative_to(root) or not resolved.is_file():
+                raise ValueError("A previously verified package asset moved outside its source directory")
+            stat = resolved.stat()
+            result.append((str(resolved), stat.st_dev, stat.st_ino, stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns))
+        return result
+
+    def verify_and_register(path, *, allow_existing):
         started = time.monotonic()
         statistics = {}
         manifest = validate_package(path, cache_policy="reuse", statistics=statistics)
@@ -32,11 +58,14 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
         key = manifest.package_id + "-" + manifest.package_version
         identity = {"package_id": manifest.package_id, "package_version": manifest.package_version,
                     "build_signature": manifest.build["signature"], "space_id": manifest.space.id}
+        files = [path, *[path.parent / asset.path for asset in manifest.assets]]
+        verified = {"key": key, "files": files, "stamp": file_stamp(files, path.parent)}
         prefix = f"/atlas/{key}/"
         with registry_lock:
             if key in identities:
                 if not allow_existing or identities[key] != identity or routes[prefix + "manifest.json"] != path:
                     raise ValueError("The same package identity was selected more than once or changed")
+                verified_files[path] = verified
                 return key
             identities[key] = identity
             packages.append({"key": key, "title": manifest.title, "dataset_id": manifest.dataset_id,
@@ -52,6 +81,7 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
             for asset in manifest.assets:
                 routes[prefix + asset.path] = path.parent / asset.path
                 roots[prefix + asset.path] = path.parent
+            verified_files[path] = verified
         return key
 
     for path in manifest_paths:

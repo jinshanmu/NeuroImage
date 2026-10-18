@@ -1,3 +1,4 @@
+include install.sh scripts/install_linux.py
 include LICENSE NOTICE README.md environment.yml requirements-core.lock.txt
 include CITATION.cff CHANGELOG.md CONTRIBUTING.md SECURITY.md requirements-dev.lock.txt
 include scripts/prepare_public_release.py

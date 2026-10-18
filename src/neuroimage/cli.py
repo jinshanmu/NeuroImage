@@ -8,10 +8,25 @@ from .adapters import load_recipe, recipe_names
 from .build import build_atlas
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(prog="neuroimage", description="Local normal intracranial anatomy atlas")
     parser.add_argument("--version", action="version", version=__version__)
     sub = parser.add_subparsers(dest="command", required=True)
+    doctor = sub.add_parser("doctor", help="Check the Linux environment, viewer, dependencies and selected storage")
+    doctor.add_argument("--data-root", type=Path)
+    doctor.add_argument("--state-root", type=Path)
+    doctor.add_argument("--recipe", choices=recipe_names())
+    doctor.add_argument("--storage-policy", type=Path)
+    setup = sub.add_parser("quickstart", help="Acquire, build, validate and open one anatomical source")
+    setup.add_argument("recipe", choices=recipe_names())
+    setup.add_argument("--data-root", required=True, type=Path)
+    setup.add_argument("--state-root", required=True, type=Path)
+    setup.add_argument("--storage-policy", type=Path)
+    setup.add_argument("--workers", type=int, default=2)
+    setup.add_argument("--port", type=int, default=8765)
+    setup.add_argument("--dry-run", action="store_true", help="Show source terms, manual downloads and storage needs without changing files")
+    setup.add_argument("--no-start", action="store_true", help="Finish acquisition and construction without starting the service")
+    setup.add_argument("--no-browser", action="store_true")
     recipes = sub.add_parser("recipes", help="List source recipes and acquisition requirements")
     recipes.add_argument("name", nargs="?")
     acquire = sub.add_parser("acquire", help="Acquire pinned source files, selectively expand and resume interrupted transfers")
@@ -123,9 +138,28 @@ def main():
     workspace.add_argument("--port", type=int, default=8765)
     workspace.add_argument("--no-browser", action="store_true")
     schema = sub.add_parser("schema", help="Print the atlas manifest JSON Schema")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     try:
-        if args.command == "recipes":
+        if args.command == "doctor":
+            from .setup import installation_report
+            result = installation_report(data_root=args.data_root, state_root=args.state_root,
+                                         recipe=args.recipe, storage_policy=args.storage_policy)
+            print(json.dumps(result, indent=2))
+            if not result["ready"]:
+                raise SystemExit(1)
+        elif args.command == "quickstart":
+            from .setup import quickstart
+            quickstart(args.recipe, args.data_root, args.state_root, storage_policy=args.storage_policy,
+                       workers=args.workers, dry_run=args.dry_run)
+            if not args.dry_run and not args.no_start:
+                command = ["workspace", "--data-root", str(args.data_root), "--state-root", str(args.state_root),
+                           "--workers", str(args.workers), "--port", str(args.port)]
+                if args.storage_policy:
+                    command.extend(["--storage-policy", str(args.storage_policy)])
+                if args.no_browser:
+                    command.append("--no-browser")
+                return main(command)
+        elif args.command == "recipes":
             print(json.dumps(load_recipe(args.name) if args.name else {"recipes": recipe_names()}, indent=2))
         elif args.command in {"acquire", "build"}:
             policy = json.loads(args.storage_policy.read_text()) if args.storage_policy else {}
