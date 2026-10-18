@@ -1,0 +1,43 @@
+# Specialist follow-up after the fine-anatomy increment
+
+The current inventory is `config/anatomy-detail-inventory-2026-10-15.json`: 39 source configurations from 19 upstream families, 1,901 source-specific entries, 186 built-in sequences, 75 installed curricula with 700 recorded views, and twenty-six course plans selecting 580 views. Eighteen original source point annotations provide thirty-six skull-base and sellar views. Counts retain overlapping source definitions. The [detailed anatomy and variation guide](detailed-anatomy-and-variation.md) records the latest source additions; exact-image expert review remains separate.
+
+## Delivered specialist capabilities
+
+[NextBrain fine anatomy](nextbrain-fine-anatomy.md) now supplies eleven blocks from two source-documented normal cases, including hippocampal layers, amygdalar subdivisions, thalamic and hypothalamic nuclei, basal forebrain, brainstem nuclei/roots/pathways and cerebellar nuclei. Each original label block retains its verified source-processed ex vivo MRI relationship. Case-1 unresolved brainstem navigation targets remain preserved for later source reconciliation; the accepted Case-2 blocks provide independent usable brainstem evidence.
+
+[BigBrain surfaces](bigbrain-fine-surfaces.md) add fourteen cortical-layer boundary sheets and fourteen hippocampal surfaces in their source reconstruction coordinates. [HCP1065 probability fields](hcp1065-probability-fields.md) add all 64 delivered fields alongside the existing 87 source trajectory collections, with explicit matching reference MRI. [Healthy-source MRA](thu-cerebral-mra.md) supplies eight original volunteers and 151 delivered vessel segment entries. Its twenty-name correspondence is project curated and retains separate review status.
+
+[SUIT cerebellar anatomy](suit-cerebellar-anatomy.md) supplies 34 original lobular and nuclear assignments, all probability channels and original T1. [Z-Anatomy](z-cerebellar-ventricular-context.md) now contains 286 source objects, including inner-ear and CN VIII components, arterial/optic detail, cerebellar surface and peduncular objects, ventricles, aqueduct and choroid plexus. Eighteen [source-authored endpoints](source-annotation-teaching.md) provide skull-base and [sellar/clinoid observations](z-sellar-landmarks.md), each on its original bony context.
+
+VENAT, original meso-vein MRI, HBA T2, MUG500+ mask and author-cleaned skull surface, Mouches arterial occurrence and IXI MRA remain available through the common platform. The current source geometry and evidence distinctions are summarized in [normal-source reconciliation](normal-source-reconciliation.md).
+
+The native [inner-ear CT module](native-inner-ear-ct.md) supplies original specimen CT and complete three-class fluid-space labels. It adds image-backed inner-ear context while keeping source sampling and calibration limits explicit.
+
+## Next bounded content increments
+
+| Priority | Increment | Required evidence and completion condition |
+| --- | --- | --- |
+| 1 | Additional image-backed arterial and venous branches | Extend verified source value/name correspondence and native geometry; exercise selection, sections, scene restoration and credited teaching export for the selected branches. Named venous image branches remain open. |
+| 2 | Further cranial-nerve segment coverage | Use explicit source partitions with side and segment definitions. Current nuclear/root assignments and CN VIII component models remain available; each added segment keeps its own image or model evidence. |
+| 3 | Named cisternal compartments and arachnoid membranes | Add a supplied compartment or direct boundary evidence. Existing regional T2 teaching points retain their annotation identity. A membrane surface needs an independently documented source. |
+| 4 | Skull-base image detail | Select source-documented normal original CT or another appropriate modality. Preserve intensity units, native sampling, source bone definitions and any named foraminal labels. The cleaned skull model supplies separate 3D context. |
+| 5 | Indexed normal anatomical variation | Use explicitly source-documented individual variants with source terminology and selection rationale. Retain native images and distinguish recorded anatomy from computed or source-model representations. |
+
+Choose a finite source increment, record its evidence and engineering criteria, and reuse existing verified originals first. Source availability can change the next choice; record an unresolved mapping or access condition and continue independent work.
+
+UBA167's sixteen original arterial channels remain acquired with unresolved channel-to-name correspondence and retained small negative values. Its DARTEL tissue templates remain distinct from measured MRI. CNsEMD's label release could not be retrieved at the current official destination; the acquisition record identifies the source and does not substitute inferred labels. Case 5 NextBrain EX9-19/EXT9-19 still needs explicit identity correspondence. Case 4 P85-18 and unseparated mixed-cohort NextBrain aggregates remain outside the normal-case construction selection. Rhoton remains owner-deferred.
+
+## Existing CT investigation
+
+`scripts/inspect_dicom_series.py` and [DICOM source readiness](dicom-source-readiness.md) retain the additional-head findings. All 463 officially listed CT instances are present, with two physical-origin intervals differing from the prevailing spacing. PD and T2 share a series UID and remain separated by echo. Specimen normality and cross-modality correspondence are unresolved.
+
+A future CT adapter must represent its declared intensity units and actual plane geometry faithfully, or select another documented normal source. The existing source remains outside the current atlas collection. Original planes and receipts are preserved.
+
+## Instructor feedback and recovery
+
+Instructor feedback applies to each named image set and its recorded hashes. Preliminary teaching suitability has been reported for specific cisternal, red-nucleus, cleaned-skull, Julich CA1, foramen-magnum, NextBrain CA1, petrous/CN VIII, BigBrain hippocampal, revised MRA and HCP Tapetum examples. The revised SUIT dentate pair and the cortical-surface central/calcarine sulcus examples have also been accepted for their introductory teaching purposes. The original rejected skull and MRA/SUIT display pairs remain in their diagnostic history. The review JSON records are authoritative as later replies arrive.
+
+An instructor-requested correction becomes a content or software task. A pending expert judgment is recorded separately from engineering completion. The software percentage describes declared implementation and engineering milestones, rather than the fraction of all anatomy or expert-approved lessons.
+
+Recover with the same data root and SSD workspace state directory. The teaching library resolves each scene to its exact historical package, and course presentation retains the last viewed entry after service/browser restart. Preserve historical package versions while saved teaching content refers to them. See [teaching library and courses](teaching-library-and-courses.md), [getting started](getting-started.md) and the current session handoff for precise recovery commands.

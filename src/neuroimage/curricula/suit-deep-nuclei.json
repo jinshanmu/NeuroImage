@@ -1,0 +1,399 @@
+{
+  "schema_version": "1.0",
+  "id": "suit-deep-nuclei",
+  "dataset_id": "suit_cerebellum",
+  "required_source": {
+    "id": "suit_cerebellum",
+    "version": "Diedrichsen 2009/2011 anatomical atlas; Git 6857dfa732de6dd60c94da2f84d0b15ccf316618"
+  },
+  "title": "SUIT \u00b7 deep cerebellar nuclei",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Locate each original deep cerebellar nuclei assignment in source MRI, categorical surface and probability views.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "label-29-probability",
+      "title": "Left Dentate \u00b7 source probability",
+      "selected": "suit_cerebellum:label:29",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 29 (Left_Dentate). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 1.3,
+        "overlay": "probability",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-29-mask",
+      "title": "Left Dentate \u00b7 source categorical extent",
+      "selected": "suit_cerebellum:label:29",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 29 (Left_Dentate). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 2.2,
+        "overlay": "labels",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-30-probability",
+      "title": "Right Dentate \u00b7 source probability",
+      "selected": "suit_cerebellum:label:30",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 30 (Right_Dentate). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 1.3,
+        "overlay": "probability",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-30-mask",
+      "title": "Right Dentate \u00b7 source categorical extent",
+      "selected": "suit_cerebellum:label:30",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 30 (Right_Dentate). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 2.2,
+        "overlay": "labels",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-31-probability",
+      "title": "Left Interposed \u00b7 source probability",
+      "selected": "suit_cerebellum:label:31",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 31 (Left_Interposed). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 1.3,
+        "overlay": "probability",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-31-mask",
+      "title": "Left Interposed \u00b7 source categorical extent",
+      "selected": "suit_cerebellum:label:31",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 31 (Left_Interposed). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 2.2,
+        "overlay": "labels",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-32-probability",
+      "title": "Right Interposed \u00b7 source probability",
+      "selected": "suit_cerebellum:label:32",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 32 (Right_Interposed). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 1.3,
+        "overlay": "probability",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-32-mask",
+      "title": "Right Interposed \u00b7 source categorical extent",
+      "selected": "suit_cerebellum:label:32",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 32 (Right_Interposed). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 2.2,
+        "overlay": "labels",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-33-probability",
+      "title": "Left Fastigial \u00b7 source probability",
+      "selected": "suit_cerebellum:label:33",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 33 (Left_Fastigial). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 1.3,
+        "overlay": "probability",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-33-mask",
+      "title": "Left Fastigial \u00b7 source categorical extent",
+      "selected": "suit_cerebellum:label:33",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 33 (Left_Fastigial). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 2.2,
+        "overlay": "labels",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-34-probability",
+      "title": "Right Fastigial \u00b7 source probability",
+      "selected": "suit_cerebellum:label:34",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 34 (Right_Fastigial). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 1.3,
+        "overlay": "probability",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    },
+    {
+      "id": "label-34-mask",
+      "title": "Right Fastigial \u00b7 source categorical extent",
+      "selected": "suit_cerebellum:label:34",
+      "visible": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "background": "t1",
+      "prompt": "Locate the selected source compartment in the T1 sections. Compare its continuous probability field with its delivered categorical extent, and identify the surrounding nuclear groups in the complete 3D context.",
+      "note": "Original source label 34 (Right_Fastigial). Separate 23-participant nuclear atlas; the population T1 supplies common spatial context. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.8
+        ],
+        "slice_zoom": 2.2,
+        "overlay": "labels",
+        "label_opacity": 0.28,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,807 @@
+{
+  "$defs": {
+    "ImageAnchor": {
+      "additionalProperties": false,
+      "properties": {
+        "volume_id": {
+          "minLength": 1,
+          "title": "Volume Id",
+          "type": "string"
+        },
+        "index": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Index",
+          "type": "array"
+        },
+        "label": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "reference": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Reference",
+          "type": "string"
+        },
+        "interpretation": {
+          "const": "regional-teaching-annotation",
+          "default": "regional-teaching-annotation",
+          "title": "Interpretation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "volume_id",
+        "index",
+        "label",
+        "reference"
+      ],
+      "title": "ImageAnchor",
+      "type": "object"
+    },
+    "ModelSourceAnnotation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,80}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "mapping": {
+          "const": "blender-hooked-label-tip-v1",
+          "title": "Mapping",
+          "type": "string"
+        },
+        "source_input": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Source Input",
+          "type": "string"
+        },
+        "source_object": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Source Object",
+          "type": "string"
+        },
+        "source_vertex_index": {
+          "const": 1,
+          "default": 1,
+          "title": "Source Vertex Index",
+          "type": "integer"
+        },
+        "context_structure_id": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Context Structure Id",
+          "type": "string"
+        },
+        "reference": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Reference",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "mapping",
+        "source_input",
+        "source_object",
+        "context_structure_id",
+        "reference"
+      ],
+      "title": "ModelSourceAnnotation",
+      "type": "object"
+    },
+    "ModelTeachingDisplay": {
+      "additionalProperties": false,
+      "properties": {
+        "camera": {
+          "default": [
+            110.0,
+            15.0,
+            0.65
+          ],
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Camera",
+          "type": "array"
+        },
+        "center_on_target": {
+          "default": false,
+          "title": "Center On Target",
+          "type": "boolean"
+        },
+        "opacity": {
+          "default": 1.0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Opacity",
+          "type": "number"
+        },
+        "surface_opacity": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "default": {},
+          "title": "Surface Opacity",
+          "type": "object"
+        },
+        "surface_cutaway": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TeachingSurfaceCutaway"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "highlight_selected": {
+          "default": true,
+          "title": "Highlight Selected",
+          "type": "boolean"
+        },
+        "show_markers": {
+          "default": false,
+          "title": "Show Markers",
+          "type": "boolean"
+        }
+      },
+      "title": "ModelTeachingDisplay",
+      "type": "object"
+    },
+    "ModelTeachingRecipe": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,60}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "dataset_id": {
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "required_source": {
+          "$ref": "#/$defs/SourceRequirement"
+        },
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "author": {
+          "maxLength": 200,
+          "title": "Author",
+          "type": "string"
+        },
+        "objective": {
+          "maxLength": 2000,
+          "title": "Objective",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "draft_not_expert_reviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "scenes": {
+          "items": {
+            "$ref": "#/$defs/ModelTeachingStep"
+          },
+          "maxItems": 50,
+          "minItems": 1,
+          "title": "Scenes",
+          "type": "array"
+        },
+        "representation": {
+          "const": "surface-model",
+          "title": "Representation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "dataset_id",
+        "required_source",
+        "title",
+        "author",
+        "objective",
+        "review_status",
+        "scenes",
+        "representation"
+      ],
+      "title": "ModelTeachingRecipe",
+      "type": "object"
+    },
+    "ModelTeachingStep": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,60}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "selected": {
+          "minLength": 1,
+          "title": "Selected",
+          "type": "string"
+        },
+        "visible": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Visible",
+          "type": "array"
+        },
+        "prompt": {
+          "maxLength": 2000,
+          "title": "Prompt",
+          "type": "string"
+        },
+        "note": {
+          "maxLength": 8000,
+          "title": "Note",
+          "type": "string"
+        },
+        "display": {
+          "$ref": "#/$defs/ModelTeachingDisplay"
+        },
+        "source_annotation": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ModelSourceAnnotation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "selected",
+        "visible",
+        "prompt",
+        "note"
+      ],
+      "title": "ModelTeachingStep",
+      "type": "object"
+    },
+    "SourceRequirement": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "maxLength": 256,
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "SourceRequirement",
+      "type": "object"
+    },
+    "SourceVoxel": {
+      "additionalProperties": false,
+      "properties": {
+        "volume_id": {
+          "minLength": 1,
+          "title": "Volume Id",
+          "type": "string"
+        },
+        "index": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Index",
+          "type": "array"
+        }
+      },
+      "required": [
+        "volume_id",
+        "index"
+      ],
+      "title": "SourceVoxel",
+      "type": "object"
+    },
+    "TeachingDisplay": {
+      "additionalProperties": false,
+      "properties": {
+        "surface_opacity": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "default": {},
+          "title": "Surface Opacity",
+          "type": "object"
+        },
+        "surface_cutaway": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TeachingSurfaceCutaway"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "section_planes": {
+          "default": [],
+          "items": {
+            "enum": [
+              "axial",
+              "coronal",
+              "sagittal"
+            ],
+            "type": "string"
+          },
+          "title": "Section Planes",
+          "type": "array"
+        },
+        "camera": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Camera"
+        },
+        "center_on_target": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Center On Target"
+        },
+        "focus_selected_3d": {
+          "default": false,
+          "title": "Focus Selected 3D",
+          "type": "boolean"
+        },
+        "layout": {
+          "default": "quad",
+          "enum": [
+            "quad",
+            "anatomy",
+            "axial",
+            "coronal",
+            "sagittal",
+            "3d"
+          ],
+          "title": "Layout",
+          "type": "string"
+        },
+        "tile_layout": {
+          "anyOf": [
+            {
+              "enum": [
+                "auto",
+                "grid",
+                "row"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tile Layout"
+        },
+        "radiological": {
+          "default": true,
+          "title": "Radiological",
+          "type": "boolean"
+        },
+        "overlay": {
+          "anyOf": [
+            {
+              "enum": [
+                "labels",
+                "mask",
+                "probability",
+                "streamlines",
+                "none"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Overlay"
+        },
+        "image_context": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Image Context"
+        },
+        "show_3d_cursor": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Show 3D Cursor"
+        },
+        "window": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Window"
+        },
+        "label_opacity": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Label Opacity"
+        },
+        "slice_zoom": {
+          "anyOf": [
+            {
+              "maximum": 10,
+              "minimum": 1,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Slice Zoom"
+        },
+        "streamline_level": {
+          "anyOf": [
+            {
+              "enum": [
+                "preview",
+                "standard",
+                "detail"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Streamline Level"
+        },
+        "streamline_slab_mm": {
+          "anyOf": [
+            {
+              "maximum": 10,
+              "minimum": 0.2,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Streamline Slab Mm"
+        }
+      },
+      "title": "TeachingDisplay",
+      "type": "object"
+    },
+    "TeachingRecipe": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,60}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "dataset_id": {
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "required_source": {
+          "$ref": "#/$defs/SourceRequirement"
+        },
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "author": {
+          "maxLength": 200,
+          "title": "Author",
+          "type": "string"
+        },
+        "objective": {
+          "maxLength": 2000,
+          "title": "Objective",
+          "type": "string"
+        },
+        "review_status": {
+          "const": "draft_not_expert_reviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "scenes": {
+          "items": {
+            "$ref": "#/$defs/TeachingStep"
+          },
+          "maxItems": 50,
+          "minItems": 1,
+          "title": "Scenes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "dataset_id",
+        "required_source",
+        "title",
+        "author",
+        "objective",
+        "review_status",
+        "scenes"
+      ],
+      "title": "TeachingRecipe",
+      "type": "object"
+    },
+    "TeachingStep": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,60}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "selected": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Selected"
+        },
+        "visible": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Visible",
+          "type": "array"
+        },
+        "background": {
+          "minLength": 1,
+          "title": "Background",
+          "type": "string"
+        },
+        "prompt": {
+          "maxLength": 2000,
+          "title": "Prompt",
+          "type": "string"
+        },
+        "note": {
+          "maxLength": 8000,
+          "title": "Note",
+          "type": "string"
+        },
+        "display": {
+          "$ref": "#/$defs/TeachingDisplay"
+        },
+        "source_voxel": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SourceVoxel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "image_anchor": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImageAnchor"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "selected",
+        "visible",
+        "background",
+        "prompt",
+        "note"
+      ],
+      "title": "TeachingStep",
+      "type": "object"
+    },
+    "TeachingSurfaceCutaway": {
+      "additionalProperties": false,
+      "properties": {
+        "axis": {
+          "enum": [
+            0,
+            1,
+            2
+          ],
+          "title": "Axis",
+          "type": "integer"
+        },
+        "side": {
+          "enum": [
+            -1,
+            1
+          ],
+          "title": "Side",
+          "type": "integer"
+        },
+        "position_mm": {
+          "maximum": 1000000.0,
+          "minimum": -1000000.0,
+          "title": "Position Mm",
+          "type": "number"
+        },
+        "structures": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Structures",
+          "type": "array"
+        }
+      },
+      "required": [
+        "axis",
+        "side",
+        "position_mm",
+        "structures"
+      ],
+      "title": "TeachingSurfaceCutaway",
+      "type": "object"
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/TeachingRecipe"
+    },
+    {
+      "$ref": "#/$defs/ModelTeachingRecipe"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "id": "cerebra",
+  "adapter": "cerebra-nifti",
+  "version": "1",
+  "title": "CerebrA \u00b7 MNI 2009c symmetric",
+  "space": {
+    "id": "mni-icbm152-2009c-symmetric",
+    "name": "MNI ICBM152 2009c symmetric",
+    "reference": "CerebrA source release and ICBM152 nonlinear symmetric 2009c template",
+    "correspondence": "CerebrA is explicitly defined in this template space. Image and label shapes and affine matrices must match. No correspondence to SPL/NAC, MNI 2009a, asymmetric MNI or other packages is implied."
+  },
+  "inputs": {
+    "t1": "raw/mni_09c_sym/mni_icbm152_nlin_sym_09c/mni_icbm152_t1_tal_nlin_sym_09c.nii",
+    "t2": "raw/mni_09c_sym/mni_icbm152_nlin_sym_09c/mni_icbm152_t2_tal_nlin_sym_09c.nii",
+    "labels": "raw/cerebra/mni_icbm152_CerebrA_tal_nlin_sym_09c.nii",
+    "label_table": "raw/cerebra/CerebrA_LabelDetails.csv",
+    "license": "licenses/cerebra/official-terms.txt",
+    "template_license": "licenses/mni_09c_sym/official-terms.html"
+  },
+  "images": [
+    {
+      "id": "t1",
+      "name": "T1-weighted population template"
+    },
+    {
+      "id": "t2",
+      "name": "T2-weighted population template"
+    }
+  ],
+  "source_version": "CerebrA-2009c-sym-acquired-2026-10-11",
+  "require_same_grid": true,
+  "sources": [
+    {
+      "id": "cerebra",
+      "title": "CerebrA",
+      "version": "2009c symmetric distribution; SHA256-pinned inputs",
+      "url": "https://nist.mni.mcgill.ca/cerebra/",
+      "citation": "Manera AL, Dadar M, Fonov V, Collins DL. CerebrA, registration and manual label correction of Mindboggle-101 atlas for MNI-ICBM152 template. Scientific Data 7, 237 (2020). doi:10.1038/s41597-020-0557-9.",
+      "license_name": "CC0 1.0 (data)",
+      "license_url": "https://gin.g-node.org/anamanera/CerebrA/raw/master/LICENSE",
+      "license_input": "license"
+    },
+    {
+      "id": "mni_09c_sym",
+      "title": "MNI ICBM152 nonlinear symmetric template",
+      "version": "2009c",
+      "url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+      "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033.",
+      "license_name": "MNI ICBM152 template terms",
+      "license_url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+      "license_input": "template_license"
+    }
+  ],
+  "acquisition": "Run neuroimage acquire cerebra --data-root <existing-data-root>; original archives, selectively expanded inputs and license receipts remain outside the software package.",
+  "nifti_units": "mm",
+  "units_evidence": "MNI ICBM152 2009c distribution documents a 1 mm isotropic grid; supplied headers omit the unit field. https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+  "archives": [
+    {
+      "dataset_id": "cerebra",
+      "filename": "mni_icbm152_nlin_sym_09c_CerebrA_nifti.zip",
+      "url": "https://packages.bic.mni.mcgill.ca/mni-models/icbm152/mni_icbm152_nlin_sym_09c_CerebrA_nifti.zip",
+      "bytes": 351216,
+      "sha256": "51ae4a9a2d004c3c0edea2e3ab0c15f71a2c88f04960aa2e599a3633816f445d",
+      "hash_basis": "SHA256 pinned from the verified local acquisition; not a publisher signature",
+      "members": [
+        {
+          "member": "mni_icbm152_CerebrA_tal_nlin_sym_09c.nii",
+          "target": "raw/cerebra/mni_icbm152_CerebrA_tal_nlin_sym_09c.nii",
+          "bytes": 34120436,
+          "sha256": "8cbb7a90a8ae6f34001a1d659d99c9480dd79121184c2e2f01b160ad32d7800c"
+        },
+        {
+          "member": "CerebrA_LabelDetails.csv",
+          "target": "raw/cerebra/CerebrA_LabelDetails.csv",
+          "bytes": 2798,
+          "sha256": "16ba5fec63159b69699d17d79274d34ec68d14099c3c989dadbbed83e2da9999"
+        }
+      ]
+    },
+    {
+      "dataset_id": "mni_09c_sym",
+      "filename": "mni_icbm152_nlin_sym_09c_nifti.zip",
+      "url": "https://www.bic.mni.mcgill.ca/~vfonov/icbm/2009/mni_icbm152_nlin_sym_09c_nifti.zip",
+      "bytes": 57583823,
+      "sha256": "ed981b4611ddd797a22f539035979723ecb1badebd06dcd85df149b5ef00890d",
+      "hash_basis": "SHA256 pinned from the verified local acquisition; not a publisher signature",
+      "members": [
+        {
+          "member": "mni_icbm152_nlin_sym_09c/mni_icbm152_t1_tal_nlin_sym_09c.nii",
+          "target": "raw/mni_09c_sym/mni_icbm152_nlin_sym_09c/mni_icbm152_t1_tal_nlin_sym_09c.nii",
+          "bytes": 17060394,
+          "sha256": "93359ab97c1c027376397612a9b6c30e95406c15bf8695bd4a8efcb2064eaa34"
+        },
+        {
+          "member": "mni_icbm152_nlin_sym_09c/mni_icbm152_t2_tal_nlin_sym_09c.nii",
+          "target": "raw/mni_09c_sym/mni_icbm152_nlin_sym_09c/mni_icbm152_t2_tal_nlin_sym_09c.nii",
+          "bytes": 17060394,
+          "sha256": "0634f906bb9d432dcb5eb9b62e6d86ced7559d6e027b8ba5a00420cf9b6340e5"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/cerebra/official-terms.txt",
+      "url": "https://gin.g-node.org/anamanera/CerebrA/raw/master/LICENSE",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/mni_09c_sym/official-terms.html",
+      "url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

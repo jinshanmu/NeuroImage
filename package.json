@@ -1,0 +1,44 @@
+{
+  "name": "neuroimage",
+  "version": "0.15.0-rc.2",
+  "private": true,
+  "description": "Intracranial imaging and anatomy atlas for neurosurgical teaching",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "dependencies": {
+    "@cornerstonejs/core": "5.11.7",
+    "@cornerstonejs/dicom-image-loader": "5.11.7",
+    "@cornerstonejs/tools": "5.11.7",
+    "@kitware/vtk.js": "36.4.1",
+    "@niivue/niivue": "0.69.0",
+    "fflate": "0.8.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zustand": "5.0.15"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "fake-indexeddb": "6.2.5",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
+  },
+  "overrides": {
+    "fflate": "0.8.3",
+    "adm-zip": "0.6.1",
+    "uuid": "14.0.3"
+  },
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build",
+    "test": "vitest run web/src",
+    "prebuild": "node scripts/third_party_notices.mjs"
+  }
+}

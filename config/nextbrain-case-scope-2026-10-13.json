@@ -1,0 +1,281 @@
+{
+  "status": "source_case_reconciliation",
+  "recorded_utc": "2026-10-13T10:14:30.785729+00:00",
+  "publication": "https://doi.org/10.1038/s41586-025-09708-2",
+  "supplementary_table_1": {
+    "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-025-09708-2/MediaObjects/41586_2025_9708_MOESM7_ESM.docx",
+    "bytes": 6517123,
+    "sha256": "ec8c64a5fb5346c0d0213e604794bc1239417fdcf2e3dfac56918ba37ada2a18",
+    "original_file_preserved": true,
+    "purpose": "Resolve source-specific normal-scope eligibility; no new imaging acquired."
+  },
+  "cases": [
+    {
+      "case": 1,
+      "repository_id": "P57-16",
+      "age_years": 94,
+      "sex": "Female",
+      "hemisphere": "Right",
+      "source_reported_incidental_findings": "None",
+      "local_normal_atlas_status": "normal_source_candidate_adapter_pending",
+      "official_repository": "https://github.com/UCL/NextBrain-Case-1",
+      "repository_evidence": {
+        "case": 1,
+        "source_url": "https://api.github.com/repos/UCL/NextBrain-Case-1/contents/",
+        "directories": [
+          {
+            "name": "P57-16",
+            "git_tree_sha": "5817f5ab2b7ca8710ae744d973f2e89227400677"
+          }
+        ],
+        "receipt": "literature/normal-source-reconciliation/nextbrain-case-1-repository-root.json",
+        "receipt_sha256": "d7ddf83154ab0e909b61cc16ab8b0e45f31d0a0243f4b36c35fd4666f6e8b2ba"
+      },
+      "existing_mri_header": {
+        "path": "raw/nextbrain_core/MRI/P57-16/mri.nii.gz",
+        "bytes": 55435456,
+        "shape": [
+          448,
+          282,
+          224
+        ],
+        "dtype": "float32",
+        "units": [
+          "mm",
+          "sec"
+        ],
+        "orientation": [
+          "A",
+          "S",
+          "R"
+        ],
+        "affine_ras_mm": [
+          [
+            -0.009115447290241718,
+            0.00025456398725509644,
+            0.3998969495296478,
+            -37.43378829956055
+          ],
+          [
+            0.40152570605278015,
+            -0.011212755925953388,
+            0.009078467264771461,
+            -83.57347869873047
+          ],
+          [
+            0.011215629056096077,
+            0.40162914991378784,
+            -1.1175870895385742e-08,
+            -80.01850891113281
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sampling_mm": [
+          0.4017857313156128,
+          0.4017857313156128,
+          0.3999999761581421
+        ],
+        "inspection": "Header only; no resampling, segmentation or voxel alteration."
+      }
+    },
+    {
+      "case": 2,
+      "repository_id": "P41-16",
+      "age_years": 84,
+      "sex": "Female",
+      "hemisphere": "Right",
+      "source_reported_incidental_findings": "None",
+      "local_normal_atlas_status": "normal_source_candidate_adapter_pending",
+      "official_repository": "https://github.com/UCL/NextBrain-Case-2",
+      "repository_evidence": {
+        "case": 2,
+        "source_url": "https://api.github.com/repos/UCL/NextBrain-Case-2/contents/",
+        "directories": [
+          {
+            "name": "P41-16",
+            "git_tree_sha": "b1c468f694390b5fde85b1cc086ddddd140168be"
+          }
+        ],
+        "receipt": "literature/normal-source-reconciliation/nextbrain-case-2-repository-root.json",
+        "receipt_sha256": "8aa9ff2031505c02ae22c4e00a1a5d96be9b10d7e0b91e6684e5248731f1d24e"
+      },
+      "existing_mri_header": {
+        "path": "raw/nextbrain_core/MRI/P41-16/mri.nii.gz",
+        "bytes": 52610730,
+        "shape": [
+          282,
+          448,
+          224
+        ],
+        "dtype": "float32",
+        "units": [
+          "mm",
+          "sec"
+        ],
+        "orientation": [
+          "S",
+          "P",
+          "R"
+        ],
+        "affine_ras_mm": [
+          [
+            -0.0005086716264486313,
+            -0.01821555197238922,
+            0.39958834648132324,
+            -23.913877487182617
+          ],
+          [
+            -0.01120407972484827,
+            -0.40121588110923767,
+            -0.01814166083931923,
+            83.93377685546875
+          ],
+          [
+            0.40162909030914307,
+            -0.011215622536838055,
+            2.0372681319713593e-10,
+            -57.17721176147461
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sampling_mm": [
+          0.401785671710968,
+          0.4017857611179352,
+          0.3999999463558197
+        ],
+        "inspection": "Header only; no resampling, segmentation or voxel alteration."
+      }
+    },
+    {
+      "case": 3,
+      "repository_id": "P58-16",
+      "age_years": 80,
+      "sex": "Male",
+      "hemisphere": "Right",
+      "source_reported_incidental_findings": "None",
+      "local_normal_atlas_status": "normal_source_candidate_adapter_pending",
+      "official_repository": "https://github.com/UCL/NextBrain-Case-3",
+      "repository_evidence": {
+        "case": 3,
+        "source_url": "https://api.github.com/repos/UCL/NextBrain-Case-3/contents/",
+        "directories": [
+          {
+            "name": "P58-16",
+            "git_tree_sha": "b76c3c730c9dfc398a5ed408074c7bbc17859e4e"
+          }
+        ],
+        "receipt": "literature/normal-source-reconciliation/nextbrain-case-3-repository-root.json",
+        "receipt_sha256": "0a7c49963ac58454d2d97209aa07280ec2413b3d257d01c44784d4df53858033"
+      },
+      "existing_mri_header": {
+        "path": "raw/nextbrain_core/MRI/P58-16/mri.nii.gz",
+        "bytes": 70790513,
+        "shape": [
+          448,
+          282,
+          320
+        ],
+        "dtype": "float32",
+        "units": [
+          "mm",
+          "sec"
+        ],
+        "orientation": [
+          "A",
+          "L",
+          "S"
+        ],
+        "affine_ras_mm": [
+          [
+            -7.450580152834618e-09,
+            -0.3113616704940796,
+            0.2528117895126343,
+            11.724300384521484
+          ],
+          [
+            0.4017857611179352,
+            8.921436059193492e-17,
+            -1.4901161193847656e-08,
+            -116.6224365234375
+          ],
+          [
+            -1.4901160305669237e-08,
+            0.2539403438568115,
+            0.30997785925865173,
+            -71.40681457519531
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "sampling_mm": [
+          0.4017857611179352,
+          0.4017857611179352,
+          0.40000009536743164
+        ],
+        "inspection": "Header only; no resampling, segmentation or voxel alteration."
+      }
+    },
+    {
+      "case": 4,
+      "repository_id": "P85-18",
+      "age_years": 79,
+      "sex": "Female",
+      "hemisphere": "Left",
+      "source_reported_incidental_findings": "Tumour adjacent to pars opercularis",
+      "local_normal_atlas_status": "excluded_pathological_case",
+      "official_repository": "https://github.com/UCL/NextBrain-Case-4",
+      "repository_evidence": {
+        "case": 4,
+        "source_url": "https://api.github.com/repos/UCL/NextBrain-Case-4/contents/",
+        "directories": [
+          {
+            "name": "P85-18",
+            "git_tree_sha": "f65768dc3ae87ff2fec7506a72a72bf2f9bb6f45"
+          }
+        ],
+        "receipt": "literature/normal-source-reconciliation/nextbrain-case-4-repository-root.json",
+        "receipt_sha256": "86a61f82e1dc182f348c178fecca1cf1ebe94df52a37ca849912561ce4a8b130"
+      }
+    },
+    {
+      "case": 5,
+      "repository_id": "EX9-19",
+      "age_years": 78,
+      "sex": "Male",
+      "hemisphere": "Left",
+      "source_reported_incidental_findings": "None",
+      "local_normal_atlas_status": "source_alias_unresolved",
+      "official_repository": "https://github.com/UCL/NextBrain-Case-5",
+      "repository_evidence": {
+        "case": 5,
+        "source_url": "https://api.github.com/repos/UCL/NextBrain-Case-5/contents/",
+        "directories": [
+          {
+            "name": "EX9-19",
+            "git_tree_sha": "61abb455f7b2071e6bc5f7a4b257f972e4940255"
+          }
+        ],
+        "receipt": "literature/normal-source-reconciliation/nextbrain-case-5-repository-root.json",
+        "receipt_sha256": "6d5cfc9c369f5f8260faa1aae852564d42e053ff3b4eabd4f172137589f8c051"
+      },
+      "alias_issue": "Official case repository uses EX9-19; existing raw MRI release uses EXT9-19. Do not equate these names without explicit source correspondence."
+    }
+  ],
+  "policy": "P85-18 is excluded from future normal-atlas construction. Mixed-cohort aggregate maps are not treated as purely normal. Existing acquired originals remain intact; no new imaging was acquired. Source-reported normal candidates still require a native-space adapter and engineering correspondence checks.",
+  "current_atlas_packages_include_nextbrain": false,
+  "expert_review": "not_performed"
+}

@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-nerve-roots",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Cranial nerves and source root models",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Identify the named source models, trace their supplied extents and compare spatial relationships from several views.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "ni-z301-1",
+      "title": "Left Trigeminal nerve (V)",
+      "selected": "z_anatomy:object:7c289f82d93d",
+      "visible": [
+        "z_anatomy:object:7c289f82d93d",
+        "z_anatomy:object:21a7bd5b9c0a",
+        "z_anatomy:object:02130795e077",
+        "z_anatomy:object:a67a39d3905d",
+        "z_anatomy:object:80d4e7e5eb30",
+        "z_anatomy:object:78dc4c23085e",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:a74c6306255a",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032"
+      ],
+      "prompt": "Inspect the full supplied left trigeminal object before selecting its separately modeled roots. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Trigeminal nerve (V). This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:a74c6306255a": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z301-2",
+      "title": "Left Motor root of trigeminal nerve",
+      "selected": "z_anatomy:object:02130795e077",
+      "visible": [
+        "z_anatomy:object:7c289f82d93d",
+        "z_anatomy:object:21a7bd5b9c0a",
+        "z_anatomy:object:02130795e077",
+        "z_anatomy:object:a67a39d3905d",
+        "z_anatomy:object:80d4e7e5eb30",
+        "z_anatomy:object:78dc4c23085e",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:a74c6306255a",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032"
+      ],
+      "prompt": "Select the original left motor-root model and compare it with the sensory-root model. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Motor root of trigeminal nerve. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:a74c6306255a": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z301-3",
+      "title": "Left Sensory root of trigeminal nerve",
+      "selected": "z_anatomy:object:80d4e7e5eb30",
+      "visible": [
+        "z_anatomy:object:7c289f82d93d",
+        "z_anatomy:object:21a7bd5b9c0a",
+        "z_anatomy:object:02130795e077",
+        "z_anatomy:object:a67a39d3905d",
+        "z_anatomy:object:80d4e7e5eb30",
+        "z_anatomy:object:78dc4c23085e",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:a74c6306255a",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032"
+      ],
+      "prompt": "Inspect the sensory root from a second view while retaining the motor root and pons. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Sensory root of trigeminal nerve. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:a74c6306255a": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z301-4",
+      "title": "Right Motor root of trigeminal nerve",
+      "selected": "z_anatomy:object:a67a39d3905d",
+      "visible": [
+        "z_anatomy:object:7c289f82d93d",
+        "z_anatomy:object:21a7bd5b9c0a",
+        "z_anatomy:object:02130795e077",
+        "z_anatomy:object:a67a39d3905d",
+        "z_anatomy:object:80d4e7e5eb30",
+        "z_anatomy:object:78dc4c23085e",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:a74c6306255a",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032"
+      ],
+      "prompt": "Return to the full context and inspect the corresponding right root. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Right Motor root of trigeminal nerve. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:a74c6306255a": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z302-1",
+      "title": "Left Facial nerve (VII)",
+      "selected": "z_anatomy:object:bc48828b47d0",
+      "visible": [
+        "z_anatomy:object:52def54c491b",
+        "z_anatomy:object:c0c1e24193dd",
+        "z_anatomy:object:bc48828b47d0",
+        "z_anatomy:object:097dc9c0cbbc",
+        "z_anatomy:object:8161802b5bcc",
+        "z_anatomy:object:fe39c12c2227",
+        "z_anatomy:object:0672160633f7",
+        "z_anatomy:object:0b6e15b7e8f7",
+        "z_anatomy:object:f2224d84526b",
+        "z_anatomy:object:b50e8234ce8f",
+        "z_anatomy:object:2a80eed2f169",
+        "z_anatomy:object:f95851dc2e07",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:db74fa732312",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032",
+        "z_anatomy:object:0fe1a83f9bcf",
+        "z_anatomy:object:785e1027b243"
+      ],
+      "prompt": "Compare the source facial nerve with the neighboring vestibulocochlear model. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Facial nerve (VII). This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:db74fa732312": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z302-2",
+      "title": "Left Vestibulocochlear nerve (VIII)",
+      "selected": "z_anatomy:object:2a80eed2f169",
+      "visible": [
+        "z_anatomy:object:52def54c491b",
+        "z_anatomy:object:c0c1e24193dd",
+        "z_anatomy:object:bc48828b47d0",
+        "z_anatomy:object:097dc9c0cbbc",
+        "z_anatomy:object:8161802b5bcc",
+        "z_anatomy:object:fe39c12c2227",
+        "z_anatomy:object:0672160633f7",
+        "z_anatomy:object:0b6e15b7e8f7",
+        "z_anatomy:object:f2224d84526b",
+        "z_anatomy:object:b50e8234ce8f",
+        "z_anatomy:object:2a80eed2f169",
+        "z_anatomy:object:f95851dc2e07",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:db74fa732312",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032",
+        "z_anatomy:object:0fe1a83f9bcf",
+        "z_anatomy:object:785e1027b243"
+      ],
+      "prompt": "Inspect the VIII source model with temporal-bone context. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Vestibulocochlear nerve (VIII). This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:db74fa732312": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z302-3",
+      "title": "Left Glossopharyngeal nerve (IX)",
+      "selected": "z_anatomy:object:8161802b5bcc",
+      "visible": [
+        "z_anatomy:object:52def54c491b",
+        "z_anatomy:object:c0c1e24193dd",
+        "z_anatomy:object:bc48828b47d0",
+        "z_anatomy:object:097dc9c0cbbc",
+        "z_anatomy:object:8161802b5bcc",
+        "z_anatomy:object:fe39c12c2227",
+        "z_anatomy:object:0672160633f7",
+        "z_anatomy:object:0b6e15b7e8f7",
+        "z_anatomy:object:f2224d84526b",
+        "z_anatomy:object:b50e8234ce8f",
+        "z_anatomy:object:2a80eed2f169",
+        "z_anatomy:object:f95851dc2e07",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:db74fa732312",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032",
+        "z_anatomy:object:0fe1a83f9bcf",
+        "z_anatomy:object:785e1027b243"
+      ],
+      "prompt": "Compare the lower source nerve models within their shared native space. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Glossopharyngeal nerve (IX). This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:db74fa732312": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z302-4",
+      "title": "Left Hypoglossal nerve (XII)",
+      "selected": "z_anatomy:object:0672160633f7",
+      "visible": [
+        "z_anatomy:object:52def54c491b",
+        "z_anatomy:object:c0c1e24193dd",
+        "z_anatomy:object:bc48828b47d0",
+        "z_anatomy:object:097dc9c0cbbc",
+        "z_anatomy:object:8161802b5bcc",
+        "z_anatomy:object:fe39c12c2227",
+        "z_anatomy:object:0672160633f7",
+        "z_anatomy:object:0b6e15b7e8f7",
+        "z_anatomy:object:f2224d84526b",
+        "z_anatomy:object:b50e8234ce8f",
+        "z_anatomy:object:2a80eed2f169",
+        "z_anatomy:object:f95851dc2e07",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:db74fa732312",
+        "z_anatomy:object:61255b8b1972",
+        "z_anatomy:object:a61f9dc2f032",
+        "z_anatomy:object:0fe1a83f9bcf",
+        "z_anatomy:object:785e1027b243"
+      ],
+      "prompt": "Inspect the source hypoglossal model against the occipital and medullary context. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Hypoglossal nerve (XII). This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.2,
+          "z_anatomy:object:de51bcc0183f": 0.2,
+          "z_anatomy:object:db74fa732312": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

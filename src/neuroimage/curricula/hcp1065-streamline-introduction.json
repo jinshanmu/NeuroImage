@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "id": "source-streamline-introduction",
+  "dataset_id": "hcp1065_tracts",
+  "required_source": {
+    "id": "hcp1065_trk",
+    "version": "Yeh 2022 TRK distribution; SHA256-pinned source archive"
+  },
+  "title": "White-matter source trajectories: first observations",
+  "author": "NeuroImage example curriculum (unreviewed)",
+  "objective": "Relate source-estimated trajectories to their documented template, physical section slabs and retained source vertices. Distinguish display sampling from anatomical density and preserve reproducible spatial observations.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "source-point",
+      "title": "1. One retained source point in four views",
+      "selected": "hcp1065_tracts:bundle:AF_L",
+      "visible": [
+        "hcp1065_tracts:bundle:AF_L"
+      ],
+      "background": "t1",
+      "prompt": "Locate the marked source trajectory vertex in all three sections and in 3D. Follow neighboring portions as the section moves. Which visible information is template MRI, which is an estimated trajectory, and which is a teaching marker?",
+      "note": "The marker records an original trajectory vertex near the point-weighted centroid. It provides a reproducible source location for exploration.",
+      "display": {
+        "section_planes": [
+          "axial",
+          "coronal",
+          "sagittal"
+        ],
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110,
+          15,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "paired-association",
+      "title": "2. Compare the paired source association bundles",
+      "selected": "hcp1065_tracts:bundle:AF_R",
+      "visible": [
+        "hcp1065_tracts:bundle:AF_L",
+        "hcp1065_tracts:bundle:AF_R"
+      ],
+      "background": "t2",
+      "prompt": "Compare the two source-defined arcuate bundles in the same template. Read the displayed and complete source counts. Explain why unequal source counts do not establish an anatomical or functional hemispheric difference.",
+      "note": "The left and right source bundles contain different numbers of computational streamlines. Counts and displayed subsets describe this tractography source; biological axon counts require separate measurement.",
+      "display": {
+        "section_planes": [
+          "axial"
+        ],
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110,
+          15,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "projection",
+      "title": "3. Follow paired source projection courses",
+      "selected": "hcp1065_tracts:bundle:CST_L",
+      "visible": [
+        "hcp1065_tracts:bundle:CST_L",
+        "hcp1065_tracts:bundle:CST_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow the source-defined corticospinal bundles through adjacent sections. Relate each section slab to the 3D course and observe areas where MRI does not independently resolve the represented pathway.",
+      "note": "These are estimated source trajectories. Their recorded endpoints describe the supplied tractography; anatomical terminations and functional interpretation require separate evidence.",
+      "display": {
+        "section_planes": [
+          "axial"
+        ],
+        "streamline_level": "detail",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110,
+          15,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "commissural",
+      "title": "4. Observe a midline-spanning source bundle",
+      "selected": "hcp1065_tracts:bundle:CC",
+      "visible": [
+        "hcp1065_tracts:bundle:CC"
+      ],
+      "background": "t2",
+      "prompt": "Inspect the source-defined corpus-callosum bundle in the three planes. Rotate its full 3D course, then return to the recorded view. Which parts intersect the current slab and which are outside it?",
+      "note": "The complete source bundle retains its delivered grouping. Study visible line crossings as spatial relationships among independent computed trajectories.",
+      "display": {
+        "section_planes": [
+          "axial"
+        ],
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110,
+          15,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "cerebellar",
+      "title": "5. Observe the delivered cerebellar bundle",
+      "selected": "hcp1065_tracts:bundle:MCP",
+      "visible": [
+        "hcp1065_tracts:bundle:MCP"
+      ],
+      "background": "t1",
+      "prompt": "Follow the source-defined middle cerebellar peduncle trajectories through the template. Describe the displayed course and separately list anatomical claims that this source does not establish.",
+      "note": "The trajectories retain one delivered source group. Its definition governs the represented extent and grouping.",
+      "display": {
+        "section_planes": [
+          "axial"
+        ],
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110,
+          15,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "sampling",
+      "title": "6. Separate display settings from source evidence",
+      "selected": "hcp1065_tracts:bundle:AF_L",
+      "visible": [
+        "hcp1065_tracts:bundle:AF_L",
+        "hcp1065_tracts:bundle:CST_L",
+        "hcp1065_tracts:bundle:CC"
+      ],
+      "background": "t1",
+      "prompt": "Change preview, standard and detail sampling, then compare 1 mm and 3 mm section slabs. Observe which differences come from sampling and slab projection. Restore the recorded scene and confirm that its original point and settings return.",
+      "note": "Display sampling selects complete original trajectories with recorded source indices. Slab width specifies the viewing thickness around each image plane. MRI resolution follows the original image metadata.",
+      "display": {
+        "section_planes": [
+          "axial"
+        ],
+        "streamline_level": "preview",
+        "streamline_slab_mm": 3.0,
+        "camera": [
+          110,
+          15,
+          1.4
+        ]
+      }
+    }
+  ]
+}

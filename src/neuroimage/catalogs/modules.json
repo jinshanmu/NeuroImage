@@ -1,0 +1,2144 @@
+{
+  "schema_version": "1.0",
+  "scope": "Native source coverage for normal-anatomy teaching. Module membership is descriptive, not a cross-dataset anatomical mapping. Counts are source entries, not unique anatomical structures.",
+  "modules": [
+    {
+      "id": "general-anatomy",
+      "title": "General brain anatomy",
+      "sources": {
+        "spl_nac": {
+          "categories": [
+            "Cerebral cortex",
+            "Deep structures",
+            "Ventricles",
+            "Brainstem",
+            "Cerebellum",
+            "White matter context"
+          ],
+          "evidence": "Real native T1/T2 and source labels; individual 1 mm grids retain their original half-millimeter origin difference."
+        },
+        "cerebra": {
+          "categories": [
+            "Cerebral cortex",
+            "Deep structures",
+            "Ventricles",
+            "Brainstem",
+            "Cerebellum"
+          ],
+          "evidence": "Template MRI and source-defined regional labels in their native source space."
+        },
+        "cit168_native": {
+          "categories": [
+            "Deep structures",
+            "Brainstem"
+          ],
+          "evidence": "Native population MRI and source probabilities; retained winner labels are a navigation representation."
+        },
+        "brainstem_navigator_mni": {
+          "categories": [
+            "Midbrain",
+            "Midbrain tectum",
+            "Midline regions",
+            "Medulla",
+            "Mesopontine regions",
+            "Reticular source regions",
+            "Source subregions",
+            "Brainstem nuclei complexes",
+            "Diencephalic nuclei"
+          ],
+          "evidence": "Source template MRI, full probabilities and overlapping independent region masks."
+        },
+        "mida": {
+          "categories": [
+            "Cerebellum",
+            "Deep structures",
+            "Ventricles",
+            "Cerebral tissue",
+            "Brainstem"
+          ],
+          "evidence": "Original categorical voxel model with source-defined tissue and anatomical classes."
+        },
+        "hba_native": {
+          "image_regions": true,
+          "evidence": "Healthy-participant source-author skull-stripped, averaged T2 on a 0.25 mm reconstructed grid. Original bytes, native ACPC coordinates and processing mask edges are retained for image observation."
+        },
+        "julich_selected": {
+          "categories": [
+            "Cerebral cytoarchitectonic regions",
+            "Medial temporal regions",
+            "Subcortical cytoarchitectonic regions",
+            "Cerebellar nuclei"
+          ],
+          "evidence": "Original source maximum-probability assignments with the matching asymmetric T1/T2 reference. Cortical, medial temporal, subcortical and cerebellar nuclear regions retain their source names, hemisphere assignments and native sampling."
+        },
+        "nextbrain_case1_block05": {
+          "structure_ids": [
+            "nextbrain_case1_block05:label:7",
+            "nextbrain_case1_block05:label:50",
+            "nextbrain_case1_block05:label:199",
+            "nextbrain_case1_block05:label:343",
+            "nextbrain_case1_block05:label:344",
+            "nextbrain_case1_block05:label:345",
+            "nextbrain_case1_block05:label:346",
+            "nextbrain_case1_block05:label:347",
+            "nextbrain_case1_block05:label:354",
+            "nextbrain_case1_block05:label:393",
+            "nextbrain_case1_block05:label:404",
+            "nextbrain_case1_block05:label:405",
+            "nextbrain_case1_block05:label:407",
+            "nextbrain_case1_block05:label:408",
+            "nextbrain_case1_block05:label:409",
+            "nextbrain_case1_block05:label:410",
+            "nextbrain_case1_block05:label:411",
+            "nextbrain_case1_block05:label:418",
+            "nextbrain_case1_block05:label:419",
+            "nextbrain_case1_block05:label:420",
+            "nextbrain_case1_block05:label:421",
+            "nextbrain_case1_block05:label:432",
+            "nextbrain_case1_block05:label:461",
+            "nextbrain_case1_block05:label:558",
+            "nextbrain_case1_block05:label:559",
+            "nextbrain_case1_block05:label:561",
+            "nextbrain_case1_block05:label:562",
+            "nextbrain_case1_block05:label:563",
+            "nextbrain_case1_block05:label:564",
+            "nextbrain_case1_block05:label:565",
+            "nextbrain_case1_block05:label:566",
+            "nextbrain_case1_block05:label:567",
+            "nextbrain_case1_block05:label:568",
+            "nextbrain_case1_block05:label:569",
+            "nextbrain_case1_block05:label:571",
+            "nextbrain_case1_block05:label:572",
+            "nextbrain_case1_block05:label:573",
+            "nextbrain_case1_block05:label:574",
+            "nextbrain_case1_block05:label:575",
+            "nextbrain_case1_block05:label:576",
+            "nextbrain_case1_block05:label:578",
+            "nextbrain_case1_block05:label:2001",
+            "nextbrain_case1_block05:label:2007",
+            "nextbrain_case1_block05:label:2009",
+            "nextbrain_case1_block05:label:2010",
+            "nextbrain_case1_block05:label:2013",
+            "nextbrain_case1_block05:label:2015",
+            "nextbrain_case1_block05:label:2016",
+            "nextbrain_case1_block05:label:2030"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P3.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block07": {
+          "structure_ids": [
+            "nextbrain_case1_block07:label:7",
+            "nextbrain_case1_block07:label:48",
+            "nextbrain_case1_block07:label:50",
+            "nextbrain_case1_block07:label:79",
+            "nextbrain_case1_block07:label:99",
+            "nextbrain_case1_block07:label:113",
+            "nextbrain_case1_block07:label:2002",
+            "nextbrain_case1_block07:label:2012",
+            "nextbrain_case1_block07:label:2014",
+            "nextbrain_case1_block07:label:2018",
+            "nextbrain_case1_block07:label:2019",
+            "nextbrain_case1_block07:label:2020",
+            "nextbrain_case1_block07:label:2026",
+            "nextbrain_case1_block07:label:2028",
+            "nextbrain_case1_block07:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A3.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block08": {
+          "structure_ids": [
+            "nextbrain_case1_block08:label:7",
+            "nextbrain_case1_block08:label:48",
+            "nextbrain_case1_block08:label:50",
+            "nextbrain_case1_block08:label:68",
+            "nextbrain_case1_block08:label:79",
+            "nextbrain_case1_block08:label:99",
+            "nextbrain_case1_block08:label:100",
+            "nextbrain_case1_block08:label:101",
+            "nextbrain_case1_block08:label:102",
+            "nextbrain_case1_block08:label:113",
+            "nextbrain_case1_block08:label:114",
+            "nextbrain_case1_block08:label:119",
+            "nextbrain_case1_block08:label:2012",
+            "nextbrain_case1_block08:label:2014",
+            "nextbrain_case1_block08:label:2018",
+            "nextbrain_case1_block08:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A2.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block25": {
+          "structure_ids": [
+            "nextbrain_case1_block25:label:595",
+            "nextbrain_case1_block25:label:597",
+            "nextbrain_case1_block25:label:611",
+            "nextbrain_case1_block25:label:715",
+            "nextbrain_case1_block25:label:721",
+            "nextbrain_case1_block25:label:751",
+            "nextbrain_case1_block25:label:752"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block C1.1, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block33": {
+          "structure_ids": [
+            "nextbrain_case1_block33:label:7",
+            "nextbrain_case1_block33:label:50",
+            "nextbrain_case1_block33:label:79",
+            "nextbrain_case1_block33:label:102",
+            "nextbrain_case1_block33:label:108",
+            "nextbrain_case1_block33:label:118",
+            "nextbrain_case1_block33:label:119",
+            "nextbrain_case1_block33:label:128",
+            "nextbrain_case1_block33:label:184",
+            "nextbrain_case1_block33:label:201",
+            "nextbrain_case1_block33:label:206",
+            "nextbrain_case1_block33:label:208",
+            "nextbrain_case1_block33:label:214",
+            "nextbrain_case1_block33:label:216",
+            "nextbrain_case1_block33:label:217",
+            "nextbrain_case1_block33:label:218",
+            "nextbrain_case1_block33:label:219",
+            "nextbrain_case1_block33:label:222",
+            "nextbrain_case1_block33:label:225",
+            "nextbrain_case1_block33:label:226",
+            "nextbrain_case1_block33:label:227",
+            "nextbrain_case1_block33:label:238",
+            "nextbrain_case1_block33:label:253",
+            "nextbrain_case1_block33:label:254",
+            "nextbrain_case1_block33:label:256",
+            "nextbrain_case1_block33:label:274",
+            "nextbrain_case1_block33:label:275",
+            "nextbrain_case1_block33:label:276",
+            "nextbrain_case1_block33:label:277",
+            "nextbrain_case1_block33:label:278",
+            "nextbrain_case1_block33:label:279",
+            "nextbrain_case1_block33:label:282",
+            "nextbrain_case1_block33:label:283",
+            "nextbrain_case1_block33:label:284",
+            "nextbrain_case1_block33:label:285",
+            "nextbrain_case1_block33:label:286",
+            "nextbrain_case1_block33:label:295",
+            "nextbrain_case1_block33:label:297",
+            "nextbrain_case1_block33:label:298",
+            "nextbrain_case1_block33:label:301",
+            "nextbrain_case1_block33:label:303",
+            "nextbrain_case1_block33:label:304",
+            "nextbrain_case1_block33:label:305",
+            "nextbrain_case1_block33:label:306",
+            "nextbrain_case1_block33:label:307",
+            "nextbrain_case1_block33:label:308",
+            "nextbrain_case1_block33:label:309",
+            "nextbrain_case1_block33:label:310",
+            "nextbrain_case1_block33:label:312",
+            "nextbrain_case1_block33:label:313",
+            "nextbrain_case1_block33:label:314",
+            "nextbrain_case1_block33:label:315",
+            "nextbrain_case1_block33:label:316",
+            "nextbrain_case1_block33:label:321",
+            "nextbrain_case1_block33:label:322",
+            "nextbrain_case1_block33:label:343",
+            "nextbrain_case1_block33:label:344",
+            "nextbrain_case1_block33:label:345",
+            "nextbrain_case1_block33:label:346",
+            "nextbrain_case1_block33:label:347",
+            "nextbrain_case1_block33:label:349",
+            "nextbrain_case1_block33:label:350",
+            "nextbrain_case1_block33:label:352",
+            "nextbrain_case1_block33:label:354",
+            "nextbrain_case1_block33:label:364",
+            "nextbrain_case1_block33:label:365",
+            "nextbrain_case1_block33:label:367",
+            "nextbrain_case1_block33:label:368",
+            "nextbrain_case1_block33:label:369",
+            "nextbrain_case1_block33:label:370",
+            "nextbrain_case1_block33:label:371",
+            "nextbrain_case1_block33:label:372",
+            "nextbrain_case1_block33:label:373",
+            "nextbrain_case1_block33:label:374",
+            "nextbrain_case1_block33:label:375",
+            "nextbrain_case1_block33:label:377",
+            "nextbrain_case1_block33:label:378",
+            "nextbrain_case1_block33:label:379",
+            "nextbrain_case1_block33:label:380",
+            "nextbrain_case1_block33:label:381",
+            "nextbrain_case1_block33:label:382",
+            "nextbrain_case1_block33:label:384",
+            "nextbrain_case1_block33:label:385",
+            "nextbrain_case1_block33:label:393",
+            "nextbrain_case1_block33:label:394",
+            "nextbrain_case1_block33:label:395",
+            "nextbrain_case1_block33:label:396",
+            "nextbrain_case1_block33:label:397",
+            "nextbrain_case1_block33:label:398",
+            "nextbrain_case1_block33:label:399",
+            "nextbrain_case1_block33:label:400",
+            "nextbrain_case1_block33:label:401",
+            "nextbrain_case1_block33:label:403",
+            "nextbrain_case1_block33:label:404",
+            "nextbrain_case1_block33:label:405",
+            "nextbrain_case1_block33:label:407",
+            "nextbrain_case1_block33:label:408",
+            "nextbrain_case1_block33:label:409",
+            "nextbrain_case1_block33:label:410",
+            "nextbrain_case1_block33:label:411",
+            "nextbrain_case1_block33:label:412",
+            "nextbrain_case1_block33:label:418",
+            "nextbrain_case1_block33:label:419",
+            "nextbrain_case1_block33:label:420",
+            "nextbrain_case1_block33:label:421",
+            "nextbrain_case1_block33:label:422",
+            "nextbrain_case1_block33:label:423",
+            "nextbrain_case1_block33:label:424",
+            "nextbrain_case1_block33:label:425",
+            "nextbrain_case1_block33:label:426",
+            "nextbrain_case1_block33:label:430",
+            "nextbrain_case1_block33:label:431",
+            "nextbrain_case1_block33:label:432",
+            "nextbrain_case1_block33:label:433",
+            "nextbrain_case1_block33:label:442",
+            "nextbrain_case1_block33:label:479",
+            "nextbrain_case1_block33:label:484",
+            "nextbrain_case1_block33:label:2006",
+            "nextbrain_case1_block33:label:2007",
+            "nextbrain_case1_block33:label:2009",
+            "nextbrain_case1_block33:label:2016",
+            "nextbrain_case1_block33:label:2022",
+            "nextbrain_case1_block33:label:2030",
+            "nextbrain_case1_block33:label:2034",
+            "nextbrain_case1_block33:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block41": {
+          "structure_ids": [
+            "nextbrain_case1_block41:label:7",
+            "nextbrain_case1_block41:label:48",
+            "nextbrain_case1_block41:label:50",
+            "nextbrain_case1_block41:label:79",
+            "nextbrain_case1_block41:label:102",
+            "nextbrain_case1_block41:label:118",
+            "nextbrain_case1_block41:label:184",
+            "nextbrain_case1_block41:label:199",
+            "nextbrain_case1_block41:label:201",
+            "nextbrain_case1_block41:label:218",
+            "nextbrain_case1_block41:label:226",
+            "nextbrain_case1_block41:label:227",
+            "nextbrain_case1_block41:label:254",
+            "nextbrain_case1_block41:label:282",
+            "nextbrain_case1_block41:label:313",
+            "nextbrain_case1_block41:label:343",
+            "nextbrain_case1_block41:label:344",
+            "nextbrain_case1_block41:label:345",
+            "nextbrain_case1_block41:label:346",
+            "nextbrain_case1_block41:label:347",
+            "nextbrain_case1_block41:label:350",
+            "nextbrain_case1_block41:label:354",
+            "nextbrain_case1_block41:label:378",
+            "nextbrain_case1_block41:label:380",
+            "nextbrain_case1_block41:label:384",
+            "nextbrain_case1_block41:label:385",
+            "nextbrain_case1_block41:label:386",
+            "nextbrain_case1_block41:label:393",
+            "nextbrain_case1_block41:label:398",
+            "nextbrain_case1_block41:label:399",
+            "nextbrain_case1_block41:label:403",
+            "nextbrain_case1_block41:label:404",
+            "nextbrain_case1_block41:label:405",
+            "nextbrain_case1_block41:label:407",
+            "nextbrain_case1_block41:label:408",
+            "nextbrain_case1_block41:label:409",
+            "nextbrain_case1_block41:label:410",
+            "nextbrain_case1_block41:label:411",
+            "nextbrain_case1_block41:label:418",
+            "nextbrain_case1_block41:label:419",
+            "nextbrain_case1_block41:label:420",
+            "nextbrain_case1_block41:label:421",
+            "nextbrain_case1_block41:label:425",
+            "nextbrain_case1_block41:label:430",
+            "nextbrain_case1_block41:label:432",
+            "nextbrain_case1_block41:label:441",
+            "nextbrain_case1_block41:label:443",
+            "nextbrain_case1_block41:label:444",
+            "nextbrain_case1_block41:label:447",
+            "nextbrain_case1_block41:label:451",
+            "nextbrain_case1_block41:label:454",
+            "nextbrain_case1_block41:label:458",
+            "nextbrain_case1_block41:label:461",
+            "nextbrain_case1_block41:label:465",
+            "nextbrain_case1_block41:label:468",
+            "nextbrain_case1_block41:label:469",
+            "nextbrain_case1_block41:label:470",
+            "nextbrain_case1_block41:label:472",
+            "nextbrain_case1_block41:label:478",
+            "nextbrain_case1_block41:label:479",
+            "nextbrain_case1_block41:label:484",
+            "nextbrain_case1_block41:label:492",
+            "nextbrain_case1_block41:label:493",
+            "nextbrain_case1_block41:label:496",
+            "nextbrain_case1_block41:label:498",
+            "nextbrain_case1_block41:label:504",
+            "nextbrain_case1_block41:label:505",
+            "nextbrain_case1_block41:label:506",
+            "nextbrain_case1_block41:label:507",
+            "nextbrain_case1_block41:label:508",
+            "nextbrain_case1_block41:label:510",
+            "nextbrain_case1_block41:label:512",
+            "nextbrain_case1_block41:label:517",
+            "nextbrain_case1_block41:label:519",
+            "nextbrain_case1_block41:label:525",
+            "nextbrain_case1_block41:label:526",
+            "nextbrain_case1_block41:label:811",
+            "nextbrain_case1_block41:label:813",
+            "nextbrain_case1_block41:label:2007",
+            "nextbrain_case1_block41:label:2016",
+            "nextbrain_case1_block41:label:2017",
+            "nextbrain_case1_block41:label:2023",
+            "nextbrain_case1_block41:label:2031",
+            "nextbrain_case1_block41:label:2034",
+            "nextbrain_case1_block41:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P2.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block45": {
+          "structure_ids": [
+            "nextbrain_case1_block45:label:7",
+            "nextbrain_case1_block45:label:50",
+            "nextbrain_case1_block45:label:79",
+            "nextbrain_case1_block45:label:99",
+            "nextbrain_case1_block45:label:102",
+            "nextbrain_case1_block45:label:103",
+            "nextbrain_case1_block45:label:108",
+            "nextbrain_case1_block45:label:111",
+            "nextbrain_case1_block45:label:117",
+            "nextbrain_case1_block45:label:118",
+            "nextbrain_case1_block45:label:119",
+            "nextbrain_case1_block45:label:120",
+            "nextbrain_case1_block45:label:125",
+            "nextbrain_case1_block45:label:128",
+            "nextbrain_case1_block45:label:130",
+            "nextbrain_case1_block45:label:147",
+            "nextbrain_case1_block45:label:149",
+            "nextbrain_case1_block45:label:150",
+            "nextbrain_case1_block45:label:157",
+            "nextbrain_case1_block45:label:160",
+            "nextbrain_case1_block45:label:161",
+            "nextbrain_case1_block45:label:174",
+            "nextbrain_case1_block45:label:181",
+            "nextbrain_case1_block45:label:184",
+            "nextbrain_case1_block45:label:190",
+            "nextbrain_case1_block45:label:191",
+            "nextbrain_case1_block45:label:192",
+            "nextbrain_case1_block45:label:193",
+            "nextbrain_case1_block45:label:194",
+            "nextbrain_case1_block45:label:196",
+            "nextbrain_case1_block45:label:199",
+            "nextbrain_case1_block45:label:201",
+            "nextbrain_case1_block45:label:206",
+            "nextbrain_case1_block45:label:207",
+            "nextbrain_case1_block45:label:208",
+            "nextbrain_case1_block45:label:209",
+            "nextbrain_case1_block45:label:214",
+            "nextbrain_case1_block45:label:215",
+            "nextbrain_case1_block45:label:216",
+            "nextbrain_case1_block45:label:217",
+            "nextbrain_case1_block45:label:218",
+            "nextbrain_case1_block45:label:219",
+            "nextbrain_case1_block45:label:220",
+            "nextbrain_case1_block45:label:221",
+            "nextbrain_case1_block45:label:222",
+            "nextbrain_case1_block45:label:223",
+            "nextbrain_case1_block45:label:224",
+            "nextbrain_case1_block45:label:225",
+            "nextbrain_case1_block45:label:226",
+            "nextbrain_case1_block45:label:227",
+            "nextbrain_case1_block45:label:228",
+            "nextbrain_case1_block45:label:229",
+            "nextbrain_case1_block45:label:230",
+            "nextbrain_case1_block45:label:232",
+            "nextbrain_case1_block45:label:234",
+            "nextbrain_case1_block45:label:238",
+            "nextbrain_case1_block45:label:240",
+            "nextbrain_case1_block45:label:242",
+            "nextbrain_case1_block45:label:243",
+            "nextbrain_case1_block45:label:244",
+            "nextbrain_case1_block45:label:245",
+            "nextbrain_case1_block45:label:246",
+            "nextbrain_case1_block45:label:252",
+            "nextbrain_case1_block45:label:253",
+            "nextbrain_case1_block45:label:254",
+            "nextbrain_case1_block45:label:255",
+            "nextbrain_case1_block45:label:256",
+            "nextbrain_case1_block45:label:268",
+            "nextbrain_case1_block45:label:274",
+            "nextbrain_case1_block45:label:275",
+            "nextbrain_case1_block45:label:276",
+            "nextbrain_case1_block45:label:277",
+            "nextbrain_case1_block45:label:278",
+            "nextbrain_case1_block45:label:279",
+            "nextbrain_case1_block45:label:282",
+            "nextbrain_case1_block45:label:283",
+            "nextbrain_case1_block45:label:284",
+            "nextbrain_case1_block45:label:285",
+            "nextbrain_case1_block45:label:286",
+            "nextbrain_case1_block45:label:295",
+            "nextbrain_case1_block45:label:297",
+            "nextbrain_case1_block45:label:298",
+            "nextbrain_case1_block45:label:301",
+            "nextbrain_case1_block45:label:303",
+            "nextbrain_case1_block45:label:304",
+            "nextbrain_case1_block45:label:305",
+            "nextbrain_case1_block45:label:306",
+            "nextbrain_case1_block45:label:307",
+            "nextbrain_case1_block45:label:308",
+            "nextbrain_case1_block45:label:312",
+            "nextbrain_case1_block45:label:313",
+            "nextbrain_case1_block45:label:314",
+            "nextbrain_case1_block45:label:320",
+            "nextbrain_case1_block45:label:326",
+            "nextbrain_case1_block45:label:339",
+            "nextbrain_case1_block45:label:340",
+            "nextbrain_case1_block45:label:341",
+            "nextbrain_case1_block45:label:342",
+            "nextbrain_case1_block45:label:343",
+            "nextbrain_case1_block45:label:344",
+            "nextbrain_case1_block45:label:345",
+            "nextbrain_case1_block45:label:346",
+            "nextbrain_case1_block45:label:347",
+            "nextbrain_case1_block45:label:349",
+            "nextbrain_case1_block45:label:350",
+            "nextbrain_case1_block45:label:354",
+            "nextbrain_case1_block45:label:368",
+            "nextbrain_case1_block45:label:369",
+            "nextbrain_case1_block45:label:370",
+            "nextbrain_case1_block45:label:371",
+            "nextbrain_case1_block45:label:372",
+            "nextbrain_case1_block45:label:373",
+            "nextbrain_case1_block45:label:374",
+            "nextbrain_case1_block45:label:375",
+            "nextbrain_case1_block45:label:377",
+            "nextbrain_case1_block45:label:404",
+            "nextbrain_case1_block45:label:405",
+            "nextbrain_case1_block45:label:407",
+            "nextbrain_case1_block45:label:408",
+            "nextbrain_case1_block45:label:409",
+            "nextbrain_case1_block45:label:410",
+            "nextbrain_case1_block45:label:411",
+            "nextbrain_case1_block45:label:418",
+            "nextbrain_case1_block45:label:419",
+            "nextbrain_case1_block45:label:420",
+            "nextbrain_case1_block45:label:421",
+            "nextbrain_case1_block45:label:510",
+            "nextbrain_case1_block45:label:843",
+            "nextbrain_case1_block45:label:2006",
+            "nextbrain_case1_block45:label:2007",
+            "nextbrain_case1_block45:label:2009",
+            "nextbrain_case1_block45:label:2018",
+            "nextbrain_case1_block45:label:2022",
+            "nextbrain_case1_block45:label:2024",
+            "nextbrain_case1_block45:label:2030",
+            "nextbrain_case1_block45:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case2_block07": {
+          "structure_ids": [
+            "nextbrain_case2_block07:label:310",
+            "nextbrain_case2_block07:label:352",
+            "nextbrain_case2_block07:label:384",
+            "nextbrain_case2_block07:label:385",
+            "nextbrain_case2_block07:label:386",
+            "nextbrain_case2_block07:label:403",
+            "nextbrain_case2_block07:label:412",
+            "nextbrain_case2_block07:label:414",
+            "nextbrain_case2_block07:label:415",
+            "nextbrain_case2_block07:label:435",
+            "nextbrain_case2_block07:label:436",
+            "nextbrain_case2_block07:label:447",
+            "nextbrain_case2_block07:label:464",
+            "nextbrain_case2_block07:label:465",
+            "nextbrain_case2_block07:label:471",
+            "nextbrain_case2_block07:label:472",
+            "nextbrain_case2_block07:label:499",
+            "nextbrain_case2_block07:label:507",
+            "nextbrain_case2_block07:label:515",
+            "nextbrain_case2_block07:label:520",
+            "nextbrain_case2_block07:label:521",
+            "nextbrain_case2_block07:label:525",
+            "nextbrain_case2_block07:label:526",
+            "nextbrain_case2_block07:label:527",
+            "nextbrain_case2_block07:label:528",
+            "nextbrain_case2_block07:label:531",
+            "nextbrain_case2_block07:label:535",
+            "nextbrain_case2_block07:label:541",
+            "nextbrain_case2_block07:label:542",
+            "nextbrain_case2_block07:label:543",
+            "nextbrain_case2_block07:label:580",
+            "nextbrain_case2_block07:label:586",
+            "nextbrain_case2_block07:label:591",
+            "nextbrain_case2_block07:label:592",
+            "nextbrain_case2_block07:label:598",
+            "nextbrain_case2_block07:label:600",
+            "nextbrain_case2_block07:label:610",
+            "nextbrain_case2_block07:label:611",
+            "nextbrain_case2_block07:label:617",
+            "nextbrain_case2_block07:label:645",
+            "nextbrain_case2_block07:label:779",
+            "nextbrain_case2_block07:label:827",
+            "nextbrain_case2_block07:label:828",
+            "nextbrain_case2_block07:label:829",
+            "nextbrain_case2_block07:label:842",
+            "nextbrain_case2_block07:label:844"
+          ],
+          "evidence": "Original case P41-16 histological block B1.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block06": {
+          "structure_ids": [
+            "nextbrain_case2_block06:label:414",
+            "nextbrain_case2_block06:label:415",
+            "nextbrain_case2_block06:label:471",
+            "nextbrain_case2_block06:label:499",
+            "nextbrain_case2_block06:label:515",
+            "nextbrain_case2_block06:label:527",
+            "nextbrain_case2_block06:label:528",
+            "nextbrain_case2_block06:label:531",
+            "nextbrain_case2_block06:label:542",
+            "nextbrain_case2_block06:label:543",
+            "nextbrain_case2_block06:label:546",
+            "nextbrain_case2_block06:label:580",
+            "nextbrain_case2_block06:label:581",
+            "nextbrain_case2_block06:label:589",
+            "nextbrain_case2_block06:label:591",
+            "nextbrain_case2_block06:label:592",
+            "nextbrain_case2_block06:label:598",
+            "nextbrain_case2_block06:label:599",
+            "nextbrain_case2_block06:label:600",
+            "nextbrain_case2_block06:label:610",
+            "nextbrain_case2_block06:label:611",
+            "nextbrain_case2_block06:label:617",
+            "nextbrain_case2_block06:label:624",
+            "nextbrain_case2_block06:label:630",
+            "nextbrain_case2_block06:label:645",
+            "nextbrain_case2_block06:label:659",
+            "nextbrain_case2_block06:label:666",
+            "nextbrain_case2_block06:label:669",
+            "nextbrain_case2_block06:label:677",
+            "nextbrain_case2_block06:label:682",
+            "nextbrain_case2_block06:label:694",
+            "nextbrain_case2_block06:label:697"
+          ],
+          "evidence": "Original case P41-16 histological block B2.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block16": {
+          "structure_ids": [
+            "nextbrain_case2_block16:label:414",
+            "nextbrain_case2_block16:label:415",
+            "nextbrain_case2_block16:label:499",
+            "nextbrain_case2_block16:label:515",
+            "nextbrain_case2_block16:label:527",
+            "nextbrain_case2_block16:label:528",
+            "nextbrain_case2_block16:label:543",
+            "nextbrain_case2_block16:label:580",
+            "nextbrain_case2_block16:label:591",
+            "nextbrain_case2_block16:label:592",
+            "nextbrain_case2_block16:label:610",
+            "nextbrain_case2_block16:label:611",
+            "nextbrain_case2_block16:label:647",
+            "nextbrain_case2_block16:label:649",
+            "nextbrain_case2_block16:label:654",
+            "nextbrain_case2_block16:label:655",
+            "nextbrain_case2_block16:label:660",
+            "nextbrain_case2_block16:label:662",
+            "nextbrain_case2_block16:label:666",
+            "nextbrain_case2_block16:label:669",
+            "nextbrain_case2_block16:label:671",
+            "nextbrain_case2_block16:label:677",
+            "nextbrain_case2_block16:label:682",
+            "nextbrain_case2_block16:label:683",
+            "nextbrain_case2_block16:label:685",
+            "nextbrain_case2_block16:label:687",
+            "nextbrain_case2_block16:label:689",
+            "nextbrain_case2_block16:label:690",
+            "nextbrain_case2_block16:label:693",
+            "nextbrain_case2_block16:label:694",
+            "nextbrain_case2_block16:label:695",
+            "nextbrain_case2_block16:label:697",
+            "nextbrain_case2_block16:label:703",
+            "nextbrain_case2_block16:label:717",
+            "nextbrain_case2_block16:label:724",
+            "nextbrain_case2_block16:label:725",
+            "nextbrain_case2_block16:label:726",
+            "nextbrain_case2_block16:label:731",
+            "nextbrain_case2_block16:label:755",
+            "nextbrain_case2_block16:label:756",
+            "nextbrain_case2_block16:label:765"
+          ],
+          "evidence": "Original case P41-16 histological block B3.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block38": {
+          "structure_ids": [
+            "nextbrain_case2_block38:label:499",
+            "nextbrain_case2_block38:label:528",
+            "nextbrain_case2_block38:label:611",
+            "nextbrain_case2_block38:label:654",
+            "nextbrain_case2_block38:label:655",
+            "nextbrain_case2_block38:label:662",
+            "nextbrain_case2_block38:label:669",
+            "nextbrain_case2_block38:label:671",
+            "nextbrain_case2_block38:label:677",
+            "nextbrain_case2_block38:label:685",
+            "nextbrain_case2_block38:label:687",
+            "nextbrain_case2_block38:label:695",
+            "nextbrain_case2_block38:label:717",
+            "nextbrain_case2_block38:label:724",
+            "nextbrain_case2_block38:label:726",
+            "nextbrain_case2_block38:label:755",
+            "nextbrain_case2_block38:label:756",
+            "nextbrain_case2_block38:label:765",
+            "nextbrain_case2_block38:label:771"
+          ],
+          "evidence": "Original case P41-16 histological block B4.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "bigbrain_layers": {
+          "categories": [
+            "Cortical laminar boundary surfaces"
+          ],
+          "evidence": "Histology-derived source boundary surfaces for cortical layers, preserved in native source XYZ.",
+          "entry": "Original cortical boundary surfaces"
+        },
+        "bigbrain_hippocampus": {
+          "categories": [
+            "Hippocampal source subfields",
+            "Hippocampal midsurface context"
+          ],
+          "evidence": "Source-specific bilateral hippocampal subfield and midsurface geometry from the BigBrain histological release.",
+          "entry": "Original hippocampal source surfaces"
+        }
+      }
+    },
+    {
+      "id": "white-matter-pathways",
+      "title": "White-matter pathways",
+      "sources": {
+        "hcp1065_tracts": {
+          "categories": [
+            "Association bundles",
+            "Projection bundles",
+            "Commissural bundles",
+            "Cerebellar bundles"
+          ],
+          "evidence": "Computed population streamline trajectories with the matching source-declared template MRI. Bundle extents and source display sampling are recorded."
+        },
+        "mida": {
+          "categories": [
+            "Intracranial pathways"
+          ],
+          "evidence": "Selected original source pathway classes in the categorical voxel model."
+        },
+        "nextbrain_case1_block05": {
+          "structure_ids": [
+            "nextbrain_case1_block05:label:7",
+            "nextbrain_case1_block05:label:199",
+            "nextbrain_case1_block05:label:354",
+            "nextbrain_case1_block05:label:461"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P3.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block07": {
+          "structure_ids": [
+            "nextbrain_case1_block07:label:7",
+            "nextbrain_case1_block07:label:113"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A3.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block08": {
+          "structure_ids": [
+            "nextbrain_case1_block08:label:7",
+            "nextbrain_case1_block08:label:113"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A2.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block25": {
+          "structure_ids": [
+            "nextbrain_case1_block25:label:611"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block C1.1, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block33": {
+          "structure_ids": [
+            "nextbrain_case1_block33:label:7",
+            "nextbrain_case1_block33:label:184",
+            "nextbrain_case1_block33:label:201",
+            "nextbrain_case1_block33:label:208",
+            "nextbrain_case1_block33:label:276",
+            "nextbrain_case1_block33:label:298",
+            "nextbrain_case1_block33:label:309",
+            "nextbrain_case1_block33:label:322",
+            "nextbrain_case1_block33:label:354",
+            "nextbrain_case1_block33:label:403",
+            "nextbrain_case1_block33:label:412"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block41": {
+          "structure_ids": [
+            "nextbrain_case1_block41:label:7",
+            "nextbrain_case1_block41:label:184",
+            "nextbrain_case1_block41:label:199",
+            "nextbrain_case1_block41:label:201",
+            "nextbrain_case1_block41:label:354",
+            "nextbrain_case1_block41:label:403",
+            "nextbrain_case1_block41:label:461",
+            "nextbrain_case1_block41:label:472",
+            "nextbrain_case1_block41:label:493"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P2.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block45": {
+          "structure_ids": [
+            "nextbrain_case1_block45:label:7",
+            "nextbrain_case1_block45:label:130",
+            "nextbrain_case1_block45:label:184",
+            "nextbrain_case1_block45:label:199",
+            "nextbrain_case1_block45:label:201",
+            "nextbrain_case1_block45:label:208",
+            "nextbrain_case1_block45:label:234",
+            "nextbrain_case1_block45:label:246",
+            "nextbrain_case1_block45:label:276",
+            "nextbrain_case1_block45:label:298",
+            "nextbrain_case1_block45:label:354"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case2_block07": {
+          "structure_ids": [
+            "nextbrain_case2_block07:label:403",
+            "nextbrain_case2_block07:label:412",
+            "nextbrain_case2_block07:label:415",
+            "nextbrain_case2_block07:label:471",
+            "nextbrain_case2_block07:label:472",
+            "nextbrain_case2_block07:label:499",
+            "nextbrain_case2_block07:label:515",
+            "nextbrain_case2_block07:label:525",
+            "nextbrain_case2_block07:label:526",
+            "nextbrain_case2_block07:label:528",
+            "nextbrain_case2_block07:label:531",
+            "nextbrain_case2_block07:label:543",
+            "nextbrain_case2_block07:label:586",
+            "nextbrain_case2_block07:label:591",
+            "nextbrain_case2_block07:label:592",
+            "nextbrain_case2_block07:label:600",
+            "nextbrain_case2_block07:label:611",
+            "nextbrain_case2_block07:label:779",
+            "nextbrain_case2_block07:label:827",
+            "nextbrain_case2_block07:label:828",
+            "nextbrain_case2_block07:label:829",
+            "nextbrain_case2_block07:label:842"
+          ],
+          "evidence": "Original case P41-16 histological block B1.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block06": {
+          "structure_ids": [
+            "nextbrain_case2_block06:label:415",
+            "nextbrain_case2_block06:label:471",
+            "nextbrain_case2_block06:label:499",
+            "nextbrain_case2_block06:label:515",
+            "nextbrain_case2_block06:label:528",
+            "nextbrain_case2_block06:label:531",
+            "nextbrain_case2_block06:label:543",
+            "nextbrain_case2_block06:label:591",
+            "nextbrain_case2_block06:label:592",
+            "nextbrain_case2_block06:label:600",
+            "nextbrain_case2_block06:label:611",
+            "nextbrain_case2_block06:label:677",
+            "nextbrain_case2_block06:label:697"
+          ],
+          "evidence": "Original case P41-16 histological block B2.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block16": {
+          "structure_ids": [
+            "nextbrain_case2_block16:label:415",
+            "nextbrain_case2_block16:label:499",
+            "nextbrain_case2_block16:label:515",
+            "nextbrain_case2_block16:label:528",
+            "nextbrain_case2_block16:label:543",
+            "nextbrain_case2_block16:label:591",
+            "nextbrain_case2_block16:label:592",
+            "nextbrain_case2_block16:label:611",
+            "nextbrain_case2_block16:label:655",
+            "nextbrain_case2_block16:label:677",
+            "nextbrain_case2_block16:label:687",
+            "nextbrain_case2_block16:label:697"
+          ],
+          "evidence": "Original case P41-16 histological block B3.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block38": {
+          "structure_ids": [
+            "nextbrain_case2_block38:label:499",
+            "nextbrain_case2_block38:label:528",
+            "nextbrain_case2_block38:label:611",
+            "nextbrain_case2_block38:label:655",
+            "nextbrain_case2_block38:label:677",
+            "nextbrain_case2_block38:label:687"
+          ],
+          "evidence": "Original case P41-16 histological block B4.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:a9236e040eba",
+            "z_anatomy:object:1fd2352ee46b",
+            "z_anatomy:object:abc22cabcee5",
+            "z_anatomy:object:b97f7aa5884d",
+            "z_anatomy:object:999b833e95b3"
+          ],
+          "evidence": "Independent source callosal and optic pathway surface models; original author geometry retained in native XYZ. Named detailed source objects retain their original definitions, hierarchy and geometry; no image correspondence or individual-variation frequency is inferred.",
+          "categories": [
+            "Commissural and limbic pathway models"
+          ]
+        },
+        "hcp1065_prob": {
+          "categories": [
+            "Association probability fields",
+            "Commissural probability fields",
+            "Limbic probability fields",
+            "Projection probability fields"
+          ],
+          "evidence": "Original HCP1065 population probability fields in source-declared ICBM 2009a space, paired with an exact native template crop. Independent fields retain overlap; 0.20 surfaces are derived display contours."
+        }
+      }
+    },
+    {
+      "id": "vascular-anatomy",
+      "title": "Vascular anatomy",
+      "sources": {
+        "ixi_mra": {
+          "image_regions": true,
+          "evidence": "Native MRA from the publisher-described healthy IXI cohort. Explore the complete acquired sections and source-intensity rendering."
+        },
+        "mouches_arteries": {
+          "categories": [
+            "Arterial population evidence"
+          ],
+          "evidence": "Healthy-source arterial percent occurrence and matching average TOF. The 25 percent navigation mask is explicitly project-derived from the original population field."
+        },
+        "mida": {
+          "categories": [
+            "Vascular source classes"
+          ],
+          "evidence": "Whole-source artery and vein classes with their original head and neck extents."
+        },
+        "z_anatomy": {
+          "categories": [
+            "Arterial model branches",
+            "Venous model channels"
+          ],
+          "evidence": "Independent author-defined named arterial and venous models in their original source XYZ coordinates."
+        },
+        "venat": {
+          "image_regions": true,
+          "evidence": "Original population venous statistical fields with explicit metric definitions and units."
+        },
+        "mesoveins": {
+          "image_regions": true,
+          "evidence": "Native healthy-participant venous-contrast MRI, without named vessel segmentation."
+        },
+        "thu_mra_case009": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit."
+        },
+        "thu_mra_case001": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit."
+        },
+        "thu_mra_case030": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit."
+        },
+        "thu_mra_case006": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit.",
+          "structure_ids": []
+        },
+        "thu_mra_case007": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit.",
+          "structure_ids": []
+        },
+        "thu_mra_case010": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit.",
+          "structure_ids": []
+        },
+        "thu_mra_case014": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit.",
+          "structure_ids": []
+        },
+        "thu_mra_case021": {
+          "categories": [
+            "Cerebral arterial segments"
+          ],
+          "evidence": "Actual healthy-volunteer MRA and original semantic segments; author preprocessing and project name correspondence are explicit.",
+          "structure_ids": []
+        }
+      }
+    },
+    {
+      "id": "cranial-nerves",
+      "title": "Cranial nerves",
+      "sources": {
+        "brainstem_navigator_mni": {
+          "structure_ids": [
+            "brainstem_navigator_mni:region:Ve_l",
+            "brainstem_navigator_mni:region:Ve_r",
+            "brainstem_navigator_mni:region:VSM_l",
+            "brainstem_navigator_mni:region:VSM_r",
+            "brainstem_navigator_mni:region:SOC_l",
+            "brainstem_navigator_mni:region:SOC_r"
+          ],
+          "required_ids": [
+            "brainstem_navigator_mni:region:Ve_l",
+            "brainstem_navigator_mni:region:VSM_l",
+            "brainstem_navigator_mni:region:SOC_l"
+          ],
+          "evidence": "Original vestibular, superior olivary and viscero-sensory-motor complexes provide regional brainstem context, with their source probabilities and supplied extents."
+        },
+        "mida": {
+          "categories": [
+            "Cranial nerves"
+          ],
+          "evidence": "Original whole-nerve CN I-XII classes, including source-defined V2 and V3 classes."
+        },
+        "hcp1065_tracts": {
+          "categories": [
+            "Cranial nerve trajectories"
+          ],
+          "evidence": "Computed paired CN II, III, V, VII and VIII trajectories with the original supplied extents and source computational evidence."
+        },
+        "z_anatomy": {
+          "categories": [
+            "Cranial nerve models",
+            "Visual pathway model context",
+            "Petrous sensory model context",
+            "Cranial nerve nuclear models"
+          ],
+          "evidence": "Source CN I-XII, trigeminal roots, separate cochlear and vestibular components, visual pathway and petrous sensory context in original XYZ coordinates. Original names and extents are retained. Named detailed source objects retain their original definitions, hierarchy and geometry; no image correspondence or individual-variation frequency is inferred."
+        },
+        "nextbrain_case1_block08": {
+          "structure_ids": [
+            "nextbrain_case1_block08:label:114"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A2.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block33": {
+          "structure_ids": [
+            "nextbrain_case1_block33:label:208"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block41": {
+          "structure_ids": [
+            "nextbrain_case1_block41:label:386"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P2.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block45": {
+          "structure_ids": [
+            "nextbrain_case1_block45:label:161",
+            "nextbrain_case1_block45:label:208"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case2_block07": {
+          "structure_ids": [
+            "nextbrain_case2_block07:label:386",
+            "nextbrain_case2_block07:label:447",
+            "nextbrain_case2_block07:label:464",
+            "nextbrain_case2_block07:label:520",
+            "nextbrain_case2_block07:label:535",
+            "nextbrain_case2_block07:label:600",
+            "nextbrain_case2_block07:label:645",
+            "nextbrain_case2_block07:label:842"
+          ],
+          "evidence": "Original case P41-16 histological block B1.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block06": {
+          "structure_ids": [
+            "nextbrain_case2_block06:label:600",
+            "nextbrain_case2_block06:label:624",
+            "nextbrain_case2_block06:label:630",
+            "nextbrain_case2_block06:label:645",
+            "nextbrain_case2_block06:label:659",
+            "nextbrain_case2_block06:label:666",
+            "nextbrain_case2_block06:label:669",
+            "nextbrain_case2_block06:label:677",
+            "nextbrain_case2_block06:label:682",
+            "nextbrain_case2_block06:label:694"
+          ],
+          "evidence": "Original case P41-16 histological block B2.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block16": {
+          "structure_ids": [
+            "nextbrain_case2_block16:label:666",
+            "nextbrain_case2_block16:label:669",
+            "nextbrain_case2_block16:label:677",
+            "nextbrain_case2_block16:label:682",
+            "nextbrain_case2_block16:label:683",
+            "nextbrain_case2_block16:label:687",
+            "nextbrain_case2_block16:label:689",
+            "nextbrain_case2_block16:label:690",
+            "nextbrain_case2_block16:label:693",
+            "nextbrain_case2_block16:label:694",
+            "nextbrain_case2_block16:label:703",
+            "nextbrain_case2_block16:label:717",
+            "nextbrain_case2_block16:label:724",
+            "nextbrain_case2_block16:label:725",
+            "nextbrain_case2_block16:label:731"
+          ],
+          "evidence": "Original case P41-16 histological block B3.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block38": {
+          "structure_ids": [
+            "nextbrain_case2_block38:label:669",
+            "nextbrain_case2_block38:label:677",
+            "nextbrain_case2_block38:label:687",
+            "nextbrain_case2_block38:label:717",
+            "nextbrain_case2_block38:label:724",
+            "nextbrain_case2_block38:label:771"
+          ],
+          "evidence": "Original case P41-16 histological block B4.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        }
+      }
+    },
+    {
+      "id": "cisternal-regions",
+      "title": "Cisternal regions and CSF",
+      "sources": {
+        "spl_nac": {
+          "image_regions": true,
+          "required_ids": [
+            "spl_nac:label:35",
+            "spl_nac:label:40",
+            "spl_nac:label:61"
+          ],
+          "evidence": "Real native T2 with regional image observation anchors for cisternal teaching. Adjacent source brainstem and ventricular structures provide spatial context.",
+          "entry": {
+            "source_id": "spl_nac",
+            "source_version": "2017-01",
+            "volume_id": "t2",
+            "shape": [
+              256,
+              256,
+              256
+            ],
+            "affine_ras_mm": [
+              [
+                0.0,
+                0.0,
+                -1.0,
+                127.5
+              ],
+              [
+                -1.0,
+                0.0,
+                0.0,
+                127.5
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0,
+                127.5
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "index": [
+              126,
+              166,
+              122
+            ],
+            "selected": "spl_nac:label:35",
+            "visible": [
+              "spl_nac:label:35",
+              "spl_nac:label:40",
+              "spl_nac:label:61",
+              "spl_nac:label:15"
+            ],
+            "surface_opacity": {
+              "spl_nac:label:35": 0.15,
+              "spl_nac:label:40": 0.15,
+              "spl_nac:label:61": 0.15
+            },
+            "label": "Prepontine region",
+            "reference": "University at Buffalo, Jacobs School of Medicine and Biomedical Sciences, Neuroscience and Behavior: Subarachnoid Cisterns. https://ubneuro-ccohan.webapps.buffalo.edu/cisterns.html (accessed 2026-10-13). Reference terminology only; MRI and anchors use the independently acquired SPL/NAC source."
+          }
+        },
+        "mida": {
+          "structure_ids": [
+            "mida:label:32",
+            "mida:label:6"
+          ],
+          "required_ids": [
+            "mida:label:32"
+          ],
+          "evidence": "Original general-CSF and ventricular-CSF source classes provide broad fluid-space context."
+        }
+      }
+    },
+    {
+      "id": "skull-base-context",
+      "title": "Skull-base context",
+      "sources": {
+        "mida": {
+          "categories": [
+            "Skull-base context",
+            "Temporal bone context"
+          ],
+          "structure_ids": [
+            "mida:label:1"
+          ],
+          "evidence": "Source-defined skull-layer, dural, sinus and inner-ear categorical model classes."
+        },
+        "z_anatomy": {
+          "categories": [
+            "Skull-base model bones",
+            "Dural model context",
+            "Petrous sensory model context",
+            "Sellar model context"
+          ],
+          "evidence": "Individual source skull-bone and dural-sheet models, retaining author-defined surfaces and native XYZ coordinates. Named detailed source objects retain their original definitions, hierarchy and geometry; no image correspondence or individual-variation frequency is inferred."
+        },
+        "mug500_healthy": {
+          "categories": [
+            "Skull-base source context"
+          ],
+          "evidence": "Original publisher-designated healthy skull binary mask, categorical sections and the unrefined mask-derived surface."
+        },
+        "mug500_source_mesh": {
+          "categories": [
+            "Skull-base source context"
+          ],
+          "evidence": "Original author-cleaned healthy A0101 STL surface. The matching original binary-mask source is available as its own native package."
+        },
+        "inner_ear_ct_specimen1": {
+          "categories": [
+            "Inner-ear fluid spaces"
+          ],
+          "evidence": "Original Dataset A temporal-bone CT with the complete three-class fluid-space annotation; original voxel grid and explicitly declared CT evidence retained."
+        }
+      }
+    },
+    {
+      "id": "cerebral-cortex",
+      "title": "Cerebral cortex",
+      "sources": {
+        "spl_nac": {
+          "categories": [
+            "Cerebral cortex"
+          ],
+          "evidence": "Real native T1/T2 and source labels; individual 1 mm grids retain their original half-millimeter origin difference."
+        },
+        "cerebra": {
+          "categories": [
+            "Cerebral cortex"
+          ],
+          "evidence": "Template MRI and source-defined regional labels in their native source space."
+        },
+        "mida": {
+          "categories": [
+            "Cerebral tissue"
+          ],
+          "evidence": "Original categorical voxel model with source-defined tissue and anatomical classes."
+        },
+        "hba_native": {
+          "image_regions": true,
+          "evidence": "Healthy-participant source-author skull-stripped, averaged T2 on a 0.25 mm reconstructed grid. Original bytes, native ACPC coordinates and processing mask edges are retained for image observation."
+        },
+        "julich_selected": {
+          "categories": [
+            "Cerebral cytoarchitectonic regions",
+            "Medial temporal regions"
+          ],
+          "evidence": "Original Julich-Brain 3.0.3 maximum-probability assignments with the source-defined ICBM 2009c asymmetric T1/T2 reference; explicit hemisphere names and 1 mm sampling retained."
+        },
+        "nextbrain_case1_block05": {
+          "structure_ids": [
+            "nextbrain_case1_block05:label:2001",
+            "nextbrain_case1_block05:label:2007",
+            "nextbrain_case1_block05:label:2009",
+            "nextbrain_case1_block05:label:2010",
+            "nextbrain_case1_block05:label:2013",
+            "nextbrain_case1_block05:label:2015",
+            "nextbrain_case1_block05:label:2016",
+            "nextbrain_case1_block05:label:2030"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P3.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block07": {
+          "structure_ids": [
+            "nextbrain_case1_block07:label:2002",
+            "nextbrain_case1_block07:label:2012",
+            "nextbrain_case1_block07:label:2014",
+            "nextbrain_case1_block07:label:2018",
+            "nextbrain_case1_block07:label:2019",
+            "nextbrain_case1_block07:label:2020",
+            "nextbrain_case1_block07:label:2026",
+            "nextbrain_case1_block07:label:2028",
+            "nextbrain_case1_block07:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A3.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block08": {
+          "structure_ids": [
+            "nextbrain_case1_block08:label:2012",
+            "nextbrain_case1_block08:label:2014",
+            "nextbrain_case1_block08:label:2018",
+            "nextbrain_case1_block08:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A2.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block33": {
+          "structure_ids": [
+            "nextbrain_case1_block33:label:2006",
+            "nextbrain_case1_block33:label:2007",
+            "nextbrain_case1_block33:label:2009",
+            "nextbrain_case1_block33:label:2016",
+            "nextbrain_case1_block33:label:2022",
+            "nextbrain_case1_block33:label:2030",
+            "nextbrain_case1_block33:label:2034",
+            "nextbrain_case1_block33:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block41": {
+          "structure_ids": [
+            "nextbrain_case1_block41:label:2007",
+            "nextbrain_case1_block41:label:2016",
+            "nextbrain_case1_block41:label:2017",
+            "nextbrain_case1_block41:label:2023",
+            "nextbrain_case1_block41:label:2031",
+            "nextbrain_case1_block41:label:2034",
+            "nextbrain_case1_block41:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P2.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block45": {
+          "structure_ids": [
+            "nextbrain_case1_block45:label:2006",
+            "nextbrain_case1_block45:label:2007",
+            "nextbrain_case1_block45:label:2009",
+            "nextbrain_case1_block45:label:2018",
+            "nextbrain_case1_block45:label:2022",
+            "nextbrain_case1_block45:label:2024",
+            "nextbrain_case1_block45:label:2030",
+            "nextbrain_case1_block45:label:2035"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "bigbrain_layers": {
+          "categories": [
+            "Cortical laminar boundary surfaces"
+          ],
+          "evidence": "Histology-derived source boundary surfaces for cortical layers, preserved in native source XYZ.",
+          "entry": "Original cortical boundary surfaces"
+        },
+        "bigbrain_hippocampus": {
+          "categories": [
+            "Hippocampal source subfields",
+            "Hippocampal midsurface context"
+          ],
+          "evidence": "Source-specific bilateral hippocampal subfield and midsurface geometry from the BigBrain histological release.",
+          "entry": "Original hippocampal source surfaces"
+        },
+        "z_anatomy": {
+          "categories": [
+            "Cerebral cortical source model",
+            "Callosal and cingulate model context"
+          ],
+          "evidence": "Original source-defined anatomical models in independent XYZ coordinates. Named detailed source objects retain their original definitions, hierarchy and geometry; no image correspondence or individual-variation frequency is inferred."
+        }
+      }
+    },
+    {
+      "id": "deep-nuclei",
+      "title": "Deep nuclei",
+      "sources": {
+        "spl_nac": {
+          "categories": [
+            "Deep structures"
+          ],
+          "evidence": "Real native T1/T2 and source labels; individual 1 mm grids retain their original half-millimeter origin difference."
+        },
+        "cerebra": {
+          "categories": [
+            "Deep structures"
+          ],
+          "evidence": "Template MRI and source-defined regional labels in their native source space."
+        },
+        "cit168_native": {
+          "categories": [
+            "Deep structures"
+          ],
+          "evidence": "Native population MRI and source probabilities; retained winner labels are a navigation representation."
+        },
+        "brainstem_navigator_mni": {
+          "categories": [
+            "Diencephalic nuclei"
+          ],
+          "evidence": "Source template MRI, full probabilities and overlapping independent region masks."
+        },
+        "mida": {
+          "categories": [
+            "Deep structures"
+          ],
+          "evidence": "Original categorical voxel model with source-defined tissue and anatomical classes."
+        },
+        "hba_native": {
+          "image_regions": true,
+          "evidence": "Healthy-participant source-author skull-stripped, averaged T2 on a 0.25 mm reconstructed grid. Original bytes, native ACPC coordinates and processing mask edges are retained for image observation."
+        },
+        "julich_selected": {
+          "categories": [
+            "Subcortical cytoarchitectonic regions"
+          ],
+          "evidence": "Original Julich-Brain 3.0.3 maximum-probability assignments with the source-defined ICBM 2009c asymmetric T1/T2 reference; explicit hemisphere names and 1 mm sampling retained."
+        },
+        "nextbrain_case1_block05": {
+          "structure_ids": [
+            "nextbrain_case1_block05:label:343",
+            "nextbrain_case1_block05:label:344",
+            "nextbrain_case1_block05:label:345",
+            "nextbrain_case1_block05:label:346",
+            "nextbrain_case1_block05:label:347",
+            "nextbrain_case1_block05:label:354",
+            "nextbrain_case1_block05:label:404",
+            "nextbrain_case1_block05:label:405",
+            "nextbrain_case1_block05:label:407",
+            "nextbrain_case1_block05:label:408",
+            "nextbrain_case1_block05:label:409",
+            "nextbrain_case1_block05:label:410",
+            "nextbrain_case1_block05:label:411",
+            "nextbrain_case1_block05:label:418",
+            "nextbrain_case1_block05:label:419",
+            "nextbrain_case1_block05:label:420",
+            "nextbrain_case1_block05:label:421",
+            "nextbrain_case1_block05:label:432",
+            "nextbrain_case1_block05:label:461",
+            "nextbrain_case1_block05:label:558",
+            "nextbrain_case1_block05:label:559",
+            "nextbrain_case1_block05:label:561",
+            "nextbrain_case1_block05:label:562",
+            "nextbrain_case1_block05:label:563",
+            "nextbrain_case1_block05:label:564",
+            "nextbrain_case1_block05:label:565",
+            "nextbrain_case1_block05:label:566",
+            "nextbrain_case1_block05:label:567",
+            "nextbrain_case1_block05:label:568",
+            "nextbrain_case1_block05:label:569",
+            "nextbrain_case1_block05:label:571",
+            "nextbrain_case1_block05:label:572",
+            "nextbrain_case1_block05:label:573",
+            "nextbrain_case1_block05:label:574",
+            "nextbrain_case1_block05:label:575",
+            "nextbrain_case1_block05:label:576",
+            "nextbrain_case1_block05:label:578"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P3.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block07": {
+          "structure_ids": [
+            "nextbrain_case1_block07:label:48",
+            "nextbrain_case1_block07:label:79"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A3.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block08": {
+          "structure_ids": [
+            "nextbrain_case1_block08:label:48",
+            "nextbrain_case1_block08:label:79",
+            "nextbrain_case1_block08:label:100",
+            "nextbrain_case1_block08:label:101",
+            "nextbrain_case1_block08:label:119"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A2.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block33": {
+          "structure_ids": [
+            "nextbrain_case1_block33:label:79",
+            "nextbrain_case1_block33:label:118",
+            "nextbrain_case1_block33:label:119",
+            "nextbrain_case1_block33:label:201",
+            "nextbrain_case1_block33:label:206",
+            "nextbrain_case1_block33:label:208",
+            "nextbrain_case1_block33:label:214",
+            "nextbrain_case1_block33:label:216",
+            "nextbrain_case1_block33:label:217",
+            "nextbrain_case1_block33:label:218",
+            "nextbrain_case1_block33:label:219",
+            "nextbrain_case1_block33:label:222",
+            "nextbrain_case1_block33:label:225",
+            "nextbrain_case1_block33:label:226",
+            "nextbrain_case1_block33:label:227",
+            "nextbrain_case1_block33:label:238",
+            "nextbrain_case1_block33:label:253",
+            "nextbrain_case1_block33:label:254",
+            "nextbrain_case1_block33:label:256",
+            "nextbrain_case1_block33:label:274",
+            "nextbrain_case1_block33:label:275",
+            "nextbrain_case1_block33:label:276",
+            "nextbrain_case1_block33:label:277",
+            "nextbrain_case1_block33:label:278",
+            "nextbrain_case1_block33:label:279",
+            "nextbrain_case1_block33:label:282",
+            "nextbrain_case1_block33:label:283",
+            "nextbrain_case1_block33:label:284",
+            "nextbrain_case1_block33:label:285",
+            "nextbrain_case1_block33:label:286",
+            "nextbrain_case1_block33:label:295",
+            "nextbrain_case1_block33:label:297",
+            "nextbrain_case1_block33:label:298",
+            "nextbrain_case1_block33:label:301",
+            "nextbrain_case1_block33:label:303",
+            "nextbrain_case1_block33:label:304",
+            "nextbrain_case1_block33:label:305",
+            "nextbrain_case1_block33:label:306",
+            "nextbrain_case1_block33:label:307",
+            "nextbrain_case1_block33:label:308",
+            "nextbrain_case1_block33:label:309",
+            "nextbrain_case1_block33:label:310",
+            "nextbrain_case1_block33:label:312",
+            "nextbrain_case1_block33:label:313",
+            "nextbrain_case1_block33:label:314",
+            "nextbrain_case1_block33:label:315",
+            "nextbrain_case1_block33:label:316",
+            "nextbrain_case1_block33:label:321",
+            "nextbrain_case1_block33:label:322",
+            "nextbrain_case1_block33:label:343",
+            "nextbrain_case1_block33:label:344",
+            "nextbrain_case1_block33:label:345",
+            "nextbrain_case1_block33:label:346",
+            "nextbrain_case1_block33:label:347",
+            "nextbrain_case1_block33:label:350",
+            "nextbrain_case1_block33:label:352",
+            "nextbrain_case1_block33:label:354",
+            "nextbrain_case1_block33:label:364",
+            "nextbrain_case1_block33:label:365",
+            "nextbrain_case1_block33:label:367",
+            "nextbrain_case1_block33:label:368",
+            "nextbrain_case1_block33:label:369",
+            "nextbrain_case1_block33:label:370",
+            "nextbrain_case1_block33:label:371",
+            "nextbrain_case1_block33:label:372",
+            "nextbrain_case1_block33:label:373",
+            "nextbrain_case1_block33:label:374",
+            "nextbrain_case1_block33:label:375",
+            "nextbrain_case1_block33:label:377",
+            "nextbrain_case1_block33:label:378",
+            "nextbrain_case1_block33:label:379",
+            "nextbrain_case1_block33:label:380",
+            "nextbrain_case1_block33:label:381",
+            "nextbrain_case1_block33:label:382",
+            "nextbrain_case1_block33:label:384",
+            "nextbrain_case1_block33:label:385",
+            "nextbrain_case1_block33:label:394",
+            "nextbrain_case1_block33:label:395",
+            "nextbrain_case1_block33:label:396",
+            "nextbrain_case1_block33:label:397",
+            "nextbrain_case1_block33:label:398",
+            "nextbrain_case1_block33:label:399",
+            "nextbrain_case1_block33:label:400",
+            "nextbrain_case1_block33:label:401",
+            "nextbrain_case1_block33:label:404",
+            "nextbrain_case1_block33:label:405",
+            "nextbrain_case1_block33:label:407",
+            "nextbrain_case1_block33:label:408",
+            "nextbrain_case1_block33:label:409",
+            "nextbrain_case1_block33:label:410",
+            "nextbrain_case1_block33:label:411",
+            "nextbrain_case1_block33:label:418",
+            "nextbrain_case1_block33:label:419",
+            "nextbrain_case1_block33:label:420",
+            "nextbrain_case1_block33:label:421",
+            "nextbrain_case1_block33:label:422",
+            "nextbrain_case1_block33:label:423",
+            "nextbrain_case1_block33:label:424",
+            "nextbrain_case1_block33:label:425",
+            "nextbrain_case1_block33:label:426",
+            "nextbrain_case1_block33:label:430",
+            "nextbrain_case1_block33:label:431",
+            "nextbrain_case1_block33:label:432",
+            "nextbrain_case1_block33:label:433",
+            "nextbrain_case1_block33:label:442",
+            "nextbrain_case1_block33:label:479",
+            "nextbrain_case1_block33:label:484"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block41": {
+          "structure_ids": [
+            "nextbrain_case1_block41:label:48",
+            "nextbrain_case1_block41:label:79",
+            "nextbrain_case1_block41:label:118",
+            "nextbrain_case1_block41:label:201",
+            "nextbrain_case1_block41:label:218",
+            "nextbrain_case1_block41:label:226",
+            "nextbrain_case1_block41:label:227",
+            "nextbrain_case1_block41:label:254",
+            "nextbrain_case1_block41:label:282",
+            "nextbrain_case1_block41:label:313",
+            "nextbrain_case1_block41:label:343",
+            "nextbrain_case1_block41:label:344",
+            "nextbrain_case1_block41:label:345",
+            "nextbrain_case1_block41:label:346",
+            "nextbrain_case1_block41:label:347",
+            "nextbrain_case1_block41:label:350",
+            "nextbrain_case1_block41:label:354",
+            "nextbrain_case1_block41:label:378",
+            "nextbrain_case1_block41:label:380",
+            "nextbrain_case1_block41:label:384",
+            "nextbrain_case1_block41:label:385",
+            "nextbrain_case1_block41:label:398",
+            "nextbrain_case1_block41:label:399",
+            "nextbrain_case1_block41:label:404",
+            "nextbrain_case1_block41:label:405",
+            "nextbrain_case1_block41:label:407",
+            "nextbrain_case1_block41:label:408",
+            "nextbrain_case1_block41:label:409",
+            "nextbrain_case1_block41:label:410",
+            "nextbrain_case1_block41:label:411",
+            "nextbrain_case1_block41:label:418",
+            "nextbrain_case1_block41:label:419",
+            "nextbrain_case1_block41:label:420",
+            "nextbrain_case1_block41:label:421",
+            "nextbrain_case1_block41:label:425",
+            "nextbrain_case1_block41:label:430",
+            "nextbrain_case1_block41:label:432",
+            "nextbrain_case1_block41:label:441",
+            "nextbrain_case1_block41:label:443",
+            "nextbrain_case1_block41:label:444",
+            "nextbrain_case1_block41:label:451",
+            "nextbrain_case1_block41:label:454",
+            "nextbrain_case1_block41:label:458",
+            "nextbrain_case1_block41:label:461",
+            "nextbrain_case1_block41:label:468",
+            "nextbrain_case1_block41:label:469",
+            "nextbrain_case1_block41:label:470",
+            "nextbrain_case1_block41:label:472",
+            "nextbrain_case1_block41:label:478",
+            "nextbrain_case1_block41:label:479",
+            "nextbrain_case1_block41:label:484",
+            "nextbrain_case1_block41:label:492",
+            "nextbrain_case1_block41:label:493",
+            "nextbrain_case1_block41:label:496",
+            "nextbrain_case1_block41:label:498",
+            "nextbrain_case1_block41:label:504",
+            "nextbrain_case1_block41:label:505",
+            "nextbrain_case1_block41:label:508",
+            "nextbrain_case1_block41:label:510",
+            "nextbrain_case1_block41:label:512",
+            "nextbrain_case1_block41:label:517",
+            "nextbrain_case1_block41:label:519",
+            "nextbrain_case1_block41:label:811",
+            "nextbrain_case1_block41:label:813"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P2.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block45": {
+          "structure_ids": [
+            "nextbrain_case1_block45:label:79",
+            "nextbrain_case1_block45:label:118",
+            "nextbrain_case1_block45:label:119",
+            "nextbrain_case1_block45:label:147",
+            "nextbrain_case1_block45:label:149",
+            "nextbrain_case1_block45:label:150",
+            "nextbrain_case1_block45:label:160",
+            "nextbrain_case1_block45:label:181",
+            "nextbrain_case1_block45:label:190",
+            "nextbrain_case1_block45:label:191",
+            "nextbrain_case1_block45:label:192",
+            "nextbrain_case1_block45:label:193",
+            "nextbrain_case1_block45:label:194",
+            "nextbrain_case1_block45:label:196",
+            "nextbrain_case1_block45:label:201",
+            "nextbrain_case1_block45:label:206",
+            "nextbrain_case1_block45:label:207",
+            "nextbrain_case1_block45:label:208",
+            "nextbrain_case1_block45:label:209",
+            "nextbrain_case1_block45:label:214",
+            "nextbrain_case1_block45:label:215",
+            "nextbrain_case1_block45:label:216",
+            "nextbrain_case1_block45:label:217",
+            "nextbrain_case1_block45:label:218",
+            "nextbrain_case1_block45:label:219",
+            "nextbrain_case1_block45:label:220",
+            "nextbrain_case1_block45:label:221",
+            "nextbrain_case1_block45:label:222",
+            "nextbrain_case1_block45:label:223",
+            "nextbrain_case1_block45:label:224",
+            "nextbrain_case1_block45:label:225",
+            "nextbrain_case1_block45:label:226",
+            "nextbrain_case1_block45:label:227",
+            "nextbrain_case1_block45:label:228",
+            "nextbrain_case1_block45:label:229",
+            "nextbrain_case1_block45:label:230",
+            "nextbrain_case1_block45:label:232",
+            "nextbrain_case1_block45:label:234",
+            "nextbrain_case1_block45:label:238",
+            "nextbrain_case1_block45:label:240",
+            "nextbrain_case1_block45:label:242",
+            "nextbrain_case1_block45:label:243",
+            "nextbrain_case1_block45:label:244",
+            "nextbrain_case1_block45:label:245",
+            "nextbrain_case1_block45:label:246",
+            "nextbrain_case1_block45:label:252",
+            "nextbrain_case1_block45:label:253",
+            "nextbrain_case1_block45:label:254",
+            "nextbrain_case1_block45:label:255",
+            "nextbrain_case1_block45:label:256",
+            "nextbrain_case1_block45:label:268",
+            "nextbrain_case1_block45:label:274",
+            "nextbrain_case1_block45:label:275",
+            "nextbrain_case1_block45:label:276",
+            "nextbrain_case1_block45:label:277",
+            "nextbrain_case1_block45:label:278",
+            "nextbrain_case1_block45:label:279",
+            "nextbrain_case1_block45:label:282",
+            "nextbrain_case1_block45:label:283",
+            "nextbrain_case1_block45:label:284",
+            "nextbrain_case1_block45:label:285",
+            "nextbrain_case1_block45:label:286",
+            "nextbrain_case1_block45:label:295",
+            "nextbrain_case1_block45:label:297",
+            "nextbrain_case1_block45:label:298",
+            "nextbrain_case1_block45:label:301",
+            "nextbrain_case1_block45:label:303",
+            "nextbrain_case1_block45:label:304",
+            "nextbrain_case1_block45:label:305",
+            "nextbrain_case1_block45:label:306",
+            "nextbrain_case1_block45:label:307",
+            "nextbrain_case1_block45:label:308",
+            "nextbrain_case1_block45:label:312",
+            "nextbrain_case1_block45:label:313",
+            "nextbrain_case1_block45:label:314",
+            "nextbrain_case1_block45:label:320",
+            "nextbrain_case1_block45:label:339",
+            "nextbrain_case1_block45:label:340",
+            "nextbrain_case1_block45:label:341",
+            "nextbrain_case1_block45:label:342",
+            "nextbrain_case1_block45:label:343",
+            "nextbrain_case1_block45:label:344",
+            "nextbrain_case1_block45:label:345",
+            "nextbrain_case1_block45:label:346",
+            "nextbrain_case1_block45:label:347",
+            "nextbrain_case1_block45:label:350",
+            "nextbrain_case1_block45:label:354",
+            "nextbrain_case1_block45:label:368",
+            "nextbrain_case1_block45:label:369",
+            "nextbrain_case1_block45:label:370",
+            "nextbrain_case1_block45:label:371",
+            "nextbrain_case1_block45:label:372",
+            "nextbrain_case1_block45:label:373",
+            "nextbrain_case1_block45:label:374",
+            "nextbrain_case1_block45:label:375",
+            "nextbrain_case1_block45:label:377",
+            "nextbrain_case1_block45:label:404",
+            "nextbrain_case1_block45:label:405",
+            "nextbrain_case1_block45:label:407",
+            "nextbrain_case1_block45:label:408",
+            "nextbrain_case1_block45:label:409",
+            "nextbrain_case1_block45:label:410",
+            "nextbrain_case1_block45:label:411",
+            "nextbrain_case1_block45:label:418",
+            "nextbrain_case1_block45:label:419",
+            "nextbrain_case1_block45:label:420",
+            "nextbrain_case1_block45:label:421",
+            "nextbrain_case1_block45:label:510",
+            "nextbrain_case1_block45:label:843"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "z_anatomy": {
+          "categories": [
+            "Deep nuclear model context",
+            "Limbic model structures"
+          ],
+          "evidence": "Original source-defined anatomical models in independent XYZ coordinates. Named detailed source objects retain their original definitions, hierarchy and geometry; no image correspondence or individual-variation frequency is inferred."
+        }
+      }
+    },
+    {
+      "id": "ventricles",
+      "title": "Ventricles",
+      "sources": {
+        "spl_nac": {
+          "categories": [
+            "Ventricles"
+          ],
+          "evidence": "Real native T1/T2 and source labels; individual 1 mm grids retain their original half-millimeter origin difference."
+        },
+        "cerebra": {
+          "categories": [
+            "Ventricles"
+          ],
+          "evidence": "Template MRI and source-defined regional labels in their native source space."
+        },
+        "mida": {
+          "categories": [
+            "Ventricles"
+          ],
+          "evidence": "Original categorical voxel model with source-defined tissue and anatomical classes."
+        },
+        "hba_native": {
+          "image_regions": true,
+          "evidence": "Healthy-participant source-author skull-stripped, averaged T2 on a 0.25 mm reconstructed grid. Original bytes, native ACPC coordinates and processing mask edges are retained for image observation."
+        },
+        "nextbrain_case1_block05": {
+          "structure_ids": [
+            "nextbrain_case1_block05:label:50"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P3.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block07": {
+          "structure_ids": [
+            "nextbrain_case1_block07:label:50"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A3.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block08": {
+          "structure_ids": [
+            "nextbrain_case1_block08:label:50"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A2.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block33": {
+          "structure_ids": [
+            "nextbrain_case1_block33:label:50"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block41": {
+          "structure_ids": [
+            "nextbrain_case1_block41:label:50"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P2.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block45": {
+          "structure_ids": [
+            "nextbrain_case1_block45:label:50"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block A1.3, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "z_anatomy": {
+          "categories": [
+            "Ventricular source model",
+            "Ventricular model context"
+          ],
+          "evidence": "Original model lateral, third and fourth ventricles, midbrain aqueduct and choroid plexus; separate source-model geometry. Named detailed source objects retain their original definitions, hierarchy and geometry; no image correspondence or individual-variation frequency is inferred."
+        }
+      }
+    },
+    {
+      "id": "brainstem",
+      "title": "Brainstem",
+      "sources": {
+        "spl_nac": {
+          "categories": [
+            "Brainstem"
+          ],
+          "evidence": "Real native T1/T2 and source labels; individual 1 mm grids retain their original half-millimeter origin difference."
+        },
+        "cerebra": {
+          "categories": [
+            "Brainstem"
+          ],
+          "evidence": "Template MRI and source-defined regional labels in their native source space."
+        },
+        "cit168_native": {
+          "categories": [
+            "Brainstem"
+          ],
+          "evidence": "Native population MRI and source probabilities; retained winner labels are a navigation representation."
+        },
+        "brainstem_navigator_mni": {
+          "categories": [
+            "Midbrain",
+            "Midbrain tectum",
+            "Midline regions",
+            "Medulla",
+            "Mesopontine regions",
+            "Reticular source regions",
+            "Source subregions",
+            "Brainstem nuclei complexes"
+          ],
+          "evidence": "Source template MRI, full probabilities and overlapping independent region masks."
+        },
+        "mida": {
+          "categories": [
+            "Brainstem"
+          ],
+          "evidence": "Original categorical voxel model with source-defined tissue and anatomical classes."
+        },
+        "z_anatomy": {
+          "categories": [
+            "Brainstem model context",
+            "Cranial nerve nuclear models",
+            "Brainstem surface landmarks"
+          ],
+          "evidence": "Independent source pons, medulla and midbrain models in native XYZ coordinates. Named detailed source objects retain their original definitions, hierarchy and geometry; no image correspondence or individual-variation frequency is inferred."
+        },
+        "hba_native": {
+          "image_regions": true,
+          "evidence": "Healthy-participant source-author skull-stripped, averaged T2 on a 0.25 mm reconstructed grid. Original bytes, native ACPC coordinates and processing mask edges are retained for image observation."
+        },
+        "nextbrain_case1_block25": {
+          "structure_ids": [
+            "nextbrain_case1_block25:label:611"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block C1.1, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case1_block41": {
+          "structure_ids": [
+            "nextbrain_case1_block41:label:447",
+            "nextbrain_case1_block41:label:526"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block P2.2, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "nextbrain_case2_block07": {
+          "structure_ids": [
+            "nextbrain_case2_block07:label:310",
+            "nextbrain_case2_block07:label:352",
+            "nextbrain_case2_block07:label:384",
+            "nextbrain_case2_block07:label:385",
+            "nextbrain_case2_block07:label:386",
+            "nextbrain_case2_block07:label:403",
+            "nextbrain_case2_block07:label:412",
+            "nextbrain_case2_block07:label:414",
+            "nextbrain_case2_block07:label:415",
+            "nextbrain_case2_block07:label:435",
+            "nextbrain_case2_block07:label:436",
+            "nextbrain_case2_block07:label:447",
+            "nextbrain_case2_block07:label:464",
+            "nextbrain_case2_block07:label:465",
+            "nextbrain_case2_block07:label:471",
+            "nextbrain_case2_block07:label:472",
+            "nextbrain_case2_block07:label:499",
+            "nextbrain_case2_block07:label:507",
+            "nextbrain_case2_block07:label:515",
+            "nextbrain_case2_block07:label:520",
+            "nextbrain_case2_block07:label:521",
+            "nextbrain_case2_block07:label:525",
+            "nextbrain_case2_block07:label:526",
+            "nextbrain_case2_block07:label:527",
+            "nextbrain_case2_block07:label:528",
+            "nextbrain_case2_block07:label:531",
+            "nextbrain_case2_block07:label:535",
+            "nextbrain_case2_block07:label:541",
+            "nextbrain_case2_block07:label:542",
+            "nextbrain_case2_block07:label:543",
+            "nextbrain_case2_block07:label:580",
+            "nextbrain_case2_block07:label:586",
+            "nextbrain_case2_block07:label:591",
+            "nextbrain_case2_block07:label:592",
+            "nextbrain_case2_block07:label:598",
+            "nextbrain_case2_block07:label:600",
+            "nextbrain_case2_block07:label:610",
+            "nextbrain_case2_block07:label:611",
+            "nextbrain_case2_block07:label:617",
+            "nextbrain_case2_block07:label:645",
+            "nextbrain_case2_block07:label:779",
+            "nextbrain_case2_block07:label:827",
+            "nextbrain_case2_block07:label:828",
+            "nextbrain_case2_block07:label:829",
+            "nextbrain_case2_block07:label:842",
+            "nextbrain_case2_block07:label:844"
+          ],
+          "evidence": "Original case P41-16 histological block B1.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block06": {
+          "structure_ids": [
+            "nextbrain_case2_block06:label:414",
+            "nextbrain_case2_block06:label:415",
+            "nextbrain_case2_block06:label:471",
+            "nextbrain_case2_block06:label:499",
+            "nextbrain_case2_block06:label:515",
+            "nextbrain_case2_block06:label:527",
+            "nextbrain_case2_block06:label:528",
+            "nextbrain_case2_block06:label:531",
+            "nextbrain_case2_block06:label:542",
+            "nextbrain_case2_block06:label:543",
+            "nextbrain_case2_block06:label:546",
+            "nextbrain_case2_block06:label:580",
+            "nextbrain_case2_block06:label:581",
+            "nextbrain_case2_block06:label:589",
+            "nextbrain_case2_block06:label:591",
+            "nextbrain_case2_block06:label:592",
+            "nextbrain_case2_block06:label:598",
+            "nextbrain_case2_block06:label:599",
+            "nextbrain_case2_block06:label:600",
+            "nextbrain_case2_block06:label:610",
+            "nextbrain_case2_block06:label:611",
+            "nextbrain_case2_block06:label:617",
+            "nextbrain_case2_block06:label:624",
+            "nextbrain_case2_block06:label:630",
+            "nextbrain_case2_block06:label:645",
+            "nextbrain_case2_block06:label:659",
+            "nextbrain_case2_block06:label:666",
+            "nextbrain_case2_block06:label:669",
+            "nextbrain_case2_block06:label:677",
+            "nextbrain_case2_block06:label:682",
+            "nextbrain_case2_block06:label:694",
+            "nextbrain_case2_block06:label:697"
+          ],
+          "evidence": "Original case P41-16 histological block B2.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block16": {
+          "structure_ids": [
+            "nextbrain_case2_block16:label:414",
+            "nextbrain_case2_block16:label:415",
+            "nextbrain_case2_block16:label:499",
+            "nextbrain_case2_block16:label:515",
+            "nextbrain_case2_block16:label:527",
+            "nextbrain_case2_block16:label:528",
+            "nextbrain_case2_block16:label:543",
+            "nextbrain_case2_block16:label:580",
+            "nextbrain_case2_block16:label:591",
+            "nextbrain_case2_block16:label:592",
+            "nextbrain_case2_block16:label:610",
+            "nextbrain_case2_block16:label:611",
+            "nextbrain_case2_block16:label:647",
+            "nextbrain_case2_block16:label:649",
+            "nextbrain_case2_block16:label:654",
+            "nextbrain_case2_block16:label:655",
+            "nextbrain_case2_block16:label:660",
+            "nextbrain_case2_block16:label:662",
+            "nextbrain_case2_block16:label:666",
+            "nextbrain_case2_block16:label:669",
+            "nextbrain_case2_block16:label:671",
+            "nextbrain_case2_block16:label:677",
+            "nextbrain_case2_block16:label:682",
+            "nextbrain_case2_block16:label:683",
+            "nextbrain_case2_block16:label:685",
+            "nextbrain_case2_block16:label:687",
+            "nextbrain_case2_block16:label:689",
+            "nextbrain_case2_block16:label:690",
+            "nextbrain_case2_block16:label:693",
+            "nextbrain_case2_block16:label:694",
+            "nextbrain_case2_block16:label:695",
+            "nextbrain_case2_block16:label:697",
+            "nextbrain_case2_block16:label:703",
+            "nextbrain_case2_block16:label:717",
+            "nextbrain_case2_block16:label:724",
+            "nextbrain_case2_block16:label:725",
+            "nextbrain_case2_block16:label:726",
+            "nextbrain_case2_block16:label:731",
+            "nextbrain_case2_block16:label:755",
+            "nextbrain_case2_block16:label:756",
+            "nextbrain_case2_block16:label:765"
+          ],
+          "evidence": "Original case P41-16 histological block B3.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        },
+        "nextbrain_case2_block38": {
+          "structure_ids": [
+            "nextbrain_case2_block38:label:499",
+            "nextbrain_case2_block38:label:528",
+            "nextbrain_case2_block38:label:611",
+            "nextbrain_case2_block38:label:654",
+            "nextbrain_case2_block38:label:655",
+            "nextbrain_case2_block38:label:662",
+            "nextbrain_case2_block38:label:669",
+            "nextbrain_case2_block38:label:671",
+            "nextbrain_case2_block38:label:677",
+            "nextbrain_case2_block38:label:685",
+            "nextbrain_case2_block38:label:687",
+            "nextbrain_case2_block38:label:695",
+            "nextbrain_case2_block38:label:717",
+            "nextbrain_case2_block38:label:724",
+            "nextbrain_case2_block38:label:726",
+            "nextbrain_case2_block38:label:755",
+            "nextbrain_case2_block38:label:756",
+            "nextbrain_case2_block38:label:765",
+            "nextbrain_case2_block38:label:771"
+          ],
+          "evidence": "Original case P41-16 histological block B4.1; source-defined labels and matching ex vivo MRI retain supplied native grids. Fine assignments derive from source histology and reconstruction."
+        }
+      }
+    },
+    {
+      "id": "cerebellum",
+      "title": "Cerebellum",
+      "sources": {
+        "spl_nac": {
+          "categories": [
+            "Cerebellum"
+          ],
+          "evidence": "Real native T1/T2 and source labels; individual 1 mm grids retain their original half-millimeter origin difference."
+        },
+        "cerebra": {
+          "categories": [
+            "Cerebellum"
+          ],
+          "evidence": "Template MRI and source-defined regional labels in their native source space."
+        },
+        "mida": {
+          "categories": [
+            "Cerebellum"
+          ],
+          "evidence": "Original categorical voxel model with source-defined tissue and anatomical classes."
+        },
+        "hba_native": {
+          "image_regions": true,
+          "evidence": "Healthy-participant source-author skull-stripped, averaged T2 on a 0.25 mm reconstructed grid. Original bytes, native ACPC coordinates and processing mask edges are retained for image observation."
+        },
+        "julich_selected": {
+          "categories": [
+            "Cerebellar nuclei"
+          ],
+          "evidence": "Original Julich-Brain 3.0.3 maximum-probability assignments with the source-defined ICBM 2009c asymmetric T1/T2 reference; explicit hemisphere names and 1 mm sampling retained."
+        },
+        "nextbrain_case1_block25": {
+          "structure_ids": [
+            "nextbrain_case1_block25:label:595",
+            "nextbrain_case1_block25:label:597",
+            "nextbrain_case1_block25:label:611",
+            "nextbrain_case1_block25:label:715",
+            "nextbrain_case1_block25:label:721",
+            "nextbrain_case1_block25:label:751",
+            "nextbrain_case1_block25:label:752"
+          ],
+          "evidence": "Source-defined histological labels within case P57-16 block C1.1, displayed on their original grid with the matching ex vivo MRI context. Regional definitions and block extent remain explicit."
+        },
+        "suit_cerebellum": {
+          "categories": [
+            "Cerebellar lobules",
+            "Cerebellar vermis",
+            "Deep cerebellar nuclei"
+          ],
+          "evidence": "Source-defined SUIT population compartments, all 34 original probability channels and matching T1 template. Independent native array directions preserve shared physical coordinates; source lobular and nuclear cohorts remain explicit."
+        },
+        "z_anatomy": {
+          "categories": [
+            "Cerebellar source model"
+          ],
+          "evidence": "Original source-defined cerebellar lobular, vermal and peduncular educational surfaces in independent XYZ coordinates. Publisher terminology and grouping are retained."
+        }
+      }
+    }
+  ]
+}

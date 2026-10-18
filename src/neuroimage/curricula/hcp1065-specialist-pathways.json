@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "id": "hcp1065-specialist-pathways",
+  "dataset_id": "hcp1065_tracts",
+  "required_source": {
+    "id": "hcp1065_trk",
+    "version": "Yeh 2022 TRK distribution; SHA256-pinned source archive"
+  },
+  "title": "Source pathways: association, projection, commissural and cranial-nerve trajectories",
+  "author": "NeuroImage project",
+  "objective": "Explore source-defined pathway families using bounded groups, full sections and unchanged native trajectories. Distinguish computed tractography from observed anatomical boundaries.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "association-long",
+      "title": "Long association pathways",
+      "selected": "hcp1065_tracts:bundle:AF_L",
+      "visible": [
+        "hcp1065_tracts:bundle:AF_L",
+        "hcp1065_tracts:bundle:AF_R",
+        "hcp1065_tracts:bundle:IFOF_L",
+        "hcp1065_tracts:bundle:IFOF_R",
+        "hcp1065_tracts:bundle:ILF_L",
+        "hcp1065_tracts:bundle:ILF_R"
+      ],
+      "background": "t2",
+      "prompt": "Compare the arcuate, inferior fronto-occipital and inferior longitudinal source bundles. Start with full template sections; magnify only after locating the selected trajectory.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "frontal-temporal",
+      "title": "Frontal and temporal source pathways",
+      "selected": "hcp1065_tracts:bundle:UF_L",
+      "visible": [
+        "hcp1065_tracts:bundle:UF_L",
+        "hcp1065_tracts:bundle:UF_R",
+        "hcp1065_tracts:bundle:FAT_L",
+        "hcp1065_tracts:bundle:FAT_R",
+        "hcp1065_tracts:bundle:EMC_L",
+        "hcp1065_tracts:bundle:EMC_R"
+      ],
+      "background": "t2",
+      "prompt": "Compare the uncinate, frontal aslant and extreme-capsule source trajectories. Isolate each pair to inspect source overlap without inferring a connectivity network.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "longitudinal",
+      "title": "Source subdivisions of the superior longitudinal fasciculus",
+      "selected": "hcp1065_tracts:bundle:SLF1_L",
+      "visible": [
+        "hcp1065_tracts:bundle:SLF1_L",
+        "hcp1065_tracts:bundle:SLF1_R",
+        "hcp1065_tracts:bundle:SLF2_L",
+        "hcp1065_tracts:bundle:SLF2_R",
+        "hcp1065_tracts:bundle:SLF3_L",
+        "hcp1065_tracts:bundle:SLF3_R"
+      ],
+      "background": "t2",
+      "prompt": "Follow the six source-defined subdivisions in consecutive template sections. Source naming does not establish that these are exhaustive or disjoint biological compartments.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "cingulum",
+      "title": "Cingulum and fornix source trajectories",
+      "selected": "hcp1065_tracts:bundle:C_FP_R",
+      "visible": [
+        "hcp1065_tracts:bundle:C_FP_L",
+        "hcp1065_tracts:bundle:C_FP_R",
+        "hcp1065_tracts:bundle:C_PH_L",
+        "hcp1065_tracts:bundle:C_PH_R",
+        "hcp1065_tracts:bundle:F_L",
+        "hcp1065_tracts:bundle:F_R"
+      ],
+      "background": "t2",
+      "prompt": "Compare source cingulum subdivisions and the fornix pair. Check source notes: the published C_FP_R abbreviation description repeats a left-side suffix; retained coordinates and filename are not mirrored.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "descending",
+      "title": "Descending projection trajectories",
+      "selected": "hcp1065_tracts:bundle:CST_L",
+      "visible": [
+        "hcp1065_tracts:bundle:CST_L",
+        "hcp1065_tracts:bundle:CST_R",
+        "hcp1065_tracts:bundle:CBT_L",
+        "hcp1065_tracts:bundle:CBT_R",
+        "hcp1065_tracts:bundle:CPT_F_L",
+        "hcp1065_tracts:bundle:CPT_F_R"
+      ],
+      "background": "t2",
+      "prompt": "Compare corticospinal, corticobulbar and frontal corticopontine source trajectories. Follow adjacent sections and compare their geometric relations rather than assigning functional territories.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "radiations",
+      "title": "Thalamic and sensory source radiations",
+      "selected": "hcp1065_tracts:bundle:TR_S_R",
+      "visible": [
+        "hcp1065_tracts:bundle:TR_S_L",
+        "hcp1065_tracts:bundle:TR_S_R",
+        "hcp1065_tracts:bundle:OR_L",
+        "hcp1065_tracts:bundle:OR_R",
+        "hcp1065_tracts:bundle:AR_L",
+        "hcp1065_tracts:bundle:AR_R"
+      ],
+      "background": "t2",
+      "prompt": "Compare superior thalamic, optic and acoustic source radiations. The published TR_S_R description repeats a left suffix; the original right filename and native coordinates are preserved.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "commissures",
+      "title": "Commissural trajectories",
+      "selected": "hcp1065_tracts:bundle:AC",
+      "visible": [
+        "hcp1065_tracts:bundle:AC",
+        "hcp1065_tracts:bundle:CC"
+      ],
+      "background": "t2",
+      "prompt": "Compare the source anterior commissure and corpus callosum. Displayed line counts reflect source tractography and cannot be used as axon counts.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "cerebellar",
+      "title": "Cerebellar peduncle and ascending source pathways",
+      "selected": "hcp1065_tracts:bundle:MCP",
+      "visible": [
+        "hcp1065_tracts:bundle:MCP",
+        "hcp1065_tracts:bundle:ICP_L",
+        "hcp1065_tracts:bundle:ICP_R",
+        "hcp1065_tracts:bundle:SCP",
+        "hcp1065_tracts:bundle:DRTT_L",
+        "hcp1065_tracts:bundle:DRTT_R"
+      ],
+      "background": "t2",
+      "prompt": "Inspect the source cerebellar peduncle and dentatorubrothalamic trajectories. A crossing or nearby course does not establish a synapse or functional connection.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "cranial-anterior",
+      "title": "Computed optic and oculomotor nerve trajectories",
+      "selected": "hcp1065_tracts:bundle:CNII_L",
+      "visible": [
+        "hcp1065_tracts:bundle:CNII_L",
+        "hcp1065_tracts:bundle:CNII_R",
+        "hcp1065_tracts:bundle:CNIII_L",
+        "hcp1065_tracts:bundle:CNIII_R"
+      ],
+      "background": "t2",
+      "prompt": "Inspect these computed cranial-nerve trajectories in the source template. Compare with the separately browsed MIDA labels only as independent source evidence; no coordinate correspondence between the two packages is declared.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "cranial-posterior",
+      "title": "Computed trigeminal, facial and vestibulocochlear trajectories",
+      "selected": "hcp1065_tracts:bundle:CNV_L",
+      "visible": [
+        "hcp1065_tracts:bundle:CNV_L",
+        "hcp1065_tracts:bundle:CNV_R",
+        "hcp1065_tracts:bundle:CNVII_L",
+        "hcp1065_tracts:bundle:CNVII_R",
+        "hcp1065_tracts:bundle:CNVIII_L",
+        "hcp1065_tracts:bundle:CNVIII_R"
+      ],
+      "background": "t2",
+      "prompt": "Follow source trajectories around the posterior fossa in full sections, then magnify at the cursor. Sparse source lines and unequal paired counts do not establish the complete nerve course or normal asymmetry.",
+      "note": "Retained population-averaged computed trajectories with the source-declared ICBM 2009a asymmetric T1/T2 reference. Colors distinguish displayed source groups; counts describe retained computational streamlines. Endpoints and display density describe the supplied tractography. Functional interpretation, axon counts and individual nerve boundaries require their own evidence. Other datasets remain in their independent spaces.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "streamlines",
+        "streamline_level": "standard",
+        "streamline_slab_mm": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    }
+  ]
+}

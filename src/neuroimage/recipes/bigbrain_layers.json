@@ -1,0 +1,468 @@
+{
+  "id": "bigbrain_layers",
+  "adapter": "gifti-source-surfaces",
+  "version": "1",
+  "title": "BigBrain cortical laminar boundaries",
+  "representation": "surface-model",
+  "construction_peak_gib": 12,
+  "source_to_mm": 1.0,
+  "mesh_geometry_stage": "base",
+  "source_version": "BigBrainRelease.2015/PLoSBiology2020/2021-06-08",
+  "inputs": {
+    "left_0": "raw/bigbrain_layers/PLoSBiology2020/layer0_left_327680.gii.gz",
+    "left_1": "raw/bigbrain_layers/PLoSBiology2020/layer1_left_327680.gii.gz",
+    "left_2": "raw/bigbrain_layers/PLoSBiology2020/layer2_left_327680.gii.gz",
+    "left_3": "raw/bigbrain_layers/PLoSBiology2020/layer3_left_327680.gii.gz",
+    "left_4": "raw/bigbrain_layers/PLoSBiology2020/layer4_left_327680.gii.gz",
+    "left_5": "raw/bigbrain_layers/PLoSBiology2020/layer5_left_327680.gii.gz",
+    "left_6": "raw/bigbrain_layers/PLoSBiology2020/layer6_left_327680.gii.gz",
+    "right_0": "raw/bigbrain_layers/PLoSBiology2020/layer0_right_327680.gii.gz",
+    "right_1": "raw/bigbrain_layers/PLoSBiology2020/layer1_right_327680.gii.gz",
+    "right_2": "raw/bigbrain_layers/PLoSBiology2020/layer2_right_327680.gii.gz",
+    "right_3": "raw/bigbrain_layers/PLoSBiology2020/layer3_right_327680.gii.gz",
+    "right_4": "raw/bigbrain_layers/PLoSBiology2020/layer4_right_327680.gii.gz",
+    "right_5": "raw/bigbrain_layers/PLoSBiology2020/layer5_right_327680.gii.gz",
+    "right_6": "raw/bigbrain_layers/PLoSBiology2020/layer6_right_327680.gii.gz",
+    "license": "licenses/bigbrain_2015/License.txt",
+    "credits": "licenses/bigbrain_2015/Credits.txt"
+  },
+  "space": {
+    "id": "bigbrain-layers-source-native",
+    "name": "BigBrain cortical laminar boundaries original surface coordinates",
+    "coordinate_system": "SOURCE_XYZ",
+    "units": "mm",
+    "axis_status": "source_axes_not_anatomically_verified",
+    "reference": "Original self-contained GIfTI point arrays and triangle arrays in the BigBrain histological release. Embedded identity coordinate matrices are recorded.",
+    "correspondence": "Surfaces within this package share the author release coordinate convention. Separate datasets retain their own source spaces and definitions.",
+    "unit_basis": "The BigBrain histological release and associated source paper describe surface distances and morphometry in millimeters. Original coordinates are retained with metric scale 1.0; no shrinkage correction is added."
+  },
+  "sources": [
+    {
+      "id": "bigbrain_layers",
+      "title": "BigBrain cortical laminar boundaries",
+      "version": "BigBrainRelease.2015/PLoSBiology2020/2021-06-08",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/",
+      "citation": "Wagstyl K et al. BigBrain 3D atlas of cortical layers: Cortical and laminar thickness gradients diverge in sensory and motor cortices. PLoS Biology 18:e3000678 (2020). doi:10.1371/journal.pbio.3000678. BigBrain foundation: Amunts K et al. Science 340:1472-1475 (2013), doi:10.1126/science.1235381. Original contributors: https://ftp.bigbrainproject.org/bigbrain-ftp/Credits.txt.",
+      "license_name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "model_evidence": "Original histology-derived cortical boundary surfaces published by Wagstyl et al.; source computational inference in the normal BigBrain specimen.",
+  "model_notes": [
+    "Wagstyl et al. infer six cortical layers from histological profiles in a single BigBrain specimen. The source applies its own surface processing; these exact released vertices and triangles are preserved.",
+    "The source-defined layer boundaries can be difficult to distinguish in some cortical regions. Layer IV and transitions between adjacent layers have region-dependent uncertainty.",
+    "The study identifies a histological layer VI / white matter boundary that differs from an intensity-gradient surface. Keep the explicit boundary definition when comparing with MRI-derived cortex.",
+    "Original point order, shared mesh topology and source filenames are retained. Native surface distance is distinct from corrected in-vivo cortical thickness."
+  ],
+  "scope_notes": [
+    "One source-designated normal adult postmortem specimen; source computational processing and reconstructed boundaries are retained.",
+    "Native source surfaces support spatial observation. Layer and subfield definitions remain specific to their source method."
+  ],
+  "objects": [
+    {
+      "id": "bigbrain_layers:object:left-boundary-0",
+      "input": "left_0",
+      "source_name": "layer0_left_327680.gii.gz",
+      "name": "Left pial boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "left",
+      "color": [
+        225,
+        180,
+        105
+      ],
+      "notes": [
+        "Source surface index 0; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:left-boundary-1",
+      "input": "left_1",
+      "source_name": "layer1_left_327680.gii.gz",
+      "name": "Left layer I / II boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "left",
+      "color": [
+        104,
+        190,
+        205
+      ],
+      "notes": [
+        "Source surface index 1; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:left-boundary-2",
+      "input": "left_2",
+      "source_name": "layer2_left_327680.gii.gz",
+      "name": "Left layer II / III boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "left",
+      "color": [
+        167,
+        137,
+        219
+      ],
+      "notes": [
+        "Source surface index 2; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:left-boundary-3",
+      "input": "left_3",
+      "source_name": "layer3_left_327680.gii.gz",
+      "name": "Left layer III / IV boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "left",
+      "color": [
+        224,
+        116,
+        151
+      ],
+      "notes": [
+        "Source surface index 3; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:left-boundary-4",
+      "input": "left_4",
+      "source_name": "layer4_left_327680.gii.gz",
+      "name": "Left layer IV / V boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "left",
+      "color": [
+        120,
+        191,
+        140
+      ],
+      "notes": [
+        "Source surface index 4; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:left-boundary-5",
+      "input": "left_5",
+      "source_name": "layer5_left_327680.gii.gz",
+      "name": "Left layer V / VI boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "left",
+      "color": [
+        223,
+        151,
+        101
+      ],
+      "notes": [
+        "Source surface index 5; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:left-boundary-6",
+      "input": "left_6",
+      "source_name": "layer6_left_327680.gii.gz",
+      "name": "Left layer VI / white matter boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "left",
+      "color": [
+        170,
+        186,
+        206
+      ],
+      "notes": [
+        "Source surface index 6; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:right-boundary-0",
+      "input": "right_0",
+      "source_name": "layer0_right_327680.gii.gz",
+      "name": "Right pial boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "right",
+      "color": [
+        225,
+        180,
+        105
+      ],
+      "notes": [
+        "Source surface index 0; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:right-boundary-1",
+      "input": "right_1",
+      "source_name": "layer1_right_327680.gii.gz",
+      "name": "Right layer I / II boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "right",
+      "color": [
+        104,
+        190,
+        205
+      ],
+      "notes": [
+        "Source surface index 1; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:right-boundary-2",
+      "input": "right_2",
+      "source_name": "layer2_right_327680.gii.gz",
+      "name": "Right layer II / III boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "right",
+      "color": [
+        167,
+        137,
+        219
+      ],
+      "notes": [
+        "Source surface index 2; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:right-boundary-3",
+      "input": "right_3",
+      "source_name": "layer3_right_327680.gii.gz",
+      "name": "Right layer III / IV boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "right",
+      "color": [
+        224,
+        116,
+        151
+      ],
+      "notes": [
+        "Source surface index 3; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:right-boundary-4",
+      "input": "right_4",
+      "source_name": "layer4_right_327680.gii.gz",
+      "name": "Right layer IV / V boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "right",
+      "color": [
+        120,
+        191,
+        140
+      ],
+      "notes": [
+        "Source surface index 4; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:right-boundary-5",
+      "input": "right_5",
+      "source_name": "layer5_right_327680.gii.gz",
+      "name": "Right layer V / VI boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "right",
+      "color": [
+        223,
+        151,
+        101
+      ],
+      "notes": [
+        "Source surface index 5; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    },
+    {
+      "id": "bigbrain_layers:object:right-boundary-6",
+      "input": "right_6",
+      "source_name": "layer6_right_327680.gii.gz",
+      "name": "Right layer VI / white matter boundary",
+      "source_type": "MESH",
+      "category": "Cortical laminar boundary surfaces",
+      "laterality": "right",
+      "color": [
+        170,
+        186,
+        206
+      ],
+      "notes": [
+        "Source surface index 6; the mesh describes a boundary rather than the volume of a cortical layer.",
+        "The original source uses learned histological intensity profiles and source surface processing. Effective anatomical certainty follows that method and the source regional confidence."
+      ]
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-BBL001",
+      "title": "Left cortical boundary sequence",
+      "objective": "Left cortical boundary sequence",
+      "instruction": "Inspect the pial surface, then the successive layer boundaries and the layer VI / white matter boundary. Use transparency and the prepared cutaway to follow the nested surfaces through folds.",
+      "evidence_limit": "Source-author inferred boundaries from histology; the original anatomical processing is retained.",
+      "structure_ids": [
+        "bigbrain_layers:object:left-boundary-0",
+        "bigbrain_layers:object:left-boundary-1",
+        "bigbrain_layers:object:left-boundary-2",
+        "bigbrain_layers:object:left-boundary-3",
+        "bigbrain_layers:object:left-boundary-4",
+        "bigbrain_layers:object:left-boundary-5",
+        "bigbrain_layers:object:left-boundary-6"
+      ],
+      "step_prompt": "Trace the selected supplied surface and describe its relationship to the other visible source components.",
+      "step_question": "Which source component is selected, and how does its supplied extent relate to the visible neighboring surfaces?"
+    },
+    {
+      "id": "NI-BBL002",
+      "title": "Right cortical boundary sequence",
+      "objective": "Right cortical boundary sequence",
+      "instruction": "Inspect the pial surface, then the successive layer boundaries and the layer VI / white matter boundary. Use transparency and the prepared cutaway to follow the nested surfaces through folds.",
+      "evidence_limit": "Source-author inferred boundaries from histology; the original anatomical processing is retained.",
+      "structure_ids": [
+        "bigbrain_layers:object:right-boundary-0",
+        "bigbrain_layers:object:right-boundary-1",
+        "bigbrain_layers:object:right-boundary-2",
+        "bigbrain_layers:object:right-boundary-3",
+        "bigbrain_layers:object:right-boundary-4",
+        "bigbrain_layers:object:right-boundary-5",
+        "bigbrain_layers:object:right-boundary-6"
+      ],
+      "step_prompt": "Trace the selected supplied surface and describe its relationship to the other visible source components.",
+      "step_question": "Which source component is selected, and how does its supplied extent relate to the visible neighboring surfaces?"
+    }
+  ],
+  "acquisition": "Run neuroimage acquire bigbrain_layers --data-root <data-root>. The common workflow downloads pinned self-contained GIfTI files directly, reuses completed files and retains original compressed sources.",
+  "archives": [],
+  "files": [
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer0_left_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer0_left_327680.gii.gz",
+      "bytes": 3599307,
+      "sha256": "c5dcc391a4968ec2024d1bab6d2ef0a8c9d588abe23592137608114b544119ce",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer1_left_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer1_left_327680.gii.gz",
+      "bytes": 3599925,
+      "sha256": "94c0c96004cadc2eb4461e667180975ff9bd71a6d24107cc09b8f99e7535f41f",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer2_left_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer2_left_327680.gii.gz",
+      "bytes": 3599806,
+      "sha256": "d21a667422e2878435b4b42fdeb61dad86b6876ac2ed2dc681f4f008a760d657",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer3_left_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer3_left_327680.gii.gz",
+      "bytes": 3599409,
+      "sha256": "fcfb1bd16c3754d551f24e39cff03060dc5e406aff26c2c908f3dcfc1810a1b1",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer4_left_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer4_left_327680.gii.gz",
+      "bytes": 3599161,
+      "sha256": "174e3806d483ecf32a5a87827b7054ea33b9d06fe3d294ed6d3f524ba40bcbc1",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer5_left_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer5_left_327680.gii.gz",
+      "bytes": 3598197,
+      "sha256": "6126cc8aee4796c87ea610220d8af8558bac80ccfa5fe1eed8b982f59ff56df4",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer6_left_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer6_left_327680.gii.gz",
+      "bytes": 3596340,
+      "sha256": "fdc6c297e924de8108a331daa3bb1155323ce42c99a8a8f04539be9065820763",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer0_right_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer0_right_327680.gii.gz",
+      "bytes": 3625737,
+      "sha256": "a92a37cdc7aedf2a4a5c4e367f0d6aa7b7d9cd15ae7d8ce53b839d8bd55391ee",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer1_right_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer1_right_327680.gii.gz",
+      "bytes": 3626037,
+      "sha256": "ba68b2840ea3afa5f46428ef4902b30814eb04e7f08ca96cee877c4fc7ab08a7",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer2_right_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer2_right_327680.gii.gz",
+      "bytes": 3626804,
+      "sha256": "beb80feccdf8b858bbf0186ac501eb5721d1a7ceb2df611acb35f8b9d3b3d81f",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer3_right_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer3_right_327680.gii.gz",
+      "bytes": 3626356,
+      "sha256": "b9a99f0274fe02a8a1597ff4023fc82ade28cd4e6584867e8985d4c6f3733cd0",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer4_right_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer4_right_327680.gii.gz",
+      "bytes": 3626276,
+      "sha256": "b8bdca7476df969fae1ba3c0b157c21937d6e131d818ee3bd1dd8009d4781495",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer5_right_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer5_right_327680.gii.gz",
+      "bytes": 3625296,
+      "sha256": "46f6a8f27ddc2b8fc716a3eebf3e8684e12a088a49667335892198ea9cf275af",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_layers/PLoSBiology2020/layer6_right_327680.gii.gz",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/gii/layer6_right_327680.gii.gz",
+      "bytes": 3622736,
+      "sha256": "034ff5ad3100ef449f3b4949ab4bbd2e401077b216d7fdb767a383c62c6d9c9a",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/bigbrain_2015/License.txt",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/License.txt",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/bigbrain_2015/Credits.txt",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/Credits.txt",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

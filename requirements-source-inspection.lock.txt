@@ -1,0 +1,3 @@
+# Optional original-HDF5 inspection and construction dependency; use the NeuroImage environment.
+# Install after the pinned core environment. This is separate from the viewer runtime.
+h5py==3.16.0

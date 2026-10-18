@@ -1,0 +1,427 @@
+{
+  "id": "julich_selected",
+  "adapter": "siibra-labelled-map",
+  "version": "1",
+  "title": "Julich-Brain 3.0.3 \u00b7 native cytoarchitectonic MPM",
+  "representation": "mri-labels",
+  "source_version": "3.0.3/157-region-MPM/10.25493/56EM-75H",
+  "construction_peak_gib": 4,
+  "nifti_units": "mm",
+  "units_evidence": "The official source map identifies ICBM152 nonlinear asymmetric 2009c. Its original affine and shape equal the supplied 1 mm MNI reference. The MPM omits header unit flags; source coordinate units are explicitly recorded in millimeters.",
+  "space": {
+    "id": "mni-icbm152-2009c-asymmetric",
+    "name": "MNI ICBM152 2009c nonlinear asymmetric",
+    "reference": "Julich-Brain 3.0.3 official source map configuration and ICBM152 2009c asymmetric reference",
+    "correspondence": "The publisher maps this MPM into ICBM152 nonlinear asymmetric 2009c. Original T1, T2 and MPM grids have equal shapes and affines. Source definitions remain specific to this atlas."
+  },
+  "inputs": {
+    "labels": "downloads/julich_selected/JulichBrainAtlas_3.0.3_source_mpm.nii.gz",
+    "label_mapping": "raw/julich_selected/official-map-configuration.json",
+    "license": "licenses/julich_selected/source-metadata.json",
+    "template_license": "raw/mni_09c_asym/COPYING",
+    "t1": "raw/mni_09c_asym/mni_icbm152_nlin_asym_09c/mni_icbm152_t1_tal_nlin_asym_09c.nii",
+    "t2": "raw/mni_09c_asym/mni_icbm152_nlin_asym_09c/mni_icbm152_t2_tal_nlin_asym_09c.nii"
+  },
+  "images": [
+    {
+      "id": "t1",
+      "name": "T1-weighted asymmetric population reference"
+    },
+    {
+      "id": "t2",
+      "name": "T2-weighted asymmetric population reference"
+    }
+  ],
+  "require_same_grid": true,
+  "require_full_label_inventory": true,
+  "sources": [
+    {
+      "id": "julich_selected",
+      "title": "Julich-Brain Atlas, cytoarchitectonic maps",
+      "version": "3.0.3",
+      "url": "https://doi.org/10.25493/56EM-75H",
+      "citation": "Amunts K, Eickhoff SB, Pieperhoff P, Bludau S, Caspers S, Mohlberg H, Lewis LB. Julich-Brain Atlas, cytoarchitectonic maps v3.0.3. EBRAINS. doi:10.25493/56EM-75H. Related method: Amunts K et al. Science 369, 988-992 (2020), doi:10.1126/science.abb4588.",
+      "license_name": "Creative Commons Attribution Non Commercial Share Alike 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "license_input": "license"
+    },
+    {
+      "id": "mni_09c_asym",
+      "title": "MNI ICBM152 nonlinear asymmetric reference",
+      "version": "2009c",
+      "url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+      "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033. Original ICBM152 2009c asymmetric reference.",
+      "license_name": "MNI ICBM152 template terms (original COPYING)",
+      "license_url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+      "license_input": "template_license"
+    }
+  ],
+  "label_mapping": {
+    "id": "siibra-map-v0.0.1_mni152-jba30-labelled",
+    "source_space_id": "minds/core/referencespace/v1.0.0/dafcffc5-4826-4bf1-8ff6-46b8a31ff8e2",
+    "source_volume_url": "https://data-proxy.ebrains.eu/api/v1/public/buckets/d-d69b70e2-3002-4eaf-9c61-9c56f019bbc8/maximum_probability_maps_MPMs_157areas/JulichBrainAtlas_3.0_areas_MPM_b_N10_nlin2ICBM152asym2009c_public_11035603b4744231e17e87fd8ebcaf1a.nii.gz",
+    "default_category": "Cerebral cytoarchitectonic regions",
+    "categories": [
+      {
+        "title": "Source cortical gap maps",
+        "contains": [
+          "(GapMap)"
+        ]
+      },
+      {
+        "title": "Medial temporal regions",
+        "contains": [
+          "(Hippocampus)",
+          "Entorhinal Cortex"
+        ]
+      },
+      {
+        "title": "Subcortical cytoarchitectonic regions",
+        "contains": [
+          "(Amygdala)",
+          "(Basal Forebrain)",
+          "Ventral Striatum)",
+          "(Ventral Pallidum)",
+          "(Metathalamus)",
+          "(Subthalamus)",
+          "(Bed Nucleus)"
+        ]
+      },
+      {
+        "title": "Cerebellar nuclei",
+        "contains": [
+          "(Cerebellum)"
+        ]
+      }
+    ],
+    "region_evidence": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved.",
+    "gap_evidence": "Source-defined GapMap partition included by the publisher to complete cortical coverage. Its source name and categorical value identify its distinct evidence type."
+  },
+  "scope_notes": [
+    "314 source entries comprise 302 hemisphere-specific regional assignments and 12 hemisphere-specific source GapMaps.",
+    "The categorical MPM records the source maximum-probability assignment; individual probability channels are a distinct source product.",
+    "Surfaces follow the original 1 mm categorical samples. Source definition, coverage and independent instructor judgments are recorded separately."
+  ],
+  "acquisition": "Reuse verified original MPM and ICBM152 2009c asymmetric files. The exact source map configuration and source license metadata are acquired through the same workflow.",
+  "archives": [
+    {
+      "dataset_id": "mni_09c_asym",
+      "filename": "mni_icbm152_nlin_asym_09c_nifti.zip",
+      "format": "zip",
+      "url": "https://www.bic.mni.mcgill.ca/~vfonov/icbm/2009/mni_icbm152_nlin_asym_09c_nifti.zip",
+      "bytes": 58602393,
+      "sha256": "804382e5d68a42ff8096ee845a7600b6658434da762fa67840a149eb25d48bd4",
+      "members": [
+        {
+          "member": "mni_icbm152_nlin_asym_09c/mni_icbm152_t1_tal_nlin_asym_09c.nii",
+          "target": "raw/mni_09c_asym/mni_icbm152_nlin_asym_09c/mni_icbm152_t1_tal_nlin_asym_09c.nii",
+          "bytes": 17060394,
+          "sha256": "67fe8b2e8fed7fa318d293e79a31416f5b31d70f0330312f58125fcd3dde43a1"
+        },
+        {
+          "member": "mni_icbm152_nlin_asym_09c/mni_icbm152_t2_tal_nlin_asym_09c.nii",
+          "target": "raw/mni_09c_asym/mni_icbm152_nlin_asym_09c/mni_icbm152_t2_tal_nlin_asym_09c.nii",
+          "bytes": 17060394,
+          "sha256": "51c9e88a3daca69a9e100d49228964e333366b731ce409184e5e52cf3f8465af"
+        },
+        {
+          "member": "COPYING",
+          "target": "raw/mni_09c_asym/COPYING",
+          "bytes": 676,
+          "sha256": "5915d16f84d99c3cedc8290b09da72f6f92e5dde1ba1c9859ee186aa952b66a4"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "target": "downloads/julich_selected/JulichBrainAtlas_3.0.3_source_mpm.nii.gz",
+      "url": "https://data-proxy.ebrains.eu/api/v1/public/buckets/d-d69b70e2-3002-4eaf-9c61-9c56f019bbc8/maximum_probability_maps_MPMs_157areas/JulichBrainAtlas_3.0_areas_MPM_b_N10_nlin2ICBM152asym2009c_public_11035603b4744231e17e87fd8ebcaf1a.nii.gz",
+      "bytes": 335280,
+      "sha256": "3af71c8d467db42d8561115164e0f365b942dfaa3568740ce62846fa3a201aff"
+    },
+    {
+      "target": "raw/julich_selected/official-map-configuration.json",
+      "url": "https://raw.githubusercontent.com/FZJ-INM1-BDA/siibra-configurations/236c476dcad972b117fe2573370a6644995f1175/maps/mni152-jba30-labelled.json",
+      "bytes": 32033,
+      "sha256": "949bf42f75b00018cff001f59cd3c9285e1549575621156cbed176f055e79fa4"
+    },
+    {
+      "target": "licenses/julich_selected/source-metadata.json",
+      "url": "https://gitlab.ebrains.eu/api/v4/projects/421/repository/files/ebrainsquery%2Fv3%2FDatasetVersion%2Fd69b70e2-3002-4eaf-9c61-9c56f019bbc8.json/raw?ref=master",
+      "bytes": 6765,
+      "sha256": "a940bf3a1a24c9bb65a80a754e0e01a8f8ee19a259087a9a9ef2c6ea31734540"
+    }
+  ],
+  "license_downloads": [],
+  "teaching_sequences": [
+    {
+      "id": "NI-J001",
+      "title": "Central cortical source regions",
+      "objective": "Recognize the original source parcellations and compare their three-dimensional positions with the supplied template MRI.",
+      "instruction": "Inspect complete T1 and T2 sections first, then magnify the selected region and rotate its source-resolution surface.",
+      "evidence_limit": "Population maximum-probability assignments derived from postmortem cytoarchitectonic maps. Read each original source name and retain the 1 mm reference sampling.",
+      "structure_ids": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "steps": [
+        {
+          "structure_id": "julich_selected:label:49",
+          "prompt": "Locate Left Area 4a (PreCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Area 4a (PreCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:48",
+          "prompt": "Locate Left Area 4p (PreCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Area 4p (PreCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:52",
+          "prompt": "Locate Left Area 3b (PostCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Area 3b (PostCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:50",
+          "prompt": "Locate Left Area 1 (PostCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Area 1 (PostCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1049",
+          "prompt": "Locate Right Area 4a (PreCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Area 4a (PreCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1048",
+          "prompt": "Locate Right Area 4p (PreCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Area 4p (PreCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1052",
+          "prompt": "Locate Right Area 3b (PostCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Area 3b (PostCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1050",
+          "prompt": "Locate Right Area 1 (PostCG) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Area 1 (PostCG). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        }
+      ]
+    },
+    {
+      "id": "NI-J002",
+      "title": "Medial temporal source subdivisions",
+      "objective": "Recognize the original source parcellations and compare their three-dimensional positions with the supplied template MRI.",
+      "instruction": "Inspect complete T1 and T2 sections first, then magnify the selected region and rotate its source-resolution surface.",
+      "evidence_limit": "Population maximum-probability assignments derived from postmortem cytoarchitectonic maps. Read each original source name and retain the 1 mm reference sampling.",
+      "structure_ids": [
+        "julich_selected:label:27",
+        "julich_selected:label:23",
+        "julich_selected:label:24",
+        "julich_selected:label:26",
+        "julich_selected:label:1027",
+        "julich_selected:label:1023",
+        "julich_selected:label:1024",
+        "julich_selected:label:1026"
+      ],
+      "steps": [
+        {
+          "structure_id": "julich_selected:label:27",
+          "prompt": "Locate Left CA1 (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left CA1 (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:23",
+          "prompt": "Locate Left CA2 (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left CA2 (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:24",
+          "prompt": "Locate Left CA3 (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left CA3 (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:26",
+          "prompt": "Locate Left DG (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left DG (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1027",
+          "prompt": "Locate Right CA1 (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right CA1 (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1023",
+          "prompt": "Locate Right CA2 (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right CA2 (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1024",
+          "prompt": "Locate Right CA3 (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right CA3 (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1026",
+          "prompt": "Locate Right DG (Hippocampus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right DG (Hippocampus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        }
+      ]
+    },
+    {
+      "id": "NI-J003",
+      "title": "Cerebellar nuclei in the source MPM",
+      "objective": "Recognize the original source parcellations and compare their three-dimensional positions with the supplied template MRI.",
+      "instruction": "Inspect complete T1 and T2 sections first, then magnify the selected region and rotate its source-resolution surface.",
+      "evidence_limit": "Population maximum-probability assignments derived from postmortem cytoarchitectonic maps. Read each original source name and retain the 1 mm reference sampling.",
+      "structure_ids": [
+        "julich_selected:label:72",
+        "julich_selected:label:90",
+        "julich_selected:label:80",
+        "julich_selected:label:81",
+        "julich_selected:label:1072",
+        "julich_selected:label:1090",
+        "julich_selected:label:1080",
+        "julich_selected:label:1081"
+      ],
+      "steps": [
+        {
+          "structure_id": "julich_selected:label:72",
+          "prompt": "Locate Left Fastigial Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Fastigial Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:90",
+          "prompt": "Locate Left Interposed Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Interposed Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:80",
+          "prompt": "Locate Left Dorsal Dentate Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Dorsal Dentate Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:81",
+          "prompt": "Locate Left Ventral Dentate Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left Ventral Dentate Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1072",
+          "prompt": "Locate Right Fastigial Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Fastigial Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1090",
+          "prompt": "Locate Right Interposed Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Interposed Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1080",
+          "prompt": "Locate Right Dorsal Dentate Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Dorsal Dentate Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1081",
+          "prompt": "Locate Right Ventral Dentate Nucleus (Cerebellum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right Ventral Dentate Nucleus (Cerebellum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        }
+      ]
+    },
+    {
+      "id": "NI-J004",
+      "title": "Ventral striatal and diencephalic source regions",
+      "objective": "Recognize the original source parcellations and compare their three-dimensional positions with the supplied template MRI.",
+      "instruction": "Inspect complete T1 and T2 sections first, then magnify the selected region and rotate its source-resolution surface.",
+      "evidence_limit": "Population maximum-probability assignments derived from postmortem cytoarchitectonic maps. Read each original source name and retain the 1 mm reference sampling.",
+      "structure_ids": [
+        "julich_selected:label:138",
+        "julich_selected:label:142",
+        "julich_selected:label:143",
+        "julich_selected:label:145",
+        "julich_selected:label:1138",
+        "julich_selected:label:1142",
+        "julich_selected:label:1143",
+        "julich_selected:label:1145"
+      ],
+      "steps": [
+        {
+          "structure_id": "julich_selected:label:138",
+          "prompt": "Locate Left AcbM (Medial Accumbens, Ventral Striatum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left AcbM (Medial Accumbens, Ventral Striatum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:142",
+          "prompt": "Locate Left VP (Ventral Pallidum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left VP (Ventral Pallidum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:143",
+          "prompt": "Locate Left CGL (Metathalamus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left CGL (Metathalamus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:145",
+          "prompt": "Locate Left STN (Subthalamus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Left STN (Subthalamus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1138",
+          "prompt": "Locate Right AcbM (Medial Accumbens, Ventral Striatum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right AcbM (Medial Accumbens, Ventral Striatum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1142",
+          "prompt": "Locate Right VP (Ventral Pallidum) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right VP (Ventral Pallidum). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1143",
+          "prompt": "Locate Right CGL (Metathalamus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right CGL (Metathalamus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        },
+        {
+          "structure_id": "julich_selected:label:1145",
+          "prompt": "Locate Right STN (Subthalamus) in the three section planes and compare the adjacent source regions.",
+          "question": "Which original region and source hemisphere are selected?",
+          "answer": "Right STN (Subthalamus). The label records the source maximum-probability assignment in the ICBM 2009c asymmetric reference."
+        }
+      ]
+    }
+  ]
+}

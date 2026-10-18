@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-10-14T11:55:27.913517+00:00",
+  "dataset_id": "suit_cerebellum",
+  "source_commit": "6857dfa732de6dd60c94da2f84d0b15ccf316618",
+  "lobular_cohort": {
+    "included": 20,
+    "scope": "Healthy young adults documented by the source atlas page and descriptor",
+    "url": "https://diedrichsenlab.org/imaging/propatlas.htm"
+  },
+  "nuclear_cohort": {
+    "recruited": 28,
+    "scope": "Healthy participants in the source Methods; five excluded before the final atlas analysis",
+    "excluded_for_movement": 3,
+    "excluded_for_incidental_mri_findings": 2,
+    "included": 23,
+    "age_mean_years": 35.1,
+    "age_range_years": [
+      21,
+      61
+    ],
+    "reference": "Diedrichsen et al. NeuroImage 54 (2011), doi:10.1016/j.neuroimage.2010.10.035; Methods: Subjects",
+    "url": "https://www.diedrichsenlab.org/pubs/Neuroimage_dentate_2011.pdf",
+    "local_source": "literature/suit-source-readiness-20261014/Neuroimage_dentate_2011.pdf"
+  },
+  "source_products_used": "Published final atlas labels, probability fields and original T1 template; participant-level scans were not acquired.",
+  "normal_scope_status": "Supported by the reported final-cohort exclusions and original normal atlas definitions."
+}

@@ -1,0 +1,124 @@
+{
+  "id": "mouches_arteries",
+  "version": "1",
+  "source_version": "2019-v1",
+  "adapter": "independent-nifti-regions",
+  "representation": "mri-regions",
+  "title": "Healthy-subject arterial occurrence \u00b7 native TOF atlas",
+  "construction_peak_gib": 3,
+  "inputs": {
+    "probability": "raw/mouches_arteries/vesselProbabilities.nii.gz",
+    "probability_license": "licenses/mouches_arteries/figshare-7026179-v1.json",
+    "tof": "raw/mouches_arteries/tofAverage.nii.gz",
+    "tof_license": "licenses/mouches_arteries/figshare-7026158-v1.json"
+  },
+  "images": [
+    {
+      "id": "tof",
+      "name": "Source average TOF magnetic resonance angiography"
+    }
+  ],
+  "nifti_units": "mm",
+  "space": {
+    "id": "mouches-2019-native-05mm",
+    "name": "Mouches 2019 native arterial atlas",
+    "reference": "The authors' supplied 0.5 mm NIfTI affine and common TOF/probability grid",
+    "correspondence": "The source authors provide the TOF average and probability atlas as a matched pair. Identical delivered grids and affines are verified. Their study used MNI normalization, but this package establishes no correspondence to another MNI release or project atlas. No new registration or mirroring is applied."
+  },
+  "sources": [
+    {
+      "id": "mouches_arteries",
+      "title": "Healthy-subject cerebral artery occurrence atlas",
+      "version": "2019-v1",
+      "url": "https://springernature.figshare.com/articles/dataset/Vessel_Occurence_Probability_Atlas/7026179",
+      "citation": "Mouches P and Forkert ND. A statistical atlas of cerebral arteries generated using multi-center MRA datasets from healthy subjects. Scientific Data 6, 29 (2019). doi:10.1038/s41597-019-0034-5. Probability data: doi:10.6084/m9.figshare.7026179.v1.",
+      "license_name": "CC0 1.0 Universal",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_input": "probability_license"
+    },
+    {
+      "id": "mouches_tof",
+      "title": "Matched average TOF MRA reference",
+      "version": "2019-v1",
+      "url": "https://springernature.figshare.com/articles/dataset/Average_Time-of-Flight_magnetic_resonance_angiography_atlas/7026158",
+      "citation": "Mouches P and Forkert ND. A statistical atlas of cerebral arteries generated using multi-center MRA datasets from healthy subjects. Scientific Data 6, 29 (2019). doi:10.1038/s41597-019-0034-5. TOF reference: doi:10.6084/m9.figshare.7026158.v1.",
+      "license_name": "CC0 1.0 Universal",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_input": "tof_license"
+    }
+  ],
+  "probability_units": "percent",
+  "probability_interpretation": "Source arterial occurrence percentage across the retained healthy-subject datasets, accounting for their different imaging coverage. It is not the probability of disease, an individual vessel boundary or a complete named-artery segmentation.",
+  "probability_derivation": "The source authors segmented and normalized MRA datasets before population averaging. The paper reports 544 retained datasets after screening and quality exclusions. This project retains the original delivered percent values and native sampling exactly.",
+  "mask_rule": {
+    "threshold": 25,
+    "operator": ">=",
+    "origin": "derived-from-probability",
+    "source": "Project display mask at original source arterial occurrence >= 25 percent. This threshold is a reproducible viewing convention, not a source-supplied binary segmentation or an individual anatomical boundary."
+  },
+  "region_evidence": "Population arterial occurrence field derived computationally from healthy-subject MRA. The displayed 3D mask is a project threshold illustration with the unchanged source probability and matching average TOF available in 2D.",
+  "region_notes": [
+    "The source occurrence field has no separately named artery branches or side labels; no new partitions are inferred.",
+    "The full probability field, including values below the 25 percent display threshold, is retained.",
+    "The mean TOF is a population image, not an individual angiogram. Local coverage and registration effects limit interpretation of small vessels and normal variation.",
+    "Arterial radius statistics, disease scores, patient evaluation and unverified cross-atlas overlays are outside this teaching module."
+  ],
+  "regions": [
+    {
+      "source_name": "arterial_occurrence",
+      "name": "Arterial occurrence field",
+      "category": "Arterial population evidence",
+      "laterality": "unspecified",
+      "color": [
+        233,
+        126,
+        79
+      ],
+      "probability_input": "probability"
+    }
+  ],
+  "acquisition": "Run neuroimage acquire mouches_arteries --data-root <existing-data-root>. The original paired source volumes are retained without duplicate expansion.",
+  "archives": [],
+  "files": [
+    {
+      "target": "raw/mouches_arteries/vesselProbabilities.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/14460467",
+      "bytes": 10322398,
+      "sha256": "a7ed98c5bf75cbd70e334325446f02db503d8a21129cff7276355e4a7ee4b919",
+      "publisher_md5": "ff2bf34677007e4a218af93b5a5eeed2"
+    },
+    {
+      "target": "raw/mouches_arteries/tofAverage.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/14460461",
+      "bytes": 186943412,
+      "sha256": "d8fecb4d9e3a53048a2720ae740e0d60fd05c42b9fd287333484afafc93d5c8b",
+      "publisher_md5": "31b1ed2a1105a64ebf7e149b15a17758"
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/mouches_arteries/figshare-7026179-v1.json",
+      "url": "https://api.figshare.com/v2/articles/7026179/versions/1",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/mouches_arteries/figshare-7026158-v1.json",
+      "url": "https://api.figshare.com/v2/articles/7026158/versions/1",
+      "maximum_bytes": 1048576
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-A001",
+      "title": "Arterial occurrence and the source angiographic reference",
+      "structure_ids": [
+        "mouches_arteries:region:arterial_occurrence"
+      ],
+      "objective": "Compare source TOF intensity, arterial occurrence percentage and a reproducible 3D display mask.",
+      "instruction": "Begin with complete TOF sections. Move the cursor along visible arterial signal and inspect the unchanged percent field. Toggle the binary display mask to see which source samples meet the declared 25 percent threshold. A 3D threshold surface is not one individual vessel tree.",
+      "evidence_limit": "Unreviewed population teaching context. Occurrence, TOF intensity, geometry at a display threshold and anatomical certainty are different quantities. No named-branch or clinical claim is made.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    }
+  ]
+}

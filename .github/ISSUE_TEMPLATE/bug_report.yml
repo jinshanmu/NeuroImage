@@ -1,0 +1,22 @@
+name: Software bug
+description: Report a reproducible software problem using synthetic data when possible.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Software version
+      description: Include the output of neuroimage --version.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Give commands, expected behavior and actual behavior. Do not attach acquired anatomy, credentials or personal files.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, browser, relevant error text and whether the generated demo reproduces the problem.

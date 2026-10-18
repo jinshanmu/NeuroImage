@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "id": "julich-central-cortex",
+  "dataset_id": "julich_selected",
+  "required_source": {
+    "id": "julich_selected",
+    "version": "3.0.3"
+  },
+  "title": "Central cortical source regions",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore source-specific cytoarchitectonic regions in the matching asymmetric T1/T2 reference and three-dimensional display.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "region-49",
+      "title": "Left Area 4a (PreCG)",
+      "selected": "julich_selected:label:49",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t1",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 4a (PreCG) - left hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:48": 0.25,
+          "julich_selected:label:52": 0.25,
+          "julich_selected:label:50": 0.25,
+          "julich_selected:label:1049": 0.25,
+          "julich_selected:label:1048": 0.25,
+          "julich_selected:label:1052": 0.25,
+          "julich_selected:label:1050": 0.25
+        }
+      }
+    },
+    {
+      "id": "region-48",
+      "title": "Left Area 4p (PreCG)",
+      "selected": "julich_selected:label:48",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t2",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 4p (PreCG) - left hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:49": 0.25,
+          "julich_selected:label:52": 0.25,
+          "julich_selected:label:50": 0.25,
+          "julich_selected:label:1049": 0.25,
+          "julich_selected:label:1048": 0.25,
+          "julich_selected:label:1052": 0.25,
+          "julich_selected:label:1050": 0.25
+        }
+      }
+    },
+    {
+      "id": "region-52",
+      "title": "Left Area 3b (PostCG)",
+      "selected": "julich_selected:label:52",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t1",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 3b (PostCG) - left hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:49": 0.25,
+          "julich_selected:label:48": 0.25,
+          "julich_selected:label:50": 0.25,
+          "julich_selected:label:1049": 0.25,
+          "julich_selected:label:1048": 0.25,
+          "julich_selected:label:1052": 0.25,
+          "julich_selected:label:1050": 0.25
+        }
+      }
+    },
+    {
+      "id": "region-50",
+      "title": "Left Area 1 (PostCG)",
+      "selected": "julich_selected:label:50",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t2",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 1 (PostCG) - left hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:49": 0.25,
+          "julich_selected:label:48": 0.25,
+          "julich_selected:label:52": 0.25,
+          "julich_selected:label:1049": 0.25,
+          "julich_selected:label:1048": 0.25,
+          "julich_selected:label:1052": 0.25,
+          "julich_selected:label:1050": 0.25
+        }
+      }
+    },
+    {
+      "id": "region-1049",
+      "title": "Right Area 4a (PreCG)",
+      "selected": "julich_selected:label:1049",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t1",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 4a (PreCG) - right hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:49": 0.25,
+          "julich_selected:label:48": 0.25,
+          "julich_selected:label:52": 0.25,
+          "julich_selected:label:50": 0.25,
+          "julich_selected:label:1048": 0.25,
+          "julich_selected:label:1052": 0.25,
+          "julich_selected:label:1050": 0.25
+        }
+      }
+    },
+    {
+      "id": "region-1048",
+      "title": "Right Area 4p (PreCG)",
+      "selected": "julich_selected:label:1048",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t2",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 4p (PreCG) - right hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:49": 0.25,
+          "julich_selected:label:48": 0.25,
+          "julich_selected:label:52": 0.25,
+          "julich_selected:label:50": 0.25,
+          "julich_selected:label:1049": 0.25,
+          "julich_selected:label:1052": 0.25,
+          "julich_selected:label:1050": 0.25
+        }
+      }
+    },
+    {
+      "id": "region-1052",
+      "title": "Right Area 3b (PostCG)",
+      "selected": "julich_selected:label:1052",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t1",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 3b (PostCG) - right hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:49": 0.25,
+          "julich_selected:label:48": 0.25,
+          "julich_selected:label:52": 0.25,
+          "julich_selected:label:50": 0.25,
+          "julich_selected:label:1049": 0.25,
+          "julich_selected:label:1048": 0.25,
+          "julich_selected:label:1050": 0.25
+        }
+      }
+    },
+    {
+      "id": "region-1050",
+      "title": "Right Area 1 (PostCG)",
+      "selected": "julich_selected:label:1050",
+      "visible": [
+        "julich_selected:label:49",
+        "julich_selected:label:48",
+        "julich_selected:label:52",
+        "julich_selected:label:50",
+        "julich_selected:label:1049",
+        "julich_selected:label:1048",
+        "julich_selected:label:1052",
+        "julich_selected:label:1050"
+      ],
+      "background": "t2",
+      "prompt": "Identify the source-labelled region and describe its spatial relationship to the other displayed source regions.",
+      "note": "Source maximum-probability assignment derived from postmortem cytoarchitectonic probability maps in the declared population reference. The original categorical assignment is preserved. Original source name: Area 1 (PostCG) - right hemisphere.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": true,
+        "surface_opacity": {
+          "julich_selected:label:49": 0.25,
+          "julich_selected:label:48": 0.25,
+          "julich_selected:label:52": 0.25,
+          "julich_selected:label:50": 0.25,
+          "julich_selected:label:1049": 0.25,
+          "julich_selected:label:1048": 0.25,
+          "julich_selected:label:1052": 0.25
+        }
+      }
+    }
+  ]
+}

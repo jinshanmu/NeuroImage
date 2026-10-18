@@ -1,0 +1,114 @@
+{
+  "status": "passed",
+  "package_version": "5540cfe690956d43",
+  "scenes": [
+    {
+      "title": "1. Orientation and one shared location",
+      "source_id": "spl_nac:label:11",
+      "actual_label_value": 11,
+      "position_ras_mm": [
+        -13,
+        13,
+        10
+      ],
+      "credited_export": "passed",
+      "rendered_scene_agreement": "passed"
+    },
+    {
+      "title": "2. Deep structures in MRI and 3D",
+      "source_id": "spl_nac:label:12",
+      "actual_label_value": 12,
+      "position_ras_mm": [
+        -24,
+        9,
+        0
+      ],
+      "credited_export": "passed",
+      "rendered_scene_agreement": "passed"
+    },
+    {
+      "title": "3. The represented ventricular spaces",
+      "source_id": "spl_nac:label:24",
+      "actual_label_value": 24,
+      "position_ras_mm": [
+        0,
+        -8,
+        -4
+      ],
+      "credited_export": "passed",
+      "rendered_scene_agreement": "passed"
+    },
+    {
+      "title": "4. Precentral and postcentral source regions",
+      "source_id": "spl_nac:label:1024",
+      "actual_label_value": 1024,
+      "position_ras_mm": [
+        -36,
+        -8,
+        34
+      ],
+      "credited_export": "passed",
+      "rendered_scene_agreement": "passed"
+    },
+    {
+      "title": "5. Brainstem context and a source-name conflict",
+      "source_id": "spl_nac:label:35",
+      "actual_label_value": 35,
+      "position_ras_mm": [
+        -1,
+        -13,
+        -39
+      ],
+      "credited_export": "passed",
+      "rendered_scene_agreement": "passed"
+    },
+    {
+      "title": "6. Cerebellar source unions and coverage",
+      "source_id": "spl_nac:group:60001",
+      "actual_label_value": 60001,
+      "position_ras_mm": [
+        -26,
+        -50,
+        -51
+      ],
+      "credited_export": "passed",
+      "rendered_scene_agreement": "passed"
+    }
+  ],
+  "expert_review": "not_performed",
+  "software_version": "0.3.2",
+  "renderer": {
+    "version": "0.3.2",
+    "build_sha256": "f2f20ed66e1d1239a9970dcddde804836b8df8265d83e0506e5f359eb3ac4c11",
+    "renderer": "NiiVue",
+    "renderer_version": "0.69.0",
+    "mesh_projection_in_2d": false,
+    "label_sampling": "nearest-neighbor",
+    "teaching_markers": {
+      "source": "user-authored RAS coordinates",
+      "slice_tolerance_mm": 0.05,
+      "three_dimensional": "projected-through-anatomy"
+    }
+  },
+  "recipe": "examples/spl-first-session.json",
+  "preparer": "scripts/prepare_teaching_notebook.py",
+  "preparation_source": "Independently unpacked 0.3.2 source helper and fresh installed wheel, with the preferred atlas reconstructed by that wheel",
+  "artifact_directory": "exports/spl_nac/notebooks/normal-anatomy-first-session-e757d967281f",
+  "notebook_sha256": "7dbeb09d6835ef3695396cd38d72f0481af84fce26b2d68c59b2c83572e4c28a",
+  "page_errors": [],
+  "external_requests": [],
+  "portable_reimport": "passed",
+  "visual_inspection": "All six anatomy canvases are pixel-identical to the previously inspected 0.3.2 example; source-target coordinates, full notes, credits and rendering policy retained. New package footer and complete Pons coverage limitation inspected.",
+  "anatomy_canvas_changed_pixels_from_prior_rendering": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "prior_package_version": "39ec9bf5fa77140d",
+  "review_status": "user-authored-unreviewed",
+  "prior_engineering_receipt_commit": "1095910",
+  "distribution": "Recipe, helper and guide included in source archive; generated notebook, captures and images stay under the local data root"
+}

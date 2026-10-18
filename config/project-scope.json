@@ -1,0 +1,44 @@
+{
+  "updated_on": "2026-10-13",
+  "phase": "Normal intracranial anatomy platform",
+  "objective": "An extensible, code-only 2D and 3D atlas platform for neurosurgical anatomy learning and teaching",
+  "included": [
+    "Normal intracranial anatomy",
+    "Normal anatomical variation",
+    "Image-to-anatomy correspondence",
+    "Spatial relationships",
+    "Lessons and quizzes"
+  ],
+  "temporarily_excluded": [
+    "Disease states",
+    "Lesion and tumor segmentation",
+    "Pathological deformation",
+    "Diagnostic and treatment workflows"
+  ],
+  "disease_cohort_acquisition": "Stopped for the current phase",
+  "deferred_by_user": [
+    "rhoton_selected"
+  ],
+  "dataset_policy": "Uniform adapter contracts and individual licenses; scope decisions do not define permission-based dataset classes",
+  "existing_files_policy": "Disease data were removed from project storage at user request; preserve user originals and other datasets",
+  "future_modules": "Normal-anatomy specialist expansion is authorized; disease support requires a later scope change and is not a current acceptance prerequisite.",
+  "removed_acquisitions_outside_current_scope": [
+    "tcia_cases",
+    "msd_brain_tumour"
+  ],
+  "active_specialist_modules": [
+    "Additional source white-matter bundles",
+    "Normal vascular anatomy",
+    "Cranial nerves",
+    "Cisternal teaching context",
+    "Skull-base anatomy context"
+  ],
+  "platform_acceptance": {
+    "current": "Linux",
+    "deferred_by_owner": [
+      "Windows",
+      "macOS"
+    ],
+    "instruction_date": "2026-10-13"
+  }
+}

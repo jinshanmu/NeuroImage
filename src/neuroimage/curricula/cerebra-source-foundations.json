@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0",
+  "id": "cerebra-source-foundations",
+  "dataset_id": "cerebra",
+  "required_source": {
+    "id": "cerebra",
+    "version": "2009c symmetric distribution; SHA256-pinned inputs"
+  },
+  "title": "CerebrA: cortical, deep and ventricular source regions",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Study original source definitions and spatial relationships in linked T1/T2 sections and three-dimensional views.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "region-86",
+      "title": "Left Precentral",
+      "selected": "cerebra:label:86",
+      "visible": [
+        "cerebra:label:86",
+        "cerebra:label:35",
+        "cerebra:label:64",
+        "cerebra:label:13"
+      ],
+      "background": "t1",
+      "prompt": "Locate Left Precentral in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:35": 0.25,
+          "cerebra:label:64": 0.25,
+          "cerebra:label:13": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    },
+    {
+      "id": "region-100",
+      "title": "Left Caudate",
+      "selected": "cerebra:label:100",
+      "visible": [
+        "cerebra:label:100",
+        "cerebra:label:49",
+        "cerebra:label:72",
+        "cerebra:label:21",
+        "cerebra:label:92",
+        "cerebra:label:41"
+      ],
+      "background": "t2",
+      "prompt": "Locate Left Caudate in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:49": 0.25,
+          "cerebra:label:72": 0.25,
+          "cerebra:label:21": 0.25,
+          "cerebra:label:92": 0.25,
+          "cerebra:label:41": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    },
+    {
+      "id": "region-72",
+      "title": "Left Putamen",
+      "selected": "cerebra:label:72",
+      "visible": [
+        "cerebra:label:72",
+        "cerebra:label:21",
+        "cerebra:label:78",
+        "cerebra:label:27",
+        "cerebra:label:91",
+        "cerebra:label:40"
+      ],
+      "background": "t1",
+      "prompt": "Locate Left Putamen in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:21": 0.25,
+          "cerebra:label:78": 0.25,
+          "cerebra:label:27": 0.25,
+          "cerebra:label:91": 0.25,
+          "cerebra:label:40": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    },
+    {
+      "id": "region-91",
+      "title": "Left Thalamus",
+      "selected": "cerebra:label:91",
+      "visible": [
+        "cerebra:label:91",
+        "cerebra:label:40",
+        "cerebra:label:92",
+        "cerebra:label:41"
+      ],
+      "background": "t2",
+      "prompt": "Locate Left Thalamus in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:40": 0.25,
+          "cerebra:label:92": 0.25,
+          "cerebra:label:41": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    },
+    {
+      "id": "region-92",
+      "title": "Left Lateral Ventricle",
+      "selected": "cerebra:label:92",
+      "visible": [
+        "cerebra:label:92",
+        "cerebra:label:41",
+        "cerebra:label:80",
+        "cerebra:label:29",
+        "cerebra:label:88",
+        "cerebra:label:37"
+      ],
+      "background": "t1",
+      "prompt": "Locate Left Lateral Ventricle in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:41": 0.25,
+          "cerebra:label:80": 0.25,
+          "cerebra:label:29": 0.25,
+          "cerebra:label:88": 0.25,
+          "cerebra:label:37": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    },
+    {
+      "id": "region-99",
+      "title": "Left Hippocampus",
+      "selected": "cerebra:label:99",
+      "visible": [
+        "cerebra:label:99",
+        "cerebra:label:48",
+        "cerebra:label:70",
+        "cerebra:label:19"
+      ],
+      "background": "t2",
+      "prompt": "Locate Left Hippocampus in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:48": 0.25,
+          "cerebra:label:70": 0.25,
+          "cerebra:label:19": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    },
+    {
+      "id": "region-62",
+      "title": "Left Brainstem",
+      "selected": "cerebra:label:62",
+      "visible": [
+        "cerebra:label:62",
+        "cerebra:label:11",
+        "cerebra:label:88",
+        "cerebra:label:37",
+        "cerebra:label:97",
+        "cerebra:label:46"
+      ],
+      "background": "t1",
+      "prompt": "Locate Left Brainstem in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:11": 0.25,
+          "cerebra:label:88": 0.25,
+          "cerebra:label:37": 0.25,
+          "cerebra:label:97": 0.25,
+          "cerebra:label:46": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    },
+    {
+      "id": "region-97",
+      "title": "Left Cerebellum Gray Matter",
+      "selected": "cerebra:label:97",
+      "visible": [
+        "cerebra:label:97",
+        "cerebra:label:46",
+        "cerebra:label:90",
+        "cerebra:label:39",
+        "cerebra:label:101",
+        "cerebra:label:50"
+      ],
+      "background": "t2",
+      "prompt": "Locate Left Cerebellum Gray Matter in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere.",
+      "note": "Retained source-defined categorical regions in the matching symmetric population reference. Left and right names follow the source inventory; read the paired source partitions together when discussing midline structures.",
+      "display": {
+        "layout": "quad",
+        "tile_layout": "auto",
+        "slice_zoom": 1,
+        "overlay": "labels",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "section_planes": [],
+        "show_3d_cursor": false,
+        "surface_opacity": {
+          "cerebra:label:46": 0.25,
+          "cerebra:label:90": 0.25,
+          "cerebra:label:39": 0.25,
+          "cerebra:label:101": 0.25,
+          "cerebra:label:50": 0.25
+        },
+        "focus_selected_3d": true
+      }
+    }
+  ]
+}

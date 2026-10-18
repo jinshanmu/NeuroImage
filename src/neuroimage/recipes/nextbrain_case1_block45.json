@@ -1,0 +1,362 @@
+{
+  "id": "nextbrain_case1_block45",
+  "adapter": "source-lut-nifti",
+  "representation": "mri-labels",
+  "version": "1",
+  "title": "NextBrain Case 1 \u00b7 Forebrain A1.3",
+  "nifti_units": "mm",
+  "units_evidence": "The author documents a 0.1 mm in-plane histology reconstruction and a nominal 0.4 mm MRI. Supplied NIfTI affines retain reconstructed block spacing and shear in the same case RAS frame; the original case MRI has millimeter units. Header comparison is recorded in the native geometry receipt.",
+  "space": {
+    "id": "nextbrain-case1-p57-16-native",
+    "name": "Case P57-16 native MRI and reconstructed block A1.3",
+    "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+    "correspondence": "Source reconstructed histological block A1.3 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+  },
+  "inputs": {
+    "t2": "raw/nextbrain_core/registered_browser/21b097d599fb/P57-16/mri.nii.gz",
+    "labels": "raw/nextbrain_core/registered_browser/21b097d599fb/P57-16/labels_blocks/45/LABELS.nii.gz",
+    "label_lut": "raw/nextbrain_core/3dAtlas/lut.freeview.txt",
+    "hierarchy": "literature/nextbrain-native-readiness/case-1-ontology.json",
+    "license": "licenses/nextbrain_core/official-terms.html"
+  },
+  "images": [
+    {
+      "id": "t2",
+      "name": "Case 1 source-processed ex vivo T2 MRI"
+    }
+  ],
+  "require_same_grid": false,
+  "require_full_label_inventory": true,
+  "construction_peak_gib": 3,
+  "sources": [
+    {
+      "id": "nextbrain_core",
+      "title": "NextBrain Case 1: P57-16",
+      "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+      "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+      "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+      "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_input": "license"
+    }
+  ],
+  "label_table": {
+    "format": "freesurfer-lut",
+    "input": "label_lut",
+    "hierarchy_input": "hierarchy",
+    "values": [
+      7,
+      50,
+      79,
+      99,
+      102,
+      103,
+      108,
+      111,
+      117,
+      118,
+      119,
+      120,
+      125,
+      128,
+      130,
+      147,
+      149,
+      150,
+      157,
+      160,
+      161,
+      174,
+      181,
+      184,
+      190,
+      191,
+      192,
+      193,
+      194,
+      196,
+      199,
+      201,
+      206,
+      207,
+      208,
+      209,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      232,
+      234,
+      238,
+      240,
+      242,
+      243,
+      244,
+      245,
+      246,
+      252,
+      253,
+      254,
+      255,
+      256,
+      268,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      282,
+      283,
+      284,
+      285,
+      286,
+      295,
+      297,
+      298,
+      301,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      312,
+      313,
+      314,
+      320,
+      326,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      349,
+      350,
+      354,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      377,
+      404,
+      405,
+      407,
+      408,
+      409,
+      410,
+      411,
+      418,
+      419,
+      420,
+      421,
+      510,
+      843,
+      2006,
+      2007,
+      2009,
+      2018,
+      2022,
+      2024,
+      2030,
+      2035
+    ],
+    "default_category": "Source regional anatomy",
+    "evidence": "Source histology delineation with author MRI-guided reconstruction, supplied as a categorical NIfTI block. Source methods combine manual work and computational processing, followed by author checking.",
+    "source_notes": [
+      "Case 1 P57-16; source block A1.3 (browser block 45). The source publication reports a right hemisphere and no incidental findings for this case.",
+      "Structures show their delivered extent within block A1.3. Block-edge surfaces mark the limits of this tissue sample.",
+      "Native source samples and affine geometry are retained. Surface display uses the categorical boundary at half-voxel level.",
+      "Label-specific side is explicit only where the original source name supplies it. Case hemisphere and regional laterality are recorded separately."
+    ]
+  },
+  "native_block": {
+    "case": "P57-16",
+    "case_number": 1,
+    "block_number": 45,
+    "block_name": "A1.3",
+    "source_commit": "21b097d599fbeae883119c768ff7897dd438d4d2",
+    "source_label_shape": [
+      611,
+      858,
+      39
+    ],
+    "source_label_affine_ras_mm": [
+      [
+        -0.04475810006260872,
+        0.08944746851921082,
+        -0.011711711063981056,
+        -27.67969512939453
+      ],
+      [
+        -0.030120886862277985,
+        -0.010665724985301495,
+        0.3516444265842438,
+        24.78896713256836
+      ],
+      [
+        -0.08411702513694763,
+        -0.043538182973861694,
+        -0.11531500518321991,
+        9.43646240234375
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "normal_scope_reference": "Publication Supplementary Table 1; case-level evidence in config/nextbrain-case-scope-2026-10-13.json",
+    "coordinate_policy": "Use the supplied 3D NIfTI affine. Browser PNG/NPZ orientation matrices and hierarchy navigation points are retained as separate source representations."
+  },
+  "acquisition": "Run neuroimage acquire nextbrain_case1_block45 --data-root <existing-data-root>. Reuse the common case MRI, original source LUT and license snapshot across block recipes.",
+  "archives": [
+    {
+      "dataset_id": "nextbrain_core",
+      "filename": "3dAtlas.zip",
+      "url": "https://ndownloader.figshare.com/files/42561616",
+      "bytes": 397039281,
+      "sha256": "feef33d5913b3931525a590ea389800a746551ea02083e94ca1b122eecff4283",
+      "format": "zip",
+      "members": [
+        {
+          "member": "3dAtlas/lut.freeview.txt",
+          "target": "raw/nextbrain_core/3dAtlas/lut.freeview.txt",
+          "bytes": 45434,
+          "sha256": "69bf36a0a72c27b96796503428bd3cc5fc5a94d23153d5f832c576ea710fd443"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "target": "raw/nextbrain_core/registered_browser/21b097d599fb/P57-16/mri.nii.gz",
+      "url": "https://raw.githubusercontent.com/UCL/NextBrain-Case-1/21b097d599fbeae883119c768ff7897dd438d4d2/P57-16/mri_rotated/mri.nii.gz",
+      "bytes": 6863123,
+      "sha256": "69594ce5f51b1b311e86c17d9a8ee31a1a05558eb1780322efce73e46f1a9814",
+      "git_blob_sha1": "516c76eed18fd01b8766ea4690d84f67c3c439de",
+      "hash_basis": "Publisher Git tree at the pinned source commit and local SHA256"
+    },
+    {
+      "target": "raw/nextbrain_core/registered_browser/21b097d599fb/P57-16/labels_blocks/45/LABELS.nii.gz",
+      "url": "https://raw.githubusercontent.com/UCL/NextBrain-Case-1/21b097d599fbeae883119c768ff7897dd438d4d2/P57-16/labels_blocks/45/LABELS.nii.gz",
+      "bytes": 782181,
+      "sha256": "9409ff53321442a8fd7e8f785470204cbfcd16813e8a68e7d5d707aa839048a2",
+      "git_blob_sha1": "ae1c7689013902c73d1110c2044c063963d25816",
+      "hash_basis": "Publisher Git tree at the pinned source commit and local SHA256"
+    },
+    {
+      "target": "literature/nextbrain-native-readiness/case-1-ontology.json",
+      "url": "https://raw.githubusercontent.com/UCL/NextBrain-Case-1/21b097d599fbeae883119c768ff7897dd438d4d2/P57-16/image_ontology_hierarchical.json",
+      "bytes": 168262,
+      "sha256": "d3c71a2316fb9e7ce2a85470a0c2506ee352fe0121824aac353c6a6774eace6b",
+      "git_blob_sha1": "6b4876cd3d0aa5192ec4c9a1be78657460930002",
+      "hash_basis": "Publisher Git tree at the pinned source commit and local SHA256"
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/nextbrain_core/official-terms.html",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "maximum_bytes": 1048576
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-NB45-01",
+      "title": "Preoptic and supraoptic regions",
+      "objective": "Identify source-defined preoptic and supraoptic regions within reconstructed block A1.3.",
+      "instruction": "Start with the whole tissue block and matching MRI context, then select each region and inspect its fine extent in all three image planes and the 3D view. Use adjacent sections to follow changes in the source assignment.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case1_block45:label:147",
+        "nextbrain_case1_block45:label:149",
+        "nextbrain_case1_block45:label:150",
+        "nextbrain_case1_block45:label:160",
+        "nextbrain_case1_block45:label:161",
+        "nextbrain_case1_block45:label:192",
+        "nextbrain_case1_block45:label:194",
+        "nextbrain_case1_block45:label:196"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB45-02",
+      "title": "Tuberal hypothalamic subdivisions",
+      "objective": "Identify source-defined tuberal hypothalamic subdivisions within reconstructed block A1.3.",
+      "instruction": "Start with the whole tissue block and matching MRI context, then select each region and inspect its fine extent in all three image planes and the 3D view. Use adjacent sections to follow changes in the source assignment.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case1_block45:label:228",
+        "nextbrain_case1_block45:label:229",
+        "nextbrain_case1_block45:label:230",
+        "nextbrain_case1_block45:label:243",
+        "nextbrain_case1_block45:label:244",
+        "nextbrain_case1_block45:label:245",
+        "nextbrain_case1_block45:label:255"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB45-03",
+      "title": "Septal and basal forebrain regions",
+      "objective": "Identify source-defined septal and basal forebrain regions within reconstructed block A1.3.",
+      "instruction": "Start with the whole tissue block and matching MRI context, then select each region and inspect its fine extent in all three image planes and the 3D view. Use adjacent sections to follow changes in the source assignment.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case1_block45:label:103",
+        "nextbrain_case1_block45:label:108",
+        "nextbrain_case1_block45:label:111",
+        "nextbrain_case1_block45:label:117",
+        "nextbrain_case1_block45:label:128",
+        "nextbrain_case1_block45:label:130",
+        "nextbrain_case1_block45:label:199"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB45-04",
+      "title": "Anterior amygdalar subdivisions",
+      "objective": "Identify source-defined anterior amygdalar subdivisions within reconstructed block A1.3.",
+      "instruction": "Start with the whole tissue block and matching MRI context, then select each region and inspect its fine extent in all three image planes and the 3D view. Use adjacent sections to follow changes in the source assignment.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case1_block45:label:214",
+        "nextbrain_case1_block45:label:215",
+        "nextbrain_case1_block45:label:216",
+        "nextbrain_case1_block45:label:217",
+        "nextbrain_case1_block45:label:238",
+        "nextbrain_case1_block45:label:277",
+        "nextbrain_case1_block45:label:278",
+        "nextbrain_case1_block45:label:279"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    }
+  ]
+}

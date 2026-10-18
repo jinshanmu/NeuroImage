@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "integrated-brainstem-cranial-anatomy",
+  "title": "Brainstem nuclei, root assignments and cranial-nerve context",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore supplied cranial-nerve components, auditory and vestibular nuclei, selected midbrain and pontine nuclei, and lower cranial nuclear relationships. Each recorded view retains its source definitions and independent native coordinate frame.",
+  "views": [
+    {
+      "id": "chapter-01-view-01",
+      "curriculum": "z-anatomy-petrous-neuroanatomy",
+      "view": "group-01-context",
+      "prompt": "Identify the source cochlear and petrous context. Rotate the complete model and name the visible nerve components recorded by this source."
+    },
+    {
+      "id": "chapter-01-view-02",
+      "curriculum": "z-anatomy-petrous-neuroanatomy",
+      "view": "group-01-detail",
+      "prompt": "Identify the source cochlear and petrous context. Rotate the complete model and name the visible nerve components recorded by this source."
+    },
+    {
+      "id": "chapter-02-view-01",
+      "curriculum": "z-anatomy-visual-auditory-pathways",
+      "view": "group-01-context",
+      "prompt": "Distinguish the separately supplied cochlear and vestibular model components and their surrounding source objects."
+    },
+    {
+      "id": "chapter-02-view-02",
+      "curriculum": "z-anatomy-visual-auditory-pathways",
+      "view": "group-01-detail",
+      "prompt": "Distinguish the separately supplied cochlear and vestibular model components and their surrounding source objects."
+    },
+    {
+      "id": "chapter-02-view-03",
+      "curriculum": "z-anatomy-visual-auditory-pathways",
+      "view": "group-02-context",
+      "prompt": "Distinguish the separately supplied cochlear and vestibular model components and their surrounding source objects."
+    },
+    {
+      "id": "chapter-02-view-04",
+      "curriculum": "z-anatomy-visual-auditory-pathways",
+      "view": "group-02-detail",
+      "prompt": "Distinguish the separately supplied cochlear and vestibular model components and their surrounding source objects."
+    },
+    {
+      "id": "chapter-03-view-01",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-01-context",
+      "prompt": "Read the reconstructed tissue-block identity. Locate the selected auditory, vestibular or lower cranial nuclear assignment in the source MRI and compare its immediate labelled neighbors."
+    },
+    {
+      "id": "chapter-03-view-02",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-01-detail",
+      "prompt": "Read the reconstructed tissue-block identity. Locate the selected auditory, vestibular or lower cranial nuclear assignment in the source MRI and compare its immediate labelled neighbors."
+    },
+    {
+      "id": "chapter-03-view-03",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-02-context",
+      "prompt": "Read the reconstructed tissue-block identity. Locate the selected auditory, vestibular or lower cranial nuclear assignment in the source MRI and compare its immediate labelled neighbors."
+    },
+    {
+      "id": "chapter-03-view-04",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-02-detail",
+      "prompt": "Read the reconstructed tissue-block identity. Locate the selected auditory, vestibular or lower cranial nuclear assignment in the source MRI and compare its immediate labelled neighbors."
+    },
+    {
+      "id": "chapter-03-view-05",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-04-context",
+      "prompt": "Read the reconstructed tissue-block identity. Locate the selected auditory, vestibular or lower cranial nuclear assignment in the source MRI and compare its immediate labelled neighbors."
+    },
+    {
+      "id": "chapter-03-view-06",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-04-detail",
+      "prompt": "Read the reconstructed tissue-block identity. Locate the selected auditory, vestibular or lower cranial nuclear assignment in the source MRI and compare its immediate labelled neighbors."
+    },
+    {
+      "id": "chapter-04-view-01",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-02-context",
+      "prompt": "Identify the source trigeminal, facial and abducens assignments within this pontine block. Use the full section and same-point detail to describe their local relationships."
+    },
+    {
+      "id": "chapter-04-view-02",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-02-detail",
+      "prompt": "Identify the source trigeminal, facial and abducens assignments within this pontine block. Use the full section and same-point detail to describe their local relationships."
+    },
+    {
+      "id": "chapter-04-view-03",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-03-context",
+      "prompt": "Identify the source trigeminal, facial and abducens assignments within this pontine block. Use the full section and same-point detail to describe their local relationships."
+    },
+    {
+      "id": "chapter-04-view-04",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-03-detail",
+      "prompt": "Identify the source trigeminal, facial and abducens assignments within this pontine block. Use the full section and same-point detail to describe their local relationships."
+    },
+    {
+      "id": "chapter-05-view-01",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-01-context",
+      "prompt": "Locate the source oculomotor or trochlear nuclear/root assignment. Describe the labelled neighboring structures and the extent delivered within this tissue block."
+    },
+    {
+      "id": "chapter-05-view-02",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-01-detail",
+      "prompt": "Locate the source oculomotor or trochlear nuclear/root assignment. Describe the labelled neighboring structures and the extent delivered within this tissue block."
+    },
+    {
+      "id": "chapter-05-view-03",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-02-context",
+      "prompt": "Locate the source oculomotor or trochlear nuclear/root assignment. Describe the labelled neighboring structures and the extent delivered within this tissue block."
+    },
+    {
+      "id": "chapter-05-view-04",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-02-detail",
+      "prompt": "Locate the source oculomotor or trochlear nuclear/root assignment. Describe the labelled neighboring structures and the extent delivered within this tissue block."
+    },
+    {
+      "id": "chapter-06-view-01",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-01-context",
+      "prompt": "Locate the supplied spinal accessory nuclear assignment and its caudal medullary neighbors in this separate original block."
+    },
+    {
+      "id": "chapter-06-view-02",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-01-detail",
+      "prompt": "Locate the supplied spinal accessory nuclear assignment and its caudal medullary neighbors in this separate original block."
+    },
+    {
+      "id": "chapter-07-view-01",
+      "curriculum": "brainstem-expanded-regions",
+      "view": "vestibular-olivary",
+      "prompt": "Compare this source probabilistic compartment with the earlier histology-defined blocks. Read its source terminology, image context and overlapping memberships before describing its extent."
+    },
+    {
+      "id": "chapter-07-view-02",
+      "curriculum": "brainstem-expanded-regions",
+      "view": "red-nucleus-subregions",
+      "prompt": "Compare this source probabilistic compartment with the earlier histology-defined blocks. Read its source terminology, image context and overlapping memberships before describing its extent."
+    }
+  ]
+}

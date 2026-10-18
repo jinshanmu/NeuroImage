@@ -1,0 +1,234 @@
+{
+  "id": "venat",
+  "version": "1",
+  "source_version": "10.6084/m9.figshare.7205960.v4",
+  "adapter": "native-nifti-scalars",
+  "representation": "scalar-fields",
+  "title": "VENAT \u00b7 native venous statistical fields",
+  "construction_peak_gib": 3,
+  "inputs": {
+    "partial_volume": "downloads/venat/VENAT_PartialVolume.nii.gz",
+    "partial_volume_std": "downloads/venat/VENAT_PartialVolume_std.nii.gz",
+    "density": "downloads/venat/VENAT_DensityMap.nii.gz",
+    "diameter": "downloads/venat/VENAT_diameter.nii.gz",
+    "diameter_std": "downloads/venat/VENAT_diameter_std.nii.gz",
+    "curvature": "downloads/venat/VENAT_curvature.nii.gz",
+    "curvature_std": "downloads/venat/VENAT_curvature_std.nii.gz",
+    "license": "licenses/venat/official-v4-record.json"
+  },
+  "images": [
+    {
+      "id": "partial_volume",
+      "name": "Venous partial volume \u00b7 mean",
+      "display_range": [
+        0,
+        0.3
+      ],
+      "scalar": {
+        "source_input": "partial_volume",
+        "metric": "Estimated venous partial volume",
+        "units": "fraction",
+        "statistic": "Population mean",
+        "interpretation": "A source-computed mean partial-volume field, not the probability of a named vessel or an individual segmentation.",
+        "derivation": "Repeated 7 T QSM vessel estimates were transformed and aggregated by the source authors. The project retains their original field.",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+        "valid_range": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "partial_volume_std",
+      "name": "Venous partial volume \u00b7 standard deviation",
+      "display_range": [
+        0,
+        0.15
+      ],
+      "scalar": {
+        "source_input": "partial_volume_std",
+        "metric": "Estimated venous partial volume",
+        "units": "fraction",
+        "statistic": "Population standard deviation",
+        "interpretation": "Spatial variability of the source estimates includes anatomy, measurement and source processing effects; it is not a named variant prevalence.",
+        "derivation": "Author-supplied standard deviation of venous partial-volume estimates in the supplied atlas grid.",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+        "valid_range": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "density",
+      "name": "Venous detection density",
+      "display_range": [
+        0,
+        0.5
+      ],
+      "scalar": {
+        "source_input": "density",
+        "metric": "Repeated venous detection",
+        "units": "fraction",
+        "statistic": "Population mean of repeated detection fractions",
+        "interpretation": "A source detection-frequency field, not direct lumen volume or the frequency of an anatomical variant.",
+        "derivation": "The authors binarized positive vessel probabilities, averaged repeated observations, retained detections at two or more time points, then averaged participant maps.",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+        "valid_range": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "diameter",
+      "name": "Estimated venous diameter \u00b7 mean",
+      "display_range": [
+        0,
+        2.6
+      ],
+      "scalar": {
+        "source_input": "diameter",
+        "metric": "Estimated vessel diameter",
+        "units": "mm",
+        "statistic": "Population mean on source skeleton",
+        "interpretation": "Source-computed diameter estimates on the supplied vascular skeleton; zeros outside that support are not zero-diameter vessels.",
+        "derivation": "Author estimates and native atlas skeleton support are retained. No new vessel fitting or centerline extraction is performed.",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+        "valid_range": null
+      }
+    },
+    {
+      "id": "diameter_std",
+      "name": "Estimated venous diameter \u00b7 standard deviation",
+      "display_range": [
+        0,
+        0.85
+      ],
+      "scalar": {
+        "source_input": "diameter_std",
+        "metric": "Estimated vessel diameter",
+        "units": "mm",
+        "statistic": "Population standard deviation on source skeleton",
+        "interpretation": "Source variability of diameter estimates on atlas support, not an uncertainty bound for an individual vessel.",
+        "derivation": "Author-supplied standard deviation on the supplied skeleton support.",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+        "valid_range": null
+      }
+    },
+    {
+      "id": "curvature",
+      "name": "Estimated venous curvature \u00b7 mean",
+      "display_range": [
+        0,
+        0.26
+      ],
+      "scalar": {
+        "source_input": "curvature",
+        "metric": "Estimated centerline curvature",
+        "units": "1/mm",
+        "statistic": "Population mean on source skeleton",
+        "interpretation": "Source-computed curvature of skeleton estimates; not direct observation of a named branch boundary.",
+        "derivation": "Author-supplied curvature estimates and source skeleton support are retained without project smoothing.",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+        "valid_range": null
+      }
+    },
+    {
+      "id": "curvature_std",
+      "name": "Estimated venous curvature \u00b7 standard deviation",
+      "display_range": [
+        0,
+        0.19
+      ],
+      "scalar": {
+        "source_input": "curvature_std",
+        "metric": "Estimated centerline curvature",
+        "units": "1/mm",
+        "statistic": "Population standard deviation on source skeleton",
+        "interpretation": "Variability of source curvature estimates; zeros outside skeleton support carry no individual anatomical interpretation.",
+        "derivation": "Author-supplied standard deviation on the supplied skeleton support.",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+        "valid_range": null
+      }
+    }
+  ],
+  "space": {
+    "id": "venat-v4-source-grid",
+    "name": "VENAT v4 native atlas grid",
+    "reference": "Original NIfTI qform, code 1, millimeter units. The publisher describes MNI152 atlas space.",
+    "correspondence": "Seven fields share the exact supplied grid. No reference MRI accompanies this release. A shared MNI name does not validate overlay with another dataset; cross-source browsing remains independent."
+  },
+  "sources": [
+    {
+      "id": "venat",
+      "title": "VENAT \u00b7 twenty healthy participants with repeated 7 T QSM",
+      "version": "10.6084/m9.figshare.7205960.v4",
+      "url": "https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4",
+      "citation": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "scope_notes": [
+    "The original source describes twenty healthy young adults. These population estimates cannot establish an individual venous branch identity or named normal-variant prevalence.",
+    "The authors excluded deep gray matter from venous estimation because of confounding susceptibility. Mask erosion also limits superficial sinus coverage. Absence of signal is not evidence of absent anatomy.",
+    "All source NIfTI bytes, native grid, units and field values are retained. Display contrast and 3D intensity rendering do not create segmented boundaries.",
+    "Diameter and curvature apply to the supplied source skeleton support. Background zeros do not describe zero diameter or curvature of individual vessels.",
+    "Two acquired torsion files are retained in source storage but omitted from browsing until their interpretation and units are reconciled with the final publication."
+  ],
+  "acquisition": "Run neuroimage acquire venat --data-root <data-root>. Existing verified source files are reused without extraction.",
+  "archives": [],
+  "files": [
+    {
+      "target": "downloads/venat/VENAT_PartialVolume.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/13267316",
+      "bytes": 77294676,
+      "sha256": "af222f62aa94a1bfd873e2822fce0daf472ed632f2c9957b45ad26069be86c35"
+    },
+    {
+      "target": "downloads/venat/VENAT_PartialVolume_std.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/13267319",
+      "bytes": 77190182,
+      "sha256": "1ecf4da105657e906d899055729b5d72024442613383f6b95021bd57ad7e1141"
+    },
+    {
+      "target": "downloads/venat/VENAT_DensityMap.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/15347951",
+      "bytes": 10376335,
+      "sha256": "28909a8d2fee8946dca50bddd01d1bba5aec9c3ccd69dc61d38574d77707fd0b"
+    },
+    {
+      "target": "downloads/venat/VENAT_diameter.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/13267301",
+      "bytes": 314223,
+      "sha256": "deabc6211777fd8d6e0dfc69321a26ea1ae29adf1c3d3a97772e4ea33f56e978"
+    },
+    {
+      "target": "downloads/venat/VENAT_diameter_std.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/13267307",
+      "bytes": 315377,
+      "sha256": "c7277c5fb6634d32dfece3b04ef7aba18b5d4b261890ea10bc79e10a7846aa52"
+    },
+    {
+      "target": "downloads/venat/VENAT_curvature.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/13267295",
+      "bytes": 313408,
+      "sha256": "49543f5f99fe4e8f512c2f8c0d0732051996269023377e28a0c53422f7a14367"
+    },
+    {
+      "target": "downloads/venat/VENAT_curvature_std.nii.gz",
+      "url": "https://ndownloader.figshare.com/files/13267298",
+      "bytes": 314494,
+      "sha256": "9a4124d1ef79b925cdb4ae8e9d4442514b58cd3692ecffa5b458efe38065196d"
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/venat/official-v4-record.json",
+      "url": "https://api.figshare.com/v2/articles/7205960/versions/4",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

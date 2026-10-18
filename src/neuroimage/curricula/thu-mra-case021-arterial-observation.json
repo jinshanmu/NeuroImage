@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.0",
+  "id": "thu-mra-case021-arterial-observation",
+  "dataset_id": "thu_mra_case021",
+  "required_source": {
+    "id": "thu_cerebral_mra",
+    "version": "Official preprocessed archive; SHA256 fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e; retrieved 2026-10-14"
+  },
+  "title": "Cerebral MRA case 021 \u00b7 arterial observation",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Inspect the original MRA and source segment geometry. Describe numeric segment identity, spatial course and case-specific annotation coverage.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "group-01-context",
+      "title": "Anterior cerebral and communicating region \u00b7 MRA context",
+      "selected": "thu_mra_case021:label:1",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Compare the paired anterior cerebral courses and their communicating region on the source MRA.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    },
+    {
+      "id": "group-01-detail",
+      "title": "Anterior cerebral and communicating region \u00b7 source detail",
+      "selected": "thu_mra_case021:label:1",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Compare the paired anterior cerebral courses and their communicating region on the source MRA.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 2.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    },
+    {
+      "id": "group-02-context",
+      "title": "Middle cerebral origins \u00b7 MRA context",
+      "selected": "thu_mra_case021:label:3",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Follow the lateral M1 courses from the terminal internal carotid region in the source image.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    },
+    {
+      "id": "group-02-detail",
+      "title": "Middle cerebral origins \u00b7 source detail",
+      "selected": "thu_mra_case021:label:3",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Follow the lateral M1 courses from the terminal internal carotid region in the source image.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 2.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    },
+    {
+      "id": "group-03-context",
+      "title": "Posterior communicating and cerebral region \u00b7 MRA context",
+      "selected": "thu_mra_case021:label:8",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Compare posterior communicating courses, P1 and P2A assignments with the basilar termination.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    },
+    {
+      "id": "group-03-detail",
+      "title": "Posterior communicating and cerebral region \u00b7 source detail",
+      "selected": "thu_mra_case021:label:8",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Compare posterior communicating courses, P1 and P2A assignments with the basilar termination.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 2.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    },
+    {
+      "id": "group-04-context",
+      "title": "Carotid segment sequence \u00b7 MRA context",
+      "selected": "thu_mra_case021:label:19",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Trace the source C5, C6 and C7 assignments using adjacent MRA sections and the retained categorical interfaces.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    },
+    {
+      "id": "group-04-detail",
+      "title": "Carotid segment sequence \u00b7 source detail",
+      "selected": "thu_mra_case021:label:19",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:3",
+        "thu_mra_case021:label:4",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16",
+        "thu_mra_case021:label:17",
+        "thu_mra_case021:label:18",
+        "thu_mra_case021:label:19",
+        "thu_mra_case021:label:20"
+      ],
+      "background": "mra",
+      "prompt": "Trace the source C5, C6 and C7 assignments using adjacent MRA sections and the retained categorical interfaces.",
+      "note": "Healthy-volunteer case 021. Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record. Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here. The complete delivered arterial context is shown from below, anterior toward the top and source right on the left. Section window: 0.5 to 11 in original source intensity units.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          1.15
+        ],
+        "slice_zoom": 2.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.16
+      }
+    }
+  ]
+}

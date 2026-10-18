@@ -1,0 +1,411 @@
+{
+  "schema_version": "1.0",
+  "id": "nextbrain-case2-block07-fine-anatomy",
+  "dataset_id": "nextbrain_case2_block07",
+  "required_source": {
+    "id": "nextbrain_core",
+    "version": "Case 2; Git 9c29e15e2eef6db902296f53de636d57fc5aa6a1"
+  },
+  "title": "NextBrain Case 2 \u00b7 B1.1 brainstem fine anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore the source-defined midbrain nuclei and pathways in their reconstructed tissue block and matching ex vivo MRI. Compare whole-section orientation with a magnified view of the same physical target.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "group-01-context",
+      "title": "Oculomotor nuclear and root context \u00b7 MRI context",
+      "selected": "nextbrain_case2_block07:label:464",
+      "visible": [
+        "nextbrain_case2_block07:label:464",
+        "nextbrain_case2_block07:label:447",
+        "nextbrain_case2_block07:label:386",
+        "nextbrain_case2_block07:label:465"
+      ],
+      "background": "t2",
+      "prompt": "Compare the source oculomotor nucleus, accessory nucleus and root assignments with the periaqueductal region.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 464: oculomotor_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:447": 0.3,
+          "nextbrain_case2_block07:label:386": 0.3,
+          "nextbrain_case2_block07:label:465": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-01-detail",
+      "title": "Oculomotor nuclear and root context \u00b7 fine view",
+      "selected": "nextbrain_case2_block07:label:464",
+      "visible": [
+        "nextbrain_case2_block07:label:464",
+        "nextbrain_case2_block07:label:447",
+        "nextbrain_case2_block07:label:386",
+        "nextbrain_case2_block07:label:465"
+      ],
+      "background": "t2",
+      "prompt": "Compare the source oculomotor nucleus, accessory nucleus and root assignments with the periaqueductal region.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 464: oculomotor_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:447": 0.3,
+          "nextbrain_case2_block07:label:386": 0.3,
+          "nextbrain_case2_block07:label:465": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-02-context",
+      "title": "Trochlear nucleus and fibre crossing \u00b7 MRI context",
+      "selected": "nextbrain_case2_block07:label:842",
+      "visible": [
+        "nextbrain_case2_block07:label:520",
+        "nextbrain_case2_block07:label:535",
+        "nextbrain_case2_block07:label:842",
+        "nextbrain_case2_block07:label:465"
+      ],
+      "background": "t2",
+      "prompt": "Follow the source trochlear nucleus, root and explicitly labelled fibre decussation through adjacent sections.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 842: decussation_of_trochlear_nerve_fibres. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:520": 0.3,
+          "nextbrain_case2_block07:label:535": 0.3,
+          "nextbrain_case2_block07:label:465": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-02-detail",
+      "title": "Trochlear nucleus and fibre crossing \u00b7 fine view",
+      "selected": "nextbrain_case2_block07:label:842",
+      "visible": [
+        "nextbrain_case2_block07:label:520",
+        "nextbrain_case2_block07:label:535",
+        "nextbrain_case2_block07:label:842",
+        "nextbrain_case2_block07:label:465"
+      ],
+      "background": "t2",
+      "prompt": "Follow the source trochlear nucleus, root and explicitly labelled fibre decussation through adjacent sections.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 842: decussation_of_trochlear_nerve_fibres. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:520": 0.3,
+          "nextbrain_case2_block07:label:535": 0.3,
+          "nextbrain_case2_block07:label:465": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-03-context",
+      "title": "Nigral subdivisions and red nucleus \u00b7 MRI context",
+      "selected": "nextbrain_case2_block07:label:352",
+      "visible": [
+        "nextbrain_case2_block07:label:310",
+        "nextbrain_case2_block07:label:352",
+        "nextbrain_case2_block07:label:385",
+        "nextbrain_case2_block07:label:779"
+      ],
+      "background": "t2",
+      "prompt": "Distinguish the source compact and reticular nigral assignments and compare their position with the red nucleus and corticospinal tract.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 352: substantia_nigra__compact_part. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:310": 0.3,
+          "nextbrain_case2_block07:label:385": 0.3,
+          "nextbrain_case2_block07:label:779": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-03-detail",
+      "title": "Nigral subdivisions and red nucleus \u00b7 fine view",
+      "selected": "nextbrain_case2_block07:label:352",
+      "visible": [
+        "nextbrain_case2_block07:label:310",
+        "nextbrain_case2_block07:label:352",
+        "nextbrain_case2_block07:label:385",
+        "nextbrain_case2_block07:label:779"
+      ],
+      "background": "t2",
+      "prompt": "Distinguish the source compact and reticular nigral assignments and compare their position with the red nucleus and corticospinal tract.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 352: substantia_nigra__compact_part. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:310": 0.3,
+          "nextbrain_case2_block07:label:385": 0.3,
+          "nextbrain_case2_block07:label:779": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-04-context",
+      "title": "Collicular and lemniscal relations \u00b7 MRI context",
+      "selected": "nextbrain_case2_block07:label:541",
+      "visible": [
+        "nextbrain_case2_block07:label:507",
+        "nextbrain_case2_block07:label:541",
+        "nextbrain_case2_block07:label:525",
+        "nextbrain_case2_block07:label:526",
+        "nextbrain_case2_block07:label:515",
+        "nextbrain_case2_block07:label:598"
+      ],
+      "background": "t2",
+      "prompt": "Compare the source inferior-collicular nucleus, collicular brachia and lateral lemniscal assignments.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 541: central_nucleus_of_inferior_colliculus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:507": 0.3,
+          "nextbrain_case2_block07:label:525": 0.3,
+          "nextbrain_case2_block07:label:526": 0.3,
+          "nextbrain_case2_block07:label:515": 0.3,
+          "nextbrain_case2_block07:label:598": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-04-detail",
+      "title": "Collicular and lemniscal relations \u00b7 fine view",
+      "selected": "nextbrain_case2_block07:label:541",
+      "visible": [
+        "nextbrain_case2_block07:label:507",
+        "nextbrain_case2_block07:label:541",
+        "nextbrain_case2_block07:label:525",
+        "nextbrain_case2_block07:label:526",
+        "nextbrain_case2_block07:label:515",
+        "nextbrain_case2_block07:label:598"
+      ],
+      "background": "t2",
+      "prompt": "Compare the source inferior-collicular nucleus, collicular brachia and lateral lemniscal assignments.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 541: central_nucleus_of_inferior_colliculus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:507": 0.3,
+          "nextbrain_case2_block07:label:525": 0.3,
+          "nextbrain_case2_block07:label:526": 0.3,
+          "nextbrain_case2_block07:label:515": 0.3,
+          "nextbrain_case2_block07:label:598": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-05-context",
+      "title": "Superior cerebellar peduncle crossing \u00b7 MRI context",
+      "selected": "nextbrain_case2_block07:label:471",
+      "visible": [
+        "nextbrain_case2_block07:label:471",
+        "nextbrain_case2_block07:label:531",
+        "nextbrain_case2_block07:label:403",
+        "nextbrain_case2_block07:label:528"
+      ],
+      "background": "t2",
+      "prompt": "Locate the source-defined superior cerebellar peduncle decussation and compare neighboring cerebellothalamic and longitudinal assignments.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 471: decussation_of_superior_cerebellar_peduncle. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:531": 0.3,
+          "nextbrain_case2_block07:label:403": 0.3,
+          "nextbrain_case2_block07:label:528": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-05-detail",
+      "title": "Superior cerebellar peduncle crossing \u00b7 fine view",
+      "selected": "nextbrain_case2_block07:label:471",
+      "visible": [
+        "nextbrain_case2_block07:label:471",
+        "nextbrain_case2_block07:label:531",
+        "nextbrain_case2_block07:label:403",
+        "nextbrain_case2_block07:label:528"
+      ],
+      "background": "t2",
+      "prompt": "Locate the source-defined superior cerebellar peduncle decussation and compare neighboring cerebellothalamic and longitudinal assignments.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 471: decussation_of_superior_cerebellar_peduncle. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:531": 0.3,
+          "nextbrain_case2_block07:label:403": 0.3,
+          "nextbrain_case2_block07:label:528": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-06-context",
+      "title": "Descending cerebral peduncular pathways \u00b7 MRI context",
+      "selected": "nextbrain_case2_block07:label:828",
+      "visible": [
+        "nextbrain_case2_block07:label:779",
+        "nextbrain_case2_block07:label:827",
+        "nextbrain_case2_block07:label:828",
+        "nextbrain_case2_block07:label:829",
+        "nextbrain_case2_block07:label:310"
+      ],
+      "background": "t2",
+      "prompt": "Compare the source corticospinal, corticonuclear and pontine-projecting tract assignments within this tissue block.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 828: corticonuclear_tract. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:779": 0.3,
+          "nextbrain_case2_block07:label:827": 0.3,
+          "nextbrain_case2_block07:label:829": 0.3,
+          "nextbrain_case2_block07:label:310": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-06-detail",
+      "title": "Descending cerebral peduncular pathways \u00b7 fine view",
+      "selected": "nextbrain_case2_block07:label:828",
+      "visible": [
+        "nextbrain_case2_block07:label:779",
+        "nextbrain_case2_block07:label:827",
+        "nextbrain_case2_block07:label:828",
+        "nextbrain_case2_block07:label:829",
+        "nextbrain_case2_block07:label:310"
+      ],
+      "background": "t2",
+      "prompt": "Compare the source corticospinal, corticonuclear and pontine-projecting tract assignments within this tissue block.",
+      "note": "Source case P41-16; tissue block B1.1. Selected source label 828: corticonuclear_tract. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block07:label:779": 0.3,
+          "nextbrain_case2_block07:label:827": 0.3,
+          "nextbrain_case2_block07:label:829": 0.3,
+          "nextbrain_case2_block07:label:310": 0.3
+        }
+      }
+    }
+  ]
+}

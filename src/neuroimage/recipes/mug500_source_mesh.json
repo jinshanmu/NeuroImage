@@ -1,0 +1,105 @@
+{
+  "id": "mug500_source_mesh",
+  "adapter": "stl-source-surfaces",
+  "version": "1",
+  "title": "MUG500+ \u00b7 author-cleaned A0101 skull",
+  "representation": "surface-model",
+  "construction_peak_gib": 3,
+  "source_to_mm": 1.0,
+  "mesh_geometry_stage": "base",
+  "source_version": "10.6084/m9.figshare.9616319.v20/A0101/A0101_clear.stl",
+  "inputs": {
+    "stl": "raw/mug500_healthy/A0101_clear.stl",
+    "license": "licenses/mug500_healthy/official-record-v20.json"
+  },
+  "space": {
+    "id": "mug500-a0101-source-stl",
+    "name": "Original MUG500+ A0101 author-cleaned mesh coordinates",
+    "coordinate_system": "SOURCE_XYZ",
+    "units": "mm",
+    "axis_status": "source_axes_not_anatomically_verified",
+    "reference": "Original A0101_clear.stl facet coordinates from the pinned healthy A0101 archive; no project transform other than identity metric scaling.",
+    "correspondence": "Author-cleaned source surface. Original CT intensities are absent; no cross-source MRI alignment or newly rasterized segmentation is asserted. Original noisy binary sections remain a separate source package.",
+    "unit_basis": "The primary Methods describe STL surfaces extracted from the corresponding original segmentation in millimeter sampling. Same-case original STL declares SPACE=RAS; direct source-mesh coordinate comparison is retained in config/mug500-source-mesh-verification.json. The independent viewer does not assign anatomical axis labels."
+  },
+  "sources": [
+    {
+      "id": "mug500_healthy",
+      "title": "MUG500+ healthy skull A0101",
+      "version": "10.6084/m9.figshare.9616319.v20",
+      "url": "https://figshare.com/articles/dataset/MUG500_Repository/9616319/20",
+      "citation": "Li J et al. MUG500+: Database of 500 high-resolution healthy human skulls and 29 craniotomy skulls and implants. Data in Brief 39:107524 (2021). doi:10.1016/j.dib.2021.107524. Only healthy skull A0101 is used. Dataset doi:10.6084/m9.figshare.9616319.v20.",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "model_evidence": "Original author-cleaned skull surface from the source-designated healthy A0101 segmentation. Source authors removed most noise, artifacts and non-skull structures; no project cleanup is applied.",
+  "model_notes": [
+    "The primary paper distinguishes Axxxx_clear.stl from the original noisier Axxxx.stl and binary NRRD; these representations are not interchangeable.",
+    "The project preserves every supplied clear-STL triangle coordinate and winding. Exact duplicate vertices are indexed without tolerance; no smoothing, hole filling, component deletion, decimation or anatomical registration is performed.",
+    "Source cleanup can remove structures and alter surface completeness. Fine foramina, thin walls, anatomical normal variants and original CT correspondence require separate evidence and review.",
+    "The rejected MUG-20261013-01 image pair concerns the original noisy binary-mask package. This distinct surface needs its own assessment."
+  ],
+  "scope_notes": [
+    "Independent source-cleaned 3D mesh; no original CT image, new 2D mask, named bone or foraminal segmentation.",
+    "Source geometry and authorship are preserved; engineering validation does not establish anatomical teaching suitability."
+  ],
+  "objects": [
+    {
+      "id": "mug500_source_mesh:object:a0101-clear",
+      "input": "stl",
+      "source_name": "A0101_clear.stl",
+      "name": "A0101 author-cleaned skull",
+      "source_type": "MESH",
+      "category": "Skull-base source context",
+      "laterality": "unspecified",
+      "color": [
+        232,
+        214,
+        178
+      ]
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-SKM001",
+      "title": "Author-cleaned whole-skull context",
+      "objective": "Explore the original author-cleaned skull surface with explicit source-processing limits.",
+      "instruction": "Rotate the complete skull, inspect the internal surface with clipping, and compare source processing with the separate original binary-mask package. This is a source surface without original CT intensity.",
+      "evidence_limit": "No named bone or foraminal boundaries; no new normal-variant labels. Author cleanup is distinguished from project processing and requires separate teaching assessment.",
+      "structure_ids": [
+        "mug500_source_mesh:object:a0101-clear"
+      ],
+      "step_prompt": "Inspect the supplied cleaned surface and identify where interpretation would require original CT or explicit anatomical labels.",
+      "step_question": "Which aspects of this view are supplied source geometry, and which anatomical conclusions remain unsupported?"
+    }
+  ],
+  "acquisition": "Reuse the existing pinned A0101-A0105 archive. Extract only the author-supplied A0101_clear.stl; retain original NRRD and rejected review images unchanged.",
+  "archives": [
+    {
+      "dataset_id": "mug500_healthy",
+      "filename": "A0101-A0105.zip",
+      "format": "zip",
+      "url": "https://ndownloader.figshare.com/files/32386211",
+      "bytes": 964272652,
+      "sha256": "26cc84334568fd3ce12504d272e8f8008e7c20efbac581420a69e75d80ca8c62",
+      "hash_basis": "Local SHA256 of official archive verified against publisher MD5 58a27a52d5d8233ee6a76990e6e90f22",
+      "members": [
+        {
+          "member": "A0101-A0105/A0101/A0101_clear.stl",
+          "target": "raw/mug500_healthy/A0101_clear.stl",
+          "bytes": 90265284,
+          "sha256": "3c0b3ffc7f9b5306ba83ca5503a8b4b7034599476799d0541743b4b2f8913f42"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/mug500_healthy/official-record-v20.json",
+      "url": "https://api.figshare.com/v2/articles/9616319/versions/20",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

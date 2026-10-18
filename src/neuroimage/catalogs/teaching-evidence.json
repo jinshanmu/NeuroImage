@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "language": "en",
+  "topics": [
+    {
+      "id": "cisternal-boundaries",
+      "title": "Cisternal regions and arachnoid membranes",
+      "source_ids": [
+        "spl_nac",
+        "mida",
+        "z_anatomy"
+      ],
+      "observation": "Use complete source sections and surrounding brainstem, nerve or vessel context to describe a CSF region. A regional teaching marker locates a discussion point; it does not trace a compartment boundary. Independent source models have no established MRI correspondence.",
+      "limit": "None of these local packages supplies named arachnoid membrane surfaces. A general CSF class, dural sheet, image intensity edge or display cutaway cannot substitute for one. The primary cadaveric study below describes membrane and cistern relationships; its observations are not transferred into this image as geometry.",
+      "question": "Does a visible CSF space or a nearby dural surface establish the position and completeness of a named arachnoid membrane?",
+      "answer": "No. Record the observed region and its image contrast, then distinguish the anatomical interpretation. A membrane boundary needs direct source evidence and a documented correspondence to the displayed anatomy.",
+      "references": [
+        {
+          "title": "Lü and Zhu: Cranial arachnoid membranes (2007)",
+          "url": "https://doi.org/10.1002/ca.20448",
+          "basis": "Primary microscopic study of eight adult cadaveric brains; publication abstract inspected. No figures or membrane geometry incorporated."
+        }
+      ]
+    },
+    {
+      "id": "normal-variation-evidence",
+      "title": "Observing normal variation",
+      "source_ids": [
+        "*"
+      ],
+      "observation": "Compare normal-source examples in their independent native spaces. Describe the visible feature, side, acquisition and coverage before proposing a variant name. Save complete sections and the same-point magnification with the original source identity.",
+      "limit": "Healthy-source selection does not validate every apparent difference as a named normal variant. Statistical occurrence, an educational model and one participant image answer different questions. No newly acquired example in this increment has a confirmed individual variant label.",
+      "question": "Can a low value in a population vessel map, or a vessel not visible in one image, establish that an individual artery is absent?",
+      "answer": "No. Source acquisition, inclusion criteria, processing and visibility affect the observation. Keep a candidate finding descriptive until source evidence supports the individual variant. An atlas probability is not the prevalence of that variant.",
+      "references": [
+        {
+          "title": "Dunås et al.: Major cerebral artery atlas (2017)",
+          "url": "https://doi.org/10.1007/s12021-016-9320-y",
+          "basis": "Primary normal-cohort atlas methods. UBA167 files were acquired separately; unnamed stored channels are not presented as verified artery labels."
+        }
+      ]
+    },
+    {
+      "id": "cranial-nerve-extents",
+      "title": "Cranial nerve names and supplied extents",
+      "source_ids": [
+        "mida",
+        "hcp1065_tracts",
+        "z_anatomy"
+      ],
+      "observation": "Follow the actual source name and visible extent. Z-Anatomy supplies paired nerve objects and separately named trigeminal root objects; MIDA classes and HCP computed trajectories use different definitions. Compare these representations independently.",
+      "limit": "An unpartitioned nerve is not a complete set of cisternal, foraminal and extracranial segments. A tractography trajectory does not establish the entire nerve course. The project has not divided source objects at inferred transitions.",
+      "question": "Does selecting a named nerve object identify every anatomical segment along its course?",
+      "answer": "Only the source-defined object and extent are identified. Use separately supplied root or segment labels when available; record other segment boundaries as unresolved rather than creating them from an arbitrary cut.",
+      "references": [
+        {
+          "title": "Z-Anatomy: pinned model source and attribution",
+          "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy/tree/9de5d6912a1b0df9cab739d57f00e036b0496ddc",
+          "basis": "Original object names and geometry; complete upstream attribution accompanies the local package."
+        }
+      ]
+    },
+    {
+      "id": "skull-openings",
+      "title": "Skull openings and source resolution",
+      "source_ids": [
+        "mida",
+        "mug500_healthy",
+        "z_anatomy"
+      ],
+      "observation": "Rotate a source bone model or inspect the healthy-skull mask in complete sections before enlarging an apparent opening. The MUG500+ A0101 package preserves the original binary mask and every supplied foreground component.",
+      "limit": "The mask has no original CT intensities or named foramen labels. Stored 0.75 mm axial spacing differs from the publication's 1.5 mm cohort slice thickness. Thresholding, sampling and source model simplification can affect small openings; no closure, enlargement or normal variant is inferred.",
+      "question": "Is a small hole missing from a binary mask sufficient evidence that the anatomical foramen is absent?",
+      "answer": "No. Inspect neighboring original sections and source resolution. A named foramen or variant requires its own anatomical evidence; display clipping and background artifacts do not create valid labels.",
+      "references": [
+        {
+          "title": "Li et al.: MUG500+ source dataset (2021)",
+          "url": "https://doi.org/10.1016/j.dib.2021.107524",
+          "basis": "Only the publisher-designated healthy A0101 mask is used. Defective skulls and implants are excluded."
+        }
+      ]
+    },
+    {
+      "id": "vascular-representations",
+      "title": "Branch models, image signal and population fields",
+      "source_ids": [
+        "z_anatomy",
+        "venat",
+        "mesoveins",
+        "mouches_arteries",
+        "ixi_mra"
+      ],
+      "observation": "Named model branches support source-defined spatial context. Native angiographic or susceptibility-sensitive images retain measured signal. VENAT fields retain their original statistic and units. Use the displayed source description to distinguish these forms of evidence.",
+      "limit": "A source model is not an individual angiogram or measured lumen. A dark image feature is not automatically a segmented vein. VENAT's processed normal-cohort fields do not supply named cortical or deep venous branch labels, and its density is not a normal-variant frequency.",
+      "question": "What additional evidence is needed to name a venous branch seen near a high population-map value?",
+      "answer": "A branch definition and an established correspondence to the displayed image or source model are needed. A nearby statistical value alone supplies neither identity nor individual continuity.",
+      "references": [
+        {
+          "title": "Huck et al.: Venous brain vasculature atlas (2019)",
+          "url": "https://doi.org/10.1007/s00429-019-01919-4",
+          "basis": "Primary VENAT construction and field definitions."
+        },
+        {
+          "title": "Gulban et al.: Whole-brain meso-vein imaging (2026)",
+          "url": "https://doi.org/10.1126/sciadv.aea4540",
+          "basis": "Primary normal-participant imaging study; this package selects one original source run and frame."
+        }
+      ]
+    },
+    {
+      "id": "reconstructed-image-grid",
+      "title": "Image grid and anatomical detail",
+      "source_ids": [
+        "hba_native",
+        "mesoveins"
+      ],
+      "observation": "Use the native image's stored coordinates and unchanged voxel values. HBA T2 is the source authors' skull-stripped, averaged, ACPC-oriented reconstruction. Meso-vein MRI retains an original run and one exactly selected stored frame.",
+      "limit": "The delivered HBA 0.25 mm grid is not the original acquisition spacing. Magnification increases display size without adding anatomy. Similar template or participant naming does not establish a transform to a separately acquired image. Source masking may remove extra-axial signal; a zero background or mask edge is a processing boundary, not absent anatomy.",
+      "question": "Does a smaller voxel grid or enlarged display prove a newly visible membrane or nerve boundary?",
+      "answer": "No. Check acquisition, source processing and contrast, then inspect adjacent sections. Record an interpretation separately from direct image signal and supplied labels.",
+      "references": [
+        {
+          "title": "Schira et al.: HumanBrainAtlas (2023)",
+          "url": "https://doi.org/10.1007/s00429-023-02653-8",
+          "basis": "Primary healthy-participant acquisition, averaging and reconstruction methods."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "recorded_utc": "2026-10-14T12:25:14.275983+00:00",
+  "status": "passed",
+  "manifest": "derivatives/z_anatomy/ea4ae67d89ec388a/manifest.json",
+  "manifest_sha256": "abd2fc4b35a96af5038a4c15a96c6dbcbea4ede874d50278e5af4c65b89d0b44",
+  "source_objects": 213,
+  "new_objects": 56,
+  "original_geometry_and_topology_exact": true,
+  "maximum_source_transform_difference_mm": 7.45023808121914e-05,
+  "geometry_receipt": "benchmarks/z_anatomy/cortical-surface-20261014/source-verification.json",
+  "browser_receipts": [
+    "benchmarks/z_anatomy/cortical-surface-20261014/browser-framing/acceptance.json",
+    "benchmarks/z_anatomy/cortical-surface-20261014/browser-complete-medial/acceptance.json",
+    "benchmarks/z_anatomy/cortical-surface-20261014/browser-complete-temporal/acceptance.json"
+  ],
+  "current_browser_scope": "Frontal/central uses browser-framing. Complete temporal/parietal and medial/basal framing receipts supersede their earlier camera-only views. All 56 current views retain exact source identity, native positions, visibility and restored/exported state.",
+  "curricula": 3,
+  "views": 56,
+  "course_plans": 3,
+  "course_receipt": "benchmarks/z_anatomy/cortical-surface-20261014/course-packages-framing.json",
+  "unchanged_rebuild": {
+    "reused_assets": 643,
+    "built_assets": 0,
+    "geometry_recomputed": false
+  },
+  "source_exclusions": [
+    {
+      "object": "Insula.j",
+      "vertices": 2,
+      "polygons": 0,
+      "retained_as": "Inspected source locator metadata"
+    }
+  ],
+  "expert_review": "Pending exact-view instructor assessment",
+  "expert_review_in_engineering_denominator": false,
+  "frontend": "Accepted implementation unchanged.",
+  "complete_framing_receipt": "benchmarks/z_anatomy/cortical-surface-20261014/complete-framing-check.json"
+}

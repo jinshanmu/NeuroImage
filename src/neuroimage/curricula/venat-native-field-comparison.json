@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0",
+  "id": "venat-native-field-comparison",
+  "dataset_id": "venat",
+  "required_source": {
+    "id": "venat",
+    "version": "10.6084/m9.figshare.7205960.v4"
+  },
+  "title": "VENAT: seven statistics at one native source point",
+  "author": "NeuroImage project",
+  "objective": "Compare original field values and units at an identical location without treating population fields as individual anatomy or variant prevalence.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "partial-volume",
+      "title": "Venous partial volume \u00b7 mean",
+      "selected": null,
+      "visible": [],
+      "background": "partial_volume",
+      "prompt": "Read the original value and units. Compare this Population mean field with other fields at the unchanged location. Keep different units and field definitions separate.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "partial_volume",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Venous partial volume \u00b7 mean",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          0.3
+        ],
+        "tile_layout": "row"
+      }
+    },
+    {
+      "id": "partial-volume-std",
+      "title": "Venous partial volume \u00b7 standard deviation",
+      "selected": null,
+      "visible": [],
+      "background": "partial_volume_std",
+      "prompt": "Read the original value and units. Compare this Population standard deviation field with other fields at the unchanged location. Keep different units and field definitions separate.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "partial_volume_std",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Venous partial volume \u00b7 standard deviation",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          0.15
+        ],
+        "tile_layout": "row"
+      }
+    },
+    {
+      "id": "density",
+      "title": "Venous detection density",
+      "selected": null,
+      "visible": [],
+      "background": "density",
+      "prompt": "Read the original value and units. Compare this Population mean of repeated detection fractions field with other fields at the unchanged location. Keep different units and field definitions separate.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "density",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Venous detection density",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          0.5
+        ],
+        "tile_layout": "row"
+      }
+    },
+    {
+      "id": "diameter",
+      "title": "Estimated venous diameter \u00b7 mean",
+      "selected": null,
+      "visible": [],
+      "background": "diameter",
+      "prompt": "Read the original value and units. Compare this Population mean on source skeleton field with other fields at the unchanged location. Keep different units and field definitions separate.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "diameter",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Estimated venous diameter \u00b7 mean",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          2.6
+        ],
+        "tile_layout": "row"
+      }
+    },
+    {
+      "id": "diameter-std",
+      "title": "Estimated venous diameter \u00b7 standard deviation",
+      "selected": null,
+      "visible": [],
+      "background": "diameter_std",
+      "prompt": "Read the original value and units. Compare this Population standard deviation on source skeleton field with other fields at the unchanged location. Keep different units and field definitions separate.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "diameter_std",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Estimated venous diameter \u00b7 standard deviation",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          0.85
+        ],
+        "tile_layout": "row"
+      }
+    },
+    {
+      "id": "curvature",
+      "title": "Estimated venous curvature \u00b7 mean",
+      "selected": null,
+      "visible": [],
+      "background": "curvature",
+      "prompt": "Read the original value and units. Compare this Population mean on source skeleton field with other fields at the unchanged location. Keep different units and field definitions separate.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "curvature",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Estimated venous curvature \u00b7 mean",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          0.26
+        ],
+        "tile_layout": "row"
+      }
+    },
+    {
+      "id": "curvature-std",
+      "title": "Estimated venous curvature \u00b7 standard deviation",
+      "selected": null,
+      "visible": [],
+      "background": "curvature_std",
+      "prompt": "Read the original value and units. Compare this Population standard deviation on source skeleton field with other fields at the unchanged location. Keep different units and field definitions separate.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "curvature_std",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Estimated venous curvature \u00b7 standard deviation",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          0.19
+        ],
+        "tile_layout": "row"
+      }
+    },
+    {
+      "id": "same-point-magnification",
+      "title": "Same partial-volume point, enlarged",
+      "selected": null,
+      "visible": [],
+      "background": "partial_volume",
+      "prompt": "Compare with the first complete-field view. Describe local population support without inferring a named vein, individual continuity or a variant prevalence.",
+      "note": "Statistical fields from the source normal cohort. The anchor selects the maximum original partial-volume value among samples with positive supplied diameter and curvature means and standard deviations. It is a reproducible point for comparing population statistics. Named-vessel identity, individual geometry and variant frequency each require additional source evidence.",
+      "image_anchor": {
+        "volume_id": "partial_volume",
+        "index": [
+          176,
+          227,
+          170
+        ],
+        "label": "Same partial-volume point, enlarged",
+        "reference": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4. https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4"
+      },
+      "display": {
+        "slice_zoom": 3.0,
+        "camera": [
+          110.0,
+          15.0,
+          0.8
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "show_3d_cursor": false,
+        "window": [
+          0.0,
+          0.3
+        ],
+        "tile_layout": "row"
+      }
+    }
+  ]
+}

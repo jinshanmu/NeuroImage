@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "id": "nextbrain-case1-block33-fine-anatomy",
+  "dataset_id": "nextbrain_case1_block33",
+  "required_source": {
+    "id": "nextbrain_core",
+    "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2"
+  },
+  "title": "NextBrain Case 1 \u00b7 P1.3 fine anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Learn fine regional assignments within their original reconstructed tissue block and matching ex vivo MRI context. Compare whole-section orientation with a magnified view of the same physical point.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "group-01-context",
+      "title": "Amygdalar subdivisions \u00b7 MRI context",
+      "selected": "nextbrain_case1_block33:label:216",
+      "visible": [
+        "nextbrain_case1_block33:label:214",
+        "nextbrain_case1_block33:label:216",
+        "nextbrain_case1_block33:label:217",
+        "nextbrain_case1_block33:label:238",
+        "nextbrain_case1_block33:label:277",
+        "nextbrain_case1_block33:label:278",
+        "nextbrain_case1_block33:label:279",
+        "nextbrain_case1_block33:label:295",
+        "nextbrain_case1_block33:label:301"
+      ],
+      "background": "t2",
+      "prompt": "Locate this source-defined group in the whole MRI section and describe the surrounding anatomical context.",
+      "note": "Source case P57-16; tissue block P1.3. Selected source label 216: basolateral_nucleus_(basal_nucleus). Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block33:label:214": 0.3,
+          "nextbrain_case1_block33:label:217": 0.3,
+          "nextbrain_case1_block33:label:238": 0.3,
+          "nextbrain_case1_block33:label:277": 0.3,
+          "nextbrain_case1_block33:label:278": 0.3,
+          "nextbrain_case1_block33:label:279": 0.3,
+          "nextbrain_case1_block33:label:295": 0.3,
+          "nextbrain_case1_block33:label:301": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-01-detail",
+      "title": "Amygdalar subdivisions \u00b7 fine view",
+      "selected": "nextbrain_case1_block33:label:216",
+      "visible": [
+        "nextbrain_case1_block33:label:214",
+        "nextbrain_case1_block33:label:216",
+        "nextbrain_case1_block33:label:217",
+        "nextbrain_case1_block33:label:238",
+        "nextbrain_case1_block33:label:277",
+        "nextbrain_case1_block33:label:278",
+        "nextbrain_case1_block33:label:279",
+        "nextbrain_case1_block33:label:295",
+        "nextbrain_case1_block33:label:301"
+      ],
+      "background": "t2",
+      "prompt": "Inspect the fine source assignments and compare adjacent regions while keeping the same physical target.",
+      "note": "Source case P57-16; tissue block P1.3. Selected source label 216: basolateral_nucleus_(basal_nucleus). Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block33:label:214": 0.3,
+          "nextbrain_case1_block33:label:217": 0.3,
+          "nextbrain_case1_block33:label:238": 0.3,
+          "nextbrain_case1_block33:label:277": 0.3,
+          "nextbrain_case1_block33:label:278": 0.3,
+          "nextbrain_case1_block33:label:279": 0.3,
+          "nextbrain_case1_block33:label:295": 0.3,
+          "nextbrain_case1_block33:label:301": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-02-context",
+      "title": "Anterior and medial thalamic nuclei \u00b7 MRI context",
+      "selected": "nextbrain_case1_block33:label:253",
+      "visible": [
+        "nextbrain_case1_block33:label:219",
+        "nextbrain_case1_block33:label:225",
+        "nextbrain_case1_block33:label:253",
+        "nextbrain_case1_block33:label:254",
+        "nextbrain_case1_block33:label:274",
+        "nextbrain_case1_block33:label:284",
+        "nextbrain_case1_block33:label:285",
+        "nextbrain_case1_block33:label:286"
+      ],
+      "background": "t2",
+      "prompt": "Locate this source-defined group in the whole MRI section and describe the surrounding anatomical context.",
+      "note": "Source case P57-16; tissue block P1.3. Selected source label 253: reuniens_nucleus_(medioventral_nucleus)_of_thalamus. Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block33:label:219": 0.3,
+          "nextbrain_case1_block33:label:225": 0.3,
+          "nextbrain_case1_block33:label:254": 0.3,
+          "nextbrain_case1_block33:label:274": 0.3,
+          "nextbrain_case1_block33:label:284": 0.3,
+          "nextbrain_case1_block33:label:285": 0.3,
+          "nextbrain_case1_block33:label:286": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-02-detail",
+      "title": "Anterior and medial thalamic nuclei \u00b7 fine view",
+      "selected": "nextbrain_case1_block33:label:253",
+      "visible": [
+        "nextbrain_case1_block33:label:219",
+        "nextbrain_case1_block33:label:225",
+        "nextbrain_case1_block33:label:253",
+        "nextbrain_case1_block33:label:254",
+        "nextbrain_case1_block33:label:274",
+        "nextbrain_case1_block33:label:284",
+        "nextbrain_case1_block33:label:285",
+        "nextbrain_case1_block33:label:286"
+      ],
+      "background": "t2",
+      "prompt": "Inspect the fine source assignments and compare adjacent regions while keeping the same physical target.",
+      "note": "Source case P57-16; tissue block P1.3. Selected source label 253: reuniens_nucleus_(medioventral_nucleus)_of_thalamus. Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block33:label:219": 0.3,
+          "nextbrain_case1_block33:label:225": 0.3,
+          "nextbrain_case1_block33:label:254": 0.3,
+          "nextbrain_case1_block33:label:274": 0.3,
+          "nextbrain_case1_block33:label:284": 0.3,
+          "nextbrain_case1_block33:label:285": 0.3,
+          "nextbrain_case1_block33:label:286": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-03-context",
+      "title": "Mammillary region \u00b7 MRI context",
+      "selected": "nextbrain_case1_block33:label:256",
+      "visible": [
+        "nextbrain_case1_block33:label:256",
+        "nextbrain_case1_block33:label:275",
+        "nextbrain_case1_block33:label:276",
+        "nextbrain_case1_block33:label:304",
+        "nextbrain_case1_block33:label:305",
+        "nextbrain_case1_block33:label:306",
+        "nextbrain_case1_block33:label:307",
+        "nextbrain_case1_block33:label:308"
+      ],
+      "background": "t2",
+      "prompt": "Locate this source-defined group in the whole MRI section and describe the surrounding anatomical context.",
+      "note": "Source case P57-16; tissue block P1.3. Selected source label 256: tuberomammillary_nucleus. Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block33:label:275": 0.3,
+          "nextbrain_case1_block33:label:276": 0.3,
+          "nextbrain_case1_block33:label:304": 0.3,
+          "nextbrain_case1_block33:label:305": 0.3,
+          "nextbrain_case1_block33:label:306": 0.3,
+          "nextbrain_case1_block33:label:307": 0.3,
+          "nextbrain_case1_block33:label:308": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-03-detail",
+      "title": "Mammillary region \u00b7 fine view",
+      "selected": "nextbrain_case1_block33:label:256",
+      "visible": [
+        "nextbrain_case1_block33:label:256",
+        "nextbrain_case1_block33:label:275",
+        "nextbrain_case1_block33:label:276",
+        "nextbrain_case1_block33:label:304",
+        "nextbrain_case1_block33:label:305",
+        "nextbrain_case1_block33:label:306",
+        "nextbrain_case1_block33:label:307",
+        "nextbrain_case1_block33:label:308"
+      ],
+      "background": "t2",
+      "prompt": "Inspect the fine source assignments and compare adjacent regions while keeping the same physical target.",
+      "note": "Source case P57-16; tissue block P1.3. Selected source label 256: tuberomammillary_nucleus. Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block33:label:275": 0.3,
+          "nextbrain_case1_block33:label:276": 0.3,
+          "nextbrain_case1_block33:label:304": 0.3,
+          "nextbrain_case1_block33:label:305": 0.3,
+          "nextbrain_case1_block33:label:306": 0.3,
+          "nextbrain_case1_block33:label:307": 0.3,
+          "nextbrain_case1_block33:label:308": 0.3
+        }
+      }
+    }
+  ]
+}

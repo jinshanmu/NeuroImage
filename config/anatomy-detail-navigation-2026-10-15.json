@@ -1,0 +1,1196 @@
+{
+  "recorded_utc": "2026-10-15T14:21:41.076471+00:00",
+  "status": "source_bindings_and_browser_validated",
+  "top_level_groups": 10,
+  "topics": 35,
+  "source_bindings": 162,
+  "bindings": [
+    {
+      "topic": "detail-medial-temporal",
+      "source": "bigbrain_hippocampus",
+      "package_version": "3583b4ba664391c6",
+      "structures": 14
+    },
+    {
+      "topic": "detail-cortical-histology",
+      "source": "bigbrain_layers",
+      "package_version": "28962750493fb674",
+      "structures": 14
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "brainstem_navigator_mni",
+      "package_version": "f753cbca5de01ac4",
+      "structures": 6
+    },
+    {
+      "topic": "detail-midbrain-nuclei",
+      "source": "brainstem_navigator_mni",
+      "package_version": "f753cbca5de01ac4",
+      "structures": 9
+    },
+    {
+      "topic": "detail-pontomedullary-regions",
+      "source": "brainstem_navigator_mni",
+      "package_version": "f753cbca5de01ac4",
+      "structures": 26
+    },
+    {
+      "topic": "detail-cranial-nuclear-context",
+      "source": "brainstem_navigator_mni",
+      "package_version": "f753cbca5de01ac4",
+      "structures": 6
+    },
+    {
+      "topic": "detail-central-cortex",
+      "source": "cerebra",
+      "package_version": "41f2dadc334622e8",
+      "structures": 6
+    },
+    {
+      "topic": "detail-medial-temporal",
+      "source": "cerebra",
+      "package_version": "41f2dadc334622e8",
+      "structures": 6
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "cerebra",
+      "package_version": "41f2dadc334622e8",
+      "structures": 8
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "cerebra",
+      "package_version": "41f2dadc334622e8",
+      "structures": 2
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "cerebra",
+      "package_version": "41f2dadc334622e8",
+      "structures": 8
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "cit168_native",
+      "package_version": "12b74ee04d2fb842",
+      "structures": 6
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "cit168_native",
+      "package_version": "12b74ee04d2fb842",
+      "structures": 1
+    },
+    {
+      "topic": "detail-hypothalamic-basal-forebrain",
+      "source": "cit168_native",
+      "package_version": "12b74ee04d2fb842",
+      "structures": 3
+    },
+    {
+      "topic": "detail-observer-support",
+      "source": "cit168_native",
+      "package_version": "12b74ee04d2fb842",
+      "structures": 16
+    },
+    {
+      "topic": "detail-midbrain-nuclei",
+      "source": "cit168_native",
+      "package_version": "12b74ee04d2fb842",
+      "structures": 5
+    },
+    {
+      "topic": "detail-white-association",
+      "source": "hcp1065_prob",
+      "package_version": "6cfd8af637420faa",
+      "structures": 22
+    },
+    {
+      "topic": "detail-white-projection",
+      "source": "hcp1065_prob",
+      "package_version": "6cfd8af637420faa",
+      "structures": 26
+    },
+    {
+      "topic": "detail-white-commissural",
+      "source": "hcp1065_prob",
+      "package_version": "6cfd8af637420faa",
+      "structures": 4
+    },
+    {
+      "topic": "detail-limbic-pathways",
+      "source": "hcp1065_prob",
+      "package_version": "6cfd8af637420faa",
+      "structures": 12
+    },
+    {
+      "topic": "detail-white-association",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 34
+    },
+    {
+      "topic": "detail-white-projection",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 34
+    },
+    {
+      "topic": "detail-white-commissural",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 2
+    },
+    {
+      "topic": "detail-white-cerebellar",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 7
+    },
+    {
+      "topic": "detail-limbic-pathways",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 12
+    },
+    {
+      "topic": "detail-cn-visual",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 2
+    },
+    {
+      "topic": "detail-cn-ocular-motor",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 2
+    },
+    {
+      "topic": "detail-cn-trigeminal",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 2
+    },
+    {
+      "topic": "detail-cn-facial-auditory",
+      "source": "hcp1065_tracts",
+      "package_version": "d646e779e4d93dce",
+      "structures": 4
+    },
+    {
+      "topic": "detail-inner-ear",
+      "source": "inner_ear_ct_specimen1",
+      "package_version": "8505a304d1cd522a",
+      "structures": 3
+    },
+    {
+      "topic": "detail-cortical-histology",
+      "source": "julich_selected",
+      "package_version": "53ec2653119db4ba",
+      "structures": 240
+    },
+    {
+      "topic": "detail-cerebellar-nuclei",
+      "source": "julich_selected",
+      "package_version": "53ec2653119db4ba",
+      "structures": 8
+    },
+    {
+      "topic": "detail-venous-context",
+      "source": "mesoveins",
+      "package_version": "5deeb2cc2ff15ee8",
+      "structures": 0
+    },
+    {
+      "topic": "detail-cisternal-observation",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 2
+    },
+    {
+      "topic": "detail-cn-visual",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 2
+    },
+    {
+      "topic": "detail-cn-ocular-motor",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 3
+    },
+    {
+      "topic": "detail-cn-trigeminal",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cn-facial-auditory",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cn-lower",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 3
+    },
+    {
+      "topic": "detail-inner-ear",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 2
+    },
+    {
+      "topic": "detail-sellar-context",
+      "source": "mida",
+      "package_version": "3374505761bc6543",
+      "structures": 1
+    },
+    {
+      "topic": "variation-arterial-population",
+      "source": "mouches_arteries",
+      "package_version": "b70c3929aa9c3de0",
+      "structures": 1
+    },
+    {
+      "topic": "detail-skull-base-bones",
+      "source": "mug500_healthy",
+      "package_version": "105c29c690b7272d",
+      "structures": 1
+    },
+    {
+      "topic": "detail-skull-base-bones",
+      "source": "mug500_source_mesh",
+      "package_version": "24d39ff684e5d6ce",
+      "structures": 1
+    },
+    {
+      "topic": "detail-medial-temporal",
+      "source": "nextbrain_case1_block05",
+      "package_version": "2a76e6ca515b16ef",
+      "structures": 35
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "nextbrain_case1_block05",
+      "package_version": "2a76e6ca515b16ef",
+      "structures": 1
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "nextbrain_case1_block05",
+      "package_version": "2a76e6ca515b16ef",
+      "structures": 1
+    },
+    {
+      "topic": "detail-limbic-pathways",
+      "source": "nextbrain_case1_block05",
+      "package_version": "2a76e6ca515b16ef",
+      "structures": 3
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "nextbrain_case1_block05",
+      "package_version": "2a76e6ca515b16ef",
+      "structures": 1
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "nextbrain_case1_block07",
+      "package_version": "162d0a6bb81e32f6",
+      "structures": 2
+    },
+    {
+      "topic": "detail-hypothalamic-basal-forebrain",
+      "source": "nextbrain_case1_block07",
+      "package_version": "162d0a6bb81e32f6",
+      "structures": 1
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "nextbrain_case1_block07",
+      "package_version": "162d0a6bb81e32f6",
+      "structures": 1
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "nextbrain_case1_block08",
+      "package_version": "c382663422fb6ec9",
+      "structures": 4
+    },
+    {
+      "topic": "detail-hypothalamic-basal-forebrain",
+      "source": "nextbrain_case1_block08",
+      "package_version": "c382663422fb6ec9",
+      "structures": 2
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "nextbrain_case1_block08",
+      "package_version": "c382663422fb6ec9",
+      "structures": 1
+    },
+    {
+      "topic": "detail-choroid-septal-context",
+      "source": "nextbrain_case1_block08",
+      "package_version": "c382663422fb6ec9",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cn-visual",
+      "source": "nextbrain_case1_block08",
+      "package_version": "c382663422fb6ec9",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cerebellar-nuclei",
+      "source": "nextbrain_case1_block25",
+      "package_version": "613e83c27c9484fb",
+      "structures": 4
+    },
+    {
+      "topic": "detail-central-cortex",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 1
+    },
+    {
+      "topic": "detail-medial-temporal",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 34
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 6
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 20
+    },
+    {
+      "topic": "detail-hypothalamic-basal-forebrain",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 12
+    },
+    {
+      "topic": "detail-white-cerebellar",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 1
+    },
+    {
+      "topic": "detail-limbic-pathways",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 4
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 1
+    },
+    {
+      "topic": "detail-midbrain-nuclei",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 3
+    },
+    {
+      "topic": "detail-cn-visual",
+      "source": "nextbrain_case1_block33",
+      "package_version": "6973746dc56fba92",
+      "structures": 1
+    },
+    {
+      "topic": "detail-central-cortex",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 1
+    },
+    {
+      "topic": "detail-medial-temporal",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 18
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 4
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 20
+    },
+    {
+      "topic": "detail-white-commissural",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 2
+    },
+    {
+      "topic": "detail-white-cerebellar",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 1
+    },
+    {
+      "topic": "detail-limbic-pathways",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 5
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 1
+    },
+    {
+      "topic": "detail-midbrain-nuclei",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 7
+    },
+    {
+      "topic": "detail-cranial-nuclear-context",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cn-ocular-motor",
+      "source": "nextbrain_case1_block41",
+      "package_version": "335e70ef9a0e0e91",
+      "structures": 2
+    },
+    {
+      "topic": "detail-central-cortex",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 2
+    },
+    {
+      "topic": "detail-medial-temporal",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 36
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 6
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 16
+    },
+    {
+      "topic": "detail-hypothalamic-basal-forebrain",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 36
+    },
+    {
+      "topic": "detail-white-commissural",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 1
+    },
+    {
+      "topic": "detail-limbic-pathways",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 5
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cn-visual",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 2
+    },
+    {
+      "topic": "detail-sellar-context",
+      "source": "nextbrain_case1_block45",
+      "package_version": "b79c11e74431f091",
+      "structures": 1
+    },
+    {
+      "topic": "detail-white-cerebellar",
+      "source": "nextbrain_case2_block06",
+      "package_version": "c05d1368c39641db",
+      "structures": 5
+    },
+    {
+      "topic": "detail-pontomedullary-regions",
+      "source": "nextbrain_case2_block06",
+      "package_version": "c05d1368c39641db",
+      "structures": 32
+    },
+    {
+      "topic": "detail-cranial-nuclear-context",
+      "source": "nextbrain_case2_block06",
+      "package_version": "c05d1368c39641db",
+      "structures": 7
+    },
+    {
+      "topic": "detail-cn-ocular-motor",
+      "source": "nextbrain_case2_block06",
+      "package_version": "c05d1368c39641db",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cn-trigeminal",
+      "source": "nextbrain_case2_block06",
+      "package_version": "c05d1368c39641db",
+      "structures": 6
+    },
+    {
+      "topic": "detail-cn-facial-auditory",
+      "source": "nextbrain_case2_block06",
+      "package_version": "c05d1368c39641db",
+      "structures": 3
+    },
+    {
+      "topic": "detail-white-commissural",
+      "source": "nextbrain_case2_block07",
+      "package_version": "6c0f1658a9056e7e",
+      "structures": 2
+    },
+    {
+      "topic": "detail-white-cerebellar",
+      "source": "nextbrain_case2_block07",
+      "package_version": "6c0f1658a9056e7e",
+      "structures": 5
+    },
+    {
+      "topic": "detail-midbrain-nuclei",
+      "source": "nextbrain_case2_block07",
+      "package_version": "6c0f1658a9056e7e",
+      "structures": 12
+    },
+    {
+      "topic": "detail-cranial-nuclear-context",
+      "source": "nextbrain_case2_block07",
+      "package_version": "6c0f1658a9056e7e",
+      "structures": 4
+    },
+    {
+      "topic": "detail-cn-ocular-motor",
+      "source": "nextbrain_case2_block07",
+      "package_version": "6c0f1658a9056e7e",
+      "structures": 6
+    },
+    {
+      "topic": "detail-cn-trigeminal",
+      "source": "nextbrain_case2_block07",
+      "package_version": "6c0f1658a9056e7e",
+      "structures": 2
+    },
+    {
+      "topic": "detail-white-cerebellar",
+      "source": "nextbrain_case2_block16",
+      "package_version": "c363da4a31687a34",
+      "structures": 3
+    },
+    {
+      "topic": "detail-pontomedullary-regions",
+      "source": "nextbrain_case2_block16",
+      "package_version": "c363da4a31687a34",
+      "structures": 41
+    },
+    {
+      "topic": "detail-cranial-nuclear-context",
+      "source": "nextbrain_case2_block16",
+      "package_version": "c363da4a31687a34",
+      "structures": 13
+    },
+    {
+      "topic": "detail-cn-ocular-motor",
+      "source": "nextbrain_case2_block16",
+      "package_version": "c363da4a31687a34",
+      "structures": 1
+    },
+    {
+      "topic": "detail-cn-trigeminal",
+      "source": "nextbrain_case2_block16",
+      "package_version": "c363da4a31687a34",
+      "structures": 2
+    },
+    {
+      "topic": "detail-cn-facial-auditory",
+      "source": "nextbrain_case2_block16",
+      "package_version": "c363da4a31687a34",
+      "structures": 7
+    },
+    {
+      "topic": "detail-cn-lower",
+      "source": "nextbrain_case2_block16",
+      "package_version": "c363da4a31687a34",
+      "structures": 5
+    },
+    {
+      "topic": "detail-pontomedullary-regions",
+      "source": "nextbrain_case2_block38",
+      "package_version": "0c51242409cb8e18",
+      "structures": 19
+    },
+    {
+      "topic": "detail-cranial-nuclear-context",
+      "source": "nextbrain_case2_block38",
+      "package_version": "0c51242409cb8e18",
+      "structures": 4
+    },
+    {
+      "topic": "detail-cn-trigeminal",
+      "source": "nextbrain_case2_block38",
+      "package_version": "0c51242409cb8e18",
+      "structures": 2
+    },
+    {
+      "topic": "detail-cn-lower",
+      "source": "nextbrain_case2_block38",
+      "package_version": "0c51242409cb8e18",
+      "structures": 4
+    },
+    {
+      "topic": "detail-central-cortex",
+      "source": "spl_nac",
+      "package_version": "5540cfe690956d43",
+      "structures": 6
+    },
+    {
+      "topic": "detail-medial-temporal",
+      "source": "spl_nac",
+      "package_version": "5540cfe690956d43",
+      "structures": 6
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "spl_nac",
+      "package_version": "5540cfe690956d43",
+      "structures": 10
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "spl_nac",
+      "package_version": "5540cfe690956d43",
+      "structures": 2
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "spl_nac",
+      "package_version": "5540cfe690956d43",
+      "structures": 7
+    },
+    {
+      "topic": "detail-cisternal-observation",
+      "source": "spl_nac",
+      "package_version": "5540cfe690956d43",
+      "structures": 0
+    },
+    {
+      "topic": "detail-cerebellar-lobules",
+      "source": "suit_cerebellum",
+      "package_version": "8aedcbdb455603b3",
+      "structures": 28
+    },
+    {
+      "topic": "detail-cerebellar-nuclei",
+      "source": "suit_cerebellum",
+      "package_version": "8aedcbdb455603b3",
+      "structures": 6
+    },
+    {
+      "topic": "variation-cerebellar-population",
+      "source": "suit_cerebellum",
+      "package_version": "8aedcbdb455603b3",
+      "structures": 34
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case001",
+      "package_version": "3b4756cdbf0e57ca",
+      "structures": 17
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case001",
+      "package_version": "3b4756cdbf0e57ca",
+      "structures": 17
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case006",
+      "package_version": "59113420268411ec",
+      "structures": 19
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case006",
+      "package_version": "59113420268411ec",
+      "structures": 19
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case007",
+      "package_version": "b7b50d1b059e00e2",
+      "structures": 18
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case007",
+      "package_version": "b7b50d1b059e00e2",
+      "structures": 18
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case009",
+      "package_version": "74f45536d0575f3d",
+      "structures": 20
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case009",
+      "package_version": "74f45536d0575f3d",
+      "structures": 20
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case010",
+      "package_version": "6cc58fb03b703bd8",
+      "structures": 19
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case010",
+      "package_version": "6cc58fb03b703bd8",
+      "structures": 19
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case014",
+      "package_version": "9473fce0f5e218a6",
+      "structures": 20
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case014",
+      "package_version": "9473fce0f5e218a6",
+      "structures": 20
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case021",
+      "package_version": "80ee0b80f4c91f19",
+      "structures": 19
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case021",
+      "package_version": "80ee0b80f4c91f19",
+      "structures": 19
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "thu_mra_case030",
+      "package_version": "7ab8af66974506c7",
+      "structures": 19
+    },
+    {
+      "topic": "variation-arterial-individual",
+      "source": "thu_mra_case030",
+      "package_version": "7ab8af66974506c7",
+      "structures": 19
+    },
+    {
+      "topic": "detail-venous-context",
+      "source": "venat",
+      "package_version": "9c534558d7670c46",
+      "structures": 0
+    },
+    {
+      "topic": "detail-central-cortex",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 6
+    },
+    {
+      "topic": "detail-medial-temporal",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 7
+    },
+    {
+      "topic": "detail-cortical-source-survey",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 56
+    },
+    {
+      "topic": "detail-striatal-pallidal",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 8
+    },
+    {
+      "topic": "detail-thalamic-subthalamic",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 8
+    },
+    {
+      "topic": "detail-hypothalamic-basal-forebrain",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 5
+    },
+    {
+      "topic": "detail-white-commissural",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 4
+    },
+    {
+      "topic": "detail-limbic-pathways",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 6
+    },
+    {
+      "topic": "detail-ventricular-spaces",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 5
+    },
+    {
+      "topic": "detail-choroid-septal-context",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 3
+    },
+    {
+      "topic": "detail-midbrain-nuclei",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 8
+    },
+    {
+      "topic": "detail-pontomedullary-regions",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 8
+    },
+    {
+      "topic": "detail-cranial-nuclear-context",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 28
+    },
+    {
+      "topic": "detail-cerebellar-lobules",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 31
+    },
+    {
+      "topic": "detail-cn-visual",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 8
+    },
+    {
+      "topic": "detail-cn-ocular-motor",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 14
+    },
+    {
+      "topic": "detail-cn-trigeminal",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 6
+    },
+    {
+      "topic": "detail-cn-facial-auditory",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 16
+    },
+    {
+      "topic": "detail-cn-lower",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 12
+    },
+    {
+      "topic": "detail-arterial-ring",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 26
+    },
+    {
+      "topic": "detail-arterial-branches",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 42
+    },
+    {
+      "topic": "detail-venous-context",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 17
+    },
+    {
+      "topic": "detail-skull-base-bones",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 6
+    },
+    {
+      "topic": "detail-sellar-context",
+      "source": "z_anatomy",
+      "package_version": "89a81be4cf511f19",
+      "structures": 8
+    }
+  ],
+  "scope": "Exact source-specific subsets. No anatomical crosswalk or registration inferred.",
+  "browser": {
+    "status": "passed",
+    "top_level_groups": 10,
+    "groups": [
+      {
+        "group": "cerebral-cortex",
+        "topics": 4
+      },
+      {
+        "group": "deep-nuclei",
+        "topics": 4
+      },
+      {
+        "group": "white-matter-pathways",
+        "topics": 5
+      },
+      {
+        "group": "ventricles",
+        "topics": 3
+      },
+      {
+        "group": "brainstem",
+        "topics": 3
+      },
+      {
+        "group": "cerebellum",
+        "topics": 3
+      },
+      {
+        "group": "cranial-nerves",
+        "topics": 5
+      },
+      {
+        "group": "vascular-anatomy",
+        "topics": 5
+      },
+      {
+        "group": "skull-base-context",
+        "topics": 3
+      }
+    ],
+    "topics": 35,
+    "cranial_nuclear_objects": 28,
+    "mra_secondary_cases": 8,
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390,
+      "scrollers": []
+    },
+    "page_errors": []
+  },
+  "native_detail_extension": {
+    "nextbrain_blocks": 11,
+    "additional_nextbrain_bindings": 68,
+    "probability_field_bindings": 4,
+    "hcp1065_probability_fields": 64,
+    "source_definition_check": "Every explicit entry exists in the selected source package. NextBrain block coverage is partial and independently framed; fields remain separate from trajectories.",
+    "browser_status": "passed",
+    "browser": {
+      "status": "passed",
+      "source_views": [
+        {
+          "dataset": "nextbrain_case1_block05",
+          "topic": "detail-medial-temporal",
+          "parent": "cerebral-cortex",
+          "title": "Hippocampal and medial temporal anatomy",
+          "count": 35,
+          "source": "nextbrain_case1_block05-2a76e6ca515b16ef"
+        },
+        {
+          "dataset": "nextbrain_case1_block07",
+          "topic": "detail-striatal-pallidal",
+          "parent": "deep-nuclei",
+          "title": "Striatal and pallidal source regions",
+          "count": 2,
+          "source": "nextbrain_case1_block07-162d0a6bb81e32f6"
+        },
+        {
+          "dataset": "nextbrain_case1_block08",
+          "topic": "detail-cn-visual",
+          "parent": "cranial-nerves",
+          "title": "Optic nerve, chiasm and tract",
+          "count": 1,
+          "source": "nextbrain_case1_block08-c382663422fb6ec9"
+        },
+        {
+          "dataset": "nextbrain_case1_block25",
+          "topic": "detail-cerebellar-nuclei",
+          "parent": "cerebellum",
+          "title": "Dentate, interposed and fastigial nuclei",
+          "count": 4,
+          "source": "nextbrain_case1_block25-613e83c27c9484fb"
+        },
+        {
+          "dataset": "nextbrain_case1_block33",
+          "topic": "detail-thalamic-subthalamic",
+          "parent": "deep-nuclei",
+          "title": "Thalamic, geniculate and subthalamic regions",
+          "count": 20,
+          "source": "nextbrain_case1_block33-6973746dc56fba92"
+        },
+        {
+          "dataset": "nextbrain_case1_block41",
+          "topic": "detail-thalamic-subthalamic",
+          "parent": "deep-nuclei",
+          "title": "Thalamic, geniculate and subthalamic regions",
+          "count": 20,
+          "source": "nextbrain_case1_block41-335e70ef9a0e0e91"
+        },
+        {
+          "dataset": "nextbrain_case1_block45",
+          "topic": "detail-hypothalamic-basal-forebrain",
+          "parent": "deep-nuclei",
+          "title": "Hypothalamic, mammillary and basal forebrain context",
+          "count": 36,
+          "source": "nextbrain_case1_block45-b79c11e74431f091"
+        },
+        {
+          "dataset": "nextbrain_case2_block06",
+          "topic": "detail-cranial-nuclear-context",
+          "parent": "brainstem",
+          "title": "Cranial nerve nuclear context",
+          "count": 7,
+          "source": "nextbrain_case2_block06-c05d1368c39641db"
+        },
+        {
+          "dataset": "nextbrain_case2_block07",
+          "topic": "detail-midbrain-nuclei",
+          "parent": "brainstem",
+          "title": "Midbrain nuclei and tectal regions",
+          "count": 12,
+          "source": "nextbrain_case2_block07-6c0f1658a9056e7e"
+        },
+        {
+          "dataset": "nextbrain_case2_block16",
+          "topic": "detail-cn-facial-auditory",
+          "parent": "cranial-nerves",
+          "title": "Facial, cochlear and vestibular context",
+          "count": 7,
+          "source": "nextbrain_case2_block16-c363da4a31687a34"
+        },
+        {
+          "dataset": "nextbrain_case2_block38",
+          "topic": "detail-cn-lower",
+          "parent": "cranial-nerves",
+          "title": "Lower cranial nerve context",
+          "count": 4,
+          "source": "nextbrain_case2_block38-0c51242409cb8e18"
+        },
+        {
+          "dataset": "hcp1065_prob",
+          "topic": "detail-white-association",
+          "parent": "white-matter-pathways",
+          "title": "Association pathways",
+          "count": 22,
+          "source": "hcp1065_prob-6cfd8af637420faa"
+        },
+        {
+          "dataset": "hcp1065_prob",
+          "topic": "detail-white-projection",
+          "parent": "white-matter-pathways",
+          "title": "Projection pathways",
+          "count": 26,
+          "source": "hcp1065_prob-6cfd8af637420faa"
+        },
+        {
+          "dataset": "hcp1065_prob",
+          "topic": "detail-white-commissural",
+          "parent": "white-matter-pathways",
+          "title": "Commissural pathways",
+          "count": 4,
+          "source": "hcp1065_prob-6cfd8af637420faa"
+        },
+        {
+          "dataset": "hcp1065_prob",
+          "topic": "detail-limbic-pathways",
+          "parent": "white-matter-pathways",
+          "title": "Forniceal, cingulate and strial context",
+          "count": 12,
+          "source": "hcp1065_prob-6cfd8af637420faa"
+        }
+      ],
+      "distinct_source_configurations": 12,
+      "scope": "Source-specific detail entry and complete matching structure inventory; no inter-source registration or anatomical adjudication",
+      "page_errors": [],
+      "automatic_fit_visible_3d": true
+    },
+    "display_followup": "Automatic fitting passed for 15 source/topic views. Magnified 3D guides were visually checked on hippocampal layers and cerebellar nuclei with original section positions retained.",
+    "magnified_guides": {
+      "status": "passed",
+      "source_views": [
+        {
+          "dataset": "nextbrain_case1_block05",
+          "topic": "detail-medial-temporal",
+          "parent": "cerebral-cortex",
+          "title": "Hippocampal and medial temporal anatomy",
+          "count": 35,
+          "source": "nextbrain_case1_block05-2a76e6ca515b16ef"
+        },
+        {
+          "dataset": "nextbrain_case1_block25",
+          "topic": "detail-cerebellar-nuclei",
+          "parent": "cerebellum",
+          "title": "Dentate, interposed and fastigial nuclei",
+          "count": 4,
+          "source": "nextbrain_case1_block25-613e83c27c9484fb"
+        }
+      ],
+      "distinct_source_configurations": 2,
+      "automatic_fit_visible_3d": true,
+      "scope": "Source-specific detail entry and complete matching structure inventory; no inter-source registration or anatomical adjudication",
+      "page_errors": []
+    }
+  }
+}

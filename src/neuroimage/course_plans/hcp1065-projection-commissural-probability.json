@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "hcp1065-projection-commissural-probability",
+  "title": "Projection and callosal white matter probability anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore all 64 source probability fields and their corresponding original T1/T2 template samples. Follow association, limbic, projection and callosal subdivisions, with explicit probability and display-mask comparisons.",
+  "views": [
+    {
+      "id": "commissural-01-probability",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-01-probability"
+    },
+    {
+      "id": "commissural-01-mask",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-01-mask"
+    },
+    {
+      "id": "commissural-02-probability",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-02-probability"
+    },
+    {
+      "id": "commissural-02-mask",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-02-mask"
+    },
+    {
+      "id": "commissural-03-probability",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-03-probability"
+    },
+    {
+      "id": "commissural-03-mask",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-03-mask"
+    },
+    {
+      "id": "commissural-04-probability",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-04-probability"
+    },
+    {
+      "id": "commissural-04-mask",
+      "curriculum": "hcp1065-probability-commissural",
+      "view": "field-04-mask"
+    },
+    {
+      "id": "projection-01-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-01-probability"
+    },
+    {
+      "id": "projection-02-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-02-probability"
+    },
+    {
+      "id": "projection-03-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-03-probability"
+    },
+    {
+      "id": "projection-04-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-04-probability"
+    },
+    {
+      "id": "projection-05-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-05-probability"
+    },
+    {
+      "id": "projection-06-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-06-probability"
+    },
+    {
+      "id": "projection-07-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-07-probability"
+    },
+    {
+      "id": "projection-08-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-08-probability"
+    },
+    {
+      "id": "projection-09-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-09-probability"
+    },
+    {
+      "id": "projection-10-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-10-probability"
+    },
+    {
+      "id": "projection-11-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-11-probability"
+    },
+    {
+      "id": "projection-12-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-12-probability"
+    },
+    {
+      "id": "projection-13-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-13-probability"
+    },
+    {
+      "id": "projection-14-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-14-probability"
+    },
+    {
+      "id": "projection-15-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-15-probability"
+    },
+    {
+      "id": "projection-16-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-16-probability"
+    },
+    {
+      "id": "projection-17-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-17-probability"
+    },
+    {
+      "id": "projection-18-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-18-probability"
+    },
+    {
+      "id": "projection-19-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-19-probability"
+    },
+    {
+      "id": "projection-20-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-20-probability"
+    },
+    {
+      "id": "projection-21-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-21-probability"
+    },
+    {
+      "id": "projection-22-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-22-probability"
+    },
+    {
+      "id": "projection-23-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-23-probability"
+    },
+    {
+      "id": "projection-24-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-24-probability"
+    },
+    {
+      "id": "projection-25-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-25-probability"
+    },
+    {
+      "id": "projection-26-probability",
+      "curriculum": "hcp1065-probability-projection",
+      "view": "field-26-probability"
+    }
+  ]
+}

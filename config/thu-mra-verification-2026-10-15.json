@@ -1,0 +1,82 @@
+{
+  "recorded_utc": "2026-10-15T13:47:34.193461+00:00",
+  "status": "passed",
+  "previous_three_case_receipt": "config/thu-mra-verification-2026-10-14.json",
+  "new_case_checks": [
+    {
+      "dataset_id": "thu_mra_case006",
+      "package_version": "59113420268411ec",
+      "manifest_sha256": "ba4c5bcfb4065e258a9be977cc49e378620e4722449cf5359d84b3e6f8f503ae",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "86ee708617e7f46d7ceab3bcda05ea5837304ebd4d732c6277dd47762930cc8d",
+      "receipt": "benchmarks/thu_cerebral_mra/normal-variation-20261015/case006-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case007",
+      "package_version": "b7b50d1b059e00e2",
+      "manifest_sha256": "85069d84401f1d8a32a3f32406c73b0af37730d1b7abdf3a0b241d69844eac97",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "86ee708617e7f46d7ceab3bcda05ea5837304ebd4d732c6277dd47762930cc8d",
+      "receipt": "benchmarks/thu_cerebral_mra/normal-variation-20261015/case007-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case010",
+      "package_version": "6cc58fb03b703bd8",
+      "manifest_sha256": "b457aaab60ca9de3e72e1d18031788c18b6067754936f7685f30ac35592e43a2",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "86ee708617e7f46d7ceab3bcda05ea5837304ebd4d732c6277dd47762930cc8d",
+      "receipt": "benchmarks/thu_cerebral_mra/normal-variation-20261015/case010-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case014",
+      "package_version": "9473fce0f5e218a6",
+      "manifest_sha256": "3ef4376b9d0648457693f22f55479e72ae0d8c3f6c102dd3c037476db993d4b2",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "86ee708617e7f46d7ceab3bcda05ea5837304ebd4d732c6277dd47762930cc8d",
+      "receipt": "benchmarks/thu_cerebral_mra/normal-variation-20261015/case014-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case021",
+      "package_version": "80ee0b80f4c91f19",
+      "manifest_sha256": "5bed37dd7a288a5128d880ab36fc1f483d51f7d526d2332b2e4be64331b1bda7",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "86ee708617e7f46d7ceab3bcda05ea5837304ebd4d732c6277dd47762930cc8d",
+      "receipt": "benchmarks/thu_cerebral_mra/normal-variation-20261015/case021-source-verification.json"
+    }
+  ],
+  "total_cases": 8,
+  "original_voxels": "all image and categorical samples identical",
+  "source_landmarks_checked": 160,
+  "maximum_original_physical_point_error_mm": 3.7630357315729178e-06,
+  "comparison_scope": "Sampled source physical points are checked separately from the retained original landmark inventory. No named normal variant adjudication or prevalence inference."
+}

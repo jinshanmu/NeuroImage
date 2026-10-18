@@ -1,0 +1,62 @@
+{
+  "id": "hba_native",
+  "version": "2",
+  "adapter": "native-nifti-volume",
+  "representation": "mri-volume",
+  "title": "HumanBrainAtlas \u00b7 healthy participant 01 T2",
+  "construction_peak_gib": 8,
+  "source_version": "OSF ckh5t / Averaged HBA 7T v1.0 / sub-01 T2 file version 1",
+  "inputs": {
+    "t2": "downloads/hba_native/sub-01_T2w_ACPC.nii.gz",
+    "license": "licenses/hba_native/source-license.txt"
+  },
+  "images": [
+    {
+      "id": "t2",
+      "name": "T2 \u00b7 author-averaged sub-01 ACPC grid"
+    }
+  ],
+  "space": {
+    "id": "hba-sub01-acpc-v1",
+    "name": "HumanBrainAtlas sub-01 \u00b7 source ACPC T2 grid",
+    "reference": "Original source NIfTI coded qform, millimeter units, 625 x 725 x 555 grid at 0.25 mm spacing.",
+    "correspondence": "The source authors skull stripped, averaged repeated scans and oriented the result to ACPC. The project preserves that delivered image and its masked background, introducing no further averaging, registration, resampling, segmentation or cross-dataset correspondence."
+  },
+  "sources": [
+    {
+      "id": "hba_native",
+      "title": "HumanBrainAtlas: an in vivo MRI dataset for detailed segmentations",
+      "version": "Averaged HBA 7T v1.0; sub-01 T2 file version 1",
+      "url": "https://osf.io/ckh5t/",
+      "citation": "Schira MM et al. HumanBrainAtlas: an in vivo MRI dataset for detailed segmentations. Brain Structure and Function (2023). doi:10.1007/s00429-023-02653-8. OSF ckh5t, Averaged HBA 7T v1.0, sub-01 T2, file version 1.",
+      "license_name": "CC BY-NC-SA 4.0 (image header and publication; full source notice retained)",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "scope_notes": [
+    "The primary publication describes two healthy male volunteers. This package retains only participant 01 T2 and no anatomical labels.",
+    "The 0.25 mm value describes the delivered author-reconstructed grid, not the original acquisition spacing. Source averaging and registration are computational processing, not new direct observations by this project.",
+    "The source publication describes HD-BET skull stripping, alternate mask margins and manual correction. This delivered image has masked outside-brain regions; its header does not identify the precise mask variant. A mask edge or zero background is a processing boundary, not a cisternal wall, skull or absent anatomy. This package is not offered as a complete extra-axial cistern image source.",
+    "The original image header and publication specify CC BY-NC-SA 4.0. The source license file also begins with a CC BY-NC notice before its CC BY-NC-SA license body; the complete text is preserved, with the share-alike conditions retained for derived exports.",
+    "ACPC naming does not establish correspondence to another participant or atlas. Native comparisons remain independent.",
+    "Small structures and apparent boundaries require source imaging and anatomical interpretation. No named cistern membranes, cranial nerve segments or validated individual variant is inferred."
+  ],
+  "acquisition": "Run neuroimage acquire hba_native --data-root <data-root>. The selected OSF image and complete license text are size- and SHA256-pinned. Existing files are reused.",
+  "files": [
+    {
+      "target": "downloads/hba_native/sub-01_T2w_ACPC.nii.gz",
+      "url": "https://osf.io/download/8aw5x/?version=1",
+      "bytes": 734503773,
+      "sha256": "48811debbcacf2c3bf30c062dc5d429101772ad0ec2240e055af8916259a27a8"
+    },
+    {
+      "target": "licenses/hba_native/source-license.txt",
+      "url": "https://osf.io/download/hrwsj/?version=1",
+      "bytes": 20995,
+      "sha256": "95af3743361e6a42303d971258c1ffe694271284b43c76e20aafa06a510bfc31"
+    }
+  ],
+  "archives": [],
+  "license_downloads": []
+}

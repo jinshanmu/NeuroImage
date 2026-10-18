@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "id": "nextbrain-case2-block38-fine-anatomy",
+  "dataset_id": "nextbrain_case2_block38",
+  "required_source": {
+    "id": "nextbrain_core",
+    "version": "Case 2; Git 9c29e15e2eef6db902296f53de636d57fc5aa6a1"
+  },
+  "title": "NextBrain Case 2 \u00b7 B4.1 brainstem fine anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore the source-defined medulla nuclei and pathways in their reconstructed tissue block and matching ex vivo MRI. Compare whole-section orientation with a magnified view of the same physical target.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "group-01-context",
+      "title": "Spinal accessory and neighboring medullary nuclei \u00b7 MRI context",
+      "selected": "nextbrain_case2_block38:label:771",
+      "visible": [
+        "nextbrain_case2_block38:label:771",
+        "nextbrain_case2_block38:label:724",
+        "nextbrain_case2_block38:label:717",
+        "nextbrain_case2_block38:label:687"
+      ],
+      "background": "t2",
+      "prompt": "Locate the source spinal accessory nuclear assignment and compare its extent with nearby hypoglossal and solitary labels.",
+      "note": "Source case P41-16; tissue block B4.1. Selected source label 771: spinal_accessory_(supraspinal)_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block38:label:724": 0.3,
+          "nextbrain_case2_block38:label:717": 0.3,
+          "nextbrain_case2_block38:label:687": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-01-detail",
+      "title": "Spinal accessory and neighboring medullary nuclei \u00b7 fine view",
+      "selected": "nextbrain_case2_block38:label:771",
+      "visible": [
+        "nextbrain_case2_block38:label:771",
+        "nextbrain_case2_block38:label:724",
+        "nextbrain_case2_block38:label:717",
+        "nextbrain_case2_block38:label:687"
+      ],
+      "background": "t2",
+      "prompt": "Locate the source spinal accessory nuclear assignment and compare its extent with nearby hypoglossal and solitary labels.",
+      "note": "Source case P41-16; tissue block B4.1. Selected source label 771: spinal_accessory_(supraspinal)_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block38:label:724": 0.3,
+          "nextbrain_case2_block38:label:717": 0.3,
+          "nextbrain_case2_block38:label:687": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-02-context",
+      "title": "Dorsal medullary sensory context \u00b7 MRI context",
+      "selected": "nextbrain_case2_block38:label:756",
+      "visible": [
+        "nextbrain_case2_block38:label:755",
+        "nextbrain_case2_block38:label:756",
+        "nextbrain_case2_block38:label:726",
+        "nextbrain_case2_block38:label:499",
+        "nextbrain_case2_block38:label:669",
+        "nextbrain_case2_block38:label:677"
+      ],
+      "background": "t2",
+      "prompt": "Compare dorsal-column and spinal trigeminal assignments at this more caudal tissue block.",
+      "note": "Source case P41-16; tissue block B4.1. Selected source label 756: gracile_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block38:label:755": 0.3,
+          "nextbrain_case2_block38:label:726": 0.3,
+          "nextbrain_case2_block38:label:499": 0.3,
+          "nextbrain_case2_block38:label:669": 0.3,
+          "nextbrain_case2_block38:label:677": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-02-detail",
+      "title": "Dorsal medullary sensory context \u00b7 fine view",
+      "selected": "nextbrain_case2_block38:label:756",
+      "visible": [
+        "nextbrain_case2_block38:label:755",
+        "nextbrain_case2_block38:label:756",
+        "nextbrain_case2_block38:label:726",
+        "nextbrain_case2_block38:label:499",
+        "nextbrain_case2_block38:label:669",
+        "nextbrain_case2_block38:label:677"
+      ],
+      "background": "t2",
+      "prompt": "Compare dorsal-column and spinal trigeminal assignments at this more caudal tissue block.",
+      "note": "Source case P41-16; tissue block B4.1. Selected source label 756: gracile_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block38:label:755": 0.3,
+          "nextbrain_case2_block38:label:726": 0.3,
+          "nextbrain_case2_block38:label:499": 0.3,
+          "nextbrain_case2_block38:label:669": 0.3,
+          "nextbrain_case2_block38:label:677": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-03-context",
+      "title": "Caudal inferior olivary relationships \u00b7 MRI context",
+      "selected": "nextbrain_case2_block38:label:685",
+      "visible": [
+        "nextbrain_case2_block38:label:654",
+        "nextbrain_case2_block38:label:671",
+        "nextbrain_case2_block38:label:685",
+        "nextbrain_case2_block38:label:655",
+        "nextbrain_case2_block38:label:528"
+      ],
+      "background": "t2",
+      "prompt": "Follow the source olivary subdivisions within the delivered caudal block and compare the longitudinal fasciculus label.",
+      "note": "Source case P41-16; tissue block B4.1. Selected source label 685: inferior_olive__dorsal_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block38:label:654": 0.3,
+          "nextbrain_case2_block38:label:671": 0.3,
+          "nextbrain_case2_block38:label:655": 0.3,
+          "nextbrain_case2_block38:label:528": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-03-detail",
+      "title": "Caudal inferior olivary relationships \u00b7 fine view",
+      "selected": "nextbrain_case2_block38:label:685",
+      "visible": [
+        "nextbrain_case2_block38:label:654",
+        "nextbrain_case2_block38:label:671",
+        "nextbrain_case2_block38:label:685",
+        "nextbrain_case2_block38:label:655",
+        "nextbrain_case2_block38:label:528"
+      ],
+      "background": "t2",
+      "prompt": "Follow the source olivary subdivisions within the delivered caudal block and compare the longitudinal fasciculus label.",
+      "note": "Source case P41-16; tissue block B4.1. Selected source label 685: inferior_olive__dorsal_nucleus. Histology supplies fine assignments; the source-processed ex vivo T2 MRI supplies spatial context. Block edges delimit available tissue. Regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case2_block38:label:654": 0.3,
+          "nextbrain_case2_block38:label:671": 0.3,
+          "nextbrain_case2_block38:label:655": 0.3,
+          "nextbrain_case2_block38:label:528": 0.3
+        }
+      }
+    }
+  ]
+}

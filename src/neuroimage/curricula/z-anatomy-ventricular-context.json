@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-ventricular-context",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Ventricles, aqueduct and choroid plexus",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore ventricles, aqueduct and choroid plexus in one source model.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "object-01",
+      "title": "Left Lateral ventricle",
+      "selected": "z_anatomy:object:36a3f1ce4c80",
+      "visible": [
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:97dd9a331971",
+        "z_anatomy:object:ca9d07979ec6",
+        "z_anatomy:object:3cf4071d43fc",
+        "z_anatomy:object:1eccde2020e7",
+        "z_anatomy:object:ba6f1d5f2b25",
+        "z_anatomy:object:a9236e040eba"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Lateral ventricle.l. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:50344d95c1ae": 0.3,
+          "z_anatomy:object:97dd9a331971": 0.3,
+          "z_anatomy:object:ca9d07979ec6": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3,
+          "z_anatomy:object:1eccde2020e7": 0.3,
+          "z_anatomy:object:ba6f1d5f2b25": 0.3,
+          "z_anatomy:object:a9236e040eba": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-02",
+      "title": "Right Lateral ventricle",
+      "selected": "z_anatomy:object:50344d95c1ae",
+      "visible": [
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:97dd9a331971",
+        "z_anatomy:object:ca9d07979ec6",
+        "z_anatomy:object:3cf4071d43fc",
+        "z_anatomy:object:1eccde2020e7",
+        "z_anatomy:object:ba6f1d5f2b25",
+        "z_anatomy:object:a9236e040eba"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Lateral ventricle.r. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:36a3f1ce4c80": 0.3,
+          "z_anatomy:object:97dd9a331971": 0.3,
+          "z_anatomy:object:ca9d07979ec6": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3,
+          "z_anatomy:object:1eccde2020e7": 0.3,
+          "z_anatomy:object:ba6f1d5f2b25": 0.3,
+          "z_anatomy:object:a9236e040eba": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-03",
+      "title": "Third ventricle",
+      "selected": "z_anatomy:object:97dd9a331971",
+      "visible": [
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:97dd9a331971",
+        "z_anatomy:object:ca9d07979ec6",
+        "z_anatomy:object:3cf4071d43fc",
+        "z_anatomy:object:1eccde2020e7",
+        "z_anatomy:object:ba6f1d5f2b25",
+        "z_anatomy:object:a9236e040eba"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Third ventricle. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:36a3f1ce4c80": 0.3,
+          "z_anatomy:object:50344d95c1ae": 0.3,
+          "z_anatomy:object:ca9d07979ec6": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3,
+          "z_anatomy:object:1eccde2020e7": 0.3,
+          "z_anatomy:object:ba6f1d5f2b25": 0.3,
+          "z_anatomy:object:a9236e040eba": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-04",
+      "title": "Aqueduct of midbrain",
+      "selected": "z_anatomy:object:ca9d07979ec6",
+      "visible": [
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:97dd9a331971",
+        "z_anatomy:object:ca9d07979ec6",
+        "z_anatomy:object:3cf4071d43fc",
+        "z_anatomy:object:1eccde2020e7",
+        "z_anatomy:object:ba6f1d5f2b25",
+        "z_anatomy:object:a9236e040eba"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Aqueduct of midbrain. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:36a3f1ce4c80": 0.3,
+          "z_anatomy:object:50344d95c1ae": 0.3,
+          "z_anatomy:object:97dd9a331971": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3,
+          "z_anatomy:object:1eccde2020e7": 0.3,
+          "z_anatomy:object:ba6f1d5f2b25": 0.3,
+          "z_anatomy:object:a9236e040eba": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-05",
+      "title": "Fourth ventricle",
+      "selected": "z_anatomy:object:3cf4071d43fc",
+      "visible": [
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:97dd9a331971",
+        "z_anatomy:object:ca9d07979ec6",
+        "z_anatomy:object:3cf4071d43fc",
+        "z_anatomy:object:1eccde2020e7",
+        "z_anatomy:object:ba6f1d5f2b25",
+        "z_anatomy:object:a9236e040eba"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Fourth ventricle. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:36a3f1ce4c80": 0.3,
+          "z_anatomy:object:50344d95c1ae": 0.3,
+          "z_anatomy:object:97dd9a331971": 0.3,
+          "z_anatomy:object:ca9d07979ec6": 0.3,
+          "z_anatomy:object:1eccde2020e7": 0.3,
+          "z_anatomy:object:ba6f1d5f2b25": 0.3,
+          "z_anatomy:object:a9236e040eba": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-06",
+      "title": "Left Choroid plexus",
+      "selected": "z_anatomy:object:1eccde2020e7",
+      "visible": [
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:97dd9a331971",
+        "z_anatomy:object:ca9d07979ec6",
+        "z_anatomy:object:3cf4071d43fc",
+        "z_anatomy:object:1eccde2020e7",
+        "z_anatomy:object:ba6f1d5f2b25",
+        "z_anatomy:object:a9236e040eba"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Choroid plexus.l. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:36a3f1ce4c80": 0.3,
+          "z_anatomy:object:50344d95c1ae": 0.3,
+          "z_anatomy:object:97dd9a331971": 0.3,
+          "z_anatomy:object:ca9d07979ec6": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3,
+          "z_anatomy:object:ba6f1d5f2b25": 0.3,
+          "z_anatomy:object:a9236e040eba": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-07",
+      "title": "Right Choroid plexus",
+      "selected": "z_anatomy:object:ba6f1d5f2b25",
+      "visible": [
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:97dd9a331971",
+        "z_anatomy:object:ca9d07979ec6",
+        "z_anatomy:object:3cf4071d43fc",
+        "z_anatomy:object:1eccde2020e7",
+        "z_anatomy:object:ba6f1d5f2b25",
+        "z_anatomy:object:a9236e040eba"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Choroid plexus.r. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:36a3f1ce4c80": 0.3,
+          "z_anatomy:object:50344d95c1ae": 0.3,
+          "z_anatomy:object:97dd9a331971": 0.3,
+          "z_anatomy:object:ca9d07979ec6": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3,
+          "z_anatomy:object:1eccde2020e7": 0.3,
+          "z_anatomy:object:a9236e040eba": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-venous-context",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Dural sinus and petrosal model relationships",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Identify the named source models, trace their supplied extents and compare spatial relationships from several views.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "ni-z201-1",
+      "title": "Superior sagittal sinus",
+      "selected": "z_anatomy:object:936cd9edb990",
+      "visible": [
+        "z_anatomy:object:c002a05be1be",
+        "z_anatomy:object:5c964a6700a4",
+        "z_anatomy:object:2ae1aae583dc",
+        "z_anatomy:object:e6dc7f30c057",
+        "z_anatomy:object:a4d421755c15",
+        "z_anatomy:object:c967e13d729e",
+        "z_anatomy:object:e51839d7741a",
+        "z_anatomy:object:82afeb19efc6",
+        "z_anatomy:object:d37ded8a2604",
+        "z_anatomy:object:8e144d30c66e",
+        "z_anatomy:object:2d58e22782ec",
+        "z_anatomy:object:9e047f59c0c1",
+        "z_anatomy:object:9feebea321a9",
+        "z_anatomy:object:fb4bccc299cc",
+        "z_anatomy:object:3057a9c9e53d",
+        "z_anatomy:object:936cd9edb990",
+        "z_anatomy:object:ce3e3b50ec33",
+        "z_anatomy:object:12593fa9328d",
+        "z_anatomy:object:a0732d6446f1",
+        "z_anatomy:object:06da93e333c2"
+      ],
+      "prompt": "Inspect the superior sagittal model together with the source falx. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Superior sagittal sinus. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:12593fa9328d": 0.2,
+          "z_anatomy:object:a0732d6446f1": 0.2,
+          "z_anatomy:object:06da93e333c2": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z201-2",
+      "title": "Straight sinus",
+      "selected": "z_anatomy:object:3057a9c9e53d",
+      "visible": [
+        "z_anatomy:object:c002a05be1be",
+        "z_anatomy:object:5c964a6700a4",
+        "z_anatomy:object:2ae1aae583dc",
+        "z_anatomy:object:e6dc7f30c057",
+        "z_anatomy:object:a4d421755c15",
+        "z_anatomy:object:c967e13d729e",
+        "z_anatomy:object:e51839d7741a",
+        "z_anatomy:object:82afeb19efc6",
+        "z_anatomy:object:d37ded8a2604",
+        "z_anatomy:object:8e144d30c66e",
+        "z_anatomy:object:2d58e22782ec",
+        "z_anatomy:object:9e047f59c0c1",
+        "z_anatomy:object:9feebea321a9",
+        "z_anatomy:object:fb4bccc299cc",
+        "z_anatomy:object:3057a9c9e53d",
+        "z_anatomy:object:936cd9edb990",
+        "z_anatomy:object:ce3e3b50ec33",
+        "z_anatomy:object:12593fa9328d",
+        "z_anatomy:object:a0732d6446f1",
+        "z_anatomy:object:06da93e333c2"
+      ],
+      "prompt": "Compare the straight sinus model with the source inferior sagittal sinus and tentorial context. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Straight sinus. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:12593fa9328d": 0.2,
+          "z_anatomy:object:a0732d6446f1": 0.2,
+          "z_anatomy:object:06da93e333c2": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z201-3",
+      "title": "Left Transverse sinus",
+      "selected": "z_anatomy:object:d37ded8a2604",
+      "visible": [
+        "z_anatomy:object:c002a05be1be",
+        "z_anatomy:object:5c964a6700a4",
+        "z_anatomy:object:2ae1aae583dc",
+        "z_anatomy:object:e6dc7f30c057",
+        "z_anatomy:object:a4d421755c15",
+        "z_anatomy:object:c967e13d729e",
+        "z_anatomy:object:e51839d7741a",
+        "z_anatomy:object:82afeb19efc6",
+        "z_anatomy:object:d37ded8a2604",
+        "z_anatomy:object:8e144d30c66e",
+        "z_anatomy:object:2d58e22782ec",
+        "z_anatomy:object:9e047f59c0c1",
+        "z_anatomy:object:9feebea321a9",
+        "z_anatomy:object:fb4bccc299cc",
+        "z_anatomy:object:3057a9c9e53d",
+        "z_anatomy:object:936cd9edb990",
+        "z_anatomy:object:ce3e3b50ec33",
+        "z_anatomy:object:12593fa9328d",
+        "z_anatomy:object:a0732d6446f1",
+        "z_anatomy:object:06da93e333c2"
+      ],
+      "prompt": "Follow the left transverse source object toward the separate sigmoid model. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Transverse sinus. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:12593fa9328d": 0.2,
+          "z_anatomy:object:a0732d6446f1": 0.2,
+          "z_anatomy:object:06da93e333c2": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z201-4",
+      "title": "Left Cavernous sinus",
+      "selected": "z_anatomy:object:c002a05be1be",
+      "visible": [
+        "z_anatomy:object:c002a05be1be",
+        "z_anatomy:object:5c964a6700a4",
+        "z_anatomy:object:2ae1aae583dc",
+        "z_anatomy:object:e6dc7f30c057",
+        "z_anatomy:object:a4d421755c15",
+        "z_anatomy:object:c967e13d729e",
+        "z_anatomy:object:e51839d7741a",
+        "z_anatomy:object:82afeb19efc6",
+        "z_anatomy:object:d37ded8a2604",
+        "z_anatomy:object:8e144d30c66e",
+        "z_anatomy:object:2d58e22782ec",
+        "z_anatomy:object:9e047f59c0c1",
+        "z_anatomy:object:9feebea321a9",
+        "z_anatomy:object:fb4bccc299cc",
+        "z_anatomy:object:3057a9c9e53d",
+        "z_anatomy:object:936cd9edb990",
+        "z_anatomy:object:ce3e3b50ec33",
+        "z_anatomy:object:12593fa9328d",
+        "z_anatomy:object:a0732d6446f1",
+        "z_anatomy:object:06da93e333c2"
+      ],
+      "prompt": "Compare the cavernous model with the superior and inferior petrosal source channels. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Left Cavernous sinus. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:12593fa9328d": 0.2,
+          "z_anatomy:object:a0732d6446f1": 0.2,
+          "z_anatomy:object:06da93e333c2": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "ni-z201-5",
+      "title": "Basilar venous plexus",
+      "selected": "z_anatomy:object:ce3e3b50ec33",
+      "visible": [
+        "z_anatomy:object:c002a05be1be",
+        "z_anatomy:object:5c964a6700a4",
+        "z_anatomy:object:2ae1aae583dc",
+        "z_anatomy:object:e6dc7f30c057",
+        "z_anatomy:object:a4d421755c15",
+        "z_anatomy:object:c967e13d729e",
+        "z_anatomy:object:e51839d7741a",
+        "z_anatomy:object:82afeb19efc6",
+        "z_anatomy:object:d37ded8a2604",
+        "z_anatomy:object:8e144d30c66e",
+        "z_anatomy:object:2d58e22782ec",
+        "z_anatomy:object:9e047f59c0c1",
+        "z_anatomy:object:9feebea321a9",
+        "z_anatomy:object:fb4bccc299cc",
+        "z_anatomy:object:3057a9c9e53d",
+        "z_anatomy:object:936cd9edb990",
+        "z_anatomy:object:ce3e3b50ec33",
+        "z_anatomy:object:12593fa9328d",
+        "z_anatomy:object:a0732d6446f1",
+        "z_anatomy:object:06da93e333c2"
+      ],
+      "prompt": "Inspect the source plexus and compare its form with a named single sinus object. Identify the selected source object and describe its relationship to the visible context.",
+      "note": "Basilar venous plexus. This view retains the source author's named geometry, object extent and native XYZ coordinates. Source definitions and processing details accompany the model.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "surface_opacity": {
+          "z_anatomy:object:12593fa9328d": 0.2,
+          "z_anatomy:object:a0732d6446f1": 0.2,
+          "z_anatomy:object:06da93e333c2": 0.2
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

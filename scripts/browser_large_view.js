@@ -1,0 +1,75 @@
+async page => {
+  const errors = [], checks = [], external = [];
+  page.on('pageerror', error => errors.push(String(error)));
+  const origin = new URL(page.url()).origin;
+  await page.route('**/*', route => {
+    if (new URL(route.request().url()).origin === origin) return route.continue();
+    external.push(route.request().url()); return route.abort();
+  });
+  const assert = (value, message) => { if (!value) throw new Error(message); };
+  const ready = async () => {
+    await page.waitForFunction(() => /^(Ready|Notebook scene restored|Scene saved|Saved scene restored|Scene file restored|Teaching export prepared)/.test(document.querySelector('.live-status')?.textContent ?? ''), null, {timeout:60000});
+    await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+  };
+  const position = () => Promise.all(['R','A','S'].map(axis => page.getByLabel(axis+' coordinate in millimeters').inputValue().then(Number)));
+  await page.setViewportSize({width:1600,height:1050}); await page.reload(); await ready();
+  const catalog = await page.evaluate(async () => (await (await fetch('/api/atlases')).json()).atlases);
+  for (const dataset of ['brainstem_navigator_mni','spl_nac','mida','hcp1065_tracts']) {
+    const atlas = catalog.find(atlas => atlas.dataset_id === dataset);
+    assert(atlas, 'Serve the four large-view source fixtures');
+    await page.getByLabel('Local atlas',{exact:true}).selectOption(atlas.key); await ready();
+    await page.getByLabel('View layout',{exact:true}).selectOption('axial');
+    await page.getByRole('button',{name:'Full sections',exact:true}).click(); await ready();
+    const original = await position();
+    const selected = await page.locator('.structure-row.selected button').getAttribute('title');
+    const canvas = page.locator('canvas'), before = await canvas.boundingBox();
+    await canvas.evaluate(node => { window.__largeViewCanvas = node; window.__largeViewContext = node.getContext('webgl2'); });
+    await page.locator('.workspace-heading h1').click(); await ready();
+    await canvas.screenshot({path:'output/playwright/large-'+dataset+'-ordinary.png'});
+    await page.getByRole('button',{name:'Expand viewer',exact:true}).click(); await ready();
+    const dialog = page.getByRole('dialog',{name:'Expanded atlas viewer',exact:true});
+    assert(await dialog.isVisible(), 'Expanded viewer is not a named modal region');
+    assert(await canvas.evaluate(node => node===window.__largeViewCanvas && node.getContext('webgl2')===window.__largeViewContext), 'Expansion replaced the source canvas or graphics context');
+    const expanded = await canvas.boundingBox();
+    assert(expanded.width*expanded.height > before.width*before.height*1.4, 'The source field did not gain useful screen area');
+    assert(JSON.stringify(await position()) === JSON.stringify(original), 'Expansion moved the physical cursor');
+    await page.locator('.viewer-column').evaluate(element => element.scrollTop=0);
+    await page.locator('.workspace-heading h1').click(); await ready();
+    await canvas.screenshot({path:'output/playwright/large-'+dataset+'-full.png'});
+    await page.getByRole('button',{name:'Magnify at cursor',exact:true}).click(); await ready();
+    await canvas.screenshot({path:'output/playwright/large-'+dataset+'-magnified.png'});
+    await page.getByRole('button',{name:'Full sections',exact:true}).click(); await ready();
+    await page.locator('.workspace-heading h1').click(); await ready();
+    await canvas.screenshot({path:'output/playwright/large-'+dataset+'-full-returned.png'});
+    await page.getByRole('button',{name:'Structure library',exact:true}).click();
+    assert(await page.getByLabel('Search structures',{exact:true}).isVisible(), 'Expanded structure search is unavailable');
+    assert(await page.locator('.structure-row.selected button').getAttribute('title') === selected, 'Expansion changed structure selection');
+    await page.getByRole('button',{name:'Close structure library',exact:true}).click();
+    await page.getByRole('button',{name:'Learning tools',exact:true}).click();
+    assert(await page.getByRole('button',{name:'Sources',exact:true}).isVisible(), 'Expanded source evidence is unavailable');
+    await page.getByRole('button',{name:'Close learning tools',exact:true}).click();
+    await page.getByRole('button',{name:'Structure library',exact:true}).focus();
+    await page.keyboard.press('Shift+Tab');
+    assert(await page.getByRole('button',{name:'Export teaching image',exact:true}).evaluate(node=>node===document.activeElement), 'Reverse keyboard navigation escaped the expanded controls');
+    await page.keyboard.press('Tab');
+    assert(await page.getByRole('button',{name:'Structure library',exact:true}).evaluate(node=>node===document.activeElement), 'Forward keyboard navigation escaped the expanded controls');
+    const download = page.waitForEvent('download'); await page.getByRole('button',{name:'Export scene',exact:true}).click();
+    const file = 'data/exports/'+dataset+'/large-view-acceptance/expanded-scene.json'; await (await download).saveAs(file);
+    await page.keyboard.press('Escape'); await ready();
+    assert(!await dialog.count(), 'Escape did not return to ordinary viewing');
+    assert(await page.getByRole('button',{name:'Expand viewer',exact:true}).evaluate(element => element===document.activeElement), 'Keyboard focus was not restored');
+    await page.locator('.workspace-heading h1').click(); await ready();
+    await canvas.screenshot({path:'output/playwright/large-'+dataset+'-returned.png'});
+    await page.getByRole('button',{name:'Reset view',exact:true}).click(); await ready();
+    await page.getByLabel('Import scene file',{exact:true}).setInputFiles(file); await ready();
+    await page.locator('.workspace-heading h1').click(); await ready();
+    await canvas.screenshot({path:'output/playwright/large-'+dataset+'-imported.png'});
+    assert(JSON.stringify(await position())===JSON.stringify(original), 'Imported expanded view changed the native point');
+    await page.getByRole('button',{name:'Expand viewer',exact:true}).click();
+    await page.getByRole('button',{name:'Exit expanded view',exact:true}).click();
+    assert(!await dialog.count(), 'The visible exit control did not return to ordinary viewing');
+    checks.push({dataset,package_version:atlas.package_version,position_ras_mm:original,selected,ordinary_size:[before.width,before.height],expanded_size:[expanded.width,expanded.height],scene:file.replace(/^data\//,'')});
+  }
+  assert(!errors.length && !external.length, 'The expanded view had page errors or external requests');
+  return {status:'passed',checks,page_errors:errors,external_requests:external};
+}

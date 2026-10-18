@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0",
+  "id": "thu-cerebral-mra-segment-correspondence",
+  "status": "project_correspondence_pending_instructor_review",
+  "source_definition": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral_files/Cerebral.jpg",
+  "source_definition_sha256": "b36b0bdaff3c687ced95e80f6a412aa4cda9ebe6f43d6ac3dfd32d170e4b5475",
+  "basis": "Project interpretation of the author arterial-segment diagram, original paired MRA, categorical topology and delivered FCSV points. The archive contains numeric labels and FCSV IDs; it does not include a textual numeric-to-artery lookup table.",
+  "landmark_identity": "The delivered preprocessed FCSV contains 20 IDs. The website diagram describes 19 landmarks with a different numbering convention. Endpoint IDs here refer exclusively to the delivered FCSV.",
+  "source_coordinate_policy": "Original MetaImage LPS millimeters; conversion to RAS changes the coordinate basis, preserving all physical voxel points. Cropped origin is not a midsagittal landmark.",
+  "segments": [
+    {
+      "value": 1,
+      "source_name": "Source segment 1",
+      "name": "Right ACA A1",
+      "laterality": "right",
+      "endpoint_ids": [
+        1,
+        4
+      ],
+      "color": [
+        241,
+        149,
+        62
+      ]
+    },
+    {
+      "value": 2,
+      "source_name": "Source segment 2",
+      "name": "Left ACA A1",
+      "laterality": "left",
+      "endpoint_ids": [
+        7,
+        5
+      ],
+      "color": [
+        243,
+        204,
+        66
+      ]
+    },
+    {
+      "value": 3,
+      "source_name": "Source segment 3",
+      "name": "Right MCA M1",
+      "laterality": "right",
+      "endpoint_ids": [
+        1,
+        3
+      ],
+      "color": [
+        246,
+        91,
+        89
+      ]
+    },
+    {
+      "value": 4,
+      "source_name": "Source segment 4",
+      "name": "Left MCA M1",
+      "laterality": "left",
+      "endpoint_ids": [
+        7,
+        8
+      ],
+      "color": [
+        238,
+        151,
+        167
+      ]
+    },
+    {
+      "value": 5,
+      "source_name": "Source segment 5",
+      "name": "Anterior communicating artery",
+      "laterality": "midline",
+      "endpoint_ids": [
+        4,
+        5
+      ],
+      "color": [
+        200,
+        214,
+        73
+      ]
+    },
+    {
+      "value": 6,
+      "source_name": "Source segment 6",
+      "name": "Right ACA A2",
+      "laterality": "right",
+      "endpoint_ids": [
+        4,
+        15
+      ],
+      "color": [
+        117,
+        204,
+        106
+      ]
+    },
+    {
+      "value": 7,
+      "source_name": "Source segment 7",
+      "name": "Left ACA A2",
+      "laterality": "left",
+      "endpoint_ids": [
+        5,
+        16
+      ],
+      "color": [
+        50,
+        168,
+        131
+      ]
+    },
+    {
+      "value": 8,
+      "source_name": "Source segment 8",
+      "name": "Right posterior communicating artery",
+      "laterality": "right",
+      "endpoint_ids": [
+        2,
+        10
+      ],
+      "color": [
+        73,
+        205,
+        222
+      ]
+    },
+    {
+      "value": 9,
+      "source_name": "Source segment 9",
+      "name": "Left posterior communicating artery",
+      "laterality": "left",
+      "endpoint_ids": [
+        6,
+        11
+      ],
+      "color": [
+        58,
+        135,
+        203
+      ]
+    },
+    {
+      "value": 10,
+      "source_name": "Source segment 10",
+      "name": "Right PCA P1",
+      "laterality": "right",
+      "endpoint_ids": [
+        9,
+        10
+      ],
+      "color": [
+        172,
+        130,
+        234
+      ]
+    },
+    {
+      "value": 11,
+      "source_name": "Source segment 11",
+      "name": "Left PCA P1",
+      "laterality": "left",
+      "endpoint_ids": [
+        9,
+        11
+      ],
+      "color": [
+        138,
+        93,
+        202
+      ]
+    },
+    {
+      "value": 12,
+      "source_name": "Source segment 12",
+      "name": "Right PCA P2A",
+      "laterality": "right",
+      "endpoint_ids": [
+        10,
+        12
+      ],
+      "color": [
+        209,
+        136,
+        219
+      ]
+    },
+    {
+      "value": 13,
+      "source_name": "Source segment 13",
+      "name": "Left PCA P2A",
+      "laterality": "left",
+      "endpoint_ids": [
+        11,
+        13
+      ],
+      "color": [
+        207,
+        86,
+        170
+      ]
+    },
+    {
+      "value": 14,
+      "source_name": "Source segment 14",
+      "name": "Basilar artery",
+      "laterality": "midline",
+      "endpoint_ids": [
+        9,
+        14
+      ],
+      "color": [
+        197,
+        171,
+        119
+      ]
+    },
+    {
+      "value": 15,
+      "source_name": "Source segment 15",
+      "name": "Right ICA C7",
+      "laterality": "right",
+      "endpoint_ids": [
+        1,
+        2
+      ],
+      "color": [
+        49,
+        185,
+        184
+      ]
+    },
+    {
+      "value": 16,
+      "source_name": "Source segment 16",
+      "name": "Left ICA C7",
+      "laterality": "left",
+      "endpoint_ids": [
+        7,
+        6
+      ],
+      "color": [
+        82,
+        140,
+        172
+      ]
+    },
+    {
+      "value": 17,
+      "source_name": "Source segment 17",
+      "name": "Right ICA C6",
+      "laterality": "right",
+      "endpoint_ids": [
+        2,
+        17
+      ],
+      "color": [
+        131,
+        186,
+        222
+      ]
+    },
+    {
+      "value": 18,
+      "source_name": "Source segment 18",
+      "name": "Left ICA C6",
+      "laterality": "left",
+      "endpoint_ids": [
+        6,
+        18
+      ],
+      "color": [
+        86,
+        114,
+        194
+      ]
+    },
+    {
+      "value": 19,
+      "source_name": "Source segment 19",
+      "name": "Right ICA C5",
+      "laterality": "right",
+      "endpoint_ids": [
+        17,
+        19
+      ],
+      "color": [
+        179,
+        207,
+        217
+      ]
+    },
+    {
+      "value": 20,
+      "source_name": "Source segment 20",
+      "name": "Left ICA C5",
+      "laterality": "left",
+      "endpoint_ids": [
+        18,
+        20
+      ],
+      "color": [
+        119,
+        171,
+        189
+      ]
+    }
+  ]
+}

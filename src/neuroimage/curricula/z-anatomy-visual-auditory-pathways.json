@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-visual-auditory-pathways",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Visual and auditory source components",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare source-defined neural components and their neighboring models in native XYZ.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "group-01-context",
+      "title": "Left Cochlear nerve \u00b7 source context",
+      "selected": "z_anatomy:object:205890059889",
+      "visible": [
+        "z_anatomy:object:205890059889",
+        "z_anatomy:object:f554ef39a396",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:2d95626c6302",
+        "z_anatomy:object:1062c7e6d10d"
+      ],
+      "prompt": "Compare the separate cochlear and vestibular source components with the supplied inner-ear context. Read the original source names for laterality.",
+      "note": "Original source object: Cochlear nerve.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.17
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-01-detail",
+      "title": "Left Cochlear nerve \u00b7 component detail",
+      "selected": "z_anatomy:object:205890059889",
+      "visible": [
+        "z_anatomy:object:205890059889",
+        "z_anatomy:object:f554ef39a396",
+        "z_anatomy:object:2d95626c6302",
+        "z_anatomy:object:1062c7e6d10d"
+      ],
+      "prompt": "Compare the separate cochlear and vestibular source components with the supplied inner-ear context. Read the original source names for laterality.",
+      "note": "Original source object: Cochlear nerve.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-02-context",
+      "title": "Left Vestibular nerve \u00b7 source context",
+      "selected": "z_anatomy:object:f554ef39a396",
+      "visible": [
+        "z_anatomy:object:205890059889",
+        "z_anatomy:object:f554ef39a396",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:2d95626c6302",
+        "z_anatomy:object:1062c7e6d10d"
+      ],
+      "prompt": "Compare the separate cochlear and vestibular source components with the supplied inner-ear context. Read the original source names for laterality.",
+      "note": "Original source object: Vestibular nerve.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:6d36daa5e529": 0.17
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-02-detail",
+      "title": "Left Vestibular nerve \u00b7 component detail",
+      "selected": "z_anatomy:object:f554ef39a396",
+      "visible": [
+        "z_anatomy:object:205890059889",
+        "z_anatomy:object:f554ef39a396",
+        "z_anatomy:object:2d95626c6302",
+        "z_anatomy:object:1062c7e6d10d"
+      ],
+      "prompt": "Compare the separate cochlear and vestibular source components with the supplied inner-ear context. Read the original source names for laterality.",
+      "note": "Original source object: Vestibular nerve.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-03-context",
+      "title": "Right Vestibular nerve \u00b7 source context",
+      "selected": "z_anatomy:object:82ade9c7d07c",
+      "visible": [
+        "z_anatomy:object:61ce044ecba8",
+        "z_anatomy:object:82ade9c7d07c",
+        "z_anatomy:object:de51bcc0183f",
+        "z_anatomy:object:c0a62e69cbd4",
+        "z_anatomy:object:9ef26fa076b2"
+      ],
+      "prompt": "Compare the separate cochlear and vestibular source components with the supplied inner-ear context. Read the original source names for laterality.",
+      "note": "Original source object: Vestibular nerve.r. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:de51bcc0183f": 0.17
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-03-detail",
+      "title": "Right Vestibular nerve \u00b7 component detail",
+      "selected": "z_anatomy:object:82ade9c7d07c",
+      "visible": [
+        "z_anatomy:object:61ce044ecba8",
+        "z_anatomy:object:82ade9c7d07c",
+        "z_anatomy:object:c0a62e69cbd4",
+        "z_anatomy:object:9ef26fa076b2"
+      ],
+      "prompt": "Compare the separate cochlear and vestibular source components with the supplied inner-ear context. Read the original source names for laterality.",
+      "note": "Original source object: Vestibular nerve.r. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-04-context",
+      "title": "Left Optic chiasm \u00b7 source context",
+      "selected": "z_anatomy:object:1fd2352ee46b",
+      "visible": [
+        "z_anatomy:object:b82ab3094429",
+        "z_anatomy:object:1fd2352ee46b",
+        "z_anatomy:object:b97f7aa5884d",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:085615d1342a",
+        "z_anatomy:object:abc22cabcee5",
+        "z_anatomy:object:999b833e95b3",
+        "z_anatomy:object:37cada537bd0"
+      ],
+      "prompt": "Compare the named source components from optic nerves through chiasm and tracts to the geniculate models. Preserve the identity and extent of each original object.",
+      "note": "Original source object: Optic chiasm.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-04-detail",
+      "title": "Left Optic chiasm \u00b7 component detail",
+      "selected": "z_anatomy:object:1fd2352ee46b",
+      "visible": [
+        "z_anatomy:object:1fd2352ee46b",
+        "z_anatomy:object:b97f7aa5884d",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:abc22cabcee5",
+        "z_anatomy:object:999b833e95b3",
+        "z_anatomy:object:37cada537bd0"
+      ],
+      "prompt": "Compare the named source components from optic nerves through chiasm and tracts to the geniculate models. Preserve the identity and extent of each original object.",
+      "note": "Original source object: Optic chiasm.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-05-context",
+      "title": "Left Optic tract \u00b7 source context",
+      "selected": "z_anatomy:object:b97f7aa5884d",
+      "visible": [
+        "z_anatomy:object:b82ab3094429",
+        "z_anatomy:object:1fd2352ee46b",
+        "z_anatomy:object:b97f7aa5884d",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:085615d1342a",
+        "z_anatomy:object:abc22cabcee5",
+        "z_anatomy:object:999b833e95b3",
+        "z_anatomy:object:37cada537bd0"
+      ],
+      "prompt": "Compare the named source components from optic nerves through chiasm and tracts to the geniculate models. Preserve the identity and extent of each original object.",
+      "note": "Original source object: Optic tract.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-05-detail",
+      "title": "Left Optic tract \u00b7 component detail",
+      "selected": "z_anatomy:object:b97f7aa5884d",
+      "visible": [
+        "z_anatomy:object:1fd2352ee46b",
+        "z_anatomy:object:b97f7aa5884d",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:abc22cabcee5",
+        "z_anatomy:object:999b833e95b3",
+        "z_anatomy:object:37cada537bd0"
+      ],
+      "prompt": "Compare the named source components from optic nerves through chiasm and tracts to the geniculate models. Preserve the identity and extent of each original object.",
+      "note": "Original source object: Optic tract.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-06-context",
+      "title": "Left Lateral geniculate body \u00b7 source context",
+      "selected": "z_anatomy:object:f7ef3d00ca68",
+      "visible": [
+        "z_anatomy:object:b82ab3094429",
+        "z_anatomy:object:1fd2352ee46b",
+        "z_anatomy:object:b97f7aa5884d",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:085615d1342a",
+        "z_anatomy:object:abc22cabcee5",
+        "z_anatomy:object:999b833e95b3",
+        "z_anatomy:object:37cada537bd0"
+      ],
+      "prompt": "Compare the named source components from optic nerves through chiasm and tracts to the geniculate models. Preserve the identity and extent of each original object.",
+      "note": "Original source object: Lateral geniculate body.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "group-06-detail",
+      "title": "Left Lateral geniculate body \u00b7 component detail",
+      "selected": "z_anatomy:object:f7ef3d00ca68",
+      "visible": [
+        "z_anatomy:object:1fd2352ee46b",
+        "z_anatomy:object:b97f7aa5884d",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:abc22cabcee5",
+        "z_anatomy:object:999b833e95b3",
+        "z_anatomy:object:37cada537bd0"
+      ],
+      "prompt": "Compare the named source components from optic nerves through chiasm and tracts to the geniculate models. Preserve the identity and extent of each original object.",
+      "note": "Original source object: Lateral geniculate body.l. Source world XYZ and source-defined laterality are retained. The display shows an author-defined educational model with the supplied contributor attribution.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {},
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

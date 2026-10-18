@@ -1,0 +1,31 @@
+{
+  "software_license": "Apache-2.0",
+  "distribution": "code_only",
+  "data_acquisition": "Users independently obtain datasets under their current terms",
+  "include": [
+    "source code",
+    "schemas",
+    "recipes",
+    "resource references",
+    "English documentation"
+  ],
+  "exclude_directories": [
+    "data",
+    "downloads",
+    "raw",
+    "derivatives",
+    "benchmarks",
+    "cache",
+    "exports",
+    "tools",
+    "node_modules",
+    ".internal"
+  ],
+  "exclude_files": [
+    "config/storage.local.json",
+    ".env"
+  ],
+  "data_export": "A separate user action requiring per-source permissions and provenance",
+  "acquired_assets_in_software_release": 0,
+  "dataset_support": "Equal import, construction, viewing and validation contracts"
+}

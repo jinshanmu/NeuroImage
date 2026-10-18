@@ -1,0 +1,570 @@
+{
+  "id": "thu_mra_case010",
+  "adapter": "source-mri-label-volume",
+  "representation": "mri-labels",
+  "version": "1",
+  "title": "Cerebral MRA \u00b7 healthy volunteer 010",
+  "metaimage_units": "mm",
+  "units_evidence": "Publisher preprocessing specification declares millimeter voxel spacing. Original MetaImage origin, direction and spacing plus Slicer RAS FCSV landmarks preserve the paired case frame.",
+  "space": {
+    "id": "thu-mra-010-source-processed",
+    "name": "Healthy volunteer 010, original author-processed MRA grid",
+    "reference": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+    "correspondence": "Original image and segmentation have identical MetaImage grids. Source author rigid preprocessing is retained. This package supplies no transform to another case, the original UNC acquisition or another atlas."
+  },
+  "inputs": {
+    "mra": "raw/thu_cerebral_mra/preprocessed/010-img.mha",
+    "labels": "raw/thu_cerebral_mra/preprocessed/010-sseg-label.mha",
+    "landmarks": "raw/thu_cerebral_mra/preprocessed/010-land.fcsv",
+    "license": "licenses/thu_cerebral_mra/official-source-page.html"
+  },
+  "images": [
+    {
+      "id": "mra",
+      "name": "Case 010 source-processed MRA"
+    }
+  ],
+  "require_same_grid": true,
+  "require_full_label_inventory": true,
+  "construction_peak_gib": 2,
+  "sources": [
+    {
+      "id": "thu_cerebral_mra",
+      "title": "THU cerebral MRA annotations on the healthy UNC volunteer dataset",
+      "version": "Official preprocessed archive; SHA256 fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e; retrieved 2026-10-14",
+      "url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+      "citation": "Tan Z, Feng J, Lu W, Yin Y, Yang G, Zhou J. Multi-task global optimization-based method for vascular landmark detection. Computerized Medical Imaging and Graphics 114 (2024), 102364. doi:10.1016/j.compmedimag.2024.102364. Original healthy-volunteer imaging: UNC / TubeTK data collection.",
+      "license_name": "Publisher permission for noncommercial research and educational use",
+      "license_url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+      "license_input": "license"
+    }
+  ],
+  "selection": [
+    {
+      "value": 1,
+      "source_name": "Source segment 1",
+      "name": "Right ACA A1 \u00b7 segment 1",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        241,
+        149,
+        62
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 2,
+      "source_name": "Source segment 2",
+      "name": "Left ACA A1 \u00b7 segment 2",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        243,
+        204,
+        66
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 3,
+      "source_name": "Source segment 3",
+      "name": "Right MCA M1 \u00b7 segment 3",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        246,
+        91,
+        89
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 4,
+      "source_name": "Source segment 4",
+      "name": "Left MCA M1 \u00b7 segment 4",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        238,
+        151,
+        167
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 5,
+      "source_name": "Source segment 5",
+      "name": "Anterior communicating artery \u00b7 segment 5",
+      "category": "Cerebral arterial segments",
+      "laterality": "midline",
+      "color": [
+        200,
+        214,
+        73
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 6,
+      "source_name": "Source segment 6",
+      "name": "Right ACA A2 \u00b7 segment 6",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        117,
+        204,
+        106
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 7,
+      "source_name": "Source segment 7",
+      "name": "Left ACA A2 \u00b7 segment 7",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        50,
+        168,
+        131
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 9,
+      "source_name": "Source segment 9",
+      "name": "Left posterior communicating artery \u00b7 segment 9",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        58,
+        135,
+        203
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 10,
+      "source_name": "Source segment 10",
+      "name": "Right PCA P1 \u00b7 segment 10",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        172,
+        130,
+        234
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 11,
+      "source_name": "Source segment 11",
+      "name": "Left PCA P1 \u00b7 segment 11",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        138,
+        93,
+        202
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 12,
+      "source_name": "Source segment 12",
+      "name": "Right PCA P2A \u00b7 segment 12",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        209,
+        136,
+        219
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 13,
+      "source_name": "Source segment 13",
+      "name": "Left PCA P2A \u00b7 segment 13",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        207,
+        86,
+        170
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 14,
+      "source_name": "Source segment 14",
+      "name": "Basilar artery \u00b7 segment 14",
+      "category": "Cerebral arterial segments",
+      "laterality": "midline",
+      "color": [
+        197,
+        171,
+        119
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 15,
+      "source_name": "Source segment 15",
+      "name": "Right ICA C7 \u00b7 segment 15",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        49,
+        185,
+        184
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 16,
+      "source_name": "Source segment 16",
+      "name": "Left ICA C7 \u00b7 segment 16",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        82,
+        140,
+        172
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 17,
+      "source_name": "Source segment 17",
+      "name": "Right ICA C6 \u00b7 segment 17",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        131,
+        186,
+        222
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 18,
+      "source_name": "Source segment 18",
+      "name": "Left ICA C6 \u00b7 segment 18",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        86,
+        114,
+        194
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 19,
+      "source_name": "Source segment 19",
+      "name": "Right ICA C5 \u00b7 segment 19",
+      "category": "Cerebral arterial segments",
+      "laterality": "right",
+      "color": [
+        179,
+        207,
+        217
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    },
+    {
+      "value": 20,
+      "source_name": "Source segment 20",
+      "name": "Left ICA C5 \u00b7 segment 20",
+      "category": "Cerebral arterial segments",
+      "laterality": "left",
+      "color": [
+        119,
+        171,
+        189
+      ],
+      "evidence": "Source binary vessel segmentation and landmark-based semantic partition with author manual correction. Project numeric-to-artery correspondence follows the published diagram and original landmark topology.",
+      "notes": [
+        "Healthy-volunteer source case 010; 192 x 160 x 96 author-processed grid.",
+        "Source authors performed intensity-based rigid alignment and cropping before release. The package retains the delivered paired image and categorical samples.",
+        "Arterial names are a project correspondence to the author diagram and delivered landmark topology; the original numeric segment ID remains visible. Instructor correspondence review has a separate record.",
+        "Available sampling is 0.513393 x 0.513393 x 0.799999 mm. The 3D surface is the categorical half-voxel boundary.",
+        "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here."
+      ]
+    }
+  ],
+  "source_case": {
+    "case": "010",
+    "cohort": "109 healthy UNC volunteers; publisher dataset description",
+    "original_data_url": "https://public.kitware.com/Wiki/TubeTK/Data",
+    "present_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "absent_values": [
+      8
+    ],
+    "landmark_count": 20,
+    "correspondence_catalog": "thu-cerebral-mra-segments.json",
+    "correspondence_status": "project_correspondence_pending_instructor_review"
+  },
+  "acquisition": "Run neuroimage acquire thu_mra_case010 --data-root <data-root>. The common archive is reused and only the selected original case files are extracted.",
+  "archives": [
+    {
+      "dataset_id": "thu_cerebral_mra",
+      "filename": "annotation-aftpreprocess.zip",
+      "url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral_files/annotation-aftpreprocess.zip",
+      "bytes": 1198822695,
+      "sha256": "fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e",
+      "format": "zip",
+      "members": [
+        {
+          "member": "annotation-aftpreprocess/010-img.mha",
+          "target": "raw/thu_cerebral_mra/preprocessed/010-img.mha",
+          "bytes": 10795751,
+          "sha256": "0d3c6c76d49bbb32b9a145710279548939c84c31016be087d5ab4f73ba5e76fd"
+        },
+        {
+          "member": "annotation-aftpreprocess/010-sseg-label.mha",
+          "target": "raw/thu_cerebral_mra/preprocessed/010-sseg-label.mha",
+          "bytes": 11550,
+          "sha256": "aaab025fed999ce60099f913f62dfabe46f9f257bc8e8f492f058e932f740dd3"
+        },
+        {
+          "member": "annotation-aftpreprocess/010-land.fcsv",
+          "target": "raw/thu_cerebral_mra/preprocessed/010-land.fcsv",
+          "bytes": 1845,
+          "sha256": "2570c0e09dc176671ec42e1536071a4664f5a67743456406217886a545ac86e3"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "target": "licenses/thu_cerebral_mra/official-source-page.html",
+      "url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+      "bytes": 110996,
+      "sha256": "99600a1cd202bb8d69ebc2dc54123422d4abd754420f29ca12e8ef1363afc82a",
+      "hash_basis": "Exact publisher permission page retrieved 2026-10-14"
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-THU-010-01",
+      "title": "Anterior cerebral and communicating region",
+      "objective": "Compare the paired anterior cerebral courses and their communicating region on the source MRA.",
+      "instruction": "Compare the paired anterior cerebral courses and their communicating region on the source MRA. Follow the same source point through all three MRA sections and rotate the complete visible 3D set.",
+      "evidence_limit": "Evidence: healthy-volunteer MRA, author-processed grid and source semantic annotation. Numeric-to-name correspondence is project curated and separately reviewed. Sampling and annotation coverage define the represented extent.",
+      "structure_ids": [
+        "thu_mra_case010:label:1",
+        "thu_mra_case010:label:2",
+        "thu_mra_case010:label:5",
+        "thu_mra_case010:label:6",
+        "thu_mra_case010:label:7"
+      ],
+      "step_prompt": "Identify the active numeric segment, follow its MRA signal and compare the adjacent segment interfaces.",
+      "step_question": "Which source segment is selected, which MRA planes show its course, and what neighboring segments are represented?"
+    },
+    {
+      "id": "NI-THU-010-02",
+      "title": "Middle cerebral origins",
+      "objective": "Follow the lateral M1 courses from the terminal internal carotid region in the source image.",
+      "instruction": "Follow the lateral M1 courses from the terminal internal carotid region in the source image. Follow the same source point through all three MRA sections and rotate the complete visible 3D set.",
+      "evidence_limit": "Evidence: healthy-volunteer MRA, author-processed grid and source semantic annotation. Numeric-to-name correspondence is project curated and separately reviewed. Sampling and annotation coverage define the represented extent.",
+      "structure_ids": [
+        "thu_mra_case010:label:3",
+        "thu_mra_case010:label:4",
+        "thu_mra_case010:label:1",
+        "thu_mra_case010:label:2",
+        "thu_mra_case010:label:15",
+        "thu_mra_case010:label:16"
+      ],
+      "step_prompt": "Identify the active numeric segment, follow its MRA signal and compare the adjacent segment interfaces.",
+      "step_question": "Which source segment is selected, which MRA planes show its course, and what neighboring segments are represented?"
+    },
+    {
+      "id": "NI-THU-010-03",
+      "title": "Posterior communicating and cerebral region",
+      "objective": "Compare posterior communicating courses, P1 and P2A assignments with the basilar termination.",
+      "instruction": "Compare posterior communicating courses, P1 and P2A assignments with the basilar termination. Follow the same source point through all three MRA sections and rotate the complete visible 3D set.",
+      "evidence_limit": "Evidence: healthy-volunteer MRA, author-processed grid and source semantic annotation. Numeric-to-name correspondence is project curated and separately reviewed. Sampling and annotation coverage define the represented extent.",
+      "structure_ids": [
+        "thu_mra_case010:label:9",
+        "thu_mra_case010:label:10",
+        "thu_mra_case010:label:11",
+        "thu_mra_case010:label:12",
+        "thu_mra_case010:label:13",
+        "thu_mra_case010:label:14",
+        "thu_mra_case010:label:15",
+        "thu_mra_case010:label:16"
+      ],
+      "step_prompt": "Identify the active numeric segment, follow its MRA signal and compare the adjacent segment interfaces.",
+      "step_question": "Which source segment is selected, which MRA planes show its course, and what neighboring segments are represented?"
+    },
+    {
+      "id": "NI-THU-010-04",
+      "title": "Carotid segment sequence",
+      "objective": "Trace the source C5, C6 and C7 assignments using adjacent MRA sections and the retained categorical interfaces.",
+      "instruction": "Trace the source C5, C6 and C7 assignments using adjacent MRA sections and the retained categorical interfaces. Follow the same source point through all three MRA sections and rotate the complete visible 3D set.",
+      "evidence_limit": "Evidence: healthy-volunteer MRA, author-processed grid and source semantic annotation. Numeric-to-name correspondence is project curated and separately reviewed. Sampling and annotation coverage define the represented extent.",
+      "structure_ids": [
+        "thu_mra_case010:label:19",
+        "thu_mra_case010:label:17",
+        "thu_mra_case010:label:15",
+        "thu_mra_case010:label:20",
+        "thu_mra_case010:label:18",
+        "thu_mra_case010:label:16",
+        "thu_mra_case010:label:3",
+        "thu_mra_case010:label:4"
+      ],
+      "step_prompt": "Identify the active numeric segment, follow its MRA signal and compare the adjacent segment interfaces.",
+      "step_question": "Which source segment is selected, which MRA planes show its course, and what neighboring segments are represented?"
+    }
+  ],
+  "license_downloads": []
+}

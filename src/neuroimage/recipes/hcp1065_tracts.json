@@ -1,0 +1,2316 @@
+{
+  "id": "hcp1065_tracts",
+  "version": "2",
+  "adapter": "trackvis-bundles",
+  "representation": "mri-streamlines",
+  "title": "HCP1065 \u00b7 expanded source streamline bundles",
+  "source_version": "HCP1065-Yeh-2022-TRK-SHA256-pinned",
+  "construction_peak_gib": 8,
+  "inputs": {
+    "AF_L": "raw/hcp1065_trk/association/AF_L.trk.gz",
+    "AF_R": "raw/hcp1065_trk/association/AF_R.trk.gz",
+    "CST_L": "raw/hcp1065_trk/projection/CST_L.trk.gz",
+    "CST_R": "raw/hcp1065_trk/projection/CST_R.trk.gz",
+    "CC": "raw/hcp1065_trk/commissural/CC.trk.gz",
+    "MCP": "raw/hcp1065_trk/cerebellum/MCP.trk.gz",
+    "t1": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t1_tal_nlin_asym_09a.nii",
+    "t2": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t2_tal_nlin_asym_09a.nii",
+    "license": "licenses/hcp1065_trk/official-terms.html",
+    "template_license": "licenses/mni_09a_asym/official-terms.html",
+    "source_description": "licenses/hcp1065_trk/source-description.html",
+    "hcp_acknowledgment": "licenses/hcp1065_trk/hcp-acknowledgment.html",
+    "source_abbreviations": "downloads/hcp1065_trk/abbreviation.xlsx",
+    "C_FPH_L": "raw/hcp1065_trk/association/C_FPH_L.trk.gz",
+    "C_FPH_R": "raw/hcp1065_trk/association/C_FPH_R.trk.gz",
+    "C_FP_L": "raw/hcp1065_trk/association/C_FP_L.trk.gz",
+    "C_FP_R": "raw/hcp1065_trk/association/C_FP_R.trk.gz",
+    "C_PHP_L": "raw/hcp1065_trk/association/C_PHP_L.trk.gz",
+    "C_PHP_R": "raw/hcp1065_trk/association/C_PHP_R.trk.gz",
+    "C_PH_L": "raw/hcp1065_trk/association/C_PH_L.trk.gz",
+    "C_PH_R": "raw/hcp1065_trk/association/C_PH_R.trk.gz",
+    "C_PO_L": "raw/hcp1065_trk/association/C_PO_L.trk.gz",
+    "C_PO_R": "raw/hcp1065_trk/association/C_PO_R.trk.gz",
+    "EMC_L": "raw/hcp1065_trk/association/EMC_L.trk.gz",
+    "EMC_R": "raw/hcp1065_trk/association/EMC_R.trk.gz",
+    "FAT_L": "raw/hcp1065_trk/association/FAT_L.trk.gz",
+    "FAT_R": "raw/hcp1065_trk/association/FAT_R.trk.gz",
+    "IFOF_L": "raw/hcp1065_trk/association/IFOF_L.trk.gz",
+    "IFOF_R": "raw/hcp1065_trk/association/IFOF_R.trk.gz",
+    "ILF_L": "raw/hcp1065_trk/association/ILF_L.trk.gz",
+    "ILF_R": "raw/hcp1065_trk/association/ILF_R.trk.gz",
+    "MdLF_L": "raw/hcp1065_trk/association/MdLF_L.trk.gz",
+    "MdLF_R": "raw/hcp1065_trk/association/MdLF_R.trk.gz",
+    "PAT_L": "raw/hcp1065_trk/association/PAT_L.trk.gz",
+    "PAT_R": "raw/hcp1065_trk/association/PAT_R.trk.gz",
+    "SLF1_L": "raw/hcp1065_trk/association/SLF1_L.trk.gz",
+    "SLF1_R": "raw/hcp1065_trk/association/SLF1_R.trk.gz",
+    "SLF2_L": "raw/hcp1065_trk/association/SLF2_L.trk.gz",
+    "SLF2_R": "raw/hcp1065_trk/association/SLF2_R.trk.gz",
+    "SLF3_L": "raw/hcp1065_trk/association/SLF3_L.trk.gz",
+    "SLF3_R": "raw/hcp1065_trk/association/SLF3_R.trk.gz",
+    "UF_L": "raw/hcp1065_trk/association/UF_L.trk.gz",
+    "UF_R": "raw/hcp1065_trk/association/UF_R.trk.gz",
+    "VOF_L": "raw/hcp1065_trk/association/VOF_L.trk.gz",
+    "VOF_R": "raw/hcp1065_trk/association/VOF_R.trk.gz",
+    "CB_L": "raw/hcp1065_trk/cerebellum/CB_L.trk.gz",
+    "CB_R": "raw/hcp1065_trk/cerebellum/CB_R.trk.gz",
+    "ICP_L": "raw/hcp1065_trk/cerebellum/ICP_L.trk.gz",
+    "ICP_R": "raw/hcp1065_trk/cerebellum/ICP_R.trk.gz",
+    "SCP": "raw/hcp1065_trk/cerebellum/SCP.trk.gz",
+    "V": "raw/hcp1065_trk/cerebellum/V.trk.gz",
+    "AC": "raw/hcp1065_trk/commissural/AC.trk.gz",
+    "CNIII_L": "raw/hcp1065_trk/cranial nerve/CNIII_L.trk.gz",
+    "CNIII_R": "raw/hcp1065_trk/cranial nerve/CNIII_R.trk.gz",
+    "CNII_L": "raw/hcp1065_trk/cranial nerve/CNII_L.trk.gz",
+    "CNII_R": "raw/hcp1065_trk/cranial nerve/CNII_R.trk.gz",
+    "CNVIII_L": "raw/hcp1065_trk/cranial nerve/CNVIII_L.trk.gz",
+    "CNVIII_R": "raw/hcp1065_trk/cranial nerve/CNVIII_R.trk.gz",
+    "CNVII_L": "raw/hcp1065_trk/cranial nerve/CNVII_L.trk.gz",
+    "CNVII_R": "raw/hcp1065_trk/cranial nerve/CNVII_R.trk.gz",
+    "CNV_L": "raw/hcp1065_trk/cranial nerve/CNV_L.trk.gz",
+    "CNV_R": "raw/hcp1065_trk/cranial nerve/CNV_R.trk.gz",
+    "AR_L": "raw/hcp1065_trk/projection/AR_L.trk.gz",
+    "AR_R": "raw/hcp1065_trk/projection/AR_R.trk.gz",
+    "CBT_L": "raw/hcp1065_trk/projection/CBT_L.trk.gz",
+    "CBT_R": "raw/hcp1065_trk/projection/CBT_R.trk.gz",
+    "CPT_F_L": "raw/hcp1065_trk/projection/CPT_F_L.trk.gz",
+    "CPT_F_R": "raw/hcp1065_trk/projection/CPT_F_R.trk.gz",
+    "CPT_O_L": "raw/hcp1065_trk/projection/CPT_O_L.trk.gz",
+    "CPT_O_R": "raw/hcp1065_trk/projection/CPT_O_R.trk.gz",
+    "CPT_P_L": "raw/hcp1065_trk/projection/CPT_P_L.trk.gz",
+    "CPT_P_R": "raw/hcp1065_trk/projection/CPT_P_R.trk.gz",
+    "CS_A_L": "raw/hcp1065_trk/projection/CS_A_L.trk.gz",
+    "CS_A_R": "raw/hcp1065_trk/projection/CS_A_R.trk.gz",
+    "CS_P_L": "raw/hcp1065_trk/projection/CS_P_L.trk.gz",
+    "CS_P_R": "raw/hcp1065_trk/projection/CS_P_R.trk.gz",
+    "CS_S_L": "raw/hcp1065_trk/projection/CS_S_L.trk.gz",
+    "CS_S_R": "raw/hcp1065_trk/projection/CS_S_R.trk.gz",
+    "DRTT_L": "raw/hcp1065_trk/projection/DRTT_L.trk.gz",
+    "DRTT_R": "raw/hcp1065_trk/projection/DRTT_R.trk.gz",
+    "F_L": "raw/hcp1065_trk/projection/F_L.trk.gz",
+    "F_R": "raw/hcp1065_trk/projection/F_R.trk.gz",
+    "ML_L": "raw/hcp1065_trk/projection/ML_L.trk.gz",
+    "ML_R": "raw/hcp1065_trk/projection/ML_R.trk.gz",
+    "OR_L": "raw/hcp1065_trk/projection/OR_L.trk.gz",
+    "OR_R": "raw/hcp1065_trk/projection/OR_R.trk.gz",
+    "RST_L": "raw/hcp1065_trk/projection/RST_L.trk.gz",
+    "RST_R": "raw/hcp1065_trk/projection/RST_R.trk.gz",
+    "TR_A_L": "raw/hcp1065_trk/projection/TR_A_L.trk.gz",
+    "TR_A_R": "raw/hcp1065_trk/projection/TR_A_R.trk.gz",
+    "TR_P_L": "raw/hcp1065_trk/projection/TR_P_L.trk.gz",
+    "TR_P_R": "raw/hcp1065_trk/projection/TR_P_R.trk.gz",
+    "TR_S_L": "raw/hcp1065_trk/projection/TR_S_L.trk.gz",
+    "TR_S_R": "raw/hcp1065_trk/projection/TR_S_R.trk.gz"
+  },
+  "images": [
+    {
+      "id": "t1",
+      "name": "T1-weighted ICBM 2009a asymmetric template"
+    },
+    {
+      "id": "t2",
+      "name": "T2-weighted ICBM 2009a asymmetric template"
+    }
+  ],
+  "nifti_units": "mm",
+  "units_evidence": "The official ICBM152 2009a template documentation declares millimetre sampling; source header units are retained when present.",
+  "space": {
+    "id": "mni-icbm152-2009a-asymmetric",
+    "name": "MNI ICBM152 2009a asymmetric",
+    "reference": "HCP1065 population-averaged tractography source declaration and original TrackVis headers",
+    "correspondence": "The source publisher explicitly places HCP1065 average streamlines in ICBM 2009a nonlinear asymmetric space and instructs insertion of the corresponding T1/T2 images. Header decoding and complete reference field-of-view coverage are checked. Anatomical fit remains unreviewed. No new registration, mirroring or relation to another template is introduced."
+  },
+  "sources": [
+    {
+      "id": "hcp1065_trk",
+      "title": "HCP1065 population-averaged tractography atlas",
+      "version": "Yeh 2022 TRK distribution; SHA256-pinned source archive",
+      "url": "https://brain.labsolver.org/hcp_trk_atlas.html",
+      "citation": "Yeh FC. Population-based tract-to-region connectome of the human brain and its hierarchical topology. Nature Communications 13, 4933 (2022). doi:10.1038/s41467-022-32595-4. Derived from Human Connectome Project data; retain the accompanying HCP acknowledgment.",
+      "license_name": "CC BY-SA 4.0; accompanying HCP acknowledgment",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "license_input": "license"
+    },
+    {
+      "id": "mni_09a_asym",
+      "title": "MNI ICBM152 nonlinear asymmetric template",
+      "version": "2009a",
+      "url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+      "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033.",
+      "license_name": "MNI ICBM152 template terms",
+      "license_url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+      "license_input": "template_license"
+    }
+  ],
+  "additional_license_inputs": [
+    "source_description",
+    "hcp_acknowledgment"
+  ],
+  "streamline_evidence": "Source population-averaged computational tractography; these trajectories are not observed axons, validated functional connections or individual anatomical boundaries.",
+  "streamline_notes": [
+    "All original decoded source streamlines and points are retained in RAS millimetres. No smoothing, point simplification, interpolation or additional registration is applied.",
+    "Preview, standard and detail views select complete source trajectories by a recorded deterministic source-index rule. Display density is not anatomical density, axon count or probability.",
+    "The source point used for navigation is a sampled trajectory vertex near the point-weighted centroid, not an independently identified anatomical landmark.",
+    "Streamline endpoints and unequal left/right counts do not establish terminal connections, axon numbers or the distribution of normal anatomical asymmetry.",
+    "Separately delivered occupancy maps and population-probability maps are not used in this package."
+  ],
+  "bundles": [
+    {
+      "input": "AF_L",
+      "source_name": "AF_L",
+      "name": "Left arcuate fasciculus",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        79,
+        197,
+        198
+      ],
+      "notes": [
+        "Original abbreviation-table description: Arcuate_Fasciculus_L."
+      ]
+    },
+    {
+      "input": "AF_R",
+      "source_name": "AF_R",
+      "name": "Right arcuate fasciculus",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        230,
+        175,
+        79
+      ],
+      "notes": [
+        "Original abbreviation-table description: Arcuate_Fasciculus_R."
+      ]
+    },
+    {
+      "input": "CST_L",
+      "source_name": "CST_L",
+      "name": "Left corticospinal tract",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        143,
+        167,
+        231
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cortico_Spinal_Tract_L."
+      ]
+    },
+    {
+      "input": "CST_R",
+      "source_name": "CST_R",
+      "name": "Right corticospinal tract",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cortico_Spinal_Tract_R."
+      ]
+    },
+    {
+      "input": "CC",
+      "source_name": "CC",
+      "name": "Corpus callosum",
+      "category": "Commissural bundles",
+      "laterality": "unspecified",
+      "color": [
+        126,
+        201,
+        139
+      ],
+      "notes": [
+        "The delivered bundle spans both sides; the project does not infer a hemispheric partition.",
+        "The delivered source collection is not divided by side; no hemispheric partition is inferred.",
+        "Original abbreviation-table description: Corpus_Callosum."
+      ]
+    },
+    {
+      "input": "MCP",
+      "source_name": "MCP",
+      "name": "Middle cerebellar peduncle",
+      "category": "Cerebellar bundles",
+      "laterality": "unspecified",
+      "color": [
+        219,
+        153,
+        106
+      ],
+      "notes": [
+        "The delivered bundle spans both sides; the project does not infer a hemispheric partition.",
+        "The delivered source collection is not divided by side; no hemispheric partition is inferred.",
+        "Original abbreviation-table description: Middle_Cerebellar_Peduncle."
+      ]
+    },
+    {
+      "input": "C_FPH_L",
+      "source_name": "C_FPH_L",
+      "name": "Left cingulum frontal parahippocampal",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Frontal_Parahippocampal_L."
+      ]
+    },
+    {
+      "input": "C_FPH_R",
+      "source_name": "C_FPH_R",
+      "name": "Right cingulum frontal parahippocampal",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Frontal_Parahippocampal_R."
+      ]
+    },
+    {
+      "input": "C_FP_L",
+      "source_name": "C_FP_L",
+      "name": "Left cingulum frontal parietal",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Frontal_Parietal_L."
+      ]
+    },
+    {
+      "input": "C_FP_R",
+      "source_name": "C_FP_R",
+      "name": "Right cingulum frontal parietal",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "The source abbreviation table describes C_FP_R as 'Cingulum_Frontal_Parietal_L', but the source filename defines side R. The display follows the filename and independently checked RAS coordinates; the original text is retained and anatomical reconciliation remains pending.",
+        "Original abbreviation-table description: Cingulum_Frontal_Parietal_L."
+      ]
+    },
+    {
+      "input": "C_PHP_L",
+      "source_name": "C_PHP_L",
+      "name": "Left cingulum parahippocampal parietal",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Parahippocampal_Parietal_L."
+      ]
+    },
+    {
+      "input": "C_PHP_R",
+      "source_name": "C_PHP_R",
+      "name": "Right cingulum parahippocampal parietal",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Parahippocampal_Parietal_R."
+      ]
+    },
+    {
+      "input": "C_PH_L",
+      "source_name": "C_PH_L",
+      "name": "Left cingulum parahippocampal",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Parahippocampal_L."
+      ]
+    },
+    {
+      "input": "C_PH_R",
+      "source_name": "C_PH_R",
+      "name": "Right cingulum parahippocampal",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Parahippocampal_R."
+      ]
+    },
+    {
+      "input": "C_PO_L",
+      "source_name": "C_PO_L",
+      "name": "Left cingulum parolfactory",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Parolfactory_L."
+      ]
+    },
+    {
+      "input": "C_PO_R",
+      "source_name": "C_PO_R",
+      "name": "Right cingulum parolfactory",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Cingulum_Parolfactory_R."
+      ]
+    },
+    {
+      "input": "EMC_L",
+      "source_name": "EMC_L",
+      "name": "Left extreme capsule",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Extreme_Capsule_L."
+      ]
+    },
+    {
+      "input": "EMC_R",
+      "source_name": "EMC_R",
+      "name": "Right extreme capsule",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Extreme_Capsule_R."
+      ]
+    },
+    {
+      "input": "FAT_L",
+      "source_name": "FAT_L",
+      "name": "Left frontal aslant tract",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Frontal_Aslant_Tract_L."
+      ]
+    },
+    {
+      "input": "FAT_R",
+      "source_name": "FAT_R",
+      "name": "Right frontal aslant tract",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Frontal_Aslant_Tract_R."
+      ]
+    },
+    {
+      "input": "IFOF_L",
+      "source_name": "IFOF_L",
+      "name": "Left inferior fronto occipital fasciculus",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Inferior_Fronto_Occipital_Fasciculus_L."
+      ]
+    },
+    {
+      "input": "IFOF_R",
+      "source_name": "IFOF_R",
+      "name": "Right inferior fronto occipital fasciculus",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Inferior_Fronto_Occipital_Fasciculus_R."
+      ]
+    },
+    {
+      "input": "ILF_L",
+      "source_name": "ILF_L",
+      "name": "Left inferior longitudinal fasciculus",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Inferior_Longitudinal_Fasciculus_L."
+      ]
+    },
+    {
+      "input": "ILF_R",
+      "source_name": "ILF_R",
+      "name": "Right inferior longitudinal fasciculus",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Inferior_Longitudinal_Fasciculus_R."
+      ]
+    },
+    {
+      "input": "MdLF_L",
+      "source_name": "MdLF_L",
+      "name": "Left middle longitudinal fasciculus",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Middle_Longitudinal_Fasciculus_L."
+      ]
+    },
+    {
+      "input": "MdLF_R",
+      "source_name": "MdLF_R",
+      "name": "Right middle longitudinal fasciculus",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Middle_Longitudinal_Fasciculus_R."
+      ]
+    },
+    {
+      "input": "PAT_L",
+      "source_name": "PAT_L",
+      "name": "Left parietal aslant tract",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Parietal_Aslant_Tract_L."
+      ]
+    },
+    {
+      "input": "PAT_R",
+      "source_name": "PAT_R",
+      "name": "Right parietal aslant tract",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Parietal_Aslant_Tract_R."
+      ]
+    },
+    {
+      "input": "SLF1_L",
+      "source_name": "SLF1_L",
+      "name": "Left superior longitudinal fasciculus1",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Superior_Longitudinal_Fasciculus1_L."
+      ]
+    },
+    {
+      "input": "SLF1_R",
+      "source_name": "SLF1_R",
+      "name": "Right superior longitudinal fasciculus1",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Superior_Longitudinal_Fasciculus1_R."
+      ]
+    },
+    {
+      "input": "SLF2_L",
+      "source_name": "SLF2_L",
+      "name": "Left superior longitudinal fasciculus2",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Superior_Longitudinal_Fasciculus2_L."
+      ]
+    },
+    {
+      "input": "SLF2_R",
+      "source_name": "SLF2_R",
+      "name": "Right superior longitudinal fasciculus2",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Superior_Longitudinal_Fasciculus2_R."
+      ]
+    },
+    {
+      "input": "SLF3_L",
+      "source_name": "SLF3_L",
+      "name": "Left superior longitudinal fasciculus3",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Superior_Longitudinal_Fasciculus3_L."
+      ]
+    },
+    {
+      "input": "SLF3_R",
+      "source_name": "SLF3_R",
+      "name": "Right superior longitudinal fasciculus3",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Superior_Longitudinal_Fasciculus3_R."
+      ]
+    },
+    {
+      "input": "UF_L",
+      "source_name": "UF_L",
+      "name": "Left uncinate fasciculus",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Uncinate_Fasciculus_L."
+      ]
+    },
+    {
+      "input": "UF_R",
+      "source_name": "UF_R",
+      "name": "Right uncinate fasciculus",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Uncinate_Fasciculus_R."
+      ]
+    },
+    {
+      "input": "VOF_L",
+      "source_name": "VOF_L",
+      "name": "Left vertical occipital fasciculus",
+      "category": "Association bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Vertical_Occipital_Fasciculus_L."
+      ]
+    },
+    {
+      "input": "VOF_R",
+      "source_name": "VOF_R",
+      "name": "Right vertical occipital fasciculus",
+      "category": "Association bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Vertical_Occipital_Fasciculus_R."
+      ]
+    },
+    {
+      "input": "AR_L",
+      "source_name": "AR_L",
+      "name": "Left acoustic radiation",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Acoustic_Radiation_L."
+      ]
+    },
+    {
+      "input": "AR_R",
+      "source_name": "AR_R",
+      "name": "Right acoustic radiation",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Acoustic_Radiation_R."
+      ]
+    },
+    {
+      "input": "CBT_L",
+      "source_name": "CBT_L",
+      "name": "Left corticobulbar tract",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticobulbar_Tract_L."
+      ]
+    },
+    {
+      "input": "CBT_R",
+      "source_name": "CBT_R",
+      "name": "Right corticobulbar tract",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticobulbar_Tract_R."
+      ]
+    },
+    {
+      "input": "CPT_F_L",
+      "source_name": "CPT_F_L",
+      "name": "Left corticopontine tract frontal",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticopontine_Tract_Frontal_L."
+      ]
+    },
+    {
+      "input": "CPT_F_R",
+      "source_name": "CPT_F_R",
+      "name": "Right corticopontine tract frontal",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticopontine_Tract_Frontal_R."
+      ]
+    },
+    {
+      "input": "CPT_P_L",
+      "source_name": "CPT_P_L",
+      "name": "Left corticopontine tract parietal",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticopontine_Tract_Parietal_L."
+      ]
+    },
+    {
+      "input": "CPT_P_R",
+      "source_name": "CPT_P_R",
+      "name": "Right corticopontine tract parietal",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticopontine_Tract_Parietal_R."
+      ]
+    },
+    {
+      "input": "CPT_O_L",
+      "source_name": "CPT_O_L",
+      "name": "Left corticopontine tract occipital",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticopontine_Tract_Occipital_L."
+      ]
+    },
+    {
+      "input": "CPT_O_R",
+      "source_name": "CPT_O_R",
+      "name": "Right corticopontine tract occipital",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticopontine_Tract_Occipital_R."
+      ]
+    },
+    {
+      "input": "CS_A_L",
+      "source_name": "CS_A_L",
+      "name": "Left corticostriatal tract anterior",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticostriatal_Tract_Anterior_L."
+      ]
+    },
+    {
+      "input": "CS_A_R",
+      "source_name": "CS_A_R",
+      "name": "Right corticostriatal tract anterior",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticostriatal_Tract_Anterior_R."
+      ]
+    },
+    {
+      "input": "CS_S_L",
+      "source_name": "CS_S_L",
+      "name": "Left corticostriatal tract superior",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticostriatal_Tract_Superior_L."
+      ]
+    },
+    {
+      "input": "CS_S_R",
+      "source_name": "CS_S_R",
+      "name": "Right corticostriatal tract superior",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticostriatal_Tract_Superior_R."
+      ]
+    },
+    {
+      "input": "CS_P_L",
+      "source_name": "CS_P_L",
+      "name": "Left corticostriatal tract posterior",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticostriatal_Tract_Posterior_L."
+      ]
+    },
+    {
+      "input": "CS_P_R",
+      "source_name": "CS_P_R",
+      "name": "Right corticostriatal tract posterior",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Corticostriatal_Tract_Posterior_R."
+      ]
+    },
+    {
+      "input": "DRTT_L",
+      "source_name": "DRTT_L",
+      "name": "Left dentatorubrothalamic tract",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Dentatorubrothalamic_Tract_L."
+      ]
+    },
+    {
+      "input": "DRTT_R",
+      "source_name": "DRTT_R",
+      "name": "Right dentatorubrothalamic tract",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Dentatorubrothalamic_Tract_R."
+      ]
+    },
+    {
+      "input": "F_L",
+      "source_name": "F_L",
+      "name": "Left fornix",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Fornix_L."
+      ]
+    },
+    {
+      "input": "F_R",
+      "source_name": "F_R",
+      "name": "Right fornix",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Fornix_R."
+      ]
+    },
+    {
+      "input": "ML_L",
+      "source_name": "ML_L",
+      "name": "Left medial lemniscus",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Medial_Lemniscus_L."
+      ]
+    },
+    {
+      "input": "ML_R",
+      "source_name": "ML_R",
+      "name": "Right medial lemniscus",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Medial_Lemniscus_R."
+      ]
+    },
+    {
+      "input": "OR_L",
+      "source_name": "OR_L",
+      "name": "Left optic radiation",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Optic_Radiation_L."
+      ]
+    },
+    {
+      "input": "OR_R",
+      "source_name": "OR_R",
+      "name": "Right optic radiation",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Optic_Radiation_R."
+      ]
+    },
+    {
+      "input": "RST_L",
+      "source_name": "RST_L",
+      "name": "Left reticulospinal tract",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Reticulospinal_Tract_L."
+      ]
+    },
+    {
+      "input": "RST_R",
+      "source_name": "RST_R",
+      "name": "Right reticulospinal tract",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Reticulospinal_Tract_R."
+      ]
+    },
+    {
+      "input": "TR_A_L",
+      "source_name": "TR_A_L",
+      "name": "Left thalamic radiation anterior",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Thalamic_Radiation_Anterior_L."
+      ]
+    },
+    {
+      "input": "TR_A_R",
+      "source_name": "TR_A_R",
+      "name": "Right thalamic radiation anterior",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Thalamic_Radiation_Anterior_R."
+      ]
+    },
+    {
+      "input": "TR_P_L",
+      "source_name": "TR_P_L",
+      "name": "Left thalamic radiation posterior",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Thalamic_Radiation_Posterior_L."
+      ]
+    },
+    {
+      "input": "TR_P_R",
+      "source_name": "TR_P_R",
+      "name": "Right thalamic radiation posterior",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Thalamic_Radiation_Posterior_R."
+      ]
+    },
+    {
+      "input": "TR_S_L",
+      "source_name": "TR_S_L",
+      "name": "Left thalamic radiation superior",
+      "category": "Projection bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Thalamic_Radiation_Superior_L."
+      ]
+    },
+    {
+      "input": "TR_S_R",
+      "source_name": "TR_S_R",
+      "name": "Right thalamic radiation superior",
+      "category": "Projection bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "The source abbreviation table describes TR_S_R as 'Thalamic_Radiation_Superior_L', but the source filename defines side R. The display follows the filename and independently checked RAS coordinates; the original text is retained and anatomical reconciliation remains pending.",
+        "Original abbreviation-table description: Thalamic_Radiation_Superior_L."
+      ]
+    },
+    {
+      "input": "AC",
+      "source_name": "AC",
+      "name": "Anterior commissure",
+      "category": "Commissural bundles",
+      "laterality": "unspecified",
+      "color": [
+        200,
+        182,
+        96
+      ],
+      "notes": [
+        "The delivered source collection is not divided by side; no hemispheric partition is inferred.",
+        "Original abbreviation-table description: Anterior_Commissure."
+      ]
+    },
+    {
+      "input": "CB_L",
+      "source_name": "CB_L",
+      "name": "Left cerebellum source trajectories",
+      "category": "Cerebellar bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "The source names this collection by a cerebellar region; it is not a complete tissue segmentation or one independently validated pathway.",
+        "Original abbreviation-table description: Cerebellum_L."
+      ]
+    },
+    {
+      "input": "CB_R",
+      "source_name": "CB_R",
+      "name": "Right cerebellum source trajectories",
+      "category": "Cerebellar bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "The source names this collection by a cerebellar region; it is not a complete tissue segmentation or one independently validated pathway.",
+        "Original abbreviation-table description: Cerebellum_R."
+      ]
+    },
+    {
+      "input": "ICP_L",
+      "source_name": "ICP_L",
+      "name": "Left inferior cerebellar peduncle",
+      "category": "Cerebellar bundles",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "Original abbreviation-table description: Inferior_Cerebellar_Peduncle_L."
+      ]
+    },
+    {
+      "input": "ICP_R",
+      "source_name": "ICP_R",
+      "name": "Right inferior cerebellar peduncle",
+      "category": "Cerebellar bundles",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "Original abbreviation-table description: Inferior_Cerebellar_Peduncle_R."
+      ]
+    },
+    {
+      "input": "SCP",
+      "source_name": "SCP",
+      "name": "Superior cerebellar peduncle",
+      "category": "Cerebellar bundles",
+      "laterality": "unspecified",
+      "color": [
+        200,
+        182,
+        96
+      ],
+      "notes": [
+        "The delivered source collection is not divided by side; no hemispheric partition is inferred.",
+        "Original abbreviation-table description: Superior_Cerebellar_Peduncle."
+      ]
+    },
+    {
+      "input": "V",
+      "source_name": "V",
+      "name": "Vermis source trajectories",
+      "category": "Cerebellar bundles",
+      "laterality": "unspecified",
+      "color": [
+        200,
+        182,
+        96
+      ],
+      "notes": [
+        "The source names this collection by a cerebellar region; it is not a complete tissue segmentation or one independently validated pathway.",
+        "The delivered source collection is not divided by side; no hemispheric partition is inferred.",
+        "Original abbreviation-table description: Vermis."
+      ]
+    },
+    {
+      "input": "CNII_L",
+      "source_name": "CNII_L",
+      "name": "Left optic nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNII_L."
+      ]
+    },
+    {
+      "input": "CNII_R",
+      "source_name": "CNII_R",
+      "name": "Right optic nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNII_R."
+      ]
+    },
+    {
+      "input": "CNIII_L",
+      "source_name": "CNIII_L",
+      "name": "Left oculomotor nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNIII_L."
+      ]
+    },
+    {
+      "input": "CNIII_R",
+      "source_name": "CNIII_R",
+      "name": "Right oculomotor nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNIII_R."
+      ]
+    },
+    {
+      "input": "CNV_L",
+      "source_name": "CNV_L",
+      "name": "Left trigeminal nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNV_L."
+      ]
+    },
+    {
+      "input": "CNV_R",
+      "source_name": "CNV_R",
+      "name": "Right trigeminal nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNV_R."
+      ]
+    },
+    {
+      "input": "CNVII_L",
+      "source_name": "CNVII_L",
+      "name": "Left facial nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNVII_L."
+      ]
+    },
+    {
+      "input": "CNVII_R",
+      "source_name": "CNVII_R",
+      "name": "Right facial nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNVII_R."
+      ]
+    },
+    {
+      "input": "CNVIII_L",
+      "source_name": "CNVIII_L",
+      "name": "Left vestibulocochlear nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "left",
+      "color": [
+        90,
+        191,
+        218
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNVIII_L."
+      ]
+    },
+    {
+      "input": "CNVIII_R",
+      "source_name": "CNVIII_R",
+      "name": "Right vestibulocochlear nerve trajectories",
+      "category": "Cranial nerve trajectories",
+      "laterality": "right",
+      "color": [
+        223,
+        134,
+        169
+      ],
+      "notes": [
+        "This source supplies computed cranial-nerve trajectories, not nerve-surface delineations. Small nerve pathways and nearby crossings require expert interpretation; source endpoints do not establish the complete nerve course.",
+        "Original abbreviation-table description: CNVIII_R."
+      ]
+    }
+  ],
+  "acquisition": "Run neuroimage acquire hcp1065_tracts --data-root <existing-data-root>. Verified archives and selected members are reused.",
+  "archives": [
+    {
+      "dataset_id": "hcp1065_trk",
+      "filename": "hcp1065_avg_tracts_trk.zip",
+      "url": "https://github.com/data-others/atlas/releases/download/hcp1065/hcp1065_avg_tracts_trk.zip",
+      "bytes": 587869457,
+      "sha256": "344aad4394f18b8926ed5e1bda911ad56e328c6cf75faa45e1302512ad779c67",
+      "hash_basis": "SHA256 pinned from the verified local acquisition; not a publisher signature",
+      "members": [
+        {
+          "member": "association/AF_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/AF_L.trk.gz",
+          "bytes": 52242799,
+          "sha256": "5940e02b53fd5d34d6660fc1b025bdc7ce165ccf0dbb367aa36ae85dbd8e225e"
+        },
+        {
+          "member": "association/AF_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/AF_R.trk.gz",
+          "bytes": 5135317,
+          "sha256": "ee7dd90882f855f5d5c6ffcfe8fc155e4fab089989ff0c531488397c1571b5a1"
+        },
+        {
+          "member": "association/C_FPH_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_FPH_L.trk.gz",
+          "bytes": 797740,
+          "sha256": "385fd00da92b9759bd68a59f40b5c20d40e79b594ca3db6c6db52420073a1855"
+        },
+        {
+          "member": "association/C_FPH_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_FPH_R.trk.gz",
+          "bytes": 177728,
+          "sha256": "1dadeffb534926ea41b85f0a187f120196c44b523fe95554e10bb60107ee08d8"
+        },
+        {
+          "member": "association/C_FP_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_FP_L.trk.gz",
+          "bytes": 11051908,
+          "sha256": "956160aa0055e0818a0edf18d9c70d2d53bed5a20ed5891493d13f5d7d9e8714"
+        },
+        {
+          "member": "association/C_FP_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_FP_R.trk.gz",
+          "bytes": 8765799,
+          "sha256": "992acf5882b5e2504f0426e05bce3ae0ca90fded7a322764bab456a0c2330dbd"
+        },
+        {
+          "member": "association/C_PHP_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_PHP_L.trk.gz",
+          "bytes": 91125,
+          "sha256": "eb6445adf0808bd648d7ee7fd1386fadd1dc4e1abfe9413bcbf138bab6b32d57"
+        },
+        {
+          "member": "association/C_PHP_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_PHP_R.trk.gz",
+          "bytes": 480079,
+          "sha256": "4a7d76d06c493a627c4566146b45324a19dea5a7c4277e621e4e94986c608d40"
+        },
+        {
+          "member": "association/C_PH_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_PH_L.trk.gz",
+          "bytes": 321387,
+          "sha256": "dfc058009582c38f835965e187a63619ab8d7f2461979c391a0685fb37798ecf"
+        },
+        {
+          "member": "association/C_PH_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_PH_R.trk.gz",
+          "bytes": 269820,
+          "sha256": "a70c03cedbfb9bbd5ed9c8522431ee2a8c106467a1a1bc91dec57e0997365115"
+        },
+        {
+          "member": "association/C_PO_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_PO_L.trk.gz",
+          "bytes": 1012767,
+          "sha256": "f164a894da82120e22b63fcff3eb50998e2191c84da7408f1e387bada5d5a5fd"
+        },
+        {
+          "member": "association/C_PO_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/C_PO_R.trk.gz",
+          "bytes": 1090600,
+          "sha256": "54e17895878a668a76bfc6b3690d251eef4dfb21f9fd4585532c731d399291b5"
+        },
+        {
+          "member": "association/EMC_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/EMC_L.trk.gz",
+          "bytes": 8982872,
+          "sha256": "ee5b8ae857bb41448af649acc524f70fa8c18fead61f4e3815848b25e7aa7c09"
+        },
+        {
+          "member": "association/EMC_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/EMC_R.trk.gz",
+          "bytes": 15162059,
+          "sha256": "56665c916634d0e5b7632e789567b78cf240b161b47d1af7a627d78e690ba192"
+        },
+        {
+          "member": "association/FAT_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/FAT_L.trk.gz",
+          "bytes": 12790855,
+          "sha256": "b53028512c362af98f1a4fca9e15b5867b13d15530dd092907dc81d35bbe2650"
+        },
+        {
+          "member": "association/FAT_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/FAT_R.trk.gz",
+          "bytes": 4733069,
+          "sha256": "f4d1434dbdcff0f4b227afcfbb1a0c4da3f833913cbd245a3803b872c70576a8"
+        },
+        {
+          "member": "association/IFOF_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/IFOF_L.trk.gz",
+          "bytes": 67480522,
+          "sha256": "aed906ca4255818e505cc43349f561a7050ce4f2a1617fc693c0496de760f1ad"
+        },
+        {
+          "member": "association/IFOF_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/IFOF_R.trk.gz",
+          "bytes": 21394890,
+          "sha256": "1732db0ad9025bc1c4618346c0e7b2cd85293ac38b9050acf4aa1a9a8917cff8"
+        },
+        {
+          "member": "association/ILF_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/ILF_L.trk.gz",
+          "bytes": 29128996,
+          "sha256": "3ac918d3e8d27a0a1489aa90639be04ae7ba66951428d95e3329cccc14dd35f7"
+        },
+        {
+          "member": "association/ILF_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/ILF_R.trk.gz",
+          "bytes": 20204536,
+          "sha256": "a7eafdd27bd28e6483fa14cc33f40bf3605c9f4181ac5808fddac32f6bb5aa6f"
+        },
+        {
+          "member": "association/MdLF_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/MdLF_L.trk.gz",
+          "bytes": 2194385,
+          "sha256": "498f27e7a20500e8f78a0fab18fa608436730289b419ebfb1cdb92281cf6db43"
+        },
+        {
+          "member": "association/MdLF_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/MdLF_R.trk.gz",
+          "bytes": 3916233,
+          "sha256": "8cbcf058010638308e9c5f7b067f21bc5d7a9829e92494b37a937caa07a16236"
+        },
+        {
+          "member": "association/PAT_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/PAT_L.trk.gz",
+          "bytes": 3032082,
+          "sha256": "36819e7084f21676b12b8c61fe646cb632c086d10344402f81d295b51b9e5ba9"
+        },
+        {
+          "member": "association/PAT_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/PAT_R.trk.gz",
+          "bytes": 4080169,
+          "sha256": "9e63f92d21998029b1c3e3caf9d9f64e0b6256d745b597d1a949a120179ecec9"
+        },
+        {
+          "member": "association/SLF1_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/SLF1_L.trk.gz",
+          "bytes": 2412867,
+          "sha256": "15891c5589803acafebb8a626d9c6434bfff0fc5df3305009c70d79f893e3983"
+        },
+        {
+          "member": "association/SLF1_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/SLF1_R.trk.gz",
+          "bytes": 5509778,
+          "sha256": "35560fd8e8ef39ad6f86ad6f53677d8a9fb0dd969ff254b3d951c59b6987a4e2"
+        },
+        {
+          "member": "association/SLF2_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/SLF2_L.trk.gz",
+          "bytes": 12408901,
+          "sha256": "b494573134de8dda1f60401eb516b306877b6f12a93ad7587b0021666a8639a9"
+        },
+        {
+          "member": "association/SLF2_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/SLF2_R.trk.gz",
+          "bytes": 14938996,
+          "sha256": "89da8d3ebdc231f3da05cd0ef0bad57520b01b4c42ccbd0b591df87acfb76434"
+        },
+        {
+          "member": "association/SLF3_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/SLF3_L.trk.gz",
+          "bytes": 2019114,
+          "sha256": "802461d17abe80d49bc318021bda1525d5071d53c84bbafc6ef9a9b85bccc895"
+        },
+        {
+          "member": "association/SLF3_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/SLF3_R.trk.gz",
+          "bytes": 13211156,
+          "sha256": "5d9df69ea2a9034d9485b7fbcd6db4912d38b015779f783f7e57d7751cb51ff1"
+        },
+        {
+          "member": "association/UF_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/UF_L.trk.gz",
+          "bytes": 5142123,
+          "sha256": "3ba5e1c6919866ebda08b0d1f1ec338e26f8604ebbe605378367a7aba6d4b343"
+        },
+        {
+          "member": "association/UF_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/UF_R.trk.gz",
+          "bytes": 9283403,
+          "sha256": "b2684a8f8c7fb631a497b3951c20103f0a69bdc287c74abffb9121922fbf2998"
+        },
+        {
+          "member": "association/VOF_L.trk.gz",
+          "target": "raw/hcp1065_trk/association/VOF_L.trk.gz",
+          "bytes": 947074,
+          "sha256": "51dd5e8ce113ddf95776176f394ab9bf7e1e31a68504612d6723b17cbeca678f"
+        },
+        {
+          "member": "association/VOF_R.trk.gz",
+          "target": "raw/hcp1065_trk/association/VOF_R.trk.gz",
+          "bytes": 464840,
+          "sha256": "94f59ec9faef4717b9c7e5c0eda82349d1073662b0a6d7bcf92cc778a41e9407"
+        },
+        {
+          "member": "cerebellum/CB_L.trk.gz",
+          "target": "raw/hcp1065_trk/cerebellum/CB_L.trk.gz",
+          "bytes": 45476590,
+          "sha256": "c053c5f406c7ff269b8025e4db7276f6496a069443a245f617ae957912bf1b78"
+        },
+        {
+          "member": "cerebellum/CB_R.trk.gz",
+          "target": "raw/hcp1065_trk/cerebellum/CB_R.trk.gz",
+          "bytes": 15571170,
+          "sha256": "5b229ed6cde7103c15189dfe57c791a5047a4ce799e5dc4eb26de1949b58b5ab"
+        },
+        {
+          "member": "cerebellum/ICP_L.trk.gz",
+          "target": "raw/hcp1065_trk/cerebellum/ICP_L.trk.gz",
+          "bytes": 2323451,
+          "sha256": "c6eeaa3dabf331cbbad5f6c620719f2b99e895a790e3bb99a05ebfd87cb9c590"
+        },
+        {
+          "member": "cerebellum/ICP_R.trk.gz",
+          "target": "raw/hcp1065_trk/cerebellum/ICP_R.trk.gz",
+          "bytes": 1875491,
+          "sha256": "4dfee3418f2d6ad2fee4239ef9178de8ece1a6bdb9d20ff066db4ca24f7c70b8"
+        },
+        {
+          "member": "cerebellum/MCP.trk.gz",
+          "target": "raw/hcp1065_trk/cerebellum/MCP.trk.gz",
+          "bytes": 2905752,
+          "sha256": "7c5898f318045abfecf93c758730b8230899ca3c6e1019a3be5abda8b0cf4b8a"
+        },
+        {
+          "member": "cerebellum/SCP.trk.gz",
+          "target": "raw/hcp1065_trk/cerebellum/SCP.trk.gz",
+          "bytes": 1725801,
+          "sha256": "05aa54180dafa03ce57b1177785ba56f61eb93b2f4bac5e929319a3f740a3a52"
+        },
+        {
+          "member": "cerebellum/V.trk.gz",
+          "target": "raw/hcp1065_trk/cerebellum/V.trk.gz",
+          "bytes": 3492479,
+          "sha256": "3f9712bff85d10564a336ec934eb435dd7c79ddeb8ecffbb90519c6dddba3347"
+        },
+        {
+          "member": "commissural/AC.trk.gz",
+          "target": "raw/hcp1065_trk/commissural/AC.trk.gz",
+          "bytes": 30921639,
+          "sha256": "0d81581ad24d06fb2e9ec03c7d210379b3f97d106d6471fedcca455c8de52d7c"
+        },
+        {
+          "member": "commissural/CC.trk.gz",
+          "target": "raw/hcp1065_trk/commissural/CC.trk.gz",
+          "bytes": 51294677,
+          "sha256": "5864d58821fc61123a45878026343eb753d14eecf1da92a14923b043368a9b46"
+        },
+        {
+          "member": "cranial nerve/CNIII_L.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNIII_L.trk.gz",
+          "bytes": 3252330,
+          "sha256": "88392f9398ee4dc9d1457300c4fe6ed038a4a9d79678821a7c047e5455fad28e"
+        },
+        {
+          "member": "cranial nerve/CNIII_R.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNIII_R.trk.gz",
+          "bytes": 4119057,
+          "sha256": "1963357b774f292a17695a165238b31208aab83281f0b4c1e6345f8bb1484014"
+        },
+        {
+          "member": "cranial nerve/CNII_L.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNII_L.trk.gz",
+          "bytes": 297769,
+          "sha256": "f3d970039ab07da23bbb639854027b4defbfe3b0bddab05578060901bf2ebc3f"
+        },
+        {
+          "member": "cranial nerve/CNII_R.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNII_R.trk.gz",
+          "bytes": 1155699,
+          "sha256": "8b4a8790348ffc29fcfd9363017e59841fa56ee58a94a9f1b7f69954f0700800"
+        },
+        {
+          "member": "cranial nerve/CNVIII_L.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNVIII_L.trk.gz",
+          "bytes": 211949,
+          "sha256": "406600507e5bbf6a4d38c345f4c126c5f9a99e2e9bf13ebff88943ced0fe45bb"
+        },
+        {
+          "member": "cranial nerve/CNVIII_R.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNVIII_R.trk.gz",
+          "bytes": 167462,
+          "sha256": "eefdc5c1b157f1bbd61493fb59c3559893a26dd400978dcb6de06e2b28fda87b"
+        },
+        {
+          "member": "cranial nerve/CNVII_L.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNVII_L.trk.gz",
+          "bytes": 21026,
+          "sha256": "5b8a207bf0f2e918bbe64d931324e3ac76cf9720ef3caa0ca9d544da08bced5a"
+        },
+        {
+          "member": "cranial nerve/CNVII_R.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNVII_R.trk.gz",
+          "bytes": 19121,
+          "sha256": "d649d9daaf99c206ef1d2405cb459f0165b76b919502243311b9be69875dceb2"
+        },
+        {
+          "member": "cranial nerve/CNV_L.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNV_L.trk.gz",
+          "bytes": 108369,
+          "sha256": "0755803a14ac3c83265b45eecebf6b333fb966cecc82baedc809070a28a33e3d"
+        },
+        {
+          "member": "cranial nerve/CNV_R.trk.gz",
+          "target": "raw/hcp1065_trk/cranial nerve/CNV_R.trk.gz",
+          "bytes": 195944,
+          "sha256": "5bbfa0e9a3e4acfa2ca5e6c3f76c4c518130d7b8e0e227ff18fae64e6012bca3"
+        },
+        {
+          "member": "projection/AR_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/AR_L.trk.gz",
+          "bytes": 1467139,
+          "sha256": "192cfefd7128651a279b810f2eb0724bcc5df8021e554d9065c0f91dca2ad8f6"
+        },
+        {
+          "member": "projection/AR_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/AR_R.trk.gz",
+          "bytes": 368438,
+          "sha256": "c2d73e86a2bc31877808ae913dcb74dc8bfe740229b90dfb475d11009edaf0f3"
+        },
+        {
+          "member": "projection/CBT_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CBT_L.trk.gz",
+          "bytes": 242424,
+          "sha256": "97a69859eaa2c8db34c7845c25e65922111dcb1d4f7929fa16de02225b09621a"
+        },
+        {
+          "member": "projection/CBT_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CBT_R.trk.gz",
+          "bytes": 928624,
+          "sha256": "d6f19cfb97322f4f3d2b4e7cf4455514c84dc5484845c8a490c19e4d91ddb183"
+        },
+        {
+          "member": "projection/CPT_F_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CPT_F_L.trk.gz",
+          "bytes": 1425621,
+          "sha256": "9be00146af1d186454f42a83842f327cf5e655ae75aee072b5ec8174417d81ef"
+        },
+        {
+          "member": "projection/CPT_F_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CPT_F_R.trk.gz",
+          "bytes": 6348383,
+          "sha256": "897e826dd407424734936da916d5931f243bc0402f84fc8348854bd4f42c3c5d"
+        },
+        {
+          "member": "projection/CPT_O_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CPT_O_L.trk.gz",
+          "bytes": 469832,
+          "sha256": "116f72a82c7ac05b33831fbf9cf40aeff48895a5f036e8bd9e5acd059ab1ff8f"
+        },
+        {
+          "member": "projection/CPT_O_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CPT_O_R.trk.gz",
+          "bytes": 330185,
+          "sha256": "b5e5ff14b3d5c7b097cc41a3d27d2eceddfe539ac4ef45c37674cd7e61b68af7"
+        },
+        {
+          "member": "projection/CPT_P_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CPT_P_L.trk.gz",
+          "bytes": 4448212,
+          "sha256": "de8a2129532274f85bf11d7812998ca6d867545f94e533d1b3522db1fe4ebbf5"
+        },
+        {
+          "member": "projection/CPT_P_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CPT_P_R.trk.gz",
+          "bytes": 4899974,
+          "sha256": "e2c99fbc63cfcaa1b2503db1603cb7a9d03c8232d53a87feb02e3ccbbe32898e"
+        },
+        {
+          "member": "projection/CST_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CST_L.trk.gz",
+          "bytes": 8583309,
+          "sha256": "10c87aef5f0831e8851bb3050055b5df17151db55466d90fd15ebddad21b8e2d"
+        },
+        {
+          "member": "projection/CST_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CST_R.trk.gz",
+          "bytes": 3699366,
+          "sha256": "00b3f7b46cb8e3c16dc788b3c6967afe85d0dea355320481daab9d1a55612b90"
+        },
+        {
+          "member": "projection/CS_A_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CS_A_L.trk.gz",
+          "bytes": 570379,
+          "sha256": "487fdb08cc60e32b5af84cc8ff50e4a6d3ea7383c37900e4058d79da383658a9"
+        },
+        {
+          "member": "projection/CS_A_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CS_A_R.trk.gz",
+          "bytes": 401813,
+          "sha256": "bce2feb28269af5ef813aabf0dd2ecbb981e937d0880d61bc1f5d5f4752fe460"
+        },
+        {
+          "member": "projection/CS_P_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CS_P_L.trk.gz",
+          "bytes": 109893,
+          "sha256": "5460c26c2c228e842c50814b98eb51f93d1640901b81675d80c02a2f3d003556"
+        },
+        {
+          "member": "projection/CS_P_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CS_P_R.trk.gz",
+          "bytes": 143431,
+          "sha256": "b7d0d63067f0ef2a5e217210db8da5c6136e3dad7af1fec3ac3c9f75d4244cbb"
+        },
+        {
+          "member": "projection/CS_S_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CS_S_L.trk.gz",
+          "bytes": 608282,
+          "sha256": "62ee6d0dce993cfaea5042a0e4a9317504cf3a1b526c2816eca720eac642db0a"
+        },
+        {
+          "member": "projection/CS_S_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/CS_S_R.trk.gz",
+          "bytes": 683488,
+          "sha256": "af28198e058a236f986c9699c8d71a6ae18eaa40f5c0e3a1aa1752ca8404360d"
+        },
+        {
+          "member": "projection/DRTT_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/DRTT_L.trk.gz",
+          "bytes": 6563156,
+          "sha256": "9aac74e3d74f510af6ca4a0bfd1ccd31ad7088f1a1b66753ef67aa7a958d01c9"
+        },
+        {
+          "member": "projection/DRTT_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/DRTT_R.trk.gz",
+          "bytes": 11468342,
+          "sha256": "d0a3e6094b4c42c53bfe5483bf935647aef976dd025bc50447ca8112516123c6"
+        },
+        {
+          "member": "projection/F_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/F_L.trk.gz",
+          "bytes": 686210,
+          "sha256": "b9047eec049efd627bc940ec3860c9976cae8b4a2d5b5b45c4f72319a574b2cd"
+        },
+        {
+          "member": "projection/F_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/F_R.trk.gz",
+          "bytes": 3106507,
+          "sha256": "f090f1430286911d1e892c24fee32f4a962dff2a2c5ff4deccb0d9cc42d2a0b0"
+        },
+        {
+          "member": "projection/ML_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/ML_L.trk.gz",
+          "bytes": 5455722,
+          "sha256": "6436a41cc2578670ba81188f343123f099b1ba9f04c73efc56d40eb5c666d747"
+        },
+        {
+          "member": "projection/ML_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/ML_R.trk.gz",
+          "bytes": 4931857,
+          "sha256": "d9d7ed60c5fe6afb72f43890741815c2e0dfd821ab56e8b6603bc2a41bbf1048"
+        },
+        {
+          "member": "projection/OR_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/OR_L.trk.gz",
+          "bytes": 2408829,
+          "sha256": "e0adc847d184a8cec821939de72488ba63e768f1fe45727a832f5e288289e80c"
+        },
+        {
+          "member": "projection/OR_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/OR_R.trk.gz",
+          "bytes": 1402230,
+          "sha256": "2537f649816b7ceba905fe48eb57e510ad3d173af1a4a1587bdcbba25a0dd6b4"
+        },
+        {
+          "member": "projection/RST_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/RST_L.trk.gz",
+          "bytes": 3919647,
+          "sha256": "462d5c5435ecc63a17b243fecd72f68dd7d34b7653eccb32fa208a41b978b20e"
+        },
+        {
+          "member": "projection/RST_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/RST_R.trk.gz",
+          "bytes": 5290191,
+          "sha256": "ef3edd7e0e3eabb4c82ac70a22b31bfc13efac769b42ec1e384b88dc5db50671"
+        },
+        {
+          "member": "projection/TR_A_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/TR_A_L.trk.gz",
+          "bytes": 536346,
+          "sha256": "a5e1789020feff10bec251a0e8a9a0f1db9f91dcd98cd1606c9e591c026c69d2"
+        },
+        {
+          "member": "projection/TR_A_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/TR_A_R.trk.gz",
+          "bytes": 354962,
+          "sha256": "d210b152d230ee385d045eb42a5e70c651171b84fed962c4d0d1031627413a70"
+        },
+        {
+          "member": "projection/TR_P_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/TR_P_L.trk.gz",
+          "bytes": 66755,
+          "sha256": "500ef8473fd7b0e039e88ccbed78b55ec336b08beafdf78da1547e191c2cd590"
+        },
+        {
+          "member": "projection/TR_P_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/TR_P_R.trk.gz",
+          "bytes": 81039,
+          "sha256": "2cf793d7c4921f7a6560842c10247de607ad6383ffd03def6930309a2bc36357"
+        },
+        {
+          "member": "projection/TR_S_L.trk.gz",
+          "target": "raw/hcp1065_trk/projection/TR_S_L.trk.gz",
+          "bytes": 886011,
+          "sha256": "888a81b9aa7d54e75ae76a648b957ca608488dfb1af1c39e3fbaeecb02e9aed5"
+        },
+        {
+          "member": "projection/TR_S_R.trk.gz",
+          "target": "raw/hcp1065_trk/projection/TR_S_R.trk.gz",
+          "bytes": 834385,
+          "sha256": "5d627d1ff9b699c53fc633d4c5ea6d5eed6ee507d949a097d847a7f490faeccd"
+        }
+      ]
+    },
+    {
+      "dataset_id": "mni_09a_asym",
+      "filename": "mni_icbm152_nlin_asym_09a_nifti.zip",
+      "url": "https://www.bic.mni.mcgill.ca/~vfonov/icbm/2009/mni_icbm152_nlin_asym_09a_nifti.zip",
+      "bytes": 59587750,
+      "sha256": "188e1706b0ed74a0d1b3a52ad1a2b198814815f70a65f3ded091b7ceb6296a44",
+      "hash_basis": "SHA256 pinned from the verified local acquisition; not a publisher signature",
+      "members": [
+        {
+          "member": "mni_icbm152_nlin_asym_09a/mni_icbm152_t1_tal_nlin_asym_09a.nii",
+          "target": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t1_tal_nlin_asym_09a.nii",
+          "bytes": 17350930,
+          "sha256": "27e8d475116372b118372d9a2b3fdeaa3e658858731767e16a6ed0cae437363a"
+        },
+        {
+          "member": "mni_icbm152_nlin_asym_09a/mni_icbm152_t2_tal_nlin_asym_09a.nii",
+          "target": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t2_tal_nlin_asym_09a.nii",
+          "bytes": 17350930,
+          "sha256": "c62137ed9cf8158223d59845f36f25cff1fd06298fc42cfca5be9bc16a1ba924"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "target": "downloads/hcp1065_trk/abbreviation.xlsx",
+      "url": "https://github.com/data-others/atlas/releases/download/hcp1065/abbreviation.xlsx",
+      "bytes": 13172,
+      "sha256": "ead75629c22adfdec416ebf0de0b854ec3247679da33e50d0e6d9e30eafa71f6"
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/hcp1065_trk/official-terms.html",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/mni_09a_asym/official-terms.html",
+      "url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/hcp1065_trk/source-description.html",
+      "url": "https://brain.labsolver.org/hcp_trk_atlas.html",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/hcp1065_trk/hcp-acknowledgment.html",
+      "url": "https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms",
+      "maximum_bytes": 1048576
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-T001",
+      "title": "Association bundles: source group 1",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:AF_L",
+        "hcp1065_tracts:bundle:AF_R",
+        "hcp1065_tracts:bundle:C_FPH_L",
+        "hcp1065_tracts:bundle:C_FPH_R",
+        "hcp1065_tracts:bundle:C_FP_L",
+        "hcp1065_tracts:bundle:C_FP_R",
+        "hcp1065_tracts:bundle:C_PHP_L",
+        "hcp1065_tracts:bundle:C_PHP_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T002",
+      "title": "Association bundles: source group 2",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:C_PH_L",
+        "hcp1065_tracts:bundle:C_PH_R",
+        "hcp1065_tracts:bundle:C_PO_L",
+        "hcp1065_tracts:bundle:C_PO_R",
+        "hcp1065_tracts:bundle:EMC_L",
+        "hcp1065_tracts:bundle:EMC_R",
+        "hcp1065_tracts:bundle:FAT_L",
+        "hcp1065_tracts:bundle:FAT_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T003",
+      "title": "Association bundles: source group 3",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:IFOF_L",
+        "hcp1065_tracts:bundle:IFOF_R",
+        "hcp1065_tracts:bundle:ILF_L",
+        "hcp1065_tracts:bundle:ILF_R",
+        "hcp1065_tracts:bundle:MdLF_L",
+        "hcp1065_tracts:bundle:MdLF_R",
+        "hcp1065_tracts:bundle:PAT_L",
+        "hcp1065_tracts:bundle:PAT_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T004",
+      "title": "Association bundles: source group 4",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:SLF1_L",
+        "hcp1065_tracts:bundle:SLF1_R",
+        "hcp1065_tracts:bundle:SLF2_L",
+        "hcp1065_tracts:bundle:SLF2_R",
+        "hcp1065_tracts:bundle:SLF3_L",
+        "hcp1065_tracts:bundle:SLF3_R",
+        "hcp1065_tracts:bundle:UF_L",
+        "hcp1065_tracts:bundle:UF_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T005",
+      "title": "Association bundles: source group 5",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:VOF_L",
+        "hcp1065_tracts:bundle:VOF_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T006",
+      "title": "Projection bundles: source group 1",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:CST_L",
+        "hcp1065_tracts:bundle:CST_R",
+        "hcp1065_tracts:bundle:AR_L",
+        "hcp1065_tracts:bundle:AR_R",
+        "hcp1065_tracts:bundle:CBT_L",
+        "hcp1065_tracts:bundle:CBT_R",
+        "hcp1065_tracts:bundle:CPT_F_L",
+        "hcp1065_tracts:bundle:CPT_F_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T007",
+      "title": "Projection bundles: source group 2",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:CPT_P_L",
+        "hcp1065_tracts:bundle:CPT_P_R",
+        "hcp1065_tracts:bundle:CPT_O_L",
+        "hcp1065_tracts:bundle:CPT_O_R",
+        "hcp1065_tracts:bundle:CS_A_L",
+        "hcp1065_tracts:bundle:CS_A_R",
+        "hcp1065_tracts:bundle:CS_S_L",
+        "hcp1065_tracts:bundle:CS_S_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T008",
+      "title": "Projection bundles: source group 3",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:CS_P_L",
+        "hcp1065_tracts:bundle:CS_P_R",
+        "hcp1065_tracts:bundle:DRTT_L",
+        "hcp1065_tracts:bundle:DRTT_R",
+        "hcp1065_tracts:bundle:F_L",
+        "hcp1065_tracts:bundle:F_R",
+        "hcp1065_tracts:bundle:ML_L",
+        "hcp1065_tracts:bundle:ML_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T009",
+      "title": "Projection bundles: source group 4",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:OR_L",
+        "hcp1065_tracts:bundle:OR_R",
+        "hcp1065_tracts:bundle:RST_L",
+        "hcp1065_tracts:bundle:RST_R",
+        "hcp1065_tracts:bundle:TR_A_L",
+        "hcp1065_tracts:bundle:TR_A_R",
+        "hcp1065_tracts:bundle:TR_P_L",
+        "hcp1065_tracts:bundle:TR_P_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T010",
+      "title": "Projection bundles: source group 5",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:TR_S_L",
+        "hcp1065_tracts:bundle:TR_S_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T011",
+      "title": "Commissural bundles: source group 1",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:CC",
+        "hcp1065_tracts:bundle:AC"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T012",
+      "title": "Cerebellar bundles: source group 1",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:MCP",
+        "hcp1065_tracts:bundle:CB_L",
+        "hcp1065_tracts:bundle:CB_R",
+        "hcp1065_tracts:bundle:ICP_L",
+        "hcp1065_tracts:bundle:ICP_R",
+        "hcp1065_tracts:bundle:SCP",
+        "hcp1065_tracts:bundle:V"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T013",
+      "title": "Cranial nerve trajectories: source group 1",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:CNII_L",
+        "hcp1065_tracts:bundle:CNII_R",
+        "hcp1065_tracts:bundle:CNIII_L",
+        "hcp1065_tracts:bundle:CNIII_R",
+        "hcp1065_tracts:bundle:CNV_L",
+        "hcp1065_tracts:bundle:CNV_R",
+        "hcp1065_tracts:bundle:CNVII_L",
+        "hcp1065_tracts:bundle:CNVII_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-T014",
+      "title": "Cranial nerve trajectories: source group 2",
+      "structure_ids": [
+        "hcp1065_tracts:bundle:CNVIII_L",
+        "hcp1065_tracts:bundle:CNVIII_R"
+      ],
+      "objective": "Inspect these delivered source trajectories and their spatial courses in the documented MRI template.",
+      "instruction": "Begin with full MRI sections. Select a bundle, inspect its source name and side, and compare the 2D physical slab with the 3D course. Hide other groups before increasing display detail. Display samples retain complete source lines and every selected vertex.",
+      "evidence_limit": "Unreviewed computational trajectories. They are not observed axons, complete nerve boundaries, validated endpoints, axon counts or a measure of individual normal variation. Source-table discrepancies remain in the structure notes.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    }
+  ]
+}

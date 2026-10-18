@@ -1,0 +1,831 @@
+{
+  "schema_version": "1.0",
+  "id": "hcp1065-probability-association",
+  "dataset_id": "hcp1065_prob",
+  "required_source": {
+    "id": "hcp1065_prob",
+    "version": "Yeh 2022 probability coverage NIfTI release; SHA256 4577abce53e05c732a0d52c88f4ee2d63488bb685f664faad2ea44aa90be8e8b"
+  },
+  "title": "HCP1065 \u00b7 association probability anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare source-defined subdivisions, their population support and the corresponding original MRI sections.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "field-01-probability",
+      "title": "Left Arcuate Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Arcuate_Fasciculus_L",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_L",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Arcuate Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Arcuate_Fasciculus_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Frontal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-02-probability",
+      "title": "Right Arcuate Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Arcuate_Fasciculus_R",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_R",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Arcuate Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Arcuate_Fasciculus_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Frontal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-03-probability",
+      "title": "Left Frontal Aslant Tract \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_L",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Frontal Aslant Tract through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Frontal_Aslant_Tract_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-04-probability",
+      "title": "Right Frontal Aslant Tract \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_R",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Frontal Aslant Tract through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Frontal_Aslant_Tract_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-05-probability",
+      "title": "Left Inferior Fronto Occipital Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+      "visible": [
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Uncinate_Fasciculus_L",
+        "hcp1065_prob:region:Uncinate_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Inferior Fronto Occipital Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Inferior_Fronto_Occipital_Fasciculus_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-06-probability",
+      "title": "Right Inferior Fronto Occipital Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+      "visible": [
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Uncinate_Fasciculus_L",
+        "hcp1065_prob:region:Uncinate_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Inferior Fronto Occipital Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Inferior_Fronto_Occipital_Fasciculus_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-07-probability",
+      "title": "Left Inferior Longitudinal Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+      "visible": [
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Uncinate_Fasciculus_L",
+        "hcp1065_prob:region:Uncinate_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Inferior Longitudinal Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Inferior_Longitudinal_Fasciculus_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-08-probability",
+      "title": "Right Inferior Longitudinal Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+      "visible": [
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Uncinate_Fasciculus_L",
+        "hcp1065_prob:region:Uncinate_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Inferior Longitudinal Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Inferior_Longitudinal_Fasciculus_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-09-probability",
+      "title": "Left Middle Longitudinal Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+      "visible": [
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Middle Longitudinal Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Middle_Longitudinal_Fasciculus_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-10-probability",
+      "title": "Right Middle Longitudinal Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+      "visible": [
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Middle Longitudinal Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Middle_Longitudinal_Fasciculus_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-11-probability",
+      "title": "Left Parietal Aslant Tract \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+      "visible": [
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Parietal Aslant Tract through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Parietal_Aslant_Tract_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-12-probability",
+      "title": "Right Parietal Aslant Tract \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+      "visible": [
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Parietal Aslant Tract through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Parietal_Aslant_Tract_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-13-probability",
+      "title": "Left Superior Longitudinal Fasciculus1 \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_L",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Superior Longitudinal Fasciculus1 through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Superior_Longitudinal_Fasciculus1_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Frontal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-14-probability",
+      "title": "Right Superior Longitudinal Fasciculus1 \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_R",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Superior Longitudinal Fasciculus1 through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Superior_Longitudinal_Fasciculus1_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Frontal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-15-probability",
+      "title": "Left Superior Longitudinal Fasciculus2 \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_L",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Superior Longitudinal Fasciculus2 through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Superior_Longitudinal_Fasciculus2_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Frontal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-16-probability",
+      "title": "Right Superior Longitudinal Fasciculus2 \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_R",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Superior Longitudinal Fasciculus2 through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Superior_Longitudinal_Fasciculus2_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Frontal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-17-probability",
+      "title": "Left Superior Longitudinal Fasciculus3 \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_L",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Superior Longitudinal Fasciculus3 through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Superior_Longitudinal_Fasciculus3_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Frontal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-18-probability",
+      "title": "Right Superior Longitudinal Fasciculus3 \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R",
+      "visible": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_R",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Superior Longitudinal Fasciculus3 through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Superior_Longitudinal_Fasciculus3_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Arcuate_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Frontal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R": 0.25,
+          "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-19-probability",
+      "title": "Left Uncinate Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Uncinate_Fasciculus_L",
+      "visible": [
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Uncinate_Fasciculus_L",
+        "hcp1065_prob:region:Uncinate_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Uncinate Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Uncinate_Fasciculus_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-20-probability",
+      "title": "Right Uncinate Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Uncinate_Fasciculus_R",
+      "visible": [
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Uncinate_Fasciculus_L",
+        "hcp1065_prob:region:Uncinate_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Uncinate Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Uncinate_Fasciculus_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Uncinate_Fasciculus_L": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-21-probability",
+      "title": "Left Vertical Occipital Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+      "visible": [
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Left Vertical Occipital Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Vertical_Occipital_Fasciculus_L.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R": 0.25
+        }
+      }
+    },
+    {
+      "id": "field-22-probability",
+      "title": "Right Vertical Occipital Fasciculus \u00b7 source probability",
+      "selected": "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R",
+      "visible": [
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R"
+      ],
+      "background": "t1",
+      "prompt": "Follow Right Vertical Occipital Fasciculus through all three MRI planes. Rotate the complete source field surface and compare its visible companions.",
+      "note": "Original source file: Vertical_Occipital_Fasciculus_R.nii.gz. The probability overlay uses the original fraction values. The 3D surface and binary overlay use the inclusive 0.20 display threshold; overlapping memberships remain independent. The matching MRI consists of an exact original template subarray, with its voxel positions retained.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          250,
+          20,
+          0.9
+        ],
+        "slice_zoom": 1.4,
+        "overlay": "probability",
+        "label_opacity": 0.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L": 0.25,
+          "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_L": 0.25,
+          "hcp1065_prob:region:Parietal_Aslant_Tract_R": 0.25,
+          "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L": 0.25
+        }
+      }
+    }
+  ]
+}

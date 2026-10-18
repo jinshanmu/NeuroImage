@@ -1,0 +1,608 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-cortical-medial-basal",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Z-Anatomy \u00b7 Medial and basal cortical source models",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore original cortical surface objects and their relative arrangement within the source model.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "object-01",
+      "title": "Left Calcarine sulcus",
+      "selected": "z_anatomy:object:d67cd647706e",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Calcarine sulcus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Calcarine sulcus.l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:b0de45bdfd87": 0.32,
+          "z_anatomy:object:8a26ee4b8094": 0.32,
+          "z_anatomy:object:aa3da22c4906": 0.32,
+          "z_anatomy:object:749ca82610aa": 0.32,
+          "z_anatomy:object:26aefbf06f7e": 0.32,
+          "z_anatomy:object:613a8b5387ce": 0.32,
+          "z_anatomy:object:9819465ea2a7": 0.32
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-02",
+      "title": "Right Calcarine sulcus",
+      "selected": "z_anatomy:object:8c27f49a316e",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Calcarine sulcus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Calcarine sulcus.r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:b38bd5e446a8": 0.32,
+          "z_anatomy:object:c9238f32f95e": 0.32,
+          "z_anatomy:object:c717da109b89": 0.32,
+          "z_anatomy:object:b2f997ebcf1b": 0.32,
+          "z_anatomy:object:9c53e998b3db": 0.32,
+          "z_anatomy:object:121117601039": 0.32,
+          "z_anatomy:object:3a6966c34762": 0.32
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-03",
+      "title": "Left Parieto-occipital sulcus",
+      "selected": "z_anatomy:object:b0de45bdfd87",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Parieto-occipital sulcus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Parieto-occipital sulcus.l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:d67cd647706e": 0.32,
+          "z_anatomy:object:8a26ee4b8094": 0.32,
+          "z_anatomy:object:aa3da22c4906": 0.32,
+          "z_anatomy:object:749ca82610aa": 0.32,
+          "z_anatomy:object:26aefbf06f7e": 0.32,
+          "z_anatomy:object:613a8b5387ce": 0.32,
+          "z_anatomy:object:9819465ea2a7": 0.32
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-04",
+      "title": "Right Parieto-occipital sulcus",
+      "selected": "z_anatomy:object:b38bd5e446a8",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Parieto-occipital sulcus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Parieto-occipital sulcus.r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:8c27f49a316e": 0.32,
+          "z_anatomy:object:c9238f32f95e": 0.32,
+          "z_anatomy:object:c717da109b89": 0.32,
+          "z_anatomy:object:b2f997ebcf1b": 0.32,
+          "z_anatomy:object:9c53e998b3db": 0.32,
+          "z_anatomy:object:121117601039": 0.32,
+          "z_anatomy:object:3a6966c34762": 0.32
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-05",
+      "title": "Left Lingual gyrus",
+      "selected": "z_anatomy:object:8a26ee4b8094",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Lingual gyrus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Lingual gyrus.l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:d67cd647706e": 0.55,
+          "z_anatomy:object:b0de45bdfd87": 0.55,
+          "z_anatomy:object:aa3da22c4906": 0.55,
+          "z_anatomy:object:749ca82610aa": 0.55,
+          "z_anatomy:object:26aefbf06f7e": 0.55,
+          "z_anatomy:object:613a8b5387ce": 0.55,
+          "z_anatomy:object:9819465ea2a7": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-06",
+      "title": "Right Lingual gyrus",
+      "selected": "z_anatomy:object:c9238f32f95e",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Lingual gyrus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Lingual gyrus.r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:8c27f49a316e": 0.55,
+          "z_anatomy:object:b38bd5e446a8": 0.55,
+          "z_anatomy:object:c717da109b89": 0.55,
+          "z_anatomy:object:b2f997ebcf1b": 0.55,
+          "z_anatomy:object:9c53e998b3db": 0.55,
+          "z_anatomy:object:121117601039": 0.55,
+          "z_anatomy:object:3a6966c34762": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-07",
+      "title": "Left Collateral sulcus",
+      "selected": "z_anatomy:object:aa3da22c4906",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Collateral sulcus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Collateral sulcus.l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:d67cd647706e": 0.32,
+          "z_anatomy:object:b0de45bdfd87": 0.32,
+          "z_anatomy:object:8a26ee4b8094": 0.32,
+          "z_anatomy:object:749ca82610aa": 0.32,
+          "z_anatomy:object:26aefbf06f7e": 0.32,
+          "z_anatomy:object:613a8b5387ce": 0.32,
+          "z_anatomy:object:9819465ea2a7": 0.32
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-08",
+      "title": "Right Collateral sulcus",
+      "selected": "z_anatomy:object:c717da109b89",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Collateral sulcus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Collateral sulcus.r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:8c27f49a316e": 0.32,
+          "z_anatomy:object:b38bd5e446a8": 0.32,
+          "z_anatomy:object:c9238f32f95e": 0.32,
+          "z_anatomy:object:b2f997ebcf1b": 0.32,
+          "z_anatomy:object:9c53e998b3db": 0.32,
+          "z_anatomy:object:121117601039": 0.32,
+          "z_anatomy:object:3a6966c34762": 0.32
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-09",
+      "title": "Left Medial occipitotemporal gyrus (Parahippocampal*)",
+      "selected": "z_anatomy:object:749ca82610aa",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Medial occipitotemporal gyrus (Parahippocampal*) in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Medial occipitotemporal gyrus (Parahippocampal*).l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:d67cd647706e": 0.55,
+          "z_anatomy:object:b0de45bdfd87": 0.55,
+          "z_anatomy:object:8a26ee4b8094": 0.55,
+          "z_anatomy:object:aa3da22c4906": 0.55,
+          "z_anatomy:object:26aefbf06f7e": 0.55,
+          "z_anatomy:object:613a8b5387ce": 0.55,
+          "z_anatomy:object:9819465ea2a7": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-10",
+      "title": "Right Medial occipitotemporal gyrus (Parahippocampal*)",
+      "selected": "z_anatomy:object:b2f997ebcf1b",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Medial occipitotemporal gyrus (Parahippocampal*) in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Medial occipitotemporal gyrus (Parahippocampal*).r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:8c27f49a316e": 0.55,
+          "z_anatomy:object:b38bd5e446a8": 0.55,
+          "z_anatomy:object:c9238f32f95e": 0.55,
+          "z_anatomy:object:c717da109b89": 0.55,
+          "z_anatomy:object:9c53e998b3db": 0.55,
+          "z_anatomy:object:121117601039": 0.55,
+          "z_anatomy:object:3a6966c34762": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-11",
+      "title": "Left Lateral occipitotemporal gyrus",
+      "selected": "z_anatomy:object:26aefbf06f7e",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Lateral occipitotemporal gyrus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Lateral occipitotemporal gyrus.l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:d67cd647706e": 0.55,
+          "z_anatomy:object:b0de45bdfd87": 0.55,
+          "z_anatomy:object:8a26ee4b8094": 0.55,
+          "z_anatomy:object:aa3da22c4906": 0.55,
+          "z_anatomy:object:749ca82610aa": 0.55,
+          "z_anatomy:object:613a8b5387ce": 0.55,
+          "z_anatomy:object:9819465ea2a7": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-12",
+      "title": "Right Lateral occipitotemporal gyrus",
+      "selected": "z_anatomy:object:9c53e998b3db",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Lateral occipitotemporal gyrus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Lateral occipitotemporal gyrus.r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:8c27f49a316e": 0.55,
+          "z_anatomy:object:b38bd5e446a8": 0.55,
+          "z_anatomy:object:c9238f32f95e": 0.55,
+          "z_anatomy:object:c717da109b89": 0.55,
+          "z_anatomy:object:b2f997ebcf1b": 0.55,
+          "z_anatomy:object:121117601039": 0.55,
+          "z_anatomy:object:3a6966c34762": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-13",
+      "title": "Left Precuneus",
+      "selected": "z_anatomy:object:613a8b5387ce",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Precuneus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Precuneus.l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:d67cd647706e": 0.55,
+          "z_anatomy:object:b0de45bdfd87": 0.55,
+          "z_anatomy:object:8a26ee4b8094": 0.55,
+          "z_anatomy:object:aa3da22c4906": 0.55,
+          "z_anatomy:object:749ca82610aa": 0.55,
+          "z_anatomy:object:26aefbf06f7e": 0.55,
+          "z_anatomy:object:9819465ea2a7": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-14",
+      "title": "Right Precuneus",
+      "selected": "z_anatomy:object:121117601039",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Precuneus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Precuneus.r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:8c27f49a316e": 0.55,
+          "z_anatomy:object:b38bd5e446a8": 0.55,
+          "z_anatomy:object:c9238f32f95e": 0.55,
+          "z_anatomy:object:c717da109b89": 0.55,
+          "z_anatomy:object:b2f997ebcf1b": 0.55,
+          "z_anatomy:object:9c53e998b3db": 0.55,
+          "z_anatomy:object:3a6966c34762": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-15",
+      "title": "Left Cuneus",
+      "selected": "z_anatomy:object:9819465ea2a7",
+      "visible": [
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:9819465ea2a7"
+      ],
+      "prompt": "Locate Left Cuneus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Cuneus.l. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:d67cd647706e": 0.55,
+          "z_anatomy:object:b0de45bdfd87": 0.55,
+          "z_anatomy:object:8a26ee4b8094": 0.55,
+          "z_anatomy:object:aa3da22c4906": 0.55,
+          "z_anatomy:object:749ca82610aa": 0.55,
+          "z_anatomy:object:26aefbf06f7e": 0.55,
+          "z_anatomy:object:613a8b5387ce": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-16",
+      "title": "Right Cuneus",
+      "selected": "z_anatomy:object:3a6966c34762",
+      "visible": [
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:b38bd5e446a8",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:b2f997ebcf1b",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:3a6966c34762"
+      ],
+      "prompt": "Locate Right Cuneus in the original model. Identify adjacent source objects, then rotate the visible hemisphere to inspect their continuity and extent.",
+      "note": "Original source object: Cuneus.r. Source cortical parcellation and composite names remain as supplied. The selected object is highlighted within its original hemisphere-specific model context.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.94
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:8c27f49a316e": 0.55,
+          "z_anatomy:object:b38bd5e446a8": 0.55,
+          "z_anatomy:object:c9238f32f95e": 0.55,
+          "z_anatomy:object:c717da109b89": 0.55,
+          "z_anatomy:object:b2f997ebcf1b": 0.55,
+          "z_anatomy:object:9c53e998b3db": 0.55,
+          "z_anatomy:object:121117601039": 0.55
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

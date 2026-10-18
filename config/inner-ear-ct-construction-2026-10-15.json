@@ -1,0 +1,72 @@
+{
+  "recorded_utc": "2026-10-15T12:55:57.504951+00:00",
+  "status": "passed",
+  "dataset_id": "inner_ear_ct_specimen1",
+  "package_version": "8505a304d1cd522a",
+  "manifest_sha256": "d61da019811e5a476874d1d0999951df896ecb3a417f3540c6fdf9f6e933a963",
+  "source_sha256": "6a4e9e6e9b217a4262379dbf03c9b7e67d75e25306a84418c135e4ffc6281f96",
+  "source_modified": false,
+  "source_samples": [
+    {
+      "id": "ct",
+      "shape": [
+        512,
+        512,
+        405
+      ],
+      "source_dtype": "int32",
+      "delivered_dtype": "int32",
+      "all_samples_exact": true,
+      "source_grid_exact_in_manifest": true,
+      "nifti_header_corner_max_error_mm": 8.517263154317334e-06
+    },
+    {
+      "id": "labels",
+      "shape": [
+        512,
+        512,
+        405
+      ],
+      "source_dtype": "uint8",
+      "delivered_dtype": "uint16",
+      "all_samples_exact": true,
+      "source_grid_exact_in_manifest": true,
+      "nifti_header_corner_max_error_mm": 8.517263154317334e-06
+    }
+  ],
+  "structure_count": 3,
+  "source_label_values": [
+    1,
+    2,
+    3
+  ],
+  "scope": "Original Dataset A specimen 1. Clinical Dataset B excluded. No independent anatomy adjudication or source landmark integration claimed.",
+  "geometry_report": "benchmarks/inner_ear_ct/construction-20261015/geometry-validation.json",
+  "software_tests": {
+    "python_passed": 228,
+    "frontend_passed": 132,
+    "frontend_test_files": 21
+  },
+  "browser_status": "passed",
+  "teaching_notebook": {
+    "curriculum": "inner-ear-ct-specimen1-fluid-spaces",
+    "views": 6,
+    "path": "exports/inner_ear_ct_specimen1/notebooks/inner-ear-ct-specimen1-fluid-spaces-01cdfbe98800/prepared-notebook.json"
+  },
+  "schema_version": "1.10",
+  "browser": {
+    "report": "benchmarks/inner_ear_ct/construction-20261015/browser",
+    "viewport_widths": [
+      1600,
+      390
+    ],
+    "mobile_horizontal_overflow": false,
+    "mobile_inner_scrollers": 0,
+    "scene_save_restore": true,
+    "scene_export_import": true,
+    "teaching_image_and_provenance_export": true,
+    "source_lessons_three_targets": true,
+    "page_errors": []
+  },
+  "completed_utc": "2026-10-15T13:06:25.778245+00:00"
+}

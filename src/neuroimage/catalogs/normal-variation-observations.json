@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0",
+  "source_id": "thu_cerebral_mra",
+  "source_url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+  "source_doi": "https://doi.org/10.1016/j.compmedimag.2024.102364",
+  "selection_basis": "Purposeful teaching selection spanning delivered annotation patterns; not a representative prevalence sample.",
+  "interpretation": "Source annotation coverage, image visibility, anatomical identity and individual variation are different observations. No named variant diagnosis is supplied.",
+  "cases": [
+    {
+      "case": "009",
+      "dataset_id": "thu_mra_case009",
+      "present_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [],
+      "observation": "Source label inventory contains 20 of 20 segment values. Values absent in this annotation: none. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    },
+    {
+      "case": "014",
+      "dataset_id": "thu_mra_case014",
+      "present_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [],
+      "observation": "Source label inventory contains 20 of 20 segment values. Values absent in this annotation: none. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    },
+    {
+      "case": "001",
+      "dataset_id": "thu_mra_case001",
+      "present_values": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [
+        5,
+        8,
+        9
+      ],
+      "observation": "Source label inventory contains 17 of 20 segment values. Values absent in this annotation: 5, 8, 9. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    },
+    {
+      "case": "006",
+      "dataset_id": "thu_mra_case006",
+      "present_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [
+        9
+      ],
+      "observation": "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 9. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    },
+    {
+      "case": "010",
+      "dataset_id": "thu_mra_case010",
+      "present_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [
+        8
+      ],
+      "observation": "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 8. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    },
+    {
+      "case": "021",
+      "dataset_id": "thu_mra_case021",
+      "present_values": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [
+        5
+      ],
+      "observation": "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 5. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    },
+    {
+      "case": "030",
+      "dataset_id": "thu_mra_case030",
+      "present_values": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [
+        2
+      ],
+      "observation": "Source label inventory contains 19 of 20 segment values. Values absent in this annotation: 2. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    },
+    {
+      "case": "007",
+      "dataset_id": "thu_mra_case007",
+      "present_values": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "unlabelled_values": [
+        1,
+        10
+      ],
+      "observation": "Source label inventory contains 18 of 20 segment values. Values absent in this annotation: 1, 10. A missing source label does not establish anatomical absence or hypoplasia. Compare the original MRA, categorical annotation and source landmarks separately; no named vascular variant is adjudicated here.",
+      "variant_adjudication": "not_performed"
+    }
+  ]
+}

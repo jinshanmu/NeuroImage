@@ -1,0 +1,18 @@
+{
+  "ssd_minimum_free_gib": 60,
+  "hdd_minimum_free_gib": 400,
+  "download_batch_maximum_gib": 300,
+  "extraction_batch_maximum_gib": 400,
+  "parallel_downloads": 3,
+  "keep_original_archives": true,
+  "reuse_existing_verified_files": true,
+  "avoid_duplicate_full_sets_and_formats": true,
+  "intended_use": "Noncommercial research and education",
+  "project_language": "en",
+  "parallel_ranges_per_file": 32,
+  "parallel_small_objects": 8,
+  "full_histology_extraction_by_default": false,
+  "software_distribution_contains_acquired_data": false,
+  "software_release_policy": "Code, schemas, recipes and English documentation only; users acquire their own data",
+  "dataset_directory_policy": "Uniform directories indexed by dataset ID; individual license records"
+}

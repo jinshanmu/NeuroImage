@@ -1,0 +1,1643 @@
+{
+  "$defs": {
+    "Asset": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "image",
+            "scalar",
+            "source-volume",
+            "labels",
+            "mask",
+            "probability",
+            "mesh",
+            "streamlines",
+            "streamline-index",
+            "source-geometry",
+            "license",
+            "lessons",
+            "validation"
+          ],
+          "title": "Role",
+          "type": "string"
+        },
+        "bytes": {
+          "exclusiveMinimum": 0,
+          "title": "Bytes",
+          "type": "integer"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "role",
+        "bytes",
+        "sha256"
+      ],
+      "title": "Asset",
+      "type": "object"
+    },
+    "ImageEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "modality": {
+          "enum": [
+            "MRI",
+            "CT"
+          ],
+          "title": "Modality",
+          "type": "string"
+        },
+        "source_input": {
+          "minLength": 1,
+          "title": "Source Input",
+          "type": "string"
+        },
+        "source_dataset": {
+          "minLength": 1,
+          "title": "Source Dataset",
+          "type": "string"
+        },
+        "intensity_units": {
+          "minLength": 1,
+          "title": "Intensity Units",
+          "type": "string"
+        },
+        "calibration": {
+          "minLength": 1,
+          "title": "Calibration",
+          "type": "string"
+        },
+        "acquisition": {
+          "minLength": 1,
+          "title": "Acquisition",
+          "type": "string"
+        },
+        "sampling": {
+          "minLength": 1,
+          "title": "Sampling",
+          "type": "string"
+        }
+      },
+      "required": [
+        "modality",
+        "source_input",
+        "source_dataset",
+        "intensity_units",
+        "calibration",
+        "acquisition",
+        "sampling"
+      ],
+      "title": "ImageEvidence",
+      "type": "object"
+    },
+    "IndependentRegion": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source_name": {
+          "title": "Source Name",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "laterality": {
+          "enum": [
+            "left",
+            "right",
+            "midline",
+            "unspecified"
+          ],
+          "title": "Laterality",
+          "type": "string"
+        },
+        "color": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Color",
+          "type": "array"
+        },
+        "mesh_file": {
+          "title": "Mesh File",
+          "type": "string"
+        },
+        "voxel_count": {
+          "exclusiveMinimum": 0,
+          "title": "Voxel Count",
+          "type": "integer"
+        },
+        "volume_mm3": {
+          "exclusiveMinimum": 0,
+          "title": "Volume Mm3",
+          "type": "number"
+        },
+        "center_ras_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Center Ras Mm",
+          "type": "array"
+        },
+        "target_ras_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Target Ras Mm",
+          "type": "array"
+        },
+        "bounds_ras_mm": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            }
+          ],
+          "title": "Bounds Ras Mm",
+          "type": "array"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "source_notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Notes",
+          "type": "array"
+        },
+        "review_status": {
+          "const": "not_reviewed",
+          "default": "not_reviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "kind": {
+          "const": "independent-region",
+          "title": "Kind",
+          "type": "string"
+        },
+        "mask": {
+          "$ref": "#/$defs/MaskEvidence"
+        },
+        "probability": {
+          "$ref": "#/$defs/ProbabilityEvidence"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "source_name",
+        "category",
+        "laterality",
+        "color",
+        "mesh_file",
+        "voxel_count",
+        "volume_mm3",
+        "center_ras_mm",
+        "target_ras_mm",
+        "bounds_ras_mm",
+        "evidence",
+        "kind",
+        "mask",
+        "probability"
+      ],
+      "title": "IndependentRegion",
+      "type": "object"
+    },
+    "MaskEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "volume_id": {
+          "title": "Volume Id",
+          "type": "string"
+        },
+        "source_input": {
+          "title": "Source Input",
+          "type": "string"
+        },
+        "threshold": {
+          "exclusiveMinimum": 0,
+          "maximum": 100,
+          "title": "Threshold",
+          "type": "number"
+        },
+        "threshold_operator": {
+          "const": ">=",
+          "title": "Threshold Operator",
+          "type": "string"
+        },
+        "derivation": {
+          "title": "Derivation",
+          "type": "string"
+        },
+        "origin": {
+          "default": "source",
+          "enum": [
+            "source",
+            "derived-from-probability"
+          ],
+          "title": "Origin",
+          "type": "string"
+        }
+      },
+      "required": [
+        "volume_id",
+        "source_input",
+        "threshold",
+        "threshold_operator",
+        "derivation"
+      ],
+      "title": "MaskEvidence",
+      "type": "object"
+    },
+    "ModelGeometry": {
+      "additionalProperties": false,
+      "properties": {
+        "source_input": {
+          "title": "Source Input",
+          "type": "string"
+        },
+        "source_object": {
+          "title": "Source Object",
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "MESH",
+            "CURVE",
+            "OBJ"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "source_geometry_file": {
+          "title": "Source Geometry File",
+          "type": "string"
+        },
+        "provenance_file": {
+          "title": "Provenance File",
+          "type": "string"
+        },
+        "vertex_count": {
+          "minimum": 3,
+          "title": "Vertex Count",
+          "type": "integer"
+        },
+        "triangle_count": {
+          "minimum": 1,
+          "title": "Triangle Count",
+          "type": "integer"
+        },
+        "target_vertex_index": {
+          "minimum": 0,
+          "title": "Target Vertex Index",
+          "type": "integer"
+        },
+        "transform_to_native_mm": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "title": "Transform To Native Mm",
+          "type": "array"
+        },
+        "method": {
+          "title": "Method",
+          "type": "string"
+        },
+        "source_stage": {
+          "default": "base",
+          "enum": [
+            "base",
+            "author-viewport"
+          ],
+          "title": "Source Stage",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_input",
+        "source_object",
+        "source_type",
+        "source_geometry_file",
+        "provenance_file",
+        "vertex_count",
+        "triangle_count",
+        "target_vertex_index",
+        "transform_to_native_mm",
+        "method"
+      ],
+      "title": "ModelGeometry",
+      "type": "object"
+    },
+    "ModelSpace": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "coordinate_system": {
+          "const": "SOURCE_XYZ",
+          "title": "Coordinate System",
+          "type": "string"
+        },
+        "units": {
+          "const": "mm",
+          "default": "mm",
+          "title": "Units",
+          "type": "string"
+        },
+        "reference": {
+          "title": "Reference",
+          "type": "string"
+        },
+        "correspondence": {
+          "title": "Correspondence",
+          "type": "string"
+        },
+        "axis_status": {
+          "const": "source_axes_not_anatomically_verified",
+          "title": "Axis Status",
+          "type": "string"
+        },
+        "unit_basis": {
+          "title": "Unit Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "coordinate_system",
+        "reference",
+        "correspondence",
+        "axis_status",
+        "unit_basis"
+      ],
+      "title": "ModelSpace",
+      "type": "object"
+    },
+    "ModelSurface": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "model-surface",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source_name": {
+          "title": "Source Name",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "laterality": {
+          "enum": [
+            "left",
+            "right",
+            "midline",
+            "unspecified"
+          ],
+          "title": "Laterality",
+          "type": "string"
+        },
+        "color": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Color",
+          "type": "array"
+        },
+        "mesh_file": {
+          "title": "Mesh File",
+          "type": "string"
+        },
+        "center_native_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Center Native Mm",
+          "type": "array"
+        },
+        "target_native_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Target Native Mm",
+          "type": "array"
+        },
+        "bounds_native_mm": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            }
+          ],
+          "title": "Bounds Native Mm",
+          "type": "array"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "source_notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Notes",
+          "type": "array"
+        },
+        "geometry": {
+          "$ref": "#/$defs/ModelGeometry"
+        },
+        "review_status": {
+          "const": "not_reviewed",
+          "default": "not_reviewed",
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "name",
+        "source_name",
+        "category",
+        "laterality",
+        "color",
+        "mesh_file",
+        "center_native_mm",
+        "target_native_mm",
+        "bounds_native_mm",
+        "evidence",
+        "geometry"
+      ],
+      "title": "ModelSurface",
+      "type": "object"
+    },
+    "NativeFrame": {
+      "additionalProperties": false,
+      "properties": {
+        "source_input": {
+          "title": "Source Input",
+          "type": "string"
+        },
+        "source_file": {
+          "title": "Source File",
+          "type": "string"
+        },
+        "source_shape": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Source Shape",
+          "type": "array"
+        },
+        "frame": {
+          "minimum": 0,
+          "title": "Frame",
+          "type": "integer"
+        },
+        "extraction": {
+          "const": "exact-native-frame-no-interpolation",
+          "title": "Extraction",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_input",
+        "source_file",
+        "source_shape",
+        "frame",
+        "extraction"
+      ],
+      "title": "NativeFrame",
+      "type": "object"
+    },
+    "ProbabilityEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "volume_id": {
+          "title": "Volume Id",
+          "type": "string"
+        },
+        "source_input": {
+          "title": "Source Input",
+          "type": "string"
+        },
+        "source_channel": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Channel"
+        },
+        "interpretation": {
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "derivation": {
+          "title": "Derivation",
+          "type": "string"
+        },
+        "units": {
+          "default": "fraction",
+          "enum": [
+            "fraction",
+            "percent"
+          ],
+          "title": "Units",
+          "type": "string"
+        }
+      },
+      "required": [
+        "volume_id",
+        "source_input",
+        "interpretation",
+        "derivation"
+      ],
+      "title": "ProbabilityEvidence",
+      "type": "object"
+    },
+    "ScalarEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "source_input": {
+          "title": "Source Input",
+          "type": "string"
+        },
+        "metric": {
+          "minLength": 1,
+          "title": "Metric",
+          "type": "string"
+        },
+        "units": {
+          "minLength": 1,
+          "title": "Units",
+          "type": "string"
+        },
+        "statistic": {
+          "minLength": 1,
+          "title": "Statistic",
+          "type": "string"
+        },
+        "interpretation": {
+          "minLength": 1,
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "derivation": {
+          "minLength": 1,
+          "title": "Derivation",
+          "type": "string"
+        },
+        "reference": {
+          "minLength": 1,
+          "title": "Reference",
+          "type": "string"
+        },
+        "valid_range": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Valid Range"
+        }
+      },
+      "required": [
+        "source_input",
+        "metric",
+        "units",
+        "statistic",
+        "interpretation",
+        "derivation",
+        "reference"
+      ],
+      "title": "ScalarEvidence",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        },
+        "citation": {
+          "title": "Citation",
+          "type": "string"
+        },
+        "license_name": {
+          "title": "License Name",
+          "type": "string"
+        },
+        "license_url": {
+          "title": "License Url",
+          "type": "string"
+        },
+        "license_file": {
+          "title": "License File",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "version",
+        "url",
+        "citation",
+        "license_name",
+        "license_url",
+        "license_file"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "Space": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "coordinate_system": {
+          "const": "RAS",
+          "default": "RAS",
+          "title": "Coordinate System",
+          "type": "string"
+        },
+        "units": {
+          "const": "mm",
+          "default": "mm",
+          "title": "Units",
+          "type": "string"
+        },
+        "reference": {
+          "title": "Reference",
+          "type": "string"
+        },
+        "correspondence": {
+          "title": "Correspondence",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "reference",
+        "correspondence"
+      ],
+      "title": "Space",
+      "type": "object"
+    },
+    "StreamlineEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "source_input": {
+          "title": "Source Input",
+          "type": "string"
+        },
+        "coordinate_system": {
+          "const": "RAS",
+          "default": "RAS",
+          "title": "Coordinate System",
+          "type": "string"
+        },
+        "units": {
+          "const": "mm",
+          "default": "mm",
+          "title": "Units",
+          "type": "string"
+        },
+        "source_streamline_count": {
+          "exclusiveMinimum": 0,
+          "title": "Source Streamline Count",
+          "type": "integer"
+        },
+        "source_point_count": {
+          "exclusiveMinimum": 1,
+          "title": "Source Point Count",
+          "type": "integer"
+        },
+        "decoded_ras_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Decoded Ras Sha256",
+          "type": "string"
+        },
+        "target_streamline_index": {
+          "minimum": 0,
+          "title": "Target Streamline Index",
+          "type": "integer"
+        },
+        "target_point_index": {
+          "minimum": 0,
+          "title": "Target Point Index",
+          "type": "integer"
+        },
+        "sampling": {
+          "const": "uniform-source-index-whole-streamlines",
+          "title": "Sampling",
+          "type": "string"
+        },
+        "levels": {
+          "items": {
+            "$ref": "#/$defs/StreamlineLevel"
+          },
+          "title": "Levels",
+          "type": "array"
+        }
+      },
+      "required": [
+        "source_input",
+        "source_streamline_count",
+        "source_point_count",
+        "decoded_ras_sha256",
+        "target_streamline_index",
+        "target_point_index",
+        "sampling",
+        "levels"
+      ],
+      "title": "StreamlineEvidence",
+      "type": "object"
+    },
+    "StreamlineLevel": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "preview",
+            "standard",
+            "detail",
+            "full"
+          ],
+          "title": "Id",
+          "type": "string"
+        },
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "indices_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Indices File"
+        },
+        "streamline_count": {
+          "exclusiveMinimum": 0,
+          "title": "Streamline Count",
+          "type": "integer"
+        },
+        "point_count": {
+          "exclusiveMinimum": 1,
+          "title": "Point Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "file",
+        "streamline_count",
+        "point_count"
+      ],
+      "title": "StreamlineLevel",
+      "type": "object"
+    },
+    "StreamlineStructure": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "streamline-bundle",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source_name": {
+          "title": "Source Name",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "laterality": {
+          "enum": [
+            "left",
+            "right",
+            "midline",
+            "unspecified"
+          ],
+          "title": "Laterality",
+          "type": "string"
+        },
+        "color": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Color",
+          "type": "array"
+        },
+        "center_ras_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Center Ras Mm",
+          "type": "array"
+        },
+        "target_ras_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Target Ras Mm",
+          "type": "array"
+        },
+        "bounds_ras_mm": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            }
+          ],
+          "title": "Bounds Ras Mm",
+          "type": "array"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "source_notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Notes",
+          "type": "array"
+        },
+        "streamlines": {
+          "$ref": "#/$defs/StreamlineEvidence"
+        },
+        "review_status": {
+          "const": "not_reviewed",
+          "default": "not_reviewed",
+          "title": "Review Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "name",
+        "source_name",
+        "category",
+        "laterality",
+        "color",
+        "center_ras_mm",
+        "target_ras_mm",
+        "bounds_ras_mm",
+        "evidence",
+        "streamlines"
+      ],
+      "title": "StreamlineStructure",
+      "type": "object"
+    },
+    "Structure": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "source_name": {
+          "title": "Source Name",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "laterality": {
+          "enum": [
+            "left",
+            "right",
+            "midline",
+            "unspecified"
+          ],
+          "title": "Laterality",
+          "type": "string"
+        },
+        "color": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Color",
+          "type": "array"
+        },
+        "mesh_file": {
+          "title": "Mesh File",
+          "type": "string"
+        },
+        "voxel_count": {
+          "exclusiveMinimum": 0,
+          "title": "Voxel Count",
+          "type": "integer"
+        },
+        "volume_mm3": {
+          "exclusiveMinimum": 0,
+          "title": "Volume Mm3",
+          "type": "number"
+        },
+        "center_ras_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Center Ras Mm",
+          "type": "array"
+        },
+        "target_ras_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Target Ras Mm",
+          "type": "array"
+        },
+        "bounds_ras_mm": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            }
+          ],
+          "title": "Bounds Ras Mm",
+          "type": "array"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "source_notes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Notes",
+          "type": "array"
+        },
+        "review_status": {
+          "const": "not_reviewed",
+          "default": "not_reviewed",
+          "title": "Review Status",
+          "type": "string"
+        },
+        "label_value": {
+          "exclusiveMinimum": 0,
+          "maximum": 65535,
+          "title": "Label Value",
+          "type": "integer"
+        },
+        "probability": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProbabilityEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "source_name",
+        "category",
+        "laterality",
+        "color",
+        "mesh_file",
+        "voxel_count",
+        "volume_mm3",
+        "center_ras_mm",
+        "target_ras_mm",
+        "bounds_ras_mm",
+        "evidence",
+        "label_value"
+      ],
+      "title": "Structure",
+      "type": "object"
+    },
+    "Volume": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "image",
+            "scalar",
+            "labels",
+            "mask",
+            "probability"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "scalar": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScalarEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "image_evidence": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ImageEvidence"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "native_frame": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/NativeFrame"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "shape": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Shape",
+          "type": "array"
+        },
+        "affine_ras_mm": {
+          "items": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "title": "Affine Ras Mm",
+          "type": "array"
+        },
+        "voxel_size_mm": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Voxel Size Mm",
+          "type": "array"
+        },
+        "orientation": {
+          "title": "Orientation",
+          "type": "string"
+        },
+        "cal_min": {
+          "title": "Cal Min",
+          "type": "number"
+        },
+        "cal_max": {
+          "title": "Cal Max",
+          "type": "number"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "file",
+        "shape",
+        "affine_ras_mm",
+        "voxel_size_mm",
+        "orientation",
+        "cal_min",
+        "cal_max"
+      ],
+      "title": "Volume",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.2",
+      "enum": [
+        "1.0",
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "1.9",
+        "1.10"
+      ],
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "representation": {
+      "default": "mri-labels",
+      "enum": [
+        "mri-labels",
+        "ct-labels",
+        "label-model",
+        "mri-streamlines",
+        "mri-regions",
+        "mri-volume",
+        "surface-model",
+        "scalar-fields"
+      ],
+      "title": "Representation",
+      "type": "string"
+    },
+    "package_id": {
+      "pattern": "^[a-z0-9][a-z0-9_-]*$",
+      "title": "Package Id",
+      "type": "string"
+    },
+    "dataset_id": {
+      "title": "Dataset Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "package_version": {
+      "title": "Package Version",
+      "type": "string"
+    },
+    "space": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Space"
+        },
+        {
+          "$ref": "#/$defs/ModelSpace"
+        }
+      ],
+      "title": "Space"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "minItems": 1,
+      "title": "Sources",
+      "type": "array"
+    },
+    "volumes": {
+      "items": {
+        "$ref": "#/$defs/Volume"
+      },
+      "title": "Volumes",
+      "type": "array"
+    },
+    "structures": {
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/Structure"
+          },
+          {
+            "$ref": "#/$defs/StreamlineStructure"
+          },
+          {
+            "$ref": "#/$defs/IndependentRegion"
+          },
+          {
+            "$ref": "#/$defs/ModelSurface"
+          }
+        ]
+      },
+      "title": "Structures",
+      "type": "array"
+    },
+    "assets": {
+      "items": {
+        "$ref": "#/$defs/Asset"
+      },
+      "minItems": 1,
+      "title": "Assets",
+      "type": "array"
+    },
+    "lessons_file": {
+      "title": "Lessons File",
+      "type": "string"
+    },
+    "build": {
+      "additionalProperties": true,
+      "title": "Build",
+      "type": "object"
+    },
+    "validation": {
+      "additionalProperties": true,
+      "title": "Validation",
+      "type": "object"
+    }
+  },
+  "required": [
+    "package_id",
+    "dataset_id",
+    "title",
+    "package_version",
+    "space",
+    "sources",
+    "volumes",
+    "structures",
+    "assets",
+    "lessons_file",
+    "build",
+    "validation"
+  ],
+  "title": "Manifest",
+  "type": "object"
+}

@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-10-14T11:49:04.193599+00:00",
+  "status": "passed",
+  "dataset_id": "suit_cerebellum",
+  "manifest": "derivatives/suit_cerebellum/8aedcbdb455603b3/manifest.json",
+  "source_regions": 34,
+  "probability_fields": 34,
+  "reference_images": 1,
+  "source_verification": "benchmarks/suit_cerebellum/fine-anatomy-20261014/source-verification-palette.json",
+  "browser_receipt": "benchmarks/suit_cerebellum/fine-anatomy-20261014/browser/acceptance.json",
+  "all_original_samples_and_affines_exact": true,
+  "maximum_source_coordinate_error_mm": 0.0,
+  "independent_source_array_directions_preserved": true,
+  "unchanged_rebuild": {
+    "reused_assets": 73,
+    "built_assets": 0,
+    "geometry_recomputed": false
+  },
+  "teaching_sequences": 3,
+  "curricula": 3,
+  "views": 40,
+  "course_id": "1eb09bb1-e38b-55f5-be28-bcd529c99ea0",
+  "source_probability_readouts_checked": 34,
+  "scene_pixel_comparisons": 6,
+  "credited_exports": 16,
+  "engineering_tests": "58 targeted checks passed",
+  "anatomical_review": "pending exact-view instructor assessment",
+  "expert_review_in_engineering_denominator": false,
+  "frontend": "Owner-accepted implementation and layout retained.",
+  "display_palette": "Declared nuclear display RGB values with original source colors retained in per-structure provenance",
+  "display_revision_history": "benchmarks/suit_cerebellum/fine-anatomy-20261014/display-revision/history.json",
+  "additional_engineering_tests": "35 source identity, display palette, model and course checks passed",
+  "nuclear_display_revision": {
+    "recorded_utc": "2026-10-14T12:25:14.283629+00:00",
+    "receipt": "benchmarks/suit_cerebellum/fine-anatomy-20261014/nuclear-clarity-browser/acceptance.json",
+    "views": 12,
+    "scope": "Inferior camera, opaque surrounding nuclei and same-point MRI enlargement; source values and meshes unchanged.",
+    "supersedes": "Earlier nuclear display presets; original browser and expert image pairs preserved."
+  }
+}

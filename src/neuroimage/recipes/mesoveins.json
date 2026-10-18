@@ -1,0 +1,73 @@
+{
+  "id": "mesoveins",
+  "version": "1",
+  "source_version": "10.5281/zenodo.19332208",
+  "adapter": "native-nifti-frame",
+  "representation": "mri-volume",
+  "title": "Meso-vein MRI \u00b7 native healthy participant 01",
+  "construction_peak_gib": 4,
+  "inputs": {
+    "series": "raw/mesoveins/sub-01_ses-06_run-01_dir-AP_part-mag_ME3DEPI.nii.gz",
+    "license": "licenses/mesoveins/official-record.json"
+  },
+  "images": [
+    {
+      "id": "echo_3",
+      "name": "Native magnitude \u00b7 stored echo 3 \u00b7 participant 01, run 01",
+      "source_input": "series",
+      "source_frame": 2
+    }
+  ],
+  "space": {
+    "id": "mesoveins-sub01-ses06-run01-native",
+    "name": "Meso-vein participant 01 \u00b7 original run 01 space",
+    "reference": "Original 572 x 572 x 370 x 3 NIfTI sequence, coded qform and sform, millimeter units, oblique voxel-to-RAS geometry.",
+    "correspondence": "One native source run, with exact selection of stored frame index 2. No motion correction, interpolation, averaging, vessel segmentation, cross-subject registration or correspondence with another atlas is added."
+  },
+  "sources": [
+    {
+      "id": "mesoveins",
+      "title": "Whole-brain meso-vein imaging in living humans using fast 7-T MRI",
+      "version": "10.5281/zenodo.19332208",
+      "url": "https://zenodo.org/records/19332208",
+      "citation": "Gulban OF et al. Whole-brain meso-vein imaging in living humans using fast 7-T MRI. Science Advances 12(2), eaea4540 (2026). doi:10.1126/sciadv.aea4540. Dataset doi:10.5281/zenodo.19332208. Selected original participant 01, session 06, run 01, stored echo frame 3.",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "scope_notes": [
+    "The source publication describes five healthy participants. This package retains one original run from participant 01; it supplies no named venous branch or individual normal-variant annotation.",
+    "The stored native spacing is approximately 0.34965 x 0.34965 x 0.35 mm. Original anisotropy, obliquity and field of view are preserved; no source-author 2x interpolated product is used.",
+    "Stored frame 3 is selected exactly from the three-frame source series. Echo time is not assigned because the selected source header and publication protocol differ; original header provenance is retained.",
+    "Dark image signal requires anatomical interpretation in adjacent sections. It is not a venous segmentation or a verified boundary. A single run may contain motion, distortion and susceptibility-related loss.",
+    "A participant number does not validate registration to separately supplied T1 images or another atlas. Other native comparisons remain independent."
+  ],
+  "acquisition": "Run neuroimage acquire mesoveins --data-root <data-root>. Download the pinned source archive once and extract only the selected original participant/run. Completed extraction is reused.",
+  "archives": [
+    {
+      "dataset_id": "mesoveins",
+      "filename": "source.zip",
+      "format": "zip",
+      "url": "https://zenodo.org/api/records/19332208/files/source.zip/content",
+      "bytes": 11066268869,
+      "sha256": "bb44ed955ed025d4951017889606c29bcc3399dcc5f41da22c74916fd8ca0c0b",
+      "hash_basis": "Local SHA256 of official download verified against publisher MD5",
+      "members": [
+        {
+          "member": "source/sub-01/sub-01_ses-06_run-01_dir-AP_part-mag_ME3DEPI.nii.gz",
+          "target": "raw/mesoveins/sub-01_ses-06_run-01_dir-AP_part-mag_ME3DEPI.nii.gz",
+          "bytes": 542068920,
+          "sha256": "992b296ccd6726f069eeb6fa255ad827a9d13c30e65ef772046669e221eaf41b"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/mesoveins/official-record.json",
+      "url": "https://zenodo.org/api/records/19332208",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "$defs": {
+    "PlannedView": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,60}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "curriculum": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,100}$",
+          "title": "Curriculum",
+          "type": "string"
+        },
+        "view": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,60}$",
+          "title": "View",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "maxLength": 200,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "prompt": {
+          "anyOf": [
+            {
+              "maxLength": 4000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt"
+        }
+      },
+      "required": [
+        "id",
+        "curriculum",
+        "view"
+      ],
+      "title": "PlannedView",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "kind": {
+      "const": "neuroimage-course-plan",
+      "title": "Kind",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^[a-z0-9][a-z0-9-]{0,60}$",
+      "title": "Id",
+      "type": "string"
+    },
+    "title": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "author": {
+      "maxLength": 200,
+      "title": "Author",
+      "type": "string"
+    },
+    "objective": {
+      "maxLength": 4000,
+      "title": "Objective",
+      "type": "string"
+    },
+    "views": {
+      "items": {
+        "$ref": "#/$defs/PlannedView"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "title": "Views",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "id",
+    "title",
+    "author",
+    "objective",
+    "views"
+  ],
+  "title": "CoursePlan",
+  "type": "object"
+}

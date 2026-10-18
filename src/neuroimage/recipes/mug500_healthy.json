@@ -1,0 +1,96 @@
+{
+  "id": "mug500_healthy",
+  "adapter": "source-label-volume",
+  "version": "1",
+  "title": "MUG500+ \u00b7 healthy skull A0101",
+  "representation": "label-model",
+  "construction_peak_gib": 6,
+  "nrrd_units": "mm",
+  "unit_reference": "Li J et al. MUG500+ dataset. Data in Brief 39:107524 (2021), Table 1 specifies millimeter sampling. Stored NRRD directions are retained exactly.",
+  "inputs": {
+    "labels": "raw/mug500_healthy/A0101.nrrd",
+    "license": "licenses/mug500_healthy/official-record-v20.json"
+  },
+  "images": [],
+  "source_version": "10.6084/m9.figshare.9616319.v20/A0101",
+  "space": {
+    "id": "mug500-a0101-native",
+    "name": "MUG500+ A0101 original label grid",
+    "reference": "Original A0101.nrrd LPS directions and origin, converted exactly to RAS millimeters. Header directions: 0.529296875, 0.529296875, 0.75 mm.",
+    "correspondence": "One source-designated healthy skull segmentation. No original CT intensities, cross-subject alignment, bone partition or correspondence with another atlas is asserted."
+  },
+  "sources": [
+    {
+      "id": "mug500_healthy",
+      "title": "MUG500+ healthy skull A0101",
+      "version": "10.6084/m9.figshare.9616319.v20",
+      "url": "https://figshare.com/articles/dataset/MUG500_Repository/9616319/20",
+      "citation": "Li J et al. MUG500+: Database of 500 high-resolution healthy human skulls and 29 craniotomy skulls and implants. Data in Brief 39:107524 (2021). doi:10.1016/j.dib.2021.107524. Only healthy skull A0101 is used. Dataset doi:10.6084/m9.figshare.9616319.v20.",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "selection": [
+    {
+      "value": 1,
+      "source_name": "A0101 source binary skull segmentation",
+      "name": "A0101 skull mask",
+      "category": "Skull-base source context",
+      "laterality": "unspecified",
+      "color": [
+        232,
+        214,
+        178
+      ],
+      "evidence": "Publisher-designated healthy A-series skull. Original binary NRRD segmentation produced by source expert thresholding of CT; these are labels, not measured CT intensities.",
+      "notes": [
+        "The complete source foreground is retained, including any attached facial, cervical or background components. No cleanup, smoothing, hole filling, connected-component deletion or arbitrary bone partition is performed.",
+        "The native stored grid has 0.75 mm through-plane spacing; the source paper reports healthy-cohort slice thickness of 1.5 mm. Stored spacing does not establish effective acquisition resolution or resolve this metadata difference.",
+        "The source mask may incompletely represent small foramina and thin walls. Absence, asymmetry or jaggedness is not automatically a normal anatomical variant.",
+        "The source designation concerns the skull; it does not establish normality of every intracranial tissue."
+      ]
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-SK001",
+      "title": "Native skull sections and their surface",
+      "objective": "Relate the original binary skull sections to an unrefined surface while preserving full context.",
+      "instruction": "Start with full sections, follow the skull base through adjacent planes, then enlarge the same location. Rotate and use clipping to inspect the source mask from within. Compare the categorical sections with the surface; the original CT is not included.",
+      "evidence_limit": "One source-designated healthy skull mask. Small openings, thin walls and asymmetric components require source imaging and expert interpretation; there are no named foraminal labels or individual-bone partitions.",
+      "structure_ids": [
+        "mug500_healthy:label:1"
+      ],
+      "step_prompt": "Inspect the same skull-mask location in all three sections and the 3D source-derived surface.",
+      "step_question": "Which visible details are directly present in the categorical voxels, and which cannot be established without original CT and finer source evidence?"
+    }
+  ],
+  "acquisition": "Run neuroimage acquire mug500_healthy --data-root <data-root>. Reuse the pinned healthy A0101-A0105 archive and extract only A0101.nrrd. Defective B-series skulls and implants are outside this recipe.",
+  "archives": [
+    {
+      "dataset_id": "mug500_healthy",
+      "filename": "A0101-A0105.zip",
+      "format": "zip",
+      "url": "https://ndownloader.figshare.com/files/32386211",
+      "bytes": 964272652,
+      "sha256": "26cc84334568fd3ce12504d272e8f8008e7c20efbac581420a69e75d80ca8c62",
+      "hash_basis": "Local SHA256 of official archive verified against publisher MD5 58a27a52d5d8233ee6a76990e6e90f22",
+      "members": [
+        {
+          "member": "A0101-A0105/A0101/A0101.nrrd",
+          "target": "raw/mug500_healthy/A0101.nrrd",
+          "bytes": 1698816,
+          "sha256": "1aeb7c5660c0b064c8b5bcf40a7a7498a50d29d35943a09fc555e5ae4f9cd553"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/mug500_healthy/official-record-v20.json",
+      "url": "https://api.figshare.com/v2/articles/9616319/versions/20",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

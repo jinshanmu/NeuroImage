@@ -1,0 +1,81 @@
+{
+  "recorded_utc": "2026-10-14T11:15:05.810596+00:00",
+  "status": "passed",
+  "packages": [
+    {
+      "case": "009",
+      "manifest": "derivatives/thu_mra_case009/74f45536d0575f3d/manifest.json",
+      "structures": 20,
+      "unchanged_rebuild_same_manifest": true
+    },
+    {
+      "case": "001",
+      "manifest": "derivatives/thu_mra_case001/3b4756cdbf0e57ca/manifest.json",
+      "structures": 17,
+      "unchanged_rebuild_same_manifest": true
+    },
+    {
+      "case": "030",
+      "manifest": "derivatives/thu_mra_case030/7ab8af66974506c7/manifest.json",
+      "structures": 19,
+      "unchanged_rebuild_same_manifest": true
+    }
+  ],
+  "original_voxels": "all image and categorical samples identical",
+  "maximum_original_physical_point_error_mm": 3.7630357315729178e-06,
+  "source_landmarks_checked": 60,
+  "curricula": 3,
+  "views": 24,
+  "course_id": "e3a0d26c-8ed7-53b7-94a7-813f99373b3e",
+  "browser_receipt": "benchmarks/thu_cerebral_mra/fine-anatomy-20261014/browser-revised/acceptance.json",
+  "scene_pixel_checks": [
+    {
+      "dataset_id": "thu_mra_case001",
+      "comparison": "restored.png",
+      "source_image_pixels_identical": true,
+      "maximum_3d_channel_difference": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    {
+      "dataset_id": "thu_mra_case001",
+      "comparison": "imported.png",
+      "source_image_pixels_identical": true,
+      "maximum_3d_channel_difference": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    {
+      "dataset_id": "thu_mra_case009",
+      "comparison": "restored.png",
+      "source_image_pixels_identical": true,
+      "maximum_3d_channel_difference": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    {
+      "dataset_id": "thu_mra_case009",
+      "comparison": "imported.png",
+      "source_image_pixels_identical": true,
+      "maximum_3d_channel_difference": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    {
+      "dataset_id": "thu_mra_case030",
+      "comparison": "restored.png",
+      "source_image_pixels_identical": true,
+      "maximum_3d_channel_difference": 0,
+      "changed_pixel_fraction": 0.0
+    },
+    {
+      "dataset_id": "thu_mra_case030",
+      "comparison": "imported.png",
+      "source_image_pixels_identical": true,
+      "maximum_3d_channel_difference": 0,
+      "changed_pixel_fraction": 0.0
+    }
+  ],
+  "credited_exports": 16,
+  "source_name_correspondence": "Project curated; full catalog instructor review pending. Original numeric IDs retained.",
+  "frontend_layout": "unchanged",
+  "previous_browser_receipt": "benchmarks/thu_cerebral_mra/fine-anatomy-20261014/browser/acceptance.json",
+  "display_revision": "Full source arterial context, inferior camera, source intensity window 0.5 to 11 and label opacity 0.16; same original packages.",
+  "instructor_review": "config/instructor-review-thu-mra-2026-10-14.json"
+}

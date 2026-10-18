@@ -1,0 +1,101 @@
+{
+  "recorded_utc": "2026-10-14T09:53:47.026439+00:00",
+  "source_commit": "9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+  "case": "P41-16",
+  "normal_scope_evidence": "Publication Supplementary Table 1; config/nextbrain-case-scope-2026-10-13.json",
+  "source_label_entries": 138,
+  "distinct_source_label_numbers": 83,
+  "packages": [
+    {
+      "recipe": "nextbrain_case2_block07",
+      "manifest": "derivatives/nextbrain_case2_block07/6c0f1658a9056e7e/manifest.json",
+      "package_version": "6c0f1658a9056e7e",
+      "structures": 46,
+      "seconds": 4.31,
+      "manifest_sha256": "fd5d533fe73dc7b136ba61bbd616571eb6e3a7d357746efd5f8905c89e624269",
+      "build_event": {
+        "event": "build-complete",
+        "dataset": "nextbrain_case2_block07",
+        "manifest": "derivatives/nextbrain_case2_block07/6c0f1658a9056e7e/manifest.json",
+        "structures": 46,
+        "seconds": 3.43,
+        "reused": 0,
+        "built": 51
+      }
+    },
+    {
+      "recipe": "nextbrain_case2_block06",
+      "manifest": "derivatives/nextbrain_case2_block06/c05d1368c39641db/manifest.json",
+      "package_version": "c05d1368c39641db",
+      "structures": 32,
+      "seconds": 4.82,
+      "manifest_sha256": "83b351c4be1a3debb6fd49fda915d3223900bc9bf7a415a5ef6ba4bad44a46fc",
+      "build_event": {
+        "event": "build-complete",
+        "dataset": "nextbrain_case2_block06",
+        "manifest": "derivatives/nextbrain_case2_block06/c05d1368c39641db/manifest.json",
+        "structures": 32,
+        "seconds": 3.92,
+        "reused": 0,
+        "built": 37
+      }
+    },
+    {
+      "recipe": "nextbrain_case2_block16",
+      "manifest": "derivatives/nextbrain_case2_block16/c363da4a31687a34/manifest.json",
+      "package_version": "c363da4a31687a34",
+      "structures": 41,
+      "seconds": 3.95,
+      "manifest_sha256": "7f933d0a4d9dd8d4257252f56792ef87a7207e0b5f4d451e63bb2c1b9cd19d97",
+      "build_event": {
+        "event": "build-complete",
+        "dataset": "nextbrain_case2_block16",
+        "manifest": "derivatives/nextbrain_case2_block16/c363da4a31687a34/manifest.json",
+        "structures": 41,
+        "seconds": 3.11,
+        "reused": 0,
+        "built": 46
+      }
+    },
+    {
+      "recipe": "nextbrain_case2_block38",
+      "manifest": "derivatives/nextbrain_case2_block38/0c51242409cb8e18/manifest.json",
+      "package_version": "0c51242409cb8e18",
+      "structures": 19,
+      "seconds": 2.96,
+      "manifest_sha256": "82b87bf9b0ccb01ed865d918cfbb57f6d888e882f7f35bb44b8ce78bff369971",
+      "build_event": {
+        "event": "build-complete",
+        "dataset": "nextbrain_case2_block38",
+        "manifest": "derivatives/nextbrain_case2_block38/0c51242409cb8e18/manifest.json",
+        "structures": 19,
+        "seconds": 2.12,
+        "reused": 0,
+        "built": 24
+      }
+    }
+  ],
+  "original_source_grids_and_values_preserved": true,
+  "source_processed_mri_note": "The author-processed MRI has a source rotation relative to the original scanner grid. Its own supplied grid is retained; no project resampling or fitted registration is added.",
+  "source_navigation_checks": {
+    "points": 19,
+    "exact_nearest_voxel_matches": 15,
+    "maximum_present_label_distance_mm": 0.0999849006244811,
+    "all_source_points_reference_present_labels": true,
+    "sampled_label_voxels_inside_processed_mri": true
+  },
+  "engineering_validation": "passed",
+  "validation_receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/case2-validation-rebuild.json",
+  "inspection_receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/case2-native-block-inspection.json",
+  "teaching": {
+    "sequences": 19,
+    "curricula": 4,
+    "views": 38,
+    "course_id": "e5578141-50cc-5a28-90dc-d15266eaf480",
+    "browser_acceptance": "passed",
+    "browser_receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/case2-browser/acceptance.json",
+    "scene_restoration_cases": 4,
+    "export_archives": 12
+  },
+  "expert_review": "not_performed; not counted in engineering progress"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "ixi_mra",
+  "version": "1",
+  "source_version": "IXI-MRA archive snapshot 2026-10-11; IXI002-Guys-0828",
+  "adapter": "native-nifti-volume",
+  "representation": "mri-volume",
+  "title": "IXI MRA · native source image IXI002",
+  "construction_peak_gib": 2,
+  "inputs": {
+    "mra": "raw/ixi_mra/IXI002-Guys-0828-MRA.nii.gz",
+    "license": "licenses/ixi_mra/official-terms.html"
+  },
+  "images": [
+    {
+      "id": "mra",
+      "name": "Native MRA · IXI002-Guys-0828"
+    }
+  ],
+  "space": {
+    "id": "ixi002-guys-0828-mra-native",
+    "name": "IXI002 native MRA space",
+    "reference": "Original IXI002-Guys-0828-MRA.nii.gz coded NIfTI forms and millimeter units",
+    "correspondence": "A single source acquisition retains its own oblique voxel-to-RAS affine. No registration to another subject, modality, atlas or AC-PC reference is asserted."
+  },
+  "sources": [
+    {
+      "id": "ixi_mra",
+      "title": "IXI normal healthy-subject MR dataset · selected native MRA",
+      "version": "IXI-MRA archive snapshot 2026-10-11; IXI002-Guys-0828",
+      "url": "https://brain-development.org/ixi-dataset/",
+      "citation": "IXI – Information eXtraction from Images, EPSRC GR/S21533/02. Brain Development: IXI Dataset. https://brain-development.org/ixi-dataset/. Selected source: IXI002-Guys-0828-MRA.nii.gz.",
+      "license_name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "license_input": "license"
+    }
+  ],
+  "scope_notes": [
+    "The publisher describes IXI as a normal healthy-subject cohort. This selected image has not received independent case-specific anatomical or teaching review.",
+    "One original MRA image is provided with no artery segmentation, branch names, tissue surfaces or computed vessel-radius estimates. Bright image signal alone does not identify a vessel.",
+    "The acquired slab is approximately 240 by 240 by 80 mm. Full sections mean the complete acquired field of view, not complete coverage of the brain or all cranial vessels.",
+    "The original oblique affine, left-handed voxel axes, coded forms, millimeter units and source intensity samples are retained byte for byte. Native RAS coordinates are not an AC-PC or template registration.",
+    "Three-dimensional intensity rendering and contrast changes are display settings. They do not create a validated vascular surface or establish vessel continuity.",
+    "Other IXI participants and contrasts remain in their own spaces. Matching participant identifiers or equal header dimensions alone do not validate multimodal correspondence.",
+    "No population variation prevalence, pathological interpretation or clinical use is provided."
+  ],
+  "acquisition": "Run neuroimage acquire ixi_mra --data-root <existing-data-root>. Verified extracted inputs are reused directly. Otherwise retain the official IXI-MRA.tar and selectively extract the pinned selected image; do not expand the whole cohort.",
+  "archives": [
+    {
+      "dataset_id": "ixi_mra",
+      "filename": "IXI-MRA.tar",
+      "format": "tar",
+      "url": "https://biomedic.doc.ic.ac.uk/brain-development/downloads/IXI/IXI-MRA.tar",
+      "bytes": 12377712640,
+      "sha256": "b88420ae0e1b23ae53ac6f61a0bee243d7fbc9af9efbba952a6b0b8e6e89250c",
+      "hash_basis": "Locally verified official download snapshot; not a publisher signature",
+      "members": [
+        {
+          "member": "IXI002-Guys-0828-MRA.nii.gz",
+          "target": "raw/ixi_mra/IXI002-Guys-0828-MRA.nii.gz",
+          "bytes": 14750716,
+          "sha256": "4ce93ed5bcc22b4f2d122fe4d0b8c02f0f42c2b57fd832fe6652894f10b0e2f5"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/ixi_mra/official-terms.html",
+      "url": "https://brain-development.org/ixi-dataset/",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

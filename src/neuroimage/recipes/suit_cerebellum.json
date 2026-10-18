@@ -1,0 +1,558 @@
+{
+  "id": "suit_cerebellum",
+  "adapter": "source-lut-nifti",
+  "representation": "mri-labels",
+  "version": "1",
+  "title": "SUIT \u00b7 cerebellar lobules and deep nuclei",
+  "nifti_units": "mm",
+  "units_evidence": "The publisher SUIT template descriptor gives a 1 mm grid; T1 and probability NIfTI headers declare millimeters. The categorical image shares the probability affine and sample grid.",
+  "space": {
+    "id": "suit-original-cerebellar-template",
+    "name": "Original SUIT cerebellar population template",
+    "reference": "DiedrichsenLab cerebellar_atlases at 6857dfa732de6dd60c94da2f84d0b15ccf316618; tpl-SUIT descriptors and original NIfTI affines.",
+    "correspondence": "The publisher provides the T1 template, categorical atlas and probability fields in SUIT space. Labels and probabilities retain their original negative X index direction; T1 retains its positive X index direction. Physical millimeter coordinates link all views."
+  },
+  "inputs": {
+    "labels": "raw/suit_cerebellum/Diedrichsen_2009/atl-Anatom_space-SUIT_dseg.nii",
+    "probabilities": "raw/suit_cerebellum/Diedrichsen_2009/atl-Anatom_space-SUIT_probseg.nii",
+    "t1": "raw/suit_cerebellum/tpl-SUIT/tpl-SUIT_T1w.nii",
+    "label_lut": "raw/suit_cerebellum/Diedrichsen_2009/atl-Anatom.tsv",
+    "atlas_description": "raw/suit_cerebellum/Diedrichsen_2009/atlas_description.json",
+    "template_description": "raw/suit_cerebellum/tpl-SUIT/template_description.json",
+    "license": "licenses/suit_cerebellum/source-license.txt"
+  },
+  "images": [
+    {
+      "id": "t1",
+      "name": "Original SUIT T1-weighted population template"
+    }
+  ],
+  "require_same_grid": false,
+  "require_full_label_inventory": true,
+  "construction_peak_gib": 4,
+  "sources": [
+    {
+      "id": "suit_cerebellum",
+      "title": "SUIT anatomical cerebellar atlas and original template",
+      "version": "Diedrichsen 2009/2011 anatomical atlas; Git 6857dfa732de6dd60c94da2f84d0b15ccf316618",
+      "url": "https://github.com/DiedrichsenLab/cerebellar_atlases/tree/6857dfa732de6dd60c94da2f84d0b15ccf316618",
+      "citation": "Diedrichsen J (2006). A spatially unbiased atlas template of the human cerebellum. NeuroImage 33:127-138. Diedrichsen J et al. (2009). A probabilistic MR atlas of the human cerebellum. NeuroImage 46:39-46. Diedrichsen J et al. (2011). Imaging the deep cerebellar nuclei: A probabilistic atlas and normalization procedure. NeuroImage 54:1786-1794. Original definitions reference Schmahmann et al. (2000).",
+      "license_name": "Creative Commons Attribution-NonCommercial 3.0 Unported; specific SUIT template, associated files and atlases notice",
+      "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "license_input": "license"
+    }
+  ],
+  "label_table": {
+    "format": "index-name-color-tsv",
+    "input": "label_lut",
+    "values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "default_category": "Cerebellar lobules",
+    "categories": [
+      {
+        "values": [
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27
+        ],
+        "title": "Cerebellar vermis"
+      },
+      {
+        "values": [
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "title": "Deep cerebellar nuclei"
+      }
+    ],
+    "laterality_prefixes": {
+      "Left_": "left",
+      "Right_": "right",
+      "Vermis_": "midline"
+    },
+    "evidence": "Original source categorical assignment on the SUIT population template; source MRI-based manual delineations followed by author normalization and probability summarization.",
+    "source_notes": [
+      "Lobules (1\u201328): 20 healthy young participants. Deep nuclei (29\u201334): a separate group of 23 participants, imaged with source susceptibility-weighted MRI at 7 T.",
+      "The displayed T1 is the original population template and supplies shared spatial context. Fine nuclear identity is supplied by the source atlas.",
+      "The source combines lobules I\u2013IV and combines emboliform and globose nuclei as Interposed. Delivered grouping and sampled extent are retained.",
+      "Original categorical assignments and scaled probability samples are preserved independently. Unsmooth half-voxel categorical boundaries provide the 3D surfaces."
+    ],
+    "display_colors": {
+      "29": [
+        244,
+        200,
+        90
+      ],
+      "30": [
+        244,
+        200,
+        90
+      ],
+      "31": [
+        92,
+        210,
+        188
+      ],
+      "32": [
+        92,
+        210,
+        188
+      ],
+      "33": [
+        228,
+        144,
+        209
+      ],
+      "34": [
+        228,
+        144,
+        209
+      ]
+    },
+    "display_color_evidence": "Teaching display palette distinguishes dentate, interposed and fastigial compartments against the dark viewer background. Original source colors, numeric assignments and geometry are retained in the provenance."
+  },
+  "probability_interpretation": "Source population assignment fractions for each compartment after author normalization into SUIT space. Lobular and nuclear fields describe separate participant groups.",
+  "probability_derivation": "Extract each original 4D frame exactly with its native affine and header scaling. Explicit channel-to-label binding follows the publisher numeric ordering and is checked against all categorical voxels: the associated channel attains the maximum at every assigned voxel, allowing an original quantization tie.",
+  "probability_rounding_tolerance": 1e-07,
+  "probability_rounding_evidence": "The original uint8 probability NIfTI uses float32 slope 0.003921568859368563 and zero intercept. The scaled value for 255 is 1.0000000591389835. Values are retained exactly; tolerance covers this recorded encoding precision only.",
+  "probabilities": [
+    {
+      "id": "probability-1",
+      "input": "probabilities",
+      "channel": 0,
+      "label_value": 1,
+      "source_name": "Left_I_IV",
+      "name": "Left I IV"
+    },
+    {
+      "id": "probability-2",
+      "input": "probabilities",
+      "channel": 1,
+      "label_value": 2,
+      "source_name": "Right_I_IV",
+      "name": "Right I IV"
+    },
+    {
+      "id": "probability-3",
+      "input": "probabilities",
+      "channel": 2,
+      "label_value": 3,
+      "source_name": "Left_V",
+      "name": "Left V"
+    },
+    {
+      "id": "probability-4",
+      "input": "probabilities",
+      "channel": 3,
+      "label_value": 4,
+      "source_name": "Right_V",
+      "name": "Right V"
+    },
+    {
+      "id": "probability-5",
+      "input": "probabilities",
+      "channel": 4,
+      "label_value": 5,
+      "source_name": "Left_VI",
+      "name": "Left VI"
+    },
+    {
+      "id": "probability-6",
+      "input": "probabilities",
+      "channel": 5,
+      "label_value": 6,
+      "source_name": "Vermis_VI",
+      "name": "Vermis VI"
+    },
+    {
+      "id": "probability-7",
+      "input": "probabilities",
+      "channel": 6,
+      "label_value": 7,
+      "source_name": "Right_VI",
+      "name": "Right VI"
+    },
+    {
+      "id": "probability-8",
+      "input": "probabilities",
+      "channel": 7,
+      "label_value": 8,
+      "source_name": "Left_CrusI",
+      "name": "Left CrusI"
+    },
+    {
+      "id": "probability-9",
+      "input": "probabilities",
+      "channel": 8,
+      "label_value": 9,
+      "source_name": "Vermis_CrusI",
+      "name": "Vermis CrusI"
+    },
+    {
+      "id": "probability-10",
+      "input": "probabilities",
+      "channel": 9,
+      "label_value": 10,
+      "source_name": "Right_CrusI",
+      "name": "Right CrusI"
+    },
+    {
+      "id": "probability-11",
+      "input": "probabilities",
+      "channel": 10,
+      "label_value": 11,
+      "source_name": "Left_CrusII",
+      "name": "Left CrusII"
+    },
+    {
+      "id": "probability-12",
+      "input": "probabilities",
+      "channel": 11,
+      "label_value": 12,
+      "source_name": "Vermis_CrusII",
+      "name": "Vermis CrusII"
+    },
+    {
+      "id": "probability-13",
+      "input": "probabilities",
+      "channel": 12,
+      "label_value": 13,
+      "source_name": "Right_CrusII",
+      "name": "Right CrusII"
+    },
+    {
+      "id": "probability-14",
+      "input": "probabilities",
+      "channel": 13,
+      "label_value": 14,
+      "source_name": "Left_VIIb",
+      "name": "Left VIIb"
+    },
+    {
+      "id": "probability-15",
+      "input": "probabilities",
+      "channel": 14,
+      "label_value": 15,
+      "source_name": "Vermis_VIIb",
+      "name": "Vermis VIIb"
+    },
+    {
+      "id": "probability-16",
+      "input": "probabilities",
+      "channel": 15,
+      "label_value": 16,
+      "source_name": "Right_VIIb",
+      "name": "Right VIIb"
+    },
+    {
+      "id": "probability-17",
+      "input": "probabilities",
+      "channel": 16,
+      "label_value": 17,
+      "source_name": "Left_VIIIa",
+      "name": "Left VIIIa"
+    },
+    {
+      "id": "probability-18",
+      "input": "probabilities",
+      "channel": 17,
+      "label_value": 18,
+      "source_name": "Vermis_VIIIa",
+      "name": "Vermis VIIIa"
+    },
+    {
+      "id": "probability-19",
+      "input": "probabilities",
+      "channel": 18,
+      "label_value": 19,
+      "source_name": "Right_VIIIa",
+      "name": "Right VIIIa"
+    },
+    {
+      "id": "probability-20",
+      "input": "probabilities",
+      "channel": 19,
+      "label_value": 20,
+      "source_name": "Left_VIIIb",
+      "name": "Left VIIIb"
+    },
+    {
+      "id": "probability-21",
+      "input": "probabilities",
+      "channel": 20,
+      "label_value": 21,
+      "source_name": "Vermis_VIIIb",
+      "name": "Vermis VIIIb"
+    },
+    {
+      "id": "probability-22",
+      "input": "probabilities",
+      "channel": 21,
+      "label_value": 22,
+      "source_name": "Right_VIIIb",
+      "name": "Right VIIIb"
+    },
+    {
+      "id": "probability-23",
+      "input": "probabilities",
+      "channel": 22,
+      "label_value": 23,
+      "source_name": "Left_IX",
+      "name": "Left IX"
+    },
+    {
+      "id": "probability-24",
+      "input": "probabilities",
+      "channel": 23,
+      "label_value": 24,
+      "source_name": "Vermis_IX",
+      "name": "Vermis IX"
+    },
+    {
+      "id": "probability-25",
+      "input": "probabilities",
+      "channel": 24,
+      "label_value": 25,
+      "source_name": "Right_IX",
+      "name": "Right IX"
+    },
+    {
+      "id": "probability-26",
+      "input": "probabilities",
+      "channel": 25,
+      "label_value": 26,
+      "source_name": "Left_X",
+      "name": "Left X"
+    },
+    {
+      "id": "probability-27",
+      "input": "probabilities",
+      "channel": 26,
+      "label_value": 27,
+      "source_name": "Vermis_X",
+      "name": "Vermis X"
+    },
+    {
+      "id": "probability-28",
+      "input": "probabilities",
+      "channel": 27,
+      "label_value": 28,
+      "source_name": "Right_X",
+      "name": "Right X"
+    },
+    {
+      "id": "probability-29",
+      "input": "probabilities",
+      "channel": 28,
+      "label_value": 29,
+      "source_name": "Left_Dentate",
+      "name": "Left Dentate"
+    },
+    {
+      "id": "probability-30",
+      "input": "probabilities",
+      "channel": 29,
+      "label_value": 30,
+      "source_name": "Right_Dentate",
+      "name": "Right Dentate"
+    },
+    {
+      "id": "probability-31",
+      "input": "probabilities",
+      "channel": 30,
+      "label_value": 31,
+      "source_name": "Left_Interposed",
+      "name": "Left Interposed"
+    },
+    {
+      "id": "probability-32",
+      "input": "probabilities",
+      "channel": 31,
+      "label_value": 32,
+      "source_name": "Right_Interposed",
+      "name": "Right Interposed"
+    },
+    {
+      "id": "probability-33",
+      "input": "probabilities",
+      "channel": 32,
+      "label_value": 33,
+      "source_name": "Left_Fastigial",
+      "name": "Left Fastigial"
+    },
+    {
+      "id": "probability-34",
+      "input": "probabilities",
+      "channel": 33,
+      "label_value": 34,
+      "source_name": "Right_Fastigial",
+      "name": "Right Fastigial"
+    }
+  ],
+  "acquisition": "Run neuroimage acquire suit_cerebellum --data-root <existing-data-root>. Pinned original files are reused by SHA256; each image remains in its delivered native array and space.",
+  "archives": [],
+  "files": [
+    {
+      "target": "raw/suit_cerebellum/Diedrichsen_2009/atl-Anatom_space-SUIT_dseg.nii",
+      "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/6857dfa732de6dd60c94da2f84d0b15ccf316618/Diedrichsen_2009/atl-Anatom_space-SUIT_dseg.nii",
+      "bytes": 1165717,
+      "sha256": "cd9485752b10c385eb630a5d062cc9c8832fd1b94df1a11fec78c67b0a94ee96",
+      "git_blob_sha1": "6deae8bc8241c1463db67404bf121eeee977a284"
+    },
+    {
+      "target": "raw/suit_cerebellum/Diedrichsen_2009/atl-Anatom_space-SUIT_probseg.nii",
+      "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/6857dfa732de6dd60c94da2f84d0b15ccf316618/Diedrichsen_2009/atl-Anatom_space-SUIT_probseg.nii",
+      "bytes": 39622762,
+      "sha256": "585e9047b983feab825c6ab0760e13f4ec84a6242cbf687e88bad97c81915e7c",
+      "git_blob_sha1": "f8b6429faad3c72a767511868f9ae24183edfab7"
+    },
+    {
+      "target": "raw/suit_cerebellum/tpl-SUIT/tpl-SUIT_T1w.nii",
+      "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/6857dfa732de6dd60c94da2f84d0b15ccf316618/tpl-SUIT/tpl-SUIT_T1w.nii",
+      "bytes": 2331082,
+      "sha256": "9c84dd5d2dc3373d9d876ab675b1143d7c8397fd64bce7563650783c93ff530f",
+      "git_blob_sha1": "d05ca9d80a0e7dfb44b57af622e15722f241194c"
+    },
+    {
+      "target": "raw/suit_cerebellum/Diedrichsen_2009/atl-Anatom.tsv",
+      "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/6857dfa732de6dd60c94da2f84d0b15ccf316618/Diedrichsen_2009/atl-Anatom.tsv",
+      "bytes": 767,
+      "sha256": "dc682c847972bd37badaa979526cf22a25bc79cdf50f4f49c107391c517fe7ad",
+      "hash_basis": "Publisher file at the pinned Git commit; locally calculated SHA256"
+    },
+    {
+      "target": "raw/suit_cerebellum/Diedrichsen_2009/atlas_description.json",
+      "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/6857dfa732de6dd60c94da2f84d0b15ccf316618/Diedrichsen_2009/atlas_description.json",
+      "bytes": 1351,
+      "sha256": "90240cabe8f1fab75bcf9af0d1e8b287cab76d04233095b978b650d2cb1405c1",
+      "hash_basis": "Publisher file at the pinned Git commit; locally calculated SHA256"
+    },
+    {
+      "target": "raw/suit_cerebellum/tpl-SUIT/template_description.json",
+      "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/6857dfa732de6dd60c94da2f84d0b15ccf316618/tpl-SUIT/template_description.json",
+      "bytes": 807,
+      "sha256": "fc4b8484645cbbe313bbe917c38c871c6cfe33faff664fd02a6c1764f026067c",
+      "hash_basis": "Publisher file at the pinned Git commit; locally calculated SHA256"
+    },
+    {
+      "target": "licenses/suit_cerebellum/source-license.txt",
+      "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/6857dfa732de6dd60c94da2f84d0b15ccf316618/tpl-SUIT/LICENSE",
+      "bytes": 962,
+      "sha256": "936f903b9a2cac582849f1c024d19b1a3a9eec9a4e58ceaa360022cefaa77685",
+      "hash_basis": "Publisher file at the pinned Git commit; locally calculated SHA256"
+    }
+  ],
+  "license_downloads": [],
+  "teaching_sequences": [
+    {
+      "id": "NI-SUIT-01",
+      "title": "Hemispheric lobules",
+      "objective": "Identify the source-defined hemispheric lobules in the original SUIT template.",
+      "instruction": "Follow the selected assignment through three original MRI planes, compare source probability support and rotate the complete displayed 3D compartments.",
+      "evidence_limit": "Coverage: original 1 mm SUIT population template and source MRI-derived assignments. Source cohort, categorical boundaries and continuous support are recorded separately.",
+      "structure_ids": [
+        "suit_cerebellum:label:1",
+        "suit_cerebellum:label:2",
+        "suit_cerebellum:label:3",
+        "suit_cerebellum:label:4",
+        "suit_cerebellum:label:5",
+        "suit_cerebellum:label:7",
+        "suit_cerebellum:label:8",
+        "suit_cerebellum:label:10",
+        "suit_cerebellum:label:11",
+        "suit_cerebellum:label:13",
+        "suit_cerebellum:label:14",
+        "suit_cerebellum:label:16",
+        "suit_cerebellum:label:17",
+        "suit_cerebellum:label:19",
+        "suit_cerebellum:label:20",
+        "suit_cerebellum:label:22",
+        "suit_cerebellum:label:23",
+        "suit_cerebellum:label:25",
+        "suit_cerebellum:label:26",
+        "suit_cerebellum:label:28"
+      ],
+      "step_prompt": "Describe the selected compartment and its position relative to the other displayed source regions.",
+      "step_question": "Which compartment is selected, which neighboring assignments are visible, and how does its source probability vary across adjacent MRI samples?"
+    },
+    {
+      "id": "NI-SUIT-02",
+      "title": "Vermal compartments",
+      "objective": "Identify the source-defined vermal compartments in the original SUIT template.",
+      "instruction": "Follow the selected assignment through three original MRI planes, compare source probability support and rotate the complete displayed 3D compartments.",
+      "evidence_limit": "Coverage: original 1 mm SUIT population template and source MRI-derived assignments. Source cohort, categorical boundaries and continuous support are recorded separately.",
+      "structure_ids": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "step_prompt": "Describe the selected compartment and its position relative to the other displayed source regions.",
+      "step_question": "Which compartment is selected, which neighboring assignments are visible, and how does its source probability vary across adjacent MRI samples?"
+    },
+    {
+      "id": "NI-SUIT-03",
+      "title": "Deep cerebellar nuclei",
+      "objective": "Identify the source-defined deep cerebellar nuclei in the original SUIT template.",
+      "instruction": "Follow the selected assignment through three original MRI planes, compare source probability support and rotate the complete displayed 3D compartments.",
+      "evidence_limit": "Coverage: original 1 mm SUIT population template and source MRI-derived assignments. Source cohort, categorical boundaries and continuous support are recorded separately.",
+      "structure_ids": [
+        "suit_cerebellum:label:29",
+        "suit_cerebellum:label:30",
+        "suit_cerebellum:label:31",
+        "suit_cerebellum:label:32",
+        "suit_cerebellum:label:33",
+        "suit_cerebellum:label:34"
+      ],
+      "step_prompt": "Describe the selected compartment and its position relative to the other displayed source regions.",
+      "step_question": "Which compartment is selected, which neighboring assignments are visible, and how does its source probability vary across adjacent MRI samples?"
+    }
+  ]
+}

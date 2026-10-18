@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "id": "nextbrain-case1-block07-fine-anatomy",
+  "dataset_id": "nextbrain_case1_block07",
+  "required_source": {
+    "id": "nextbrain_core",
+    "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2"
+  },
+  "title": "NextBrain Case 1 \u00b7 A3.2 fine anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Learn fine regional assignments within their original reconstructed tissue block and matching ex vivo MRI context. Compare whole-section orientation with a magnified view of the same physical point.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "group-01-context",
+      "title": "Anterior olfactory and striatal context \u00b7 MRI context",
+      "selected": "nextbrain_case1_block07:label:99",
+      "visible": [
+        "nextbrain_case1_block07:label:99",
+        "nextbrain_case1_block07:label:113",
+        "nextbrain_case1_block07:label:48",
+        "nextbrain_case1_block07:label:79"
+      ],
+      "background": "t2",
+      "prompt": "Locate this source-defined group in the whole MRI section and describe the surrounding anatomical context.",
+      "note": "Source case P57-16; tissue block A3.2. Selected source label 99: anterior_olfactory_nucleus. Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block07:label:113": 0.3,
+          "nextbrain_case1_block07:label:48": 0.3,
+          "nextbrain_case1_block07:label:79": 0.3
+        }
+      }
+    },
+    {
+      "id": "group-01-detail",
+      "title": "Anterior olfactory and striatal context \u00b7 fine view",
+      "selected": "nextbrain_case1_block07:label:99",
+      "visible": [
+        "nextbrain_case1_block07:label:99",
+        "nextbrain_case1_block07:label:113",
+        "nextbrain_case1_block07:label:48",
+        "nextbrain_case1_block07:label:79"
+      ],
+      "background": "t2",
+      "prompt": "Inspect the fine source assignments and compare adjacent regions while keeping the same physical target.",
+      "note": "Source case P57-16; tissue block A3.2. Selected source label 99: anterior_olfactory_nucleus. Histology supplies the fine assignments and the source-processed ex vivo T2 MRI supplies context. Block edges delimit the available tissue. The source case is a right hemisphere; regional laterality follows each explicit source name.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          110,
+          15,
+          0.65
+        ],
+        "slice_zoom": 3.5,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "surface_opacity": {
+          "nextbrain_case1_block07:label:113": 0.3,
+          "nextbrain_case1_block07:label:48": 0.3,
+          "nextbrain_case1_block07:label:79": 0.3
+        }
+      }
+    }
+  ]
+}

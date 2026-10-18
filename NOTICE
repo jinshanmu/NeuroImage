@@ -1,0 +1,11 @@
+NeuroImage Atlas
+Copyright 2026 NeuroImage contributors
+
+The project software is licensed under Apache License 2.0.
+The offline viewer incorporates separately licensed third-party software and
+renderer assets. Their retained notices accompany the built viewer in
+third-party-notices.txt. Dependency versions are recorded in the package locks.
+
+Acquired images, source labels, anatomical surfaces and other atlas data are
+not part of this software distribution. Each independently acquired dataset
+and its derived local atlas retain their source licenses and provenance.

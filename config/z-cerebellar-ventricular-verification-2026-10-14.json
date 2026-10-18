@@ -1,0 +1,27 @@
+{
+  "recorded_utc": "2026-10-14T11:53:50.078235+00:00",
+  "status": "passed",
+  "manifest": "derivatives/z_anatomy/563dca501f66b3fb/manifest.json",
+  "manifest_sha256": "aa394fabf6ead5c5aff60f5bf571d7aef7b9fbcbdc5d17ea733f019a749708e6",
+  "source_objects": 157,
+  "new_objects": 38,
+  "new_cerebellar_and_peduncular_objects": 31,
+  "new_ventricular_aqueduct_and_plexus_objects": 7,
+  "maximum_source_transform_difference_mm": 7.45023808121914e-05,
+  "original_geometry_and_topology_exact": true,
+  "geometry_receipt": "benchmarks/z_anatomy/cerebellar-ventricular-20261014/source-verification.json",
+  "browser_receipt": "benchmarks/z_anatomy/cerebellar-ventricular-20261014/browser/acceptance.json",
+  "curricula": 3,
+  "views": 38,
+  "course_id": "f4517520-2522-5e70-be20-033643dfe9fb",
+  "saved_and_imported_scene_checks": 6,
+  "credited_exports": 13,
+  "unchanged_rebuild": {
+    "reused_assets": 475,
+    "built_assets": 0,
+    "geometry_recomputed": false
+  },
+  "expert_review": "Pending exact-view instructor assessment; existing source-model case approvals remain scoped to their previous images.",
+  "expert_review_in_engineering_denominator": false,
+  "frontend": "Accepted implementation unchanged."
+}

@@ -1,0 +1,259 @@
+{
+  "id": "cit168_native",
+  "adapter": "cit168-nifti",
+  "version": "1",
+  "title": "CIT168 \u00b7 native probabilistic subcortical atlas",
+  "space": {
+    "id": "cit168-native-700um",
+    "name": "CIT168 native population template",
+    "reference": "Pauli, Nili and Tyszka (2018), native 700 micrometer T1w/T2w templates and OSF jkzwp snapshot",
+    "correspondence": "Images, categorical labels and probability channels share the delivered native grid. This package is not MNI space. No alignment with another atlas or individual is implied."
+  },
+  "inputs": {
+    "t1": "downloads/cit168_native/CIT168_T1w_700um.nii.gz",
+    "t2": "downloads/cit168_native/CIT168_T2w_700um.nii.gz",
+    "labels": "downloads/cit168_native/det_atlas_25.nii.gz",
+    "label_table": "downloads/cit168_native/labels.txt",
+    "probabilities": "downloads/cit168_native/prob_atlas_bilateral.nii.gz",
+    "license": "licenses/cit168_native/official-terms.html"
+  },
+  "images": [
+    {
+      "id": "t1",
+      "name": "T1-weighted population template"
+    },
+    {
+      "id": "t2",
+      "name": "T2-weighted population template"
+    }
+  ],
+  "require_same_grid": true,
+  "construction_peak_gib": 2,
+  "sources": [
+    {
+      "id": "cit168_native",
+      "title": "CIT168 subcortical atlas",
+      "version": "Native 700 micrometer OSF snapshot; SHA256-pinned inputs",
+      "url": "https://osf.io/jkzwp/",
+      "citation": "Pauli WM, Nili AN, Tyszka JM. A high-resolution probabilistic in vivo atlas of human subcortical brain nuclei. Scientific Data 5, 180063 (2018). doi:10.1038/sdata.2018.63. Derived from Human Connectome Project data.",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "acquisition": "Run neuroimage acquire cit168_native --data-root <existing-data-root>. Direct source files remain in downloads without duplicate expansion.",
+  "archives": [],
+  "files": [
+    {
+      "target": "downloads/cit168_native/CIT168_T1w_700um.nii.gz",
+      "url": "https://osf.io/download/z9mby/",
+      "bytes": 15461010,
+      "sha256": "8458c0e1f923c67c2034e19ca85f966d3372153a763daae1db38ed68b88475e5",
+      "hash_basis": "SHA256 pinned from the local source snapshot; not a publisher signature"
+    },
+    {
+      "target": "downloads/cit168_native/CIT168_T2w_700um.nii.gz",
+      "url": "https://osf.io/download/bgr62/",
+      "bytes": 16855467,
+      "sha256": "10ab6f5dd5760164dbbeb2d259145adf562331a70fa221bd4051e53a51c3a8a0",
+      "hash_basis": "SHA256 pinned from the local source snapshot; not a publisher signature"
+    },
+    {
+      "target": "downloads/cit168_native/det_atlas_25.nii.gz",
+      "url": "https://osf.io/download/5mqfx/",
+      "bytes": 118222,
+      "sha256": "fa0fe30a08230de014e7ec777be865a7b479ddc39bc28839ce32f059185df78e",
+      "hash_basis": "SHA256 pinned from the local source snapshot; not a publisher signature"
+    },
+    {
+      "target": "downloads/cit168_native/labels.txt",
+      "url": "https://osf.io/download/6qrcb/",
+      "bytes": 123,
+      "sha256": "5e00265a7bbbdf242356345e0f6615d84791ada54aa9739539096aab3c1e1b41",
+      "hash_basis": "SHA256 pinned from the local source snapshot; not a publisher signature"
+    },
+    {
+      "target": "downloads/cit168_native/prob_atlas_bilateral.nii.gz",
+      "url": "https://osf.io/download/huqyp/",
+      "bytes": 1816010,
+      "sha256": "fec641ed54fc7261e3077faff13c266e60051372a10d4cea7291b805046a99d7",
+      "hash_basis": "SHA256 pinned from the local source snapshot; not a publisher signature"
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/cit168_native/official-terms.html",
+      "url": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96a/",
+      "maximum_bytes": 1048576
+    }
+  ],
+  "probability_interpretation": "Source observer-assignment support on a population template, on a 0 to 1 scale; not individual anatomy, population prevalence or clinical confidence.",
+  "probability_derivation": "Left: mean of 24 manually delineated volumes. Right: source-author reflection warp from the left with affine/diffeomorphic mapping and third-order B-spline interpolation. Channels are extracted exactly; no new mirroring, registration, interpolation or thresholding.",
+  "hard_label_rule": {
+    "method": "maximum-probability-inclusive-threshold",
+    "threshold": 0.25,
+    "ties": "First source channel wins",
+    "evidence": "Voxelwise comparison with the delivered det_atlas_25 file; this rule is an empirical verification of the pinned release, not an assumed filename convention."
+  },
+  "probabilities": [
+    {
+      "id": "probability-1",
+      "input": "probabilities",
+      "channel": 0,
+      "label_value": 1,
+      "name": "Putamen",
+      "source_name": "Pu",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-2",
+      "input": "probabilities",
+      "channel": 1,
+      "label_value": 2,
+      "name": "Caudate nucleus",
+      "source_name": "Ca",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-3",
+      "input": "probabilities",
+      "channel": 2,
+      "label_value": 3,
+      "name": "Nucleus accumbens",
+      "source_name": "NAC",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-4",
+      "input": "probabilities",
+      "channel": 3,
+      "label_value": 4,
+      "name": "Extended amygdala",
+      "source_name": "EXA",
+      "category": "Deep structures",
+      "notes": [
+        "The source combines bed nuclei of the stria terminalis and sublenticular extended amygdala; an indistinguishable interstitial component is omitted. This is not a whole-amygdala label."
+      ]
+    },
+    {
+      "id": "probability-5",
+      "input": "probabilities",
+      "channel": 4,
+      "label_value": 5,
+      "name": "Globus pallidus, external segment",
+      "source_name": "GPe",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-6",
+      "input": "probabilities",
+      "channel": 5,
+      "label_value": 6,
+      "name": "Globus pallidus, internal segment",
+      "source_name": "GPi",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-7",
+      "input": "probabilities",
+      "channel": 6,
+      "label_value": 7,
+      "name": "Substantia nigra, pars compacta",
+      "source_name": "SNc",
+      "category": "Brainstem",
+      "notes": [
+        "Some boundaries are inferred from surrounding landmarks and vary between observers. Inspect the probability field and both MRI contrasts."
+      ]
+    },
+    {
+      "id": "probability-8",
+      "input": "probabilities",
+      "channel": 7,
+      "label_value": 8,
+      "name": "Red nucleus",
+      "source_name": "RN",
+      "category": "Brainstem"
+    },
+    {
+      "id": "probability-9",
+      "input": "probabilities",
+      "channel": 8,
+      "label_value": 9,
+      "name": "Substantia nigra, pars reticulata",
+      "source_name": "SNr",
+      "category": "Brainstem",
+      "notes": [
+        "Some boundaries are inferred from surrounding landmarks and vary between observers. Inspect the probability field and both MRI contrasts."
+      ]
+    },
+    {
+      "id": "probability-10",
+      "input": "probabilities",
+      "channel": 9,
+      "label_value": 10,
+      "name": "Parabrachial pigmented nucleus",
+      "source_name": "PBP",
+      "category": "Brainstem",
+      "notes": [
+        "Some boundaries are inferred from surrounding landmarks and vary between observers. Inspect the probability field and both MRI contrasts."
+      ]
+    },
+    {
+      "id": "probability-11",
+      "input": "probabilities",
+      "channel": 10,
+      "label_value": 11,
+      "name": "Ventral tegmental area",
+      "source_name": "VTA",
+      "category": "Brainstem",
+      "notes": [
+        "Some boundaries are inferred from surrounding landmarks and vary between observers. Inspect the probability field and both MRI contrasts."
+      ]
+    },
+    {
+      "id": "probability-12",
+      "input": "probabilities",
+      "channel": 11,
+      "label_value": 12,
+      "name": "Ventral pallidum",
+      "source_name": "VeP",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-13",
+      "input": "probabilities",
+      "channel": 12,
+      "label_value": 13,
+      "name": "Habenular nuclei",
+      "source_name": "HN",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-14",
+      "input": "probabilities",
+      "channel": 13,
+      "label_value": 14,
+      "name": "Hypothalamus",
+      "source_name": "HTH",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-15",
+      "input": "probabilities",
+      "channel": 14,
+      "label_value": 15,
+      "name": "Mammillary nucleus",
+      "source_name": "MN",
+      "category": "Deep structures"
+    },
+    {
+      "id": "probability-16",
+      "input": "probabilities",
+      "channel": 15,
+      "label_value": 16,
+      "name": "Subthalamic nucleus",
+      "source_name": "STH",
+      "category": "Deep structures"
+    }
+  ]
+}

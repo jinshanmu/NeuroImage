@@ -1,0 +1,204 @@
+{
+  "id": "inner_ear_ct_specimen1",
+  "adapter": "source-hdf5-ct-labels",
+  "representation": "ct-labels",
+  "version": "1",
+  "title": "Inner-ear CT · Dataset A specimen 1",
+  "space": {
+    "id": "inner-ear-ct-dataset-a-specimen1",
+    "name": "Dataset A specimen 1, original temporal-bone CT grid",
+    "reference": "https://zenodo.org/records/8277159",
+    "correspondence": "Paired Dataset A original arrays have identical IJK dimensions. The source attaches the shared NRRD-style physical grid to raw/raw-0; label/label-0 has no independent grid. Only the explicit LPS-to-RAS coordinate basis is converted. There is no registration to another specimen or atlas."
+  },
+  "inputs": {
+    "ct": "raw/inner_ear_ct/zenodo-8277159/1.hdf5",
+    "labels": "raw/inner_ear_ct/zenodo-8277159/1.hdf5",
+    "license": "licenses/inner_ear_ct/official-record.json"
+  },
+  "hdf5_volumes": {
+    "ct": {
+      "dataset": "raw/raw-0",
+      "geometry_dataset": "raw/raw-0",
+      "array_axis_order": "IJK",
+      "units": "mm",
+      "unit_basis": "The source publication reports a reconstructed isotropic 98.6 micrometer grid; the original space-direction magnitudes are 0.0986328125 mm.",
+      "grid_correspondence": "Paired Dataset A original arrays have identical IJK dimensions. The source attaches the shared NRRD-style physical grid to raw/raw-0; label/label-0 has no independent grid."
+    },
+    "labels": {
+      "dataset": "label/label-0",
+      "geometry_dataset": "raw/raw-0",
+      "array_axis_order": "IJK",
+      "units": "mm",
+      "unit_basis": "The source publication reports a reconstructed isotropic 98.6 micrometer grid; the original space-direction magnitudes are 0.0986328125 mm.",
+      "grid_correspondence": "Paired Dataset A original arrays have identical IJK dimensions. The source attaches the shared NRRD-style physical grid to raw/raw-0; label/label-0 has no independent grid."
+    }
+  },
+  "images": [
+    {
+      "id": "ct",
+      "name": "Original temporal-bone CT · specimen 1",
+      "image_evidence": {
+        "modality": "CT",
+        "source_input": "ct",
+        "source_dataset": "raw/raw-0",
+        "intensity_units": "Original source CT integer values",
+        "calibration": "The publication describes HU reconstruction; this HDF5 image has no explicit intensity-unit or calibration attributes. No calibration is inferred or applied.",
+        "acquisition": "Dataset A cadaveric temporal bone; cone-beam CT reconstruction. Reported acquired slice thickness: 0.466 mm.",
+        "sampling": "The source publication reports a reconstructed isotropic 98.6 micrometer grid; the original space-direction magnitudes are 0.0986328125 mm. Reconstruction spacing is not acquired spatial resolution."
+      }
+    }
+  ],
+  "require_same_grid": true,
+  "require_full_label_inventory": true,
+  "construction_peak_gib": 4,
+  "sources": [
+    {
+      "id": "inner_ear_ct",
+      "title": "Human Inner Ear Anatomy: Labeled Volume CT Data of Inner Ear Fluid Space and Anatomical Landmarks",
+      "version": "Dataset A v1.0; Zenodo 8277159; specimen 1",
+      "url": "https://zenodo.org/records/8277159",
+      "citation": "Stebani J, Blaimer M, Neun T, Pelt DM, Rak K. Human Inner Ear Anatomy: Labeled Volume CT Data of Inner Ear Fluid Space and Anatomical Landmarks. Zenodo (2023), doi:10.5281/zenodo.8277159. Associated study: Scientific Reports (2023), doi:10.1038/s41598-023-45466-9.",
+      "license_name": "Creative Commons Attribution 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "selection": [
+    {
+      "value": 1,
+      "source_name": "Cochlea",
+      "name": "Cochlea fluid space",
+      "category": "Inner-ear fluid spaces",
+      "laterality": "unspecified",
+      "color": [
+        128,
+        174,
+        128
+      ],
+      "evidence": "Original manually labeled Dataset A CT fluid-space class, retained in the paired source grid; no project subdivision or geometric refinement.",
+      "notes": [
+        "Original Dataset A cadaveric specimen 1; separate from clinical Dataset B.",
+        "The label describes the inner-ear fluid-space annotation, not a separately segmented nerve, sensory epithelium or membranous labyrinth.",
+        "The source file does not explicitly declare specimen laterality; coordinate offset is not used to infer a side.",
+        "Reconstructed sampling is about 0.0986 mm; the publication reports acquired slice thickness of 0.466 mm. Sampling is not a claim of isotropic acquired resolution.",
+        "The three separately supplied landmark records have unresolved IJK-to-LPS residuals and are not integrated as verified teaching targets."
+      ]
+    },
+    {
+      "value": 2,
+      "source_name": "Vestibulum",
+      "name": "Vestibular fluid space",
+      "category": "Inner-ear fluid spaces",
+      "laterality": "unspecified",
+      "color": [
+        241,
+        214,
+        145
+      ],
+      "evidence": "Original manually labeled Dataset A CT fluid-space class, retained in the paired source grid; no project subdivision or geometric refinement.",
+      "notes": [
+        "Original Dataset A cadaveric specimen 1; separate from clinical Dataset B.",
+        "The label describes the inner-ear fluid-space annotation, not a separately segmented nerve, sensory epithelium or membranous labyrinth.",
+        "The source file does not explicitly declare specimen laterality; coordinate offset is not used to infer a side.",
+        "Reconstructed sampling is about 0.0986 mm; the publication reports acquired slice thickness of 0.466 mm. Sampling is not a claim of isotropic acquired resolution.",
+        "The three separately supplied landmark records have unresolved IJK-to-LPS residuals and are not integrated as verified teaching targets."
+      ]
+    },
+    {
+      "value": 3,
+      "source_name": "Canals",
+      "name": "Semicircular canal fluid spaces",
+      "category": "Inner-ear fluid spaces",
+      "laterality": "unspecified",
+      "color": [
+        177,
+        122,
+        101
+      ],
+      "evidence": "Original manually labeled Dataset A CT fluid-space class, retained in the paired source grid; no project subdivision or geometric refinement.",
+      "notes": [
+        "Original Dataset A cadaveric specimen 1; separate from clinical Dataset B.",
+        "The label describes the inner-ear fluid-space annotation, not a separately segmented nerve, sensory epithelium or membranous labyrinth.",
+        "The source file does not explicitly declare specimen laterality; coordinate offset is not used to infer a side.",
+        "Reconstructed sampling is about 0.0986 mm; the publication reports acquired slice thickness of 0.466 mm. Sampling is not a claim of isotropic acquired resolution.",
+        "The three separately supplied landmark records have unresolved IJK-to-LPS residuals and are not integrated as verified teaching targets."
+      ]
+    }
+  ],
+  "scope_notes": [
+    "Original Dataset A cadaveric specimen 1; separate from clinical Dataset B.",
+    "The label describes the inner-ear fluid-space annotation, not a separately segmented nerve, sensory epithelium or membranous labyrinth.",
+    "The source file does not explicitly declare specimen laterality; coordinate offset is not used to infer a side.",
+    "Reconstructed sampling is about 0.0986 mm; the publication reports acquired slice thickness of 0.466 mm. Sampling is not a claim of isotropic acquired resolution.",
+    "The three separately supplied landmark records have unresolved IJK-to-LPS residuals and are not integrated as verified teaching targets."
+  ],
+  "source_case": {
+    "case": "1",
+    "cohort": "Dataset A: 43 cadaveric temporal bones; clinical Dataset B excluded",
+    "laterality": "unspecified",
+    "landmarks": "Preserved in original HDF5; not integrated because original IJK and XYZ records do not agree within half a voxel diagonal."
+  },
+  "files": [
+    {
+      "url": "https://zenodo.org/api/records/8277159/files/1.hdf5/content",
+      "target": "raw/inner_ear_ct/zenodo-8277159/1.hdf5",
+      "bytes": 530856520,
+      "sha256": "6a4e9e6e9b217a4262379dbf03c9b7e67d75e25306a84418c135e4ffc6281f96"
+    }
+  ],
+  "archives": [],
+  "license_downloads": [
+    {
+      "url": "https://zenodo.org/api/records/8277159",
+      "target": "licenses/inner_ear_ct/official-record.json",
+      "maximum_bytes": 1048576,
+      "evidence": "Publisher declaration of CC BY 4.0 for the fixed source record. The local snapshot is retained unchanged and its exact hash becomes part of the package identity."
+    }
+  ],
+  "acquisition": "Install the hdf5 optional dependency in the NeuroImage environment, then run neuroimage acquire inner_ear_ct_specimen1 --data-root <data-root>. Only the selected Dataset A specimen and publisher license declaration are required.",
+  "teaching_sequences": [
+    {
+      "id": "NI-IE-001",
+      "title": "The three source-defined inner-ear spaces",
+      "objective": "Locate the cochlear, vestibular and canal fluid-space labels in the original cadaveric CT and compare their spatial relationships.",
+      "instruction": "Follow each source label in axial, coronal and sagittal sections. Reduce overlay opacity to inspect the corresponding original CT. Rotate the complete three-structure surface set, then return to full sections.",
+      "evidence_limit": "One source specimen with three fluid-space classes. Membranous subdivisions, individual canal names and cochlear turns are not separately labeled; the source does not establish specimen laterality.",
+      "structure_ids": [
+        "inner_ear_ct_specimen1:label:1",
+        "inner_ear_ct_specimen1:label:2",
+        "inner_ear_ct_specimen1:label:3"
+      ],
+      "steps": [
+        {
+          "structure_id": "inner_ear_ct_specimen1:label:1",
+          "prompt": "Follow the cochlear fluid-space label through adjacent CT sections and compare its coiled source surface with the vestibular label.",
+          "question": "Which findings come from the CT and which come from the source annotation?"
+        },
+        {
+          "structure_id": "inner_ear_ct_specimen1:label:2",
+          "prompt": "Keep all three structures visible and follow the vestibular label between the cochlear and canal fluid-space assignments.",
+          "question": "How does this source define the vestibular class, and which neighboring classes can you select independently?"
+        },
+        {
+          "structure_id": "inner_ear_ct_specimen1:label:3",
+          "prompt": "Rotate the combined canal label, then check its source extent on the CT. The source groups all canal fluid spaces in one value.",
+          "question": "Does the source provide separately selectable anterior, posterior and lateral canals?"
+        }
+      ]
+    },
+    {
+      "id": "NI-IE-002",
+      "title": "Sampling, boundaries and original source coordinates",
+      "objective": "Distinguish source sampling, CT intensity values and computed label surfaces from independently verified fine anatomical boundaries.",
+      "instruction": "Compare the CT with overlay opacity at zero and at a low value. Magnify at the same native target and inspect neighboring sections. The unsmoothed 0.5 isosurface is a display of the categorical voxel boundary.",
+      "evidence_limit": "The 98.6 micrometer reconstruction grid does not establish equal acquired resolution. Original CT integers lack embedded calibration metadata; independent landmark discrepancies remain excluded from teaching targets.",
+      "structure_ids": [
+        "inner_ear_ct_specimen1:label:1",
+        "inner_ear_ct_specimen1:label:2",
+        "inner_ear_ct_specimen1:label:3"
+      ],
+      "step_prompt": "Compare the original CT texture, source label overlay and derived surface at the same native voxel target.",
+      "step_question": "Which observation is supported by the original image, which by manual labeling, and which by display interpolation?"
+    }
+  ]
+}

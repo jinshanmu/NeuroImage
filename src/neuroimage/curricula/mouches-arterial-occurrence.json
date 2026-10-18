@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "id": "mouches-arterial-occurrence",
+  "dataset_id": "mouches_arteries",
+  "required_source": {
+    "id": "mouches_arteries",
+    "version": "2019-v1"
+  },
+  "title": "Healthy-source arterial occurrence in matched mean TOF MRI",
+  "author": "NeuroImage project",
+  "objective": "Explore the retained arterial-occurrence field and distinguish original percent evidence from a project-derived threshold display.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "arterial-overview",
+      "title": "Whole source arterial occurrence field",
+      "selected": "mouches_arteries:region:arterial_occurrence",
+      "visible": [
+        "mouches_arteries:region:arterial_occurrence"
+      ],
+      "background": "tof",
+      "prompt": "Start with full mean TOF sections and use Magnify at cursor to inspect the same physical point. Compare the mean TOF image, source arterial-occurrence percentage and thresholded 3D navigation surface. The field has no source-defined named branch labels.",
+      "note": "Original population arterial-occurrence values range from 0 to 100 percent. A documented project threshold of at least 25 percent produces the display mask and its 3D surface. This calculated illustration represents population occurrence; the original probability field remains available for comparison. Source coverage, sampling and population alignment govern the appearance of small vessels.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "probability",
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "display-mask",
+      "title": "Project display threshold and retained source field",
+      "selected": "mouches_arteries:region:arterial_occurrence",
+      "visible": [
+        "mouches_arteries:region:arterial_occurrence"
+      ],
+      "background": "tof",
+      "prompt": "Start with full mean TOF sections and use Magnify at cursor to inspect the same physical point. Compare the mean TOF image, source arterial-occurrence percentage and thresholded 3D navigation surface. The field has no source-defined named branch labels.",
+      "note": "Original population arterial-occurrence values range from 0 to 100 percent. A documented project threshold of at least 25 percent produces the display mask and its 3D surface. This calculated illustration represents population occurrence; the original probability field remains available for comparison. Source coverage, sampling and population alignment govern the appearance of small vessels.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "mask",
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      }
+    },
+    {
+      "id": "below-threshold",
+      "title": "Source evidence below the 25 percent display threshold",
+      "selected": "mouches_arteries:region:arterial_occurrence",
+      "visible": [
+        "mouches_arteries:region:arterial_occurrence"
+      ],
+      "background": "tof",
+      "prompt": "Start with full mean TOF sections and use Magnify at cursor to inspect the same physical point. Compare the source percent readout with the project 25 percent display mask. Values below that threshold remain available.",
+      "note": "Original population arterial-occurrence values range from 0 to 100 percent. A documented project threshold of at least 25 percent produces the display mask and its 3D surface. This calculated illustration represents population occurrence; the original probability field remains available for comparison. Source coverage, sampling and population alignment govern the appearance of small vessels.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "probability",
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      },
+      "source_voxel": {
+        "volume_id": "arterial_occurrence_probability",
+        "index": [
+          178,
+          255,
+          109
+        ]
+      }
+    },
+    {
+      "id": "left-occurrence",
+      "title": "Left-side source occurrence sample",
+      "selected": "mouches_arteries:region:arterial_occurrence",
+      "visible": [
+        "mouches_arteries:region:arterial_occurrence"
+      ],
+      "background": "tof",
+      "prompt": "Start with full mean TOF sections and use Magnify at cursor to inspect the same physical point. Compare the mean TOF image, source arterial-occurrence percentage and thresholded 3D navigation surface. The field has no source-defined named branch labels.",
+      "note": "Original population arterial-occurrence values range from 0 to 100 percent. A documented project threshold of at least 25 percent produces the display mask and its 3D surface. This calculated illustration represents population occurrence; the original probability field remains available for comparison. Source coverage, sampling and population alignment govern the appearance of small vessels.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "probability",
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      },
+      "source_voxel": {
+        "volume_id": "arterial_occurrence_probability",
+        "index": [
+          204,
+          262,
+          73
+        ]
+      }
+    },
+    {
+      "id": "right-occurrence",
+      "title": "Right-side source occurrence sample",
+      "selected": "mouches_arteries:region:arterial_occurrence",
+      "visible": [
+        "mouches_arteries:region:arterial_occurrence"
+      ],
+      "background": "tof",
+      "prompt": "Start with full mean TOF sections and use Magnify at cursor to inspect the same physical point. Compare the mean TOF image, source arterial-occurrence percentage and thresholded 3D navigation surface. The field has no source-defined named branch labels.",
+      "note": "Original population arterial-occurrence values range from 0 to 100 percent. A documented project threshold of at least 25 percent produces the display mask and its 3D surface. This calculated illustration represents population occurrence; the original probability field remains available for comparison. Source coverage, sampling and population alignment govern the appearance of small vessels.",
+      "display": {
+        "slice_zoom": 1.0,
+        "overlay": "probability",
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ]
+      },
+      "source_voxel": {
+        "volume_id": "arterial_occurrence_probability",
+        "index": [
+          156,
+          263,
+          75
+        ]
+      }
+    }
+  ]
+}

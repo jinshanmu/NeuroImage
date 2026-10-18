@@ -1,0 +1,38 @@
+{
+  "recorded_utc": "2026-10-14T11:25:35.842039+00:00",
+  "status": "passed",
+  "dataset_id": "hcp1065_prob",
+  "manifest": "derivatives/hcp1065_prob/6cfd8af637420faa/manifest.json",
+  "package_version": "6cfd8af637420faa",
+  "source_fields": 64,
+  "reference_images": 2,
+  "source_verification": "benchmarks/hcp1065_prob/fine-anatomy-20261014/source-verification.json",
+  "browser_receipt": "benchmarks/hcp1065_prob/fine-anatomy-20261014/browser/acceptance.json",
+  "maximum_reference_corner_error_mm": 0.0,
+  "all_original_probability_values_exact": true,
+  "overlapping_memberships": {
+    "voxels_with_multiple_memberships": 539495,
+    "maximum_memberships": 10,
+    "sum_memberships": 2099763,
+    "union_voxels": 1011452
+  },
+  "unchanged_rebuild": {
+    "reused_assets": 199,
+    "built_assets": 0,
+    "geometry_recomputed": false
+  },
+  "teaching_sequences": 11,
+  "curricula": 4,
+  "views": 68,
+  "course_ids": [
+    "c0ea19fb-1874-5cde-8179-83d918d26efb",
+    "65fcec73-3f90-5e6b-aaf2-21b8c81bd845"
+  ],
+  "source_probability_readouts_checked": 64,
+  "scene_pixel_comparisons": 8,
+  "credited_exports": 14,
+  "engineering_tests": "44 targeted checks plus revised course-catalog and native-crop verification",
+  "anatomical_review": "pending exact-view instructor assessment",
+  "expert_review_in_engineering_denominator": false,
+  "frontend": "Owner-accepted layout and implementation unchanged."
+}

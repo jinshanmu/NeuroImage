@@ -1,0 +1,2777 @@
+{
+  "id": "brainstem_navigator_mni",
+  "version": "2.0",
+  "adapter": "independent-nifti-regions",
+  "representation": "mri-regions",
+  "title": "Brainstem Navigator \u00b7 brainstem and diencephalic source regions",
+  "source_version": "1.0 (2024-10-08); unchanged atlas images from 0.9",
+  "construction_peak_gib": 2,
+  "inputs": {
+    "t2": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2c.Templates_MNI/images_BIlab/T2w.nii.gz",
+    "fa": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2c.Templates_MNI/images_BIlab/FA.nii.gz",
+    "license": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/Documentation/Copyright.txt",
+    "source_readme": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/Documentation/Readme.docx",
+    "source_names": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/Documentation/ListofNuclei.docx",
+    "RN_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN_l.nii.gz",
+    "RN_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN_l.nii.gz",
+    "RN_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN_r.nii.gz",
+    "RN_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN_r.nii.gz",
+    "SN_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN_l.nii.gz",
+    "SN_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN_l.nii.gz",
+    "SN_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN_r.nii.gz",
+    "SN_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN_r.nii.gz",
+    "SC_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SC_l.nii.gz",
+    "SC_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SC_l.nii.gz",
+    "SC_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SC_r.nii.gz",
+    "SC_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SC_r.nii.gz",
+    "IC_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/IC_l.nii.gz",
+    "IC_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/IC_l.nii.gz",
+    "IC_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/IC_r.nii.gz",
+    "IC_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/IC_r.nii.gz",
+    "PAG_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PAG.nii.gz",
+    "PAG_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PAG.nii.gz",
+    "DR_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/DR.nii.gz",
+    "DR_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/DR.nii.gz",
+    "ION_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ION_l.nii.gz",
+    "ION_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ION_l.nii.gz",
+    "ION_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ION_r.nii.gz",
+    "ION_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ION_r.nii.gz",
+    "CLi_RLi_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CLi_RLi.nii.gz",
+    "CLi_RLi_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CLi_RLi.nii.gz",
+    "CnF_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CnF_l.nii.gz",
+    "CnF_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CnF_l.nii.gz",
+    "CnF_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CnF_r.nii.gz",
+    "CnF_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CnF_r.nii.gz",
+    "iMRt_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRt_l.nii.gz",
+    "iMRt_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRt_l.nii.gz",
+    "iMRt_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRt_r.nii.gz",
+    "iMRt_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRt_r.nii.gz",
+    "iMRtl_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtl_l.nii.gz",
+    "iMRtl_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtl_l.nii.gz",
+    "iMRtl_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtl_r.nii.gz",
+    "iMRtl_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtl_r.nii.gz",
+    "iMRtm_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtm_l.nii.gz",
+    "iMRtm_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtm_l.nii.gz",
+    "iMRtm_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtm_r.nii.gz",
+    "iMRtm_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtm_r.nii.gz",
+    "isRt_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/isRt_l.nii.gz",
+    "isRt_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/isRt_l.nii.gz",
+    "isRt_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/isRt_r.nii.gz",
+    "isRt_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/isRt_r.nii.gz",
+    "LC_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LC_l.nii.gz",
+    "LC_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LC_l.nii.gz",
+    "LC_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LC_r.nii.gz",
+    "LC_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LC_r.nii.gz",
+    "LDTg_CGPn_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LDTg_CGPn_l.nii.gz",
+    "LDTg_CGPn_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LDTg_CGPn_l.nii.gz",
+    "LDTg_CGPn_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LDTg_CGPn_r.nii.gz",
+    "LDTg_CGPn_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LDTg_CGPn_r.nii.gz",
+    "LPB_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LPB_l.nii.gz",
+    "LPB_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LPB_l.nii.gz",
+    "LPB_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LPB_r.nii.gz",
+    "LPB_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LPB_r.nii.gz",
+    "MiTg_PBG_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MiTg_PBG_l.nii.gz",
+    "MiTg_PBG_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MiTg_PBG_l.nii.gz",
+    "MiTg_PBG_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MiTg_PBG_r.nii.gz",
+    "MiTg_PBG_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MiTg_PBG_r.nii.gz",
+    "MnR_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MnR.nii.gz",
+    "MnR_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MnR.nii.gz",
+    "MPB_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MPB_l.nii.gz",
+    "MPB_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MPB_l.nii.gz",
+    "MPB_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MPB_r.nii.gz",
+    "MPB_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MPB_r.nii.gz",
+    "mRt_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRt_l.nii.gz",
+    "mRt_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRt_l.nii.gz",
+    "mRt_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRt_r.nii.gz",
+    "mRt_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRt_r.nii.gz",
+    "mRta_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRta_l.nii.gz",
+    "mRta_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRta_l.nii.gz",
+    "mRta_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRta_r.nii.gz",
+    "mRta_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRta_r.nii.gz",
+    "mRtd_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtd_l.nii.gz",
+    "mRtd_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtd_l.nii.gz",
+    "mRtd_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtd_r.nii.gz",
+    "mRtd_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtd_r.nii.gz",
+    "mRtl_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtl_l.nii.gz",
+    "mRtl_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtl_l.nii.gz",
+    "mRtl_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtl_r.nii.gz",
+    "mRtl_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtl_r.nii.gz",
+    "PCRtA_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PCRtA_l.nii.gz",
+    "PCRtA_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PCRtA_l.nii.gz",
+    "PCRtA_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PCRtA_r.nii.gz",
+    "PCRtA_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PCRtA_r.nii.gz",
+    "PMnR_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PMnR.nii.gz",
+    "PMnR_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PMnR.nii.gz",
+    "PnO_PnC_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PnO_PnC_l.nii.gz",
+    "PnO_PnC_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PnO_PnC_l.nii.gz",
+    "PnO_PnC_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PnO_PnC_r.nii.gz",
+    "PnO_PnC_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PnO_PnC_r.nii.gz",
+    "PTg_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PTg_l.nii.gz",
+    "PTg_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PTg_l.nii.gz",
+    "PTg_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PTg_r.nii.gz",
+    "PTg_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PTg_r.nii.gz",
+    "RMg_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RMg.nii.gz",
+    "RMg_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RMg.nii.gz",
+    "RN1_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN1_l.nii.gz",
+    "RN1_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN1_l.nii.gz",
+    "RN1_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN1_r.nii.gz",
+    "RN1_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN1_r.nii.gz",
+    "RN2_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN2_l.nii.gz",
+    "RN2_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN2_l.nii.gz",
+    "RN2_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN2_r.nii.gz",
+    "RN2_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN2_r.nii.gz",
+    "ROb_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ROb.nii.gz",
+    "ROb_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ROb.nii.gz",
+    "RPa_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RPa.nii.gz",
+    "RPa_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RPa.nii.gz",
+    "sMRt_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRt_l.nii.gz",
+    "sMRt_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRt_l.nii.gz",
+    "sMRt_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRt_r.nii.gz",
+    "sMRt_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRt_r.nii.gz",
+    "sMRtl_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtl_l.nii.gz",
+    "sMRtl_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtl_l.nii.gz",
+    "sMRtl_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtl_r.nii.gz",
+    "sMRtl_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtl_r.nii.gz",
+    "sMRtm_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtm_l.nii.gz",
+    "sMRtm_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtm_l.nii.gz",
+    "sMRtm_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtm_r.nii.gz",
+    "sMRtm_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtm_r.nii.gz",
+    "SN1_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN1_l.nii.gz",
+    "SN1_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN1_l.nii.gz",
+    "SN1_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN1_r.nii.gz",
+    "SN1_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN1_r.nii.gz",
+    "SN2_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN2_l.nii.gz",
+    "SN2_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN2_l.nii.gz",
+    "SN2_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN2_r.nii.gz",
+    "SN2_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN2_r.nii.gz",
+    "SOC_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SOC_l.nii.gz",
+    "SOC_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SOC_l.nii.gz",
+    "SOC_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SOC_r.nii.gz",
+    "SOC_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SOC_r.nii.gz",
+    "SubC_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SubC_l.nii.gz",
+    "SubC_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SubC_l.nii.gz",
+    "SubC_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SubC_r.nii.gz",
+    "SubC_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SubC_r.nii.gz",
+    "Ve_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/Ve_l.nii.gz",
+    "Ve_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/Ve_l.nii.gz",
+    "Ve_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/Ve_r.nii.gz",
+    "Ve_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/Ve_r.nii.gz",
+    "VSM_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VSM_l.nii.gz",
+    "VSM_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VSM_l.nii.gz",
+    "VSM_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VSM_r.nii.gz",
+    "VSM_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VSM_r.nii.gz",
+    "VTA_PBP_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VTA_PBP_l.nii.gz",
+    "VTA_PBP_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VTA_PBP_l.nii.gz",
+    "VTA_PBP_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VTA_PBP_r.nii.gz",
+    "VTA_PBP_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VTA_PBP_r.nii.gz",
+    "LG_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/LG_l.nii.gz",
+    "LG_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/LG_l.nii.gz",
+    "LG_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/LG_r.nii.gz",
+    "LG_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/LG_r.nii.gz",
+    "MG_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/MG_l.nii.gz",
+    "MG_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/MG_l.nii.gz",
+    "MG_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/MG_r.nii.gz",
+    "MG_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/MG_r.nii.gz",
+    "STh_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh_l.nii.gz",
+    "STh_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh_l.nii.gz",
+    "STh_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh_r.nii.gz",
+    "STh_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh_r.nii.gz",
+    "STh1_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh1_l.nii.gz",
+    "STh1_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh1_l.nii.gz",
+    "STh1_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh1_r.nii.gz",
+    "STh1_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh1_r.nii.gz",
+    "STh2_l_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh2_l.nii.gz",
+    "STh2_l_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh2_l.nii.gz",
+    "STh2_r_probability": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh2_r.nii.gz",
+    "STh2_r_mask": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh2_r.nii.gz"
+  },
+  "images": [
+    {
+      "id": "t2",
+      "name": "Source 7 T group-average T2-weighted MRI"
+    },
+    {
+      "id": "fa",
+      "name": "Source 7 T group-average diffusion fractional anisotropy"
+    }
+  ],
+  "nifti_units": "mm",
+  "units_evidence": "Source Readme declares 1 mm isotropic grids; all selected headers declare millimetres.",
+  "space": {
+    "id": "brainstem-navigator-mni-v1",
+    "name": "Brainstem Navigator supplied MNI grid",
+    "reference": "Brainstem Navigator 1.0 Readme and original BIlab template headers",
+    "correspondence": "The publisher supplies these independent masks, probabilities and BIlab T2-weighted/FA group averages in the same MNI grid. Exact grids are verified. The project performs no registration or resampling and establishes no new correspondence to other MNI atlas packages."
+  },
+  "sources": [
+    {
+      "id": "brainstem_navigator",
+      "title": "Brainstem Navigator: normal brainstem and diencephalic regions with BIlab MRI templates",
+      "version": "1.0 (2024-10-08)",
+      "url": "https://www.nitrc.org/projects/brainstemnavig/",
+      "citation": "Bianciardi et al. 2015, doi:10.1089/brain.2015.0347; Bianciardi et al. 2018, doi:10.1016/j.neuroimage.2017.04.070; Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764; Singh et al. 2020, doi:10.3389/fnins.2019.01425; Singh et al. 2021, doi:10.1089/brain.2020.0975; Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895. Retain the source copyright and acknowledgments.",
+      "license_name": "Brainstem Navigator non-commercial research terms; no external distribution of files or derived information",
+      "license_url": "https://www.nitrc.org/projects/brainstemnavig/",
+      "license_input": "license"
+    }
+  ],
+  "mask_rule": {
+    "threshold": 0.35,
+    "operator": ">=",
+    "source": "Delivered labels_thresholded_binary_0.35; exact agreement with the inclusive source probability threshold is required."
+  },
+  "probability_interpretation": "Population-template spatial overlap of source nucleus delineations from twelve healthy adults. Values are not an individual tissue probability, clinical confidence or proof of a microscopic boundary.",
+  "probability_derivation": "The source authors delineated and transformed subject labels to the supplied template. This package preserves the delivered scalar probability values without additional transforms, resampling, mirroring or interpolation.",
+  "region_evidence": "Source population-template delineation with an independent delivered binary navigation mask. The surface is computed at the half-voxel boundary of that mask; it is not a directly observed tissue surface.",
+  "region_notes": [
+    "Each source region remains independent; simultaneous memberships are preserved and are not resolved by winner-take-all labeling.",
+    "The delivered binary navigation mask uses an inclusive 0.35 probability threshold. Full source probabilities below this boundary remain available.",
+    "BIlab MRI templates cover part of the brain and omit some regions, including the temporal lobes. Outside coverage is not evidence of absent anatomy.",
+    "Native 1 mm sampling and population averaging limit small-structure interpretation. No geometric smoothing or microscopic detail is added.",
+    "Source collections contain both whole nuclei and delivered subdivisions. Catalogue entry counts are not counts of independent anatomical entities.",
+    "Compound source regions remain compound. No separation of microscopic nuclei, individual cranial nerve origins or functional connections is inferred."
+  ],
+  "regions": [
+    {
+      "source_name": "RN_l",
+      "name": "Left red nucleus",
+      "category": "Midbrain",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "RN_l_mask",
+      "probability_input": "RN_l_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "RN_r",
+      "name": "Right red nucleus",
+      "category": "Midbrain",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "RN_r_mask",
+      "probability_input": "RN_r_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "SN_l",
+      "name": "Left substantia nigra",
+      "category": "Midbrain",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "SN_l_mask",
+      "probability_input": "SN_l_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "SN_r",
+      "name": "Right substantia nigra",
+      "category": "Midbrain",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "SN_r_mask",
+      "probability_input": "SN_r_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "SC_l",
+      "name": "Left superior colliculus",
+      "category": "Midbrain tectum",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "SC_l_mask",
+      "probability_input": "SC_l_probability",
+      "notes": [
+        "Source reference: Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "SC_r",
+      "name": "Right superior colliculus",
+      "category": "Midbrain tectum",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "SC_r_mask",
+      "probability_input": "SC_r_probability",
+      "notes": [
+        "Source reference: Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "IC_l",
+      "name": "Left inferior colliculus",
+      "category": "Midbrain tectum",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "IC_l_mask",
+      "probability_input": "IC_l_probability",
+      "notes": [
+        "Source reference: Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "IC_r",
+      "name": "Right inferior colliculus",
+      "category": "Midbrain tectum",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "IC_r_mask",
+      "probability_input": "IC_r_probability",
+      "notes": [
+        "Source reference: Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "PAG",
+      "name": "Periaqueductal gray",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        222,
+        179,
+        87
+      ],
+      "mask_input": "PAG_mask",
+      "probability_input": "PAG_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "DR",
+      "name": "Dorsal raphe",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        158,
+        133,
+        225
+      ],
+      "mask_input": "DR_mask",
+      "probability_input": "DR_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "ION_l",
+      "name": "Left inferior olivary nucleus",
+      "category": "Medulla",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "ION_l_mask",
+      "probability_input": "ION_l_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "ION_r",
+      "name": "Right inferior olivary nucleus",
+      "category": "Medulla",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "ION_r_mask",
+      "probability_input": "ION_r_probability",
+      "notes": [
+        "Source reference: Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "CLi_RLi",
+      "name": "Caudal-rostral linear raphe",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        229,
+        185,
+        88
+      ],
+      "mask_input": "CLi_RLi_mask",
+      "probability_input": "CLi_RLi_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field."
+      ]
+    },
+    {
+      "source_name": "CnF_l",
+      "name": "Left cuneiform nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "CnF_l_mask",
+      "probability_input": "CnF_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2018, doi:10.1016/j.neuroimage.2017.04.070."
+      ]
+    },
+    {
+      "source_name": "CnF_r",
+      "name": "Right cuneiform nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "CnF_r_mask",
+      "probability_input": "CnF_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2018, doi:10.1016/j.neuroimage.2017.04.070."
+      ]
+    },
+    {
+      "source_name": "iMRt_l",
+      "name": "Left inferior medullary reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "iMRt_l_mask",
+      "probability_input": "iMRt_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "iMRt_r",
+      "name": "Right inferior medullary reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "iMRt_r_mask",
+      "probability_input": "iMRt_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "iMRtl_l",
+      "name": "Left inferior medullary reticular formation - lateral part",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "iMRtl_l_mask",
+      "probability_input": "iMRtl_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "iMRtl_r",
+      "name": "Right inferior medullary reticular formation - lateral part",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "iMRtl_r_mask",
+      "probability_input": "iMRtl_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "iMRtm_l",
+      "name": "Left inferior medullary reticular formation - medial part",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "iMRtm_l_mask",
+      "probability_input": "iMRtm_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "iMRtm_r",
+      "name": "Right inferior medullary reticular formation - medial part",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "iMRtm_r_mask",
+      "probability_input": "iMRtm_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "isRt_l",
+      "name": "Left isthmic reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "isRt_l_mask",
+      "probability_input": "isRt_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975."
+      ]
+    },
+    {
+      "source_name": "isRt_r",
+      "name": "Right isthmic reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "isRt_r_mask",
+      "probability_input": "isRt_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975."
+      ]
+    },
+    {
+      "source_name": "LC_l",
+      "name": "Left locus coeruleus",
+      "category": "Mesopontine regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "LC_l_mask",
+      "probability_input": "LC_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "LC_r",
+      "name": "Right locus coeruleus",
+      "category": "Mesopontine regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "LC_r_mask",
+      "probability_input": "LC_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "LDTg_CGPn_l",
+      "name": "Left laterodorsal tegmental nucleus - central gray of the rhombencephalon",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "LDTg_CGPn_l_mask",
+      "probability_input": "LDTg_CGPn_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "LDTg_CGPn_r",
+      "name": "Right laterodorsal tegmental nucleus - central gray of the rhombencephalon",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "LDTg_CGPn_r_mask",
+      "probability_input": "LDTg_CGPn_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "LPB_l",
+      "name": "Left lateral parabrachial nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "LPB_l_mask",
+      "probability_input": "LPB_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425."
+      ]
+    },
+    {
+      "source_name": "LPB_r",
+      "name": "Right lateral parabrachial nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "LPB_r_mask",
+      "probability_input": "LPB_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425."
+      ]
+    },
+    {
+      "source_name": "MiTg_PBG_l",
+      "name": "Left microcellular tegmental nucleus - parabigeminal nucleus",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "MiTg_PBG_l_mask",
+      "probability_input": "MiTg_PBG_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "The source list spells prabigeminal; the display name follows parabigeminal in the cited source paper. The original file key is unchanged."
+      ]
+    },
+    {
+      "source_name": "MiTg_PBG_r",
+      "name": "Right microcellular tegmental nucleus - parabigeminal nucleus",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "MiTg_PBG_r_mask",
+      "probability_input": "MiTg_PBG_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "The source list spells prabigeminal; the display name follows parabigeminal in the cited source paper. The original file key is unchanged."
+      ]
+    },
+    {
+      "source_name": "MnR",
+      "name": "Median raphe",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        229,
+        185,
+        88
+      ],
+      "mask_input": "MnR_mask",
+      "probability_input": "MnR_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "MPB_l",
+      "name": "Left medial parabrachial nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "MPB_l_mask",
+      "probability_input": "MPB_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425."
+      ]
+    },
+    {
+      "source_name": "MPB_r",
+      "name": "Right medial parabrachial nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "MPB_r_mask",
+      "probability_input": "MPB_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425."
+      ]
+    },
+    {
+      "source_name": "mRt_l",
+      "name": "Left mesencephalic reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "mRt_l_mask",
+      "probability_input": "mRt_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975."
+      ]
+    },
+    {
+      "source_name": "mRt_r",
+      "name": "Right mesencephalic reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "mRt_r_mask",
+      "probability_input": "mRt_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975."
+      ]
+    },
+    {
+      "source_name": "mRta_l",
+      "name": "Left mesencephalic reticular formation - anterior part",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "mRta_l_mask",
+      "probability_input": "mRta_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred."
+      ]
+    },
+    {
+      "source_name": "mRta_r",
+      "name": "Right mesencephalic reticular formation - anterior part",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "mRta_r_mask",
+      "probability_input": "mRta_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred."
+      ]
+    },
+    {
+      "source_name": "mRtd_l",
+      "name": "Left mesencephalic reticular formation - dorsal part",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "mRtd_l_mask",
+      "probability_input": "mRtd_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred."
+      ]
+    },
+    {
+      "source_name": "mRtd_r",
+      "name": "Right mesencephalic reticular formation - dorsal part",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "mRtd_r_mask",
+      "probability_input": "mRtd_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred."
+      ]
+    },
+    {
+      "source_name": "mRtl_l",
+      "name": "Left mesencephalic reticular formation - lateral part",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "mRtl_l_mask",
+      "probability_input": "mRtl_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred."
+      ]
+    },
+    {
+      "source_name": "mRtl_r",
+      "name": "Right mesencephalic reticular formation - lateral part",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "mRtl_r_mask",
+      "probability_input": "mRtl_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred."
+      ]
+    },
+    {
+      "source_name": "PCRtA_l",
+      "name": "Left parvicellular reticular nucleus - alpha part",
+      "category": "Reticular source regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "PCRtA_l_mask",
+      "probability_input": "PCRtA_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "PCRtA_r",
+      "name": "Right parvicellular reticular nucleus - alpha part",
+      "category": "Reticular source regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "PCRtA_r_mask",
+      "probability_input": "PCRtA_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "PMnR",
+      "name": "Paramedian nucleus",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        229,
+        185,
+        88
+      ],
+      "mask_input": "PMnR_mask",
+      "probability_input": "PMnR_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2018, doi:10.1016/j.neuroimage.2017.04.070."
+      ]
+    },
+    {
+      "source_name": "PnO_PnC_l",
+      "name": "Left pontine reticular nucleus - oral and caudal parts",
+      "category": "Reticular source regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "PnO_PnC_l_mask",
+      "probability_input": "PnO_PnC_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "PnO_PnC_r",
+      "name": "Right pontine reticular nucleus - oral and caudal parts",
+      "category": "Reticular source regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "PnO_PnC_r_mask",
+      "probability_input": "PnO_PnC_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "PTg_l",
+      "name": "Left pedunculotegmental nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "PTg_l_mask",
+      "probability_input": "PTg_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2018, doi:10.1016/j.neuroimage.2017.04.070.",
+        "The delivered name is also called pedunculopontine nucleus in the source documentation."
+      ]
+    },
+    {
+      "source_name": "PTg_r",
+      "name": "Right pedunculotegmental nucleus",
+      "category": "Mesopontine regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "PTg_r_mask",
+      "probability_input": "PTg_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2018, doi:10.1016/j.neuroimage.2017.04.070.",
+        "The delivered name is also called pedunculopontine nucleus in the source documentation."
+      ]
+    },
+    {
+      "source_name": "RMg",
+      "name": "Raphe magnus",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        229,
+        185,
+        88
+      ],
+      "mask_input": "RMg_mask",
+      "probability_input": "RMg_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "RN1_l",
+      "name": "Left red nucleus - source subregion 1",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "RN1_l_mask",
+      "probability_input": "RN1_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    },
+    {
+      "source_name": "RN1_r",
+      "name": "Right red nucleus - source subregion 1",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "RN1_r_mask",
+      "probability_input": "RN1_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    },
+    {
+      "source_name": "RN2_l",
+      "name": "Left red nucleus - source subregion 2",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "RN2_l_mask",
+      "probability_input": "RN2_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    },
+    {
+      "source_name": "RN2_r",
+      "name": "Right red nucleus - source subregion 2",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "RN2_r_mask",
+      "probability_input": "RN2_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    },
+    {
+      "source_name": "ROb",
+      "name": "Raphe obscurus",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        229,
+        185,
+        88
+      ],
+      "mask_input": "ROb_mask",
+      "probability_input": "ROb_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "RPa",
+      "name": "Raphe pallidus",
+      "category": "Midline regions",
+      "laterality": "midline",
+      "color": [
+        229,
+        185,
+        88
+      ],
+      "mask_input": "RPa_mask",
+      "probability_input": "RPa_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "sMRt_l",
+      "name": "Left superior medullary reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "sMRt_l_mask",
+      "probability_input": "sMRt_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "sMRt_r",
+      "name": "Right superior medullary reticular formation",
+      "category": "Reticular source regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "sMRt_r_mask",
+      "probability_input": "sMRt_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "sMRtl_l",
+      "name": "Left superior medullary reticular formation - lateral part",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "sMRtl_l_mask",
+      "probability_input": "sMRtl_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "sMRtl_r",
+      "name": "Right superior medullary reticular formation - lateral part",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "sMRtl_r_mask",
+      "probability_input": "sMRtl_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "sMRtm_l",
+      "name": "Left superior medullary reticular formation - medial part",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "sMRtm_l_mask",
+      "probability_input": "sMRtm_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "sMRtm_r",
+      "name": "Right superior medullary reticular formation - medial part",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "sMRtm_r_mask",
+      "probability_input": "sMRtm_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "SN1_l",
+      "name": "Left substantia nigra - source subregion 1",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "SN1_l_mask",
+      "probability_input": "SN1_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source describes compatibility with reticulata; this is a source interpretation, not an independently observed or expert-approved histological boundary."
+      ]
+    },
+    {
+      "source_name": "SN1_r",
+      "name": "Right substantia nigra - source subregion 1",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "SN1_r_mask",
+      "probability_input": "SN1_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source describes compatibility with reticulata; this is a source interpretation, not an independently observed or expert-approved histological boundary."
+      ]
+    },
+    {
+      "source_name": "SN2_l",
+      "name": "Left substantia nigra - source subregion 2",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "SN2_l_mask",
+      "probability_input": "SN2_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source describes compatibility with compacta; this is a source interpretation, not an independently observed or expert-approved histological boundary."
+      ]
+    },
+    {
+      "source_name": "SN2_r",
+      "name": "Right substantia nigra - source subregion 2",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "SN2_r_mask",
+      "probability_input": "SN2_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source describes compatibility with compacta; this is a source interpretation, not an independently observed or expert-approved histological boundary."
+      ]
+    },
+    {
+      "source_name": "SOC_l",
+      "name": "Left superior olivary complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "SOC_l_mask",
+      "probability_input": "SOC_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field."
+      ]
+    },
+    {
+      "source_name": "SOC_r",
+      "name": "Right superior olivary complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "SOC_r_mask",
+      "probability_input": "SOC_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field."
+      ]
+    },
+    {
+      "source_name": "SubC_l",
+      "name": "Left subcoeruleus",
+      "category": "Mesopontine regions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "SubC_l_mask",
+      "probability_input": "SubC_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "SubC_r",
+      "name": "Right subcoeruleus",
+      "category": "Mesopontine regions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "SubC_r_mask",
+      "probability_input": "SubC_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895.",
+        "The cited paper states that these atlas delineations used the earlier Bianciardi 2015 acquisition. The twelve-patient clinical connectivity experiment is separate and is not imported."
+      ]
+    },
+    {
+      "source_name": "Ve_l",
+      "name": "Left vestibular nuclei complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "Ve_l_mask",
+      "probability_input": "Ve_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field."
+      ]
+    },
+    {
+      "source_name": "Ve_r",
+      "name": "Right vestibular nuclei complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "Ve_r_mask",
+      "probability_input": "Ve_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field."
+      ]
+    },
+    {
+      "source_name": "VSM_l",
+      "name": "Left viscero-sensory-motor nuclei complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "VSM_l_mask",
+      "probability_input": "VSM_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "This combined source region does not provide separate solitary, vagal or hypoglossal nucleus labels or their cranial nerve courses."
+      ]
+    },
+    {
+      "source_name": "VSM_r",
+      "name": "Right viscero-sensory-motor nuclei complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "VSM_r_mask",
+      "probability_input": "VSM_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2020, doi:10.3389/fnins.2019.01425.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field.",
+        "This combined source region does not provide separate solitary, vagal or hypoglossal nucleus labels or their cranial nerve courses."
+      ]
+    },
+    {
+      "source_name": "VTA_PBP_l",
+      "name": "Left ventral tegmental area - parabrachial pigmented nucleus complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "VTA_PBP_l_mask",
+      "probability_input": "VTA_PBP_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field."
+      ]
+    },
+    {
+      "source_name": "VTA_PBP_r",
+      "name": "Right ventral tegmental area - parabrachial pigmented nucleus complex",
+      "category": "Brainstem nuclei complexes",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "VTA_PBP_r_mask",
+      "probability_input": "VTA_PBP_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Singh et al. 2021, doi:10.1089/brain.2020.0975.",
+        "This is a source-defined combined region or complex. Its constituent nuclei or segments are not separately delineated by this field."
+      ]
+    },
+    {
+      "source_name": "LG_l",
+      "name": "Left lateral geniculate nucleus",
+      "category": "Diencephalic nuclei",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "LG_l_mask",
+      "probability_input": "LG_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "LG_r",
+      "name": "Right lateral geniculate nucleus",
+      "category": "Diencephalic nuclei",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "LG_r_mask",
+      "probability_input": "LG_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "MG_l",
+      "name": "Left medial geniculate nucleus",
+      "category": "Diencephalic nuclei",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "MG_l_mask",
+      "probability_input": "MG_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "MG_r",
+      "name": "Right medial geniculate nucleus",
+      "category": "Diencephalic nuclei",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "MG_r_mask",
+      "probability_input": "MG_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764."
+      ]
+    },
+    {
+      "source_name": "STh_l",
+      "name": "Left subthalamic nucleus",
+      "category": "Diencephalic nuclei",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "STh_l_mask",
+      "probability_input": "STh_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "STh_r",
+      "name": "Right subthalamic nucleus",
+      "category": "Diencephalic nuclei",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "STh_r_mask",
+      "probability_input": "STh_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347."
+      ]
+    },
+    {
+      "source_name": "STh1_l",
+      "name": "Left subthalamic nucleus - source subregion 1",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "STh1_l_mask",
+      "probability_input": "STh1_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    },
+    {
+      "source_name": "STh1_r",
+      "name": "Right subthalamic nucleus - source subregion 1",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "STh1_r_mask",
+      "probability_input": "STh1_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    },
+    {
+      "source_name": "STh2_l",
+      "name": "Left subthalamic nucleus - source subregion 2",
+      "category": "Source subregions",
+      "laterality": "left",
+      "color": [
+        95,
+        190,
+        215
+      ],
+      "mask_input": "STh2_l_mask",
+      "probability_input": "STh2_l_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    },
+    {
+      "source_name": "STh2_r",
+      "name": "Right subthalamic nucleus - source subregion 2",
+      "category": "Source subregions",
+      "laterality": "right",
+      "color": [
+        226,
+        129,
+        168
+      ],
+      "mask_input": "STh2_r_mask",
+      "probability_input": "STh2_r_probability",
+      "notes": [
+        "Source definition: delivered ListofNuclei.docx, Bianciardi et al. 2015, doi:10.1089/brain.2015.0347.",
+        "A separately delivered source subdivision. Its overlap with a parent mask is preserved; no new partition or histological boundary is inferred.",
+        "The source uses a numbered subregion; the project retains that numbering without assigning an unsupported histological name."
+      ]
+    }
+  ],
+  "acquisition": "Run neuroimage acquire brainstem_navigator_mni --data-root <existing-data-root>. Reuse the verified official archive and its selected members.",
+  "archives": [
+    {
+      "dataset_id": "brainstem_navigator",
+      "filename": "BrainstemNavigatorv1.0.zip",
+      "url": "https://www.nitrc.org/frs/download.php/17380/BrainstemNavigatorv1.0.zip",
+      "bytes": 89067709,
+      "sha256": "0ac9af5ab6e7fe1237f8f84be237cf6077111fb7ebd31899bee9b97bbfc88fc4",
+      "hash_basis": "SHA256 pinned from the verified local official archive; not a publisher signature",
+      "members": [
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2c.Templates_MNI/images_BIlab/T2w.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2c.Templates_MNI/images_BIlab/T2w.nii.gz",
+          "bytes": 12808023,
+          "sha256": "fcd169313e50b960cf73a34c9960c199d6b9e0b1da8b7f030cc49be4127a9ce4"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2c.Templates_MNI/images_BIlab/FA.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2c.Templates_MNI/images_BIlab/FA.nii.gz",
+          "bytes": 12807360,
+          "sha256": "74acebc423a53f3a7f84552e42d0b32fc068f089fa3ded5cc8d5e186980c15b4"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/Documentation/Copyright.txt",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/Documentation/Copyright.txt",
+          "bytes": 1764,
+          "sha256": "f43768fa58f151621179401dc70fc0256e24d73f80b1d17dc656260db3e90339"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/Documentation/Readme.docx",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/Documentation/Readme.docx",
+          "bytes": 124323,
+          "sha256": "a55cd5aa42dab17c73b3fc5cab67e5a2b976764b55239e44435f7dc4807e123d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/Documentation/ListofNuclei.docx",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/Documentation/ListofNuclei.docx",
+          "bytes": 23543,
+          "sha256": "91b605c6c1fd45e0139edb344539b39f662ec57b9d5d189acf909edd5b024df0"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN_l.nii.gz",
+          "bytes": 57839,
+          "sha256": "65e76928e6991efe67913873b1e7e3a926e19da72d3367ae90bfec6b39957ebc"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN_l.nii.gz",
+          "bytes": 56613,
+          "sha256": "7f78a94172bcd9dcf7cd51a1ad52072c957b4b9a53fc251d68dc25cffe548937"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN_r.nii.gz",
+          "bytes": 57621,
+          "sha256": "df1d6451ca1e6bde17ef0e49042b49ef484412960e2afc0880094e9dd95beefc"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN_r.nii.gz",
+          "bytes": 56566,
+          "sha256": "c5634226dfe1e05eca4238ab486a7511e2f93119e21478394e7239fac38fe864"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN_l.nii.gz",
+          "bytes": 59576,
+          "sha256": "326ab52403d655071e711b8e96eb8569e7457ec9607f86b7323a090a8f0f6a94"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN_l.nii.gz",
+          "bytes": 56929,
+          "sha256": "f65d48d08dec97efbbe13d42d6d8b3f446fa9fe585943cb893fc2212e5238195"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN_r.nii.gz",
+          "bytes": 59365,
+          "sha256": "57312bbc165a46e2d6ae4bd9788beb06b820c0cb6d1bf498fb8ce5505083e81d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN_r.nii.gz",
+          "bytes": 56892,
+          "sha256": "83344a311c2a8126d56739923ebdbb627fd64d9b122007252fc198ff2b013fe8"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SC_l.nii.gz",
+          "bytes": 59026,
+          "sha256": "f02830259bd889ba415e2d8e8ee21b16a720111f5481cd0bf1851cd77be5960f"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SC_l.nii.gz",
+          "bytes": 56379,
+          "sha256": "fd5384bb612d146039a4a9b05da9e940cccb478b8423fbf8c94813424e757166"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SC_r.nii.gz",
+          "bytes": 59097,
+          "sha256": "a9fe03965c404f17a8eb4861c551d16b7a864b8c410645697b378f4326344980"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SC_r.nii.gz",
+          "bytes": 56356,
+          "sha256": "10c5893dae51bc0710ecef469518971207574fecc3f7d4e80c714750f58a716d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/IC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/IC_l.nii.gz",
+          "bytes": 58228,
+          "sha256": "8c3920e4377c999cc4f1def125947905c9e9fe6ad8835d3053ababe1205c1293"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/IC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/IC_l.nii.gz",
+          "bytes": 56356,
+          "sha256": "8f5a78e5d0e203d2a25b626a061718975ab22756f18b6f905b596986e69dd0e5"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/IC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/IC_r.nii.gz",
+          "bytes": 58753,
+          "sha256": "8c42dae753ee2dcc021fa6f3fb7e2ac6c6c50574d49367b43b718d0f5196fa30"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/IC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/IC_r.nii.gz",
+          "bytes": 56348,
+          "sha256": "192a5a34366987493692a3ef10c8999f10c3fce0cd908faddd7768356a0174cb"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PAG.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PAG.nii.gz",
+          "bytes": 58492,
+          "sha256": "efbfaa0ea3e5f28b5626945e67bcb0f33a1fc38b7ef2078c009f390711ba6583"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PAG.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PAG.nii.gz",
+          "bytes": 56655,
+          "sha256": "9c604bdce73f2295c3020ba7da07ce37530173c19e348245a02f30dff36b7641"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/DR.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/DR.nii.gz",
+          "bytes": 56970,
+          "sha256": "e3420c78b533a0e3b637c6f671f87c7c305fd781784c7cafb5a7a9a0619f6c86"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/DR.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/DR.nii.gz",
+          "bytes": 56570,
+          "sha256": "719bd0bcd797376a37ec23ba4790407f5f19da7e2f466301a18a2570cb6cd0e9"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ION_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ION_l.nii.gz",
+          "bytes": 57649,
+          "sha256": "9fc34ab76061ba5392e6ddd586d14f3c3267c0a02f82bffe02b96dbbbeac1de0"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ION_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ION_l.nii.gz",
+          "bytes": 56589,
+          "sha256": "09ccfb187a68d5d51a207e01d2c5b60ae4afcb817c86a30ab11212fbeff0b01d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ION_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ION_r.nii.gz",
+          "bytes": 57667,
+          "sha256": "90d127d0de1723e16f60815eb96911bac6b25a2ef69002371192c9652b30d14d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ION_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ION_r.nii.gz",
+          "bytes": 56590,
+          "sha256": "903e66a53a6b1b728e0d61f3e38fba370140b65f5363b7b7c9c66cea9d98f916"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CLi_RLi.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CLi_RLi.nii.gz",
+          "bytes": 56694,
+          "sha256": "4b7e6f54ccb45b154f5486ca7a33f7a4fa0dc0dc7564b6b86b21dcb39ab08fa1"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CLi_RLi.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CLi_RLi.nii.gz",
+          "bytes": 56459,
+          "sha256": "28f6e275634eef039008b4c14d6b1e2c230596702c1fe2fb4706ecdb7ee1ead9"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CnF_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CnF_l.nii.gz",
+          "bytes": 56666,
+          "sha256": "fbad6dc855b205bd4d62fa26d1e0c3d63f7b0305184739f0c6af18edd8099e74"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CnF_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CnF_l.nii.gz",
+          "bytes": 56359,
+          "sha256": "0349c4bea4435fdcf298b89d61d3a21ef8f811f8da6ff260000cf3b529510574"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CnF_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CnF_r.nii.gz",
+          "bytes": 56646,
+          "sha256": "ed37d3e7423560874b3a10df36af5c3ebbded45233f32ae89bd5270d58d4e086"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CnF_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CnF_r.nii.gz",
+          "bytes": 56382,
+          "sha256": "ba99cb03136ffe4086b60c63545ffac16d0015c9de518fa20464fa05cd590617"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRt_l.nii.gz",
+          "bytes": 63003,
+          "sha256": "b911401a62fde9c3818aebafe7698f35aeb16ca9238855c49f156096e746bcd0"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRt_l.nii.gz",
+          "bytes": 56680,
+          "sha256": "646ce48f8be19fc90034fa7b9df5f52a9f603c5d374b2ca1b3ae8bc0c31bc1b4"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRt_r.nii.gz",
+          "bytes": 63488,
+          "sha256": "9e9ddcfec4c2833ac7c4b783ec9d31913a89422b5c515ebd5c0716838a12dd3d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRt_r.nii.gz",
+          "bytes": 56692,
+          "sha256": "ef2c57caaca45f459e9a0a80ad1db4562ed5192239089f55a7207c87f2e857d4"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtl_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtl_l.nii.gz",
+          "bytes": 62544,
+          "sha256": "49c3d20a00244d2dd2e21d5cbecd3ad1e0f2a49f37f705667d52c1771b9d6f7d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtl_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtl_l.nii.gz",
+          "bytes": 56657,
+          "sha256": "041cbe444257270f993120f4fd5c84bfda4ebb3db53833a94116820a53bff467"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtl_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtl_r.nii.gz",
+          "bytes": 63067,
+          "sha256": "aed6bc3f75189c5511339bd8b3e6dc5ad8919961f04ef18011d005d1a825436d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtl_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtl_r.nii.gz",
+          "bytes": 56674,
+          "sha256": "7bd00d03f910cbbf50e2c9c2c3be661a9aea2f746b1e3e5299cf505eb948e292"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtm_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtm_l.nii.gz",
+          "bytes": 57394,
+          "sha256": "5e9d56483e7f2772053d132d6fac441e03c3cc6ce59533cbfae5847dd76d9af1"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtm_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtm_l.nii.gz",
+          "bytes": 56349,
+          "sha256": "ca68d32174ecdf995024d915e40d437a69c149fd39b08e7cc0b1242bd6394dc0"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtm_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/iMRtm_r.nii.gz",
+          "bytes": 57580,
+          "sha256": "af8c7e4b033d2018f655ecfdb250efcb902747aa0357b25270cb4d91d26c34d5"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtm_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/iMRtm_r.nii.gz",
+          "bytes": 56335,
+          "sha256": "54de45e1861e47c28e31299c701d0eb6efedfe4aaa497c051eaa00d6da43e4e6"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/isRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/isRt_l.nii.gz",
+          "bytes": 56541,
+          "sha256": "a26e7ea20b0d72423686ac356a5a1f523ffceff784adcb8cd0c0f811c2b8de1f"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/isRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/isRt_l.nii.gz",
+          "bytes": 56360,
+          "sha256": "45440e73684fecfdc470505f442647f616615a4879152959e5b1f928948451cb"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/isRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/isRt_r.nii.gz",
+          "bytes": 56532,
+          "sha256": "6a73e3c952a7f4b00e33b97a6e8d299b4d365873dc9291e43eba04fce03fcb20"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/isRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/isRt_r.nii.gz",
+          "bytes": 56369,
+          "sha256": "d4b8ce5fab0330b5a0c836a4e3eb80a555ee5cd7491fd80c3adf3e52a1a04d21"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LC_l.nii.gz",
+          "bytes": 57453,
+          "sha256": "02d0a051955dcee416b919e239602d9e587f42b0685153d3257c55b411138de2"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LC_l.nii.gz",
+          "bytes": 56335,
+          "sha256": "c2748014ffafe009d1a6de56ce4f4ecb0da24d976f7d94d12777cc29cca647ca"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LC_r.nii.gz",
+          "bytes": 57565,
+          "sha256": "185ceb2083b6f48c05892cbe47efbcaa182f8125c02262520e2666a68062e613"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LC_r.nii.gz",
+          "bytes": 56337,
+          "sha256": "2b276307c9f48b458ea7b40fc6197402c869dbf3cefef6d9566eaf0cde7cde9b"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LDTg_CGPn_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LDTg_CGPn_l.nii.gz",
+          "bytes": 61671,
+          "sha256": "93df5944348a40fae07eff354b34aa4af8ede54f7b21dfd09f1483ebd76aaf45"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LDTg_CGPn_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LDTg_CGPn_l.nii.gz",
+          "bytes": 56593,
+          "sha256": "833fbe19040635dabca05ef9f495f66475694813a653360130653af8adf2f758"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LDTg_CGPn_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LDTg_CGPn_r.nii.gz",
+          "bytes": 61821,
+          "sha256": "b99a161e343390ce65b1df640da0c3e7b12d7125d1886219129873fc47bee90a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LDTg_CGPn_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LDTg_CGPn_r.nii.gz",
+          "bytes": 56572,
+          "sha256": "a6ca98506d57161e441b84b2cd434795daf44edaa964c9eff5f4de3d05ffcb3a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LPB_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LPB_l.nii.gz",
+          "bytes": 56755,
+          "sha256": "c4ee20c67714d5e8e3723e095801d28b1b4368285e7ec66f43356dde1d0174df"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LPB_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LPB_l.nii.gz",
+          "bytes": 56478,
+          "sha256": "46d5e82d51127d8d74304fc39ef66df76a850d301dd8f329f1bc71fb8002bb84"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LPB_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/LPB_r.nii.gz",
+          "bytes": 56847,
+          "sha256": "926e2689b7b4942566d36d7c459563c982e1f458d7334a97d97cd0db081b1125"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LPB_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/LPB_r.nii.gz",
+          "bytes": 56482,
+          "sha256": "697106ce588e4949de285f459a4cd7912ecd8359316f1f94053234e18d03bde7"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MiTg_PBG_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MiTg_PBG_l.nii.gz",
+          "bytes": 56518,
+          "sha256": "d2dd2dc4021fd206a35ea149d8c68ff291660bc90dac7e58157ac4ea5492adf1"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MiTg_PBG_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MiTg_PBG_l.nii.gz",
+          "bytes": 56354,
+          "sha256": "35541c3ff199ba38b9050855e6a37dfdc4cf06d36967a0f4dbcf868db704d2e2"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MiTg_PBG_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MiTg_PBG_r.nii.gz",
+          "bytes": 56498,
+          "sha256": "4b001d89026eee8141b4d65234d3ef20266c827019c891dd16526878ac7a847e"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MiTg_PBG_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MiTg_PBG_r.nii.gz",
+          "bytes": 56357,
+          "sha256": "56b7cedb65dc1eabac82c4715dcd9f82c905a968bb028a222baf40ba637b273e"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MnR.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MnR.nii.gz",
+          "bytes": 56438,
+          "sha256": "8384853c5411a7873f86babec3f447be1be3c5f2629f81870bd5c3b2796db461"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MnR.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MnR.nii.gz",
+          "bytes": 56320,
+          "sha256": "58240d6e2f99ac9b2320c7a245ce672335165fea9368e0909710948966a289bf"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MPB_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MPB_l.nii.gz",
+          "bytes": 56762,
+          "sha256": "4d7c4aa3a2d95fa716b85a7b7185175bf9df50a5b8fc7f4c520675123a681ad0"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MPB_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MPB_l.nii.gz",
+          "bytes": 56465,
+          "sha256": "c479ec4e5814fe68e88b50df0136c43f82d361af194ac11207952f2217520d79"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MPB_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/MPB_r.nii.gz",
+          "bytes": 56807,
+          "sha256": "de65902668acc55cef9181692c7061b7bb68be5cfa402117f4332b59d4be07c6"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MPB_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/MPB_r.nii.gz",
+          "bytes": 56463,
+          "sha256": "1af4274357ed2506d4763ac4a1acb7bc67aca7798dccf648c986b90b1683f16a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRt_l.nii.gz",
+          "bytes": 57421,
+          "sha256": "6efc7715ba4df30d22d9f46cc1d36b65c529022ea5fcdc2d8ad2feddab36f72c"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRt_l.nii.gz",
+          "bytes": 56592,
+          "sha256": "0e44eefb4360019f2dea8cecd635f066cc584ec5b1e28452b6f79ce0a1e6aacf"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRt_r.nii.gz",
+          "bytes": 57387,
+          "sha256": "4f3ebb3182e382c601d9ef467bc176561c23ee2da9dabe23adc4a57dc518b1b4"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRt_r.nii.gz",
+          "bytes": 56600,
+          "sha256": "27da76d1be5b78105f8eae7e624d6268d2501c0446122400091268d7694e6c14"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRta_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRta_l.nii.gz",
+          "bytes": 56821,
+          "sha256": "cffa3e95303130ad5689c35c7420d0e12e8c8a774973db80a22e50a906cfb271"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRta_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRta_l.nii.gz",
+          "bytes": 56463,
+          "sha256": "dbca0921276aa6010833e56c5b08bf83fced23860a617ca6d4c4cb2b2fa4384d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRta_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRta_r.nii.gz",
+          "bytes": 56847,
+          "sha256": "18406a65d2962fe4cbc4ffda6d52890a2022b892c9589e7d55201b126cc3bc30"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRta_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRta_r.nii.gz",
+          "bytes": 56440,
+          "sha256": "1f649395ac0064cb59896c6080737192cd5db89330a6dc5ff3700dfad961138a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtd_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtd_l.nii.gz",
+          "bytes": 56956,
+          "sha256": "1bcd7ac50bf89b18d7affc238653de6314a6c21ee3b837eaa6bf4b6e2096b7b1"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtd_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtd_l.nii.gz",
+          "bytes": 56449,
+          "sha256": "192c3ab26498d342cc5f0f2574124315d20309a99e38323eb00081b97a1791b9"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtd_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtd_r.nii.gz",
+          "bytes": 56920,
+          "sha256": "ec3683be8047e264b802522d1f6e8d674347d8848d24392b31eeee6263e57474"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtd_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtd_r.nii.gz",
+          "bytes": 56464,
+          "sha256": "95c842c5d1b3fcb59c76c73c17f65e3275ef7dd7dcdd1a0fdd371a7b712c2f5c"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtl_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtl_l.nii.gz",
+          "bytes": 56469,
+          "sha256": "8ecc668f2f80120cd1fb24e36afa3cefc4747ac39f6f6bc18446835776cecf4a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtl_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtl_l.nii.gz",
+          "bytes": 56343,
+          "sha256": "4040061589e9dbd62b00082b76814220477eabec1956b65bb40201517ddaff21"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtl_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/mRtl_r.nii.gz",
+          "bytes": 56492,
+          "sha256": "46a042dfc2fc8ab8eb288d6938e7a7093050e8cb1f06554f70ec148e75e9ffa3"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtl_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/mRtl_r.nii.gz",
+          "bytes": 56358,
+          "sha256": "a7983ad0e83bb6aedb9ce2c5408196460da06e65e1b02b58d9e3ca93ecdfa5f5"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PCRtA_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PCRtA_l.nii.gz",
+          "bytes": 57495,
+          "sha256": "476fae199b170f83afa84cd853e2e492b18e41209d42fdc5dfbfabffc6192386"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PCRtA_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PCRtA_l.nii.gz",
+          "bytes": 56352,
+          "sha256": "11b7cd23cb7460c000edae87e6bf6553ee6ab01bace50022bac45076b831d159"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PCRtA_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PCRtA_r.nii.gz",
+          "bytes": 57621,
+          "sha256": "3bfa85f648c577b9735d618912356864426ea125eec35cb7217ddd1d682e631a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PCRtA_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PCRtA_r.nii.gz",
+          "bytes": 56357,
+          "sha256": "9f81f11385b12c2f9a9369742aeb2fe53e188bde04477a1291a442508412d0df"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PMnR.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PMnR.nii.gz",
+          "bytes": 56755,
+          "sha256": "cbf8962bc1811eecc70d6f88912809eaf4e26631937e95c02b4c940baa9af1af"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PMnR.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PMnR.nii.gz",
+          "bytes": 56400,
+          "sha256": "2e41e8322240d1bf403dc1710d17e5b7dfcf5757aacfe20d082c21426c166b06"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PnO_PnC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PnO_PnC_l.nii.gz",
+          "bytes": 62660,
+          "sha256": "7fa37efca5b1cba3543e4dc780a493ce12db4ba305184f5cddbf4189ac6f09e8"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PnO_PnC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PnO_PnC_l.nii.gz",
+          "bytes": 56613,
+          "sha256": "8631e38af87207cf928c9b08a449c7947721fb80d279ae27a8119450b4bcc9fa"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PnO_PnC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PnO_PnC_r.nii.gz",
+          "bytes": 62947,
+          "sha256": "41c6bd10937b608e7424f9ecb941a99b8bde01722e8f403bedc71b91b3c00bbf"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PnO_PnC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PnO_PnC_r.nii.gz",
+          "bytes": 56625,
+          "sha256": "d8ffa0a765248d8ab738bfce724d335523d38b51eb09839642b86b9f4ba44df8"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PTg_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PTg_l.nii.gz",
+          "bytes": 56588,
+          "sha256": "20509195f19a3b996921bfced470fa8826f5b7e8c1ceb766d598eefe0869e8d3"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PTg_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PTg_l.nii.gz",
+          "bytes": 56359,
+          "sha256": "4fbc3c9c5b9587f80d186982b51d8d5f25917580eb1a09fff64cda83e60a8d45"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PTg_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/PTg_r.nii.gz",
+          "bytes": 56574,
+          "sha256": "e6ef1ec317165bfb3d137c6445590ad05e2e4155d0499c862235491149e81833"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PTg_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/PTg_r.nii.gz",
+          "bytes": 56341,
+          "sha256": "6d95dc721b3ae684d32ae26bf1c7d66a624a7afd6fc5ba186e940c7af776dfac"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RMg.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RMg.nii.gz",
+          "bytes": 56588,
+          "sha256": "c41006d36ad06b3b29b1ef7c4d1ede4a934c3cf871d70d8fe404eda2475c1e06"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RMg.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RMg.nii.gz",
+          "bytes": 56329,
+          "sha256": "3a8ff8065016ba08eb4f7b90821bc0f33c0806c5acb1b9c4550699072611617f"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN1_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN1_l.nii.gz",
+          "bytes": 57389,
+          "sha256": "ef5caaf2aa034f4fa1f0794fc4f40568ff7d4152c0d8c81edc8a8eaea4a1f0bc"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN1_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN1_l.nii.gz",
+          "bytes": 56498,
+          "sha256": "5375bea0d8cf8d33fa530cadf4f52caa6b193955e780642bd191a233199c324f"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN1_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN1_r.nii.gz",
+          "bytes": 57285,
+          "sha256": "54d94fcb3ee405f2ca309332e9d8844d0f2627a021d19065fbcd5d291fe944cd"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN1_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN1_r.nii.gz",
+          "bytes": 56468,
+          "sha256": "865fd52481d231bdc232390c2bad06a9eab892e34e26e20cd071a6468d699562"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN2_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN2_l.nii.gz",
+          "bytes": 57468,
+          "sha256": "5f8d468eab87d5774dc4fc7cd242caff0a2b094e0caf10f1045dc6b5964c07f8"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN2_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN2_l.nii.gz",
+          "bytes": 56540,
+          "sha256": "f2561a89e673fc058f6dbc8ef42035c63ef7b23579b4caab8c533ed0ecb4249c"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN2_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RN2_r.nii.gz",
+          "bytes": 57241,
+          "sha256": "4cd6e1fb73b57feb260662ad9da18c008475b6f1bd5cc48de146f77c81a2ba89"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN2_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RN2_r.nii.gz",
+          "bytes": 56486,
+          "sha256": "13bd4ce8464115ddfcd4245126c656ecb37022f7d0ca494b0956dcd2be266f83"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ROb.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/ROb.nii.gz",
+          "bytes": 57716,
+          "sha256": "0bee444af3bb9f2f99ca64f668abe224cbe685ffd4c1a7d873426892d4f2ec18"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ROb.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/ROb.nii.gz",
+          "bytes": 56362,
+          "sha256": "c1a10c6f906fc6b650793d3905e6710cc845140139949c5ee9ba03d7e01f2fae"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RPa.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/RPa.nii.gz",
+          "bytes": 59887,
+          "sha256": "20c49dfcb5f43ead0c18f9e72bef17dd426e45416ea231e3e1c46ff995320bd4"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RPa.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/RPa.nii.gz",
+          "bytes": 56510,
+          "sha256": "8b3b435d422bf9dd4a66fb54e62a9919966b358b642ba63418279f9cd18504e9"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRt_l.nii.gz",
+          "bytes": 58697,
+          "sha256": "f2056844508b373f1de891125e28cd71ffa15760b0e4b9b6863874e7c9ff31cb"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRt_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRt_l.nii.gz",
+          "bytes": 56415,
+          "sha256": "b770aa2195014525f33b6923224104fe8669f88d760bd74b03ee967a4693f56f"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRt_r.nii.gz",
+          "bytes": 58372,
+          "sha256": "174209f2c4afff655dbc004429525db794b51b9e9c5c63b5a2b7b51446633d3b"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRt_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRt_r.nii.gz",
+          "bytes": 56411,
+          "sha256": "095d100e1103edfdb05a26c8fbc6af86dd33e1addc9e1cfc34e4b06320c00376"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtl_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtl_l.nii.gz",
+          "bytes": 58245,
+          "sha256": "10a3300ce610a0dac4525f07432442027e79c22846aacadc56774da768a15c60"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtl_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtl_l.nii.gz",
+          "bytes": 56387,
+          "sha256": "1b2754fe40a4697ff4f3c17e1f8943d0043e884650657662f34e0a2f5c6b5a5b"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtl_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtl_r.nii.gz",
+          "bytes": 58090,
+          "sha256": "3090b2d244113fb1d7138ea14fcbe276255e198177291dad9f37d57823464cec"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtl_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtl_r.nii.gz",
+          "bytes": 56398,
+          "sha256": "384004ee8c5a200780930ac4e125881cb301f7f60449824936679b7f286e5776"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtm_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtm_l.nii.gz",
+          "bytes": 57157,
+          "sha256": "4779c5168d5fd88f5dd7a782f9e13cd5a728ea4349838a2735fd65443adc9eec"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtm_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtm_l.nii.gz",
+          "bytes": 56335,
+          "sha256": "2eea784f9b83702268971cc2b3d2b48f3a05f56dc06801deadb2554c969ee80c"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtm_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/sMRtm_r.nii.gz",
+          "bytes": 56999,
+          "sha256": "c2636733e0b58119453319aa9c9ce5b226a93dff435d019d14d07eb499ad220e"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtm_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/sMRtm_r.nii.gz",
+          "bytes": 56331,
+          "sha256": "25d7e9248e0c9af03a6604bc08c09cd14a6b2b7a68ca16acc72202530fd3711c"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN1_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN1_l.nii.gz",
+          "bytes": 58891,
+          "sha256": "d03dcffc8a6b1912dad23c8a0231ba42d1de56d7231b9f01eac3bf051c1e6dc1"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN1_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN1_l.nii.gz",
+          "bytes": 56802,
+          "sha256": "b7465e4c2f9775167d4954fc8b7f4b35db16b99500f741cc7445fbfc535826cc"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN1_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN1_r.nii.gz",
+          "bytes": 58689,
+          "sha256": "9d8d59bdfd8889d26732c3235e5459170779c8ea8e17229fbd493ae3d3b236ef"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN1_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN1_r.nii.gz",
+          "bytes": 56793,
+          "sha256": "82c813c01059fae73fe527ba4ec1e8120f294a1ee21bd14d22bf5a1481be8415"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN2_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN2_l.nii.gz",
+          "bytes": 58758,
+          "sha256": "1f1838d3b95bacf47a41543dac3cbc8cd7d92c92dc08e97fb92558d97113c243"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN2_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN2_l.nii.gz",
+          "bytes": 56803,
+          "sha256": "4d6f95169da5576fe586bfe947c21727abc0d7b2f8ee380f81fd6a4beea1fb23"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN2_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SN2_r.nii.gz",
+          "bytes": 58654,
+          "sha256": "926da13fa6de9b206393da9e44dcd77b52bc7c031506115e233b250a9598e271"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN2_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SN2_r.nii.gz",
+          "bytes": 56625,
+          "sha256": "ae5addeda49e22e5338d848672f45973d9023fd10b18c1e7a28f989cc1f5a59a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SOC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SOC_l.nii.gz",
+          "bytes": 57479,
+          "sha256": "c5bfc610bbe1d3c635020686126dba6bb3567979071586a9efaa226bb447b9f2"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SOC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SOC_l.nii.gz",
+          "bytes": 56329,
+          "sha256": "865887fa55e940e96496a071e6a9fbaafd5435e6dcfcc2b71115cc635f065d45"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SOC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SOC_r.nii.gz",
+          "bytes": 57241,
+          "sha256": "61f1fae02bbd2149abf7be6879e135fb97c3d525728fd5b2f2a4b99bab3346e1"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SOC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SOC_r.nii.gz",
+          "bytes": 56333,
+          "sha256": "fc355f51baa12f592e03d1ebe12a56fb81f4aef798ea2264c75e8b9075b379c3"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SubC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SubC_l.nii.gz",
+          "bytes": 58492,
+          "sha256": "bde319ba45d52416e9e4963f37d0cd376e3f90e7bba6487bf493ee3f3c05dc74"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SubC_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SubC_l.nii.gz",
+          "bytes": 56416,
+          "sha256": "d068477cde0c6a8b8e60a48546dbbc9db7909237307392c971e5651bbc2ddfe2"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SubC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/SubC_r.nii.gz",
+          "bytes": 58450,
+          "sha256": "c5d188fb445a8966fad1e4b785ecda0fb10410b1f4ea84405efa8896404e2750"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SubC_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/SubC_r.nii.gz",
+          "bytes": 56415,
+          "sha256": "1175ffba93e3eea389f9480edd715e7ba5ce5fc76723473aa1871e413db01250"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/Ve_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/Ve_l.nii.gz",
+          "bytes": 57043,
+          "sha256": "159bf9e210a9463616ae87abffe0810f7a8addb56e123e0c7663131fcb34c2fe"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/Ve_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/Ve_l.nii.gz",
+          "bytes": 56573,
+          "sha256": "e021f3fdc058a110cc6b5594462aa417f84111fb231f0eeacb8ade9c333a33af"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/Ve_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/Ve_r.nii.gz",
+          "bytes": 56935,
+          "sha256": "293c99b60a7634dce236aa13867adf9dffebde1eba61038149c68654c5c32dde"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/Ve_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/Ve_r.nii.gz",
+          "bytes": 56557,
+          "sha256": "978975244dfc91963119faadd5a7b932afffb863c50e89f690222375bdc1097e"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VSM_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VSM_l.nii.gz",
+          "bytes": 56848,
+          "sha256": "95759574e40b5b3db88b3b9cb5e5f11e6b5bc3872ce70bc301b2fa2781cdc008"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VSM_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VSM_l.nii.gz",
+          "bytes": 56493,
+          "sha256": "90fa50dc5c114dcef8957d21de3b7c573116840cfa68f3ea91459a28813aff79"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VSM_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VSM_r.nii.gz",
+          "bytes": 56823,
+          "sha256": "c92f2775abc8633d6100dd84eddea763a9ad384d50fdf38720d173765787fdfe"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VSM_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VSM_r.nii.gz",
+          "bytes": 56466,
+          "sha256": "d954ff16aafb492070a1932a8c1d92bd1bbb9e60fcf8386b79b335b30720a57b"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VTA_PBP_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VTA_PBP_l.nii.gz",
+          "bytes": 57503,
+          "sha256": "8efd61e7880b83264716bc55a2903d5a38b812680bcb32dec3baf62ab8a35203"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VTA_PBP_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VTA_PBP_l.nii.gz",
+          "bytes": 56713,
+          "sha256": "f80f12fb4fd578d7ec4a760379b7bfba48b8b50484971d65c97501e2e49d59ce"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VTA_PBP_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/VTA_PBP_r.nii.gz",
+          "bytes": 57530,
+          "sha256": "70d5458ef0cab799dae26d58772571e7de6e419d4b375d848132dea9e5f58644"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VTA_PBP_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/VTA_PBP_r.nii.gz",
+          "bytes": 56695,
+          "sha256": "b2170e86afdb395b4c18d71cf1198a611d74644a31916956a0af51870f4b787d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/LG_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/LG_l.nii.gz",
+          "bytes": 61424,
+          "sha256": "8a6d1df748f0e90f33d737ff3128a13253e3d57086dfaf27fe90eef52d8059ac"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/LG_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/LG_l.nii.gz",
+          "bytes": 56429,
+          "sha256": "563b4e83e0159abe1626cce7a7be6bdb3d47df99b80fd441bc88a18c924fc721"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/LG_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/LG_r.nii.gz",
+          "bytes": 61261,
+          "sha256": "772436b37cd90ea74efc9ab5d7a5ec2a9aa605307032ae017c8d404b1e349e0d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/LG_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/LG_r.nii.gz",
+          "bytes": 56430,
+          "sha256": "e787ec37051e76aa33de87b8c93d276dfed5fbb48f51555eccafcd057d662b50"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/MG_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/MG_l.nii.gz",
+          "bytes": 59584,
+          "sha256": "d85c5a059ac8acf1a8421d958a52a73025e6941836bfae227f1a2ad7669e7b56"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/MG_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/MG_l.nii.gz",
+          "bytes": 56388,
+          "sha256": "daa0b1ce7d8bc2da9efc31608337f1cddd2476f09e4fe3328409bbe503615b94"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/MG_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/MG_r.nii.gz",
+          "bytes": 59158,
+          "sha256": "75fe41473e70d53e14d1000a76a0cf2a04bc22582f92283f0aa0b8df3de33660"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/MG_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/MG_r.nii.gz",
+          "bytes": 56365,
+          "sha256": "25f972dd6a1522a747eba28c1f8e4082bdc33b4e90c3c212c6d5a66d1b25634a"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh_l.nii.gz",
+          "bytes": 57823,
+          "sha256": "34064891bced108079d74380a425c73495df52f22ae40088050fc2c38fed4898"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh_l.nii.gz",
+          "bytes": 56589,
+          "sha256": "e4577637c4de182dc8f957a6368c21192e6f11813572dd29e22392a96756615e"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh_r.nii.gz",
+          "bytes": 57660,
+          "sha256": "52df251c2ffdacf1e35ccf10ac7887ffc59f431b3fd47e88ea28922bb4db7f59"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh_r.nii.gz",
+          "bytes": 56573,
+          "sha256": "c8dc2539a7edb7333e9e6076e45bbf6ffba5e2299090d42f9b49a4a84d5b4b4c"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh1_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh1_l.nii.gz",
+          "bytes": 57628,
+          "sha256": "1563770b394afd6b059ffea520e0db3a4aa286b97188091fe7f1cfff296369fa"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh1_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh1_l.nii.gz",
+          "bytes": 56508,
+          "sha256": "eb0cea9fbd3175d6a3b03497949a6369b2ac209cf6750276d68dc227ee760ac5"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh1_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh1_r.nii.gz",
+          "bytes": 57386,
+          "sha256": "bb79e46da26f8373083868a5032cd928252a87ed99c55483df381d5af8faa991"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh1_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh1_r.nii.gz",
+          "bytes": 56486,
+          "sha256": "9a8050ed45a473766c750e931922241fac14967d0750cd5a573283a497064bf5"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh2_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh2_l.nii.gz",
+          "bytes": 57255,
+          "sha256": "d24475ab7adcbab3021cdecfa2d70564f7e12a40a8868057bea9cdbfc646bd1e"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh2_l.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh2_l.nii.gz",
+          "bytes": 56502,
+          "sha256": "685e93a3df8641c9842c1568462b64812379898f5f644b7771a224bb94534f79"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh2_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/STh2_r.nii.gz",
+          "bytes": 57345,
+          "sha256": "7e29bb4d7f54d73499c153cf313517ba2021fbb6c274f3b43e7414f25a71dd9d"
+        },
+        {
+          "member": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh2_r.nii.gz",
+          "target": "raw/brainstem_navigator/BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/STh2_r.nii.gz",
+          "bytes": 56460,
+          "sha256": "08ddd66ace132622e5bd9bbce405938c5b9e4962099eb07b635d0485e3bf5561"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [],
+  "minimum_software_version": "0.10.0",
+  "scope_notes": [
+    "All 76 delivered MNI brainstem fields and all 10 delivered MNI diencephalic fields are retained as independent source probabilities and masks.",
+    "The paired BIlab images have partial brain coverage. No other-space registration or missing image detail is synthesized.",
+    "Only normal-source atlas fields are imported. Clinical-cohort images and disease connectivity results in cited application studies are outside scope."
+  ]
+}

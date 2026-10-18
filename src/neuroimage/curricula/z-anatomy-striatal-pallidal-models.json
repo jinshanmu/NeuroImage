@@ -1,0 +1,376 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-striatal-pallidal-models",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Z-Anatomy \u00b7 Striatal, pallidal and lentiform models",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "object-01",
+      "title": "Left Caudate nucleus",
+      "selected": "z_anatomy:object:9ab895edfb89",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Caudate nucleus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:ab926d0f590a": 0.45,
+          "z_anatomy:object:01fa6f25ca97": 0.45,
+          "z_anatomy:object:faa85c189757": 0.45,
+          "z_anatomy:object:744a77e9eeca": 0.45,
+          "z_anatomy:object:d080c02202b9": 0.45,
+          "z_anatomy:object:55ae0f69aebf": 0.45,
+          "z_anatomy:object:e8405d2b5a94": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-02",
+      "title": "Right Caudate nucleus",
+      "selected": "z_anatomy:object:ab926d0f590a",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Caudate nucleus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:9ab895edfb89": 0.45,
+          "z_anatomy:object:01fa6f25ca97": 0.45,
+          "z_anatomy:object:faa85c189757": 0.45,
+          "z_anatomy:object:744a77e9eeca": 0.45,
+          "z_anatomy:object:d080c02202b9": 0.45,
+          "z_anatomy:object:55ae0f69aebf": 0.45,
+          "z_anatomy:object:e8405d2b5a94": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-03",
+      "title": "Left Putamen",
+      "selected": "z_anatomy:object:01fa6f25ca97",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Putamen.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The source supplies a combined lentiform object and separate pallidal and putaminal objects. Overlap reflects source hierarchy; these are not three independent tissue compartments.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:9ab895edfb89": 0.45,
+          "z_anatomy:object:ab926d0f590a": 0.45,
+          "z_anatomy:object:faa85c189757": 0.45,
+          "z_anatomy:object:744a77e9eeca": 0.45,
+          "z_anatomy:object:d080c02202b9": 0.45,
+          "z_anatomy:object:55ae0f69aebf": 0.45,
+          "z_anatomy:object:e8405d2b5a94": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-04",
+      "title": "Right Putamen",
+      "selected": "z_anatomy:object:faa85c189757",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Putamen.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The source supplies a combined lentiform object and separate pallidal and putaminal objects. Overlap reflects source hierarchy; these are not three independent tissue compartments.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:9ab895edfb89": 0.45,
+          "z_anatomy:object:ab926d0f590a": 0.45,
+          "z_anatomy:object:01fa6f25ca97": 0.45,
+          "z_anatomy:object:744a77e9eeca": 0.45,
+          "z_anatomy:object:d080c02202b9": 0.45,
+          "z_anatomy:object:55ae0f69aebf": 0.45,
+          "z_anatomy:object:e8405d2b5a94": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-05",
+      "title": "Left Globus pallidus",
+      "selected": "z_anatomy:object:744a77e9eeca",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Globus pallidus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The source supplies a combined lentiform object and separate pallidal and putaminal objects. Overlap reflects source hierarchy; these are not three independent tissue compartments.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:9ab895edfb89": 0.45,
+          "z_anatomy:object:ab926d0f590a": 0.45,
+          "z_anatomy:object:01fa6f25ca97": 0.45,
+          "z_anatomy:object:faa85c189757": 0.45,
+          "z_anatomy:object:d080c02202b9": 0.45,
+          "z_anatomy:object:55ae0f69aebf": 0.45,
+          "z_anatomy:object:e8405d2b5a94": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-06",
+      "title": "Right Globus pallidus",
+      "selected": "z_anatomy:object:d080c02202b9",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Globus pallidus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The source supplies a combined lentiform object and separate pallidal and putaminal objects. Overlap reflects source hierarchy; these are not three independent tissue compartments.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:9ab895edfb89": 0.45,
+          "z_anatomy:object:ab926d0f590a": 0.45,
+          "z_anatomy:object:01fa6f25ca97": 0.45,
+          "z_anatomy:object:faa85c189757": 0.45,
+          "z_anatomy:object:744a77e9eeca": 0.45,
+          "z_anatomy:object:55ae0f69aebf": 0.45,
+          "z_anatomy:object:e8405d2b5a94": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-07",
+      "title": "Left Lentiform nucleus",
+      "selected": "z_anatomy:object:55ae0f69aebf",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Lentiform nucleus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The source supplies a combined lentiform object and separate pallidal and putaminal objects. Overlap reflects source hierarchy; these are not three independent tissue compartments.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:9ab895edfb89": 0.45,
+          "z_anatomy:object:ab926d0f590a": 0.45,
+          "z_anatomy:object:01fa6f25ca97": 0.45,
+          "z_anatomy:object:faa85c189757": 0.45,
+          "z_anatomy:object:744a77e9eeca": 0.45,
+          "z_anatomy:object:d080c02202b9": 0.45,
+          "z_anatomy:object:e8405d2b5a94": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-08",
+      "title": "Right Lentiform nucleus",
+      "selected": "z_anatomy:object:e8405d2b5a94",
+      "visible": [
+        "z_anatomy:object:9ab895edfb89",
+        "z_anatomy:object:ab926d0f590a",
+        "z_anatomy:object:01fa6f25ca97",
+        "z_anatomy:object:faa85c189757",
+        "z_anatomy:object:744a77e9eeca",
+        "z_anatomy:object:d080c02202b9",
+        "z_anatomy:object:55ae0f69aebf",
+        "z_anatomy:object:e8405d2b5a94",
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae"
+      ],
+      "prompt": "Compare the caudate, separate putaminal and pallidal objects, and the combined lentiform source object. Use transparency to distinguish source grouping from independent tissue classes.",
+      "note": "Original source object: Lentiform nucleus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The source supplies a combined lentiform object and separate pallidal and putaminal objects. Overlap reflects source hierarchy; these are not three independent tissue compartments.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:9ab895edfb89": 0.45,
+          "z_anatomy:object:ab926d0f590a": 0.45,
+          "z_anatomy:object:01fa6f25ca97": 0.45,
+          "z_anatomy:object:faa85c189757": 0.45,
+          "z_anatomy:object:744a77e9eeca": 0.45,
+          "z_anatomy:object:d080c02202b9": 0.45,
+          "z_anatomy:object:55ae0f69aebf": 0.45,
+          "z_anatomy:object:0408b7fa277f": 0.18,
+          "z_anatomy:object:21857d534637": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "z-anatomy-cortical-temporal-parietal",
+  "title": "Temporal, parietal and insular surface relationships",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore original frontal, central, temporal, parietal, insular, medial and basal cortical surface objects within their source-model hemispheres.",
+  "views": [
+    {
+      "id": "temporal-parietal-object-01",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-01"
+    },
+    {
+      "id": "temporal-parietal-object-02",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-02"
+    },
+    {
+      "id": "temporal-parietal-object-03",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-03"
+    },
+    {
+      "id": "temporal-parietal-object-04",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-04"
+    },
+    {
+      "id": "temporal-parietal-object-05",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-05"
+    },
+    {
+      "id": "temporal-parietal-object-06",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-06"
+    },
+    {
+      "id": "temporal-parietal-object-07",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-07"
+    },
+    {
+      "id": "temporal-parietal-object-08",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-08"
+    },
+    {
+      "id": "temporal-parietal-object-09",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-09"
+    },
+    {
+      "id": "temporal-parietal-object-10",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-10"
+    },
+    {
+      "id": "temporal-parietal-object-11",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-11"
+    },
+    {
+      "id": "temporal-parietal-object-12",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-12"
+    },
+    {
+      "id": "temporal-parietal-object-13",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-13"
+    },
+    {
+      "id": "temporal-parietal-object-14",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-14"
+    },
+    {
+      "id": "temporal-parietal-object-15",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-15"
+    },
+    {
+      "id": "temporal-parietal-object-16",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-16"
+    },
+    {
+      "id": "temporal-parietal-object-17",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-17"
+    },
+    {
+      "id": "temporal-parietal-object-18",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-18"
+    },
+    {
+      "id": "temporal-parietal-object-19",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-19"
+    },
+    {
+      "id": "temporal-parietal-object-20",
+      "curriculum": "z-anatomy-cortical-temporal-parietal",
+      "view": "object-20"
+    }
+  ]
+}

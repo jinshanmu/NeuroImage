@@ -1,0 +1,408 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-limbic-deep-models",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Z-Anatomy \u00b7 Hippocampal, amygdalar and basal forebrain context",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "object-01",
+      "title": "Left Hippocampus",
+      "selected": "z_anatomy:object:0dd6c3900f43",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Hippocampus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:a903410ed86b": 0.45,
+          "z_anatomy:object:c2d8d8568ddb": 0.45,
+          "z_anatomy:object:2515a07e77c0": 0.45,
+          "z_anatomy:object:0d979b31cbbf": 0.45,
+          "z_anatomy:object:d8097f69ae95": 0.45,
+          "z_anatomy:object:aa622be5b7df": 0.45,
+          "z_anatomy:object:c4bb54905ccf": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-02",
+      "title": "Right Hippocampus",
+      "selected": "z_anatomy:object:a903410ed86b",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Hippocampus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0dd6c3900f43": 0.45,
+          "z_anatomy:object:c2d8d8568ddb": 0.45,
+          "z_anatomy:object:2515a07e77c0": 0.45,
+          "z_anatomy:object:0d979b31cbbf": 0.45,
+          "z_anatomy:object:d8097f69ae95": 0.45,
+          "z_anatomy:object:aa622be5b7df": 0.45,
+          "z_anatomy:object:c4bb54905ccf": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-03",
+      "title": "Left Amygdaloid body",
+      "selected": "z_anatomy:object:c2d8d8568ddb",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Amygdaloid body.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0dd6c3900f43": 0.45,
+          "z_anatomy:object:a903410ed86b": 0.45,
+          "z_anatomy:object:2515a07e77c0": 0.45,
+          "z_anatomy:object:0d979b31cbbf": 0.45,
+          "z_anatomy:object:d8097f69ae95": 0.45,
+          "z_anatomy:object:aa622be5b7df": 0.45,
+          "z_anatomy:object:c4bb54905ccf": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-04",
+      "title": "Right Amygdaloid body",
+      "selected": "z_anatomy:object:2515a07e77c0",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Amygdaloid body.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0dd6c3900f43": 0.45,
+          "z_anatomy:object:a903410ed86b": 0.45,
+          "z_anatomy:object:c2d8d8568ddb": 0.45,
+          "z_anatomy:object:0d979b31cbbf": 0.45,
+          "z_anatomy:object:d8097f69ae95": 0.45,
+          "z_anatomy:object:aa622be5b7df": 0.45,
+          "z_anatomy:object:c4bb54905ccf": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-05",
+      "title": "Left Mammillary body",
+      "selected": "z_anatomy:object:0d979b31cbbf",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Mamillary body.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The display name normalizes the source spelling 'Mamillary'; the original object name is retained unchanged.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0dd6c3900f43": 0.45,
+          "z_anatomy:object:a903410ed86b": 0.45,
+          "z_anatomy:object:c2d8d8568ddb": 0.45,
+          "z_anatomy:object:2515a07e77c0": 0.45,
+          "z_anatomy:object:d8097f69ae95": 0.45,
+          "z_anatomy:object:aa622be5b7df": 0.45,
+          "z_anatomy:object:c4bb54905ccf": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-06",
+      "title": "Right Mammillary body",
+      "selected": "z_anatomy:object:d8097f69ae95",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Mamillary body.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The display name normalizes the source spelling 'Mamillary'; the original object name is retained unchanged.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0dd6c3900f43": 0.45,
+          "z_anatomy:object:a903410ed86b": 0.45,
+          "z_anatomy:object:c2d8d8568ddb": 0.45,
+          "z_anatomy:object:2515a07e77c0": 0.45,
+          "z_anatomy:object:0d979b31cbbf": 0.45,
+          "z_anatomy:object:aa622be5b7df": 0.45,
+          "z_anatomy:object:c4bb54905ccf": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-07",
+      "title": "Septal nuclei",
+      "selected": "z_anatomy:object:aa622be5b7df",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Septal nuclei. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0dd6c3900f43": 0.45,
+          "z_anatomy:object:a903410ed86b": 0.45,
+          "z_anatomy:object:c2d8d8568ddb": 0.45,
+          "z_anatomy:object:2515a07e77c0": 0.45,
+          "z_anatomy:object:0d979b31cbbf": 0.45,
+          "z_anatomy:object:d8097f69ae95": 0.45,
+          "z_anatomy:object:c4bb54905ccf": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-08",
+      "title": "Septum pellucidum",
+      "selected": "z_anatomy:object:c4bb54905ccf",
+      "visible": [
+        "z_anatomy:object:0dd6c3900f43",
+        "z_anatomy:object:a903410ed86b",
+        "z_anatomy:object:c2d8d8568ddb",
+        "z_anatomy:object:2515a07e77c0",
+        "z_anatomy:object:0d979b31cbbf",
+        "z_anatomy:object:d8097f69ae95",
+        "z_anatomy:object:aa622be5b7df",
+        "z_anatomy:object:c4bb54905ccf",
+        "z_anatomy:object:548365915e2d",
+        "z_anatomy:object:a34901b5f215",
+        "z_anatomy:object:36a3f1ce4c80",
+        "z_anatomy:object:50344d95c1ae",
+        "z_anatomy:object:a9236e040eba",
+        "z_anatomy:object:95ee49ea7637"
+      ],
+      "prompt": "Follow the hippocampal, amygdalar, mammillary and septal source objects. Compare their modeled arrangement with ventricular and forniceal context; proximity does not establish a connection.",
+      "note": "Original source object: Septum pellucidum. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0dd6c3900f43": 0.45,
+          "z_anatomy:object:a903410ed86b": 0.45,
+          "z_anatomy:object:c2d8d8568ddb": 0.45,
+          "z_anatomy:object:2515a07e77c0": 0.45,
+          "z_anatomy:object:0d979b31cbbf": 0.45,
+          "z_anatomy:object:d8097f69ae95": 0.45,
+          "z_anatomy:object:aa622be5b7df": 0.45,
+          "z_anatomy:object:548365915e2d": 0.18,
+          "z_anatomy:object:a34901b5f215": 0.18,
+          "z_anatomy:object:36a3f1ce4c80": 0.18,
+          "z_anatomy:object:50344d95c1ae": 0.18,
+          "z_anatomy:object:a9236e040eba": 0.18,
+          "z_anatomy:object:95ee49ea7637": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "recorded_utc": "2026-10-14T13:08:16.392310+00:00",
+  "status": "passed",
+  "dataset_id": "z_anatomy",
+  "package_version": "ea4ae67d89ec388a",
+  "manifest": "derivatives/z_anatomy/ea4ae67d89ec388a/manifest.json",
+  "new_source_annotations": 9,
+  "views": 18,
+  "atlas_geometry": "Existing source geometry retained unchanged",
+  "source_objects": "Nine original two-vertex label lines with explicit Hook association to Sphenoid bone",
+  "maximum_independent_coordinate_difference_mm": 5.723162166759721e-05,
+  "notebook": "exports/z_anatomy/notebooks/z-anatomy-sellar-landmarks-58de71d91bdf/prepared-notebook.json",
+  "course": {
+    "status": "prepared",
+    "course_id": "6c2f21e2-5540-5ac4-a625-171d8e5e1027",
+    "course": "exports/courses/6c2f21e2-5540-5ac4-a625-171d8e5e1027/course.json",
+    "receipt": "exports/course-preparations/z-anatomy-sellar-landmarks/bc917951a9949296/preparation.json",
+    "views": 18,
+    "source_count": 1
+  },
+  "receipts": {
+    "source-selection.json": {
+      "path": "benchmarks/z_anatomy/sellar-landmarks-20261014/source-selection.json",
+      "sha256": "b7bc5857a9e61fe0fc0994a68b201026fa882328ba68b924ebd0dfc73b24a322"
+    },
+    "independent-points.json": {
+      "path": "benchmarks/z_anatomy/sellar-landmarks-20261014/independent-points.json",
+      "sha256": "42f08d967031503396e1acaa45e826ab01aa2538cbffedb3af55e1c61722571c"
+    },
+    "browser/acceptance.json": {
+      "path": "benchmarks/z_anatomy/sellar-landmarks-20261014/browser/acceptance.json",
+      "sha256": "b941d567b779aa43868d2fd560580b60052f2c9a854667fed7c2d0ec498495f9"
+    }
+  },
+  "source_annotation_coordinates_in_software_distribution": false,
+  "expert_review_in_engineering_denominator": false
+}

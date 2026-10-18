@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "thu-mra-normal-variation-observations",
+  "title": "Normal arterial variation: source observations across eight volunteers",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare anterior and posterior arterial courses in eight original healthy-volunteer MRA cases. Record observed image signal, source annotation coverage and unresolved interpretation separately. Each case retains its native author-processed coordinates. These selected examples are not a prevalence sample and do not establish named vascular variants.",
+  "views": [
+    {
+      "id": "009-group-01-context",
+      "curriculum": "thu-mra-case009-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "014-group-01-context",
+      "curriculum": "thu-mra-case014-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "001-group-01-context",
+      "curriculum": "thu-mra-case001-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "006-group-01-context",
+      "curriculum": "thu-mra-case006-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "010-group-01-context",
+      "curriculum": "thu-mra-case010-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "021-group-01-context",
+      "curriculum": "thu-mra-case021-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "030-group-01-context",
+      "curriculum": "thu-mra-case030-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "007-group-01-context",
+      "curriculum": "thu-mra-case007-arterial-observation",
+      "view": "group-01-context"
+    },
+    {
+      "id": "009-group-03-context",
+      "curriculum": "thu-mra-case009-arterial-observation",
+      "view": "group-03-context"
+    },
+    {
+      "id": "014-group-03-context",
+      "curriculum": "thu-mra-case014-arterial-observation",
+      "view": "group-03-context"
+    },
+    {
+      "id": "001-group-03-context",
+      "curriculum": "thu-mra-case001-arterial-observation",
+      "view": "group-03-context"
+    },
+    {
+      "id": "006-group-03-context",
+      "curriculum": "thu-mra-case006-arterial-observation",
+      "view": "group-03-context"
+    },
+    {
+      "id": "010-group-03-context",
+      "curriculum": "thu-mra-case010-arterial-observation",
+      "view": "group-03-context"
+    },
+    {
+      "id": "021-group-03-context",
+      "curriculum": "thu-mra-case021-arterial-observation",
+      "view": "group-03-context"
+    },
+    {
+      "id": "030-group-03-context",
+      "curriculum": "thu-mra-case030-arterial-observation",
+      "view": "group-03-context"
+    },
+    {
+      "id": "007-group-03-context",
+      "curriculum": "thu-mra-case007-arterial-observation",
+      "view": "group-03-context"
+    }
+  ]
+}

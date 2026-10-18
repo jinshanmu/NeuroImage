@@ -1,0 +1,190 @@
+{
+  "recorded_utc": "2026-10-15T13:06:23.722038+00:00",
+  "status": "source_geometry_teaching_and_browser_validated",
+  "source_version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc",
+  "source_sha256": "9f08a17ea0115fed80b2a73ecdf0a1bc2ab2f6956f37c593ce23d513ea35afcd",
+  "inventory_sha256": "87ef11d494418ff0a0fb2122ae1715edbb98cd6f94b7748728c71999ce4a9715",
+  "previous_objects": 213,
+  "added_objects": 73,
+  "total_objects": 286,
+  "selection_basis": "Explicit original intracranial object names with nonempty source surfaces. Spinal objects, empty locator objects and inferred partitions excluded.",
+  "groups": [
+    {
+      "category": "Cranial nerve nuclear models",
+      "count": 28,
+      "source_names": [
+        "Accessory nucleus of oculomotor nerve.l",
+        "Accessory nucleus of oculomotor nerve.r",
+        "Nucleus of oculomotor nerve.l",
+        "Nucleus of oculomotor nerve.r",
+        "Nucleus of trochlear nerve.l",
+        "Nucleus of trochlear nerve.r",
+        "Nucleus of abducens nerve.l",
+        "Nucleus of abducens nerve.r",
+        "Motor nucleus of facial nerve.l",
+        "Motor nucleus of facial nerve.r",
+        "Superior salivatory nucleus.l",
+        "Superior salivatory nucleus.r",
+        "Inferior salivatory nucleus.l",
+        "Inferior salivatory nucleus.r",
+        "Anterior cochlear nucleus.l",
+        "Anterior cochlear nucleus.r",
+        "Posterior cochlear nucleus.l",
+        "Posterior cochlear nucleus.r",
+        "Vestibular nuclei.l",
+        "Vestibular nuclei.r",
+        "Nucleus ambiguus.l",
+        "Nucleus ambiguus.r",
+        "Nucleus of hypoglossal nerve.l",
+        "Nucleus of hypoglossal nerve.r",
+        "Nucleus of solitary tract.l",
+        "Nucleus of solitary tract.r",
+        "Posterior nucleus of vagus nerve.l",
+        "Posterior nucleus of vagus nerve.r"
+      ]
+    },
+    {
+      "category": "Deep nuclear model context",
+      "count": 17,
+      "source_names": [
+        "Caudate nucleus.l",
+        "Caudate nucleus.r",
+        "Putamen.l",
+        "Putamen.r",
+        "Globus pallidus.l",
+        "Globus pallidus.r",
+        "Lentiform nucleus.l",
+        "Lentiform nucleus.r",
+        "Thalamus.l",
+        "Thalamus.r",
+        "Red nucleus.l",
+        "Red nucleus.r",
+        "Medial geniculate body.l",
+        "Medial geniculate body.r",
+        "Habenula",
+        "Hypothalamus",
+        "Septal nuclei"
+      ]
+    },
+    {
+      "category": "Limbic model structures",
+      "count": 6,
+      "source_names": [
+        "Amygdaloid body.l",
+        "Amygdaloid body.r",
+        "Hippocampus.l",
+        "Hippocampus.r",
+        "Mamillary body.l",
+        "Mamillary body.r"
+      ]
+    },
+    {
+      "category": "Commissural and limbic pathway models",
+      "count": 9,
+      "source_names": [
+        "Fornix.l",
+        "Fornix.r",
+        "Stria terminalis.l",
+        "Stria terminalis.r",
+        "Stria medullaris thalami.l",
+        "Stria medullaris thalami.r",
+        "Anterior commissure",
+        "Posterior commissure",
+        "Hippocampal commissure"
+      ]
+    },
+    {
+      "category": "Brainstem surface landmarks",
+      "count": 10,
+      "source_names": [
+        "Inferior colliculus.l",
+        "Inferior colliculus.r",
+        "Superior colliculus.l",
+        "Superior colliculus.r",
+        "Olive.l",
+        "Olive.r",
+        "Pyramid of medulla oblongata.l",
+        "Pyramid of medulla oblongata.r",
+        "Interpeduncular fossa.l",
+        "Interpeduncular fossa.r"
+      ]
+    },
+    {
+      "category": "Ventricular model context",
+      "count": 1,
+      "source_names": [
+        "Septum pellucidum"
+      ]
+    },
+    {
+      "category": "Sellar model context",
+      "count": 2,
+      "source_names": [
+        "Adenohypophysis",
+        "Neurohypophysis"
+      ]
+    }
+  ],
+  "curricula": [
+    {
+      "id": "z-anatomy-ocular-motor-nuclei",
+      "views": 8,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-ocular-motor-nuclei-b3bf4944def2/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-facial-auditory-vestibular-nuclei",
+      "views": 10,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-facial-auditory-vestibular-nuclei-2642a0a3ecac/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-medullary-cranial-nuclei",
+      "views": 10,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-medullary-cranial-nuclei-8bc3bd728092/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-striatal-pallidal-models",
+      "views": 8,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-striatal-pallidal-models-c76df58866c7/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-thalamic-midbrain-models",
+      "views": 8,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-thalamic-midbrain-models-b14742288d7c/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-limbic-deep-models",
+      "views": 8,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-limbic-deep-models-b3e0493aeff1/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-commissural-limbic-models",
+      "views": 9,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-commissural-limbic-models-fb85038dd30b/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-sellar-model-context",
+      "views": 2,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-sellar-model-context-c77add56cd09/prepared-notebook.json"
+    },
+    {
+      "id": "z-anatomy-brainstem-surface-landmarks",
+      "views": 10,
+      "notebook": "exports/z_anatomy/notebooks/z-anatomy-brainstem-surface-landmarks-a3e7f5adaf7d/prepared-notebook.json"
+    }
+  ],
+  "review_status": "draft_not_expert_reviewed",
+  "top_level_anatomy_groups": "unchanged",
+  "package_version": "89a81be4cf511f19",
+  "manifest_sha256": "4815515cc07e79a43c8c9e7f2fba490cb8f9c83e1f160ff9890c6d3be0f6dbf4",
+  "validated_utc": "2026-10-15T13:08:11.489500+00:00",
+  "source_geometry_verification": "All 286 delivered surfaces match retained original author viewport vertices and topology; all target vertices remain in their original source objects.",
+  "browser": {
+    "status": "passed",
+    "notebooks": 9,
+    "views": 73,
+    "page_errors": [],
+    "screenshots": "benchmarks/z_anatomy/detail-20261015/browser",
+    "camera_regression": "Thirteen original Hypothalamus vertices are not referenced by triangles, including a distant point at source Z 1148.0726 mm. Camera and focus bounds now use triangle-referenced vertices; original vertices, triangles and manifest bounds are unchanged.",
+    "frontend_tests": 135
+  }
+}

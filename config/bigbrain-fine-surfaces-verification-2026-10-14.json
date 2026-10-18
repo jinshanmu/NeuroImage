@@ -1,0 +1,37 @@
+{
+  "recorded_utc": "2026-10-14T10:35:05.050982+00:00",
+  "status": "passed",
+  "packages": [
+    {
+      "dataset_id": "bigbrain_layers",
+      "manifest": "derivatives/bigbrain_layers/28962750493fb674/manifest.json",
+      "sha256": "62e22330d88ddd9aed06e637f1059c626968a445b49944e74cc9414149703668",
+      "objects": 14,
+      "source_points": 2293788,
+      "source_triangles": 4587520,
+      "source_geometry": "all original points and triangles identical",
+      "unchanged_rebuild_assets_reused": 45,
+      "geometry_receipt": "benchmarks/bigbrain_layers/fine-anatomy-20261014/source-verification.json"
+    },
+    {
+      "dataset_id": "bigbrain_hippocampus",
+      "manifest": "derivatives/bigbrain_hippocampus/3583b4ba664391c6/manifest.json",
+      "sha256": "44d988e6919678f0f9b6c7b9b4940ca584e7b1a50c993616eb080ac0c539b317",
+      "objects": 14,
+      "source_points": 2467111,
+      "source_triangles": 4931218,
+      "source_geometry": "all original points and triangles identical",
+      "unchanged_rebuild_assets_reused": 45,
+      "geometry_receipt": "benchmarks/bigbrain_hippocampus/fine-anatomy-20261014/source-verification.json"
+    }
+  ],
+  "curricula": 2,
+  "views": 30,
+  "course_id": "1e09881f-ee54-5706-87cc-8e23b5e974e9",
+  "browser_receipt": "benchmarks/bigbrain_surfaces/fine-anatomy-20261014/browser/acceptance.json",
+  "scene_restore_and_import": "identical pixels in four comparisons",
+  "credited_image_archives": 10,
+  "expert_review": "BBH-20261014-01 exact CA1/CA4 pair preliminarily suitable for teaching; wider layer and subfield review remains separate.",
+  "frontend_layout": "unchanged",
+  "expert_review_record": "config/instructor-review-bigbrain-hippocampus-2026-10-14.json"
+}

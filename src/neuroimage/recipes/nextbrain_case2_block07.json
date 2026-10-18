@@ -1,0 +1,291 @@
+{
+  "id": "nextbrain_case2_block07",
+  "adapter": "source-lut-nifti",
+  "representation": "mri-labels",
+  "version": "1",
+  "title": "NextBrain Case 2 \u00b7 Midbrain B1.1",
+  "nifti_units": "mm",
+  "units_evidence": "The author documents nominal 0.1 mm in-plane reconstructed histology and 0.4 mm ex vivo MRI. The original scanner NIfTI declares millimeters. The supplied processed MRI and label affines retain their source rotation, spacing and block reconstruction in the case RAS frame.",
+  "space": {
+    "id": "nextbrain-case2-p41-16-native",
+    "name": "Case P41-16 native MRI and reconstructed block B1.1",
+    "reference": "Author Case 2 repository at 9c29e15e2eef6db902296f53de636d57fc5aa6a1; source NIfTI headers and block2slab mapping.",
+    "correspondence": "Source reconstructed histological block B1.1 and ex vivo T2 MRI retain their supplied NIfTI grids in case P41-16 RAS coordinates. Histology supplies fine assignments; the source-processed MRI supplies spatial context."
+  },
+  "inputs": {
+    "t2": "raw/nextbrain_core/registered_browser/9c29e15e2eef/P41-16/mri_rotated/mri.nii.gz",
+    "labels": "raw/nextbrain_core/registered_browser/9c29e15e2eef/P41-16/labels_blocks/7/LABELS.nii.gz",
+    "label_lut": "raw/nextbrain_core/3dAtlas/lut.freeview.txt",
+    "hierarchy": "raw/nextbrain_core/registered_browser/9c29e15e2eef/P41-16/image_ontology_hierarchical.json",
+    "license": "licenses/nextbrain_core/official-terms.html"
+  },
+  "images": [
+    {
+      "id": "t2",
+      "name": "Case 2 source-processed ex vivo T2 MRI"
+    }
+  ],
+  "require_same_grid": false,
+  "require_full_label_inventory": true,
+  "construction_peak_gib": 3,
+  "sources": [
+    {
+      "id": "nextbrain_core",
+      "title": "NextBrain Case 2: P41-16",
+      "version": "Case 2; Git 9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+      "url": "https://github.com/UCL/NextBrain-Case-2/tree/9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+      "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+      "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "license_input": "license"
+    }
+  ],
+  "label_table": {
+    "format": "freesurfer-lut",
+    "input": "label_lut",
+    "hierarchy_input": "hierarchy",
+    "values": [
+      310,
+      352,
+      384,
+      385,
+      386,
+      403,
+      412,
+      414,
+      415,
+      435,
+      436,
+      447,
+      464,
+      465,
+      471,
+      472,
+      499,
+      507,
+      515,
+      520,
+      521,
+      525,
+      526,
+      527,
+      528,
+      531,
+      535,
+      541,
+      542,
+      543,
+      580,
+      586,
+      591,
+      592,
+      598,
+      600,
+      610,
+      611,
+      617,
+      645,
+      779,
+      827,
+      828,
+      829,
+      842,
+      844
+    ],
+    "default_category": "Source regional anatomy",
+    "evidence": "Source histology delineation with author MRI-guided reconstruction, supplied as a categorical NIfTI block. Source methods combine manual work and computational processing, followed by author checking.",
+    "source_notes": [
+      "Case 2 P41-16; source block B1.1 (browser block 7). The source publication reports a right hemisphere and no incidental findings for this case.",
+      "Structures show their delivered extent within block B1.1. Block-edge surfaces mark the limits of this tissue sample.",
+      "Native source samples and affine geometry are retained. Surface display uses the categorical boundary at half-voxel level.",
+      "Label-specific side is explicit only where the original source name supplies it. Case hemisphere and regional laterality are recorded separately."
+    ]
+  },
+  "native_block": {
+    "case": "P41-16",
+    "case_number": 2,
+    "block_number": 7,
+    "block_name": "B1.1",
+    "source_commit": "9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+    "source_label_shape": [
+      348,
+      199,
+      36
+    ],
+    "source_label_affine_ras_mm": [
+      [
+        0.0009505780762992799,
+        0.09601892530918121,
+        -0.09487660974264145,
+        -0.3927205204963684
+      ],
+      [
+        -0.08374930173158646,
+        -0.015954094007611275,
+        -0.17832280695438385,
+        -2.350114107131958
+      ],
+      [
+        0.05452269688248634,
+        -0.022659968584775925,
+        -0.23784665763378143,
+        -6.299720764160156
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "normal_scope_reference": "Publication Supplementary Table 1; case-level evidence in config/nextbrain-case-scope-2026-10-13.json",
+    "coordinate_policy": "Use the supplied 3D NIfTI affine. Browser PNG/NPZ orientation matrices and hierarchy navigation points are retained as separate source representations."
+  },
+  "acquisition": "Run neuroimage acquire nextbrain_case2_block07 --data-root <existing-data-root>. Reuse the common Case-2 MRI, original source LUT and license snapshot across block recipes.",
+  "archives": [
+    {
+      "dataset_id": "nextbrain_core",
+      "filename": "3dAtlas.zip",
+      "url": "https://ndownloader.figshare.com/files/42561616",
+      "bytes": 397039281,
+      "sha256": "feef33d5913b3931525a590ea389800a746551ea02083e94ca1b122eecff4283",
+      "format": "zip",
+      "members": [
+        {
+          "member": "3dAtlas/lut.freeview.txt",
+          "target": "raw/nextbrain_core/3dAtlas/lut.freeview.txt",
+          "bytes": 45434,
+          "sha256": "69bf36a0a72c27b96796503428bd3cc5fc5a94d23153d5f832c576ea710fd443"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "target": "raw/nextbrain_core/registered_browser/9c29e15e2eef/P41-16/mri_rotated/mri.nii.gz",
+      "url": "https://raw.githubusercontent.com/UCL/NextBrain-Case-2/9c29e15e2eef6db902296f53de636d57fc5aa6a1/P41-16/mri_rotated/mri.nii.gz",
+      "bytes": 7731378,
+      "sha256": "bc94037b065db82087983446f25748c12b65c31b2f091ad543dfc5f8b1e9ca7a",
+      "git_blob_sha1": "eadffece17731300d60009f99553f82b41923be8",
+      "hash_basis": "Publisher Git tree at the pinned source commit and local SHA256"
+    },
+    {
+      "target": "raw/nextbrain_core/registered_browser/9c29e15e2eef/P41-16/labels_blocks/7/LABELS.nii.gz",
+      "url": "https://raw.githubusercontent.com/UCL/NextBrain-Case-2/9c29e15e2eef6db902296f53de636d57fc5aa6a1/P41-16/labels_blocks/7/LABELS.nii.gz",
+      "bytes": 140378,
+      "sha256": "47a3c0390df4ed2f01ddea574292153e08429dbac02b2fca77794e6892df2ae6",
+      "git_blob_sha1": "80db5420ad2e7b826940f3d35b2bd1d5e57e0dc9",
+      "hash_basis": "Publisher Git tree at the pinned source commit and local SHA256"
+    },
+    {
+      "target": "raw/nextbrain_core/registered_browser/9c29e15e2eef/P41-16/image_ontology_hierarchical.json",
+      "url": "https://raw.githubusercontent.com/UCL/NextBrain-Case-2/9c29e15e2eef6db902296f53de636d57fc5aa6a1/P41-16/image_ontology_hierarchical.json",
+      "bytes": 168331,
+      "sha256": "b88d1989687537a2c614babbccf8d2aeb05b6600875bc59fd035a905448fa1b8",
+      "git_blob_sha1": "57c552264c8bdc4ebabca735a351b30f50ca73ad",
+      "hash_basis": "Publisher Git tree at the pinned source commit and local SHA256"
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/nextbrain_core/official-terms.html",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "maximum_bytes": 1048576
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-NB2-07-01",
+      "title": "Oculomotor nuclear and root context",
+      "objective": "Compare the source oculomotor nucleus, accessory nucleus and root assignments with the periaqueductal region.",
+      "instruction": "Compare the source oculomotor nucleus, accessory nucleus and root assignments with the periaqueductal region. Inspect adjacent source sections and the supplied block boundaries.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case2_block07:label:464",
+        "nextbrain_case2_block07:label:447",
+        "nextbrain_case2_block07:label:386",
+        "nextbrain_case2_block07:label:465"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB2-07-02",
+      "title": "Trochlear nucleus and fibre crossing",
+      "objective": "Follow the source trochlear nucleus, root and explicitly labelled fibre decussation through adjacent sections.",
+      "instruction": "Follow the source trochlear nucleus, root and explicitly labelled fibre decussation through adjacent sections. Inspect adjacent source sections and the supplied block boundaries.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case2_block07:label:520",
+        "nextbrain_case2_block07:label:535",
+        "nextbrain_case2_block07:label:842",
+        "nextbrain_case2_block07:label:465"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB2-07-03",
+      "title": "Nigral subdivisions and red nucleus",
+      "objective": "Distinguish the source compact and reticular nigral assignments and compare their position with the red nucleus and corticospinal tract.",
+      "instruction": "Distinguish the source compact and reticular nigral assignments and compare their position with the red nucleus and corticospinal tract. Inspect adjacent source sections and the supplied block boundaries.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case2_block07:label:310",
+        "nextbrain_case2_block07:label:352",
+        "nextbrain_case2_block07:label:385",
+        "nextbrain_case2_block07:label:779"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB2-07-04",
+      "title": "Collicular and lemniscal relations",
+      "objective": "Compare the source inferior-collicular nucleus, collicular brachia and lateral lemniscal assignments.",
+      "instruction": "Compare the source inferior-collicular nucleus, collicular brachia and lateral lemniscal assignments. Inspect adjacent source sections and the supplied block boundaries.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case2_block07:label:507",
+        "nextbrain_case2_block07:label:541",
+        "nextbrain_case2_block07:label:525",
+        "nextbrain_case2_block07:label:526",
+        "nextbrain_case2_block07:label:515",
+        "nextbrain_case2_block07:label:598"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB2-07-05",
+      "title": "Superior cerebellar peduncle crossing",
+      "objective": "Locate the source-defined superior cerebellar peduncle decussation and compare neighboring cerebellothalamic and longitudinal assignments.",
+      "instruction": "Locate the source-defined superior cerebellar peduncle decussation and compare neighboring cerebellothalamic and longitudinal assignments. Inspect adjacent source sections and the supplied block boundaries.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case2_block07:label:471",
+        "nextbrain_case2_block07:label:531",
+        "nextbrain_case2_block07:label:403",
+        "nextbrain_case2_block07:label:528"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    },
+    {
+      "id": "NI-NB2-07-06",
+      "title": "Descending cerebral peduncular pathways",
+      "objective": "Compare the source corticospinal, corticonuclear and pontine-projecting tract assignments within this tissue block.",
+      "instruction": "Compare the source corticospinal, corticonuclear and pontine-projecting tract assignments within this tissue block. Inspect adjacent source sections and the supplied block boundaries.",
+      "evidence_limit": "Coverage: one author-reconstructed histological block. Fine boundaries are histological assignments; the ex vivo MRI supplies anatomical context at its own sampling. Source processing, engineering validation and instructor review have separate records.",
+      "structure_ids": [
+        "nextbrain_case2_block07:label:779",
+        "nextbrain_case2_block07:label:827",
+        "nextbrain_case2_block07:label:828",
+        "nextbrain_case2_block07:label:829",
+        "nextbrain_case2_block07:label:310"
+      ],
+      "step_prompt": "Locate the highlighted source assignment, compare it with adjacent labels and describe its position in the matching MRI context.",
+      "step_question": "Which source-defined structure is selected, which neighboring assignments are visible, and where does the tissue block end?"
+    }
+  ]
+}

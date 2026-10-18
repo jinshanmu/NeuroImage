@@ -1,0 +1,13 @@
+name: NeuroImage
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.12
+  - pip
+  - aria2=1.37
+  - dcm2niix
+  - git-annex
+variables:
+  PYTHONNOUSERSITE: '1'
+  PYTHONPATH: ''

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "intracranial-foundations",
+  "title": "Intracranial anatomy: first teaching session",
+  "author": "NeuroImage teaching curriculum",
+  "objective": "Identify source-labelled cortex, deep structures, ventricular spaces, brainstem and cerebellum in linked native MRI and 3D views.",
+  "views": [
+    {
+      "id": "view-001",
+      "curriculum": "spl-first-session",
+      "view": "orientation"
+    },
+    {
+      "id": "view-002",
+      "curriculum": "spl-first-session",
+      "view": "deep-structures"
+    },
+    {
+      "id": "view-003",
+      "curriculum": "spl-first-session",
+      "view": "ventricular-spaces"
+    },
+    {
+      "id": "view-004",
+      "curriculum": "spl-first-session",
+      "view": "central-cortex"
+    },
+    {
+      "id": "view-005",
+      "curriculum": "spl-first-session",
+      "view": "brainstem"
+    },
+    {
+      "id": "view-006",
+      "curriculum": "spl-first-session",
+      "view": "cerebellum"
+    }
+  ]
+}

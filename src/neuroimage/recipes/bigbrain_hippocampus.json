@@ -1,0 +1,466 @@
+{
+  "id": "bigbrain_hippocampus",
+  "adapter": "gifti-source-surfaces",
+  "version": "1",
+  "title": "BigBrain hippocampal subfields",
+  "representation": "surface-model",
+  "construction_peak_gib": 12,
+  "source_to_mm": 1.0,
+  "mesh_geometry_stage": "base",
+  "source_version": "BigBrainRelease.2015/Hippocampus_Segmentation/2021-01-21",
+  "inputs": {
+    "left_ca1": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA1.surf.gii",
+    "left_ca2": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA2.surf.gii",
+    "left_ca3": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA3.surf.gii",
+    "left_ca4": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA4.surf.gii",
+    "left_dg": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_DG.surf.gii",
+    "left_sub": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_Sub.surf.gii",
+    "left_midsurf": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_midSurf.surf.gii",
+    "right_ca1": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA1.surf.gii",
+    "right_ca2": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA2.surf.gii",
+    "right_ca3": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA3.surf.gii",
+    "right_ca4": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA4.surf.gii",
+    "right_dg": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_DG.surf.gii",
+    "right_sub": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_Sub.surf.gii",
+    "right_midsurf": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_midSurf.surf.gii",
+    "license": "licenses/bigbrain_2015/License.txt",
+    "credits": "licenses/bigbrain_2015/Credits.txt"
+  },
+  "space": {
+    "id": "bigbrain-hippocampus-source-native",
+    "name": "BigBrain hippocampal subfields original surface coordinates",
+    "coordinate_system": "SOURCE_XYZ",
+    "units": "mm",
+    "axis_status": "source_axes_not_anatomically_verified",
+    "reference": "Original self-contained GIfTI point arrays and triangle arrays in the BigBrain histological release. Embedded identity coordinate matrices are recorded.",
+    "correspondence": "Surfaces within this package share the author release coordinate convention. Separate datasets retain their own source spaces and definitions.",
+    "unit_basis": "The BigBrain histological release and associated source paper describe surface distances and morphometry in millimeters. Original coordinates are retained with metric scale 1.0; no shrinkage correction is added."
+  },
+  "sources": [
+    {
+      "id": "bigbrain_hippocampus",
+      "title": "BigBrain hippocampal subfields",
+      "version": "BigBrainRelease.2015/Hippocampus_Segmentation/2021-01-21",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/",
+      "citation": "DeKraker J, Lau JC, Ferko KM, Khan AR, Kohler S. Hippocampal subfields revealed through unfolding and unsupervised clustering of laminar and morphological features in 3D BigBrain. NeuroImage 206:116328 (2020). doi:10.1016/j.neuroimage.2019.116328. BigBrain foundation: Amunts K et al. Science 340:1472-1475 (2013), doi:10.1126/science.1235381. Original contributors: https://ftp.bigbrainproject.org/bigbrain-ftp/Credits.txt.",
+      "license_name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "license_input": "license"
+    }
+  ],
+  "model_evidence": "Original hippocampal surfaces from the histological BigBrain release, associated with the source study of unfolding and laminar/morphological subfield organization.",
+  "model_notes": [
+    "Source-defined CA1, CA2, CA3, CA4, dentate gyrus and subiculum surfaces retain their exact supplied extent and bilateral identifiers.",
+    "The associated study combines histology, computational unfolding and feature analysis. Source labels and boundaries are interpreted within that method.",
+    "The independently retained NextBrain and Julich hippocampal definitions support comparison in their respective native spaces. Same-name regions do not establish interchangeable boundaries."
+  ],
+  "scope_notes": [
+    "One source-designated normal adult postmortem specimen; source computational processing and reconstructed boundaries are retained.",
+    "Native source surfaces support spatial observation. Layer and subfield definitions remain specific to their source method."
+  ],
+  "objects": [
+    {
+      "id": "bigbrain_hippocampus:object:left-ca1",
+      "input": "left_ca1",
+      "source_name": "sub-bbhist_hemi-L_CA1.surf.gii",
+      "name": "Left CA1",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "left",
+      "color": [
+        225,
+        180,
+        105
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:left-ca2",
+      "input": "left_ca2",
+      "source_name": "sub-bbhist_hemi-L_CA2.surf.gii",
+      "name": "Left CA2",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "left",
+      "color": [
+        104,
+        190,
+        205
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:left-ca3",
+      "input": "left_ca3",
+      "source_name": "sub-bbhist_hemi-L_CA3.surf.gii",
+      "name": "Left CA3",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "left",
+      "color": [
+        167,
+        137,
+        219
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:left-ca4",
+      "input": "left_ca4",
+      "source_name": "sub-bbhist_hemi-L_CA4.surf.gii",
+      "name": "Left CA4",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "left",
+      "color": [
+        224,
+        116,
+        151
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:left-dg",
+      "input": "left_dg",
+      "source_name": "sub-bbhist_hemi-L_DG.surf.gii",
+      "name": "Left dentate gyrus",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "left",
+      "color": [
+        120,
+        191,
+        140
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:left-sub",
+      "input": "left_sub",
+      "source_name": "sub-bbhist_hemi-L_Sub.surf.gii",
+      "name": "Left subiculum",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "left",
+      "color": [
+        223,
+        151,
+        101
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:left-midsurf",
+      "input": "left_midsurf",
+      "source_name": "sub-bbhist_hemi-L_midSurf.surf.gii",
+      "name": "Left hippocampal midsurface",
+      "source_type": "MESH",
+      "category": "Hippocampal midsurface context",
+      "laterality": "left",
+      "color": [
+        170,
+        186,
+        206
+      ],
+      "notes": [
+        "Original author-defined hippocampal midsurface surface. The midsurface is a computational representation of hippocampal folding, distinct from a subfield tissue boundary."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:right-ca1",
+      "input": "right_ca1",
+      "source_name": "sub-bbhist_hemi-R_CA1.surf.gii",
+      "name": "Right CA1",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "right",
+      "color": [
+        225,
+        180,
+        105
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:right-ca2",
+      "input": "right_ca2",
+      "source_name": "sub-bbhist_hemi-R_CA2.surf.gii",
+      "name": "Right CA2",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "right",
+      "color": [
+        104,
+        190,
+        205
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:right-ca3",
+      "input": "right_ca3",
+      "source_name": "sub-bbhist_hemi-R_CA3.surf.gii",
+      "name": "Right CA3",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "right",
+      "color": [
+        167,
+        137,
+        219
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:right-ca4",
+      "input": "right_ca4",
+      "source_name": "sub-bbhist_hemi-R_CA4.surf.gii",
+      "name": "Right CA4",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "right",
+      "color": [
+        224,
+        116,
+        151
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:right-dg",
+      "input": "right_dg",
+      "source_name": "sub-bbhist_hemi-R_DG.surf.gii",
+      "name": "Right dentate gyrus",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "right",
+      "color": [
+        120,
+        191,
+        140
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:right-sub",
+      "input": "right_sub",
+      "source_name": "sub-bbhist_hemi-R_Sub.surf.gii",
+      "name": "Right subiculum",
+      "source_type": "MESH",
+      "category": "Hippocampal source subfields",
+      "laterality": "right",
+      "color": [
+        223,
+        151,
+        101
+      ],
+      "notes": [
+        "The source subfield name and extent are retained from the released GIfTI model."
+      ]
+    },
+    {
+      "id": "bigbrain_hippocampus:object:right-midsurf",
+      "input": "right_midsurf",
+      "source_name": "sub-bbhist_hemi-R_midSurf.surf.gii",
+      "name": "Right hippocampal midsurface",
+      "source_type": "MESH",
+      "category": "Hippocampal midsurface context",
+      "laterality": "right",
+      "color": [
+        170,
+        186,
+        206
+      ],
+      "notes": [
+        "Original author-defined hippocampal midsurface surface. The midsurface is a computational representation of hippocampal folding, distinct from a subfield tissue boundary."
+      ]
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-BBH001",
+      "title": "Left hippocampal subfield relationships",
+      "objective": "Left hippocampal subfield relationships",
+      "instruction": "Follow CA1, CA2, CA3, CA4, dentate gyrus and subiculum through the folded source geometry. Inspect each selected subfield with its immediate neighbors.",
+      "evidence_limit": "Source-specific hippocampal definitions from histology, computational unfolding and laminar/morphological analysis.",
+      "structure_ids": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-ca2",
+        "bigbrain_hippocampus:object:left-ca3",
+        "bigbrain_hippocampus:object:left-ca4",
+        "bigbrain_hippocampus:object:left-dg",
+        "bigbrain_hippocampus:object:left-sub"
+      ],
+      "step_prompt": "Trace the selected supplied surface and describe its relationship to the other visible source components.",
+      "step_question": "Which source component is selected, and how does its supplied extent relate to the visible neighboring surfaces?"
+    },
+    {
+      "id": "NI-BBH002",
+      "title": "Right hippocampal subfield relationships",
+      "objective": "Right hippocampal subfield relationships",
+      "instruction": "Follow CA1, CA2, CA3, CA4, dentate gyrus and subiculum through the folded source geometry. Inspect each selected subfield with its immediate neighbors.",
+      "evidence_limit": "Source-specific hippocampal definitions from histology, computational unfolding and laminar/morphological analysis.",
+      "structure_ids": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-ca2",
+        "bigbrain_hippocampus:object:right-ca3",
+        "bigbrain_hippocampus:object:right-ca4",
+        "bigbrain_hippocampus:object:right-dg",
+        "bigbrain_hippocampus:object:right-sub"
+      ],
+      "step_prompt": "Trace the selected supplied surface and describe its relationship to the other visible source components.",
+      "step_question": "Which source component is selected, and how does its supplied extent relate to the visible neighboring surfaces?"
+    },
+    {
+      "id": "NI-BBH003",
+      "title": "Hippocampal folding and midsurface context",
+      "objective": "Hippocampal folding and midsurface context",
+      "instruction": "Inspect the original midsurface with CA1 as a reference on each side. Relate the sheet-like representation to the supplied folded subfield model.",
+      "evidence_limit": "The midsurface is an author-derived geometric representation and preserves its own extent.",
+      "structure_ids": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-midsurf",
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-midsurf"
+      ],
+      "step_prompt": "Trace the selected supplied surface and describe its relationship to the other visible source components.",
+      "step_question": "Which source component is selected, and how does its supplied extent relate to the visible neighboring surfaces?"
+    }
+  ],
+  "acquisition": "Run neuroimage acquire bigbrain_hippocampus --data-root <data-root>. The common workflow downloads pinned self-contained GIfTI files directly, reuses completed files and retains original compressed sources.",
+  "archives": [],
+  "files": [
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA1.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-L_CA1.surf.gii",
+      "bytes": 12042161,
+      "sha256": "a59ad304bd44650e697145334ab0d175c88b11f64abdf5f9bca6f84d0dc2cf22",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA2.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-L_CA2.surf.gii",
+      "bytes": 7164561,
+      "sha256": "fb66e292363acccd3649ff3f1fb66f62544594157c06e4d809e65552a6409299",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA3.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-L_CA3.surf.gii",
+      "bytes": 7170353,
+      "sha256": "fc391429409315934453fa6e4ce616b0270123df4f17b1bd3e41055d6330103d",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_CA4.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-L_CA4.surf.gii",
+      "bytes": 7269073,
+      "sha256": "58d351e524624d1d40ef8fb47ee731ba73776b9f90c320e6e33a52e69bf1497c",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_DG.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-L_DG.surf.gii",
+      "bytes": 9827569,
+      "sha256": "0441bc11cb5e0c5bcdb988daa2aef61dac76c5a9c198a4d0bc165bc1697c147f",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_Sub.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-L_Sub.surf.gii",
+      "bytes": 9630289,
+      "sha256": "2a2cf96444d2a6a8d7e3715ba8a770ab93e17ba03f7266a6f81b9707fc237f12",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-L_midSurf.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-L_midSurf.surf.gii",
+      "bytes": 6268113,
+      "sha256": "16ad8112c4e02834b8efd379caf33f2a2ee4bd20ba13834c6d93420d2c9042e1",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA1.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-R_CA1.surf.gii",
+      "bytes": 11969553,
+      "sha256": "695e45a7a1d3cbe44b0b13728f056687ac0c81e07c3a20e7625365e1688d62cf",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA2.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-R_CA2.surf.gii",
+      "bytes": 7163121,
+      "sha256": "65f0a59c0dc87e6e2ab6de5b8207be5077562bc27c34dabb119d5fbd55c96714",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA3.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-R_CA3.surf.gii",
+      "bytes": 7142913,
+      "sha256": "ea2314f101f8d236eaa0c105632f9112675516bf7db566c7aa2f9fb3e3dc0162",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_CA4.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-R_CA4.surf.gii",
+      "bytes": 7162737,
+      "sha256": "f57929d7c4ffeb2eae6f57becf3571605bb4af16049fe819f6f29079252d97ee",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_DG.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-R_DG.surf.gii",
+      "bytes": 9683889,
+      "sha256": "16ee1498957c6820872c9421793ad501d438db868230322ebb9126a7a3fdc700",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_Sub.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-R_Sub.surf.gii",
+      "bytes": 9627633,
+      "sha256": "3129a81eff3ba0fab000d6eccf8134ee4ed8519598687e5d5fc2a495ee9576bc",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    },
+    {
+      "target": "raw/bigbrain_hippocampus/release2015/sub-bbhist_hemi-R_midSurf.surf.gii",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/gii/sub-bbhist_hemi-R_midSurf.surf.gii",
+      "bytes": 6268113,
+      "sha256": "c60ed54b329b2a2be4e7d5c319359aa6d171b9fdf99292381e3b19600ffc267f",
+      "hash_basis": "SHA256 of bytes acquired from the official HTTPS release; original URL, size, ETag and modification date retained. No publisher SHA256 is claimed."
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/bigbrain_2015/License.txt",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/License.txt",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/bigbrain_2015/Credits.txt",
+      "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/Credits.txt",
+      "maximum_bytes": 1048576
+    }
+  ]
+}

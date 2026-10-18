@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "bigbrain-hippocampus-observation",
+  "dataset_id": "bigbrain_hippocampus",
+  "required_source": {
+    "id": "bigbrain_hippocampus",
+    "version": "BigBrainRelease.2015/Hippocampus_Segmentation/2021-01-21"
+  },
+  "title": "Hippocampal subfields and folding",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Observe source-defined fine anatomy with complete native geometry, explicit definitions and retained attribution.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "left-component-0",
+      "title": "Left CA1",
+      "selected": "bigbrain_hippocampus:object:left-ca1",
+      "visible": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-ca2"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-L_CA1.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:left-ca2": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "left-component-1",
+      "title": "Left CA2",
+      "selected": "bigbrain_hippocampus:object:left-ca2",
+      "visible": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-ca2",
+        "bigbrain_hippocampus:object:left-ca3"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-L_CA2.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:left-ca1": 0.22,
+          "bigbrain_hippocampus:object:left-ca3": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "left-component-2",
+      "title": "Left CA3",
+      "selected": "bigbrain_hippocampus:object:left-ca3",
+      "visible": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-ca2",
+        "bigbrain_hippocampus:object:left-ca3",
+        "bigbrain_hippocampus:object:left-ca4"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-L_CA3.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:left-ca1": 0.22,
+          "bigbrain_hippocampus:object:left-ca2": 0.22,
+          "bigbrain_hippocampus:object:left-ca4": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "left-component-3",
+      "title": "Left CA4",
+      "selected": "bigbrain_hippocampus:object:left-ca4",
+      "visible": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-ca3",
+        "bigbrain_hippocampus:object:left-ca4",
+        "bigbrain_hippocampus:object:left-dg"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-L_CA4.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:left-ca1": 0.22,
+          "bigbrain_hippocampus:object:left-ca3": 0.22,
+          "bigbrain_hippocampus:object:left-dg": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "left-component-4",
+      "title": "Left dentate gyrus",
+      "selected": "bigbrain_hippocampus:object:left-dg",
+      "visible": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-ca4",
+        "bigbrain_hippocampus:object:left-dg",
+        "bigbrain_hippocampus:object:left-sub"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-L_DG.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:left-ca1": 0.22,
+          "bigbrain_hippocampus:object:left-ca4": 0.22,
+          "bigbrain_hippocampus:object:left-sub": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "left-component-5",
+      "title": "Left subiculum",
+      "selected": "bigbrain_hippocampus:object:left-sub",
+      "visible": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-dg",
+        "bigbrain_hippocampus:object:left-sub"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-L_Sub.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:left-ca1": 0.22,
+          "bigbrain_hippocampus:object:left-dg": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "left-component-6",
+      "title": "Left hippocampal midsurface",
+      "selected": "bigbrain_hippocampus:object:left-midsurf",
+      "visible": [
+        "bigbrain_hippocampus:object:left-ca1",
+        "bigbrain_hippocampus:object:left-midsurf"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-L_midSurf.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:left-ca1": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "right-component-0",
+      "title": "Right CA1",
+      "selected": "bigbrain_hippocampus:object:right-ca1",
+      "visible": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-ca2"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-R_CA1.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          290,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:right-ca2": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "right-component-1",
+      "title": "Right CA2",
+      "selected": "bigbrain_hippocampus:object:right-ca2",
+      "visible": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-ca2",
+        "bigbrain_hippocampus:object:right-ca3"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-R_CA2.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          290,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:right-ca1": 0.22,
+          "bigbrain_hippocampus:object:right-ca3": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "right-component-2",
+      "title": "Right CA3",
+      "selected": "bigbrain_hippocampus:object:right-ca3",
+      "visible": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-ca2",
+        "bigbrain_hippocampus:object:right-ca3",
+        "bigbrain_hippocampus:object:right-ca4"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-R_CA3.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          290,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:right-ca1": 0.22,
+          "bigbrain_hippocampus:object:right-ca2": 0.22,
+          "bigbrain_hippocampus:object:right-ca4": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "right-component-3",
+      "title": "Right CA4",
+      "selected": "bigbrain_hippocampus:object:right-ca4",
+      "visible": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-ca3",
+        "bigbrain_hippocampus:object:right-ca4",
+        "bigbrain_hippocampus:object:right-dg"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-R_CA4.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          290,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:right-ca1": 0.22,
+          "bigbrain_hippocampus:object:right-ca3": 0.22,
+          "bigbrain_hippocampus:object:right-dg": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "right-component-4",
+      "title": "Right dentate gyrus",
+      "selected": "bigbrain_hippocampus:object:right-dg",
+      "visible": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-ca4",
+        "bigbrain_hippocampus:object:right-dg",
+        "bigbrain_hippocampus:object:right-sub"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-R_DG.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          290,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:right-ca1": 0.22,
+          "bigbrain_hippocampus:object:right-ca4": 0.22,
+          "bigbrain_hippocampus:object:right-sub": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "right-component-5",
+      "title": "Right subiculum",
+      "selected": "bigbrain_hippocampus:object:right-sub",
+      "visible": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-dg",
+        "bigbrain_hippocampus:object:right-sub"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-R_Sub.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          290,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:right-ca1": 0.22,
+          "bigbrain_hippocampus:object:right-dg": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "right-component-6",
+      "title": "Right hippocampal midsurface",
+      "selected": "bigbrain_hippocampus:object:right-midsurf",
+      "visible": [
+        "bigbrain_hippocampus:object:right-ca1",
+        "bigbrain_hippocampus:object:right-midsurf"
+      ],
+      "prompt": "Trace the selected hippocampal source component along its supplied extent and compare its relationship to the neighboring visible components.",
+      "note": "Original source: sub-bbhist_hemi-R_midSurf.surf.gii. Exact supplied source vertices and triangle topology are retained. This view uses the source-native surface coordinate convention.",
+      "display": {
+        "camera": [
+          290,
+          15,
+          0.85
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "bigbrain_hippocampus:object:right-ca1": 0.22
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

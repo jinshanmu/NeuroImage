@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "regional-source-comparisons",
+  "title": "Regional anatomy across native source atlases",
+  "author": "NeuroImage teaching curriculum",
+  "objective": "Observe source definitions of cortical, deep, ventricular, brainstem and cerebellar regions. Compare recorded views while retaining each source native space and evidence type.",
+  "views": [
+    {
+      "id": "view-001",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-86"
+    },
+    {
+      "id": "view-002",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-100"
+    },
+    {
+      "id": "view-003",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-72"
+    },
+    {
+      "id": "view-004",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-91"
+    },
+    {
+      "id": "view-005",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-92"
+    },
+    {
+      "id": "view-006",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-99"
+    },
+    {
+      "id": "view-007",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-62"
+    },
+    {
+      "id": "view-008",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-97"
+    },
+    {
+      "id": "view-009",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-2"
+    },
+    {
+      "id": "view-010",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-1"
+    },
+    {
+      "id": "view-011",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-5"
+    },
+    {
+      "id": "view-012",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-6"
+    },
+    {
+      "id": "view-013",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-16"
+    },
+    {
+      "id": "view-014",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-7"
+    },
+    {
+      "id": "view-015",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-8"
+    },
+    {
+      "id": "view-016",
+      "curriculum": "cit168-probability-regions",
+      "view": "region-14"
+    },
+    {
+      "id": "view-017",
+      "curriculum": "julich-central-cortex",
+      "view": "region-49"
+    },
+    {
+      "id": "view-018",
+      "curriculum": "julich-medial-temporal",
+      "view": "region-27"
+    },
+    {
+      "id": "view-019",
+      "curriculum": "julich-cerebellar-nuclei",
+      "view": "region-72"
+    },
+    {
+      "id": "view-020",
+      "curriculum": "julich-deep-regions",
+      "view": "region-138"
+    },
+    {
+      "id": "view-021",
+      "curriculum": "brainstem-source-regions",
+      "view": "paired-midbrain"
+    },
+    {
+      "id": "view-022",
+      "curriculum": "brainstem-source-regions",
+      "view": "olivary-pair"
+    }
+  ]
+}

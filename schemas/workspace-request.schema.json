@@ -1,0 +1,62 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "enum": [
+        "acquire",
+        "build",
+        "activate",
+        "prepare"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "recipe": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recipe"
+    },
+    "package_key": {
+      "anyOf": [
+        {
+          "maxLength": 256,
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Package Key"
+    },
+    "curriculum": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Curriculum"
+    }
+  },
+  "required": [
+    "action"
+  ],
+  "title": "JobRequest",
+  "type": "object"
+}

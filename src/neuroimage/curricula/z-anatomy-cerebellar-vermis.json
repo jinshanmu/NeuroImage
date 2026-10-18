@@ -1,0 +1,653 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-cerebellar-vermis",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Vermal and peduncular source context",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore vermal and peduncular source context in one source model.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "object-01",
+      "title": "Lingula of cerebellum",
+      "selected": "z_anatomy:object:17aff73ac9b1",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Lingula of cerebellum. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-02",
+      "title": "Central lobule",
+      "selected": "z_anatomy:object:af3e0b33e653",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Central lobule. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-03",
+      "title": "Culmen",
+      "selected": "z_anatomy:object:4a10a12add59",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Culmen. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-04",
+      "title": "Declive",
+      "selected": "z_anatomy:object:e7e6bdbad193",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Declive. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-05",
+      "title": "Folium of vermis",
+      "selected": "z_anatomy:object:767d764f6778",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Folium of vermis. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-06",
+      "title": "Tuber of vermis",
+      "selected": "z_anatomy:object:ce242a97a5d2",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Tuber of vermis. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-07",
+      "title": "Pyramis of vermis",
+      "selected": "z_anatomy:object:b0b2a855d47f",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Pyramis of vermis. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-08",
+      "title": "Uvula of vermis",
+      "selected": "z_anatomy:object:6806ff7364b3",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Uvula of vermis. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-09",
+      "title": "Nodule of vermis",
+      "selected": "z_anatomy:object:47dfd96f4ad4",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Nodule of vermis. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-10",
+      "title": "Left Peduncle of flocculus",
+      "selected": "z_anatomy:object:1e12a040ef3f",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Peduncle of flocculus.l. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-11",
+      "title": "Right Peduncle of flocculus",
+      "selected": "z_anatomy:object:9e0926c7b485",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Peduncle of flocculus.r. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-12",
+      "title": "Left Superior cerebellar peduncle",
+      "selected": "z_anatomy:object:594191852a4b",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Superior cerebellar peduncle.l. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:46485639a093": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-13",
+      "title": "Right Superior cerebellar peduncle",
+      "selected": "z_anatomy:object:46485639a093",
+      "visible": [
+        "z_anatomy:object:17aff73ac9b1",
+        "z_anatomy:object:af3e0b33e653",
+        "z_anatomy:object:4a10a12add59",
+        "z_anatomy:object:e7e6bdbad193",
+        "z_anatomy:object:767d764f6778",
+        "z_anatomy:object:ce242a97a5d2",
+        "z_anatomy:object:b0b2a855d47f",
+        "z_anatomy:object:6806ff7364b3",
+        "z_anatomy:object:47dfd96f4ad4",
+        "z_anatomy:object:1e12a040ef3f",
+        "z_anatomy:object:9e0926c7b485",
+        "z_anatomy:object:594191852a4b",
+        "z_anatomy:object:46485639a093",
+        "z_anatomy:object:3cf4071d43fc"
+      ],
+      "prompt": "Locate the selected original source model and describe its relationship to the other displayed structures. Rotate the full visible anatomy to inspect another surface.",
+      "note": "Original source object: Superior cerebellar peduncle.r. The original educational model retains its own spatial frame, terminology and object extent. Comparative MRI atlases are observed in their separately identified spaces.",
+      "display": {
+        "camera": [
+          110,
+          15,
+          0.92
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:17aff73ac9b1": 0.3,
+          "z_anatomy:object:af3e0b33e653": 0.3,
+          "z_anatomy:object:4a10a12add59": 0.3,
+          "z_anatomy:object:e7e6bdbad193": 0.3,
+          "z_anatomy:object:767d764f6778": 0.3,
+          "z_anatomy:object:ce242a97a5d2": 0.3,
+          "z_anatomy:object:b0b2a855d47f": 0.3,
+          "z_anatomy:object:6806ff7364b3": 0.3,
+          "z_anatomy:object:47dfd96f4ad4": 0.3,
+          "z_anatomy:object:1e12a040ef3f": 0.3,
+          "z_anatomy:object:9e0926c7b485": 0.3,
+          "z_anatomy:object:594191852a4b": 0.3,
+          "z_anatomy:object:3cf4071d43fc": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuroimage-atlas"
+version = "0.15.0rc2"
+description = "Local normal intracranial anatomy atlas construction and teaching"
+readme = "docs/package-readme.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.10,<2", "nibabel>=5,<6", "pynrrd>=1,<2", "scikit-image>=0.24,<1", "pydantic>=2,<3", "pillow>=10,<13", "SimpleITK>=2.5,<3"]
+
+[project.scripts]
+neuroimage = "neuroimage.cli:main"
+
+[project.optional-dependencies]
+hdf5 = ["h5py>=3.16,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+neuroimage = ["recipes/*.json", "curricula/*.json", "course_plans/*.json", "catalogs/*.json", "web/*", "web/assets/*", "templates/*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

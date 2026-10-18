@@ -1,0 +1,2149 @@
+{
+  "id": "hcp1065_prob",
+  "version": "1",
+  "adapter": "independent-nifti-regions",
+  "representation": "mri-regions",
+  "title": "HCP1065 \u00b7 native white matter probability fields",
+  "source_version": "Yeh 2022 probability coverage NIfTI release; SHA256 4577abce53e05c732a0d52c88f4ee2d63488bb685f664faad2ea44aa90be8e8b",
+  "construction_peak_gib": 8,
+  "nifti_units": "mm",
+  "units_evidence": "Official HCP1065 probability release declares the ICBM 2009a nonlinear asymmetric template frame with millimeter sampling. The probability headers omit their spatial unit flag; the original affine is retained.",
+  "inputs": {
+    "t1": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t1_tal_nlin_asym_09a.nii",
+    "t2": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t2_tal_nlin_asym_09a.nii",
+    "template_license": "licenses/mni_09a_asym/official-terms.html",
+    "source_description": "licenses/hcp1065_trk/source-description.html",
+    "hcp_acknowledgment": "licenses/hcp1065_trk/hcp-acknowledgment.html",
+    "license": "licenses/hcp1065_prob/official-terms.html",
+    "Arcuate_Fasciculus_L_probability": "raw/hcp1065_prob/prob/Arcuate_Fasciculus_L.nii.gz",
+    "Arcuate_Fasciculus_R_probability": "raw/hcp1065_prob/prob/Arcuate_Fasciculus_R.nii.gz",
+    "Cingulum_Frontal_Parahippocampal_L_probability": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parahippocampal_L.nii.gz",
+    "Cingulum_Frontal_Parahippocampal_R_probability": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parahippocampal_R.nii.gz",
+    "Cingulum_Frontal_Parietal_L_probability": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parietal_L.nii.gz",
+    "Cingulum_Frontal_Parietal_R_probability": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parietal_R.nii.gz",
+    "Cingulum_Parahippocampal_L_probability": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_L.nii.gz",
+    "Cingulum_Parahippocampal_Parietal_L_probability": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_Parietal_L.nii.gz",
+    "Cingulum_Parahippocampal_Parietal_R_probability": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_Parietal_R.nii.gz",
+    "Cingulum_Parahippocampal_R_probability": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_R.nii.gz",
+    "Cingulum_Rarolfactory_L_probability": "raw/hcp1065_prob/prob/Cingulum_Rarolfactory_L.nii.gz",
+    "Cingulum_Rarolfactory_R_probability": "raw/hcp1065_prob/prob/Cingulum_Rarolfactory_R.nii.gz",
+    "Corpus_Callosum_Body_probability": "raw/hcp1065_prob/prob/Corpus_Callosum_Body.nii.gz",
+    "Corpus_Callosum_Forceps_Major_probability": "raw/hcp1065_prob/prob/Corpus_Callosum_Forceps_Major.nii.gz",
+    "Corpus_Callosum_Forceps_Minor_probability": "raw/hcp1065_prob/prob/Corpus_Callosum_Forceps_Minor.nii.gz",
+    "Corpus_Callosum_Tapetum_probability": "raw/hcp1065_prob/prob/Corpus_Callosum_Tapetum.nii.gz",
+    "Corticobulbar_Tract_L_probability": "raw/hcp1065_prob/prob/Corticobulbar_Tract_L.nii.gz",
+    "Corticobulbar_Tract_R_probability": "raw/hcp1065_prob/prob/Corticobulbar_Tract_R.nii.gz",
+    "Corticopontine_Tract_Frontal_L_probability": "raw/hcp1065_prob/prob/Corticopontine_Tract_Frontal_L.nii.gz",
+    "Corticopontine_Tract_Frontal_R_probability": "raw/hcp1065_prob/prob/Corticopontine_Tract_Frontal_R.nii.gz",
+    "Corticopontine_Tract_Occipital_L_probability": "raw/hcp1065_prob/prob/Corticopontine_Tract_Occipital_L.nii.gz",
+    "Corticopontine_Tract_Occipital_R_probability": "raw/hcp1065_prob/prob/Corticopontine_Tract_Occipital_R.nii.gz",
+    "Corticopontine_Tract_Parietal_L_probability": "raw/hcp1065_prob/prob/Corticopontine_Tract_Parietal_L.nii.gz",
+    "Corticopontine_Tract_Parietal_R_probability": "raw/hcp1065_prob/prob/Corticopontine_Tract_Parietal_R.nii.gz",
+    "Corticospinal_Tract_L_probability": "raw/hcp1065_prob/prob/Corticospinal_Tract_L.nii.gz",
+    "Corticospinal_Tract_R_probability": "raw/hcp1065_prob/prob/Corticospinal_Tract_R.nii.gz",
+    "Corticostriatal_Tract_Anterior_L_probability": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Anterior_L.nii.gz",
+    "Corticostriatal_Tract_Anterior_R_probability": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Anterior_R.nii.gz",
+    "Corticostriatal_Tract_Posterior_L_probability": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Posterior_L.nii.gz",
+    "Corticostriatal_Tract_Posterior_R_probability": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Posterior_R.nii.gz",
+    "Corticostriatal_Tract_Superior_L_probability": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Superior_L.nii.gz",
+    "Corticostriatal_Tract_Superior_R_probability": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Superior_R.nii.gz",
+    "Fornix_L_probability": "raw/hcp1065_prob/prob/Fornix_L.nii.gz",
+    "Fornix_R_probability": "raw/hcp1065_prob/prob/Fornix_R.nii.gz",
+    "Frontal_Aslant_Tract_L_probability": "raw/hcp1065_prob/prob/Frontal_Aslant_Tract_L.nii.gz",
+    "Frontal_Aslant_Tract_R_probability": "raw/hcp1065_prob/prob/Frontal_Aslant_Tract_R.nii.gz",
+    "Inferior_Fronto_Occipital_Fasciculus_L_probability": "raw/hcp1065_prob/prob/Inferior_Fronto_Occipital_Fasciculus_L.nii.gz",
+    "Inferior_Fronto_Occipital_Fasciculus_R_probability": "raw/hcp1065_prob/prob/Inferior_Fronto_Occipital_Fasciculus_R.nii.gz",
+    "Inferior_Longitudinal_Fasciculus_L_probability": "raw/hcp1065_prob/prob/Inferior_Longitudinal_Fasciculus_L.nii.gz",
+    "Inferior_Longitudinal_Fasciculus_R_probability": "raw/hcp1065_prob/prob/Inferior_Longitudinal_Fasciculus_R.nii.gz",
+    "Middle_Longitudinal_Fasciculus_L_probability": "raw/hcp1065_prob/prob/Middle_Longitudinal_Fasciculus_L.nii.gz",
+    "Middle_Longitudinal_Fasciculus_R_probability": "raw/hcp1065_prob/prob/Middle_Longitudinal_Fasciculus_R.nii.gz",
+    "Optic_Radiation_L_probability": "raw/hcp1065_prob/prob/Optic_Radiation_L.nii.gz",
+    "Optic_Radiation_R_probability": "raw/hcp1065_prob/prob/Optic_Radiation_R.nii.gz",
+    "Parietal_Aslant_Tract_L_probability": "raw/hcp1065_prob/prob/Parietal_Aslant_Tract_L.nii.gz",
+    "Parietal_Aslant_Tract_R_probability": "raw/hcp1065_prob/prob/Parietal_Aslant_Tract_R.nii.gz",
+    "Reticulospinal_Tract_L_probability": "raw/hcp1065_prob/prob/Reticulospinal_Tract_L.nii.gz",
+    "Reticulospinal_Tract_R_probability": "raw/hcp1065_prob/prob/Reticulospinal_Tract_R.nii.gz",
+    "Superior_Longitudinal_Fasciculus1_L_probability": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus1_L.nii.gz",
+    "Superior_Longitudinal_Fasciculus1_R_probability": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus1_R.nii.gz",
+    "Superior_Longitudinal_Fasciculus2_L_probability": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus2_L.nii.gz",
+    "Superior_Longitudinal_Fasciculus2_R_probability": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus2_R.nii.gz",
+    "Superior_Longitudinal_Fasciculus3_L_probability": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus3_L.nii.gz",
+    "Superior_Longitudinal_Fasciculus3_R_probability": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus3_R.nii.gz",
+    "Thalamic_Radiation_Anterior_L_probability": "raw/hcp1065_prob/prob/Thalamic_Radiation_Anterior_L.nii.gz",
+    "Thalamic_Radiation_Anterior_R_probability": "raw/hcp1065_prob/prob/Thalamic_Radiation_Anterior_R.nii.gz",
+    "Thalamic_Radiation_Posterior_L_probability": "raw/hcp1065_prob/prob/Thalamic_Radiation_Posterior_L.nii.gz",
+    "Thalamic_Radiation_Posterior_R_probability": "raw/hcp1065_prob/prob/Thalamic_Radiation_Posterior_R.nii.gz",
+    "Thalamic_Radiation_Superior_L_probability": "raw/hcp1065_prob/prob/Thalamic_Radiation_Superior_L.nii.gz",
+    "Thalamic_Radiation_Superior_R_probability": "raw/hcp1065_prob/prob/Thalamic_Radiation_Superior_R.nii.gz",
+    "Uncinate_Fasciculus_L_probability": "raw/hcp1065_prob/prob/Uncinate_Fasciculus_L.nii.gz",
+    "Uncinate_Fasciculus_R_probability": "raw/hcp1065_prob/prob/Uncinate_Fasciculus_R.nii.gz",
+    "Vertical_Occipital_Fasciculus_L_probability": "raw/hcp1065_prob/prob/Vertical_Occipital_Fasciculus_L.nii.gz",
+    "Vertical_Occipital_Fasciculus_R_probability": "raw/hcp1065_prob/prob/Vertical_Occipital_Fasciculus_R.nii.gz"
+  },
+  "images": [
+    {
+      "id": "t1",
+      "name": "Original ICBM 2009a T1 \u00b7 exact probability-field crop",
+      "native_crop": {
+        "start": [
+          20,
+          22,
+          22
+        ],
+        "shape": [
+          157,
+          189,
+          136
+        ],
+        "evidence": "The publisher specifies ICBM 2009a nonlinear asymmetric space. Exact original affine comparison yields index start [20,22,22] and shape [157,189,136] within each original MNI 2009a T1/T2 image; physical sample positions are identical."
+      }
+    },
+    {
+      "id": "t2",
+      "name": "Original ICBM 2009a T2 \u00b7 exact probability-field crop",
+      "native_crop": {
+        "start": [
+          20,
+          22,
+          22
+        ],
+        "shape": [
+          157,
+          189,
+          136
+        ],
+        "evidence": "The publisher specifies ICBM 2009a nonlinear asymmetric space. Exact original affine comparison yields index start [20,22,22] and shape [157,189,136] within each original MNI 2009a T1/T2 image; physical sample positions are identical."
+      }
+    }
+  ],
+  "space": {
+    "id": "mni-icbm152-2009a-asymmetric",
+    "name": "MNI ICBM152 2009a asymmetric \u00b7 native probability field",
+    "reference": "https://brain.labsolver.org/hcp_trk_atlas.html",
+    "correspondence": "The publisher specifies ICBM 2009a nonlinear asymmetric space. Exact original affine comparison yields index start [20,22,22] and shape [157,189,136] within each original MNI 2009a T1/T2 image; physical sample positions are identical."
+  },
+  "sources": [
+    {
+      "id": "hcp1065_prob",
+      "title": "HCP1065 population probability tract atlas",
+      "version": "Yeh 2022 probability coverage NIfTI release; SHA256 4577abce53e05c732a0d52c88f4ee2d63488bb685f664faad2ea44aa90be8e8b",
+      "url": "https://brain.labsolver.org/hcp_trk_atlas.html",
+      "citation": "Yeh FC. Population-based tract-to-region connectome of the human brain and its hierarchical topology. Nature Communications 13, 4933 (2022). doi:10.1038/s41467-022-32595-4. Derived from Human Connectome Project data; retain the accompanying HCP acknowledgment.",
+      "license_name": "CC BY-SA 4.0; accompanying HCP acknowledgment",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "license_input": "license"
+    },
+    {
+      "id": "mni_09a_asym",
+      "title": "MNI ICBM152 nonlinear asymmetric template",
+      "version": "2009a",
+      "url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+      "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033.",
+      "license_name": "MNI ICBM152 template terms",
+      "license_url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+      "license_input": "template_license"
+    },
+    {
+      "id": "hcp_young_adult",
+      "title": "Human Connectome Project WU-Minn source acknowledgment",
+      "version": "WU-Minn open access data use terms, 2013-04-26; accompanying source release",
+      "url": "https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms",
+      "citation": "Data were provided in part by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University.",
+      "license_name": "WU-Minn HCP open access data use terms and acknowledgment",
+      "license_url": "https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms",
+      "license_input": "hcp_acknowledgment"
+    }
+  ],
+  "probability_units": "fraction",
+  "mask_rule": {
+    "threshold": 0.2,
+    "operator": ">=",
+    "origin": "derived-from-probability",
+    "source": "Project display mask using an inclusive 0.20 population-probability threshold. The source article illustrates 20% probability surfaces (Figure 3); original full-range probability fields remain available."
+  },
+  "probability_interpretation": "Source population probability of a tract passing through a template voxel, estimated from HCP young-adult diffusion tractography. Each source field remains independent, including overlapping support.",
+  "probability_derivation": "Original distributed HCP1065 voxel probabilities are retained exactly. Publisher tracking and population aggregation are upstream source computations; the project derives only the declared display mask.",
+  "region_evidence": "Diffusion-tractography population inference in the declared source template. The 0.20 contour is a computed display boundary; source probability and template MRI provide its interpretation.",
+  "region_notes": [
+    "The release contains 64 original probability files, including callosal and cingulum subdivisions. The paper main analysis describes 52 pathways; these counts identify different source inventories.",
+    "Source probability describes population tractography support. Individual axonal courses and anatomical borders require their own evidence.",
+    "The original full MNI T1/T2 files remain preserved. The local display package selects the exact source-aligned crop with unchanged samples."
+  ],
+  "regions": [
+    {
+      "source_name": "Arcuate_Fasciculus_L",
+      "name": "Left Arcuate Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Arcuate_Fasciculus_L_probability",
+      "notes": [
+        "Original source filename: Arcuate_Fasciculus_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Arcuate_Fasciculus_R",
+      "name": "Right Arcuate Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Arcuate_Fasciculus_R_probability",
+      "notes": [
+        "Original source filename: Arcuate_Fasciculus_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Frontal_Parahippocampal_L",
+      "name": "Left Cingulum Frontal Parahippocampal",
+      "category": "Limbic probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Cingulum_Frontal_Parahippocampal_L_probability",
+      "notes": [
+        "Original source filename: Cingulum_Frontal_Parahippocampal_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Frontal_Parahippocampal_R",
+      "name": "Right Cingulum Frontal Parahippocampal",
+      "category": "Limbic probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Cingulum_Frontal_Parahippocampal_R_probability",
+      "notes": [
+        "Original source filename: Cingulum_Frontal_Parahippocampal_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Frontal_Parietal_L",
+      "name": "Left Cingulum Frontal Parietal",
+      "category": "Limbic probability fields",
+      "laterality": "left",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Cingulum_Frontal_Parietal_L_probability",
+      "notes": [
+        "Original source filename: Cingulum_Frontal_Parietal_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Frontal_Parietal_R",
+      "name": "Right Cingulum Frontal Parietal",
+      "category": "Limbic probability fields",
+      "laterality": "right",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Cingulum_Frontal_Parietal_R_probability",
+      "notes": [
+        "Original source filename: Cingulum_Frontal_Parietal_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Parahippocampal_L",
+      "name": "Left Cingulum Parahippocampal",
+      "category": "Limbic probability fields",
+      "laterality": "left",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Cingulum_Parahippocampal_L_probability",
+      "notes": [
+        "Original source filename: Cingulum_Parahippocampal_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Parahippocampal_Parietal_L",
+      "name": "Left Cingulum Parahippocampal Parietal",
+      "category": "Limbic probability fields",
+      "laterality": "left",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Cingulum_Parahippocampal_Parietal_L_probability",
+      "notes": [
+        "Original source filename: Cingulum_Parahippocampal_Parietal_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Parahippocampal_Parietal_R",
+      "name": "Right Cingulum Parahippocampal Parietal",
+      "category": "Limbic probability fields",
+      "laterality": "right",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Cingulum_Parahippocampal_Parietal_R_probability",
+      "notes": [
+        "Original source filename: Cingulum_Parahippocampal_Parietal_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Parahippocampal_R",
+      "name": "Right Cingulum Parahippocampal",
+      "category": "Limbic probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Cingulum_Parahippocampal_R_probability",
+      "notes": [
+        "Original source filename: Cingulum_Parahippocampal_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Cingulum_Rarolfactory_L",
+      "name": "Left Cingulum Rarolfactory",
+      "category": "Limbic probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Cingulum_Rarolfactory_L_probability",
+      "notes": [
+        "Original source filename: Cingulum_Rarolfactory_L.nii.gz",
+        "The original distribution spells this source name Rarolfactory; the identifier and literal source spelling are retained."
+      ]
+    },
+    {
+      "source_name": "Cingulum_Rarolfactory_R",
+      "name": "Right Cingulum Rarolfactory",
+      "category": "Limbic probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Cingulum_Rarolfactory_R_probability",
+      "notes": [
+        "Original source filename: Cingulum_Rarolfactory_R.nii.gz",
+        "The original distribution spells this source name Rarolfactory; the identifier and literal source spelling are retained."
+      ]
+    },
+    {
+      "source_name": "Corpus_Callosum_Body",
+      "name": "Corpus Callosum Body",
+      "category": "Commissural probability fields",
+      "laterality": "midline",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Corpus_Callosum_Body_probability",
+      "notes": [
+        "Original source filename: Corpus_Callosum_Body.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corpus_Callosum_Forceps_Major",
+      "name": "Corpus Callosum Forceps Major",
+      "category": "Commissural probability fields",
+      "laterality": "midline",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Corpus_Callosum_Forceps_Major_probability",
+      "notes": [
+        "Original source filename: Corpus_Callosum_Forceps_Major.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corpus_Callosum_Forceps_Minor",
+      "name": "Corpus Callosum Forceps Minor",
+      "category": "Commissural probability fields",
+      "laterality": "midline",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Corpus_Callosum_Forceps_Minor_probability",
+      "notes": [
+        "Original source filename: Corpus_Callosum_Forceps_Minor.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corpus_Callosum_Tapetum",
+      "name": "Corpus Callosum Tapetum",
+      "category": "Commissural probability fields",
+      "laterality": "midline",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Corpus_Callosum_Tapetum_probability",
+      "notes": [
+        "Original source filename: Corpus_Callosum_Tapetum.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticobulbar_Tract_L",
+      "name": "Left Corticobulbar Tract",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Corticobulbar_Tract_L_probability",
+      "notes": [
+        "Original source filename: Corticobulbar_Tract_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticobulbar_Tract_R",
+      "name": "Right Corticobulbar Tract",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Corticobulbar_Tract_R_probability",
+      "notes": [
+        "Original source filename: Corticobulbar_Tract_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticopontine_Tract_Frontal_L",
+      "name": "Left Corticopontine Tract Frontal",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Corticopontine_Tract_Frontal_L_probability",
+      "notes": [
+        "Original source filename: Corticopontine_Tract_Frontal_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticopontine_Tract_Frontal_R",
+      "name": "Right Corticopontine Tract Frontal",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Corticopontine_Tract_Frontal_R_probability",
+      "notes": [
+        "Original source filename: Corticopontine_Tract_Frontal_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticopontine_Tract_Occipital_L",
+      "name": "Left Corticopontine Tract Occipital",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Corticopontine_Tract_Occipital_L_probability",
+      "notes": [
+        "Original source filename: Corticopontine_Tract_Occipital_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticopontine_Tract_Occipital_R",
+      "name": "Right Corticopontine Tract Occipital",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Corticopontine_Tract_Occipital_R_probability",
+      "notes": [
+        "Original source filename: Corticopontine_Tract_Occipital_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticopontine_Tract_Parietal_L",
+      "name": "Left Corticopontine Tract Parietal",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Corticopontine_Tract_Parietal_L_probability",
+      "notes": [
+        "Original source filename: Corticopontine_Tract_Parietal_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticopontine_Tract_Parietal_R",
+      "name": "Right Corticopontine Tract Parietal",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Corticopontine_Tract_Parietal_R_probability",
+      "notes": [
+        "Original source filename: Corticopontine_Tract_Parietal_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticospinal_Tract_L",
+      "name": "Left Corticospinal Tract",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Corticospinal_Tract_L_probability",
+      "notes": [
+        "Original source filename: Corticospinal_Tract_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticospinal_Tract_R",
+      "name": "Right Corticospinal Tract",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Corticospinal_Tract_R_probability",
+      "notes": [
+        "Original source filename: Corticospinal_Tract_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticostriatal_Tract_Anterior_L",
+      "name": "Left Corticostriatal Tract Anterior",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Corticostriatal_Tract_Anterior_L_probability",
+      "notes": [
+        "Original source filename: Corticostriatal_Tract_Anterior_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticostriatal_Tract_Anterior_R",
+      "name": "Right Corticostriatal Tract Anterior",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Corticostriatal_Tract_Anterior_R_probability",
+      "notes": [
+        "Original source filename: Corticostriatal_Tract_Anterior_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticostriatal_Tract_Posterior_L",
+      "name": "Left Corticostriatal Tract Posterior",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Corticostriatal_Tract_Posterior_L_probability",
+      "notes": [
+        "Original source filename: Corticostriatal_Tract_Posterior_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticostriatal_Tract_Posterior_R",
+      "name": "Right Corticostriatal Tract Posterior",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Corticostriatal_Tract_Posterior_R_probability",
+      "notes": [
+        "Original source filename: Corticostriatal_Tract_Posterior_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticostriatal_Tract_Superior_L",
+      "name": "Left Corticostriatal Tract Superior",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Corticostriatal_Tract_Superior_L_probability",
+      "notes": [
+        "Original source filename: Corticostriatal_Tract_Superior_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Corticostriatal_Tract_Superior_R",
+      "name": "Right Corticostriatal Tract Superior",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Corticostriatal_Tract_Superior_R_probability",
+      "notes": [
+        "Original source filename: Corticostriatal_Tract_Superior_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Fornix_L",
+      "name": "Left Fornix",
+      "category": "Limbic probability fields",
+      "laterality": "left",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Fornix_L_probability",
+      "notes": [
+        "Original source filename: Fornix_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Fornix_R",
+      "name": "Right Fornix",
+      "category": "Limbic probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Fornix_R_probability",
+      "notes": [
+        "Original source filename: Fornix_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Frontal_Aslant_Tract_L",
+      "name": "Left Frontal Aslant Tract",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Frontal_Aslant_Tract_L_probability",
+      "notes": [
+        "Original source filename: Frontal_Aslant_Tract_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Frontal_Aslant_Tract_R",
+      "name": "Right Frontal Aslant Tract",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Frontal_Aslant_Tract_R_probability",
+      "notes": [
+        "Original source filename: Frontal_Aslant_Tract_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Inferior_Fronto_Occipital_Fasciculus_L",
+      "name": "Left Inferior Fronto Occipital Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Inferior_Fronto_Occipital_Fasciculus_L_probability",
+      "notes": [
+        "Original source filename: Inferior_Fronto_Occipital_Fasciculus_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Inferior_Fronto_Occipital_Fasciculus_R",
+      "name": "Right Inferior Fronto Occipital Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Inferior_Fronto_Occipital_Fasciculus_R_probability",
+      "notes": [
+        "Original source filename: Inferior_Fronto_Occipital_Fasciculus_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Inferior_Longitudinal_Fasciculus_L",
+      "name": "Left Inferior Longitudinal Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Inferior_Longitudinal_Fasciculus_L_probability",
+      "notes": [
+        "Original source filename: Inferior_Longitudinal_Fasciculus_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Inferior_Longitudinal_Fasciculus_R",
+      "name": "Right Inferior Longitudinal Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Inferior_Longitudinal_Fasciculus_R_probability",
+      "notes": [
+        "Original source filename: Inferior_Longitudinal_Fasciculus_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Middle_Longitudinal_Fasciculus_L",
+      "name": "Left Middle Longitudinal Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Middle_Longitudinal_Fasciculus_L_probability",
+      "notes": [
+        "Original source filename: Middle_Longitudinal_Fasciculus_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Middle_Longitudinal_Fasciculus_R",
+      "name": "Right Middle Longitudinal Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Middle_Longitudinal_Fasciculus_R_probability",
+      "notes": [
+        "Original source filename: Middle_Longitudinal_Fasciculus_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Optic_Radiation_L",
+      "name": "Left Optic Radiation",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Optic_Radiation_L_probability",
+      "notes": [
+        "Original source filename: Optic_Radiation_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Optic_Radiation_R",
+      "name": "Right Optic Radiation",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Optic_Radiation_R_probability",
+      "notes": [
+        "Original source filename: Optic_Radiation_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Parietal_Aslant_Tract_L",
+      "name": "Left Parietal Aslant Tract",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Parietal_Aslant_Tract_L_probability",
+      "notes": [
+        "Original source filename: Parietal_Aslant_Tract_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Parietal_Aslant_Tract_R",
+      "name": "Right Parietal Aslant Tract",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Parietal_Aslant_Tract_R_probability",
+      "notes": [
+        "Original source filename: Parietal_Aslant_Tract_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Reticulospinal_Tract_L",
+      "name": "Left Reticulospinal Tract",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Reticulospinal_Tract_L_probability",
+      "notes": [
+        "Original source filename: Reticulospinal_Tract_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Reticulospinal_Tract_R",
+      "name": "Right Reticulospinal Tract",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Reticulospinal_Tract_R_probability",
+      "notes": [
+        "Original source filename: Reticulospinal_Tract_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Superior_Longitudinal_Fasciculus1_L",
+      "name": "Left Superior Longitudinal Fasciculus1",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Superior_Longitudinal_Fasciculus1_L_probability",
+      "notes": [
+        "Original source filename: Superior_Longitudinal_Fasciculus1_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Superior_Longitudinal_Fasciculus1_R",
+      "name": "Right Superior Longitudinal Fasciculus1",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Superior_Longitudinal_Fasciculus1_R_probability",
+      "notes": [
+        "Original source filename: Superior_Longitudinal_Fasciculus1_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Superior_Longitudinal_Fasciculus2_L",
+      "name": "Left Superior Longitudinal Fasciculus2",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Superior_Longitudinal_Fasciculus2_L_probability",
+      "notes": [
+        "Original source filename: Superior_Longitudinal_Fasciculus2_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Superior_Longitudinal_Fasciculus2_R",
+      "name": "Right Superior Longitudinal Fasciculus2",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Superior_Longitudinal_Fasciculus2_R_probability",
+      "notes": [
+        "Original source filename: Superior_Longitudinal_Fasciculus2_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Superior_Longitudinal_Fasciculus3_L",
+      "name": "Left Superior Longitudinal Fasciculus3",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Superior_Longitudinal_Fasciculus3_L_probability",
+      "notes": [
+        "Original source filename: Superior_Longitudinal_Fasciculus3_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Superior_Longitudinal_Fasciculus3_R",
+      "name": "Right Superior Longitudinal Fasciculus3",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Superior_Longitudinal_Fasciculus3_R_probability",
+      "notes": [
+        "Original source filename: Superior_Longitudinal_Fasciculus3_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Thalamic_Radiation_Anterior_L",
+      "name": "Left Thalamic Radiation Anterior",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Thalamic_Radiation_Anterior_L_probability",
+      "notes": [
+        "Original source filename: Thalamic_Radiation_Anterior_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Thalamic_Radiation_Anterior_R",
+      "name": "Right Thalamic Radiation Anterior",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Thalamic_Radiation_Anterior_R_probability",
+      "notes": [
+        "Original source filename: Thalamic_Radiation_Anterior_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Thalamic_Radiation_Posterior_L",
+      "name": "Left Thalamic Radiation Posterior",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        237,
+        173,
+        69
+      ],
+      "probability_input": "Thalamic_Radiation_Posterior_L_probability",
+      "notes": [
+        "Original source filename: Thalamic_Radiation_Posterior_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Thalamic_Radiation_Posterior_R",
+      "name": "Right Thalamic Radiation Posterior",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        100,
+        196,
+        206
+      ],
+      "probability_input": "Thalamic_Radiation_Posterior_R_probability",
+      "notes": [
+        "Original source filename: Thalamic_Radiation_Posterior_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Thalamic_Radiation_Superior_L",
+      "name": "Left Thalamic Radiation Superior",
+      "category": "Projection probability fields",
+      "laterality": "left",
+      "color": [
+        175,
+        136,
+        228
+      ],
+      "probability_input": "Thalamic_Radiation_Superior_L_probability",
+      "notes": [
+        "Original source filename: Thalamic_Radiation_Superior_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Thalamic_Radiation_Superior_R",
+      "name": "Right Thalamic Radiation Superior",
+      "category": "Projection probability fields",
+      "laterality": "right",
+      "color": [
+        229,
+        123,
+        157
+      ],
+      "probability_input": "Thalamic_Radiation_Superior_R_probability",
+      "notes": [
+        "Original source filename: Thalamic_Radiation_Superior_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Uncinate_Fasciculus_L",
+      "name": "Left Uncinate Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        116,
+        194,
+        136
+      ],
+      "probability_input": "Uncinate_Fasciculus_L_probability",
+      "notes": [
+        "Original source filename: Uncinate_Fasciculus_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Uncinate_Fasciculus_R",
+      "name": "Right Uncinate Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        224,
+        151,
+        104
+      ],
+      "probability_input": "Uncinate_Fasciculus_R_probability",
+      "notes": [
+        "Original source filename: Uncinate_Fasciculus_R.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Vertical_Occipital_Fasciculus_L",
+      "name": "Left Vertical Occipital Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "left",
+      "color": [
+        120,
+        164,
+        224
+      ],
+      "probability_input": "Vertical_Occipital_Fasciculus_L_probability",
+      "notes": [
+        "Original source filename: Vertical_Occipital_Fasciculus_L.nii.gz"
+      ]
+    },
+    {
+      "source_name": "Vertical_Occipital_Fasciculus_R",
+      "name": "Right Vertical Occipital Fasciculus",
+      "category": "Association probability fields",
+      "laterality": "right",
+      "color": [
+        215,
+        191,
+        103
+      ],
+      "probability_input": "Vertical_Occipital_Fasciculus_R_probability",
+      "notes": [
+        "Original source filename: Vertical_Occipital_Fasciculus_R.nii.gz"
+      ]
+    }
+  ],
+  "acquisition": "Use the common acquire command; verified existing files and archives are reused. Original source and template files remain on the data drive.",
+  "archives": [
+    {
+      "dataset_id": "hcp1065_prob",
+      "filename": "hcp1065_prob_coverage_nifti.zip",
+      "format": "zip",
+      "url": "https://github.com/data-others/atlas/releases/download/hcp1065/hcp1065_prob_coverage_nifti.zip",
+      "bytes": 17353305,
+      "sha256": "4577abce53e05c732a0d52c88f4ee2d63488bb685f664faad2ea44aa90be8e8b",
+      "hash_basis": "Pinned verified source archive; local SHA256, not a publisher signature",
+      "members": [
+        {
+          "member": "prob/Arcuate_Fasciculus_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Arcuate_Fasciculus_L.nii.gz",
+          "bytes": 433641,
+          "sha256": "dbfb5315476434f25384a72a3d803d2bb9dade2082903f9055648b997a008cba"
+        },
+        {
+          "member": "prob/Arcuate_Fasciculus_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Arcuate_Fasciculus_R.nii.gz",
+          "bytes": 313689,
+          "sha256": "c0a580edb37765bd33ed03f000b7f9b2c0048be593697f231e981771e0774c75"
+        },
+        {
+          "member": "prob/Cingulum_Frontal_Parahippocampal_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parahippocampal_L.nii.gz",
+          "bytes": 169048,
+          "sha256": "84d03f62ad83b5a9f3428fa6805a48d03162c5d7b7df57663bc94d4776288807"
+        },
+        {
+          "member": "prob/Cingulum_Frontal_Parahippocampal_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parahippocampal_R.nii.gz",
+          "bytes": 137237,
+          "sha256": "5ea0a0ea9bc90f3e8a7d602e8009279a6a05aaaf608f30a33162fcf4be578fc5"
+        },
+        {
+          "member": "prob/Cingulum_Frontal_Parietal_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parietal_L.nii.gz",
+          "bytes": 195292,
+          "sha256": "f394ac36b0118caedbea5083866fb27be7e894909180eb3dd42edf49aada4adb"
+        },
+        {
+          "member": "prob/Cingulum_Frontal_Parietal_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Frontal_Parietal_R.nii.gz",
+          "bytes": 196884,
+          "sha256": "4799b4fa06ec62b17e7043cc87dda173bd45bf3607b4102e79931f098daa9295"
+        },
+        {
+          "member": "prob/Cingulum_Parahippocampal_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_L.nii.gz",
+          "bytes": 100168,
+          "sha256": "d188b9343d2f19b190c540b9b54564c23620783c423c40b7caad62d9534c404a"
+        },
+        {
+          "member": "prob/Cingulum_Parahippocampal_Parietal_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_Parietal_L.nii.gz",
+          "bytes": 151049,
+          "sha256": "9422367e56de5b7a5730d5f1ee1bb585682f2ed92980f1efef930b4d82300028"
+        },
+        {
+          "member": "prob/Cingulum_Parahippocampal_Parietal_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_Parietal_R.nii.gz",
+          "bytes": 169641,
+          "sha256": "1f260d164144828d457822c066cd57eb26f27903189f398c712ccfdc004d814d"
+        },
+        {
+          "member": "prob/Cingulum_Parahippocampal_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Parahippocampal_R.nii.gz",
+          "bytes": 80705,
+          "sha256": "f4ca54bfc22059ef35ba919fdd7512ae9799595952793d919681eb12360e9ba2"
+        },
+        {
+          "member": "prob/Cingulum_Rarolfactory_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Rarolfactory_L.nii.gz",
+          "bytes": 91779,
+          "sha256": "54cec7a82bb0fea60016d361c3d927840a26e4f714c1b7e9b40cfa972a62677c"
+        },
+        {
+          "member": "prob/Cingulum_Rarolfactory_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Cingulum_Rarolfactory_R.nii.gz",
+          "bytes": 114946,
+          "sha256": "5fbfcf60df30784f642982c26e4712cdf75a50bdd465b28f1f2e62ab5e02fe29"
+        },
+        {
+          "member": "prob/Corpus_Callosum_Body.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corpus_Callosum_Body.nii.gz",
+          "bytes": 1042576,
+          "sha256": "530a2d8101f29f8a19db216fcaf321578344c6bd17ea3819b914cfda349486e0"
+        },
+        {
+          "member": "prob/Corpus_Callosum_Forceps_Major.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corpus_Callosum_Forceps_Major.nii.gz",
+          "bytes": 550897,
+          "sha256": "a086a44303eaa2debff972e6e69e674d59c038b43de1bb127f7bcc6122b86efb"
+        },
+        {
+          "member": "prob/Corpus_Callosum_Forceps_Minor.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corpus_Callosum_Forceps_Minor.nii.gz",
+          "bytes": 575433,
+          "sha256": "669b80ffc4371bd5a7dcba8446ae1eaf3b88f17e9f2699747348f857c8ccc59b"
+        },
+        {
+          "member": "prob/Corpus_Callosum_Tapetum.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corpus_Callosum_Tapetum.nii.gz",
+          "bytes": 478351,
+          "sha256": "df25dc7eb3a91b2a3ab8310ebdaa6d8176e70821e9edd63bd8fd64cc24cd4555"
+        },
+        {
+          "member": "prob/Corticobulbar_Tract_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticobulbar_Tract_L.nii.gz",
+          "bytes": 135286,
+          "sha256": "af1870c8ec3c85367d250ca5768b7d84f7528f30ae013e32f4c0e7cadd7e57b5"
+        },
+        {
+          "member": "prob/Corticobulbar_Tract_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticobulbar_Tract_R.nii.gz",
+          "bytes": 117505,
+          "sha256": "a0306febaff92f09836bd7852053221ce6eb6516a2a3cdb81df6c91a83b174f2"
+        },
+        {
+          "member": "prob/Corticopontine_Tract_Frontal_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticopontine_Tract_Frontal_L.nii.gz",
+          "bytes": 372511,
+          "sha256": "1da0e0843f37ea1e518e765115c0bf0c52eccf441797573ccc1b09a3c5a6a26d"
+        },
+        {
+          "member": "prob/Corticopontine_Tract_Frontal_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticopontine_Tract_Frontal_R.nii.gz",
+          "bytes": 430868,
+          "sha256": "2c161221f5870b0ffae922d21d9634c31118bf83bbb0b48fe345ca108eec4da6"
+        },
+        {
+          "member": "prob/Corticopontine_Tract_Occipital_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticopontine_Tract_Occipital_L.nii.gz",
+          "bytes": 283995,
+          "sha256": "9505459a8e11b189604c71253d16a9d0d05934569b9879a302f6ad6076d61013"
+        },
+        {
+          "member": "prob/Corticopontine_Tract_Occipital_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticopontine_Tract_Occipital_R.nii.gz",
+          "bytes": 292384,
+          "sha256": "52bdf78245f41a6f60b15d18730771c6e01098df22d3ae53377ee2ff4d44d89f"
+        },
+        {
+          "member": "prob/Corticopontine_Tract_Parietal_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticopontine_Tract_Parietal_L.nii.gz",
+          "bytes": 278640,
+          "sha256": "930a6f9a60647e548e0edab17d14e39aba1106f9458587ef12a8647b5f178c53"
+        },
+        {
+          "member": "prob/Corticopontine_Tract_Parietal_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticopontine_Tract_Parietal_R.nii.gz",
+          "bytes": 262131,
+          "sha256": "4f96913d0672d239deeb89ca648681cd66decc7eee41ab8d435ea2df9e365395"
+        },
+        {
+          "member": "prob/Corticospinal_Tract_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticospinal_Tract_L.nii.gz",
+          "bytes": 233212,
+          "sha256": "5f53fad811d46d91842a81280cc8d27e17c5cc1a8fe36128a89e7ed2c60f3b5a"
+        },
+        {
+          "member": "prob/Corticospinal_Tract_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticospinal_Tract_R.nii.gz",
+          "bytes": 221924,
+          "sha256": "9041536b925f02069d88d66a118e81f3cca7a3f41bfa272685f27a13bd9b04ee"
+        },
+        {
+          "member": "prob/Corticostriatal_Tract_Anterior_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Anterior_L.nii.gz",
+          "bytes": 335093,
+          "sha256": "5531db0e5d6524dd372de18e52a37b1e4c6fd5ad85354bafb09a21925e9a728d"
+        },
+        {
+          "member": "prob/Corticostriatal_Tract_Anterior_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Anterior_R.nii.gz",
+          "bytes": 350206,
+          "sha256": "212cc844ba60ea84440eb20c4a0daeb1e31b7e2f8f7376356f535f1c48eb9908"
+        },
+        {
+          "member": "prob/Corticostriatal_Tract_Posterior_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Posterior_L.nii.gz",
+          "bytes": 362125,
+          "sha256": "dc8ea961c654cf58f389c999e17649a5e98f71cca99814abb7f50ff36223562d"
+        },
+        {
+          "member": "prob/Corticostriatal_Tract_Posterior_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Posterior_R.nii.gz",
+          "bytes": 335566,
+          "sha256": "26955ee328b58e6555c006dbc769aafd63bb4a3417086182052abe8e0019e4fd"
+        },
+        {
+          "member": "prob/Corticostriatal_Tract_Superior_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Superior_L.nii.gz",
+          "bytes": 479697,
+          "sha256": "1bd24c73e355f4b43992c52fb27a8fd53f55ef2dee6961810ee4f95f9c8997b1"
+        },
+        {
+          "member": "prob/Corticostriatal_Tract_Superior_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Corticostriatal_Tract_Superior_R.nii.gz",
+          "bytes": 518001,
+          "sha256": "487e386001cd7287fb9b58b34f85cba955d6477706f70c46dea70e9df7056f0b"
+        },
+        {
+          "member": "prob/Fornix_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Fornix_L.nii.gz",
+          "bytes": 33792,
+          "sha256": "63563044beaa37069d137d277fe7925e70a9c64aba5030115e26ec8f749a8055"
+        },
+        {
+          "member": "prob/Fornix_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Fornix_R.nii.gz",
+          "bytes": 34575,
+          "sha256": "6f8aeca4a424dc266578c18f264892af14d654fbb4447f000c549b5e7438628e"
+        },
+        {
+          "member": "prob/Frontal_Aslant_Tract_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Frontal_Aslant_Tract_L.nii.gz",
+          "bytes": 288288,
+          "sha256": "cba8582dc51df9447b5f440fc8b88a3b8c86da0f882a6fdc4d041a4424d41fd9"
+        },
+        {
+          "member": "prob/Frontal_Aslant_Tract_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Frontal_Aslant_Tract_R.nii.gz",
+          "bytes": 237693,
+          "sha256": "8ffbbd2783f94ade31b956a26d91bc602e7a648de96498f60c02fca4e9355dd3"
+        },
+        {
+          "member": "prob/Inferior_Fronto_Occipital_Fasciculus_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Inferior_Fronto_Occipital_Fasciculus_L.nii.gz",
+          "bytes": 469915,
+          "sha256": "f589dc8534ae83783a57a11f1778ba0a8b61a1efc24e53f43b2f7d1ea5401530"
+        },
+        {
+          "member": "prob/Inferior_Fronto_Occipital_Fasciculus_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Inferior_Fronto_Occipital_Fasciculus_R.nii.gz",
+          "bytes": 461389,
+          "sha256": "bcac18a805ee8d56a6aa85c85fe022a900af8e3f1b71669c2cd0f333391659f3"
+        },
+        {
+          "member": "prob/Inferior_Longitudinal_Fasciculus_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Inferior_Longitudinal_Fasciculus_L.nii.gz",
+          "bytes": 431559,
+          "sha256": "49fa02da1182198acffb32c2dcf300a970de5fb99028849dd7a6bd570914895e"
+        },
+        {
+          "member": "prob/Inferior_Longitudinal_Fasciculus_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Inferior_Longitudinal_Fasciculus_R.nii.gz",
+          "bytes": 464098,
+          "sha256": "ede78eb2ba31cc407dd3c403b828641917de293495a82bfc6dce8cf8878d48e6"
+        },
+        {
+          "member": "prob/Middle_Longitudinal_Fasciculus_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Middle_Longitudinal_Fasciculus_L.nii.gz",
+          "bytes": 210307,
+          "sha256": "fdccbd943d31f01fb813bc4722da75ba8423108ad5f7eb66ffaaf252fc1133cd"
+        },
+        {
+          "member": "prob/Middle_Longitudinal_Fasciculus_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Middle_Longitudinal_Fasciculus_R.nii.gz",
+          "bytes": 166031,
+          "sha256": "c2224ca51d321b79afc7f5a90e638f7550fddf0b33fb39c8ae46adb1b292aaaf"
+        },
+        {
+          "member": "prob/Optic_Radiation_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Optic_Radiation_L.nii.gz",
+          "bytes": 159874,
+          "sha256": "1f7d22c77796150454cfc3a3a567fec47c151622dcc0161a7b92712d248db9e2"
+        },
+        {
+          "member": "prob/Optic_Radiation_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Optic_Radiation_R.nii.gz",
+          "bytes": 145636,
+          "sha256": "1c9443043bb88483d76ca27b27a074b4a8dda1cca515571bbad8e5e30b4397aa"
+        },
+        {
+          "member": "prob/Parietal_Aslant_Tract_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Parietal_Aslant_Tract_L.nii.gz",
+          "bytes": 217995,
+          "sha256": "c3f04d43c65879227582e82a81f6256bce4fbe73785ab6197966dd1b1f0cea7c"
+        },
+        {
+          "member": "prob/Parietal_Aslant_Tract_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Parietal_Aslant_Tract_R.nii.gz",
+          "bytes": 248406,
+          "sha256": "c4a5796cc29a4080544356567b6306e0bf69128ed1a376b188b163a62204fa52"
+        },
+        {
+          "member": "prob/Reticulospinal_Tract_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Reticulospinal_Tract_L.nii.gz",
+          "bytes": 531436,
+          "sha256": "76846e3c8f434332cfa16b4503d86f090e65b4696bcf5c2054a29ab021de1270"
+        },
+        {
+          "member": "prob/Reticulospinal_Tract_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Reticulospinal_Tract_R.nii.gz",
+          "bytes": 451434,
+          "sha256": "5f345ceddd36eec7d1dee3181632a48dbf1ca56557db3a11af2ebe530e85dca7"
+        },
+        {
+          "member": "prob/Superior_Longitudinal_Fasciculus1_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus1_L.nii.gz",
+          "bytes": 186848,
+          "sha256": "7149dacea2be63554665e70674d62d3f6b3cd130b930368edca1eb3b1e94707a"
+        },
+        {
+          "member": "prob/Superior_Longitudinal_Fasciculus1_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus1_R.nii.gz",
+          "bytes": 171742,
+          "sha256": "9da03a7d3e09b4a33569ecb99704dac9217741dbc5e3a878d4330a7ca07298df"
+        },
+        {
+          "member": "prob/Superior_Longitudinal_Fasciculus2_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus2_L.nii.gz",
+          "bytes": 359708,
+          "sha256": "d9ba6ddfaaac8c179aa8c8bbee7f9f0f578a4ab93c1d572502a4f7bad5386a3d"
+        },
+        {
+          "member": "prob/Superior_Longitudinal_Fasciculus2_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus2_R.nii.gz",
+          "bytes": 461720,
+          "sha256": "79d8f1f603736428412e4aba64ddd4cecd36875699ed65ee99004152f4b796ea"
+        },
+        {
+          "member": "prob/Superior_Longitudinal_Fasciculus3_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus3_L.nii.gz",
+          "bytes": 175156,
+          "sha256": "c79c69d235affc57d91e5c80ee1aea8052638508294b709ffc840cca349e62bd"
+        },
+        {
+          "member": "prob/Superior_Longitudinal_Fasciculus3_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Superior_Longitudinal_Fasciculus3_R.nii.gz",
+          "bytes": 274890,
+          "sha256": "c49cbe38635acf8416477c0bd93546d457d60e3c986cf33aef80323bfefddb5b"
+        },
+        {
+          "member": "prob/Thalamic_Radiation_Anterior_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Thalamic_Radiation_Anterior_L.nii.gz",
+          "bytes": 312410,
+          "sha256": "6fcf87647fafdda78f95f655a3a3bf9d6ccc487b7e59b44290dbc3fbf4abaf59"
+        },
+        {
+          "member": "prob/Thalamic_Radiation_Anterior_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Thalamic_Radiation_Anterior_R.nii.gz",
+          "bytes": 290443,
+          "sha256": "e09e504d5cc5bb0af11ec2a00033b92f331f67bea27fbe84bf54548302b30c07"
+        },
+        {
+          "member": "prob/Thalamic_Radiation_Posterior_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Thalamic_Radiation_Posterior_L.nii.gz",
+          "bytes": 265497,
+          "sha256": "26d5bcd5c4bc52106bcb6050df1d94c6c70b01cd96fbca646ad20ac8e15e3ae6"
+        },
+        {
+          "member": "prob/Thalamic_Radiation_Posterior_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Thalamic_Radiation_Posterior_R.nii.gz",
+          "bytes": 243600,
+          "sha256": "6be4cddf4f1809032bf0784c45744f8b3fd9f263aa50486d4c5dfe5426f8bd59"
+        },
+        {
+          "member": "prob/Thalamic_Radiation_Superior_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Thalamic_Radiation_Superior_L.nii.gz",
+          "bytes": 471832,
+          "sha256": "f363470722519a0dfa55ff3b8619f385e8560dce72d94833d364b35af756fe9f"
+        },
+        {
+          "member": "prob/Thalamic_Radiation_Superior_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Thalamic_Radiation_Superior_R.nii.gz",
+          "bytes": 555688,
+          "sha256": "1329f808ca6c4cff6af764a9cc6c78baf774ff5dfa918295a50e2401dfa8960f"
+        },
+        {
+          "member": "prob/Uncinate_Fasciculus_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Uncinate_Fasciculus_L.nii.gz",
+          "bytes": 180677,
+          "sha256": "4da72cc70d3d25e735f38be25d41730fd8d40d9b42ce23e77989ce99403e7c57"
+        },
+        {
+          "member": "prob/Uncinate_Fasciculus_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Uncinate_Fasciculus_R.nii.gz",
+          "bytes": 147395,
+          "sha256": "54c7348eff83db67fac80778bfbbb023dfa868f62ba902e5af17e6f64841f482"
+        },
+        {
+          "member": "prob/Vertical_Occipital_Fasciculus_L.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Vertical_Occipital_Fasciculus_L.nii.gz",
+          "bytes": 149943,
+          "sha256": "1db76fe16ca2c70cc792d3abcc65dae65dfe24fa21542588a307e573a34c8ea8"
+        },
+        {
+          "member": "prob/Vertical_Occipital_Fasciculus_R.nii.gz",
+          "target": "raw/hcp1065_prob/prob/Vertical_Occipital_Fasciculus_R.nii.gz",
+          "bytes": 137747,
+          "sha256": "90b84bb8ca5e05b0a0785672918fecf2329eac5606e09cfcbe62b9830b7b72aa"
+        }
+      ]
+    },
+    {
+      "dataset_id": "mni_09a_asym",
+      "filename": "mni_icbm152_nlin_asym_09a_nifti.zip",
+      "url": "https://www.bic.mni.mcgill.ca/~vfonov/icbm/2009/mni_icbm152_nlin_asym_09a_nifti.zip",
+      "bytes": 59587750,
+      "sha256": "188e1706b0ed74a0d1b3a52ad1a2b198814815f70a65f3ded091b7ceb6296a44",
+      "hash_basis": "SHA256 pinned from the verified local acquisition; not a publisher signature",
+      "members": [
+        {
+          "member": "mni_icbm152_nlin_asym_09a/mni_icbm152_t1_tal_nlin_asym_09a.nii",
+          "target": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t1_tal_nlin_asym_09a.nii",
+          "bytes": 17350930,
+          "sha256": "27e8d475116372b118372d9a2b3fdeaa3e658858731767e16a6ed0cae437363a"
+        },
+        {
+          "member": "mni_icbm152_nlin_asym_09a/mni_icbm152_t2_tal_nlin_asym_09a.nii",
+          "target": "raw/mni_09a_asym/mni_icbm152_nlin_asym_09a/mni_icbm152_t2_tal_nlin_asym_09a.nii",
+          "bytes": 17350930,
+          "sha256": "c62137ed9cf8158223d59845f36f25cff1fd06298fc42cfca5be9bc16a1ba924"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/hcp1065_prob/official-terms.html",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/mni_09a_asym/official-terms.html",
+      "url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/hcp1065_trk/source-description.html",
+      "url": "https://brain.labsolver.org/hcp_trk_atlas.html",
+      "maximum_bytes": 1048576
+    },
+    {
+      "target": "licenses/hcp1065_trk/hcp-acknowledgment.html",
+      "url": "https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms",
+      "maximum_bytes": 1048576
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-HP001",
+      "title": "Callosal source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Corpus_Callosum_Body",
+        "hcp1065_prob:region:Corpus_Callosum_Forceps_Major",
+        "hcp1065_prob:region:Corpus_Callosum_Forceps_Minor",
+        "hcp1065_prob:region:Corpus_Callosum_Tapetum"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Corpus_Callosum_Body",
+          "prompt": "Locate Corpus Callosum Body and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Corpus Callosum Body. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corpus_Callosum_Forceps_Major",
+          "prompt": "Locate Corpus Callosum Forceps Major and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Corpus Callosum Forceps Major. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corpus_Callosum_Forceps_Minor",
+          "prompt": "Locate Corpus Callosum Forceps Minor and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Corpus Callosum Forceps Minor. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corpus_Callosum_Tapetum",
+          "prompt": "Locate Corpus Callosum Tapetum and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Corpus Callosum Tapetum. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP002",
+      "title": "Cingulum source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Cingulum_Frontal_Parahippocampal_L",
+        "hcp1065_prob:region:Cingulum_Frontal_Parahippocampal_R",
+        "hcp1065_prob:region:Cingulum_Frontal_Parietal_L",
+        "hcp1065_prob:region:Cingulum_Frontal_Parietal_R",
+        "hcp1065_prob:region:Cingulum_Parahippocampal_L",
+        "hcp1065_prob:region:Cingulum_Parahippocampal_Parietal_L",
+        "hcp1065_prob:region:Cingulum_Parahippocampal_Parietal_R",
+        "hcp1065_prob:region:Cingulum_Parahippocampal_R",
+        "hcp1065_prob:region:Cingulum_Rarolfactory_L",
+        "hcp1065_prob:region:Cingulum_Rarolfactory_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Frontal_Parahippocampal_L",
+          "prompt": "Locate Left Cingulum Frontal Parahippocampal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Cingulum Frontal Parahippocampal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Frontal_Parahippocampal_R",
+          "prompt": "Locate Right Cingulum Frontal Parahippocampal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Cingulum Frontal Parahippocampal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Frontal_Parietal_L",
+          "prompt": "Locate Left Cingulum Frontal Parietal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Cingulum Frontal Parietal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Frontal_Parietal_R",
+          "prompt": "Locate Right Cingulum Frontal Parietal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Cingulum Frontal Parietal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Parahippocampal_L",
+          "prompt": "Locate Left Cingulum Parahippocampal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Cingulum Parahippocampal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Parahippocampal_Parietal_L",
+          "prompt": "Locate Left Cingulum Parahippocampal Parietal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Cingulum Parahippocampal Parietal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Parahippocampal_Parietal_R",
+          "prompt": "Locate Right Cingulum Parahippocampal Parietal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Cingulum Parahippocampal Parietal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Parahippocampal_R",
+          "prompt": "Locate Right Cingulum Parahippocampal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Cingulum Parahippocampal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Rarolfactory_L",
+          "prompt": "Locate Left Cingulum Rarolfactory and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Cingulum Rarolfactory. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Cingulum_Rarolfactory_R",
+          "prompt": "Locate Right Cingulum Rarolfactory and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Cingulum Rarolfactory. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP003",
+      "title": "Fornix source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Fornix_L",
+        "hcp1065_prob:region:Fornix_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Fornix_L",
+          "prompt": "Locate Left Fornix and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Fornix. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Fornix_R",
+          "prompt": "Locate Right Fornix and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Fornix. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP004",
+      "title": "Arcuate source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Arcuate_Fasciculus_L",
+        "hcp1065_prob:region:Arcuate_Fasciculus_R",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+        "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L",
+        "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Arcuate_Fasciculus_L",
+          "prompt": "Locate Left Arcuate Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Arcuate Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Arcuate_Fasciculus_R",
+          "prompt": "Locate Right Arcuate Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Arcuate Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Frontal_Aslant_Tract_L",
+          "prompt": "Locate Left Frontal Aslant Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Frontal Aslant Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Frontal_Aslant_Tract_R",
+          "prompt": "Locate Right Frontal Aslant Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Frontal Aslant Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_L",
+          "prompt": "Locate Left Superior Longitudinal Fasciculus1 and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Superior Longitudinal Fasciculus1. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus1_R",
+          "prompt": "Locate Right Superior Longitudinal Fasciculus1 and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Superior Longitudinal Fasciculus1. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_L",
+          "prompt": "Locate Left Superior Longitudinal Fasciculus2 and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Superior Longitudinal Fasciculus2. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus2_R",
+          "prompt": "Locate Right Superior Longitudinal Fasciculus2 and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Superior Longitudinal Fasciculus2. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_L",
+          "prompt": "Locate Left Superior Longitudinal Fasciculus3 and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Superior Longitudinal Fasciculus3. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Superior_Longitudinal_Fasciculus3_R",
+          "prompt": "Locate Right Superior Longitudinal Fasciculus3 and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Superior Longitudinal Fasciculus3. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP005",
+      "title": "Ventral source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Uncinate_Fasciculus_L",
+        "hcp1065_prob:region:Uncinate_Fasciculus_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_L",
+          "prompt": "Locate Left Inferior Fronto Occipital Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Inferior Fronto Occipital Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Inferior_Fronto_Occipital_Fasciculus_R",
+          "prompt": "Locate Right Inferior Fronto Occipital Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Inferior Fronto Occipital Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_L",
+          "prompt": "Locate Left Inferior Longitudinal Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Inferior Longitudinal Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Inferior_Longitudinal_Fasciculus_R",
+          "prompt": "Locate Right Inferior Longitudinal Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Inferior Longitudinal Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Uncinate_Fasciculus_L",
+          "prompt": "Locate Left Uncinate Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Uncinate Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Uncinate_Fasciculus_R",
+          "prompt": "Locate Right Uncinate Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Uncinate Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP006",
+      "title": "Posterior association source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+        "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+        "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+        "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_L",
+          "prompt": "Locate Left Middle Longitudinal Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Middle Longitudinal Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Middle_Longitudinal_Fasciculus_R",
+          "prompt": "Locate Right Middle Longitudinal Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Middle Longitudinal Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Parietal_Aslant_Tract_L",
+          "prompt": "Locate Left Parietal Aslant Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Parietal Aslant Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Parietal_Aslant_Tract_R",
+          "prompt": "Locate Right Parietal Aslant Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Parietal Aslant Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Vertical_Occipital_Fasciculus_L",
+          "prompt": "Locate Left Vertical Occipital Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Vertical Occipital Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Vertical_Occipital_Fasciculus_R",
+          "prompt": "Locate Right Vertical Occipital Fasciculus and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Vertical Occipital Fasciculus. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP007",
+      "title": "Descending motor source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Corticobulbar_Tract_L",
+        "hcp1065_prob:region:Corticobulbar_Tract_R",
+        "hcp1065_prob:region:Corticospinal_Tract_L",
+        "hcp1065_prob:region:Corticospinal_Tract_R",
+        "hcp1065_prob:region:Reticulospinal_Tract_L",
+        "hcp1065_prob:region:Reticulospinal_Tract_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Corticobulbar_Tract_L",
+          "prompt": "Locate Left Corticobulbar Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticobulbar Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticobulbar_Tract_R",
+          "prompt": "Locate Right Corticobulbar Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticobulbar Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticospinal_Tract_L",
+          "prompt": "Locate Left Corticospinal Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticospinal Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticospinal_Tract_R",
+          "prompt": "Locate Right Corticospinal Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticospinal Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Reticulospinal_Tract_L",
+          "prompt": "Locate Left Reticulospinal Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Reticulospinal Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Reticulospinal_Tract_R",
+          "prompt": "Locate Right Reticulospinal Tract and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Reticulospinal Tract. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP008",
+      "title": "Corticopontine source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Corticopontine_Tract_Frontal_L",
+        "hcp1065_prob:region:Corticopontine_Tract_Frontal_R",
+        "hcp1065_prob:region:Corticopontine_Tract_Occipital_L",
+        "hcp1065_prob:region:Corticopontine_Tract_Occipital_R",
+        "hcp1065_prob:region:Corticopontine_Tract_Parietal_L",
+        "hcp1065_prob:region:Corticopontine_Tract_Parietal_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Corticopontine_Tract_Frontal_L",
+          "prompt": "Locate Left Corticopontine Tract Frontal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticopontine Tract Frontal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticopontine_Tract_Frontal_R",
+          "prompt": "Locate Right Corticopontine Tract Frontal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticopontine Tract Frontal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticopontine_Tract_Occipital_L",
+          "prompt": "Locate Left Corticopontine Tract Occipital and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticopontine Tract Occipital. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticopontine_Tract_Occipital_R",
+          "prompt": "Locate Right Corticopontine Tract Occipital and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticopontine Tract Occipital. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticopontine_Tract_Parietal_L",
+          "prompt": "Locate Left Corticopontine Tract Parietal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticopontine Tract Parietal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticopontine_Tract_Parietal_R",
+          "prompt": "Locate Right Corticopontine Tract Parietal and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticopontine Tract Parietal. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP009",
+      "title": "Corticostriatal source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Corticostriatal_Tract_Anterior_L",
+        "hcp1065_prob:region:Corticostriatal_Tract_Anterior_R",
+        "hcp1065_prob:region:Corticostriatal_Tract_Posterior_L",
+        "hcp1065_prob:region:Corticostriatal_Tract_Posterior_R",
+        "hcp1065_prob:region:Corticostriatal_Tract_Superior_L",
+        "hcp1065_prob:region:Corticostriatal_Tract_Superior_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Corticostriatal_Tract_Anterior_L",
+          "prompt": "Locate Left Corticostriatal Tract Anterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticostriatal Tract Anterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticostriatal_Tract_Anterior_R",
+          "prompt": "Locate Right Corticostriatal Tract Anterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticostriatal Tract Anterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticostriatal_Tract_Posterior_L",
+          "prompt": "Locate Left Corticostriatal Tract Posterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticostriatal Tract Posterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticostriatal_Tract_Posterior_R",
+          "prompt": "Locate Right Corticostriatal Tract Posterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticostriatal Tract Posterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticostriatal_Tract_Superior_L",
+          "prompt": "Locate Left Corticostriatal Tract Superior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Corticostriatal Tract Superior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Corticostriatal_Tract_Superior_R",
+          "prompt": "Locate Right Corticostriatal Tract Superior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Corticostriatal Tract Superior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP010",
+      "title": "Thalamic source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Thalamic_Radiation_Anterior_L",
+        "hcp1065_prob:region:Thalamic_Radiation_Anterior_R",
+        "hcp1065_prob:region:Thalamic_Radiation_Posterior_L",
+        "hcp1065_prob:region:Thalamic_Radiation_Posterior_R",
+        "hcp1065_prob:region:Thalamic_Radiation_Superior_L",
+        "hcp1065_prob:region:Thalamic_Radiation_Superior_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Thalamic_Radiation_Anterior_L",
+          "prompt": "Locate Left Thalamic Radiation Anterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Thalamic Radiation Anterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Thalamic_Radiation_Anterior_R",
+          "prompt": "Locate Right Thalamic Radiation Anterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Thalamic Radiation Anterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Thalamic_Radiation_Posterior_L",
+          "prompt": "Locate Left Thalamic Radiation Posterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Thalamic Radiation Posterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Thalamic_Radiation_Posterior_R",
+          "prompt": "Locate Right Thalamic Radiation Posterior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Thalamic Radiation Posterior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Thalamic_Radiation_Superior_L",
+          "prompt": "Locate Left Thalamic Radiation Superior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Thalamic Radiation Superior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Thalamic_Radiation_Superior_R",
+          "prompt": "Locate Right Thalamic Radiation Superior and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Thalamic Radiation Superior. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    },
+    {
+      "id": "NI-HP011",
+      "title": "Visual source probability fields",
+      "objective": "Locate the original population fields in the matching T1 and T2 template and compare the named source subdivisions.",
+      "instruction": "Select each source field, inspect its probability through the three native MRI planes, then rotate the complete 0.20 display surface. Switch between probability and binary mask to compare their meanings.",
+      "evidence_limit": "Original diffusion-tractography population inference in ICBM 2009a. The 0.20 surface is the declared display threshold; overlapping source probabilities remain independent.",
+      "structure_ids": [
+        "hcp1065_prob:region:Optic_Radiation_L",
+        "hcp1065_prob:region:Optic_Radiation_R"
+      ],
+      "steps": [
+        {
+          "structure_id": "hcp1065_prob:region:Optic_Radiation_L",
+          "prompt": "Locate Left Optic Radiation and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Left Optic Radiation. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        },
+        {
+          "structure_id": "hcp1065_prob:region:Optic_Radiation_R",
+          "prompt": "Locate Right Optic Radiation and compare its position with the visible companion source fields.",
+          "question": "Which original field and side are selected, and how does its probability overlay relate to the 0.20 display surface?",
+          "answer": "Right Optic Radiation. The overlay retains the original population probability; the displayed surface encloses samples at or above 0.20. Spatial overlap represents independent source fields."
+        }
+      ]
+    }
+  ]
+}

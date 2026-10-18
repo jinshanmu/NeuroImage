@@ -1,0 +1,192 @@
+{
+  "dataset_id": "brainstem_navigator",
+  "version": "1.0",
+  "status": "passed",
+  "checked_at_utc": "2026-10-11T14:05:55.145411+00:00",
+  "archive_crc": "all ZIP members passed",
+  "nifti_count": 522,
+  "nifti_header_validation": "all headers load with finite nonsingular affines",
+  "label_groups": [
+    {
+      "group": [
+        "1a.BrainstemNucleiAtlas_IIT",
+        "labels_probabilistic"
+      ],
+      "file_count": 76,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/1a.BrainstemNucleiAtlas_IIT/labels_probabilistic/CLi_RLi.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "1a.BrainstemNucleiAtlas_IIT",
+        "labels_thresholded_binary_0.35"
+      ],
+      "file_count": 76,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/1a.BrainstemNucleiAtlas_IIT/labels_thresholded_binary_0.35/CLi_RLi.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "1a.BrainstemNucleiAtlas_IIT",
+        "labels_thresholded_probabilistic_0.35"
+      ],
+      "file_count": 76,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/1a.BrainstemNucleiAtlas_IIT/labels_thresholded_probabilistic_0.35/CLi_RLi.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "1b.DiencephalicNucleiAtlas_IIT",
+        "labels_probabilistic"
+      ],
+      "file_count": 10,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/1b.DiencephalicNucleiAtlas_IIT/labels_probabilistic/LG_l.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "1b.DiencephalicNucleiAtlas_IIT",
+        "labels_thresholded_binary_0.35"
+      ],
+      "file_count": 10,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/1b.DiencephalicNucleiAtlas_IIT/labels_thresholded_binary_0.35/LG_l.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "1b.DiencephalicNucleiAtlas_IIT",
+        "labels_thresholded_probabilistic_0.35"
+      ],
+      "file_count": 10,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/1b.DiencephalicNucleiAtlas_IIT/labels_thresholded_probabilistic_0.35/LG_l.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "2a.BrainstemNucleiAtlas_MNI",
+        "labels_probabilistic"
+      ],
+      "file_count": 76,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_probabilistic/CLi_RLi.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "2a.BrainstemNucleiAtlas_MNI",
+        "labels_thresholded_binary_0.35"
+      ],
+      "file_count": 76,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_binary_0.35/CLi_RLi.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "2a.BrainstemNucleiAtlas_MNI",
+        "labels_thresholded_probabilistic_0.35"
+      ],
+      "file_count": 76,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/2a.BrainstemNucleiAtlas_MNI/labels_thresholded_probabilistic_0.35/CLi_RLi.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "2b.DiencephalicNucleiAtlas_MNI",
+        "labels_probabilistic"
+      ],
+      "file_count": 10,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_probabilistic/LG_l.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "2b.DiencephalicNucleiAtlas_MNI",
+        "labels_thresholded_binary_0.35"
+      ],
+      "file_count": 10,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_binary_0.35/LG_l.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    },
+    {
+      "group": [
+        "2b.DiencephalicNucleiAtlas_MNI",
+        "labels_thresholded_probabilistic_0.35"
+      ],
+      "file_count": 10,
+      "sample_path": "BrainstemNavigatorv1.0/1.0/2b.DiencephalicNucleiAtlas_MNI/labels_thresholded_probabilistic_0.35/LG_l.nii.gz",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "grid_consistency": "passed"
+    }
+  ],
+  "sample_headers": [
+    {
+      "path": "BrainstemNavigatorv1.0/1.0/1a.BrainstemNucleiAtlas_IIT/labels_probabilistic/CLi_RLi.nii.gz",
+      "shape": [
+        256,
+        256,
+        256
+      ],
+      "zooms": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "orientation": "RAS"
+    },
+    {
+      "path": "BrainstemNavigatorv1.0/1.0/1a.BrainstemNucleiAtlas_IIT/labels_probabilistic/CnF_l.nii.gz",
+      "shape": [
+        256,
+        256,
+        256
+      ],
+      "zooms": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "orientation": "RAS"
+    },
+    {
+      "path": "BrainstemNavigatorv1.0/1.0/1a.BrainstemNucleiAtlas_IIT/labels_probabilistic/CnF_r.nii.gz",
+      "shape": [
+        256,
+        256,
+        256
+      ],
+      "zooms": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "orientation": "RAS"
+    }
+  ],
+  "space_policy": "Retain supplied IIT/MNI spaces independently; registration to other templates remains implementation work",
+  "verification_limits": "Probability ranges are sampled once per label group. This is a file/geometry check, not anatomical correspondence validation.",
+  "license_files": [
+    "BrainstemNavigatorv1.0/1.0/Documentation/Copyright.txt"
+  ]
+}

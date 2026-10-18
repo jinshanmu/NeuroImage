@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software version and the original datasets you use. The associated manuscript is in preparation."
+type: software
+title: "NeuroImage Atlas"
+version: "0.15.0rc2"
+abstract: "A local platform for source-preserving neuroanatomy construction, exploration and teaching. The software distribution contains no acquired anatomical data."
+authors:
+  - family-names: "Jin"
+    given-names: "Shanmu"
+    orcid: "https://orcid.org/0009-0009-5346-753X"
+    affiliation: "Department of Neurosurgery, Peking Union Medical College Hospital, Beijing, China"
+license: Apache-2.0
+keywords:
+  - neuroanatomy
+  - neuroinformatics
+  - atlas
+  - provenance
+  - teaching

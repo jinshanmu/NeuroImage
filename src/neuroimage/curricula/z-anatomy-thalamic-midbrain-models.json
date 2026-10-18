@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-thalamic-midbrain-models",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Z-Anatomy \u00b7 Thalamic, hypothalamic and midbrain nuclear models",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "object-01",
+      "title": "Left Thalamus",
+      "selected": "z_anatomy:object:0408b7fa277f",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Thalamus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:21857d534637": 0.45,
+          "z_anatomy:object:1062900a3407": 0.45,
+          "z_anatomy:object:05560374e331": 0.45,
+          "z_anatomy:object:12657f57981d": 0.45,
+          "z_anatomy:object:dcbb4c9fb436": 0.45,
+          "z_anatomy:object:02b037e87ce1": 0.45,
+          "z_anatomy:object:95ee49ea7637": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-02",
+      "title": "Right Thalamus",
+      "selected": "z_anatomy:object:21857d534637",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Thalamus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0408b7fa277f": 0.45,
+          "z_anatomy:object:1062900a3407": 0.45,
+          "z_anatomy:object:05560374e331": 0.45,
+          "z_anatomy:object:12657f57981d": 0.45,
+          "z_anatomy:object:dcbb4c9fb436": 0.45,
+          "z_anatomy:object:02b037e87ce1": 0.45,
+          "z_anatomy:object:95ee49ea7637": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-03",
+      "title": "Left Red nucleus",
+      "selected": "z_anatomy:object:1062900a3407",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Red nucleus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0408b7fa277f": 0.45,
+          "z_anatomy:object:21857d534637": 0.45,
+          "z_anatomy:object:05560374e331": 0.45,
+          "z_anatomy:object:12657f57981d": 0.45,
+          "z_anatomy:object:dcbb4c9fb436": 0.45,
+          "z_anatomy:object:02b037e87ce1": 0.45,
+          "z_anatomy:object:95ee49ea7637": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-04",
+      "title": "Right Red nucleus",
+      "selected": "z_anatomy:object:05560374e331",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Red nucleus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0408b7fa277f": 0.45,
+          "z_anatomy:object:21857d534637": 0.45,
+          "z_anatomy:object:1062900a3407": 0.45,
+          "z_anatomy:object:12657f57981d": 0.45,
+          "z_anatomy:object:dcbb4c9fb436": 0.45,
+          "z_anatomy:object:02b037e87ce1": 0.45,
+          "z_anatomy:object:95ee49ea7637": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-05",
+      "title": "Left Medial geniculate body",
+      "selected": "z_anatomy:object:12657f57981d",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Medial geniculate body.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0408b7fa277f": 0.45,
+          "z_anatomy:object:21857d534637": 0.45,
+          "z_anatomy:object:1062900a3407": 0.45,
+          "z_anatomy:object:05560374e331": 0.45,
+          "z_anatomy:object:dcbb4c9fb436": 0.45,
+          "z_anatomy:object:02b037e87ce1": 0.45,
+          "z_anatomy:object:95ee49ea7637": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-06",
+      "title": "Right Medial geniculate body",
+      "selected": "z_anatomy:object:dcbb4c9fb436",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Medial geniculate body.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0408b7fa277f": 0.45,
+          "z_anatomy:object:21857d534637": 0.45,
+          "z_anatomy:object:1062900a3407": 0.45,
+          "z_anatomy:object:05560374e331": 0.45,
+          "z_anatomy:object:12657f57981d": 0.45,
+          "z_anatomy:object:02b037e87ce1": 0.45,
+          "z_anatomy:object:95ee49ea7637": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-07",
+      "title": "Habenula",
+      "selected": "z_anatomy:object:02b037e87ce1",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Habenula. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0408b7fa277f": 0.45,
+          "z_anatomy:object:21857d534637": 0.45,
+          "z_anatomy:object:1062900a3407": 0.45,
+          "z_anatomy:object:05560374e331": 0.45,
+          "z_anatomy:object:12657f57981d": 0.45,
+          "z_anatomy:object:dcbb4c9fb436": 0.45,
+          "z_anatomy:object:95ee49ea7637": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "object-08",
+      "title": "Hypothalamus",
+      "selected": "z_anatomy:object:95ee49ea7637",
+      "visible": [
+        "z_anatomy:object:0408b7fa277f",
+        "z_anatomy:object:21857d534637",
+        "z_anatomy:object:1062900a3407",
+        "z_anatomy:object:05560374e331",
+        "z_anatomy:object:12657f57981d",
+        "z_anatomy:object:dcbb4c9fb436",
+        "z_anatomy:object:02b037e87ce1",
+        "z_anatomy:object:95ee49ea7637",
+        "z_anatomy:object:b065572dae55",
+        "z_anatomy:object:146bc9ae51df",
+        "z_anatomy:object:f7ef3d00ca68",
+        "z_anatomy:object:37cada537bd0",
+        "z_anatomy:object:97dd9a331971"
+      ],
+      "prompt": "Compare the source thalamic and geniculate objects with separately named hypothalamic, habenular and midbrain nuclear models. These whole objects do not resolve all constituent nuclei.",
+      "note": "Original source object: Hypothalamus. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "display": {
+        "camera": [
+          210,
+          15,
+          1.1
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:0408b7fa277f": 0.45,
+          "z_anatomy:object:21857d534637": 0.45,
+          "z_anatomy:object:1062900a3407": 0.45,
+          "z_anatomy:object:05560374e331": 0.45,
+          "z_anatomy:object:12657f57981d": 0.45,
+          "z_anatomy:object:dcbb4c9fb436": 0.45,
+          "z_anatomy:object:02b037e87ce1": 0.45,
+          "z_anatomy:object:b065572dae55": 0.18,
+          "z_anatomy:object:146bc9ae51df": 0.18,
+          "z_anatomy:object:f7ef3d00ca68": 0.18,
+          "z_anatomy:object:37cada537bd0": 0.18,
+          "z_anatomy:object:97dd9a331971": 0.18
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+include LICENSE NOTICE README.md environment.yml requirements-core.lock.txt
+include CITATION.cff CHANGELOG.md CONTRIBUTING.md SECURITY.md requirements-dev.lock.txt
+include scripts/prepare_public_release.py
+include docs/release-candidate-validation.md docs/software-positioning.md docs/release-scope-and-roadmap.md
+include docs/detailed-anatomy-and-variation.md docs/native-inner-ear-ct.md
+include docs/installation-and-reproduction.md
+include config/anatomy-detail-inventory-2026-10-15.json config/anatomy-detail-navigation-2026-10-15.json
+include config/inner-ear-ct-construction-2026-10-15.json config/z-anatomy-detail-expansion-2026-10-15.json
+include config/normal-variation-expansion-2026-10-15.json config/thu-mra-verification-2026-10-15.json
+recursive-include .github *.yml
+include requirements-teaching.lock.txt
+include requirements-source-inspection.lock.txt
+include scripts/inspect_inner_ear_ct.py scripts/render_inner_ear_ct_inspection.py
+include scripts/audit_surface_volume.py
+include docs/development/inner-ear-ct-readiness-2026-10-14.md docs/development/surface-volume-correction-2026-10-14.md
+include package.json package-lock.json tsconfig.json vite.config.ts setup.cfg
+include .nvmrc
+include web/index.html
+recursive-include web/src *.ts *.tsx *.css
+recursive-include web/public *.svg *.txt
+recursive-include src/neuroimage *.py *.json *.html *.js *.css *.svg *.txt
+recursive-include tests *.py
+recursive-include schemas *.json
+recursive-include docs/licenses/software *.txt *.json
+include docs/package-readme.md docs/getting-started.md docs/atlas-format.md docs/anatomical-review.md docs/mida-source-model.md docs/development/browser-validation.md
+include scripts/build_distribution.py scripts/audit_code_release.py scripts/third_party_notices.mjs scripts/browser_smoke.js scripts/browser_geometry.js scripts/browser_comparison.js scripts/browser_review.js scripts/browser_model.js
+include scripts/check_browser_pixels.py
+include scripts/browser_teaching_restore.js
+include scripts/browser_probability.js scripts/check_probability_browser.py
+include docs/cit168-probability-evidence.md
+include docs/adapter-development.md
+include scripts/browser_markers.js scripts/check_marker_pixels.py
+include scripts/browser_notebook.js
+include scripts/browser_scene_pixels.js scripts/check_scene_pixels.py
+include scripts/prepare_teaching_notebook.py examples/spl-first-session.json
+include examples/spl-spatial-relations.json
+include scripts/browser_spatial.js scripts/check_spatial_browser.py
+include scripts/browser_teaching_delivery.js
+include docs/teaching-spatial-relations.md
+include docs/teaching-first-session.md docs/platform-design.md docs/development/implementation-notes.md
+include docs/project-scope.md docs/distribution-policy.md docs/local-validation.md
+include config/release-policy.json config/storage-policy.json
+include config/project-scope.json config/brainstem-verification.json config/first-session-teaching-verification.json
+include docs/dicom-source-readiness.md scripts/inspect_dicom_series.py
+include docs/hcp1065-streamlines.md examples/hcp1065-streamline-introduction.json
+include scripts/browser_streamlines.js scripts/check_streamline_browser.py
+include docs/brainstem-source-regions.md examples/brainstem-source-regions.json
+include scripts/browser_independent_regions.js scripts/check_independent_regions.py scripts/check_region_browser.py
+include docs/local-workspace.md scripts/browser_workspace.js
+include scripts/browser_large_view.js scripts/browser_large_view_teaching.js scripts/check_large_view.py
+include docs/specialist-modules.md scripts/browser_specialist_notebooks.js scripts/check_specialist_sources.py
+include scripts/browser_specialist_workspace.js scripts/browser_surface_cutaway.js scripts/check_surface_cutaway.py scripts/browser_surface_cutaway_teaching.js
+include scripts/browser_native_image.js scripts/check_native_image.py scripts/browser_native_image_teaching.js docs/native-mra-images.md
+include scripts/browser_volume_memory.js
+include scripts/browser_overview_navigation.js
+include scripts/browser_structure_search.js scripts/browser_workspace_history.js
+include scripts/browser_region_catalog.js scripts/check_region_catalog.py
+include scripts/browser_cursor_display.js scripts/check_cursor_display.py
+include docs/anatomy-browser.md docs/source-model-construction.md docs/native-statistical-fields.md
+include docs/native-image-and-skull-sources.md docs/normal-source-reconciliation.md docs/instructor-review-queue.md
+include scripts/browser_anatomy_home.js scripts/browser_source_models.js scripts/browser_named_model_lessons.js
+include scripts/browser_model_highlight.js scripts/browser_evidence_topics.js scripts/browser_hba_native.js
+include scripts/browser_native_frame.js scripts/browser_skull_mask.js scripts/verify_z_anatomy_source.py
+include scripts/browser_observation_notebooks.js scripts/browser_observation_review.js
+include scripts/prepare_review_context.py scripts/inspect_skull_mask_components.py
+include docs/source-cleaned-skull.md scripts/browser_source_skull.js
+include docs/teaching-library-and-courses.md docs/julich-native-construction.md docs/specialist-follow-up.md
+include scripts/browser_model_notebooks.js scripts/browser_julich_teaching.js scripts/browser_course.js scripts/browser_course_recovery.js
+include scripts/browser_course_plans.js scripts/browser_course_views.js
+include scripts/browser_large_3d_layout.js
+include scripts/browser_responsive_layout.js
+include scripts/browser_equal_anatomy_panels.js
+include scripts/browser_window_layout.js scripts/browser_page_flow.js
+include docs/nextbrain-native-readiness.md scripts/inspect_nextbrain_native.py
+include docs/source-annotation-teaching.md scripts/browser_source_annotations.js
+include docs/nextbrain-fine-anatomy.md
+include docs/bigbrain-fine-surfaces.md docs/thu-cerebral-mra.md docs/hcp1065-probability-fields.md
+include docs/suit-cerebellar-anatomy.md docs/z-cerebellar-ventricular-context.md
+include scripts/browser_nextbrain_fine_anatomy.js scripts/verify_fine_anatomy_browser.py
+include scripts/browser_bigbrain_fine_surfaces.js scripts/verify_model_browser.py
+include scripts/browser_thu_mra.js scripts/export_native_mra_projection.py
+include scripts/browser_hcp_probability.js scripts/verify_native_probability_source.py scripts/verify_hcp_probability_browser.py
+include scripts/browser_suit_cerebellum.js scripts/verify_suit_native_sources.py scripts/verify_suit_browser.py
+include scripts/browser_z_anatomy_fine_content.js scripts/browser_z_cerebellar_ventricular.js
+include scripts/inspect_nextbrain_blocks.py
+include config/anatomy-coverage-fine-2026-10-14.json config/preferred-atlas-packages-2026-10-14.json
+include config/nextbrain-case-scope-2026-10-13.json config/suit-source-scope-2026-10-14.json
+include config/nextbrain-fine-anatomy-verification-2026-10-14.json config/nextbrain-case2-brainstem-verification-2026-10-14.json
+include config/bigbrain-fine-surfaces-verification-2026-10-14.json config/thu-mra-verification-2026-10-14.json
+include config/hcp1065-probability-verification-2026-10-14.json config/suit-cerebellum-verification-2026-10-14.json
+include config/z-anatomy-fine-content-verification-2026-10-14.json config/z-cerebellar-ventricular-verification-2026-10-14.json
+include docs/z-cortical-surface-anatomy.md docs/integrated-fine-anatomy-teaching.md
+include scripts/verify_gifti_source.py scripts/verify_thu_mra_source.py
+include scripts/browser_z_cortical_surface.js scripts/browser_z_cortical_medial_framing.js scripts/browser_z_cortical_temporal_framing.js
+include scripts/browser_suit_nuclear_clarity.js scripts/browser_integrated_fine_courses.js
+include config/z-cortical-surface-verification-2026-10-14.json
+include docs/z-sellar-landmarks.md scripts/browser_sellar_landmarks.js
+include scripts/verify_integrated_fine_courses.py
+include config/z-sellar-landmarks-verification-2026-10-14.json
+prune node_modules
+prune web/node_modules
+prune src/neuroimage/__pycache__
+global-exclude __pycache__ *.py[cod] .DS_Store

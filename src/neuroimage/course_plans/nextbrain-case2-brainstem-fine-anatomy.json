@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "nextbrain-case2-brainstem-fine-anatomy",
+  "title": "NextBrain Case 2: brainstem fine anatomy and MRI",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore source-defined brainstem nuclei, cranial roots, fibre crossings and tract assignments in four original histological blocks with matching ex vivo MRI. Move from midbrain through pons to medulla while preserving each block extent.",
+  "views": [
+    {
+      "id": "view-001",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-01-context"
+    },
+    {
+      "id": "view-002",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-01-detail"
+    },
+    {
+      "id": "view-003",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-02-context"
+    },
+    {
+      "id": "view-004",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-02-detail"
+    },
+    {
+      "id": "view-005",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-03-context"
+    },
+    {
+      "id": "view-006",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-03-detail"
+    },
+    {
+      "id": "view-007",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-04-context"
+    },
+    {
+      "id": "view-008",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-04-detail"
+    },
+    {
+      "id": "view-009",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-05-context"
+    },
+    {
+      "id": "view-010",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-05-detail"
+    },
+    {
+      "id": "view-011",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-06-context"
+    },
+    {
+      "id": "view-012",
+      "curriculum": "nextbrain-case2-block07-fine-anatomy",
+      "view": "group-06-detail"
+    },
+    {
+      "id": "view-013",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-01-context"
+    },
+    {
+      "id": "view-014",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-01-detail"
+    },
+    {
+      "id": "view-015",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-02-context"
+    },
+    {
+      "id": "view-016",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-02-detail"
+    },
+    {
+      "id": "view-017",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-03-context"
+    },
+    {
+      "id": "view-018",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-03-detail"
+    },
+    {
+      "id": "view-019",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-04-context"
+    },
+    {
+      "id": "view-020",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-04-detail"
+    },
+    {
+      "id": "view-021",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-05-context"
+    },
+    {
+      "id": "view-022",
+      "curriculum": "nextbrain-case2-block06-fine-anatomy",
+      "view": "group-05-detail"
+    },
+    {
+      "id": "view-023",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-01-context"
+    },
+    {
+      "id": "view-024",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-01-detail"
+    },
+    {
+      "id": "view-025",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-02-context"
+    },
+    {
+      "id": "view-026",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-02-detail"
+    },
+    {
+      "id": "view-027",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-03-context"
+    },
+    {
+      "id": "view-028",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-03-detail"
+    },
+    {
+      "id": "view-029",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-04-context"
+    },
+    {
+      "id": "view-030",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-04-detail"
+    },
+    {
+      "id": "view-031",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-05-context"
+    },
+    {
+      "id": "view-032",
+      "curriculum": "nextbrain-case2-block16-fine-anatomy",
+      "view": "group-05-detail"
+    },
+    {
+      "id": "view-033",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-01-context"
+    },
+    {
+      "id": "view-034",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-01-detail"
+    },
+    {
+      "id": "view-035",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-02-context"
+    },
+    {
+      "id": "view-036",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-02-detail"
+    },
+    {
+      "id": "view-037",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-03-context"
+    },
+    {
+      "id": "view-038",
+      "curriculum": "nextbrain-case2-block38-fine-anatomy",
+      "view": "group-03-detail"
+    }
+  ]
+}

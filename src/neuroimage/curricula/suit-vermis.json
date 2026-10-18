@@ -1,0 +1,351 @@
+{
+  "schema_version": "1.0",
+  "id": "suit-vermis",
+  "dataset_id": "suit_cerebellum",
+  "required_source": {
+    "id": "suit_cerebellum",
+    "version": "Diedrichsen 2009/2011 anatomical atlas; Git 6857dfa732de6dd60c94da2f84d0b15ccf316618"
+  },
+  "title": "SUIT \u00b7 vermal compartments",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Locate each original vermal compartments assignment in source MRI, categorical surface and probability views.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "label-06-probability",
+      "title": "Vermis VI \u00b7 source probability",
+      "selected": "suit_cerebellum:label:6",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 6 (Vermis_VI). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:9": 0.3,
+          "suit_cerebellum:label:12": 0.3,
+          "suit_cerebellum:label:15": 0.3,
+          "suit_cerebellum:label:18": 0.3,
+          "suit_cerebellum:label:21": 0.3,
+          "suit_cerebellum:label:24": 0.3,
+          "suit_cerebellum:label:27": 0.3
+        }
+      }
+    },
+    {
+      "id": "label-09-probability",
+      "title": "Vermis CrusI \u00b7 source probability",
+      "selected": "suit_cerebellum:label:9",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 9 (Vermis_CrusI). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:6": 0.3,
+          "suit_cerebellum:label:12": 0.3,
+          "suit_cerebellum:label:15": 0.3,
+          "suit_cerebellum:label:18": 0.3,
+          "suit_cerebellum:label:21": 0.3,
+          "suit_cerebellum:label:24": 0.3,
+          "suit_cerebellum:label:27": 0.3
+        }
+      }
+    },
+    {
+      "id": "label-12-probability",
+      "title": "Vermis CrusII \u00b7 source probability",
+      "selected": "suit_cerebellum:label:12",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 12 (Vermis_CrusII). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:6": 0.3,
+          "suit_cerebellum:label:9": 0.3,
+          "suit_cerebellum:label:15": 0.3,
+          "suit_cerebellum:label:18": 0.3,
+          "suit_cerebellum:label:21": 0.3,
+          "suit_cerebellum:label:24": 0.3,
+          "suit_cerebellum:label:27": 0.3
+        }
+      }
+    },
+    {
+      "id": "label-15-probability",
+      "title": "Vermis VIIb \u00b7 source probability",
+      "selected": "suit_cerebellum:label:15",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 15 (Vermis_VIIb). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:6": 0.3,
+          "suit_cerebellum:label:9": 0.3,
+          "suit_cerebellum:label:12": 0.3,
+          "suit_cerebellum:label:18": 0.3,
+          "suit_cerebellum:label:21": 0.3,
+          "suit_cerebellum:label:24": 0.3,
+          "suit_cerebellum:label:27": 0.3
+        }
+      }
+    },
+    {
+      "id": "label-18-probability",
+      "title": "Vermis VIIIa \u00b7 source probability",
+      "selected": "suit_cerebellum:label:18",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 18 (Vermis_VIIIa). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:6": 0.3,
+          "suit_cerebellum:label:9": 0.3,
+          "suit_cerebellum:label:12": 0.3,
+          "suit_cerebellum:label:15": 0.3,
+          "suit_cerebellum:label:21": 0.3,
+          "suit_cerebellum:label:24": 0.3,
+          "suit_cerebellum:label:27": 0.3
+        }
+      }
+    },
+    {
+      "id": "label-21-probability",
+      "title": "Vermis VIIIb \u00b7 source probability",
+      "selected": "suit_cerebellum:label:21",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 21 (Vermis_VIIIb). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:6": 0.3,
+          "suit_cerebellum:label:9": 0.3,
+          "suit_cerebellum:label:12": 0.3,
+          "suit_cerebellum:label:15": 0.3,
+          "suit_cerebellum:label:18": 0.3,
+          "suit_cerebellum:label:24": 0.3,
+          "suit_cerebellum:label:27": 0.3
+        }
+      }
+    },
+    {
+      "id": "label-24-probability",
+      "title": "Vermis IX \u00b7 source probability",
+      "selected": "suit_cerebellum:label:24",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 24 (Vermis_IX). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:6": 0.3,
+          "suit_cerebellum:label:9": 0.3,
+          "suit_cerebellum:label:12": 0.3,
+          "suit_cerebellum:label:15": 0.3,
+          "suit_cerebellum:label:18": 0.3,
+          "suit_cerebellum:label:21": 0.3,
+          "suit_cerebellum:label:27": 0.3
+        }
+      }
+    },
+    {
+      "id": "label-27-probability",
+      "title": "Vermis X \u00b7 source probability",
+      "selected": "suit_cerebellum:label:27",
+      "visible": [
+        "suit_cerebellum:label:6",
+        "suit_cerebellum:label:9",
+        "suit_cerebellum:label:12",
+        "suit_cerebellum:label:15",
+        "suit_cerebellum:label:18",
+        "suit_cerebellum:label:21",
+        "suit_cerebellum:label:24",
+        "suit_cerebellum:label:27"
+      ],
+      "background": "t1",
+      "prompt": "Follow the selected source compartment in the original T1 sections and compare its three-dimensional position with the other visible compartments.",
+      "note": "Original source label 27 (Vermis_X). Source lobular atlas from 20 healthy young participants. Continuous support and delivered categorical boundaries are separate source products. Each native array retains its original physical coordinates.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          170,
+          15,
+          0.95
+        ],
+        "slice_zoom": 1.25,
+        "overlay": "probability",
+        "label_opacity": 0.45,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "center_on_target": false,
+        "surface_opacity": {
+          "suit_cerebellum:label:6": 0.3,
+          "suit_cerebellum:label:9": 0.3,
+          "suit_cerebellum:label:12": 0.3,
+          "suit_cerebellum:label:15": 0.3,
+          "suit_cerebellum:label:18": 0.3,
+          "suit_cerebellum:label:21": 0.3,
+          "suit_cerebellum:label:24": 0.3
+        }
+      }
+    }
+  ]
+}

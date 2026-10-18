@@ -1,0 +1,2459 @@
+{
+  "recorded_utc": "2026-10-14T13:03:37.995987+00:00",
+  "scope": "Exact accepted native packages. Counts are source-specific entries and source configurations, with overlapping anatomy retained independently. Expert review is recorded separately.",
+  "source_count": 33,
+  "upstream_source_families": 18,
+  "source_specific_structures": 1730,
+  "source_annotations": 18,
+  "builtin_sequences": 155,
+  "curricula_count": 60,
+  "curriculum_views": 581,
+  "course_plan_count": 24,
+  "course_plan_views": 553,
+  "installed_curricula": [
+    {
+      "id": "bigbrain-hippocampus-observation",
+      "dataset": "bigbrain_hippocampus",
+      "scenes": 14,
+      "representation": "surface-model"
+    },
+    {
+      "id": "bigbrain-layers-observation",
+      "dataset": "bigbrain_layers",
+      "scenes": 16,
+      "representation": "surface-model"
+    },
+    {
+      "id": "brainstem-expanded-regions",
+      "dataset": "brainstem_navigator_mni",
+      "scenes": 18,
+      "representation": "image-source"
+    },
+    {
+      "id": "brainstem-source-regions",
+      "dataset": "brainstem_navigator_mni",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "cerebra-source-foundations",
+      "dataset": "cerebra",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "cit168-probability-regions",
+      "dataset": "cit168_native",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "hba-native-t2-observation",
+      "dataset": "hba_native",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "hcp1065-probability-association",
+      "dataset": "hcp1065_prob",
+      "scenes": 22,
+      "representation": "image-source"
+    },
+    {
+      "id": "hcp1065-probability-commissural",
+      "dataset": "hcp1065_prob",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "hcp1065-probability-limbic",
+      "dataset": "hcp1065_prob",
+      "scenes": 12,
+      "representation": "image-source"
+    },
+    {
+      "id": "hcp1065-probability-projection",
+      "dataset": "hcp1065_prob",
+      "scenes": 26,
+      "representation": "image-source"
+    },
+    {
+      "id": "hcp1065-specialist-pathways",
+      "dataset": "hcp1065_tracts",
+      "scenes": 10,
+      "representation": "image-source"
+    },
+    {
+      "id": "source-streamline-introduction",
+      "dataset": "hcp1065_tracts",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "ixi-native-mra-observation",
+      "dataset": "ixi_mra",
+      "scenes": 4,
+      "representation": "image-source"
+    },
+    {
+      "id": "julich-central-cortex",
+      "dataset": "julich_selected",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "julich-cerebellar-nuclei",
+      "dataset": "julich_selected",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "julich-deep-regions",
+      "dataset": "julich_selected",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "julich-medial-temporal",
+      "dataset": "julich_selected",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "mesoveins-native-observation",
+      "dataset": "mesoveins",
+      "scenes": 4,
+      "representation": "image-source"
+    },
+    {
+      "id": "mida-cranial-skull-context",
+      "dataset": "mida",
+      "scenes": 9,
+      "representation": "image-source"
+    },
+    {
+      "id": "mida-skull-cutaway",
+      "dataset": "mida",
+      "scenes": 4,
+      "representation": "image-source"
+    },
+    {
+      "id": "mouches-arterial-occurrence",
+      "dataset": "mouches_arteries",
+      "scenes": 5,
+      "representation": "image-source"
+    },
+    {
+      "id": "mug500-skull-observation",
+      "dataset": "mug500_healthy",
+      "scenes": 4,
+      "representation": "image-source"
+    },
+    {
+      "id": "mug500-source-skull-context",
+      "dataset": "mug500_source_mesh",
+      "scenes": 2,
+      "representation": "surface-model"
+    },
+    {
+      "id": "nextbrain-case1-block05-fine-anatomy",
+      "dataset": "nextbrain_case1_block05",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case1-block07-fine-anatomy",
+      "dataset": "nextbrain_case1_block07",
+      "scenes": 2,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case1-block08-fine-anatomy",
+      "dataset": "nextbrain_case1_block08",
+      "scenes": 4,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case1-block25-fine-anatomy",
+      "dataset": "nextbrain_case1_block25",
+      "scenes": 4,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case1-block33-fine-anatomy",
+      "dataset": "nextbrain_case1_block33",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case1-block41-fine-anatomy",
+      "dataset": "nextbrain_case1_block41",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case1-block45-fine-anatomy",
+      "dataset": "nextbrain_case1_block45",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case2-block06-fine-anatomy",
+      "dataset": "nextbrain_case2_block06",
+      "scenes": 10,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case2-block07-fine-anatomy",
+      "dataset": "nextbrain_case2_block07",
+      "scenes": 12,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case2-block16-fine-anatomy",
+      "dataset": "nextbrain_case2_block16",
+      "scenes": 10,
+      "representation": "image-source"
+    },
+    {
+      "id": "nextbrain-case2-block38-fine-anatomy",
+      "dataset": "nextbrain_case2_block38",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "spl-cisternal-regions",
+      "dataset": "spl_nac",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "normal-anatomy-first-session",
+      "dataset": "spl_nac",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "normal-anatomy-spatial-observations",
+      "dataset": "spl_nac",
+      "scenes": 6,
+      "representation": "image-source"
+    },
+    {
+      "id": "suit-deep-nuclei",
+      "dataset": "suit_cerebellum",
+      "scenes": 12,
+      "representation": "image-source"
+    },
+    {
+      "id": "suit-hemispheric-lobules",
+      "dataset": "suit_cerebellum",
+      "scenes": 20,
+      "representation": "image-source"
+    },
+    {
+      "id": "suit-vermis",
+      "dataset": "suit_cerebellum",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "thu-mra-case001-arterial-observation",
+      "dataset": "thu_mra_case001",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "thu-mra-case009-arterial-observation",
+      "dataset": "thu_mra_case009",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "thu-mra-case030-arterial-observation",
+      "dataset": "thu_mra_case030",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "venat-native-field-comparison",
+      "dataset": "venat",
+      "scenes": 8,
+      "representation": "image-source"
+    },
+    {
+      "id": "z-anatomy-arterial-context",
+      "dataset": "z_anatomy",
+      "scenes": 13,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-cerebellar-surface",
+      "dataset": "z_anatomy",
+      "scenes": 18,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-cerebellar-vermis",
+      "dataset": "z_anatomy",
+      "scenes": 13,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-cortical-frontal-central",
+      "dataset": "z_anatomy",
+      "scenes": 20,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-cortical-medial-basal",
+      "dataset": "z_anatomy",
+      "scenes": 16,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-cortical-temporal-parietal",
+      "dataset": "z_anatomy",
+      "scenes": 20,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-distal-arteries",
+      "dataset": "z_anatomy",
+      "scenes": 12,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-nerve-roots",
+      "dataset": "z_anatomy",
+      "scenes": 8,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-petrous-neuroanatomy",
+      "dataset": "z_anatomy",
+      "scenes": 4,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-sellar-landmarks",
+      "dataset": "z_anatomy",
+      "scenes": 18,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-skull-dura",
+      "dataset": "z_anatomy",
+      "scenes": 7,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-skull-landmarks",
+      "dataset": "z_anatomy",
+      "scenes": 18,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-venous-context",
+      "dataset": "z_anatomy",
+      "scenes": 5,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-ventricular-context",
+      "dataset": "z_anatomy",
+      "scenes": 7,
+      "representation": "surface-model"
+    },
+    {
+      "id": "z-anatomy-visual-auditory-pathways",
+      "dataset": "z_anatomy",
+      "scenes": 12,
+      "representation": "surface-model"
+    }
+  ],
+  "course_plans": [
+    {
+      "id": "bigbrain-fine-surface-anatomy",
+      "title": "BigBrain cortical layers and hippocampal subfields",
+      "objective": "Study histology-derived cortical boundary and hippocampal source surfaces in their preserved native packages. Compare source definitions and observe folding without introducing a cross-atlas registration.",
+      "views": 30,
+      "requirements": [
+        {
+          "dataset_id": "bigbrain_hippocampus",
+          "curricula": [
+            "bigbrain-hippocampus-observation"
+          ]
+        },
+        {
+          "dataset_id": "bigbrain_layers",
+          "curricula": [
+            "bigbrain-layers-observation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cisternal-spatial-observation",
+      "title": "Cisternal regions: native image and spatial observation",
+      "objective": "Use source MRI, surrounding labelled anatomy and explicit teaching annotations to discuss cisternal regional relationships. Inspect the supplied T2 image in its independent native space.",
+      "views": 8,
+      "requirements": [
+        {
+          "dataset_id": "hba_native",
+          "curricula": [
+            "hba-native-t2-observation"
+          ]
+        },
+        {
+          "dataset_id": "spl_nac",
+          "curricula": [
+            "spl-cisternal-regions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cranial-nerve-context",
+      "title": "Cranial nerves: source objects and regional context",
+      "objective": "Inspect source-model nerve objects and roots, categorical tissue classes, supplied trajectories and brainstem source regions. Compare these independent representations with their stated source definitions.",
+      "views": 15,
+      "requirements": [
+        {
+          "dataset_id": "brainstem_navigator_mni",
+          "curricula": [
+            "brainstem-expanded-regions"
+          ]
+        },
+        {
+          "dataset_id": "hcp1065_tracts",
+          "curricula": [
+            "hcp1065-specialist-pathways"
+          ]
+        },
+        {
+          "dataset_id": "mida",
+          "curricula": [
+            "mida-cranial-skull-context"
+          ]
+        },
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-nerve-roots"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hcp1065-association-limbic-probability",
+      "title": "Association and limbic white matter probability anatomy",
+      "objective": "Explore all 64 source probability fields and their corresponding original T1/T2 template samples. Follow association, limbic, projection and callosal subdivisions, with explicit probability and display-mask comparisons.",
+      "views": 34,
+      "requirements": [
+        {
+          "dataset_id": "hcp1065_prob",
+          "curricula": [
+            "hcp1065-probability-limbic",
+            "hcp1065-probability-association"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hcp1065-projection-commissural-probability",
+      "title": "Projection and callosal white matter probability anatomy",
+      "objective": "Explore all 64 source probability fields and their corresponding original T1/T2 template samples. Follow association, limbic, projection and callosal subdivisions, with explicit probability and display-mask comparisons.",
+      "views": 34,
+      "requirements": [
+        {
+          "dataset_id": "hcp1065_prob",
+          "curricula": [
+            "hcp1065-probability-commissural",
+            "hcp1065-probability-projection"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integrated-brainstem-cranial-anatomy",
+      "title": "Brainstem nuclei, root assignments and cranial-nerve context",
+      "objective": "Explore supplied cranial-nerve components, auditory and vestibular nuclei, selected midbrain and pontine nuclei, and lower cranial nuclear relationships. Each recorded view retains its source definitions and independent native coordinate frame.",
+      "views": 24,
+      "requirements": [
+        {
+          "dataset_id": "brainstem_navigator_mni",
+          "curricula": [
+            "brainstem-expanded-regions"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case2_block06",
+          "curricula": [
+            "nextbrain-case2-block06-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case2_block07",
+          "curricula": [
+            "nextbrain-case2-block07-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case2_block16",
+          "curricula": [
+            "nextbrain-case2-block16-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case2_block38",
+          "curricula": [
+            "nextbrain-case2-block38-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-petrous-neuroanatomy",
+            "z-anatomy-visual-auditory-pathways"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integrated-cerebellar-fine-anatomy",
+      "title": "Cerebellar surfaces, lobular fields and deep nuclei",
+      "objective": "Compare the supplied cerebellar surface model, original SUIT lobular and nuclear fields, and individual reconstructed cerebellar tissue labels. Each recorded view retains its source definitions and independent native coordinate frame.",
+      "views": 26,
+      "requirements": [
+        {
+          "dataset_id": "nextbrain_case1_block25",
+          "curricula": [
+            "nextbrain-case1-block25-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "suit_cerebellum",
+          "curricula": [
+            "suit-hemispheric-lobules",
+            "suit-vermis",
+            "suit-deep-nuclei"
+          ]
+        },
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-cerebellar-surface",
+            "z-anatomy-cerebellar-vermis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integrated-cortical-surface-layers",
+      "title": "Cortical folds, cytoarchitectonic assignments and layer boundaries",
+      "objective": "Explore central cortical surface objects, source cytoarchitectonic population assignments and reconstructed cortical layer-boundary sheets. Each recorded view retains its source definitions and independent native coordinate frame.",
+      "views": 17,
+      "requirements": [
+        {
+          "dataset_id": "bigbrain_layers",
+          "curricula": [
+            "bigbrain-layers-observation"
+          ]
+        },
+        {
+          "dataset_id": "julich_selected",
+          "curricula": [
+            "julich-central-cortex"
+          ]
+        },
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-cortical-frontal-central"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "integrated-hippocampal-fine-anatomy",
+      "title": "Hippocampal layers, subfields and white-matter context",
+      "objective": "Compare source-defined CA1 layers, dentate and CA4 regions, subiculum, midsurface and fornix-related context across original block reconstruction, surfaces and population fields. Each recorded view retains its source definitions and independent native coordinate frame.",
+      "views": 15,
+      "requirements": [
+        {
+          "dataset_id": "bigbrain_hippocampus",
+          "curricula": [
+            "bigbrain-hippocampus-observation"
+          ]
+        },
+        {
+          "dataset_id": "hcp1065_prob",
+          "curricula": [
+            "hcp1065-probability-limbic"
+          ]
+        },
+        {
+          "dataset_id": "julich_selected",
+          "curricula": [
+            "julich-medial-temporal"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case1_block05",
+          "curricula": [
+            "nextbrain-case1-block05-fine-anatomy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intracranial-foundations",
+      "title": "Intracranial anatomy: first teaching session",
+      "objective": "Identify source-labelled cortex, deep structures, ventricular spaces, brainstem and cerebellum in linked native MRI and 3D views.",
+      "views": 6,
+      "requirements": [
+        {
+          "dataset_id": "spl_nac",
+          "curricula": [
+            "spl-first-session"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nextbrain-case1-fine-anatomy",
+      "title": "NextBrain Case 1: histological fine anatomy and MRI",
+      "objective": "Explore hippocampal layers, amygdalar regions, thalamic nuclei, hypothalamic and basal forebrain subdivisions, and deep cerebellar nuclei in source-preserving native tissue blocks. Each block keeps its supplied grid and extent.",
+      "views": 38,
+      "requirements": [
+        {
+          "dataset_id": "nextbrain_case1_block05",
+          "curricula": [
+            "nextbrain-case1-block05-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case1_block07",
+          "curricula": [
+            "nextbrain-case1-block07-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case1_block08",
+          "curricula": [
+            "nextbrain-case1-block08-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case1_block25",
+          "curricula": [
+            "nextbrain-case1-block25-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case1_block33",
+          "curricula": [
+            "nextbrain-case1-block33-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case1_block41",
+          "curricula": [
+            "nextbrain-case1-block41-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case1_block45",
+          "curricula": [
+            "nextbrain-case1-block45-fine-anatomy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nextbrain-case2-brainstem-fine-anatomy",
+      "title": "NextBrain Case 2: brainstem fine anatomy and MRI",
+      "objective": "Explore source-defined brainstem nuclei, cranial roots, fibre crossings and tract assignments in four original histological blocks with matching ex vivo MRI. Move from midbrain through pons to medulla while preserving each block extent.",
+      "views": 38,
+      "requirements": [
+        {
+          "dataset_id": "nextbrain_case2_block06",
+          "curricula": [
+            "nextbrain-case2-block06-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case2_block07",
+          "curricula": [
+            "nextbrain-case2-block07-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case2_block16",
+          "curricula": [
+            "nextbrain-case2-block16-fine-anatomy"
+          ]
+        },
+        {
+          "dataset_id": "nextbrain_case2_block38",
+          "curricula": [
+            "nextbrain-case2-block38-fine-anatomy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regional-source-comparisons",
+      "title": "Regional anatomy across native source atlases",
+      "objective": "Observe source definitions of cortical, deep, ventricular, brainstem and cerebellar regions. Compare recorded views while retaining each source native space and evidence type.",
+      "views": 22,
+      "requirements": [
+        {
+          "dataset_id": "brainstem_navigator_mni",
+          "curricula": [
+            "brainstem-source-regions"
+          ]
+        },
+        {
+          "dataset_id": "cerebra",
+          "curricula": [
+            "cerebra-source-foundations"
+          ]
+        },
+        {
+          "dataset_id": "cit168_native",
+          "curricula": [
+            "cit168-probability-regions"
+          ]
+        },
+        {
+          "dataset_id": "julich_selected",
+          "curricula": [
+            "julich-central-cortex",
+            "julich-medial-temporal",
+            "julich-cerebellar-nuclei",
+            "julich-deep-regions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skull-base-context",
+      "title": "Skull base: source skull, dura and intracranial context",
+      "objective": "Observe original skull surfaces, source dural objects and surrounding categorical anatomy. Use reversible display cuts and independently inspect the corresponding skull mask sections.",
+      "views": 14,
+      "requirements": [
+        {
+          "dataset_id": "mida",
+          "curricula": [
+            "mida-skull-cutaway"
+          ]
+        },
+        {
+          "dataset_id": "mug500_healthy",
+          "curricula": [
+            "mug500-skull-observation"
+          ]
+        },
+        {
+          "dataset_id": "mug500_source_mesh",
+          "curricula": [
+            "mug500-source-skull-context"
+          ]
+        },
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-skull-dura"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suit-cerebellar-fine-anatomy",
+      "title": "Cerebellar lobules, vermis and deep nuclei",
+      "objective": "Explore all 34 source compartments in original SUIT coordinates, compare categorical surfaces with population probability fields and locate them in the matching T1 template.",
+      "views": 40,
+      "requirements": [
+        {
+          "dataset_id": "suit_cerebellum",
+          "curricula": [
+            "suit-hemispheric-lobules",
+            "suit-vermis",
+            "suit-deep-nuclei"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thu-mra-arterial-observation",
+      "title": "Cerebral arterial segments in healthy volunteer MRA",
+      "objective": "Follow actual MRA signal and original categorical segments within three healthy-volunteer source cases. Compare anterior, posterior and carotid segment courses and the case-specific extent of annotation. Each case retains its own source coordinate frame.",
+      "views": 24,
+      "requirements": [
+        {
+          "dataset_id": "thu_mra_case001",
+          "curricula": [
+            "thu-mra-case001-arterial-observation"
+          ]
+        },
+        {
+          "dataset_id": "thu_mra_case009",
+          "curricula": [
+            "thu-mra-case009-arterial-observation"
+          ]
+        },
+        {
+          "dataset_id": "thu_mra_case030",
+          "curricula": [
+            "thu-mra-case030-arterial-observation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vascular-source-observation",
+      "title": "Vascular anatomy: native images, fields and source models",
+      "objective": "Observe vascular signal, arterial occurrence, venous statistical fields and named anatomical source models in their own spaces. Explain the evidence represented by each view.",
+      "views": 18,
+      "requirements": [
+        {
+          "dataset_id": "ixi_mra",
+          "curricula": [
+            "ixi-native-mra-observation"
+          ]
+        },
+        {
+          "dataset_id": "mesoveins",
+          "curricula": [
+            "mesoveins-native-observation"
+          ]
+        },
+        {
+          "dataset_id": "mouches_arteries",
+          "curricula": [
+            "mouches-arterial-occurrence"
+          ]
+        },
+        {
+          "dataset_id": "venat",
+          "curricula": [
+            "venat-native-field-comparison"
+          ]
+        },
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-arterial-context",
+            "z-anatomy-venous-context"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "white-matter-pathways",
+      "title": "White matter: supplied streamline pathways",
+      "objective": "Inspect association, projection, commissural, cerebellar and source-named cranial pathways with their reference MRI. Retain source trajectory vertices and display sampling records.",
+      "views": 10,
+      "requirements": [
+        {
+          "dataset_id": "hcp1065_tracts",
+          "curricula": [
+            "hcp1065-specialist-pathways"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z-anatomy-cerebellar-ventricular-context",
+      "title": "Cerebellar and ventricular source-model relationships",
+      "objective": "Explore the original model surfaces of cerebellar lobules, vermis, peduncular context, ventricles, aqueduct and choroid plexus.",
+      "views": 38,
+      "requirements": [
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-cerebellar-surface",
+            "z-anatomy-cerebellar-vermis",
+            "z-anatomy-ventricular-context"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z-anatomy-cortical-frontal-central",
+      "title": "Frontal and central cortical surface relationships",
+      "objective": "Explore original frontal, central, temporal, parietal, insular, medial and basal cortical surface objects within their source-model hemispheres.",
+      "views": 20,
+      "requirements": [
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-cortical-frontal-central"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z-anatomy-cortical-medial-basal",
+      "title": "Medial and basal cortical surface relationships",
+      "objective": "Explore original frontal, central, temporal, parietal, insular, medial and basal cortical surface objects within their source-model hemispheres.",
+      "views": 16,
+      "requirements": [
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-cortical-medial-basal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z-anatomy-cortical-temporal-parietal",
+      "title": "Temporal, parietal and insular surface relationships",
+      "objective": "Explore original frontal, central, temporal, parietal, insular, medial and basal cortical surface objects within their source-model hemispheres.",
+      "views": 20,
+      "requirements": [
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-cortical-temporal-parietal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z-anatomy-fine-neurovascular-context",
+      "title": "Source models: distal arteries, sensory pathways and petrous context",
+      "objective": "Explore named distal arterial branches, separate visual and auditory neural components, and petrous inner-ear relationships in one original source model.",
+      "views": 28,
+      "requirements": [
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-distal-arteries",
+            "z-anatomy-visual-auditory-pathways",
+            "z-anatomy-petrous-neuroanatomy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "z-anatomy-sellar-landmarks",
+      "title": "Sella, clinoid processes and sphenoidal grooves",
+      "objective": "Locate nine original author annotations in the source sphenoid model. Compare complete bone context with focused views of the sella, clinoid processes and adjacent grooves, retaining the original source locations and model geometry.",
+      "views": 18,
+      "requirements": [
+        {
+          "dataset_id": "z_anatomy",
+          "curricula": [
+            "z-anatomy-sellar-landmarks"
+          ]
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "dataset_id": "bigbrain_hippocampus",
+      "source_family": "bigbrain",
+      "manifest": "derivatives/bigbrain_hippocampus/3583b4ba664391c6/manifest.json",
+      "manifest_sha256": "44d988e6919678f0f9b6c7b9b4940ca584e7b1a50c993616eb080ac0c539b317",
+      "package_key": "bigbrain_hippocampus-3583b4ba664391c6",
+      "package_version": "3583b4ba664391c6",
+      "source_specific_structures": 14,
+      "volumes": 0,
+      "builtin_sequences": 3,
+      "representation": "surface-model",
+      "space": {
+        "id": "bigbrain-hippocampus-source-native",
+        "name": "BigBrain hippocampal subfields original surface coordinates",
+        "coordinate_system": "SOURCE_XYZ",
+        "units": "mm",
+        "reference": "Original self-contained GIfTI point arrays and triangle arrays in the BigBrain histological release. Embedded identity coordinate matrices are recorded.",
+        "correspondence": "Surfaces within this package share the author release coordinate convention. Separate datasets retain their own source spaces and definitions.",
+        "axis_status": "source_axes_not_anatomically_verified",
+        "unit_basis": "The BigBrain histological release and associated source paper describe surface distances and morphometry in millimeters. Original coordinates are retained with metric scale 1.0; no shrinkage correction is added."
+      },
+      "sources": [
+        {
+          "id": "bigbrain_hippocampus",
+          "title": "BigBrain hippocampal subfields",
+          "version": "BigBrainRelease.2015/Hippocampus_Segmentation/2021-01-21",
+          "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Hippocampus_Segmentation/",
+          "citation": "DeKraker J, Lau JC, Ferko KM, Khan AR, Kohler S. Hippocampal subfields revealed through unfolding and unsupervised clustering of laminar and morphological features in 3D BigBrain. NeuroImage 206:116328 (2020). doi:10.1016/j.neuroimage.2019.116328. BigBrain foundation: Amunts K et al. Science 340:1472-1475 (2013), doi:10.1126/science.1235381. Original contributors: https://ftp.bigbrainproject.org/bigbrain-ftp/Credits.txt.",
+          "license_name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "license_file": "licenses/bigbrain_hippocampus.txt"
+        }
+      ],
+      "asset_count": 45,
+      "asset_bytes": 143271242,
+      "engineering_receipt": "config/bigbrain-fine-surfaces-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "8d22fc134e2feaa6321df22ceeff3f1c0fbc687c6459dd5c5455cd885229bc01",
+        "build.py": "18d9db17863492588fbc313714a60e541b9caae343387f92bfa3477d9e5f330b",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "model_build.py": "c6f9a53938166d3a9c51b5b2bdf3adf6bfee5d32fbdd580063c149fb7c15018a",
+        "model_geometry.py": "bc6fd0326f21511ecf9f929646e3d7e56b244e1153d1b7a572cc7c133481d638",
+        "gifti_extract.py": "2e2f0ecfce5fc8919353e5a76871526fffc78dcf85cf54c8eed16191d52c0786"
+      }
+    },
+    {
+      "dataset_id": "bigbrain_layers",
+      "source_family": "bigbrain",
+      "manifest": "derivatives/bigbrain_layers/28962750493fb674/manifest.json",
+      "manifest_sha256": "62e22330d88ddd9aed06e637f1059c626968a445b49944e74cc9414149703668",
+      "package_key": "bigbrain_layers-28962750493fb674",
+      "package_version": "28962750493fb674",
+      "source_specific_structures": 14,
+      "volumes": 0,
+      "builtin_sequences": 2,
+      "representation": "surface-model",
+      "space": {
+        "id": "bigbrain-layers-source-native",
+        "name": "BigBrain cortical laminar boundaries original surface coordinates",
+        "coordinate_system": "SOURCE_XYZ",
+        "units": "mm",
+        "reference": "Original self-contained GIfTI point arrays and triangle arrays in the BigBrain histological release. Embedded identity coordinate matrices are recorded.",
+        "correspondence": "Surfaces within this package share the author release coordinate convention. Separate datasets retain their own source spaces and definitions.",
+        "axis_status": "source_axes_not_anatomically_verified",
+        "unit_basis": "The BigBrain histological release and associated source paper describe surface distances and morphometry in millimeters. Original coordinates are retained with metric scale 1.0; no shrinkage correction is added."
+      },
+      "sources": [
+        {
+          "id": "bigbrain_layers",
+          "title": "BigBrain cortical laminar boundaries",
+          "version": "BigBrainRelease.2015/PLoSBiology2020/2021-06-08",
+          "url": "https://ftp.bigbrainproject.org/bigbrain-ftp/BigBrainRelease.2015/Layer_Segmentation/3D_Surfaces/PLoSBiology2020/",
+          "citation": "Wagstyl K et al. BigBrain 3D atlas of cortical layers: Cortical and laminar thickness gradients diverge in sensory and motor cortices. PLoS Biology 18:e3000678 (2020). doi:10.1371/journal.pbio.3000678. BigBrain foundation: Amunts K et al. Science 340:1472-1475 (2013), doi:10.1126/science.1235381. Original contributors: https://ftp.bigbrainproject.org/bigbrain-ftp/Credits.txt.",
+          "license_name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "license_file": "licenses/bigbrain_layers.txt"
+        }
+      ],
+      "asset_count": 45,
+      "asset_bytes": 119699502,
+      "engineering_receipt": "config/bigbrain-fine-surfaces-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "8d22fc134e2feaa6321df22ceeff3f1c0fbc687c6459dd5c5455cd885229bc01",
+        "build.py": "18d9db17863492588fbc313714a60e541b9caae343387f92bfa3477d9e5f330b",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "model_build.py": "c6f9a53938166d3a9c51b5b2bdf3adf6bfee5d32fbdd580063c149fb7c15018a",
+        "model_geometry.py": "bc6fd0326f21511ecf9f929646e3d7e56b244e1153d1b7a572cc7c133481d638",
+        "gifti_extract.py": "2e2f0ecfce5fc8919353e5a76871526fffc78dcf85cf54c8eed16191d52c0786"
+      }
+    },
+    {
+      "dataset_id": "brainstem_navigator_mni",
+      "source_family": "brainstem_navigator_mni",
+      "manifest": "derivatives/brainstem_navigator_mni/f753cbca5de01ac4/manifest.json",
+      "manifest_sha256": "0facef66226b6c2cb34cf4df174594d6f0c6fa331e1b55e8003bd9aea687b367",
+      "package_key": "brainstem_navigator_mni-f753cbca5de01ac4",
+      "package_version": "f753cbca5de01ac4",
+      "source_specific_structures": 86,
+      "volumes": 174,
+      "builtin_sequences": 9,
+      "representation": "mri-regions",
+      "space": {
+        "id": "brainstem-navigator-mni-v1",
+        "name": "Brainstem Navigator supplied MNI grid",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Brainstem Navigator 1.0 Readme and original BIlab template headers",
+        "correspondence": "The publisher supplies these independent masks, probabilities and BIlab T2-weighted/FA group averages in the same MNI grid. Exact grids are verified. The project performs no registration or resampling and establishes no new correspondence to other MNI atlas packages."
+      },
+      "sources": [
+        {
+          "id": "brainstem_navigator",
+          "title": "Brainstem Navigator: normal brainstem and diencephalic regions with BIlab MRI templates",
+          "version": "1.0 (2024-10-08)",
+          "url": "https://www.nitrc.org/projects/brainstemnavig/",
+          "citation": "Bianciardi et al. 2015, doi:10.1089/brain.2015.0347; Bianciardi et al. 2018, doi:10.1016/j.neuroimage.2017.04.070; Garcia-Gomar et al. 2019, doi:10.3389/fnins.2019.00764; Singh et al. 2020, doi:10.3389/fnins.2019.01425; Singh et al. 2021, doi:10.1089/brain.2020.0975; Garcia-Gomar et al. 2022 (online 2021), doi:10.1002/mds.28895. Retain the source copyright and acknowledgments.",
+          "license_name": "Brainstem Navigator non-commercial research terms; no external distribution of files or derived information",
+          "license_url": "https://www.nitrc.org/projects/brainstemnavig/",
+          "license_file": "licenses/brainstem_navigator.txt"
+        }
+      ],
+      "asset_count": 263,
+      "asset_bytes": 70458851,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "d44c1dc40db424c55865378d5f562b86fd40893bfb26cebe10fe3372e900dcc5",
+        "build.py": "b741a97ed2b1a9305c32701b842f330c3ef9dc052572c00901836fe3f02d5c9e",
+        "contracts.py": "c099bb0ae018b324e31595a7eb42b47ae87962e2b7bf1714897ade9f6c391c4f",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c",
+        "region_build.py": "3246f166dc355bdeb27b0116714952b581ae2724fc28dfc2833e2dfe33d2b84d"
+      }
+    },
+    {
+      "dataset_id": "cerebra",
+      "source_family": "cerebra",
+      "manifest": "derivatives/cerebra/41f2dadc334622e8/manifest.json",
+      "manifest_sha256": "343ff321aa0550d7644bcc38c4e8fd7329cc0e0e21cad28fcce601d2e66249fd",
+      "package_key": "cerebra-41f2dadc334622e8",
+      "package_version": "41f2dadc334622e8",
+      "source_specific_structures": 102,
+      "volumes": 3,
+      "builtin_sequences": 8,
+      "representation": "mri-labels",
+      "space": {
+        "id": "mni-icbm152-2009c-symmetric",
+        "name": "MNI ICBM152 2009c symmetric",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "CerebrA source release and ICBM152 nonlinear symmetric 2009c template",
+        "correspondence": "CerebrA is explicitly defined in this template space. Image and label shapes and affine matrices must match. No correspondence to SPL/NAC, MNI 2009a, asymmetric MNI or other packages is implied."
+      },
+      "sources": [
+        {
+          "id": "cerebra",
+          "title": "CerebrA",
+          "version": "2009c symmetric distribution; SHA256-pinned inputs",
+          "url": "https://nist.mni.mcgill.ca/cerebra/",
+          "citation": "Manera AL, Dadar M, Fonov V, Collins DL. CerebrA, registration and manual label correction of Mindboggle-101 atlas for MNI-ICBM152 template. Scientific Data 7, 237 (2020). doi:10.1038/s41597-020-0557-9.",
+          "license_name": "CC0 1.0 (data)",
+          "license_url": "https://gin.g-node.org/anamanera/CerebrA/raw/master/LICENSE",
+          "license_file": "licenses/cerebra.txt"
+        },
+        {
+          "id": "mni_09c_sym",
+          "title": "MNI ICBM152 nonlinear symmetric template",
+          "version": "2009c",
+          "url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+          "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033.",
+          "license_name": "MNI ICBM152 template terms",
+          "license_url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+          "license_file": "licenses/mni_09c_sym.html"
+        }
+      ],
+      "asset_count": 109,
+      "asset_bytes": 72988491,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "3880a8f0e2fc28aadc19ebad497b67e00769ef33c0a02646aa218af9504162d4",
+        "build.py": "a68d5237077696f1253968232d4c6d490a18d7da7d9b5eb811757fd91be7f5c6",
+        "contracts.py": "757438c8f201d06c4a3cf9160b6475d2a892bd961396038a1e6aef40d9de179c",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "6585fccc9569ef4dac0891bb856cb2d861d9a3b8a65772edfb109f0ab0164a24"
+      }
+    },
+    {
+      "dataset_id": "cit168_native",
+      "source_family": "cit168_native",
+      "manifest": "derivatives/cit168_native/12b74ee04d2fb842/manifest.json",
+      "manifest_sha256": "d34faf8b81dd695a40a37bd381dfeed2b51bbc6c0647ec311597b7f2fbb8e805",
+      "package_key": "cit168_native-12b74ee04d2fb842",
+      "package_version": "12b74ee04d2fb842",
+      "source_specific_structures": 16,
+      "volumes": 19,
+      "builtin_sequences": 5,
+      "representation": "mri-labels",
+      "space": {
+        "id": "cit168-native-700um",
+        "name": "CIT168 native population template",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Pauli, Nili and Tyszka (2018), native 700 micrometer T1w/T2w templates and OSF jkzwp snapshot",
+        "correspondence": "Images, categorical labels and probability channels share the delivered native grid. This package is not MNI space. No alignment with another atlas or individual is implied."
+      },
+      "sources": [
+        {
+          "id": "cit168_native",
+          "title": "CIT168 subcortical atlas",
+          "version": "Native 700 micrometer OSF snapshot; SHA256-pinned inputs",
+          "url": "https://osf.io/jkzwp/",
+          "citation": "Pauli WM, Nili AN, Tyszka JM. A high-resolution probabilistic in vivo atlas of human subcortical brain nuclei. Scientific Data 5, 180063 (2018). doi:10.1038/sdata.2018.63. Derived from Human Connectome Project data.",
+          "license_name": "Creative Commons Attribution 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_file": "licenses/cit168_native.html"
+        }
+      ],
+      "asset_count": 38,
+      "asset_bytes": 40617682,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "3880a8f0e2fc28aadc19ebad497b67e00769ef33c0a02646aa218af9504162d4",
+        "build.py": "a68d5237077696f1253968232d4c6d490a18d7da7d9b5eb811757fd91be7f5c6",
+        "contracts.py": "757438c8f201d06c4a3cf9160b6475d2a892bd961396038a1e6aef40d9de179c",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "6585fccc9569ef4dac0891bb856cb2d861d9a3b8a65772edfb109f0ab0164a24"
+      }
+    },
+    {
+      "dataset_id": "hba_native",
+      "source_family": "hba_native",
+      "manifest": "derivatives/hba_native/b130a9babcc07247/manifest.json",
+      "manifest_sha256": "6ea19cca3a423aa37c63864a31854f92aa1bd79cac702b7d81c73ab07f89d942",
+      "package_key": "hba_native-b130a9babcc07247",
+      "package_version": "b130a9babcc07247",
+      "source_specific_structures": 0,
+      "volumes": 1,
+      "builtin_sequences": 0,
+      "representation": "mri-volume",
+      "space": {
+        "id": "hba-sub01-acpc-v1",
+        "name": "HumanBrainAtlas sub-01 \u00b7 source ACPC T2 grid",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Original source NIfTI coded qform, millimeter units, 625 x 725 x 555 grid at 0.25 mm spacing.",
+        "correspondence": "The source authors skull stripped, averaged repeated scans and oriented the result to ACPC. The project preserves that delivered image and its masked background, introducing no further averaging, registration, resampling, segmentation or cross-dataset correspondence."
+      },
+      "sources": [
+        {
+          "id": "hba_native",
+          "title": "HumanBrainAtlas: an in vivo MRI dataset for detailed segmentations",
+          "version": "Averaged HBA 7T v1.0; sub-01 T2 file version 1",
+          "url": "https://osf.io/ckh5t/",
+          "citation": "Schira MM et al. HumanBrainAtlas: an in vivo MRI dataset for detailed segmentations. Brain Structure and Function (2023). doi:10.1007/s00429-023-02653-8. OSF ckh5t, Averaged HBA 7T v1.0, sub-01 T2, file version 1.",
+          "license_name": "CC BY-NC-SA 4.0 (image header and publication; full source notice retained)",
+          "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "license_file": "licenses/hba_native.txt"
+        }
+      ],
+      "asset_count": 4,
+      "asset_bytes": 734527276,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "13df685a926878443e9edb6a445f4318979533101be3b4e078094443027bafe7",
+        "build.py": "7647eb6f075f619e797527aa2928a9896876a2832f577b86163bb2a8f44b4bb0",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "volume_build.py": "754061d292257af7ca29d939a807e957772dfb35b3fe266c1a450ed1bb6cabbf"
+      }
+    },
+    {
+      "dataset_id": "hcp1065_prob",
+      "source_family": "hcp1065",
+      "manifest": "derivatives/hcp1065_prob/6cfd8af637420faa/manifest.json",
+      "manifest_sha256": "dffc5db41a235d4be675b83ca0f58798435d32af10afe9d91ffe78523405802b",
+      "package_key": "hcp1065_prob-6cfd8af637420faa",
+      "package_version": "6cfd8af637420faa",
+      "source_specific_structures": 64,
+      "volumes": 130,
+      "builtin_sequences": 11,
+      "representation": "mri-regions",
+      "space": {
+        "id": "mni-icbm152-2009a-asymmetric",
+        "name": "MNI ICBM152 2009a asymmetric \u00b7 native probability field",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "https://brain.labsolver.org/hcp_trk_atlas.html",
+        "correspondence": "The publisher specifies ICBM 2009a nonlinear asymmetric space. Exact original affine comparison yields index start [20,22,22] and shape [157,189,136] within each original MNI 2009a T1/T2 image; physical sample positions are identical."
+      },
+      "sources": [
+        {
+          "id": "hcp1065_prob",
+          "title": "HCP1065 population probability tract atlas",
+          "version": "Yeh 2022 probability coverage NIfTI release; SHA256 4577abce53e05c732a0d52c88f4ee2d63488bb685f664faad2ea44aa90be8e8b",
+          "url": "https://brain.labsolver.org/hcp_trk_atlas.html",
+          "citation": "Yeh FC. Population-based tract-to-region connectome of the human brain and its hierarchical topology. Nature Communications 13, 4933 (2022). doi:10.1038/s41467-022-32595-4. Derived from Human Connectome Project data; retain the accompanying HCP acknowledgment.",
+          "license_name": "CC BY-SA 4.0; accompanying HCP acknowledgment",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "license_file": "licenses/hcp1065_prob.html"
+        },
+        {
+          "id": "mni_09a_asym",
+          "title": "MNI ICBM152 nonlinear asymmetric template",
+          "version": "2009a",
+          "url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+          "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033.",
+          "license_name": "MNI ICBM152 template terms",
+          "license_url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+          "license_file": "licenses/mni_09a_asym.html"
+        },
+        {
+          "id": "hcp_young_adult",
+          "title": "Human Connectome Project WU-Minn source acknowledgment",
+          "version": "WU-Minn open access data use terms, 2013-04-26; accompanying source release",
+          "url": "https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms",
+          "citation": "Data were provided in part by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657) funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University.",
+          "license_name": "WU-Minn HCP open access data use terms and acknowledgment",
+          "license_url": "https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms",
+          "license_file": "licenses/hcp_young_adult.html"
+        }
+      ],
+      "asset_count": 199,
+      "asset_bytes": 86786511,
+      "engineering_receipt": "config/hcp1065-probability-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "32e3abb8a9247c76665a9add98e4c9c33a56daf3cb1d8b2b0d223f6ea2efdc3a",
+        "build.py": "141d5987104fe082bb7ed6791b0b5cac7c6fc139373a74408c65f3b86c9a1b30",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "2658400e877297b65cc6ba22a1a36672096f67b023d09f77e683298ca9002b51",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "region_build.py": "a40a35edcbe876b48419c6af26d3a9320f45107d277850e0e188698fcf1ec78d"
+      }
+    },
+    {
+      "dataset_id": "hcp1065_tracts",
+      "source_family": "hcp1065",
+      "manifest": "derivatives/hcp1065_tracts/d646e779e4d93dce/manifest.json",
+      "manifest_sha256": "d759da10e098128fe0f9b6aeb8c10b6080dcd9d3cfe49c890afee40161d75b70",
+      "package_key": "hcp1065_tracts-d646e779e4d93dce",
+      "package_version": "d646e779e4d93dce",
+      "source_specific_structures": 87,
+      "volumes": 2,
+      "builtin_sequences": 14,
+      "representation": "mri-streamlines",
+      "space": {
+        "id": "mni-icbm152-2009a-asymmetric",
+        "name": "MNI ICBM152 2009a asymmetric",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "HCP1065 population-averaged tractography source declaration and original TrackVis headers",
+        "correspondence": "The source publisher explicitly places HCP1065 average streamlines in ICBM 2009a nonlinear asymmetric space and instructs insertion of the corresponding T1/T2 images. Header decoding and complete reference field-of-view coverage are checked. Anatomical fit remains unreviewed. No new registration, mirroring or relation to another template is introduced."
+      },
+      "sources": [
+        {
+          "id": "hcp1065_trk",
+          "title": "HCP1065 population-averaged tractography atlas",
+          "version": "Yeh 2022 TRK distribution; SHA256-pinned source archive",
+          "url": "https://brain.labsolver.org/hcp_trk_atlas.html",
+          "citation": "Yeh FC. Population-based tract-to-region connectome of the human brain and its hierarchical topology. Nature Communications 13, 4933 (2022). doi:10.1038/s41467-022-32595-4. Derived from Human Connectome Project data; retain the accompanying HCP acknowledgment.",
+          "license_name": "CC BY-SA 4.0; accompanying HCP acknowledgment",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "license_file": "licenses/hcp1065_trk.html"
+        },
+        {
+          "id": "mni_09a_asym",
+          "title": "MNI ICBM152 nonlinear asymmetric template",
+          "version": "2009a",
+          "url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+          "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033.",
+          "license_name": "MNI ICBM152 template terms",
+          "license_url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+          "license_file": "licenses/mni_09a_asym.html"
+        }
+      ],
+      "asset_count": 617,
+      "asset_bytes": 2000857639,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "33938f5567715b817e53f99407e723bafe7dec4df54bab6bcc477a5417ec1177",
+        "build.py": "d36e27829b93d170d5dad25cc7065c1cbef78627ca560f38c247fba6d41bff64",
+        "contracts.py": "c694d5b63ec07207addb303bd0d9770402b5c7b259caf8483859625ceef8e391",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c",
+        "streamlines.py": "f7a28c06571f6e955047bf9a916d31265704d632fdab5409d874a86969ab61af",
+        "streamline_build.py": "5f8bb8c6594eb54f5b8aa80207503581423e864afcd740c43fb354f6c74b9bb5"
+      }
+    },
+    {
+      "dataset_id": "ixi_mra",
+      "source_family": "ixi_mra",
+      "manifest": "derivatives/ixi_mra/ef40bd2a0f6f885d/manifest.json",
+      "manifest_sha256": "4b158252a698b8cb105f1ac3e4bcc58d40e6a9719382225dce3f364c280d868d",
+      "package_key": "ixi_mra-ef40bd2a0f6f885d",
+      "package_version": "ef40bd2a0f6f885d",
+      "source_specific_structures": 0,
+      "volumes": 1,
+      "builtin_sequences": 0,
+      "representation": "mri-volume",
+      "space": {
+        "id": "ixi002-guys-0828-mra-native",
+        "name": "IXI002 native MRA space",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Original IXI002-Guys-0828-MRA.nii.gz coded NIfTI forms and millimeter units",
+        "correspondence": "A single source acquisition retains its own oblique voxel-to-RAS affine. No registration to another subject, modality, atlas or AC-PC reference is asserted."
+      },
+      "sources": [
+        {
+          "id": "ixi_mra",
+          "title": "IXI normal healthy-subject MR dataset \u00b7 selected native MRA",
+          "version": "IXI-MRA archive snapshot 2026-10-11; IXI002-Guys-0828",
+          "url": "https://brain-development.org/ixi-dataset/",
+          "citation": "IXI \u2013 Information eXtraction from Images, EPSRC GR/S21533/02. Brain Development: IXI Dataset. https://brain-development.org/ixi-dataset/. Selected source: IXI002-Guys-0828-MRA.nii.gz.",
+          "license_name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "license_file": "licenses/ixi_mra.html"
+        }
+      ],
+      "asset_count": 4,
+      "asset_bytes": 14788760,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "d44c1dc40db424c55865378d5f562b86fd40893bfb26cebe10fe3372e900dcc5",
+        "build.py": "b741a97ed2b1a9305c32701b842f330c3ef9dc052572c00901836fe3f02d5c9e",
+        "contracts.py": "c099bb0ae018b324e31595a7eb42b47ae87962e2b7bf1714897ade9f6c391c4f",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c",
+        "volume_build.py": "a84dfe19637a3d162c0668aa2e37e6611510f2d06aa43f4a34657e2570b4791d"
+      }
+    },
+    {
+      "dataset_id": "julich_selected",
+      "source_family": "julich_selected",
+      "manifest": "derivatives/julich_selected/53ec2653119db4ba/manifest.json",
+      "manifest_sha256": "caaa2f4857cf406f25a62970a452bc1964b0f002ce2bab1987c1c2b11a4928e1",
+      "package_key": "julich_selected-53ec2653119db4ba",
+      "package_version": "53ec2653119db4ba",
+      "source_specific_structures": 314,
+      "volumes": 3,
+      "builtin_sequences": 4,
+      "representation": "mri-labels",
+      "space": {
+        "id": "mni-icbm152-2009c-asymmetric",
+        "name": "MNI ICBM152 2009c nonlinear asymmetric",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Julich-Brain 3.0.3 official source map configuration and ICBM152 2009c asymmetric reference",
+        "correspondence": "The publisher maps this MPM into ICBM152 nonlinear asymmetric 2009c. Original T1, T2 and MPM grids have equal shapes and affines. Source definitions remain specific to this atlas."
+      },
+      "sources": [
+        {
+          "id": "julich_selected",
+          "title": "Julich-Brain Atlas, cytoarchitectonic maps",
+          "version": "3.0.3",
+          "url": "https://doi.org/10.25493/56EM-75H",
+          "citation": "Amunts K, Eickhoff SB, Pieperhoff P, Bludau S, Caspers S, Mohlberg H, Lewis LB. Julich-Brain Atlas, cytoarchitectonic maps v3.0.3. EBRAINS. doi:10.25493/56EM-75H. Related method: Amunts K et al. Science 369, 988-992 (2020), doi:10.1126/science.abb4588.",
+          "license_name": "Creative Commons Attribution Non Commercial Share Alike 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+          "license_file": "licenses/julich_selected.json"
+        },
+        {
+          "id": "mni_09c_asym",
+          "title": "MNI ICBM152 nonlinear asymmetric reference",
+          "version": "2009c",
+          "url": "https://www.mcgill.ca/bic/software/tools-data-analysis/anatomical-mri/atlases/icbm152-non-linear-2009",
+          "citation": "Fonov VS et al. Unbiased average age-appropriate atlases for pediatric studies. NeuroImage 54 (2011), 313-327. doi:10.1016/j.neuroimage.2010.07.033. Original ICBM152 2009c asymmetric reference.",
+          "license_name": "MNI ICBM152 template terms (original COPYING)",
+          "license_url": "https://www.bic.mni.mcgill.ca/ServicesAtlases/ICBM152NLin2009",
+          "license_file": "licenses/mni_09c_asym"
+        }
+      ],
+      "asset_count": 321,
+      "asset_bytes": 93692865,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "29abd01b97fab710ac9fa123d0c978513914b4a3cf5a30e3c726b4f2cfbd7bf7",
+        "build.py": "708f8bd364236a80294254e3a69d1ebad793eeaecc2f8714c5a89def0599a1e9",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "label_mapping.py": "163684ec54740a5302fe3166659abc885acfcf88b40ea454fb7237685ceaac79"
+      }
+    },
+    {
+      "dataset_id": "mesoveins",
+      "source_family": "mesoveins",
+      "manifest": "derivatives/mesoveins/5deeb2cc2ff15ee8/manifest.json",
+      "manifest_sha256": "136a9e4cea1be5ecaa3078d2dc54f24d486a189ad0c286a14d33dd43a8170649",
+      "package_key": "mesoveins-5deeb2cc2ff15ee8",
+      "package_version": "5deeb2cc2ff15ee8",
+      "source_specific_structures": 0,
+      "volumes": 1,
+      "builtin_sequences": 0,
+      "representation": "mri-volume",
+      "space": {
+        "id": "mesoveins-sub01-ses06-run01-native",
+        "name": "Meso-vein participant 01 \u00b7 original run 01 space",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Original 572 x 572 x 370 x 3 NIfTI sequence, coded qform and sform, millimeter units, oblique voxel-to-RAS geometry.",
+        "correspondence": "One native source run, with exact selection of stored frame index 2. No motion correction, interpolation, averaging, vessel segmentation, cross-subject registration or correspondence with another atlas is added."
+      },
+      "sources": [
+        {
+          "id": "mesoveins",
+          "title": "Whole-brain meso-vein imaging in living humans using fast 7-T MRI",
+          "version": "10.5281/zenodo.19332208",
+          "url": "https://zenodo.org/records/19332208",
+          "citation": "Gulban OF et al. Whole-brain meso-vein imaging in living humans using fast 7-T MRI. Science Advances 12(2), eaea4540 (2026). doi:10.1126/sciadv.aea4540. Dataset doi:10.5281/zenodo.19332208. Selected original participant 01, session 06, run 01, stored echo frame 3.",
+          "license_name": "Creative Commons Attribution 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_file": "licenses/mesoveins.json"
+        }
+      ],
+      "asset_count": 5,
+      "asset_bytes": 721414693,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "35c21ef8b25d25666ea06ac8837651b7e3c2b88cdb1a57307fad28ac73d6d526",
+        "build.py": "7647eb6f075f619e797527aa2928a9896876a2832f577b86163bb2a8f44b4bb0",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c",
+        "volume_build.py": "754061d292257af7ca29d939a807e957772dfb35b3fe266c1a450ed1bb6cabbf"
+      }
+    },
+    {
+      "dataset_id": "mida",
+      "source_family": "mida",
+      "manifest": "derivatives/mida/3374505761bc6543/manifest.json",
+      "manifest_sha256": "d3388e6d51f3b3683610ee2fb23d7f9f079b11fc1255eb14e840f40ef0c6c3e4",
+      "package_key": "mida-3374505761bc6543",
+      "package_version": "3374505761bc6543",
+      "source_specific_structures": 51,
+      "volumes": 1,
+      "builtin_sequences": 10,
+      "representation": "label-model",
+      "space": {
+        "id": "mida-v1-native",
+        "name": "MIDA v1 native model space",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Delivered MIDA_v1.nii qform/sform and millimeter units",
+        "correspondence": "Preserve the delivered oblique voxel-to-RAS affine. Original MRI is not distributed. No correspondence to another dataset or to vendor STL coordinates is assumed."
+      },
+      "sources": [
+        {
+          "id": "mida",
+          "title": "MIDA anatomical model",
+          "version": "v1.0 voxel distribution; SHA256-pinned user-provided archive",
+          "url": "https://itis.swiss/virtual-population/regional-human-models/mida-model",
+          "citation": "Iacono MI et al. MIDA: A Multimodal Imaging-Based Detailed Anatomical Model of the Human Head and Neck. PLoS ONE 10(4), e0124126 (2015). doi:10.1371/journal.pone.0124126.",
+          "license_name": "ITIS MIDA License 2024",
+          "license_url": "https://itis.swiss/assets/Downloads/VirtualPopulation/License_Agreements/LicenseAgreementMIDA_2024.pdf",
+          "license_file": "licenses/mida.pdf"
+        }
+      ],
+      "asset_count": 55,
+      "asset_bytes": 269798973,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "d44c1dc40db424c55865378d5f562b86fd40893bfb26cebe10fe3372e900dcc5",
+        "build.py": "b741a97ed2b1a9305c32701b842f330c3ef9dc052572c00901836fe3f02d5c9e",
+        "contracts.py": "c099bb0ae018b324e31595a7eb42b47ae87962e2b7bf1714897ade9f6c391c4f",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c"
+      }
+    },
+    {
+      "dataset_id": "mouches_arteries",
+      "source_family": "mouches_arteries",
+      "manifest": "derivatives/mouches_arteries/b70c3929aa9c3de0/manifest.json",
+      "manifest_sha256": "93da6d187ad601fade895b9c075c12bf32beb9ec9517c1160924f0fc7bb2d6fb",
+      "package_key": "mouches_arteries-b70c3929aa9c3de0",
+      "package_version": "b70c3929aa9c3de0",
+      "source_specific_structures": 1,
+      "volumes": 3,
+      "builtin_sequences": 1,
+      "representation": "mri-regions",
+      "space": {
+        "id": "mouches-2019-native-05mm",
+        "name": "Mouches 2019 native arterial atlas",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "The authors' supplied 0.5 mm NIfTI affine and common TOF/probability grid",
+        "correspondence": "The source authors provide the TOF average and probability atlas as a matched pair. Identical delivered grids and affines are verified. Their study used MNI normalization, but this package establishes no correspondence to another MNI release or project atlas. No new registration or mirroring is applied."
+      },
+      "sources": [
+        {
+          "id": "mouches_arteries",
+          "title": "Healthy-subject cerebral artery occurrence atlas",
+          "version": "2019-v1",
+          "url": "https://springernature.figshare.com/articles/dataset/Vessel_Occurence_Probability_Atlas/7026179",
+          "citation": "Mouches P and Forkert ND. A statistical atlas of cerebral arteries generated using multi-center MRA datasets from healthy subjects. Scientific Data 6, 29 (2019). doi:10.1038/s41597-019-0034-5. Probability data: doi:10.6084/m9.figshare.7026179.v1.",
+          "license_name": "CC0 1.0 Universal",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/mouches_arteries.json"
+        },
+        {
+          "id": "mouches_tof",
+          "title": "Matched average TOF MRA reference",
+          "version": "2019-v1",
+          "url": "https://springernature.figshare.com/articles/dataset/Average_Time-of-Flight_magnetic_resonance_angiography_atlas/7026158",
+          "citation": "Mouches P and Forkert ND. A statistical atlas of cerebral arteries generated using multi-center MRA datasets from healthy subjects. Scientific Data 6, 29 (2019). doi:10.1038/s41597-019-0034-5. TOF reference: doi:10.6084/m9.figshare.7026158.v1.",
+          "license_name": "CC0 1.0 Universal",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/mouches_tof.json"
+        }
+      ],
+      "asset_count": 8,
+      "asset_bytes": 201978021,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "33938f5567715b817e53f99407e723bafe7dec4df54bab6bcc477a5417ec1177",
+        "build.py": "d36e27829b93d170d5dad25cc7065c1cbef78627ca560f38c247fba6d41bff64",
+        "contracts.py": "c694d5b63ec07207addb303bd0d9770402b5c7b259caf8483859625ceef8e391",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c",
+        "region_build.py": "3246f166dc355bdeb27b0116714952b581ae2724fc28dfc2833e2dfe33d2b84d"
+      }
+    },
+    {
+      "dataset_id": "mug500_healthy",
+      "source_family": "mug500",
+      "manifest": "derivatives/mug500_healthy/105c29c690b7272d/manifest.json",
+      "manifest_sha256": "eafc0cbfe2b9894182afd35cbf3d170e210121d05f364dc48f94075215e4c77a",
+      "package_key": "mug500_healthy-105c29c690b7272d",
+      "package_version": "105c29c690b7272d",
+      "source_specific_structures": 1,
+      "volumes": 1,
+      "builtin_sequences": 1,
+      "representation": "label-model",
+      "space": {
+        "id": "mug500-a0101-native",
+        "name": "MUG500+ A0101 original label grid",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Original A0101.nrrd LPS directions and origin, converted exactly to RAS millimeters. Header directions: 0.529296875, 0.529296875, 0.75 mm.",
+        "correspondence": "One source-designated healthy skull segmentation. No original CT intensities, cross-subject alignment, bone partition or correspondence with another atlas is asserted."
+      },
+      "sources": [
+        {
+          "id": "mug500_healthy",
+          "title": "MUG500+ healthy skull A0101",
+          "version": "10.6084/m9.figshare.9616319.v20",
+          "url": "https://figshare.com/articles/dataset/MUG500_Repository/9616319/20",
+          "citation": "Li J et al. MUG500+: Database of 500 high-resolution healthy human skulls and 29 craniotomy skulls and implants. Data in Brief 39:107524 (2021). doi:10.1016/j.dib.2021.107524. Only healthy skull A0101 is used. Dataset doi:10.6084/m9.figshare.9616319.v20.",
+          "license_name": "Creative Commons Attribution 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_file": "licenses/mug500_healthy.json"
+        }
+      ],
+      "asset_count": 5,
+      "asset_bytes": 57878533,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "13df685a926878443e9edb6a445f4318979533101be3b4e078094443027bafe7",
+        "build.py": "7647eb6f075f619e797527aa2928a9896876a2832f577b86163bb2a8f44b4bb0",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c"
+      }
+    },
+    {
+      "dataset_id": "mug500_source_mesh",
+      "source_family": "mug500",
+      "manifest": "derivatives/mug500_source_mesh/24d39ff684e5d6ce/manifest.json",
+      "manifest_sha256": "0f962555612633db87fa413167c96de729c1dc7b43efe2ca2a1d2f975824967b",
+      "package_key": "mug500_source_mesh-24d39ff684e5d6ce",
+      "package_version": "24d39ff684e5d6ce",
+      "source_specific_structures": 1,
+      "volumes": 0,
+      "builtin_sequences": 1,
+      "representation": "surface-model",
+      "space": {
+        "id": "mug500-a0101-source-stl",
+        "name": "Original MUG500+ A0101 author-cleaned mesh coordinates",
+        "coordinate_system": "SOURCE_XYZ",
+        "units": "mm",
+        "reference": "Original A0101_clear.stl facet coordinates from the pinned healthy A0101 archive; no project transform other than identity metric scaling.",
+        "correspondence": "Author-cleaned source surface. Original CT intensities are absent; no cross-source MRI alignment or newly rasterized segmentation is asserted. Original noisy binary sections remain a separate source package.",
+        "axis_status": "source_axes_not_anatomically_verified",
+        "unit_basis": "The primary Methods describe STL surfaces extracted from the corresponding original segmentation in millimeter sampling. Same-case original STL declares SPACE=RAS; direct source-mesh coordinate comparison is retained in config/mug500-source-mesh-verification.json. The independent viewer does not assign anatomical axis labels."
+      },
+      "sources": [
+        {
+          "id": "mug500_healthy",
+          "title": "MUG500+ healthy skull A0101",
+          "version": "10.6084/m9.figshare.9616319.v20",
+          "url": "https://figshare.com/articles/dataset/MUG500_Repository/9616319/20",
+          "citation": "Li J et al. MUG500+: Database of 500 high-resolution healthy human skulls and 29 craniotomy skulls and implants. Data in Brief 39:107524 (2021). doi:10.1016/j.dib.2021.107524. Only healthy skull A0101 is used. Dataset doi:10.6084/m9.figshare.9616319.v20.",
+          "license_name": "Creative Commons Attribution 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_file": "licenses/mug500_healthy.json"
+        }
+      ],
+      "asset_count": 6,
+      "asset_bytes": 51548922,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "9ad82b9b162e592796f1e1ac8afa72eada33d4630f82c68b07b661a6076323f0",
+        "build.py": "c9da43097e7f03db749eee9359c64e5d37e1f56b07b53162c4a86e5e1e7617a6",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "model_build.py": "f5db0a11405940b29c5e99aa4671262e5d745d4cf687518a0b9b2bb79ed73019",
+        "model_geometry.py": "bc6fd0326f21511ecf9f929646e3d7e56b244e1153d1b7a572cc7c133481d638",
+        "stl_extract.py": "9c3b40da759495e865b067357bd9553b4308a1cf70a52afc33e8239be8221031"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case1_block05",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case1_block05/2a76e6ca515b16ef/manifest.json",
+      "manifest_sha256": "56bfad7624268f0db01f98e9c4fca9113786c92756b3b9d9754acfa03a611599",
+      "package_key": "nextbrain_case1_block05-2a76e6ca515b16ef",
+      "package_version": "2a76e6ca515b16ef",
+      "source_specific_structures": 49,
+      "volumes": 2,
+      "builtin_sequences": 4,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case1-p57-16-native",
+        "name": "Case P57-16 native MRI and reconstructed block P3.3",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block P3.3 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 1: P57-16",
+          "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+          "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 54,
+      "asset_bytes": 36625029,
+      "engineering_receipt": "config/nextbrain-fine-anatomy-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case1_block07",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case1_block07/162d0a6bb81e32f6/manifest.json",
+      "manifest_sha256": "e3c1ddfc3aba8e7dc06cf1c59c7da10e8d2e119727c84d057b54998ca3ea8c62",
+      "package_key": "nextbrain_case1_block07-162d0a6bb81e32f6",
+      "package_version": "162d0a6bb81e32f6",
+      "source_specific_structures": 15,
+      "volumes": 2,
+      "builtin_sequences": 1,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case1-p57-16-native",
+        "name": "Case P57-16 native MRI and reconstructed block A3.2",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block A3.2 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 1: P57-16",
+          "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+          "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 20,
+      "asset_bytes": 39939722,
+      "engineering_receipt": "config/nextbrain-fine-anatomy-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case1_block08",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case1_block08/c382663422fb6ec9/manifest.json",
+      "manifest_sha256": "1c14f55d35cbe1ba0ac2b4e6b6ac819bd04ce1a44e3074776b75727ad359a8ff",
+      "package_key": "nextbrain_case1_block08-c382663422fb6ec9",
+      "package_version": "c382663422fb6ec9",
+      "source_specific_structures": 16,
+      "volumes": 2,
+      "builtin_sequences": 2,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case1-p57-16-native",
+        "name": "Case P57-16 native MRI and reconstructed block A2.3",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block A2.3 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 1: P57-16",
+          "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+          "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 21,
+      "asset_bytes": 32635659,
+      "engineering_receipt": "config/nextbrain-fine-anatomy-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case1_block25",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case1_block25/613e83c27c9484fb/manifest.json",
+      "manifest_sha256": "d747fa98a56c39cb38df90ad39c84e3d37e75f260d3c9bfc14c6c54922f18cd1",
+      "package_key": "nextbrain_case1_block25-613e83c27c9484fb",
+      "package_version": "613e83c27c9484fb",
+      "source_specific_structures": 7,
+      "volumes": 2,
+      "builtin_sequences": 2,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case1-p57-16-native",
+        "name": "Case P57-16 native MRI and reconstructed block C1.1",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block C1.1 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 1: P57-16",
+          "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+          "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 12,
+      "asset_bytes": 125621536,
+      "engineering_receipt": "config/nextbrain-fine-anatomy-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case1_block33",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case1_block33/6973746dc56fba92/manifest.json",
+      "manifest_sha256": "7ef4e0be94e674630020ff30b9cdd86dca00e05bd2a4771c01fd6b4c1d3d8c48",
+      "package_key": "nextbrain_case1_block33-6973746dc56fba92",
+      "package_version": "6973746dc56fba92",
+      "source_specific_structures": 125,
+      "volumes": 2,
+      "builtin_sequences": 3,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case1-p57-16-native",
+        "name": "Case P57-16 native MRI and reconstructed block P1.3",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block P1.3 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 1: P57-16",
+          "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+          "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 130,
+      "asset_bytes": 75825208,
+      "engineering_receipt": "config/nextbrain-fine-anatomy-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case1_block41",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case1_block41/335e70ef9a0e0e91/manifest.json",
+      "manifest_sha256": "d842a280ef6c757dda6cf8a2cf2962f150f0c1c1f9e018b5df90c9e60f598181",
+      "package_key": "nextbrain_case1_block41-335e70ef9a0e0e91",
+      "package_version": "335e70ef9a0e0e91",
+      "source_specific_structures": 85,
+      "volumes": 2,
+      "builtin_sequences": 3,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case1-p57-16-native",
+        "name": "Case P57-16 native MRI and reconstructed block P2.2",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block P2.2 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 1: P57-16",
+          "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+          "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 90,
+      "asset_bytes": 60905935,
+      "engineering_receipt": "config/nextbrain-fine-anatomy-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case1_block45",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case1_block45/b79c11e74431f091/manifest.json",
+      "manifest_sha256": "1a4646f3ee06e72e73b00cd30c2cde94f379c60e80aca9912cf9bb86327fa4f2",
+      "package_key": "nextbrain_case1_block45-b79c11e74431f091",
+      "package_version": "b79c11e74431f091",
+      "source_specific_structures": 136,
+      "volumes": 2,
+      "builtin_sequences": 4,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case1-p57-16-native",
+        "name": "Case P57-16 native MRI and reconstructed block A1.3",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 1 repository at 21b097d599fbeae883119c768ff7897dd438d4d2; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block A1.3 and ex vivo T2 MRI retain their supplied NIfTI grids in case P57-16 RAS coordinates. Histology supplies the fine regional assignments; MRI supplies the larger anatomical context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 1: P57-16",
+          "version": "Case 1; Git 21b097d599fbeae883119c768ff7897dd438d4d2",
+          "url": "https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 141,
+      "asset_bytes": 76945803,
+      "engineering_receipt": "config/nextbrain-fine-anatomy-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case2_block06",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case2_block06/c05d1368c39641db/manifest.json",
+      "manifest_sha256": "83b351c4be1a3debb6fd49fda915d3223900bc9bf7a415a5ef6ba4bad44a46fc",
+      "package_key": "nextbrain_case2_block06-c05d1368c39641db",
+      "package_version": "c05d1368c39641db",
+      "source_specific_structures": 32,
+      "volumes": 2,
+      "builtin_sequences": 5,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case2-p41-16-native",
+        "name": "Case P41-16 native MRI and reconstructed block B2.1",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 2 repository at 9c29e15e2eef6db902296f53de636d57fc5aa6a1; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block B2.1 and ex vivo T2 MRI retain their supplied NIfTI grids in case P41-16 RAS coordinates. Histology supplies fine assignments; the source-processed MRI supplies spatial context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 2: P41-16",
+          "version": "Case 2; Git 9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "url": "https://github.com/UCL/NextBrain-Case-2/tree/9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 37,
+      "asset_bytes": 29155868,
+      "engineering_receipt": "config/nextbrain-case2-brainstem-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case2_block07",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case2_block07/6c0f1658a9056e7e/manifest.json",
+      "manifest_sha256": "fd5d533fe73dc7b136ba61bbd616571eb6e3a7d357746efd5f8905c89e624269",
+      "package_key": "nextbrain_case2_block07-6c0f1658a9056e7e",
+      "package_version": "6c0f1658a9056e7e",
+      "source_specific_structures": 46,
+      "volumes": 2,
+      "builtin_sequences": 6,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case2-p41-16-native",
+        "name": "Case P41-16 native MRI and reconstructed block B1.1",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 2 repository at 9c29e15e2eef6db902296f53de636d57fc5aa6a1; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block B1.1 and ex vivo T2 MRI retain their supplied NIfTI grids in case P41-16 RAS coordinates. Histology supplies fine assignments; the source-processed MRI supplies spatial context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 2: P41-16",
+          "version": "Case 2; Git 9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "url": "https://github.com/UCL/NextBrain-Case-2/tree/9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 51,
+      "asset_bytes": 23041151,
+      "engineering_receipt": "config/nextbrain-case2-brainstem-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case2_block16",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case2_block16/c363da4a31687a34/manifest.json",
+      "manifest_sha256": "7f933d0a4d9dd8d4257252f56792ef87a7207e0b5f4d451e63bb2c1b9cd19d97",
+      "package_key": "nextbrain_case2_block16-c363da4a31687a34",
+      "package_version": "c363da4a31687a34",
+      "source_specific_structures": 41,
+      "volumes": 2,
+      "builtin_sequences": 5,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case2-p41-16-native",
+        "name": "Case P41-16 native MRI and reconstructed block B3.1",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 2 repository at 9c29e15e2eef6db902296f53de636d57fc5aa6a1; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block B3.1 and ex vivo T2 MRI retain their supplied NIfTI grids in case P41-16 RAS coordinates. Histology supplies fine assignments; the source-processed MRI supplies spatial context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 2: P41-16",
+          "version": "Case 2; Git 9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "url": "https://github.com/UCL/NextBrain-Case-2/tree/9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 46,
+      "asset_bytes": 19894604,
+      "engineering_receipt": "config/nextbrain-case2-brainstem-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "nextbrain_case2_block38",
+      "source_family": "nextbrain",
+      "manifest": "derivatives/nextbrain_case2_block38/0c51242409cb8e18/manifest.json",
+      "manifest_sha256": "82b87bf9b0ccb01ed865d918cfbb57f6d888e882f7f35bb44b8ce78bff369971",
+      "package_key": "nextbrain_case2_block38-0c51242409cb8e18",
+      "package_version": "0c51242409cb8e18",
+      "source_specific_structures": 19,
+      "volumes": 2,
+      "builtin_sequences": 3,
+      "representation": "mri-labels",
+      "space": {
+        "id": "nextbrain-case2-p41-16-native",
+        "name": "Case P41-16 native MRI and reconstructed block B4.1",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Author Case 2 repository at 9c29e15e2eef6db902296f53de636d57fc5aa6a1; source NIfTI headers and block2slab mapping.",
+        "correspondence": "Source reconstructed histological block B4.1 and ex vivo T2 MRI retain their supplied NIfTI grids in case P41-16 RAS coordinates. Histology supplies fine assignments; the source-processed MRI supplies spatial context."
+      },
+      "sources": [
+        {
+          "id": "nextbrain_core",
+          "title": "NextBrain Case 2: P41-16",
+          "version": "Case 2; Git 9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "url": "https://github.com/UCL/NextBrain-Case-2/tree/9c29e15e2eef6db902296f53de636d57fc5aa6a1",
+          "citation": "Casamitjana A et al. A probabilistic histological atlas of the human brain for MRI segmentation. Nature (2025). doi:10.1038/s41586-025-09708-2. Original data deposit doi:10.5522/04/24243835.",
+          "license_name": "CC0 1.0 Universal; original UCL research-data deposit",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "license_file": "licenses/nextbrain_core.html"
+        }
+      ],
+      "asset_count": 24,
+      "asset_bytes": 12701005,
+      "engineering_receipt": "config/nextbrain-case2-brainstem-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "5ca0c831b9a3719ef1d08cee747b08e4afb7c664ad548f095bf117e24f91c277",
+        "build.py": "90ff7498c899cf9ed14f3603e2599de3f401723e00ad05658e5f5e50ad8ac053",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "33326fb680e6e727fd0d9ee0cc4e6dc2461c51886dd0f2013336ec748f604dd9"
+      }
+    },
+    {
+      "dataset_id": "spl_nac",
+      "source_family": "spl_nac",
+      "manifest": "derivatives/spl_nac/5540cfe690956d43/manifest.json",
+      "manifest_sha256": "80e999693c9fb16d46cf2311f86c8c1dbdbdeda79f77e8e3a5e723b652fd6f39",
+      "package_key": "spl_nac-5540cfe690956d43",
+      "package_version": "5540cfe690956d43",
+      "source_specific_structures": 105,
+      "volumes": 3,
+      "builtin_sequences": 8,
+      "representation": "mri-labels",
+      "space": {
+        "id": "spl-nac-a1-native-2017",
+        "name": "SPL/NAC A1 native space",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "January 2017 source NRRD physical coordinates",
+        "correspondence": "Same-volunteer MRI and source labels. Their affine origins differ by 0.5 mm on each world axis; each native grid is retained. No additional registration is applied."
+      },
+      "sources": [
+        {
+          "id": "spl_nac",
+          "title": "SPL/NAC Brain Atlas",
+          "version": "2017-01",
+          "url": "https://www.openanatomy.org/atlas-pages/atlas-spl-nac-brain.html",
+          "citation": "Halle, Talos, Jakab, Makris, Meier, Wald, Fischl and Kikinis. SPL/NAC Brain Atlas, January 2017. BWH and MGH. NIH P41 RR013218, P41 EB015902 and Google Faculty Research Award.",
+          "license_name": "3D Slicer License, Part B",
+          "license_url": "https://www.openanatomy.org/atlas-pages/slicer-license.html",
+          "license_file": "licenses/spl_nac.html"
+        }
+      ],
+      "asset_count": 112,
+      "asset_bytes": 34280556,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "3880a8f0e2fc28aadc19ebad497b67e00769ef33c0a02646aa218af9504162d4",
+        "build.py": "a68d5237077696f1253968232d4c6d490a18d7da7d9b5eb811757fd91be7f5c6",
+        "contracts.py": "757438c8f201d06c4a3cf9160b6475d2a892bd961396038a1e6aef40d9de179c",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "6585fccc9569ef4dac0891bb856cb2d861d9a3b8a65772edfb109f0ab0164a24"
+      }
+    },
+    {
+      "dataset_id": "suit_cerebellum",
+      "source_family": "suit_cerebellum",
+      "manifest": "derivatives/suit_cerebellum/8aedcbdb455603b3/manifest.json",
+      "manifest_sha256": "7509be93077c176516124560d38ae7a27e203516773e8773ae2b79f09e4ab963",
+      "package_key": "suit_cerebellum-8aedcbdb455603b3",
+      "package_version": "8aedcbdb455603b3",
+      "source_specific_structures": 34,
+      "volumes": 36,
+      "builtin_sequences": 3,
+      "representation": "mri-labels",
+      "space": {
+        "id": "suit-original-cerebellar-template",
+        "name": "Original SUIT cerebellar population template",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "DiedrichsenLab cerebellar_atlases at 6857dfa732de6dd60c94da2f84d0b15ccf316618; tpl-SUIT descriptors and original NIfTI affines.",
+        "correspondence": "The publisher provides the T1 template, categorical atlas and probability fields in SUIT space. Labels and probabilities retain their original negative X index direction; T1 retains its positive X index direction. Physical millimeter coordinates link all views."
+      },
+      "sources": [
+        {
+          "id": "suit_cerebellum",
+          "title": "SUIT anatomical cerebellar atlas and original template",
+          "version": "Diedrichsen 2009/2011 anatomical atlas; Git 6857dfa732de6dd60c94da2f84d0b15ccf316618",
+          "url": "https://github.com/DiedrichsenLab/cerebellar_atlases/tree/6857dfa732de6dd60c94da2f84d0b15ccf316618",
+          "citation": "Diedrichsen J (2006). A spatially unbiased atlas template of the human cerebellum. NeuroImage 33:127-138. Diedrichsen J et al. (2009). A probabilistic MR atlas of the human cerebellum. NeuroImage 46:39-46. Diedrichsen J et al. (2011). Imaging the deep cerebellar nuclei: A probabilistic atlas and normalization procedure. NeuroImage 54:1786-1794. Original definitions reference Schmahmann et al. (2000).",
+          "license_name": "Creative Commons Attribution-NonCommercial 3.0 Unported; specific SUIT template, associated files and atlases notice",
+          "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+          "license_file": "licenses/suit_cerebellum.txt"
+        }
+      ],
+      "asset_count": 73,
+      "asset_bytes": 6136460,
+      "engineering_receipt": "config/suit-cerebellum-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "32e3abb8a9247c76665a9add98e4c9c33a56daf3cb1d8b2b0d223f6ea2efdc3a",
+        "build.py": "fdf6c34081486bc2b48371a0fa5f394685eb6c580c8fd85ace0b91b304f6bfd2",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "2658400e877297b65cc6ba22a1a36672096f67b023d09f77e683298ca9002b51",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "source_lut.py": "a73e917da332478a3aea9b81c65fdb54e00d6ebfb05fbeabfad2771bddcc896e",
+        "source_probability.py": "71b1788250c7ade6e843e0fb2fc3185e2b892123ee4c8486583b90554d33b867"
+      }
+    },
+    {
+      "dataset_id": "thu_mra_case001",
+      "source_family": "thu_cerebral_mra",
+      "manifest": "derivatives/thu_mra_case001/3b4756cdbf0e57ca/manifest.json",
+      "manifest_sha256": "566e92cc0b90729029dca9416428a3fa3bcacb0a10bf3c48d39cc48583bd36b9",
+      "package_key": "thu_mra_case001-3b4756cdbf0e57ca",
+      "package_version": "3b4756cdbf0e57ca",
+      "source_specific_structures": 17,
+      "volumes": 2,
+      "builtin_sequences": 4,
+      "representation": "mri-labels",
+      "space": {
+        "id": "thu-mra-001-source-processed",
+        "name": "Healthy volunteer 001, original author-processed MRA grid",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+        "correspondence": "Original image and segmentation have identical MetaImage grids. Source author rigid preprocessing is retained. This package supplies no transform to another case, the original UNC acquisition or another atlas."
+      },
+      "sources": [
+        {
+          "id": "thu_cerebral_mra",
+          "title": "THU cerebral MRA annotations on the healthy UNC volunteer dataset",
+          "version": "Official preprocessed archive; SHA256 fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e; retrieved 2026-10-14",
+          "url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+          "citation": "Tan Z, Feng J, Lu W, Yin Y, Yang G, Zhou J. Multi-task global optimization-based method for vascular landmark detection. Computerized Medical Imaging and Graphics 114 (2024), 102364. doi:10.1016/j.compmedimag.2024.102364. Original healthy-volunteer imaging: UNC / TubeTK data collection.",
+          "license_name": "Publisher permission for noncommercial research and educational use",
+          "license_url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+          "license_file": "licenses/thu_cerebral_mra.html"
+        }
+      ],
+      "asset_count": 22,
+      "asset_bytes": 11687107,
+      "engineering_receipt": "config/thu-mra-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "32e3abb8a9247c76665a9add98e4c9c33a56daf3cb1d8b2b0d223f6ea2efdc3a",
+        "build.py": "141d5987104fe082bb7ed6791b0b5cac7c6fc139373a74408c65f3b86c9a1b30",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "3a658d4f6a79c7356f282289470041edd9d2487f443ef40eda62dfe1121f8594",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd"
+      }
+    },
+    {
+      "dataset_id": "thu_mra_case009",
+      "source_family": "thu_cerebral_mra",
+      "manifest": "derivatives/thu_mra_case009/74f45536d0575f3d/manifest.json",
+      "manifest_sha256": "8037e789afcd091e60054321354e345ad2a63ae9bc9e1ca3d6db729fec1d3d89",
+      "package_key": "thu_mra_case009-74f45536d0575f3d",
+      "package_version": "74f45536d0575f3d",
+      "source_specific_structures": 20,
+      "volumes": 2,
+      "builtin_sequences": 4,
+      "representation": "mri-labels",
+      "space": {
+        "id": "thu-mra-009-source-processed",
+        "name": "Healthy volunteer 009, original author-processed MRA grid",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+        "correspondence": "Original image and segmentation have identical MetaImage grids. Source author rigid preprocessing is retained. This package supplies no transform to another case, the original UNC acquisition or another atlas."
+      },
+      "sources": [
+        {
+          "id": "thu_cerebral_mra",
+          "title": "THU cerebral MRA annotations on the healthy UNC volunteer dataset",
+          "version": "Official preprocessed archive; SHA256 fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e; retrieved 2026-10-14",
+          "url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+          "citation": "Tan Z, Feng J, Lu W, Yin Y, Yang G, Zhou J. Multi-task global optimization-based method for vascular landmark detection. Computerized Medical Imaging and Graphics 114 (2024), 102364. doi:10.1016/j.compmedimag.2024.102364. Original healthy-volunteer imaging: UNC / TubeTK data collection.",
+          "license_name": "Publisher permission for noncommercial research and educational use",
+          "license_url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+          "license_file": "licenses/thu_cerebral_mra.html"
+        }
+      ],
+      "asset_count": 25,
+      "asset_bytes": 11868283,
+      "engineering_receipt": "config/thu-mra-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "32e3abb8a9247c76665a9add98e4c9c33a56daf3cb1d8b2b0d223f6ea2efdc3a",
+        "build.py": "141d5987104fe082bb7ed6791b0b5cac7c6fc139373a74408c65f3b86c9a1b30",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "3a658d4f6a79c7356f282289470041edd9d2487f443ef40eda62dfe1121f8594",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd"
+      }
+    },
+    {
+      "dataset_id": "thu_mra_case030",
+      "source_family": "thu_cerebral_mra",
+      "manifest": "derivatives/thu_mra_case030/7ab8af66974506c7/manifest.json",
+      "manifest_sha256": "0c3a1105b898ed1fb32ebf38aa1d3a0eae4f1b18f486fd2e3ec1ff14f42a68ac",
+      "package_key": "thu_mra_case030-7ab8af66974506c7",
+      "package_version": "7ab8af66974506c7",
+      "source_specific_structures": 19,
+      "volumes": 2,
+      "builtin_sequences": 4,
+      "representation": "mri-labels",
+      "space": {
+        "id": "thu-mra-030-source-processed",
+        "name": "Healthy volunteer 030, original author-processed MRA grid",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+        "correspondence": "Original image and segmentation have identical MetaImage grids. Source author rigid preprocessing is retained. This package supplies no transform to another case, the original UNC acquisition or another atlas."
+      },
+      "sources": [
+        {
+          "id": "thu_cerebral_mra",
+          "title": "THU cerebral MRA annotations on the healthy UNC volunteer dataset",
+          "version": "Official preprocessed archive; SHA256 fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e; retrieved 2026-10-14",
+          "url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+          "citation": "Tan Z, Feng J, Lu W, Yin Y, Yang G, Zhou J. Multi-task global optimization-based method for vascular landmark detection. Computerized Medical Imaging and Graphics 114 (2024), 102364. doi:10.1016/j.compmedimag.2024.102364. Original healthy-volunteer imaging: UNC / TubeTK data collection.",
+          "license_name": "Publisher permission for noncommercial research and educational use",
+          "license_url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+          "license_file": "licenses/thu_cerebral_mra.html"
+        }
+      ],
+      "asset_count": 24,
+      "asset_bytes": 11938985,
+      "engineering_receipt": "config/thu-mra-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "32e3abb8a9247c76665a9add98e4c9c33a56daf3cb1d8b2b0d223f6ea2efdc3a",
+        "build.py": "141d5987104fe082bb7ed6791b0b5cac7c6fc139373a74408c65f3b86c9a1b30",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "3a658d4f6a79c7356f282289470041edd9d2487f443ef40eda62dfe1121f8594",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd"
+      }
+    },
+    {
+      "dataset_id": "venat",
+      "source_family": "venat",
+      "manifest": "derivatives/venat/9c534558d7670c46/manifest.json",
+      "manifest_sha256": "77e40ed159437e21674a1a100dbfdbd046efd242f9178ace044dabab3e58149d",
+      "package_key": "venat-9c534558d7670c46",
+      "package_version": "9c534558d7670c46",
+      "source_specific_structures": 0,
+      "volumes": 7,
+      "builtin_sequences": 0,
+      "representation": "scalar-fields",
+      "space": {
+        "id": "venat-v4-source-grid",
+        "name": "VENAT v4 native atlas grid",
+        "coordinate_system": "RAS",
+        "units": "mm",
+        "reference": "Original NIfTI qform, code 1, millimeter units. The publisher describes MNI152 atlas space.",
+        "correspondence": "Seven fields share the exact supplied grid. No reference MRI accompanies this release. A shared MNI name does not validate overlay with another dataset; cross-source browsing remains independent."
+      },
+      "sources": [
+        {
+          "id": "venat",
+          "title": "VENAT \u00b7 twenty healthy participants with repeated 7 T QSM",
+          "version": "10.6084/m9.figshare.7205960.v4",
+          "url": "https://figshare.com/articles/dataset/VENAT_Probability_map_nii_gz/7205960/4",
+          "citation": "Huck et al. (2019), High resolution atlas of the venous brain vasculature from 7 T quantitative susceptibility maps. doi:10.1007/s00429-019-01919-4. Methods: Vascular atlas and Density Map. Data: doi:10.6084/m9.figshare.7205960.v4.",
+          "license_name": "Creative Commons Attribution 4.0 International",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "license_file": "licenses/venat.json"
+        }
+      ],
+      "asset_count": 10,
+      "asset_bytes": 166129245,
+      "engineering_receipt": "config/anatomy-coverage-integration-2026-10-13.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "6fbe6be1b6090f24d1d1c65b841559aaacc401a1ea41b1f8b980c07ac1aad742",
+        "build.py": "7647eb6f075f619e797527aa2928a9896876a2832f577b86163bb2a8f44b4bb0",
+        "contracts.py": "9004f5dffbd6e8cfb2698ab92e36d8ab29983a967e374725561d7391ebbbf894",
+        "geometry.py": "f4fe2df82f1b822b254d9b7a79a8a4b8189a0de6a0af725ca8b56dfd350dbdc1",
+        "lessons.py": "1f4a1ca87a68949274e1c2f30aa77010184926f0659916ad6a6df16e4780950c",
+        "volume_build.py": "004c581c5d84c0120ac14aa47734d2d9046a574bfae647a99e002373411748aa"
+      }
+    },
+    {
+      "dataset_id": "z_anatomy",
+      "source_family": "z_anatomy",
+      "manifest": "derivatives/z_anatomy/ea4ae67d89ec388a/manifest.json",
+      "manifest_sha256": "abd2fc4b35a96af5038a4c15a96c6dbcbea4ede874d50278e5af4c65b89d0b44",
+      "package_key": "z_anatomy-ea4ae67d89ec388a",
+      "package_version": "ea4ae67d89ec388a",
+      "source_specific_structures": 213,
+      "volumes": 0,
+      "builtin_sequences": 25,
+      "representation": "surface-model",
+      "space": {
+        "id": "z-anatomy-9de5d6912a1b-native-xyz",
+        "name": "Original Z-Anatomy world XYZ in millimeters",
+        "coordinate_system": "SOURCE_XYZ",
+        "units": "mm",
+        "reference": "Original Blender world transforms and METRIC scale_length 1.0; only source meters to millimeters are converted",
+        "correspondence": "Independent conceptual source model. No MRI, CT, other atlas or anatomical RAS alignment is asserted.",
+        "axis_status": "source_axes_not_anatomically_verified",
+        "unit_basis": "Original Blender scene METRIC unit system and scale_length 1.0; length_unit CENTIMETERS is a display preference. Original world values are multiplied by 1000, with no axis reflection or registration."
+      },
+      "sources": [
+        {
+          "id": "z_anatomy",
+          "title": "Z-Anatomy source model with retained third-party attribution",
+          "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc",
+          "url": "https://github.com/Z-Anatomy/Models-of-human-anatomy/tree/9de5d6912a1b0df9cab739d57f00e036b0496ddc",
+          "citation": "Kervyn G, Zielinski M and the Z-Anatomy contributors. Z-Anatomy, pinned source 9de5d6912a1b0df9cab739d57f00e036b0496ddc. Includes BodyParts3D and credited third-party models; retain the complete supplied attribution notices.",
+          "license_name": "Z-Anatomy CC BY-SA 4.0 with retained upstream notices and individual source terms",
+          "license_url": "https://github.com/Z-Anatomy/Models-of-human-anatomy/blob/9de5d6912a1b0df9cab739d57f00e036b0496ddc/License.txt",
+          "license_file": "licenses/z_anatomy.txt"
+        },
+        {
+          "id": "z_anatomy_attribution",
+          "title": "Original Z-Anatomy readme and contributor/source notices",
+          "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc",
+          "url": "https://raw.githubusercontent.com/Z-Anatomy/Models-of-human-anatomy/9de5d6912a1b0df9cab739d57f00e036b0496ddc/Readme.md",
+          "citation": "Z-Anatomy original readme: BodyParts3D; University of Dundee CAHID Cranial Nerves and Foramina; University of Washington; additional source credits as supplied. Object-level derivation assignments are not inferred.",
+          "license_name": "Original attribution: CC BY-SA 4.0; BodyParts3D notice CC BY-SA 2.1 Japan; Dundee cranial nerves and foramina CC BY 4.0; additional supplied source notices retained",
+          "license_url": "https://raw.githubusercontent.com/Z-Anatomy/Models-of-human-anatomy/9de5d6912a1b0df9cab739d57f00e036b0496ddc/License.txt",
+          "license_file": "licenses/z_anatomy_attribution.md"
+        }
+      ],
+      "asset_count": 643,
+      "asset_bytes": 35411099,
+      "engineering_receipt": "config/z-cortical-surface-verification-2026-10-14.json",
+      "construction_implementation_sha256": {
+        "adapters.py": "32e3abb8a9247c76665a9add98e4c9c33a56daf3cb1d8b2b0d223f6ea2efdc3a",
+        "build.py": "fdf6c34081486bc2b48371a0fa5f394685eb6c580c8fd85ace0b91b304f6bfd2",
+        "contracts.py": "c801e3376ff58fbea7f1f1ad27b30eb4650b88d1e88cc5bc3a754409ae724ca4",
+        "geometry.py": "2658400e877297b65cc6ba22a1a36672096f67b023d09f77e683298ca9002b51",
+        "lessons.py": "d64b07c369798ac146b8bf7be63ab4262b2956ceb1d37ffd9cfa2dea8949b8cd",
+        "model_build.py": "c6f9a53938166d3a9c51b5b2bdf3adf6bfee5d32fbdd580063c149fb7c15018a",
+        "model_geometry.py": "bc6fd0326f21511ecf9f929646e3d7e56b244e1153d1b7a572cc7c133481d638",
+        "blender_extract.py": "3a62491a636c04cab9a26891abb02b4826667b7910559a372b6caf8514e1340e"
+      }
+    }
+  ],
+  "expert_review_in_engineering_denominator": false
+}

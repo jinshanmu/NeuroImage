@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "id": "ixi-native-mra-observation",
+  "dataset_id": "ixi_mra",
+  "required_source": {
+    "id": "ixi_mra",
+    "version": "IXI-MRA archive snapshot 2026-10-11; IXI002-Guys-0828"
+  },
+  "title": "Native MRA observation, contrast and acquired coverage",
+  "author": "NeuroImage project",
+  "objective": "Use complete original sections and explicit source samples to compare image contrast, acquired coverage and three-dimensional intensity display without inventing anatomical labels.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "native-context",
+      "title": "Complete acquired sections and native image context",
+      "selected": null,
+      "visible": [],
+      "background": "mra",
+      "prompt": "Inspect the complete acquired sections and the oblique acquisition limits. Move through neighboring slices before magnifying at the cursor. Source image intensity is available independently of display contrast.",
+      "note": "One native IXI MRA acquisition, presented as original image intensity within its acquired slab. Begin with complete sections, adjust contrast, then magnify the recorded source voxel. Vessel naming, boundaries and connections are separate interpretation tasks. Each observation anchor identifies an explicit image sample. Other subjects and modalities retain independent spaces.",
+      "image_anchor": {
+        "volume_id": "mra",
+        "index": [
+          256,
+          256,
+          40
+        ],
+        "label": "Complete acquired sections and native image context",
+        "reference": "Original IXI002-Guys-0828 MRA acquisition and the declared source voxel; https://brain-development.org/ixi-dataset/"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "window": [
+          0,
+          150
+        ]
+      }
+    },
+    {
+      "id": "bright-signal",
+      "title": "Compare bright native signal at the same source point",
+      "selected": null,
+      "visible": [],
+      "background": "mra",
+      "prompt": "Compare with the preceding view at exactly the same physical location. A different display window emphasizes bright signal in the original acquisition. It does not segment named vessels. Return to the first view for surrounding tissue context.",
+      "note": "One native IXI MRA acquisition, presented as original image intensity within its acquired slab. Begin with complete sections, adjust contrast, then magnify the recorded source voxel. Vessel naming, boundaries and connections are separate interpretation tasks. Each observation anchor identifies an explicit image sample. Other subjects and modalities retain independent spaces.",
+      "image_anchor": {
+        "volume_id": "mra",
+        "index": [
+          256,
+          256,
+          40
+        ],
+        "label": "Compare bright native signal at the same source point",
+        "reference": "Original IXI002-Guys-0828 MRA acquisition and the declared source voxel; https://brain-development.org/ixi-dataset/"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "window": [
+          65,
+          250
+        ]
+      }
+    },
+    {
+      "id": "lower-acquired-slab",
+      "title": "Lower part of the acquired source slab",
+      "selected": null,
+      "visible": [],
+      "background": "mra",
+      "prompt": "Inspect this original source voxel and neighboring complete sections. The lower acquisition boundary limits what can be observed. Do not interpret outside-slab absence as absent anatomy.",
+      "note": "One native IXI MRA acquisition, presented as original image intensity within its acquired slab. Begin with complete sections, adjust contrast, then magnify the recorded source voxel. Vessel naming, boundaries and connections are separate interpretation tasks. Each observation anchor identifies an explicit image sample. Other subjects and modalities retain independent spaces.",
+      "image_anchor": {
+        "volume_id": "mra",
+        "index": [
+          256,
+          256,
+          20
+        ],
+        "label": "Lower part of the acquired source slab",
+        "reference": "Original IXI002-Guys-0828 MRA acquisition and the declared source voxel; https://brain-development.org/ixi-dataset/"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "window": [
+          0,
+          150
+        ]
+      }
+    },
+    {
+      "id": "upper-acquired-slab",
+      "title": "Upper part of the acquired source slab",
+      "selected": null,
+      "visible": [],
+      "background": "mra",
+      "prompt": "Follow the acquired superior slab using the same native coordinates. Discuss visible signal and coverage without assigning unverified source structure labels.",
+      "note": "One native IXI MRA acquisition, presented as original image intensity within its acquired slab. Begin with complete sections, adjust contrast, then magnify the recorded source voxel. Vessel naming, boundaries and connections are separate interpretation tasks. Each observation anchor identifies an explicit image sample. Other subjects and modalities retain independent spaces.",
+      "image_anchor": {
+        "volume_id": "mra",
+        "index": [
+          256,
+          256,
+          80
+        ],
+        "label": "Upper part of the acquired source slab",
+        "reference": "Original IXI002-Guys-0828 MRA acquisition and the declared source voxel; https://brain-development.org/ixi-dataset/"
+      },
+      "display": {
+        "slice_zoom": 1.0,
+        "camera": [
+          110.0,
+          15.0,
+          1.4
+        ],
+        "center_on_target": false,
+        "image_context": true,
+        "window": [
+          0,
+          150
+        ]
+      }
+    }
+  ]
+}

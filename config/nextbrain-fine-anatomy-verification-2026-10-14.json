@@ -1,0 +1,147 @@
+{
+  "recorded_utc": "2026-10-14T09:39:06.633208+00:00",
+  "implementation_commit": "23effe4",
+  "development_version": "0.14.0",
+  "frontend_baseline": "0.13.3; source layout unchanged",
+  "source_commit": "21b097d599fbeae883119c768ff7897dd438d4d2",
+  "normal_case": "P57-16; Case 1; source-reported incidental findings: none",
+  "normal_scope_evidence": "config/nextbrain-case-scope-2026-10-13.json",
+  "acquisition": {
+    "files": 45,
+    "new_original_label_bytes": 16256206,
+    "shared_mri_lut_license_reused": true,
+    "common_recipe_receipts": "downloads/nextbrain_case1_block*/neuroimage-acquisition.json",
+    "remaining_hdd_free_gib": 1221.82
+  },
+  "source_block_entries": 433,
+  "distinct_source_labels_in_selected_blocks": 254,
+  "count_scope": "Distinct source label numbers in this case, with repeated labels across separate tissue blocks. Counts are separate from unique whole-brain anatomical structures.",
+  "packages": [
+    {
+      "recipe": "nextbrain_case1_block05",
+      "manifest": "derivatives/nextbrain_case1_block05/2a76e6ca515b16ef/manifest.json",
+      "structures": 49,
+      "seconds": 7.81,
+      "engineering_status": "passed",
+      "manifest_sha256": "56bfad7624268f0db01f98e9c4fca9113786c92756b3b9d9754acfa03a611599",
+      "package_bytes": 36751364,
+      "teaching_sequences": 4
+    },
+    {
+      "recipe": "nextbrain_case1_block07",
+      "manifest": "derivatives/nextbrain_case1_block07/162d0a6bb81e32f6/manifest.json",
+      "structures": 15,
+      "seconds": 8.07,
+      "engineering_status": "passed",
+      "manifest_sha256": "e3c1ddfc3aba8e7dc06cf1c59c7da10e8d2e119727c84d057b54998ca3ea8c62",
+      "package_bytes": 39988216,
+      "teaching_sequences": 1
+    },
+    {
+      "recipe": "nextbrain_case1_block08",
+      "manifest": "derivatives/nextbrain_case1_block08/c382663422fb6ec9/manifest.json",
+      "structures": 16,
+      "seconds": 5.68,
+      "engineering_status": "passed",
+      "manifest_sha256": "1c14f55d35cbe1ba0ac2b4e6b6ac819bd04ce1a44e3074776b75727ad359a8ff",
+      "package_bytes": 32687660,
+      "teaching_sequences": 2
+    },
+    {
+      "recipe": "nextbrain_case1_block33",
+      "manifest": "derivatives/nextbrain_case1_block33/6973746dc56fba92/manifest.json",
+      "structures": 125,
+      "seconds": 15.39,
+      "engineering_status": "passed",
+      "manifest_sha256": "7ef4e0be94e674630020ff30b9cdd86dca00e05bd2a4771c01fd6b4c1d3d8c48",
+      "package_bytes": 76114644,
+      "teaching_sequences": 3
+    },
+    {
+      "recipe": "nextbrain_case1_block25",
+      "manifest": "derivatives/nextbrain_case1_block25/613e83c27c9484fb/manifest.json",
+      "structures": 7,
+      "seconds": 24.31,
+      "engineering_status": "passed",
+      "manifest_sha256": "d747fa98a56c39cb38df90ad39c84e3d37e75f260d3c9bfc14c6c54922f18cd1",
+      "package_bytes": 125654371,
+      "teaching_sequences": 2
+    },
+    {
+      "recipe": "nextbrain_case1_block41",
+      "manifest": "derivatives/nextbrain_case1_block41/335e70ef9a0e0e91/manifest.json",
+      "structures": 85,
+      "seconds": 12.23,
+      "engineering_status": "passed",
+      "manifest_sha256": "d842a280ef6c757dda6cf8a2cf2962f150f0c1c1f9e018b5df90c9e60f598181",
+      "package_bytes": 61108189,
+      "teaching_sequences": 3
+    },
+    {
+      "recipe": "nextbrain_case1_block45",
+      "manifest": "derivatives/nextbrain_case1_block45/b79c11e74431f091/manifest.json",
+      "structures": 136,
+      "seconds": 16.17,
+      "engineering_status": "passed",
+      "manifest_sha256": "1a4646f3ee06e72e73b00cd30c2cde94f379c60e80aca9912cf9bb86327fa4f2",
+      "package_bytes": 77260100,
+      "teaching_sequences": 4
+    }
+  ],
+  "construction_receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/construction.json",
+  "unchanged_rebuild_receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/unchanged-rebuild.json",
+  "native_geometry_receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/native-block-inspection.json",
+  "native_geometry_summary": {
+    "selected_blocks": [
+      5,
+      7,
+      8,
+      25,
+      33,
+      41,
+      45
+    ],
+    "original_grids_and_values_preserved": true,
+    "source_ontology_exact_nearest_label_matches": 182,
+    "source_ontology_named_points": 214,
+    "maximum_distance_to_present_source_label_mm": 0.1690260531528428,
+    "source_ontology_absent_label_entries": [
+      {
+        "block": 45,
+        "source_name": "inferior_thalamic_peduncle\u00a0",
+        "source_label": 810
+      }
+    ],
+    "navigation_policy": "Atlas focus uses a real member voxel derived from the original 3D label, independently of source web navigation coordinates.",
+    "deferred_brainstem_blocks": [
+      9,
+      13,
+      16,
+      34
+    ],
+    "deferral_basis": "Separate source navigation points differ from the corresponding native 3D labels by up to 6.00-24.09 mm. Native source files are preserved for further correspondence review."
+  },
+  "source_table_notes": {
+    "unused_invalid_rgb_labels": [
+      835,
+      836
+    ],
+    "treatment": "Retain the original LUT. Validate all selected label colors; unused rows do not assign geometry. Shared source hierarchy groups are retained together."
+  },
+  "engineering_tests": {
+    "command": "python -m pytest -q tests/test_source_lut.py tests/test_label_mapping.py tests/test_pipeline.py",
+    "passed": 51
+  },
+  "teaching": {
+    "builtin_sequences": 19,
+    "curricula": 7,
+    "views": 38,
+    "course": "fc867627-24b6-540e-bdd7-bfcf97857812",
+    "receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/course-preparation.json",
+    "browser_acceptance": "passed",
+    "browser_receipt": "benchmarks/nextbrain_core/fine-anatomy-20261014/browser/acceptance.json",
+    "scene_restoration_cases": 7,
+    "export_archives": 16
+  },
+  "expert_review": "NBF-20261014-01 CA1 pair shown to the owner; review pending"
+}
