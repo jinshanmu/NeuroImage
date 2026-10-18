@@ -1,5 +1,5 @@
 {
-  "recorded_utc": "2026-10-18T16:38:45.248150+00:00",
+  "recorded_utc": "2026-10-18T17:12:34.321511+00:00",
   "software_version": "1.0.0",
   "scope": "Configured original-source entries and English teaching sequences. Counts retain overlapping and repeated source definitions.",
   "source_count": 39,
@@ -7,6 +7,7 @@
   "source_specific_structures": 1965,
   "builtin_sequences": 193,
   "source_annotations": 18,
+  "source_annotation_views": 36,
   "detailed_topics": 46,
   "curricula_count": 90,
   "curriculum_views": 796,
@@ -396,8 +397,8 @@
     {
       "dataset_id": "z_anatomy",
       "title": "Z-Anatomy \u00b7 independent cranial model",
-      "package_version": "116d469d946f0e96",
-      "manifest": "derivatives/z_anatomy/116d469d946f0e96/manifest.json",
+      "package_version": "060008dffc3a5669",
+      "manifest": "derivatives/z_anatomy/060008dffc3a5669/manifest.json",
       "representation": "surface-model",
       "structures": 350,
       "builtin_sequences": 41,
@@ -1043,6 +1044,5 @@
       "views": 18,
       "sources": 1
     }
-  ],
-  "source_annotation_views": 36
+  ]
 }

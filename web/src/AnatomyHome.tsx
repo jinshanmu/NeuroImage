@@ -24,7 +24,7 @@ function GroupCard({group,targets,busy,open,onExplore,topicCount=0}: {group:Brow
       <span>{group.kind==='variation'&&<span className="topic-kind">VARIATION</span>}<h2>{group.title}</h2><p>{group.description}</p></span><span className="entry-arrow" aria-hidden="true">↗</span>
     </button>
     <div className="anatomy-source">{target?<><label><span className="sr-only">Source for {group.title}</span><SelectField aria-label={'Source for '+group.title} value={target.dataset_id} onChange={event=>setChoice(event.target.value)} disabled={busy}>{choices.map(item=><option key={item.key} value={item.dataset_id}>{item.title}</option>)}</SelectField></label><small>{representation(target.representation)} · {choices.length} {choices.length===1?'source':'sources'}</small></>:<small>Build a source atlas to explore this group</small>}</div>
-    {onExplore&&topicCount>0&&<button className="anatomy-detail-link" disabled={busy} onClick={onExplore} aria-label={'Explore details for '+group.title}>Detailed anatomy <span>{topicCount} topics →</span></button>}
+    {onExplore&&topicCount>0&&<button className="anatomy-detail-link" disabled={busy} onClick={onExplore} aria-label={'Explore details for '+group.title}>Detailed anatomy <span>{topicCount} {topicCount===1?'topic':'topics'} →</span></button>}
   </article>
 }
 
