@@ -28,7 +28,7 @@ The 1.0.0 Z-Anatomy selection contains 350 original objects. The new 64 objects 
 | Occipital poles, gyri and sulcal landmarks | 14 | Lateral and medial occipital orientation |
 | Middle meningeal arterial model context | 4 | Supplied arterial branches and transparent skull-base bones |
 
-The **Advanced cortical surface anatomy** course combines the 60 cortical views. The dural arterial course contains the four remaining views. These objects retain the source's original geometry and combined naming. They are educational models in independent XYZ coordinates. Their bilateral shape is a model representation; individual anatomy is studied through measured-image sources.
+The **Advanced cortical surface anatomy** course combines the 60 cortical views. The dural arterial course contains the four remaining views. These objects retain the source's original geometry and combined naming. They are educational models in independent XYZ coordinates. Their bilateral shape is a model representation; individual anatomy is studied through measured-image sources. The seven advanced lessons include spatial explanations and linked anatomical readings under **Lesson evidence**. These readings describe anatomical relationships; the displayed source geometry and names remain those of Z-Anatomy.
 
 Other existing modules cover deep nuclear and brainstem regions, NextBrain tissue blocks, cerebellar probability fields, inner-ear CT, white-matter trajectories and source models. Source-based geometry and image checks accompany those modules; anatomical coverage depends on the supplied source definitions.
 

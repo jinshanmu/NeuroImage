@@ -22,7 +22,7 @@
         "z_anatomy:object:6d36daa5e529",
         "z_anatomy:object:a74c6306255a"
       ],
-      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+      "prompt": "Through which skull-base opening does the usual middle meningeal artery enter?",
       "note": "Original source object: Middle meningeal artery.l. Follow the supplied middle meningeal artery and accessory branch models in relation to the transparent temporal and sphenoid bones.",
       "display": {
         "camera": [
@@ -51,7 +51,7 @@
         "z_anatomy:object:de51bcc0183f",
         "z_anatomy:object:a74c6306255a"
       ],
-      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+      "prompt": "Through which skull-base opening does the usual middle meningeal artery enter?",
       "note": "Original source object: Middle meningeal artery.r. Follow the supplied middle meningeal artery and accessory branch models in relation to the transparent temporal and sphenoid bones.",
       "display": {
         "camera": [
@@ -80,7 +80,7 @@
         "z_anatomy:object:6d36daa5e529",
         "z_anatomy:object:a74c6306255a"
       ],
-      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+      "prompt": "How should this named source branch be compared with the main trunk?",
       "note": "Original source object: Accessory branch of middle meningeal artery.l. Follow the supplied middle meningeal artery and accessory branch models in relation to the transparent temporal and sphenoid bones.",
       "display": {
         "camera": [
@@ -109,7 +109,7 @@
         "z_anatomy:object:de51bcc0183f",
         "z_anatomy:object:a74c6306255a"
       ],
-      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+      "prompt": "How should this named source branch be compared with the main trunk?",
       "note": "Original source object: Accessory branch of middle meningeal artery.r. Follow the supplied middle meningeal artery and accessory branch models in relation to the transparent temporal and sphenoid bones.",
       "display": {
         "camera": [

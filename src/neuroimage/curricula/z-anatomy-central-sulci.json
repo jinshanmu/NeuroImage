@@ -25,7 +25,7 @@
         "z_anatomy:object:aa7ea3e17246",
         "z_anatomy:object:67d21c903861"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which gyrus lies between this sulcus and the central sulcus?",
       "note": "Original source object: Precentral sulcus (inferior part)*.l. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [
@@ -60,7 +60,7 @@
         "z_anatomy:object:1e67e3f080d1",
         "z_anatomy:object:9fb21d979962"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which gyrus lies between this sulcus and the central sulcus?",
       "note": "Original source object: Precentral sulcus (inferior part)*.r. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [
@@ -95,7 +95,7 @@
         "z_anatomy:object:aa7ea3e17246",
         "z_anatomy:object:67d21c903861"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which surface landmark separates this sulcus from the central sulcus?",
       "note": "Original source object: Precentral sulcus (Superior part)*.l. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [
@@ -130,7 +130,7 @@
         "z_anatomy:object:1e67e3f080d1",
         "z_anatomy:object:9fb21d979962"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which surface landmark separates this sulcus from the central sulcus?",
       "note": "Original source object: Precentral sulcus (Superior part)*.r. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [
@@ -165,7 +165,7 @@
         "z_anatomy:object:aa7ea3e17246",
         "z_anatomy:object:67d21c903861"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which gyrus lies between the postcentral and central sulci?",
       "note": "Original source object: Postcentral sulcus.l. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [
@@ -200,7 +200,7 @@
         "z_anatomy:object:1e67e3f080d1",
         "z_anatomy:object:9fb21d979962"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which gyrus lies between the postcentral and central sulci?",
       "note": "Original source object: Postcentral sulcus.r. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [
@@ -235,7 +235,7 @@
         "z_anatomy:object:aa7ea3e17246",
         "z_anatomy:object:67d21c903861"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which side of the paracentral lobule does this sulcus border?",
       "note": "Original source object: Paracentral sulcus.l. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [
@@ -270,7 +270,7 @@
         "z_anatomy:object:1e67e3f080d1",
         "z_anatomy:object:9fb21d979962"
       ],
-      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+      "prompt": "Which side of the paracentral lobule does this sulcus border?",
       "note": "Original source object: Paracentral sulcus.r. Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
       "display": {
         "camera": [

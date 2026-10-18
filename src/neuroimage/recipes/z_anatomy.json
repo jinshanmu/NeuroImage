@@ -4,7 +4,7 @@
   "source_version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc",
   "adapter": "blender-source-surfaces",
   "representation": "surface-model",
-  "title": "Z-Anatomy · independent cranial model",
+  "title": "Z-Anatomy \u00b7 independent cranial model",
   "construction_peak_gib": 3,
   "blender_version": "5.2.2 LTS",
   "source_scale_length": 1.0,
@@ -7622,50 +7622,56 @@
         {
           "structure_id": "z_anatomy:object:3742982918d8",
           "prompt": "Locate Left Precentral sulcus (inferior part) and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Left Precentral sulcus (inferior part). Original source object: Precentral sulcus (inferior part)*.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which gyrus lies between this sulcus and the central sulcus?",
+          "answer": "The precentral gyrus lies between the precentral and central sulci."
         },
         {
           "structure_id": "z_anatomy:object:a735df7572a6",
           "prompt": "Locate Right Precentral sulcus (inferior part) and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Right Precentral sulcus (inferior part). Original source object: Precentral sulcus (inferior part)*.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which gyrus lies between this sulcus and the central sulcus?",
+          "answer": "The precentral gyrus lies between the precentral and central sulci."
         },
         {
           "structure_id": "z_anatomy:object:129fd3bcf210",
           "prompt": "Locate Left Precentral sulcus (Superior part) and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Left Precentral sulcus (Superior part). Original source object: Precentral sulcus (Superior part)*.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which surface landmark separates this sulcus from the central sulcus?",
+          "answer": "The intervening precentral gyrus continues toward the medial paracentral region."
         },
         {
           "structure_id": "z_anatomy:object:9fa6b32b07b8",
           "prompt": "Locate Right Precentral sulcus (Superior part) and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Right Precentral sulcus (Superior part). Original source object: Precentral sulcus (Superior part)*.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which surface landmark separates this sulcus from the central sulcus?",
+          "answer": "The intervening precentral gyrus continues toward the medial paracentral region."
         },
         {
           "structure_id": "z_anatomy:object:469f4c57bcbf",
           "prompt": "Locate Left Postcentral sulcus and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Left Postcentral sulcus. Original source object: Postcentral sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which gyrus lies between the postcentral and central sulci?",
+          "answer": "The postcentral gyrus lies between these sulci, behind the central sulcus."
         },
         {
           "structure_id": "z_anatomy:object:91153eddef73",
           "prompt": "Locate Right Postcentral sulcus and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Right Postcentral sulcus. Original source object: Postcentral sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which gyrus lies between the postcentral and central sulci?",
+          "answer": "The postcentral gyrus lies between these sulci, behind the central sulcus."
         },
         {
           "structure_id": "z_anatomy:object:498932b9e645",
           "prompt": "Locate Left Paracentral sulcus and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Left Paracentral sulcus. Original source object: Paracentral sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which side of the paracentral lobule does this sulcus border?",
+          "answer": "The paracentral sulcus marks the anterior border of the medial paracentral lobule."
         },
         {
           "structure_id": "z_anatomy:object:45a26e822c72",
           "prompt": "Locate Right Paracentral sulcus and inspect its neighbors from two angles.",
-          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
-          "answer": "Right Paracentral sulcus. Original source object: Paracentral sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which side of the paracentral lobule does this sulcus border?",
+          "answer": "The paracentral sulcus marks the anterior border of the medial paracentral lobule."
+        }
+      ],
+      "references": [
+        {
+          "title": "Destrieux et al. (2010): Cortical gyri and sulci",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2937159/"
         }
       ]
     },
@@ -7699,86 +7705,96 @@
         {
           "structure_id": "z_anatomy:object:9c52a395c62b",
           "prompt": "Locate Left Orbital gyri (Frontomarginal gyrus and sulcus) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Left Orbital gyri (Frontomarginal gyrus and sulcus). Original source object: Orbital gyri (Frontomarginal gyrus and sulcus*).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where does the frontomarginal region meet the orbital surface?",
+          "answer": "The frontomarginal region occupies the transition from frontal pole to orbital cortex."
         },
         {
           "structure_id": "z_anatomy:object:1b81d786d919",
           "prompt": "Locate Right Orbital gyri (Frontomarginal gyrus and sulcus) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Right Orbital gyri (Frontomarginal gyrus and sulcus). Original source object: Orbital gyri (Frontomarginal gyrus and sulcus*).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where does the frontomarginal region meet the orbital surface?",
+          "answer": "The frontomarginal region occupies the transition from frontal pole to orbital cortex."
         },
         {
           "structure_id": "z_anatomy:object:974883cc2acc",
           "prompt": "Locate Left Orbital gyri and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Left Orbital gyri. Original source object: Orbital gyri.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which sulcal pattern organizes the orbital gyri?",
+          "answer": "Medial, lateral and transverse orbital sulci organize the inferior frontal surface."
         },
         {
           "structure_id": "z_anatomy:object:703f777e849e",
           "prompt": "Locate Right Orbital gyri and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Right Orbital gyri. Original source object: Orbital gyri.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which sulcal pattern organizes the orbital gyri?",
+          "answer": "Medial, lateral and transverse orbital sulci organize the inferior frontal surface."
         },
         {
           "structure_id": "z_anatomy:object:850043662331",
           "prompt": "Locate Left Orbital sulci (H-shaped orbital sulci) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Left Orbital sulci (H-shaped orbital sulci). Original source object: Orbital sulci (H-shaped orbital sulci*).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which components form the familiar orbital H pattern?",
+          "answer": "Two longitudinal orbital sulci connect through a transverse sulcus; their arrangement varies."
         },
         {
           "structure_id": "z_anatomy:object:53cc6782f5ba",
           "prompt": "Locate Right Orbital sulci (H-shaped orbital sulci) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Right Orbital sulci (H-shaped orbital sulci). Original source object: Orbital sulci (H-shaped orbital sulci*).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which components form the familiar orbital H pattern?",
+          "answer": "Two longitudinal orbital sulci connect through a transverse sulcus; their arrangement varies."
         },
         {
           "structure_id": "z_anatomy:object:6ed5bc9ba895",
           "prompt": "Locate Left Orbital sulci (Lateral Orbital sulcus) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Left Orbital sulci (Lateral Orbital sulcus). Original source object: Orbital sulci (Lateral Orbital sulcus*).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which orbital region lies lateral to this sulcus?",
+          "answer": "The lateral orbital gyrus lies lateral to the lateral orbital sulcus."
         },
         {
           "structure_id": "z_anatomy:object:6666d6648205",
           "prompt": "Locate Right Orbital sulci (Lateral Orbital sulcus) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Right Orbital sulci (Lateral Orbital sulcus). Original source object: Orbital sulci (Lateral Orbital sulcus*).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which orbital region lies lateral to this sulcus?",
+          "answer": "The lateral orbital gyrus lies lateral to the lateral orbital sulcus."
         },
         {
           "structure_id": "z_anatomy:object:93bf8c09c1c6",
           "prompt": "Locate Left Straight gyrus (Gyrus rectus) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Left Straight gyrus (Gyrus rectus). Original source object: Straight gyrus (Gyrus rectus).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where is the gyrus rectus relative to the olfactory sulcus?",
+          "answer": "The gyrus rectus lies medial to the olfactory sulcus."
         },
         {
           "structure_id": "z_anatomy:object:a06e7a4b44ec",
           "prompt": "Locate Right Straight gyrus (Gyrus rectus) and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Right Straight gyrus (Gyrus rectus). Original source object: Straight gyrus (Gyrus rectus).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where is the gyrus rectus relative to the olfactory sulcus?",
+          "answer": "The gyrus rectus lies medial to the olfactory sulcus."
         },
         {
           "structure_id": "z_anatomy:object:d2df51687df8",
           "prompt": "Locate Left Transverse frontopolar gyrus and sulcus and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Left Transverse frontopolar gyrus and sulcus. Original source object: Transverse frontopolar gyrus and sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "How does this region orient the frontal pole?",
+          "answer": "Transverse frontopolar folds cross the anterior frontal surface above the frontomarginal region."
         },
         {
           "structure_id": "z_anatomy:object:b7643f7a7f09",
           "prompt": "Locate Right Transverse frontopolar gyrus and sulcus and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Right Transverse frontopolar gyrus and sulcus. Original source object: Transverse frontopolar gyrus and sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "How does this region orient the frontal pole?",
+          "answer": "Transverse frontopolar folds cross the anterior frontal surface above the frontomarginal region."
         },
         {
           "structure_id": "z_anatomy:object:42af00d95593",
           "prompt": "Locate Left Olfactory sulcus and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Left Olfactory sulcus. Original source object: Olfactory sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which cortical regions lie on either side of the olfactory sulcus?",
+          "answer": "The gyrus rectus lies medially and the orbital cortex lies laterally."
         },
         {
           "structure_id": "z_anatomy:object:6c387c08e49f",
           "prompt": "Locate Right Olfactory sulcus and inspect its neighbors from two angles.",
-          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
-          "answer": "Right Olfactory sulcus. Original source object: Olfactory sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which cortical regions lie on either side of the olfactory sulcus?",
+          "answer": "The gyrus rectus lies medially and the orbital cortex lies laterally."
+        }
+      ],
+      "references": [
+        {
+          "title": "FIPAT: Terminologia Neuroanatomica, telencephalon",
+          "url": "https://ifaa.unifr.ch/Public/TNAEntryPage/auto/pub/TAH5264%20FR.pdf"
+        },
+        {
+          "title": "Destrieux et al. (2010): Cortical gyri and sulci",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2937159/"
         }
       ]
     },
@@ -7810,74 +7826,80 @@
         {
           "structure_id": "z_anatomy:object:105c99c32032",
           "prompt": "Locate Left Cingulate gyrus (Posteroventral part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Left Cingulate gyrus (Posteroventral part). Original source object: Cingulate gyrus (Posteroventral part*).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which large commissure helps orient the posterior cingulate region?",
+          "answer": "Use the splenium of the corpus callosum to orient this posterior medial region."
         },
         {
           "structure_id": "z_anatomy:object:af40aca23e11",
           "prompt": "Locate Right Cingulate gyrus (Posteroventral part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Right Cingulate gyrus (Posteroventral part). Original source object: Cingulate gyrus (Posteroventral part*).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which large commissure helps orient the posterior cingulate region?",
+          "answer": "Use the splenium of the corpus callosum to orient this posterior medial region."
         },
         {
           "structure_id": "z_anatomy:object:bf1d4119c334",
           "prompt": "Locate Left Cingulate gyrus and sulcus (Middle posterior part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Left Cingulate gyrus and sulcus (Middle posterior part). Original source object: Cingulate gyrus and sulcus (Middle posterior part).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which structures orient the cingulate region superiorly and inferiorly?",
+          "answer": "The cingulate cortex arches above the corpus callosum, beneath adjacent medial cortex."
         },
         {
           "structure_id": "z_anatomy:object:b92ba277c849",
           "prompt": "Locate Right Cingulate gyrus and sulcus (Middle posterior part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Right Cingulate gyrus and sulcus (Middle posterior part). Original source object: Cingulate gyrus and sulcus (Middle posterior part).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which structures orient the cingulate region superiorly and inferiorly?",
+          "answer": "The cingulate cortex arches above the corpus callosum, beneath adjacent medial cortex."
         },
         {
           "structure_id": "z_anatomy:object:bb7c0defe845",
           "prompt": "Locate Left Cingulate gyrus and sulcus (Posterior dorsal part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Left Cingulate gyrus and sulcus (Posterior dorsal part). Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which medial parietal region lies above the posterior cingulate cortex?",
+          "answer": "The precuneus lies superior to posterior cingulate cortex across the subparietal sulcus."
         },
         {
           "structure_id": "z_anatomy:object:a09e69dd5109",
           "prompt": "Locate Right Cingulate gyrus and sulcus (Posterior dorsal part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Right Cingulate gyrus and sulcus (Posterior dorsal part). Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which medial parietal region lies above the posterior cingulate cortex?",
+          "answer": "The precuneus lies superior to posterior cingulate cortex across the subparietal sulcus."
         },
         {
           "structure_id": "z_anatomy:object:215171340a90",
           "prompt": "Locate Left Cingulate sulcus (Marginal part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Left Cingulate sulcus (Marginal part). Original source object: Cingulate sulcus (Marginal part*).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which medial regions are separated by the marginal branch?",
+          "answer": "The marginal branch lies between the paracentral region anteriorly and precuneus posteriorly."
         },
         {
           "structure_id": "z_anatomy:object:2496ab989757",
           "prompt": "Locate Right Cingulate sulcus (Marginal part) and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Right Cingulate sulcus (Marginal part). Original source object: Cingulate sulcus (Marginal part*).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which medial regions are separated by the marginal branch?",
+          "answer": "The marginal branch lies between the paracentral region anteriorly and precuneus posteriorly."
         },
         {
           "structure_id": "z_anatomy:object:b84454ca3a2c",
           "prompt": "Locate Left Paracentral gyrus and sulcus and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Left Paracentral gyrus and sulcus. Original source object: Paracentral gyrus and sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which lateral gyri continue into the paracentral region?",
+          "answer": "The precentral and postcentral gyri continue around the medial end of the central sulcus."
         },
         {
           "structure_id": "z_anatomy:object:f2e59f472cc7",
           "prompt": "Locate Right Paracentral gyrus and sulcus and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Right Paracentral gyrus and sulcus. Original source object: Paracentral gyrus and sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which lateral gyri continue into the paracentral region?",
+          "answer": "The precentral and postcentral gyri continue around the medial end of the central sulcus."
         },
         {
           "structure_id": "z_anatomy:object:2653c13ca37f",
           "prompt": "Locate Left Subparietal sulcus and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Left Subparietal sulcus. Original source object: Subparietal sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which structures border this sulcus above and below?",
+          "answer": "The precuneus lies above it and posterior cingulate cortex lies below it."
         },
         {
           "structure_id": "z_anatomy:object:6fa5aa0a14fd",
           "prompt": "Locate Right Subparietal sulcus and inspect its neighbors from two angles.",
-          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
-          "answer": "Right Subparietal sulcus. Original source object: Subparietal sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which structures border this sulcus above and below?",
+          "answer": "The precuneus lies above it and posterior cingulate cortex lies below it."
+        }
+      ],
+      "references": [
+        {
+          "title": "ten Donkelaar et al. (2018): Cortical terminology",
+          "url": "https://doi.org/10.3389/fnana.2018.00093"
         }
       ]
     },
@@ -7905,38 +7927,48 @@
         {
           "structure_id": "z_anatomy:object:64fda20b45b4",
           "prompt": "Locate Left Temporal plane and inspect its neighbors from two angles.",
-          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
-          "answer": "Left Temporal plane. Original source object: Temporal plane.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where is the temporal plane relative to the transverse temporal gyri?",
+          "answer": "The planum temporale extends behind the transverse temporal gyri within the lateral fissure."
         },
         {
           "structure_id": "z_anatomy:object:56a4ca73f7af",
           "prompt": "Locate Right Temporal plane and inspect its neighbors from two angles.",
-          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
-          "answer": "Right Temporal plane. Original source object: Temporal plane.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where is the temporal plane relative to the transverse temporal gyri?",
+          "answer": "The planum temporale extends behind the transverse temporal gyri within the lateral fissure."
         },
         {
           "structure_id": "z_anatomy:object:92f27fe3f9cb",
           "prompt": "Locate Left Transverse temporal gyri and inspect its neighbors from two angles.",
-          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
-          "answer": "Left Transverse temporal gyri. Original source object: Transverse temporal gyri.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "On which temporal surface are the transverse gyri found?",
+          "answer": "They cross the superior temporal surface, which faces into the lateral fissure."
         },
         {
           "structure_id": "z_anatomy:object:f58b100a8eb5",
           "prompt": "Locate Right Transverse temporal gyri and inspect its neighbors from two angles.",
-          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
-          "answer": "Right Transverse temporal gyri. Original source object: Transverse temporal gyri.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "On which temporal surface are the transverse gyri found?",
+          "answer": "They cross the superior temporal surface, which faces into the lateral fissure."
         },
         {
           "structure_id": "z_anatomy:object:28c6611bc04f",
           "prompt": "Locate Left Temporal pole and inspect its neighbors from two angles.",
-          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
-          "answer": "Left Temporal pole. Original source object: Temporal pole.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which end of the temporal lobe forms this pole?",
+          "answer": "The temporal pole forms the anterior end of the temporal lobe."
         },
         {
           "structure_id": "z_anatomy:object:879c07d3d65e",
           "prompt": "Locate Right Temporal pole and inspect its neighbors from two angles.",
-          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
-          "answer": "Right Temporal pole. Original source object: Temporal pole.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which end of the temporal lobe forms this pole?",
+          "answer": "The temporal pole forms the anterior end of the temporal lobe."
+        }
+      ],
+      "references": [
+        {
+          "title": "Kucukyuruk et al. (2012): Temporal lobe anatomy",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3420566/"
+        },
+        {
+          "title": "FIPAT: Terminologia Neuroanatomica, telencephalon",
+          "url": "https://ifaa.unifr.ch/Public/TNAEntryPage/auto/pub/TAH5264%20FR.pdf"
         }
       ]
     },
@@ -7966,38 +7998,48 @@
         {
           "structure_id": "z_anatomy:object:e94fad339dfa",
           "prompt": "Locate Left Posterior transverse collateral sulcus and inspect its neighbors from two angles.",
-          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
-          "answer": "Left Posterior transverse collateral sulcus. Original source object:  Posterior transverse collateral sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "How can the collateral region be oriented on the basal surface?",
+          "answer": "Orient the collateral region between medial parahippocampal or lingual cortex and lateral fusiform cortex."
         },
         {
           "structure_id": "z_anatomy:object:f3c1ef08da58",
           "prompt": "Locate Right Posterior transverse collateral sulcus and inspect its neighbors from two angles.",
-          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
-          "answer": "Right Posterior transverse collateral sulcus. Original source object:  Posterior transverse collateral sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "How can the collateral region be oriented on the basal surface?",
+          "answer": "Orient the collateral region between medial parahippocampal or lingual cortex and lateral fusiform cortex."
         },
         {
           "structure_id": "z_anatomy:object:fc2b096bf5dc",
           "prompt": "Locate Left Inferior temporal sulcus and inspect its neighbors from two angles.",
-          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
-          "answer": "Left Inferior temporal sulcus. Original source object: Inferior temporal sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which temporal gyri border the inferior temporal sulcus?",
+          "answer": "The middle temporal gyrus lies above it and the inferior temporal gyrus below it."
         },
         {
           "structure_id": "z_anatomy:object:93f8ba55b306",
           "prompt": "Locate Right Inferior temporal sulcus and inspect its neighbors from two angles.",
-          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
-          "answer": "Right Inferior temporal sulcus. Original source object: Inferior temporal sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which temporal gyri border the inferior temporal sulcus?",
+          "answer": "The middle temporal gyrus lies above it and the inferior temporal gyrus below it."
         },
         {
           "structure_id": "z_anatomy:object:daf067f18fca",
           "prompt": "Locate Left Occipitotemporal sulcus (Lateral part) and inspect its neighbors from two angles.",
-          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
-          "answer": "Left Occipitotemporal sulcus (Lateral part). Original source object: Occipitotemporal sulcus (Lateral part*).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which basal temporal gyri lie on either side?",
+          "answer": "The inferior temporal gyrus lies laterally and the fusiform gyrus lies medially."
         },
         {
           "structure_id": "z_anatomy:object:1e47e5221c99",
           "prompt": "Locate Right Occipitotemporal sulcus (Lateral part) and inspect its neighbors from two angles.",
-          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
-          "answer": "Right Occipitotemporal sulcus (Lateral part). Original source object: Occipitotemporal sulcus (Lateral part*).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which basal temporal gyri lie on either side?",
+          "answer": "The inferior temporal gyrus lies laterally and the fusiform gyrus lies medially."
+        }
+      ],
+      "references": [
+        {
+          "title": "Kucukyuruk et al. (2012): Temporal lobe anatomy",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3420566/"
+        },
+        {
+          "title": "ten Donkelaar et al. (2018): Cortical terminology",
+          "url": "https://doi.org/10.3389/fnana.2018.00093"
         }
       ]
     },
@@ -8035,86 +8077,96 @@
         {
           "structure_id": "z_anatomy:object:5cab4cdd0b52",
           "prompt": "Locate Left Anterior occipital sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Left Anterior occipital sulcus. Original source object: Anterior occipital sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which transition is explored with this occipital landmark?",
+          "answer": "Use this landmark to orient the lateral temporo-occipital transition and neighboring folds."
         },
         {
           "structure_id": "z_anatomy:object:4bfbf72407f6",
           "prompt": "Locate Right Anterior occipital sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Right Anterior occipital sulcus. Original source object: Anterior occipital sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which transition is explored with this occipital landmark?",
+          "answer": "Use this landmark to orient the lateral temporo-occipital transition and neighboring folds."
         },
         {
           "structure_id": "z_anatomy:object:84ca90032d48",
           "prompt": "Locate Left Inferior occipital gyrus and sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Left Inferior occipital gyrus and sulcus. Original source object: Inferior occipital gyrus and sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which surface is represented by this source region?",
+          "answer": "This combined source region occupies the lower lateral occipital surface."
         },
         {
           "structure_id": "z_anatomy:object:6620bf1c0099",
           "prompt": "Locate Right Inferior occipital gyrus and sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Right Inferior occipital gyrus and sulcus. Original source object: Inferior occipital gyrus and sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which surface is represented by this source region?",
+          "answer": "This combined source region occupies the lower lateral occipital surface."
         },
         {
           "structure_id": "z_anatomy:object:b2a711561412",
           "prompt": "Locate Left Lateral occipital gyrus (Middle occipital gyrus) and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Left Lateral occipital gyrus (Middle occipital gyrus). Original source object: Lateral occipital gyrus (Middle occipital gyrus*).l. Use the visible neighboring source objects to support your spatial description."
+          "question": "How does this region differ in position from the cuneus?",
+          "answer": "The middle occipital region is lateral; the cuneus faces the interhemispheric fissure."
         },
         {
           "structure_id": "z_anatomy:object:8af18e866b5c",
           "prompt": "Locate Right Lateral occipital gyrus (Middle occipital gyrus) and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Right Lateral occipital gyrus (Middle occipital gyrus). Original source object: Lateral occipital gyrus (Middle occipital gyrus*).r. Use the visible neighboring source objects to support your spatial description."
+          "question": "How does this region differ in position from the cuneus?",
+          "answer": "The middle occipital region is lateral; the cuneus faces the interhemispheric fissure."
         },
         {
           "structure_id": "z_anatomy:object:cd0245421902",
           "prompt": "Locate Left Lunate sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Left Lunate sulcus. Original source object: Lunate sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Is the lunate sulcus a constant landmark across individuals?",
+          "answer": "Its presence and configuration vary; compare its course with neighboring occipital sulci."
         },
         {
           "structure_id": "z_anatomy:object:956c19f06311",
           "prompt": "Locate Right Lunate sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Right Lunate sulcus. Original source object: Lunate sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Is the lunate sulcus a constant landmark across individuals?",
+          "answer": "Its presence and configuration vary; compare its course with neighboring occipital sulci."
         },
         {
           "structure_id": "z_anatomy:object:1cec0e1c6251",
           "prompt": "Locate Left Occipital pole and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Left Occipital pole. Original source object: Occipital pole.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where do medial and lateral occipital surfaces converge posteriorly?",
+          "answer": "They converge at the posterior pole of the hemisphere."
         },
         {
           "structure_id": "z_anatomy:object:be5a707d5a02",
           "prompt": "Locate Right Occipital pole and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Right Occipital pole. Original source object: Occipital pole.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Where do medial and lateral occipital surfaces converge posteriorly?",
+          "answer": "They converge at the posterior pole of the hemisphere."
         },
         {
           "structure_id": "z_anatomy:object:674629938fdc",
           "prompt": "Locate Left Superior occipital gyri and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Left Superior occipital gyri. Original source object: Superior occipital gyri.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which part of the occipital surface is highlighted?",
+          "answer": "These gyri occupy the upper occipital surface toward the parietal transition."
         },
         {
           "structure_id": "z_anatomy:object:c2e62683a073",
           "prompt": "Locate Right Superior occipital gyri and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Right Superior occipital gyri. Original source object: Superior occipital gyri.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Which part of the occipital surface is highlighted?",
+          "answer": "These gyri occupy the upper occipital surface toward the parietal transition."
         },
         {
           "structure_id": "z_anatomy:object:7e471e9e84e3",
           "prompt": "Locate Left Transverse occipital sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Left Transverse occipital sulcus. Original source object: Transverse occipital sulcus.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "How can this sulcus help orient the upper occipital surface?",
+          "answer": "Trace its transverse course among the upper occipital folds and adjacent sulcal intersections."
         },
         {
           "structure_id": "z_anatomy:object:0b0ab3bd04e9",
           "prompt": "Locate Right Transverse occipital sulcus and inspect its neighbors from two angles.",
-          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
-          "answer": "Right Transverse occipital sulcus. Original source object: Transverse occipital sulcus.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "How can this sulcus help orient the upper occipital surface?",
+          "answer": "Trace its transverse course among the upper occipital folds and adjacent sulcal intersections."
+        }
+      ],
+      "references": [
+        {
+          "title": "Malikovic et al. (2012): Occipital sulcal variation",
+          "url": "https://doi.org/10.1007/s12565-011-0118-6"
+        },
+        {
+          "title": "ten Donkelaar et al. (2018): Cortical terminology",
+          "url": "https://doi.org/10.3389/fnana.2018.00093"
         }
       ]
     },
@@ -8136,26 +8188,32 @@
         {
           "structure_id": "z_anatomy:object:f7c6b86b7d56",
           "prompt": "Locate Left Middle meningeal artery and inspect its neighbors from two angles.",
-          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
-          "answer": "Left Middle meningeal artery. Original source object: Middle meningeal artery.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "Through which skull-base opening does the usual middle meningeal artery enter?",
+          "answer": "Its usual entry is the foramen spinosum before branching across the middle-fossa dura."
         },
         {
           "structure_id": "z_anatomy:object:ca7cbf3b5050",
           "prompt": "Locate Right Middle meningeal artery and inspect its neighbors from two angles.",
-          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
-          "answer": "Right Middle meningeal artery. Original source object: Middle meningeal artery.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "Through which skull-base opening does the usual middle meningeal artery enter?",
+          "answer": "Its usual entry is the foramen spinosum before branching across the middle-fossa dura."
         },
         {
           "structure_id": "z_anatomy:object:71a03ad9416f",
           "prompt": "Locate Left Accessory branch of middle meningeal artery and inspect its neighbors from two angles.",
-          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
-          "answer": "Left Accessory branch of middle meningeal artery. Original source object: Accessory branch of middle meningeal artery.l. Use the visible neighboring source objects to support your spatial description."
+          "question": "How should this named source branch be compared with the main trunk?",
+          "answer": "Follow the retained branch to its origin and compare its course against the main trunk and skull-base bones."
         },
         {
           "structure_id": "z_anatomy:object:5debbb4cf000",
           "prompt": "Locate Right Accessory branch of middle meningeal artery and inspect its neighbors from two angles.",
-          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
-          "answer": "Right Accessory branch of middle meningeal artery. Original source object: Accessory branch of middle meningeal artery.r. Use the visible neighboring source objects to support your spatial description."
+          "question": "How should this named source branch be compared with the main trunk?",
+          "answer": "Follow the retained branch to its origin and compare its course against the main trunk and skull-base bones."
+        }
+      ],
+      "references": [
+        {
+          "title": "Tayebi Meybodi et al. (2023): Middle cranial fossa anatomy",
+          "url": "https://doi.org/10.3389/fsurg.2023.1132784"
         }
       ]
     }

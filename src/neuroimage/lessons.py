@@ -1,4 +1,5 @@
 """Source-grounded exploration lessons; independent expert review remains pending."""
+from urllib.parse import urlparse
 
 # Each task asks the learner to inspect the delivered labels and real MRI. It does
 # not claim that every label boundary can be resolved independently in the MRI.
@@ -81,9 +82,16 @@ def make_lessons(recipe, structures):
             steps = spec["steps"] if "steps" in spec else [{"structure_id": sid, "prompt": spec["step_prompt"], "question": spec["step_question"]} for sid in selected]
             if not steps or any(step.get("structure_id") not in selected or not step.get("prompt") or not step.get("question") for step in steps):
                 raise ValueError("Source teaching steps require available targets, prompts and questions")
+            references = spec.get("references", [])
+            if not isinstance(references, list) or len(references) > 16 or any(
+                    not isinstance(item, dict) or not isinstance(item.get("title"), str) or not item["title"].strip()
+                    or not isinstance(item.get("url"), str) or urlparse(item["url"]).scheme != "https"
+                    or not urlparse(item["url"]).netloc for item in references):
+                raise ValueError("Lesson references require a title and an HTTPS source URL")
             lessons.append({**{key: spec[key] for key in ("id", "title", "objective", "instruction", "evidence_limit")},
                 "structure_ids": selected, "review_status": "draft_not_expert_reviewed",
                 "steps": steps,
+                **({"references": references} if references else {}),
                 "sources": [source["url"] for source in recipe["sources"]]})
         if len({lesson["id"] for lesson in lessons}) != len(lessons):
             raise ValueError("Source teaching sequence IDs must be unique")

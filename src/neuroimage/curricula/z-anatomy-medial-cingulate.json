@@ -26,7 +26,7 @@
         "z_anatomy:object:613a8b5387ce",
         "z_anatomy:object:b0de45bdfd87"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which large commissure helps orient the posterior cingulate region?",
       "note": "Original source object: Cingulate gyrus (Posteroventral part*).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -63,7 +63,7 @@
         "z_anatomy:object:121117601039",
         "z_anatomy:object:b38bd5e446a8"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which large commissure helps orient the posterior cingulate region?",
       "note": "Original source object: Cingulate gyrus (Posteroventral part*).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -100,7 +100,7 @@
         "z_anatomy:object:613a8b5387ce",
         "z_anatomy:object:b0de45bdfd87"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which structures orient the cingulate region superiorly and inferiorly?",
       "note": "Original source object: Cingulate gyrus and sulcus (Middle posterior part).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -137,7 +137,7 @@
         "z_anatomy:object:121117601039",
         "z_anatomy:object:b38bd5e446a8"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which structures orient the cingulate region superiorly and inferiorly?",
       "note": "Original source object: Cingulate gyrus and sulcus (Middle posterior part).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -174,7 +174,7 @@
         "z_anatomy:object:613a8b5387ce",
         "z_anatomy:object:b0de45bdfd87"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which medial parietal region lies above the posterior cingulate cortex?",
       "note": "Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -211,7 +211,7 @@
         "z_anatomy:object:121117601039",
         "z_anatomy:object:b38bd5e446a8"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which medial parietal region lies above the posterior cingulate cortex?",
       "note": "Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -248,7 +248,7 @@
         "z_anatomy:object:613a8b5387ce",
         "z_anatomy:object:b0de45bdfd87"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which medial regions are separated by the marginal branch?",
       "note": "Original source object: Cingulate sulcus (Marginal part*).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -285,7 +285,7 @@
         "z_anatomy:object:121117601039",
         "z_anatomy:object:b38bd5e446a8"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which medial regions are separated by the marginal branch?",
       "note": "Original source object: Cingulate sulcus (Marginal part*).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -322,7 +322,7 @@
         "z_anatomy:object:613a8b5387ce",
         "z_anatomy:object:b0de45bdfd87"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which lateral gyri continue into the paracentral region?",
       "note": "Original source object: Paracentral gyrus and sulcus*.l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -359,7 +359,7 @@
         "z_anatomy:object:121117601039",
         "z_anatomy:object:b38bd5e446a8"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which lateral gyri continue into the paracentral region?",
       "note": "Original source object: Paracentral gyrus and sulcus*.r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -396,7 +396,7 @@
         "z_anatomy:object:613a8b5387ce",
         "z_anatomy:object:b0de45bdfd87"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which structures border this sulcus above and below?",
       "note": "Original source object: Subparietal sulcus.l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [
@@ -433,7 +433,7 @@
         "z_anatomy:object:121117601039",
         "z_anatomy:object:b38bd5e446a8"
       ],
-      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "prompt": "Which structures border this sulcus above and below?",
       "note": "Original source object: Subparietal sulcus.r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
       "display": {
         "camera": [

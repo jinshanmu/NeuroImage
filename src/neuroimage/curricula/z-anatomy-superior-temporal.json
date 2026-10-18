@@ -24,7 +24,7 @@
         "z_anatomy:object:93763c954cae",
         "z_anatomy:object:6eb869a3ba3c"
       ],
-      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+      "prompt": "Where is the temporal plane relative to the transverse temporal gyri?",
       "note": "Original source object: Temporal plane.l. Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
       "display": {
         "camera": [
@@ -57,7 +57,7 @@
         "z_anatomy:object:40f1db4cdb1a",
         "z_anatomy:object:95bcbf337e82"
       ],
-      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+      "prompt": "Where is the temporal plane relative to the transverse temporal gyri?",
       "note": "Original source object: Temporal plane.r. Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
       "display": {
         "camera": [
@@ -90,7 +90,7 @@
         "z_anatomy:object:93763c954cae",
         "z_anatomy:object:6eb869a3ba3c"
       ],
-      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+      "prompt": "On which temporal surface are the transverse gyri found?",
       "note": "Original source object: Transverse temporal gyri.l. Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
       "display": {
         "camera": [
@@ -123,7 +123,7 @@
         "z_anatomy:object:40f1db4cdb1a",
         "z_anatomy:object:95bcbf337e82"
       ],
-      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+      "prompt": "On which temporal surface are the transverse gyri found?",
       "note": "Original source object: Transverse temporal gyri.r. Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
       "display": {
         "camera": [
@@ -156,7 +156,7 @@
         "z_anatomy:object:93763c954cae",
         "z_anatomy:object:6eb869a3ba3c"
       ],
-      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+      "prompt": "Which end of the temporal lobe forms this pole?",
       "note": "Original source object: Temporal pole.l. Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
       "display": {
         "camera": [
@@ -189,7 +189,7 @@
         "z_anatomy:object:40f1db4cdb1a",
         "z_anatomy:object:95bcbf337e82"
       ],
-      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+      "prompt": "Which end of the temporal lobe forms this pole?",
       "note": "Original source object: Temporal pole.r. Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
       "display": {
         "camera": [

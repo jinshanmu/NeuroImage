@@ -25,7 +25,7 @@
         "z_anatomy:object:26aefbf06f7e",
         "z_anatomy:object:749ca82610aa"
       ],
-      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+      "prompt": "How can the collateral region be oriented on the basal surface?",
       "note": "Original source object:  Posterior transverse collateral sulcus.l. Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
       "display": {
         "camera": [
@@ -60,7 +60,7 @@
         "z_anatomy:object:9c53e998b3db",
         "z_anatomy:object:b2f997ebcf1b"
       ],
-      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+      "prompt": "How can the collateral region be oriented on the basal surface?",
       "note": "Original source object:  Posterior transverse collateral sulcus.r. Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
       "display": {
         "camera": [
@@ -95,7 +95,7 @@
         "z_anatomy:object:26aefbf06f7e",
         "z_anatomy:object:749ca82610aa"
       ],
-      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+      "prompt": "Which temporal gyri border the inferior temporal sulcus?",
       "note": "Original source object: Inferior temporal sulcus.l. Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
       "display": {
         "camera": [
@@ -130,7 +130,7 @@
         "z_anatomy:object:9c53e998b3db",
         "z_anatomy:object:b2f997ebcf1b"
       ],
-      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+      "prompt": "Which temporal gyri border the inferior temporal sulcus?",
       "note": "Original source object: Inferior temporal sulcus.r. Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
       "display": {
         "camera": [
@@ -165,7 +165,7 @@
         "z_anatomy:object:26aefbf06f7e",
         "z_anatomy:object:749ca82610aa"
       ],
-      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+      "prompt": "Which basal temporal gyri lie on either side?",
       "note": "Original source object: Occipitotemporal sulcus (Lateral part*).l. Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
       "display": {
         "camera": [
@@ -200,7 +200,7 @@
         "z_anatomy:object:9c53e998b3db",
         "z_anatomy:object:b2f997ebcf1b"
       ],
-      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+      "prompt": "Which basal temporal gyri lie on either side?",
       "note": "Original source object: Occipitotemporal sulcus (Lateral part*).r. Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
       "display": {
         "camera": [
