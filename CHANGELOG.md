@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.0.0 — prepared for author review, 2026-10-19
+
+- Add 64 source-preserved cortical and dural model objects and 32 arterial comparison views across eight healthy-volunteer MRA cases. Keep the ten main groups and expand the detailed index to 46 topics.
+- Provide 39 source configurations, 1,965 source-specific entries, 193 built-in teaching sequences, 90 curricula with 796 views and 31 course plans with 684 selected views.
+- Add a CerebrA first-session course, written lesson responses, self-rated review queues, and portable study-record import/export with exact source binding.
+- Compact repeated recipe metadata in teaching scenes while retaining source and processing records and compatibility with historical scene files.
+- Load image/model renderers when opened; use a lightweight cached anatomy catalog, conditional asset requests and session validation reuse. Avoid rendering the anatomy again after text-only edits.
+- Restore exact local atlas bookmarks after service restart; keep page-based scrolling and complete wrapping labels.
+- Simplify functional labels and remove decorative slogans.
+- Add a resumable Linux installer, pinned runtime bootstrap, source-aware diagnostics, acquisition/construction quickstart, portable storage profile and a complete dataset access table.
+- Update citation, installation, contribution, privacy, security and maintenance documentation for a code-only release. Publication remains pending final author review.
+
 ## 0.15.0rc2 — detailed normal anatomy, prepared for review, 2026-10-15
 
 - Refine image and model notebook presentation on 2026-10-18: keep author metadata in the editor and exports, and present the lesson in a bordered card with wrapping text and controls.

@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "advanced-cortical-surfaces",
+  "title": "Advanced cortical surface anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare the supplied anatomical structures in original source context, rotate and inspect their spatial relations, and save focused observations.",
+  "views": [
+    {
+      "id": "z-anatomy-central-sulci-view-01",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-01",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-central-sulci-view-02",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-02",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-central-sulci-view-03",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-03",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-central-sulci-view-04",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-04",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-central-sulci-view-05",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-05",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-central-sulci-view-06",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-06",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-central-sulci-view-07",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-07",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-central-sulci-view-08",
+      "curriculum": "z-anatomy-central-sulci",
+      "view": "view-08",
+      "prompt": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-01",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-01",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-02",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-02",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-03",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-03",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-04",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-04",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-05",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-05",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-06",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-06",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-07",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-07",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-08",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-08",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-09",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-09",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-10",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-10",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-11",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-11",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-12",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-12",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-13",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-13",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-orbital-frontal-view-14",
+      "curriculum": "z-anatomy-orbital-frontal",
+      "view": "view-14",
+      "prompt": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-01",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-01",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-02",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-02",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-03",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-03",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-04",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-04",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-05",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-05",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-06",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-06",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-07",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-07",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-08",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-08",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-09",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-09",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-10",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-10",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-11",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-11",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-medial-cingulate-view-12",
+      "curriculum": "z-anatomy-medial-cingulate",
+      "view": "view-12",
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?"
+    },
+    {
+      "id": "z-anatomy-superior-temporal-view-01",
+      "curriculum": "z-anatomy-superior-temporal",
+      "view": "view-01",
+      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?"
+    },
+    {
+      "id": "z-anatomy-superior-temporal-view-02",
+      "curriculum": "z-anatomy-superior-temporal",
+      "view": "view-02",
+      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?"
+    },
+    {
+      "id": "z-anatomy-superior-temporal-view-03",
+      "curriculum": "z-anatomy-superior-temporal",
+      "view": "view-03",
+      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?"
+    },
+    {
+      "id": "z-anatomy-superior-temporal-view-04",
+      "curriculum": "z-anatomy-superior-temporal",
+      "view": "view-04",
+      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?"
+    },
+    {
+      "id": "z-anatomy-superior-temporal-view-05",
+      "curriculum": "z-anatomy-superior-temporal",
+      "view": "view-05",
+      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?"
+    },
+    {
+      "id": "z-anatomy-superior-temporal-view-06",
+      "curriculum": "z-anatomy-superior-temporal",
+      "view": "view-06",
+      "prompt": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?"
+    },
+    {
+      "id": "z-anatomy-inferior-temporal-view-01",
+      "curriculum": "z-anatomy-inferior-temporal",
+      "view": "view-01",
+      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?"
+    },
+    {
+      "id": "z-anatomy-inferior-temporal-view-02",
+      "curriculum": "z-anatomy-inferior-temporal",
+      "view": "view-02",
+      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?"
+    },
+    {
+      "id": "z-anatomy-inferior-temporal-view-03",
+      "curriculum": "z-anatomy-inferior-temporal",
+      "view": "view-03",
+      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?"
+    },
+    {
+      "id": "z-anatomy-inferior-temporal-view-04",
+      "curriculum": "z-anatomy-inferior-temporal",
+      "view": "view-04",
+      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?"
+    },
+    {
+      "id": "z-anatomy-inferior-temporal-view-05",
+      "curriculum": "z-anatomy-inferior-temporal",
+      "view": "view-05",
+      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?"
+    },
+    {
+      "id": "z-anatomy-inferior-temporal-view-06",
+      "curriculum": "z-anatomy-inferior-temporal",
+      "view": "view-06",
+      "prompt": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-01",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-01",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-02",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-02",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-03",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-03",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-04",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-04",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-05",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-05",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-06",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-06",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-07",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-07",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-08",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-08",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-09",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-09",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-10",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-10",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-11",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-11",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-12",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-12",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-13",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-13",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    },
+    {
+      "id": "z-anatomy-occipital-surface-view-14",
+      "curriculum": "z-anatomy-occipital-surface",
+      "view": "view-14",
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?"
+    }
+  ]
+}

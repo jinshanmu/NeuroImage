@@ -1,4 +1,4 @@
-# Release candidate 0.15.0rc2
+# Release candidate 1.0.0
 
 This is a local author-review candidate, not a published release. The verified environment is Linux x86_64, Python 3.12 in the dedicated NeuroImage environment, Node 24.21.0 and Chromium with WebGL2.
 

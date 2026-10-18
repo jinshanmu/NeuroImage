@@ -1,4 +1,5 @@
 import { Niivue, NVMesh, NVImage } from '@niivue/niivue'
+import { imageRenderKey } from './renderState'
 import { unProject } from '@niivue/niivue/utils'
 import type { Manifest, Vec3, ViewState } from './types'
 import { regionMemberships, sparseMask, type SparseMask } from './independentRegions'
@@ -165,6 +166,7 @@ export class AtlasViewer {
   private syncing = false
   private background = ''
   private task: Promise<void> | null = null
+  private appliedKey = ''
   private resize: ResizeObserver
   private pointerIn3D = false
   private attached = false
@@ -245,7 +247,9 @@ export class AtlasViewer {
   }
   apply(state: ViewState): Promise<void> {
     if (this.disposed) return Promise.resolve()
-    this.current = state; this.generation++
+    this.current = state
+    if (!this.task && this.appliedKey === imageRenderKey(state)) return Promise.resolve()
+    this.generation++
     if (!this.task) this.task = this.drain().finally(() => { this.task = null; if (this.disposed) this.release() })
     return this.task
   }
@@ -254,6 +258,7 @@ export class AtlasViewer {
     while (!this.disposed && completed !== this.generation) {
       const generation = this.generation, state = this.current!
       await this.render(state, generation)
+      if (!this.disposed && generation === this.generation) this.appliedKey = imageRenderKey(state)
       completed = generation
     }
   }

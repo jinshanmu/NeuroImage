@@ -53,7 +53,7 @@ async page => {
     if(index===8||index===17)await page.screenshot({path:output+'/course-view-'+index+'.png'});
     if(index===0){
       await primary.getByRole('button',{name:'Magnify at cursor',exact:true}).click();await ready();
-      await page.getByRole('button',{name:'Return to course view',exact:true}).click();await ready();
+      await page.getByRole('button',{name:'Restore view',exact:true}).click();await ready();
       assert(Number(await primary.getByLabel('2D zoom',{exact:true}).inputValue())===1,'Course return did not restore complete source sections.');
     }
   }

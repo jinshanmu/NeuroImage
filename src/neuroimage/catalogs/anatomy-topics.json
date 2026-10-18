@@ -2823,11 +2823,16 @@
       "parent_id": "vascular-anatomy",
       "kind": "variation",
       "title": "Individual arterial observations",
-      "description": "Compare three healthy-volunteer source cases; separate visible course, annotation coverage and candidate variants",
+      "description": "Eight healthy-volunteer examples with original images and segment annotations",
       "prefer": [
         "thu_mra_case009",
+        "thu_mra_case014",
         "thu_mra_case001",
-        "thu_mra_case030"
+        "thu_mra_case006",
+        "thu_mra_case010",
+        "thu_mra_case021",
+        "thu_mra_case030",
+        "thu_mra_case007"
       ],
       "sources": {
         "thu_mra_case001": {
@@ -3141,6 +3146,740 @@
             "nextbrain_case1_block45:label:843"
           ],
           "evidence": "Original NextBrain labels present in this selected tissue block and its recorded MRI/histology coordinate frame. The block provides partial source coverage; no complete bilateral structure or cross-source correspondence is inferred."
+        }
+      }
+    },
+    {
+      "id": "detail-central-sulci",
+      "parent_id": "cerebral-cortex",
+      "kind": "anatomy",
+      "title": "Precentral, postcentral and paracentral sulci",
+      "description": "Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
+      "prefer": [
+        "z_anatomy"
+      ],
+      "sources": {
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:3742982918d8",
+            "z_anatomy:object:129fd3bcf210",
+            "z_anatomy:object:469f4c57bcbf",
+            "z_anatomy:object:498932b9e645",
+            "z_anatomy:object:000693f70b3e",
+            "z_anatomy:object:aa7ea3e17246",
+            "z_anatomy:object:67d21c903861",
+            "z_anatomy:object:a735df7572a6",
+            "z_anatomy:object:9fa6b32b07b8",
+            "z_anatomy:object:91153eddef73",
+            "z_anatomy:object:45a26e822c72",
+            "z_anatomy:object:e88ef796081f",
+            "z_anatomy:object:1e67e3f080d1",
+            "z_anatomy:object:9fb21d979962"
+          ],
+          "required_ids": [
+            "z_anatomy:object:3742982918d8",
+            "z_anatomy:object:a735df7572a6",
+            "z_anatomy:object:129fd3bcf210",
+            "z_anatomy:object:9fa6b32b07b8",
+            "z_anatomy:object:469f4c57bcbf",
+            "z_anatomy:object:91153eddef73",
+            "z_anatomy:object:498932b9e645",
+            "z_anatomy:object:45a26e822c72"
+          ],
+          "evidence": "Original Z-Anatomy surface objects with source naming and independent XYZ geometry retained."
+        }
+      }
+    },
+    {
+      "id": "detail-orbital-frontal",
+      "parent_id": "cerebral-cortex",
+      "kind": "anatomy",
+      "title": "Orbital and frontopolar surface anatomy",
+      "description": "Explore the basal frontal surface, olfactory sulcus, gyrus rectus and the source orbital subdivisions.",
+      "prefer": [
+        "z_anatomy"
+      ],
+      "sources": {
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:9c52a395c62b",
+            "z_anatomy:object:974883cc2acc",
+            "z_anatomy:object:850043662331",
+            "z_anatomy:object:6ed5bc9ba895",
+            "z_anatomy:object:93bf8c09c1c6",
+            "z_anatomy:object:d2df51687df8",
+            "z_anatomy:object:42af00d95593",
+            "z_anatomy:object:c1ae492d8bb4",
+            "z_anatomy:object:21552444a6d6",
+            "z_anatomy:object:1b81d786d919",
+            "z_anatomy:object:703f777e849e",
+            "z_anatomy:object:53cc6782f5ba",
+            "z_anatomy:object:6666d6648205",
+            "z_anatomy:object:a06e7a4b44ec",
+            "z_anatomy:object:b7643f7a7f09",
+            "z_anatomy:object:6c387c08e49f",
+            "z_anatomy:object:3746284dd141",
+            "z_anatomy:object:0a4af6588e2a"
+          ],
+          "required_ids": [
+            "z_anatomy:object:9c52a395c62b",
+            "z_anatomy:object:1b81d786d919",
+            "z_anatomy:object:974883cc2acc",
+            "z_anatomy:object:703f777e849e",
+            "z_anatomy:object:850043662331",
+            "z_anatomy:object:53cc6782f5ba",
+            "z_anatomy:object:6ed5bc9ba895",
+            "z_anatomy:object:6666d6648205",
+            "z_anatomy:object:93bf8c09c1c6",
+            "z_anatomy:object:a06e7a4b44ec",
+            "z_anatomy:object:d2df51687df8",
+            "z_anatomy:object:b7643f7a7f09",
+            "z_anatomy:object:42af00d95593",
+            "z_anatomy:object:6c387c08e49f"
+          ],
+          "evidence": "Original Z-Anatomy surface objects with source naming and independent XYZ geometry retained."
+        }
+      }
+    },
+    {
+      "id": "detail-medial-cingulate",
+      "parent_id": "cerebral-cortex",
+      "kind": "anatomy",
+      "title": "Cingulate and medial parietal surface anatomy",
+      "description": "Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "prefer": [
+        "z_anatomy"
+      ],
+      "sources": {
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:105c99c32032",
+            "z_anatomy:object:bf1d4119c334",
+            "z_anatomy:object:bb7c0defe845",
+            "z_anatomy:object:215171340a90",
+            "z_anatomy:object:b84454ca3a2c",
+            "z_anatomy:object:2653c13ca37f",
+            "z_anatomy:object:613a8b5387ce",
+            "z_anatomy:object:b0de45bdfd87",
+            "z_anatomy:object:af40aca23e11",
+            "z_anatomy:object:b92ba277c849",
+            "z_anatomy:object:a09e69dd5109",
+            "z_anatomy:object:2496ab989757",
+            "z_anatomy:object:f2e59f472cc7",
+            "z_anatomy:object:6fa5aa0a14fd",
+            "z_anatomy:object:121117601039",
+            "z_anatomy:object:b38bd5e446a8"
+          ],
+          "required_ids": [
+            "z_anatomy:object:105c99c32032",
+            "z_anatomy:object:af40aca23e11",
+            "z_anatomy:object:bf1d4119c334",
+            "z_anatomy:object:b92ba277c849",
+            "z_anatomy:object:bb7c0defe845",
+            "z_anatomy:object:a09e69dd5109",
+            "z_anatomy:object:215171340a90",
+            "z_anatomy:object:2496ab989757",
+            "z_anatomy:object:b84454ca3a2c",
+            "z_anatomy:object:f2e59f472cc7",
+            "z_anatomy:object:2653c13ca37f",
+            "z_anatomy:object:6fa5aa0a14fd"
+          ],
+          "evidence": "Original Z-Anatomy surface objects with source naming and independent XYZ geometry retained."
+        }
+      }
+    },
+    {
+      "id": "detail-superior-temporal",
+      "parent_id": "cerebral-cortex",
+      "kind": "anatomy",
+      "title": "Temporal plane, transverse temporal gyri and pole",
+      "description": "Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
+      "prefer": [
+        "z_anatomy"
+      ],
+      "sources": {
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:64fda20b45b4",
+            "z_anatomy:object:92f27fe3f9cb",
+            "z_anatomy:object:28c6611bc04f",
+            "z_anatomy:object:2259f9037229",
+            "z_anatomy:object:93763c954cae",
+            "z_anatomy:object:6eb869a3ba3c",
+            "z_anatomy:object:56a4ca73f7af",
+            "z_anatomy:object:f58b100a8eb5",
+            "z_anatomy:object:879c07d3d65e",
+            "z_anatomy:object:5f2249b2b4ff",
+            "z_anatomy:object:40f1db4cdb1a",
+            "z_anatomy:object:95bcbf337e82"
+          ],
+          "required_ids": [
+            "z_anatomy:object:64fda20b45b4",
+            "z_anatomy:object:56a4ca73f7af",
+            "z_anatomy:object:92f27fe3f9cb",
+            "z_anatomy:object:f58b100a8eb5",
+            "z_anatomy:object:28c6611bc04f",
+            "z_anatomy:object:879c07d3d65e"
+          ],
+          "evidence": "Original Z-Anatomy surface objects with source naming and independent XYZ geometry retained."
+        }
+      }
+    },
+    {
+      "id": "detail-inferior-temporal",
+      "parent_id": "cerebral-cortex",
+      "kind": "anatomy",
+      "title": "Inferior temporal and collateral sulcal anatomy",
+      "description": "Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
+      "prefer": [
+        "z_anatomy"
+      ],
+      "sources": {
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:e94fad339dfa",
+            "z_anatomy:object:fc2b096bf5dc",
+            "z_anatomy:object:daf067f18fca",
+            "z_anatomy:object:1e3fab57e504",
+            "z_anatomy:object:aa3da22c4906",
+            "z_anatomy:object:26aefbf06f7e",
+            "z_anatomy:object:749ca82610aa",
+            "z_anatomy:object:f3c1ef08da58",
+            "z_anatomy:object:93f8ba55b306",
+            "z_anatomy:object:1e47e5221c99",
+            "z_anatomy:object:02ff112205bc",
+            "z_anatomy:object:c717da109b89",
+            "z_anatomy:object:9c53e998b3db",
+            "z_anatomy:object:b2f997ebcf1b"
+          ],
+          "required_ids": [
+            "z_anatomy:object:e94fad339dfa",
+            "z_anatomy:object:f3c1ef08da58",
+            "z_anatomy:object:fc2b096bf5dc",
+            "z_anatomy:object:93f8ba55b306",
+            "z_anatomy:object:daf067f18fca",
+            "z_anatomy:object:1e47e5221c99"
+          ],
+          "evidence": "Original Z-Anatomy surface objects with source naming and independent XYZ geometry retained."
+        }
+      }
+    },
+    {
+      "id": "detail-occipital-surface",
+      "parent_id": "cerebral-cortex",
+      "kind": "anatomy",
+      "title": "Occipital poles, gyri and sulcal landmarks",
+      "description": "Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "prefer": [
+        "z_anatomy"
+      ],
+      "sources": {
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:5cab4cdd0b52",
+            "z_anatomy:object:84ca90032d48",
+            "z_anatomy:object:b2a711561412",
+            "z_anatomy:object:cd0245421902",
+            "z_anatomy:object:1cec0e1c6251",
+            "z_anatomy:object:674629938fdc",
+            "z_anatomy:object:7e471e9e84e3",
+            "z_anatomy:object:d67cd647706e",
+            "z_anatomy:object:9819465ea2a7",
+            "z_anatomy:object:8a26ee4b8094",
+            "z_anatomy:object:b0de45bdfd87",
+            "z_anatomy:object:4bfbf72407f6",
+            "z_anatomy:object:6620bf1c0099",
+            "z_anatomy:object:8af18e866b5c",
+            "z_anatomy:object:956c19f06311",
+            "z_anatomy:object:be5a707d5a02",
+            "z_anatomy:object:c2e62683a073",
+            "z_anatomy:object:0b0ab3bd04e9",
+            "z_anatomy:object:8c27f49a316e",
+            "z_anatomy:object:3a6966c34762",
+            "z_anatomy:object:c9238f32f95e",
+            "z_anatomy:object:b38bd5e446a8"
+          ],
+          "required_ids": [
+            "z_anatomy:object:5cab4cdd0b52",
+            "z_anatomy:object:4bfbf72407f6",
+            "z_anatomy:object:84ca90032d48",
+            "z_anatomy:object:6620bf1c0099",
+            "z_anatomy:object:b2a711561412",
+            "z_anatomy:object:8af18e866b5c",
+            "z_anatomy:object:cd0245421902",
+            "z_anatomy:object:956c19f06311",
+            "z_anatomy:object:1cec0e1c6251",
+            "z_anatomy:object:be5a707d5a02",
+            "z_anatomy:object:674629938fdc",
+            "z_anatomy:object:c2e62683a073",
+            "z_anatomy:object:7e471e9e84e3",
+            "z_anatomy:object:0b0ab3bd04e9"
+          ],
+          "evidence": "Original Z-Anatomy surface objects with source naming and independent XYZ geometry retained."
+        }
+      }
+    },
+    {
+      "id": "detail-dural-arteries",
+      "parent_id": "vascular-anatomy",
+      "kind": "anatomy",
+      "title": "Middle meningeal arterial model context",
+      "description": "Follow the supplied middle meningeal artery and accessory branch models in relation to the transparent temporal and sphenoid bones.",
+      "prefer": [
+        "z_anatomy"
+      ],
+      "sources": {
+        "z_anatomy": {
+          "structure_ids": [
+            "z_anatomy:object:f7c6b86b7d56",
+            "z_anatomy:object:71a03ad9416f",
+            "z_anatomy:object:6d36daa5e529",
+            "z_anatomy:object:a74c6306255a",
+            "z_anatomy:object:ca7cbf3b5050",
+            "z_anatomy:object:5debbb4cf000",
+            "z_anatomy:object:de51bcc0183f"
+          ],
+          "required_ids": [
+            "z_anatomy:object:f7c6b86b7d56",
+            "z_anatomy:object:ca7cbf3b5050",
+            "z_anatomy:object:71a03ad9416f",
+            "z_anatomy:object:5debbb4cf000"
+          ],
+          "evidence": "Original Z-Anatomy surface objects with source naming and independent XYZ geometry retained."
+        }
+      }
+    },
+    {
+      "id": "variation-paired-a1",
+      "parent_id": "vascular-anatomy",
+      "kind": "variation",
+      "title": "Paired A1 courses",
+      "description": "Compare original MRA and segment annotations across eight volunteers",
+      "prefer": [
+        "thu_mra_case009",
+        "thu_mra_case014",
+        "thu_mra_case001",
+        "thu_mra_case006",
+        "thu_mra_case010",
+        "thu_mra_case021",
+        "thu_mra_case030",
+        "thu_mra_case007"
+      ],
+      "sources": {
+        "thu_mra_case009": {
+          "structure_ids": [
+            "thu_mra_case009:label:1",
+            "thu_mra_case009:label:2",
+            "thu_mra_case009:label:5",
+            "thu_mra_case009:label:6",
+            "thu_mra_case009:label:7",
+            "thu_mra_case009:label:15",
+            "thu_mra_case009:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case014": {
+          "structure_ids": [
+            "thu_mra_case014:label:1",
+            "thu_mra_case014:label:2",
+            "thu_mra_case014:label:5",
+            "thu_mra_case014:label:6",
+            "thu_mra_case014:label:7",
+            "thu_mra_case014:label:15",
+            "thu_mra_case014:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case001": {
+          "structure_ids": [
+            "thu_mra_case001:label:1",
+            "thu_mra_case001:label:2",
+            "thu_mra_case001:label:6",
+            "thu_mra_case001:label:7",
+            "thu_mra_case001:label:15",
+            "thu_mra_case001:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case006": {
+          "structure_ids": [
+            "thu_mra_case006:label:1",
+            "thu_mra_case006:label:2",
+            "thu_mra_case006:label:5",
+            "thu_mra_case006:label:6",
+            "thu_mra_case006:label:7",
+            "thu_mra_case006:label:15",
+            "thu_mra_case006:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case010": {
+          "structure_ids": [
+            "thu_mra_case010:label:1",
+            "thu_mra_case010:label:2",
+            "thu_mra_case010:label:5",
+            "thu_mra_case010:label:6",
+            "thu_mra_case010:label:7",
+            "thu_mra_case010:label:15",
+            "thu_mra_case010:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case021": {
+          "structure_ids": [
+            "thu_mra_case021:label:1",
+            "thu_mra_case021:label:2",
+            "thu_mra_case021:label:6",
+            "thu_mra_case021:label:7",
+            "thu_mra_case021:label:15",
+            "thu_mra_case021:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case030": {
+          "structure_ids": [
+            "thu_mra_case030:label:1",
+            "thu_mra_case030:label:5",
+            "thu_mra_case030:label:6",
+            "thu_mra_case030:label:7",
+            "thu_mra_case030:label:15",
+            "thu_mra_case030:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case007": {
+          "structure_ids": [
+            "thu_mra_case007:label:2",
+            "thu_mra_case007:label:5",
+            "thu_mra_case007:label:6",
+            "thu_mra_case007:label:7",
+            "thu_mra_case007:label:15",
+            "thu_mra_case007:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        }
+      }
+    },
+    {
+      "id": "variation-anterior-communicating",
+      "parent_id": "vascular-anatomy",
+      "kind": "variation",
+      "title": "Anterior communicating region",
+      "description": "Compare original MRA and segment annotations across eight volunteers",
+      "prefer": [
+        "thu_mra_case009",
+        "thu_mra_case014",
+        "thu_mra_case001",
+        "thu_mra_case006",
+        "thu_mra_case010",
+        "thu_mra_case021",
+        "thu_mra_case030",
+        "thu_mra_case007"
+      ],
+      "sources": {
+        "thu_mra_case009": {
+          "structure_ids": [
+            "thu_mra_case009:label:1",
+            "thu_mra_case009:label:2",
+            "thu_mra_case009:label:5",
+            "thu_mra_case009:label:6",
+            "thu_mra_case009:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case014": {
+          "structure_ids": [
+            "thu_mra_case014:label:1",
+            "thu_mra_case014:label:2",
+            "thu_mra_case014:label:5",
+            "thu_mra_case014:label:6",
+            "thu_mra_case014:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case001": {
+          "structure_ids": [
+            "thu_mra_case001:label:1",
+            "thu_mra_case001:label:2",
+            "thu_mra_case001:label:6",
+            "thu_mra_case001:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case006": {
+          "structure_ids": [
+            "thu_mra_case006:label:1",
+            "thu_mra_case006:label:2",
+            "thu_mra_case006:label:5",
+            "thu_mra_case006:label:6",
+            "thu_mra_case006:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case010": {
+          "structure_ids": [
+            "thu_mra_case010:label:1",
+            "thu_mra_case010:label:2",
+            "thu_mra_case010:label:5",
+            "thu_mra_case010:label:6",
+            "thu_mra_case010:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case021": {
+          "structure_ids": [
+            "thu_mra_case021:label:1",
+            "thu_mra_case021:label:2",
+            "thu_mra_case021:label:6",
+            "thu_mra_case021:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case030": {
+          "structure_ids": [
+            "thu_mra_case030:label:1",
+            "thu_mra_case030:label:5",
+            "thu_mra_case030:label:6",
+            "thu_mra_case030:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case007": {
+          "structure_ids": [
+            "thu_mra_case007:label:2",
+            "thu_mra_case007:label:5",
+            "thu_mra_case007:label:6",
+            "thu_mra_case007:label:7"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        }
+      }
+    },
+    {
+      "id": "variation-posterior-communicating",
+      "parent_id": "vascular-anatomy",
+      "kind": "variation",
+      "title": "Posterior communicating regions",
+      "description": "Compare original MRA and segment annotations across eight volunteers",
+      "prefer": [
+        "thu_mra_case009",
+        "thu_mra_case014",
+        "thu_mra_case001",
+        "thu_mra_case006",
+        "thu_mra_case010",
+        "thu_mra_case021",
+        "thu_mra_case030",
+        "thu_mra_case007"
+      ],
+      "sources": {
+        "thu_mra_case009": {
+          "structure_ids": [
+            "thu_mra_case009:label:8",
+            "thu_mra_case009:label:9",
+            "thu_mra_case009:label:10",
+            "thu_mra_case009:label:11",
+            "thu_mra_case009:label:12",
+            "thu_mra_case009:label:13",
+            "thu_mra_case009:label:15",
+            "thu_mra_case009:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case014": {
+          "structure_ids": [
+            "thu_mra_case014:label:8",
+            "thu_mra_case014:label:9",
+            "thu_mra_case014:label:10",
+            "thu_mra_case014:label:11",
+            "thu_mra_case014:label:12",
+            "thu_mra_case014:label:13",
+            "thu_mra_case014:label:15",
+            "thu_mra_case014:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case001": {
+          "structure_ids": [
+            "thu_mra_case001:label:10",
+            "thu_mra_case001:label:11",
+            "thu_mra_case001:label:12",
+            "thu_mra_case001:label:13",
+            "thu_mra_case001:label:15",
+            "thu_mra_case001:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case006": {
+          "structure_ids": [
+            "thu_mra_case006:label:8",
+            "thu_mra_case006:label:10",
+            "thu_mra_case006:label:11",
+            "thu_mra_case006:label:12",
+            "thu_mra_case006:label:13",
+            "thu_mra_case006:label:15",
+            "thu_mra_case006:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case010": {
+          "structure_ids": [
+            "thu_mra_case010:label:9",
+            "thu_mra_case010:label:10",
+            "thu_mra_case010:label:11",
+            "thu_mra_case010:label:12",
+            "thu_mra_case010:label:13",
+            "thu_mra_case010:label:15",
+            "thu_mra_case010:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case021": {
+          "structure_ids": [
+            "thu_mra_case021:label:8",
+            "thu_mra_case021:label:9",
+            "thu_mra_case021:label:10",
+            "thu_mra_case021:label:11",
+            "thu_mra_case021:label:12",
+            "thu_mra_case021:label:13",
+            "thu_mra_case021:label:15",
+            "thu_mra_case021:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case030": {
+          "structure_ids": [
+            "thu_mra_case030:label:8",
+            "thu_mra_case030:label:9",
+            "thu_mra_case030:label:10",
+            "thu_mra_case030:label:11",
+            "thu_mra_case030:label:12",
+            "thu_mra_case030:label:13",
+            "thu_mra_case030:label:15",
+            "thu_mra_case030:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case007": {
+          "structure_ids": [
+            "thu_mra_case007:label:8",
+            "thu_mra_case007:label:9",
+            "thu_mra_case007:label:11",
+            "thu_mra_case007:label:12",
+            "thu_mra_case007:label:13",
+            "thu_mra_case007:label:15",
+            "thu_mra_case007:label:16"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        }
+      }
+    },
+    {
+      "id": "variation-p1-basilar",
+      "parent_id": "vascular-anatomy",
+      "kind": "variation",
+      "title": "P1 and basilar configuration",
+      "description": "Compare original MRA and segment annotations across eight volunteers",
+      "prefer": [
+        "thu_mra_case009",
+        "thu_mra_case014",
+        "thu_mra_case001",
+        "thu_mra_case006",
+        "thu_mra_case010",
+        "thu_mra_case021",
+        "thu_mra_case030",
+        "thu_mra_case007"
+      ],
+      "sources": {
+        "thu_mra_case009": {
+          "structure_ids": [
+            "thu_mra_case009:label:8",
+            "thu_mra_case009:label:9",
+            "thu_mra_case009:label:10",
+            "thu_mra_case009:label:11",
+            "thu_mra_case009:label:12",
+            "thu_mra_case009:label:13",
+            "thu_mra_case009:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case014": {
+          "structure_ids": [
+            "thu_mra_case014:label:8",
+            "thu_mra_case014:label:9",
+            "thu_mra_case014:label:10",
+            "thu_mra_case014:label:11",
+            "thu_mra_case014:label:12",
+            "thu_mra_case014:label:13",
+            "thu_mra_case014:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case001": {
+          "structure_ids": [
+            "thu_mra_case001:label:10",
+            "thu_mra_case001:label:11",
+            "thu_mra_case001:label:12",
+            "thu_mra_case001:label:13",
+            "thu_mra_case001:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case006": {
+          "structure_ids": [
+            "thu_mra_case006:label:8",
+            "thu_mra_case006:label:10",
+            "thu_mra_case006:label:11",
+            "thu_mra_case006:label:12",
+            "thu_mra_case006:label:13",
+            "thu_mra_case006:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case010": {
+          "structure_ids": [
+            "thu_mra_case010:label:9",
+            "thu_mra_case010:label:10",
+            "thu_mra_case010:label:11",
+            "thu_mra_case010:label:12",
+            "thu_mra_case010:label:13",
+            "thu_mra_case010:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case021": {
+          "structure_ids": [
+            "thu_mra_case021:label:8",
+            "thu_mra_case021:label:9",
+            "thu_mra_case021:label:10",
+            "thu_mra_case021:label:11",
+            "thu_mra_case021:label:12",
+            "thu_mra_case021:label:13",
+            "thu_mra_case021:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case030": {
+          "structure_ids": [
+            "thu_mra_case030:label:8",
+            "thu_mra_case030:label:9",
+            "thu_mra_case030:label:10",
+            "thu_mra_case030:label:11",
+            "thu_mra_case030:label:12",
+            "thu_mra_case030:label:13",
+            "thu_mra_case030:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
+        },
+        "thu_mra_case007": {
+          "structure_ids": [
+            "thu_mra_case007:label:8",
+            "thu_mra_case007:label:9",
+            "thu_mra_case007:label:11",
+            "thu_mra_case007:label:12",
+            "thu_mra_case007:label:13",
+            "thu_mra_case007:label:14"
+          ],
+          "evidence": "Healthy-volunteer source MRA and supplied numeric segment annotations; anatomical names retain their correspondence to the source diagram."
         }
       }
     }

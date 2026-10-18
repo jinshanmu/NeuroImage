@@ -27,7 +27,7 @@ Python modules separate source acquisition, catalogue adapters, construction, co
 
 ## Source coverage
 
-The accepted 15 October 2026 inventory contains 39 source configurations from 19 families, 1,901 source-specific entries and 18 additional source annotations. It supplies 186 built-in sequences, 75 curricula with 700 views, and 26 course plans selecting 580 views. These view counts overlap and must not be added. The [complete inventory](../config/anatomy-detail-inventory-2026-10-15.json) and [detailed anatomy and variation guide](detailed-anatomy-and-variation.md) describe the current snapshot.
+The accepted 15 October 2026 inventory contains 39 source configurations from 19 families, 1,901 source-specific entries and 18 additional source annotations. It supplies 186 built-in sequences, 75 curricula with 700 views, and 26 course plans selecting 580 views. These view counts overlap and must not be added. The [historical inventory](../config/anatomy-detail-inventory-2026-10-15.json) preserves that increment. Version 1.0.0 supplies 1,965 source-specific entries, 193 built-in sequences, 90 curricula with 796 views, 31 plans selecting 684 views, and 46 detailed topics; see the [current inventory](../config/anatomy-release-1.0.0.json) and [learning guide](learning-and-variation.md).
 
 The following table documents the earlier eight-source baseline retained for comparison with the initial implementation:
 

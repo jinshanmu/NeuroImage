@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "cerebra-first-session",
+  "title": "First session: cortex, deep structures and ventricles",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Use linked sections and 3D surfaces to locate eight source regions. Rotate the view, trace adjacent anatomy and save a focused observation.",
+  "views": [
+    {
+      "id": "region-86",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-86",
+      "prompt": "Locate Left Precentral in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    },
+    {
+      "id": "region-100",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-100",
+      "prompt": "Locate Left Caudate in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    },
+    {
+      "id": "region-72",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-72",
+      "prompt": "Locate Left Putamen in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    },
+    {
+      "id": "region-91",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-91",
+      "prompt": "Locate Left Thalamus in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    },
+    {
+      "id": "region-92",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-92",
+      "prompt": "Locate Left Lateral Ventricle in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    },
+    {
+      "id": "region-99",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-99",
+      "prompt": "Locate Left Hippocampus in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    },
+    {
+      "id": "region-62",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-62",
+      "prompt": "Locate Left Brainstem in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    },
+    {
+      "id": "region-97",
+      "curriculum": "cerebra-source-foundations",
+      "view": "region-97",
+      "prompt": "Locate Left Cerebellum Gray Matter in the complete source sections. Compare its position with the visible source regions and the opposite hemisphere."
+    }
+  ]
+}

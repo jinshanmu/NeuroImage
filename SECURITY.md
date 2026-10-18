@@ -7,3 +7,7 @@ The server checks local Host and Origin headers, requires JSON for state-changin
 Report suspected vulnerabilities privately to the maintainer, Shanmu Jin, at jinshanmu1129@pku.edu.cn. Include the software version, a minimal synthetic reproduction and the observed behavior. Do not send acquired images, personal teaching notes, credentials or patient information. No response-time guarantee is offered for this research software.
 
 Browser storage is scoped to the browser profile and local service origin. IndexedDB is a working store, not a backup. Export teaching files for durable recovery. A blocked or failed save must not be interpreted as a successful write.
+
+## Supported release
+
+Version 1.0.0 is the current review release. Security fixes target the latest release; older local datasets remain separate from the installed software. Include the exact software version when reporting a problem.

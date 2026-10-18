@@ -1,0 +1,618 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-occipital-surface",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Occipital poles, gyri and sulcal landmarks",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "view-01",
+      "title": "Left Anterior occipital sulcus",
+      "selected": "z_anatomy:object:5cab4cdd0b52",
+      "visible": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Anterior occipital sulcus*.l. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          210,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:84ca90032d48": 0.3,
+          "z_anatomy:object:b2a711561412": 0.3,
+          "z_anatomy:object:cd0245421902": 0.3,
+          "z_anatomy:object:1cec0e1c6251": 0.3,
+          "z_anatomy:object:674629938fdc": 0.3,
+          "z_anatomy:object:7e471e9e84e3": 0.3,
+          "z_anatomy:object:d67cd647706e": 0.3,
+          "z_anatomy:object:9819465ea2a7": 0.3,
+          "z_anatomy:object:8a26ee4b8094": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-02",
+      "title": "Right Anterior occipital sulcus",
+      "selected": "z_anatomy:object:4bfbf72407f6",
+      "visible": [
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Anterior occipital sulcus*.r. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          150,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:6620bf1c0099": 0.3,
+          "z_anatomy:object:8af18e866b5c": 0.3,
+          "z_anatomy:object:956c19f06311": 0.3,
+          "z_anatomy:object:be5a707d5a02": 0.3,
+          "z_anatomy:object:c2e62683a073": 0.3,
+          "z_anatomy:object:0b0ab3bd04e9": 0.3,
+          "z_anatomy:object:8c27f49a316e": 0.3,
+          "z_anatomy:object:3a6966c34762": 0.3,
+          "z_anatomy:object:c9238f32f95e": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-03",
+      "title": "Left Inferior occipital gyrus and sulcus",
+      "selected": "z_anatomy:object:84ca90032d48",
+      "visible": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Inferior occipital gyrus and sulcus*.l. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          210,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:5cab4cdd0b52": 0.3,
+          "z_anatomy:object:b2a711561412": 0.3,
+          "z_anatomy:object:cd0245421902": 0.3,
+          "z_anatomy:object:1cec0e1c6251": 0.3,
+          "z_anatomy:object:674629938fdc": 0.3,
+          "z_anatomy:object:7e471e9e84e3": 0.3,
+          "z_anatomy:object:d67cd647706e": 0.3,
+          "z_anatomy:object:9819465ea2a7": 0.3,
+          "z_anatomy:object:8a26ee4b8094": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-04",
+      "title": "Right Inferior occipital gyrus and sulcus",
+      "selected": "z_anatomy:object:6620bf1c0099",
+      "visible": [
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Inferior occipital gyrus and sulcus*.r. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          150,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:4bfbf72407f6": 0.3,
+          "z_anatomy:object:8af18e866b5c": 0.3,
+          "z_anatomy:object:956c19f06311": 0.3,
+          "z_anatomy:object:be5a707d5a02": 0.3,
+          "z_anatomy:object:c2e62683a073": 0.3,
+          "z_anatomy:object:0b0ab3bd04e9": 0.3,
+          "z_anatomy:object:8c27f49a316e": 0.3,
+          "z_anatomy:object:3a6966c34762": 0.3,
+          "z_anatomy:object:c9238f32f95e": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-05",
+      "title": "Left Lateral occipital gyrus (Middle occipital gyrus)",
+      "selected": "z_anatomy:object:b2a711561412",
+      "visible": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Lateral occipital gyrus (Middle occipital gyrus*).l. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          210,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:5cab4cdd0b52": 0.3,
+          "z_anatomy:object:84ca90032d48": 0.3,
+          "z_anatomy:object:cd0245421902": 0.3,
+          "z_anatomy:object:1cec0e1c6251": 0.3,
+          "z_anatomy:object:674629938fdc": 0.3,
+          "z_anatomy:object:7e471e9e84e3": 0.3,
+          "z_anatomy:object:d67cd647706e": 0.3,
+          "z_anatomy:object:9819465ea2a7": 0.3,
+          "z_anatomy:object:8a26ee4b8094": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-06",
+      "title": "Right Lateral occipital gyrus (Middle occipital gyrus)",
+      "selected": "z_anatomy:object:8af18e866b5c",
+      "visible": [
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Lateral occipital gyrus (Middle occipital gyrus*).r. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          150,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:4bfbf72407f6": 0.3,
+          "z_anatomy:object:6620bf1c0099": 0.3,
+          "z_anatomy:object:956c19f06311": 0.3,
+          "z_anatomy:object:be5a707d5a02": 0.3,
+          "z_anatomy:object:c2e62683a073": 0.3,
+          "z_anatomy:object:0b0ab3bd04e9": 0.3,
+          "z_anatomy:object:8c27f49a316e": 0.3,
+          "z_anatomy:object:3a6966c34762": 0.3,
+          "z_anatomy:object:c9238f32f95e": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-07",
+      "title": "Left Lunate sulcus",
+      "selected": "z_anatomy:object:cd0245421902",
+      "visible": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Lunate sulcus.l. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          210,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:5cab4cdd0b52": 0.3,
+          "z_anatomy:object:84ca90032d48": 0.3,
+          "z_anatomy:object:b2a711561412": 0.3,
+          "z_anatomy:object:1cec0e1c6251": 0.3,
+          "z_anatomy:object:674629938fdc": 0.3,
+          "z_anatomy:object:7e471e9e84e3": 0.3,
+          "z_anatomy:object:d67cd647706e": 0.3,
+          "z_anatomy:object:9819465ea2a7": 0.3,
+          "z_anatomy:object:8a26ee4b8094": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-08",
+      "title": "Right Lunate sulcus",
+      "selected": "z_anatomy:object:956c19f06311",
+      "visible": [
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Lunate sulcus.r. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          150,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:4bfbf72407f6": 0.3,
+          "z_anatomy:object:6620bf1c0099": 0.3,
+          "z_anatomy:object:8af18e866b5c": 0.3,
+          "z_anatomy:object:be5a707d5a02": 0.3,
+          "z_anatomy:object:c2e62683a073": 0.3,
+          "z_anatomy:object:0b0ab3bd04e9": 0.3,
+          "z_anatomy:object:8c27f49a316e": 0.3,
+          "z_anatomy:object:3a6966c34762": 0.3,
+          "z_anatomy:object:c9238f32f95e": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-09",
+      "title": "Left Occipital pole",
+      "selected": "z_anatomy:object:1cec0e1c6251",
+      "visible": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Occipital pole.l. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          210,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:5cab4cdd0b52": 0.3,
+          "z_anatomy:object:84ca90032d48": 0.3,
+          "z_anatomy:object:b2a711561412": 0.3,
+          "z_anatomy:object:cd0245421902": 0.3,
+          "z_anatomy:object:674629938fdc": 0.3,
+          "z_anatomy:object:7e471e9e84e3": 0.3,
+          "z_anatomy:object:d67cd647706e": 0.3,
+          "z_anatomy:object:9819465ea2a7": 0.3,
+          "z_anatomy:object:8a26ee4b8094": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-10",
+      "title": "Right Occipital pole",
+      "selected": "z_anatomy:object:be5a707d5a02",
+      "visible": [
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Occipital pole.r. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          150,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:4bfbf72407f6": 0.3,
+          "z_anatomy:object:6620bf1c0099": 0.3,
+          "z_anatomy:object:8af18e866b5c": 0.3,
+          "z_anatomy:object:956c19f06311": 0.3,
+          "z_anatomy:object:c2e62683a073": 0.3,
+          "z_anatomy:object:0b0ab3bd04e9": 0.3,
+          "z_anatomy:object:8c27f49a316e": 0.3,
+          "z_anatomy:object:3a6966c34762": 0.3,
+          "z_anatomy:object:c9238f32f95e": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-11",
+      "title": "Left Superior occipital gyri",
+      "selected": "z_anatomy:object:674629938fdc",
+      "visible": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Superior occipital gyri.l. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          210,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:5cab4cdd0b52": 0.3,
+          "z_anatomy:object:84ca90032d48": 0.3,
+          "z_anatomy:object:b2a711561412": 0.3,
+          "z_anatomy:object:cd0245421902": 0.3,
+          "z_anatomy:object:1cec0e1c6251": 0.3,
+          "z_anatomy:object:7e471e9e84e3": 0.3,
+          "z_anatomy:object:d67cd647706e": 0.3,
+          "z_anatomy:object:9819465ea2a7": 0.3,
+          "z_anatomy:object:8a26ee4b8094": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-12",
+      "title": "Right Superior occipital gyri",
+      "selected": "z_anatomy:object:c2e62683a073",
+      "visible": [
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Superior occipital gyri.r. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          150,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:4bfbf72407f6": 0.3,
+          "z_anatomy:object:6620bf1c0099": 0.3,
+          "z_anatomy:object:8af18e866b5c": 0.3,
+          "z_anatomy:object:956c19f06311": 0.3,
+          "z_anatomy:object:be5a707d5a02": 0.3,
+          "z_anatomy:object:0b0ab3bd04e9": 0.3,
+          "z_anatomy:object:8c27f49a316e": 0.3,
+          "z_anatomy:object:3a6966c34762": 0.3,
+          "z_anatomy:object:c9238f32f95e": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-13",
+      "title": "Left Transverse occipital sulcus",
+      "selected": "z_anatomy:object:7e471e9e84e3",
+      "visible": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Transverse occipital sulcus.l. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          210,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:5cab4cdd0b52": 0.3,
+          "z_anatomy:object:84ca90032d48": 0.3,
+          "z_anatomy:object:b2a711561412": 0.3,
+          "z_anatomy:object:cd0245421902": 0.3,
+          "z_anatomy:object:1cec0e1c6251": 0.3,
+          "z_anatomy:object:674629938fdc": 0.3,
+          "z_anatomy:object:d67cd647706e": 0.3,
+          "z_anatomy:object:9819465ea2a7": 0.3,
+          "z_anatomy:object:8a26ee4b8094": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-14",
+      "title": "Right Transverse occipital sulcus",
+      "selected": "z_anatomy:object:0b0ab3bd04e9",
+      "visible": [
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+      "note": "Original source object: Transverse occipital sulcus.r. Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "display": {
+        "camera": [
+          150,
+          20,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:4bfbf72407f6": 0.3,
+          "z_anatomy:object:6620bf1c0099": 0.3,
+          "z_anatomy:object:8af18e866b5c": 0.3,
+          "z_anatomy:object:956c19f06311": 0.3,
+          "z_anatomy:object:be5a707d5a02": 0.3,
+          "z_anatomy:object:c2e62683a073": 0.3,
+          "z_anatomy:object:8c27f49a316e": 0.3,
+          "z_anatomy:object:3a6966c34762": 0.3,
+          "z_anatomy:object:c9238f32f95e": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

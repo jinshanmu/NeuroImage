@@ -29,9 +29,9 @@
         "*"
       ],
       "observation": "Compare normal-source examples in their independent native spaces. Describe the visible feature, side, acquisition and coverage before proposing a variant name. Save complete sections and the same-point magnification with the original source identity.",
-      "limit": "Healthy-source selection does not validate every apparent difference as a named normal variant. Statistical occurrence, an educational model and one participant image answer different questions. No newly acquired example in this increment has a confirmed individual variant label.",
-      "question": "Can a low value in a population vessel map, or a vessel not visible in one image, establish that an individual artery is absent?",
-      "answer": "No. Source acquisition, inclusion criteria, processing and visibility affect the observation. Keep a candidate finding descriptive until source evidence supports the individual variant. An atlas probability is not the prevalence of that variant.",
+      "limit": "Individual images, source models and population fields provide different forms of anatomical evidence. Record the source, visibility and comparison context alongside each interpretation.",
+      "question": "What evidence is needed to interpret a visible difference between two normal-source examples?",
+      "answer": "Trace the feature across adjacent sections, compare its side and spatial context, and check the acquisition and source definition. Distinguish an individual course from a population field or educational model. Save the supporting views with your observations for instructor review.",
       "references": [
         {
           "title": "Dunås et al.: Major cerebral artery atlas (2017)",
@@ -123,6 +123,36 @@
           "title": "Schira et al.: HumanBrainAtlas (2023)",
           "url": "https://doi.org/10.1007/s00429-023-02653-8",
           "basis": "Primary healthy-participant acquisition, averaging and reconstruction methods."
+        }
+      ]
+    },
+    {
+      "id": "circle-of-willis-comparison",
+      "title": "Comparing Circle of Willis configurations",
+      "source_ids": [
+        "thu_mra_case009",
+        "thu_mra_case014",
+        "thu_mra_case001",
+        "thu_mra_case006",
+        "thu_mra_case010",
+        "thu_mra_case021",
+        "thu_mra_case030",
+        "thu_mra_case007"
+      ],
+      "observation": "Start with paired A1 courses, the anterior communicating region, posterior communicating regions and the basilar-to-P1 configuration. Compare the same region across volunteers with both the original MRA and supplied labels visible.",
+      "limit": "The cohort contains healthy-volunteer images and author-reported physiological variation. Each displayed case retains its actual annotation coverage and image visibility.",
+      "question": "Which observations support a difference in arterial configuration, and which depend on how the source was imaged or annotated?",
+      "answer": "Describe the side and course across adjacent sections, continuity with neighboring arterial segments, and the presence of an explicit source label. Compare another view and another volunteer. Keep the observation and its anatomical interpretation in separate sentences; an unlabelled or inconspicuous segment calls for image review before assigning a named variant.",
+      "references": [
+        {
+          "title": "Tan et al. (2024): Cerebral MRA dataset and annotation definitions",
+          "url": "https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html",
+          "basis": "Original healthy-volunteer cohort, source segment diagram, preprocessing and terms."
+        },
+        {
+          "title": "Multi-Task Global Optimization-Based Method for Vascular Landmark Detection",
+          "url": "https://doi.org/10.1016/j.compmedimag.2024.102364",
+          "basis": "Original annotation and landmark method."
         }
       ]
     }

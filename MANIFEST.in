@@ -1,4 +1,9 @@
+include config/anatomy-release-1.0.0.json
 include install.sh scripts/install_linux.py
+include config/storage-portable.json
+include CODE_OF_CONDUCT.md GOVERNANCE.md PRIVACY.md
+include docs/learning-and-variation.md docs/linux-quickstart.md docs/dataset-installation.md
+include .github/PULL_REQUEST_TEMPLATE.md
 include LICENSE NOTICE README.md environment.yml requirements-core.lock.txt
 include CITATION.cff CHANGELOG.md CONTRIBUTING.md SECURITY.md requirements-dev.lock.txt
 include scripts/prepare_public_release.py

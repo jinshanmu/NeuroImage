@@ -227,7 +227,7 @@ def prepare(manifest_path, recipe_path, data_root, minimum_free_gib=400):
     if not isinstance(steps, list) or not 1 <= len(steps) <= 50 or len({s["id"] for s in steps}) != len(steps):
         raise ValueError("Require 1 to 50 uniquely identified teaching scenes")
     source = {s.id: s for s in manifest.structures}
-    implementation = {name: sha256(Path(__file__).with_name(name)) for name in ("teaching.py", "review.py")}
+    implementation = {name: sha256(Path(__file__).with_name(name)) for name in ("teaching.py", "review.py", "provenance.py")}
     if manifest.representation == "surface-model":
         implementation["model_teaching.py"] = sha256(Path(__file__).with_name("model_teaching.py"))
         if any(step.get("source_annotation") for step in steps):

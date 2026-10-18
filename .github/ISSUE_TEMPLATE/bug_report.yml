@@ -1,22 +1,25 @@
-name: Software bug
-description: Report a reproducible software problem using synthetic data when possible.
+name: Software problem
+description: Report a reproducible installation, viewing or teaching problem.
 body:
+  - type: markdown
+    attributes:
+      value: "For a suspected vulnerability, use the private contact in SECURITY.md. Include source identifiers and steps; keep acquired images, patient information and credentials out of attachments."
   - type: input
     id: version
     attributes:
-      label: Software version
-      description: Include the output of neuroimage --version.
+      label: Software version and platform
+      description: Include the NeuroImage version, Linux distribution and browser version.
     validations:
       required: true
   - type: textarea
-    id: reproduce
+    id: steps
     attributes:
-      label: Steps to reproduce
-      description: Give commands, expected behavior and actual behavior. Do not attach acquired anatomy, credentials or personal files.
+      label: Steps and observed behavior
+      description: Explain the steps, expected behavior and what happened. Include the source recipe and package version when relevant.
     validations:
       required: true
   - type: textarea
-    id: environment
+    id: evidence
     attributes:
-      label: Environment
-      description: Operating system, browser, relevant error text and whether the generated demo reproduces the problem.
+      label: Diagnostic information
+      description: Include relevant error text or a small generated reproduction. Review logs for personal paths before posting.

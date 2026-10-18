@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "anterior-arterial-variation",
+  "title": "Anterior arterial variation: eight-volunteer comparison",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare the same arterial region across eight healthy-volunteer source examples. Record visible course, paired-side context, label coverage and the evidence supporting each interpretation.",
+  "views": [
+    {
+      "id": "thu-mra-case009-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case009-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case014-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case014-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case001-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case001-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case006-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case006-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case010-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case010-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case021-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case021-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case030-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case030-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case007-variation-comparison-paired-a1",
+      "curriculum": "thu-mra-case007-variation-comparison",
+      "view": "paired-a1",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections. Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ."
+    },
+    {
+      "id": "thu-mra-case009-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case009-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    },
+    {
+      "id": "thu-mra-case014-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case014-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    },
+    {
+      "id": "thu-mra-case001-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case001-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    },
+    {
+      "id": "thu-mra-case006-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case006-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    },
+    {
+      "id": "thu-mra-case010-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case010-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    },
+    {
+      "id": "thu-mra-case021-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case021-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    },
+    {
+      "id": "thu-mra-case030-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case030-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    },
+    {
+      "id": "thu-mra-case007-variation-comparison-anterior-communicating",
+      "curriculum": "thu-mra-case007-variation-comparison",
+      "view": "anterior-communicating",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image. Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review."
+    }
+  ]
+}

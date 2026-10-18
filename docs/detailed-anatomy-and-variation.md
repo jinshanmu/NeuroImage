@@ -1,8 +1,12 @@
 # Detailed anatomy and normal variation
 
-The ten main anatomical groups remain stable. Choose **Explore detailed anatomy** to open subordinate topics, then select a source. The topic index contains 35 entries. Each entry opens only the structures or image observations actually available in that source version. Dataset families stay in the main sidebar; their cases and regional configurations remain on secondary pages.
+The ten main anatomical groups remain stable. Choose **Detailed anatomy** to open subordinate topics, then select a source. The topic index contains 46 entries. Each entry opens only the structures or image observations actually available in that source version. Dataset families stay in the main sidebar; their cases and regional configurations remain on secondary pages.
 
-## Detailed source content
+## Version 1.0.0 additions
+
+The current release adds 64 original Z-Anatomy objects: 60 cortical surface objects and four dural arterial objects. Seven curricula supply 64 corresponding views. Eight additional MRA curricula provide 32 views of the paired A1, anterior communicating, posterior communicating and P1–basilar regions. Two regional courses compare these observations across all eight available volunteers. The [learning and variation guide](learning-and-variation.md) describes these views, the source definitions and study-record tools. The configured Z-Anatomy selection now contains 350 original objects.
+
+## Earlier detailed source content
 
 The 15 October 2026 increment adds 73 original Z-Anatomy objects to the previous 213-object configuration:
 

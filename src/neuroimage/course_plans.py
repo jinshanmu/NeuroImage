@@ -113,7 +113,7 @@ def prepare_course(path, package_keys, data_root, *, minimum_free_gib=400, progr
     recipes, manifests = resolve_packages(plan, package_keys, root)
     inputs = {"plan": plan, "packages": {dataset: {"key": package_keys[dataset], "manifest_sha256": sha256(path)} for dataset, path in sorted(manifests.items())},
               "curricula": recipes, "software_version": __version__, "pydantic": version("pydantic"),
-              "implementation": {name: sha256(Path(__file__).with_name(name)) for name in ["course_plans.py", "courses.py", "teaching.py", "model_teaching.py", "review.py"]}}
+              "implementation": {name: sha256(Path(__file__).with_name(name)) for name in ["course_plans.py", "courses.py", "teaching.py", "model_teaching.py", "review.py", "provenance.py"]}}
     if any(step.get("source_annotation") for recipe in recipes.values() for step in recipe["scenes"]):
         for name in ("source_annotations.py", "blender_annotations.py"):
             inputs["implementation"][name] = sha256(Path(__file__).with_name(name))

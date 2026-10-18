@@ -19,7 +19,8 @@ def local_service(tmp_path):
     web = tmp_path / "web"
     (web / "assets").mkdir(parents=True)
     (web / "index.html").write_text("<title>Local cache fixture</title>")
-    (web / "assets/view-abc123.js").write_text("const revision = 1;")
+    (web / "assets/view-abcd1234.js").write_text("const revision = 1;")
+    (web / "assets/settings.js").write_text("const configured = true;")
     server = create_server([], web, 0, workspace=manager)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -53,8 +54,10 @@ def test_cached_response_revalidates_replaced_file_and_has_no_body(local_service
 
 def test_static_cache_does_not_cache_session_or_expose_paths(local_service):
     url, _, _ = local_service
-    with urllib.request.urlopen(url + "/assets/view-abc123.js") as response:
+    with urllib.request.urlopen(url + "/assets/view-abcd1234.js") as response:
         assert "immutable" in response.headers["Cache-Control"]
+    with urllib.request.urlopen(url + "/assets/settings.js") as response:
+        assert response.headers["Cache-Control"] == "private, no-cache"
     with urllib.request.urlopen(url + "/api/workspace/session") as response:
         assert response.headers["Cache-Control"] == "no-store"
     with pytest.raises(urllib.error.HTTPError) as result:
@@ -111,3 +114,27 @@ def test_session_verification_reuses_only_unchanged_package_files(source, tmp_pa
         assert len(calls) == 2
     finally:
         server.server_close(); manager.close()
+
+
+def test_bookmark_recovers_only_the_exact_local_package(source, tmp_path):
+    manifest_path = build(source)
+    manifest = json.loads(manifest_path.read_text())
+    key = manifest["package_id"] + "-" + manifest["package_version"]
+    manager = Workspace(source[0], tmp_path.parent / (tmp_path.name + "-bookmark-state"), data_floor_gib=0, state_floor_gib=0)
+    web = tmp_path / "viewer"; web.mkdir(); (web / "index.html").write_text("<title>Test</title>")
+    server = create_server([], web, 0, workspace=manager)
+    thread = threading.Thread(target=server.serve_forever, daemon=True); thread.start()
+    url = f"http://127.0.0.1:{server.server_port}"
+    try:
+        with urllib.request.urlopen(url + "/api/atlases") as response:
+            assert json.load(response)["atlases"] == []
+        with urllib.request.urlopen(url + "/api/workspace/atlases/" + key) as response:
+            assert json.load(response)["atlas_key"] == key
+        with urllib.request.urlopen(url + "/api/atlases") as response:
+            assert [record["key"] for record in json.load(response)["atlases"]] == [key]
+        with pytest.raises(urllib.error.HTTPError) as result:
+            urllib.request.urlopen(url + "/api/workspace/atlases/synthetic-another-version")
+        assert result.value.code == 400
+        assert "exact version" in result.value.read().decode()
+    finally:
+        server.shutdown(); server.server_close(); thread.join(); manager.close()

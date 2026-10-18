@@ -1,120 +1,99 @@
-# Installation, first use and reproduction
+# Installation and reproduction
 
-This guide applies to NeuroImage Atlas **0.15.0rc2**. The release is prepared for author review and has not been published to a package index. Use the supplied wheel or source archive; do not assume that `pip install neuroimage-atlas` retrieves this candidate.
+This guide applies to NeuroImage Atlas **1.0.0**, prepared for author review. Use the supplied software artifacts. The [Linux quickstart](linux-quickstart.md) is the recommended installation route; the commands below explain the same components for development and reproduction.
 
-## Prerequisites and dependency roles
+## Runtime and dependencies
 
-Linux x86_64, Python 3.12 and Chromium with WebGL2 were verified. Windows and macOS have not been accepted. A graphical WebGL2 browser is required for viewing; command-line construction can run without a display. No running 3D Slicer installation is required.
+Linux x86_64, Python 3.12 and Chromium with WebGL2 are the verified platform. Command-line acquisition and construction run without a display; viewing needs WebGL2. Keep the `NeuroImage` environment, software checkout, dependencies, temporary files and build outputs on SSD. Keep original anatomy, local atlases and teaching exports on the selected data drive.
 
-Install Conda before the commands below. Keep the named `NeuroImage` environment, source checkout, Node modules, temporary files and build outputs on SSD. Choose an existing data-drive directory for original downloads, images, local atlases and teaching exports. The software archive contains no anatomical data and no workstation `data` link.
-
-| Dependency | When needed | Version source |
+| Component | Role | Recorded version |
 | --- | --- | --- |
-| Python and Conda | All use | Python 3.12; `environment.yml` bootstraps the named environment |
-| Python runtime libraries | Construction, validation and serving | All 17 packages pinned in `requirements-core.lock.txt` |
-| WebGL2 browser | Interactive viewing | Verified Chromium; exact test platform is recorded in release evidence |
-| Node and npm | Rebuilding the frontend; frontend tests | Node 24.21.0 in `.nvmrc`; `package-lock.json` consumed by `npm ci` |
-| Python build and test tools | Source installation, distribution builds and tests | Six pins in `requirements-dev.lock.txt`, including setuptools, wheel and pytest |
-| h5py | Constructing original inner-ear HDF5 CT | 3.16.0 in `requirements-source-inspection.lock.txt`; not needed to view an existing CT package |
-| Blender application | Constructing Z-Anatomy from the original source model | Separate Blender 5.2.2 LTS executable on `PATH`; its embedded Python is not the project environment |
-| Matplotlib and plotting dependencies | Optional native projection export | `requirements-teaching.lock.txt`; not needed for the ordinary viewer |
-| aria2, dcm2niix and git-annex | Additional acquisition or source inspection workflows | Bootstrap helpers in `environment.yml`; see the selected source guide before use |
+| Conda and Python | Dedicated application environment | Python 3.12; `environment.yml` bootstrap |
+| Python runtime libraries | Acquisition, construction, validation, local service | `requirements-core.lock.txt` |
+| WebGL2 browser | Interactive source sections and 3D anatomy | Browser and renderer in release verification |
+| Node and npm | Frontend builds and tests | Node 24.21.0; `.nvmrc` and `package-lock.json` |
+| Python build and test tools | Source packaging and tests | `requirements-dev.lock.txt` |
+| h5py | Original inner-ear HDF5 CT construction | `requirements-source-inspection.lock.txt` |
+| Blender | Original Z-Anatomy object construction | Separate Blender 5.2.2 LTS application and embedded Python |
+| Matplotlib | Optional native projection exports | `requirements-teaching.lock.txt` |
+| aria2, dcm2niix and git-annex | Optional acquisition/source inspection helpers | `environment.yml`; selected source guide |
 
-The environment YAML is a bootstrap specification, not an exact cross-platform Conda solver lock. Runtime/build pins and the npm lock define the accepted software stack; `RELEASE_VERIFICATION.json` records the actual tested Python and platform. The package metadata allows compatible dependency ranges for installation, but use the lock files when reproducing this candidate. Optional tools remain separately documented rather than silently assumed.
+The Conda YAML bootstraps an environment. Pinned Python requirements and the npm lock record the application stack used for release verification. Package metadata also states supported dependency ranges. Application-specific runtimes such as Blender remain separately recorded. `neuroimage doctor` checks the installed application's full dependency closure, local viewer and optional selected-source requirements.
 
-## Install the prebuilt wheel
+## Installation paths
 
-Extract the supplied `.tar.gz` source archive on SSD and enter its extracted directory to access the environment file and locks. The wheel is supplied alongside it. Replace the example wheel path with its actual absolute location:
+From a physical SSD directory containing the source archive:
 
 ```bash
-conda env create -f environment.yml
+bash install.sh --data-root /path/to/data/NeuroImage \
+  --state-root /path/to/ssd/NeuroImage-state --recipe cerebra
+```
+
+Add `--wheel /path/to/neuroimage_atlas-1.0.0-py3-none-any.whl` to use the prebuilt viewer. Add `--install-only` to install software alone, or `--no-start` to finish acquisition and construction without starting the service. The installer creates the named environment when needed and uses the portable storage reserves. See [Linux quickstart](linux-quickstart.md) for every option, manual acquisition and capacity checks.
+
+For a manual developer installation into an existing `NeuroImage` environment:
+
+```bash
 conda activate NeuroImage
-python -m pip install -r requirements-core.lock.txt
-python -m pip install --no-deps /path/to/neuroimage_atlas-0.15.0rc2-py3-none-any.whl
-neuroimage --version
-neuroimage recipes
-```
-
-If `NeuroImage` already exists, activate it and inspect its installed versions instead of recreating it. All project Python commands run inside this environment. The wheel already contains the offline frontend: Node, npm and a frontend build are unnecessary for ordinary use. Internet access is needed for initial dependencies and data acquisition; the built viewer uses local assets without a remote rendering service.
-
-For original inner-ear CT construction, additionally run:
-
-```bash
-python -m pip install -r requirements-source-inspection.lock.txt
-```
-
-For Z-Anatomy construction, install the separately distributed Blender application and confirm `blender --version` reports the documented version. Viewing an already constructed Z-Anatomy package does not need Blender.
-
-## Build from source instead
-
-From the source root, after creating/activating `NeuroImage`:
-
-```bash
-python -m pip install -r requirements-core.lock.txt -r requirements-dev.lock.txt
-nvm install
-nvm use
-npm ci
+python -m pip install -r requirements-core.lock.txt -r requirements-dev.lock.txt \
+  -r requirements-source-inspection.lock.txt
+npm ci --ignore-scripts --bin-links=false
 npm run build
-python -m pip install --no-deps --no-build-isolation -e .
-neuroimage --version
+python -m pip install --no-deps --no-build-isolation .
+neuroimage doctor
 ```
 
-The `nvm` commands assume nvm is installed and loaded into the shell. Alternatively, install Node 24.21.0 separately, confirm `node --version`, and omit both nvm commands. `npm ci` uses the committed dependency lock; `npm run build` runs TypeScript checking and produces the local viewer. Do not edit generated `src/neuroimage/web` files directly.
+Use the Node version in `.nvmrc`. The package scripts call the local tools directly, so npm command links are unnecessary. Source builds bundle the offline viewer and third-party notices. A wheel installation needs Python dependencies and the supplied wheel; Node is a build dependency.
 
-## Acquire one source and open it
-
-Create or select actual storage directories first, then replace these example paths. The data directory must be on the intended data drive; the state directory must be on SSD. No existing local symlink is required.
+## Acquire and construct
 
 ```bash
-export ATLAS_DATA_ROOT="/path/to/existing/data-directory"
-export ATLAS_STATE_ROOT="/path/to/ssd/state-directory"
-neuroimage recipes cerebra
-neuroimage acquire cerebra --data-root "$ATLAS_DATA_ROOT" --dry-run
-neuroimage acquire cerebra --data-root "$ATLAS_DATA_ROOT"
-neuroimage build cerebra --data-root "$ATLAS_DATA_ROOT" --workers 2
-neuroimage library --data-root "$ATLAS_DATA_ROOT"
-neuroimage workspace --data-root "$ATLAS_DATA_ROOT" --state-root "$ATLAS_STATE_ROOT" --port 8765
+neuroimage recipes
+neuroimage quickstart cerebra --data-root /path/to/data/NeuroImage \
+  --state-root /path/to/ssd/NeuroImage-state \
+  --storage-policy config/storage-portable.json --dry-run
+neuroimage quickstart cerebra --data-root /path/to/data/NeuroImage \
+  --state-root /path/to/ssd/NeuroImage-state \
+  --storage-policy config/storage-portable.json --no-start
 ```
 
-Read the source terms before acquisition. The dry run reports transfer and expansion requirements. The default data-drive free-space floor is 400 GiB, not the size of every dataset. If your storage needs a different policy, copy `config/storage-policy.json`, review its capacities, and pass that same file with `--storage-policy /path/to/policy.json` to acquisition, construction and workspace commands. Do not disable capacity checks to force a transfer that will not fit.
+The recipe records source URLs, terms, versions, expected sizes and checksums. The same interfaces support every source. The [dataset table](dataset-installation.md) lists the 19 families and 39 configurations, source access and application dependencies. MIDA requires the original archive from its official manual access page. Repeating a command resumes transfers and reuses verified sources and completed construction outputs.
 
-Construction prints the exact resulting `manifest.json` path. Run `neuroimage validate /exact/printed/manifest.json` for fresh schema, asset-checksum and geometry validation. Library discovery alone is not equivalent to this validation.
+The installer explicitly uses `config/storage-portable.json`: 10 GiB data-drive reserve and 2 GiB software-drive reserve, plus the selected recipe's additional working-space estimate. The workstation development profile retains larger 400 GiB and 60 GiB reserves. Inspect capacity estimates and choose an appropriate explicit profile for your own drives.
 
-Open `http://127.0.0.1:8765`. Choose an anatomical group, then a ready source. **Structure library** supports search, selection and **Select all** / **Deselect all** with the displayed filter scope. **Learning tools** exposes source evidence and teaching views. Save a scene, change the view and restore it; export the scene for durable backup. Use **Teaching library** to prepare a course from explicit local package versions. Stop the service with Ctrl+C; start it with the same paths to resume. See [getting started](getting-started.md) and [teaching library](teaching-library-and-courses.md) for notebook and course workflows.
+## Software reproduction
 
-## Reproduce software and data evidence
-
-From the source root with development dependencies installed, add the optional HDF5 dependency to include its construction tests (otherwise those tests are skipped):
+From the recorded source snapshot with pinned dependencies:
 
 ```bash
-python -m pip install -r requirements-source-inspection.lock.txt
 python -m pytest
 npm test
 npm run build
-python scripts/build_distribution.py
+python scripts/build_distribution.py --skip-web-build
 ```
 
-The tests use generated fixtures and do not need acquired anatomy. Use an SSD filesystem with symbolic-link support. The distribution builder emits a wheel and source archive under `dist`, normalizes archive metadata with a fixed `SOURCE_DATE_EPOCH`, and rejects acquired data. A Git checkout can also run `python scripts/audit_code_release.py --include-untracked`; that audit requires Git metadata and is not required in an extracted source archive.
+`build_distribution.py` builds and audits a wheel and source archive in `dist/`. It normalizes archive ownership, permissions, ordering and timestamps using `SOURCE_DATE_EPOCH`. The default epoch is recorded in the build receipt. Rebuild an independently extracted archive with the same stack and epoch to compare artifacts. Tests create small analytic fixtures; acquired anatomy is unnecessary for the code suite.
 
-The accepted rc2 run passed 230 Python and 135 frontend tests. An independent extraction, installation outside the checkout, frontend rebuild and distribution rebuild reproduced both supplied distribution archives byte for byte on the recorded Linux stack. This result does not promise identical builds on every platform or future dependency resolver. Preserve the versioned locks, release manifest and checksums alongside your installation.
+The public source audit checks repository boundaries and the distribution audit checks archive members and bundled viewer notices. The release candidate has an additional source-tree audit for machine-specific paths, unexpected binaries, credentials and symbolic links. Release verification records the actual commands and platform. Other operating systems need their own validation before being listed as supported.
 
-From a release-candidate directory, verify supplied archives using `sha256sum -c SHA256SUMS.txt`. Compare rebuilt archive hashes against the corresponding entries in `RELEASE_MANIFEST.json`. Do not replace the original artifacts while checking a reconstruction.
+## Source and teaching reproduction
 
-Data reproduction additionally requires the exact original sources, recipe and implementation fingerprint, source license evidence, and construction options. Recipes retain source hashes and the local package manifest records these inputs. Mutable publisher license-page bytes can change package identity even when anatomy is unchanged. Keep historical packages referenced by exported lessons; never rewrite an identity to force a match. `neuroimage locate /path/to/exported-scene.json --data-root "$ATLAS_DATA_ROOT"` resolves the required exact local package. See [atlas format](atlas-format.md) and [detailed anatomy](detailed-anatomy-and-variation.md) for source-specific limits.
+Data reproduction uses the exact original inputs, license evidence, recipe, implementation and construction options recorded in each local manifest. Preserve historical atlas packages referenced by saved teaching views. `neuroimage locate EXPORTED_SCENE --data-root DATA_ROOT` resolves the exact required local package. A source update may create another package identity; previously saved views remain attached to their original source.
 
-The manuscript's Online Resource 3 includes a separate README and pinned figure dependencies for rebuilding aggregate figures and tables. Replotting its receipts reproduces those analyses; it does not repeat original acquisition or establish expert anatomical validity.
+The 1.0.0 teaching format keeps source and processing metadata in every scene. Repeated full recipe text is referenced at `manifest.json#/build/recipe` in the exact source package. Full provenance accompanies exported teaching images. Historical scenes containing an embedded recipe remain readable. Study records are portable JSON with source identity, stable lesson/structure IDs, written responses and self-rated review status.
 
-## Troubleshooting
+## Recovery
 
-| Symptom | Check or action |
+| Symptom | Action |
 | --- | --- |
-| `neuroimage` is unavailable | Activate `NeuroImage`; confirm installation with `python -m pip show neuroimage-atlas` |
-| No ready atlas appears | A code-only install has no data; acquire/build a source or select the correct existing data root |
-| Storage preflight refuses a build | Inspect the dry run, free space and explicit storage policy before retrying |
-| Original-source hash conflict | Preserve the original and investigate its version; do not overwrite it to bypass the check |
-| Missing h5py or Blender | Install the optional dependency for that source; neither is required to browse an already built package |
-| Port 8765 is occupied | Use `--port 8766` and open the corresponding local URL; browser saves are specific to that origin |
-| WebGL or rendering error | Check WebGL2 support and retain browser, renderer, package version and error details for diagnosis |
-| Saved lesson cannot locate a source | Recover its exact historical package with `neuroimage locate`; a newer source is not an automatic substitute |
+| `neuroimage` is unavailable | Activate `NeuroImage`; inspect `python -m pip show neuroimage-atlas` |
+| No local source appears | Select the correct data root or acquire and build a recipe |
+| Capacity check refuses an operation | Inspect the recipe estimate and explicit storage policy, then free enough space |
+| Source checksum differs | Preserve the original file and inspect its published version |
+| Source application is missing | Install the documented Blender or HDF5 dependency for that construction path |
+| A publisher cannot be reached | Retry the same command; retain partial files; consult the official source page |
+| Port 8765 is occupied | Choose `--port 8766` and use its printed URL |
+| WebGL rendering fails | Check WebGL2 support and record the browser, renderer, source and error |
+| Saved teaching content needs an older source | Restore its exact historical package and use `neuroimage locate` |
 
-Acquisition and construction can be interrupted with Ctrl+C and rerun with the same paths. Verified originals and completed assets are reused. Browser profile deletion or storage quotas can remove local saves: retain exported scenes, notebooks and courses outside browser storage.
+Browser saves are specific to the profile and service origin, including the port. Export scenes, notebooks, courses and study records for durable recovery. Removing the software leaves original data and local teaching exports intact.

@@ -1,5 +1,6 @@
 """Prepare a reviewable code-only GitHub snapshot without publishing anything."""
 import argparse
+from datetime import datetime, timezone
 import hashlib
 import json
 from pathlib import Path
@@ -82,7 +83,7 @@ def prepare(destination):
             shutil.copy2(path, artifacts / path.name)
     manifest = {
         "version": version, "status": "prepared_for_author_review_not_published",
-        "prepared_on": "2026-10-15", "public_remote_configured": False,
+        "prepared_on": datetime.now(timezone.utc).date().isoformat(), "public_remote_configured": False,
         "development_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         "github_history": "New source snapshot; development history and local acquisition records are not included",
         "data_policy": "No acquired imaging, label arrays, meshes, streamlines or anatomical derivatives",

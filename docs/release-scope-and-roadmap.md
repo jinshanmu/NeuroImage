@@ -11,15 +11,15 @@ The release covers normal intracranial neuroanatomy and normal variation. Existi
 | Streamlines | Source trajectories and physical slice slabs | Computational trajectories are identified as such |
 | Native images | Original images or explicitly recorded exact frames | No inferred tissue segmentation |
 | Independent models | Native XYZ surface viewing, selection, highlighting and cutaway | No invented MRI coordinate assignment |
-| Detailed discovery | Ten main groups and 35 subordinate topics with actual source-version coverage | Shared topic names do not create anatomical equivalence |
+| Detailed discovery | Ten main groups and 46 subordinate topics with actual source-version coverage | Shared topic names do not create anatomical equivalence |
 | Normal variation observations | Eight original volunteer MRA cases and individual/population evidence courses | Annotation differences are not automatically named variants or prevalence estimates |
-| Teaching | Notes, markers, source-bound scenes, notebook capture/import/export/presentation, cross-source courses and saved progress | Browser storage requires exports for durable archiving |
+| Teaching | Written responses, self-rated review queues, study-record backup, notes, markers, source-bound scenes, notebook capture/import/export/presentation, cross-source courses and saved progress | Browser storage requires exports for durable archiving |
 | Browser layout | Responsive canvas, ordinary page scrolling, inline libraries and tools, expanded view | Graphics implementation can affect rasterization |
 | Distribution | Code-only source snapshot, installable wheel, pinned requirements, licenses and reproducible archive checks | Local Linux checks; other platforms need independent verification |
 
 ## Next anatomical content work
 
-The [detailed anatomy and variation guide](detailed-anatomy-and-variation.md) records the completed 286-object Z-Anatomy selection, nuclear and sellar model curricula, native inner-ear CT and eight-case MRA observation workflow. Future work should extend these finite source modules with independently reviewed variant identities, verified cisternal membranes, finer foraminal and cranial-nerve segment definitions, and deeper nuclear or cerebellar subdivisions where the source actually provides them.
+The [detailed anatomy and variation guide](detailed-anatomy-and-variation.md) records the completed 350-object Z-Anatomy selection, nuclear and sellar model curricula, native inner-ear CT and eight-case MRA observation workflow. Future work should extend these finite source modules with independently reviewed variant identities, verified cisternal membranes, finer foraminal and cranial-nerve segment definitions, and deeper nuclear or cerebellar subdivisions where the source actually provides them.
 
 For each template: identify the original source and its limits; define stable structure IDs and English learning objectives; document coordinate and representation semantics; verify references and source arrays or geometry; prepare views and questions; record expert review; then integrate through the existing adapter and teaching contracts. Do not fill absent detail using invented anatomy or present an unfinished template as a completed lesson.
 

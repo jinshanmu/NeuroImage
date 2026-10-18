@@ -1,0 +1,460 @@
+{
+  "schema_version": "1.0",
+  "representation": "surface-model",
+  "id": "z-anatomy-medial-cingulate",
+  "dataset_id": "z_anatomy",
+  "required_source": {
+    "id": "z_anatomy",
+    "version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc"
+  },
+  "title": "Cingulate and medial parietal surface anatomy",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "view-01",
+      "title": "Left Cingulate gyrus (Posteroventral part)",
+      "selected": "z_anatomy:object:105c99c32032",
+      "visible": [
+        "z_anatomy:object:105c99c32032",
+        "z_anatomy:object:bf1d4119c334",
+        "z_anatomy:object:bb7c0defe845",
+        "z_anatomy:object:215171340a90",
+        "z_anatomy:object:b84454ca3a2c",
+        "z_anatomy:object:2653c13ca37f",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate gyrus (Posteroventral part*).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:bf1d4119c334": 0.3,
+          "z_anatomy:object:bb7c0defe845": 0.3,
+          "z_anatomy:object:215171340a90": 0.3,
+          "z_anatomy:object:b84454ca3a2c": 0.3,
+          "z_anatomy:object:2653c13ca37f": 0.3,
+          "z_anatomy:object:613a8b5387ce": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-02",
+      "title": "Right Cingulate gyrus (Posteroventral part)",
+      "selected": "z_anatomy:object:af40aca23e11",
+      "visible": [
+        "z_anatomy:object:af40aca23e11",
+        "z_anatomy:object:b92ba277c849",
+        "z_anatomy:object:a09e69dd5109",
+        "z_anatomy:object:2496ab989757",
+        "z_anatomy:object:f2e59f472cc7",
+        "z_anatomy:object:6fa5aa0a14fd",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate gyrus (Posteroventral part*).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:b92ba277c849": 0.3,
+          "z_anatomy:object:a09e69dd5109": 0.3,
+          "z_anatomy:object:2496ab989757": 0.3,
+          "z_anatomy:object:f2e59f472cc7": 0.3,
+          "z_anatomy:object:6fa5aa0a14fd": 0.3,
+          "z_anatomy:object:121117601039": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-03",
+      "title": "Left Cingulate gyrus and sulcus (Middle posterior part)",
+      "selected": "z_anatomy:object:bf1d4119c334",
+      "visible": [
+        "z_anatomy:object:105c99c32032",
+        "z_anatomy:object:bf1d4119c334",
+        "z_anatomy:object:bb7c0defe845",
+        "z_anatomy:object:215171340a90",
+        "z_anatomy:object:b84454ca3a2c",
+        "z_anatomy:object:2653c13ca37f",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate gyrus and sulcus (Middle posterior part).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:105c99c32032": 0.3,
+          "z_anatomy:object:bb7c0defe845": 0.3,
+          "z_anatomy:object:215171340a90": 0.3,
+          "z_anatomy:object:b84454ca3a2c": 0.3,
+          "z_anatomy:object:2653c13ca37f": 0.3,
+          "z_anatomy:object:613a8b5387ce": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-04",
+      "title": "Right Cingulate gyrus and sulcus (Middle posterior part)",
+      "selected": "z_anatomy:object:b92ba277c849",
+      "visible": [
+        "z_anatomy:object:af40aca23e11",
+        "z_anatomy:object:b92ba277c849",
+        "z_anatomy:object:a09e69dd5109",
+        "z_anatomy:object:2496ab989757",
+        "z_anatomy:object:f2e59f472cc7",
+        "z_anatomy:object:6fa5aa0a14fd",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate gyrus and sulcus (Middle posterior part).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:af40aca23e11": 0.3,
+          "z_anatomy:object:a09e69dd5109": 0.3,
+          "z_anatomy:object:2496ab989757": 0.3,
+          "z_anatomy:object:f2e59f472cc7": 0.3,
+          "z_anatomy:object:6fa5aa0a14fd": 0.3,
+          "z_anatomy:object:121117601039": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-05",
+      "title": "Left Cingulate gyrus and sulcus (Posterior dorsal part)",
+      "selected": "z_anatomy:object:bb7c0defe845",
+      "visible": [
+        "z_anatomy:object:105c99c32032",
+        "z_anatomy:object:bf1d4119c334",
+        "z_anatomy:object:bb7c0defe845",
+        "z_anatomy:object:215171340a90",
+        "z_anatomy:object:b84454ca3a2c",
+        "z_anatomy:object:2653c13ca37f",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:105c99c32032": 0.3,
+          "z_anatomy:object:bf1d4119c334": 0.3,
+          "z_anatomy:object:215171340a90": 0.3,
+          "z_anatomy:object:b84454ca3a2c": 0.3,
+          "z_anatomy:object:2653c13ca37f": 0.3,
+          "z_anatomy:object:613a8b5387ce": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-06",
+      "title": "Right Cingulate gyrus and sulcus (Posterior dorsal part)",
+      "selected": "z_anatomy:object:a09e69dd5109",
+      "visible": [
+        "z_anatomy:object:af40aca23e11",
+        "z_anatomy:object:b92ba277c849",
+        "z_anatomy:object:a09e69dd5109",
+        "z_anatomy:object:2496ab989757",
+        "z_anatomy:object:f2e59f472cc7",
+        "z_anatomy:object:6fa5aa0a14fd",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:af40aca23e11": 0.3,
+          "z_anatomy:object:b92ba277c849": 0.3,
+          "z_anatomy:object:2496ab989757": 0.3,
+          "z_anatomy:object:f2e59f472cc7": 0.3,
+          "z_anatomy:object:6fa5aa0a14fd": 0.3,
+          "z_anatomy:object:121117601039": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-07",
+      "title": "Left Cingulate sulcus (Marginal part)",
+      "selected": "z_anatomy:object:215171340a90",
+      "visible": [
+        "z_anatomy:object:105c99c32032",
+        "z_anatomy:object:bf1d4119c334",
+        "z_anatomy:object:bb7c0defe845",
+        "z_anatomy:object:215171340a90",
+        "z_anatomy:object:b84454ca3a2c",
+        "z_anatomy:object:2653c13ca37f",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate sulcus (Marginal part*).l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:105c99c32032": 0.3,
+          "z_anatomy:object:bf1d4119c334": 0.3,
+          "z_anatomy:object:bb7c0defe845": 0.3,
+          "z_anatomy:object:b84454ca3a2c": 0.3,
+          "z_anatomy:object:2653c13ca37f": 0.3,
+          "z_anatomy:object:613a8b5387ce": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-08",
+      "title": "Right Cingulate sulcus (Marginal part)",
+      "selected": "z_anatomy:object:2496ab989757",
+      "visible": [
+        "z_anatomy:object:af40aca23e11",
+        "z_anatomy:object:b92ba277c849",
+        "z_anatomy:object:a09e69dd5109",
+        "z_anatomy:object:2496ab989757",
+        "z_anatomy:object:f2e59f472cc7",
+        "z_anatomy:object:6fa5aa0a14fd",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Cingulate sulcus (Marginal part*).r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:af40aca23e11": 0.3,
+          "z_anatomy:object:b92ba277c849": 0.3,
+          "z_anatomy:object:a09e69dd5109": 0.3,
+          "z_anatomy:object:f2e59f472cc7": 0.3,
+          "z_anatomy:object:6fa5aa0a14fd": 0.3,
+          "z_anatomy:object:121117601039": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-09",
+      "title": "Left Paracentral gyrus and sulcus",
+      "selected": "z_anatomy:object:b84454ca3a2c",
+      "visible": [
+        "z_anatomy:object:105c99c32032",
+        "z_anatomy:object:bf1d4119c334",
+        "z_anatomy:object:bb7c0defe845",
+        "z_anatomy:object:215171340a90",
+        "z_anatomy:object:b84454ca3a2c",
+        "z_anatomy:object:2653c13ca37f",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Paracentral gyrus and sulcus*.l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:105c99c32032": 0.3,
+          "z_anatomy:object:bf1d4119c334": 0.3,
+          "z_anatomy:object:bb7c0defe845": 0.3,
+          "z_anatomy:object:215171340a90": 0.3,
+          "z_anatomy:object:2653c13ca37f": 0.3,
+          "z_anatomy:object:613a8b5387ce": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-10",
+      "title": "Right Paracentral gyrus and sulcus",
+      "selected": "z_anatomy:object:f2e59f472cc7",
+      "visible": [
+        "z_anatomy:object:af40aca23e11",
+        "z_anatomy:object:b92ba277c849",
+        "z_anatomy:object:a09e69dd5109",
+        "z_anatomy:object:2496ab989757",
+        "z_anatomy:object:f2e59f472cc7",
+        "z_anatomy:object:6fa5aa0a14fd",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Paracentral gyrus and sulcus*.r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:af40aca23e11": 0.3,
+          "z_anatomy:object:b92ba277c849": 0.3,
+          "z_anatomy:object:a09e69dd5109": 0.3,
+          "z_anatomy:object:2496ab989757": 0.3,
+          "z_anatomy:object:6fa5aa0a14fd": 0.3,
+          "z_anatomy:object:121117601039": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-11",
+      "title": "Left Subparietal sulcus",
+      "selected": "z_anatomy:object:2653c13ca37f",
+      "visible": [
+        "z_anatomy:object:105c99c32032",
+        "z_anatomy:object:bf1d4119c334",
+        "z_anatomy:object:bb7c0defe845",
+        "z_anatomy:object:215171340a90",
+        "z_anatomy:object:b84454ca3a2c",
+        "z_anatomy:object:2653c13ca37f",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:b0de45bdfd87"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Subparietal sulcus.l. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          90,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:105c99c32032": 0.3,
+          "z_anatomy:object:bf1d4119c334": 0.3,
+          "z_anatomy:object:bb7c0defe845": 0.3,
+          "z_anatomy:object:215171340a90": 0.3,
+          "z_anatomy:object:b84454ca3a2c": 0.3,
+          "z_anatomy:object:613a8b5387ce": 0.3,
+          "z_anatomy:object:b0de45bdfd87": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    },
+    {
+      "id": "view-12",
+      "title": "Right Subparietal sulcus",
+      "selected": "z_anatomy:object:6fa5aa0a14fd",
+      "visible": [
+        "z_anatomy:object:af40aca23e11",
+        "z_anatomy:object:b92ba277c849",
+        "z_anatomy:object:a09e69dd5109",
+        "z_anatomy:object:2496ab989757",
+        "z_anatomy:object:f2e59f472cc7",
+        "z_anatomy:object:6fa5aa0a14fd",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "prompt": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+      "note": "Original source object: Subparietal sulcus.r. Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "display": {
+        "camera": [
+          270,
+          15,
+          0.9
+        ],
+        "center_on_target": false,
+        "opacity": 1,
+        "surface_opacity": {
+          "z_anatomy:object:af40aca23e11": 0.3,
+          "z_anatomy:object:b92ba277c849": 0.3,
+          "z_anatomy:object:a09e69dd5109": 0.3,
+          "z_anatomy:object:2496ab989757": 0.3,
+          "z_anatomy:object:f2e59f472cc7": 0.3,
+          "z_anatomy:object:121117601039": 0.3,
+          "z_anatomy:object:b38bd5e446a8": 0.3
+        },
+        "highlight_selected": true,
+        "show_markers": false
+      }
+    }
+  ]
+}

@@ -69,7 +69,7 @@ async page => {
       await page.getByRole('button', {name:'Save notebook',exact:true}).click();
       await page.screenshot({path:output + '/notebook-editor.png'});
       await page.getByRole('button', {name:'Teaching library',exact:true}).click();
-      await page.getByLabel('Add teaching file', {exact:true}).setInputFiles(output + '/edited-model-notebook.json');
+      await page.getByLabel('Import teaching file', {exact:true}).setInputFiles(output + '/edited-model-notebook.json');
       await page.getByRole('article',{name:saved.title,exact:true}).getByRole('button',{name:'Open notebook',exact:true}).click();
       await ready();
       assert((await page.getByRole('region',{name:'Model notebook presentation',exact:true}).innerText()).includes(saved.title), 'Imported library model notebook did not open.');

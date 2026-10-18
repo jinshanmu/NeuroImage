@@ -1,8 +1,8 @@
 # Build and browse a local atlas
 
-For a clean installation, exact dependency roles and reproduction checks, start with the [installation and reproduction guide](installation-and-reproduction.md). For the integrated source-to-teaching interface, follow the [local workspace guide](local-workspace.md) after installation. The command-line steps below remain available for scripting and recovery.
+For a one-command Linux installation, start with the [Linux quickstart](linux-quickstart.md). For a clean installation, exact dependency roles and reproduction checks, start with the [installation and reproduction guide](installation-and-reproduction.md). For the integrated source-to-teaching interface, follow the [local workspace guide](local-workspace.md) after installation. The command-line steps below remain available for scripting and recovery.
 
-NeuroImage 0.15.0rc2 provides a local normal-anatomy workflow for independently acquired data. Its thirty-nine source recipes use the same acquisition, construction, validation and viewing commands. The home page prioritizes anatomical groups with direct local atlas entry; dataset management and teaching tools occupy secondary positions. Coordinates remain in their declared native spaces. Engineering validation does not constitute independent anatomical or lesson review.
+NeuroImage 1.0.0 provides a local normal-anatomy workflow for independently acquired data. Its thirty-nine source recipes use the same acquisition, construction, validation and viewing commands. The home page prioritizes anatomical groups with direct local atlas entry; dataset management and teaching tools occupy secondary positions. Coordinates remain in their declared native spaces. Engineering validation does not constitute independent anatomical or lesson review.
 
 ## Prepare the software
 
@@ -15,7 +15,7 @@ python -m pip install -r requirements-core.lock.txt
 python -m pip install setuptools==84.0.0 wheel==0.48.0
 nvm install  # Requires nvm; alternatively install the Node version in .nvmrc.
 nvm use
-npm ci
+npm ci --ignore-scripts --bin-links=false
 npm run build
 python -m pip install --no-deps --no-build-isolation -e .
 neuroimage --version
@@ -23,7 +23,7 @@ neuroimage --version
 
 The frontend build is entirely local and produces `src/neuroimage/web`. No remote viewer scripts, fonts or image services are needed during browsing. Node is needed for a source build, not for serving an already built software package. The existing environment definitions and lock files describe the development stack.
 
-To build local software distributions, run `python scripts/build_distribution.py` in this environment. The command builds an offline viewer, then a wheel and source archive in the ignored SSD `dist` directory and checks both for acquired data. Install the wheel into `NeuroImage` with `python -m pip install dist/neuroimage_atlas-0.15.0rc2-py3-none-any.whl`; use `--no-deps` if the pinned runtime requirements are already installed. The source archive includes frontend source, dependency locks, recipes and build instructions. Wheel and source archive metadata are normalized to a fixed `SOURCE_DATE_EPOCH`, including timestamps and file modes. An independently unpacked source build can reproduce the same wheel bytes with the pinned build/runtime stack. No publishing or uploading is performed. Linux is the verified platform; other operating systems have not been accepted.
+To build local software distributions, run `python scripts/build_distribution.py` in this environment. The command builds an offline viewer, then a wheel and source archive in the ignored SSD `dist` directory and checks both for acquired data. Install the wheel into `NeuroImage` with `python -m pip install dist/neuroimage_atlas-1.0.0-py3-none-any.whl`; use `--no-deps` if the pinned runtime requirements are already installed. The source archive includes frontend source, dependency locks, recipes and build instructions. Wheel and source archive metadata are normalized to a fixed `SOURCE_DATE_EPOCH`, including timestamps and file modes. An independently unpacked source build can reproduce the same wheel bytes with the pinned build/runtime stack. No publishing or uploading is performed. Linux is the verified platform; other operating systems have not been accepted.
 
 ## Acquire and construct
 
@@ -48,7 +48,7 @@ Use `hcp1065_tracts` for [87 source computational streamline collections](hcp106
 
 Use `mouches_arteries` for a healthy-source arterial occurrence field and its matching average TOF MRA. Original values remain in percent (0–100); the optional 3D surface comes from an explicitly project-derived >=25% display mask. This is population occurrence, not a named-vessel segmentation or an individual vascular tree. See [Specialist modules](specialist-modules.md) for source limits and all seven specialist curricula.
 
-Use `z_anatomy` for 286 independent source model objects with no MRI volume, `venat` for seven original venous statistical fields, `mesoveins` for an exact frame from a retained original MRI series, `hba_native` for the author-averaged healthy sub-01 T2, `mug500_healthy` for the original healthy A0101 binary skull mask, and `mug500_source_mesh` for the [original author-cleaned A0101 surface](source-cleaned-skull.md). The original mask contains substantial source noise; the cleaned surface does not supply corrected image sections or CT intensity. The same commands and storage policy apply. Z-Anatomy construction additionally requires Blender 5.2.2 LTS on the executable path; its embedded runtime is separate from project Python. Read [source-model construction](source-model-construction.md), [statistical fields](native-statistical-fields.md) and [native images and skull masks](native-image-and-skull-sources.md) before interpreting their different evidence.
+Use `z_anatomy` for 350 independent source model objects with no MRI volume, `venat` for seven original venous statistical fields, `mesoveins` for an exact frame from a retained original MRI series, `hba_native` for the author-averaged healthy sub-01 T2, `mug500_healthy` for the original healthy A0101 binary skull mask, and `mug500_source_mesh` for the [original author-cleaned A0101 surface](source-cleaned-skull.md). The original mask contains substantial source noise; the cleaned surface does not supply corrected image sections or CT intensity. The same commands and storage policy apply. Z-Anatomy construction additionally requires Blender 5.2.2 LTS on the executable path; its embedded runtime is separate from project Python. Read [source-model construction](source-model-construction.md), [statistical fields](native-statistical-fields.md) and [native images and skull masks](native-image-and-skull-sources.md) before interpreting their different evidence.
 
 Use `julich_selected` for the original Julich-Brain 3.0.3 maximum-probability map with its explicitly matching asymmetric reference MRI. The same acquisition and construction commands retain all delivered source labels and the original native grid. See [Julich native construction](julich-native-construction.md).
 
@@ -62,11 +62,11 @@ The fine-anatomy recipes use the same commands:
 | `thu_mra_case001`, `006`, `007`, `009`, `010`, `014`, `021`, `030` (each with the `thu_mra_case` prefix) | [Original healthy-volunteer MRA and delivered segment arrays](thu-cerebral-mra.md) |
 | `suit_cerebellum` | [34 original cerebellar assignments and probability channels with SUIT T1](suit-cerebellar-anatomy.md) |
 | `inner_ear_ct_specimen1` | [Original native CT and all three fluid-space labels](native-inner-ear-ct.md) |
-| `z_anatomy` | [286 original objects including nuclear, limbic, cortical, cerebellar and ventricular context](detailed-anatomy-and-variation.md) |
+| `z_anatomy` | [350 original objects including nuclear, limbic, cortical, cerebellar and ventricular context](detailed-anatomy-and-variation.md) |
 
-All 75 curricula retain source-specific definitions; the twenty-six plans organize 580 views. Course preparation uses only the explicitly chosen local package for each source. Use original source names when searching fine nuclei and grouped compartments.
+All 90 curricula retain source-specific definitions; the 31 plans organize 684 views. Course preparation uses only the explicitly chosen local package for each source. Use original source names when searching fine nuclei and grouped compartments.
 
-After opening the workspace, use **Teaching library** to prepare one of twenty-six course plans from explicit local package versions. The general course comes first, followed by native-source comparisons and specialist sequences. The [course guide](teaching-library-and-courses.md) covers source-bound presentation, editing, export and restart recovery.
+After opening the workspace, use **Teaching library** to prepare one of 31 course plans from explicit local package versions. The general course comes first, followed by native-source comparisons and specialist sequences. The [course guide](teaching-library-and-courses.md) covers source-bound presentation, editing, export and restart recovery.
 
 The acquisition command prints the peak additional download and selective expansion budget before writing. It verifies pinned archive/member SHA256 values, reuses matching originals and retains interrupted `.partial` transfers. Local pins establish repeatability; they are not publisher signatures. Source license snapshots are retained with their hashes. Review the official source terms for your use; data rights are separate from the software's Apache-2.0 license.
 

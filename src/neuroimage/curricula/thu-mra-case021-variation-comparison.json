@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "id": "thu-mra-case021-variation-comparison",
+  "dataset_id": "thu_mra_case021",
+  "required_source": {
+    "id": "thu_cerebral_mra",
+    "version": "Official preprocessed archive; SHA256 fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e; retrieved 2026-10-14"
+  },
+  "title": "Volunteer 021: anterior and posterior arterial comparison",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare four Circle of Willis regions using the supplied MRA, categorical annotations and paired-side context.",
+  "review_status": "draft_not_expert_reviewed",
+  "scenes": [
+    {
+      "id": "paired-a1",
+      "title": "Case 021 · Paired A1 courses",
+      "selected": "thu_mra_case021:label:1",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16"
+      ],
+      "background": "mra",
+      "prompt": "Follow the right and left A1 courses from the source internal carotid terminations toward the communicating region. Compare their displayed course and relative appearance in adjacent MRA sections.",
+      "note": "Record the case, side, visible course, continuity across sections and supplied segment labels. Describe uncertainty where image signal and annotation coverage differ. Original healthy-volunteer source case 021. The source authors report physiological variation in this cohort; this view records an observation task rather than assigning a named configuration.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          0.95
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.15
+      }
+    },
+    {
+      "id": "anterior-communicating",
+      "title": "Case 021 · Anterior communicating region",
+      "selected": "thu_mra_case021:label:6",
+      "visible": [
+        "thu_mra_case021:label:1",
+        "thu_mra_case021:label:2",
+        "thu_mra_case021:label:6",
+        "thu_mra_case021:label:7"
+      ],
+      "background": "mra",
+      "prompt": "Inspect the anterior communicating region with the paired anterior cerebral segments. Alternate the label overlay and original MRA to compare the supplied annotation with the visible image.",
+      "note": "Record whether a communicating segment is labelled, how its course appears in the source image, and which observations would benefit from instructor review. Original healthy-volunteer source case 021. The source authors report physiological variation in this cohort; this view records an observation task rather than assigning a named configuration.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          0.95
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.15
+      }
+    },
+    {
+      "id": "posterior-communicating",
+      "title": "Case 021 · Posterior communicating regions",
+      "selected": "thu_mra_case021:label:8",
+      "visible": [
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:15",
+        "thu_mra_case021:label:16"
+      ],
+      "background": "mra",
+      "prompt": "Compare the left and right posterior communicating regions with the internal carotid and posterior cerebral segments. Follow candidate continuity through adjacent original sections.",
+      "note": "Describe the source side, image visibility and supplied posterior communicating labels separately. Use both sides and another volunteer as comparison contexts. Original healthy-volunteer source case 021. The source authors report physiological variation in this cohort; this view records an observation task rather than assigning a named configuration.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          0.95
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.15
+      }
+    },
+    {
+      "id": "p1-basilar",
+      "title": "Case 021 · P1 and basilar configuration",
+      "selected": "thu_mra_case021:label:14",
+      "visible": [
+        "thu_mra_case021:label:8",
+        "thu_mra_case021:label:9",
+        "thu_mra_case021:label:10",
+        "thu_mra_case021:label:11",
+        "thu_mra_case021:label:12",
+        "thu_mra_case021:label:13",
+        "thu_mra_case021:label:14"
+      ],
+      "background": "mra",
+      "prompt": "Follow the basilar termination and the supplied right and left P1 segments toward the posterior cerebral courses. Compare their appearance from inferior and oblique views and in the original MRA.",
+      "note": "Record the represented P1 segments, their visible relationships to the basilar artery and posterior communicating region, and unresolved continuity in the source image. Original healthy-volunteer source case 021. The source authors report physiological variation in this cohort; this view records an observation task rather than assigning a named configuration.",
+      "display": {
+        "layout": "anatomy",
+        "tile_layout": "row",
+        "camera": [
+          180,
+          -75,
+          0.95
+        ],
+        "slice_zoom": 1,
+        "show_3d_cursor": false,
+        "section_planes": [],
+        "focus_selected_3d": false,
+        "center_on_target": false,
+        "surface_opacity": {},
+        "window": [
+          0.5,
+          11
+        ],
+        "label_opacity": 0.15
+      }
+    }
+  ]
+}

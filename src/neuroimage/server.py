@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 import json
 import mimetypes
+import re
 import secrets
 import shutil
 import threading
@@ -206,6 +207,15 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                         if query and query != {"refresh": ["1"]}:
                             raise ValueError("Use refresh=1 to refresh local source discovery")
                         self.json_response({**workspace.browse(refresh=bool(query)), "session_token": token}, head=head)
+                    elif route.startswith("/api/workspace/atlases/"):
+                        from .library import library_records
+                        from .workspace import package_key
+                        key = route.removeprefix("/api/workspace/atlases/")
+                        matches = [record for record in library_records(workspace.data_root)
+                                   if record.get("status") == "available" and package_key(record) == key]
+                        if len(matches) != 1:
+                            raise ValueError("The bookmarked source package is unavailable. Open its dataset to build or recover that exact version.")
+                        self.json_response({"atlas_key": register_package(matches[0]["manifest"])}, head=head)
                     elif route == "/api/workspace":
                         query = parse_qs(urlsplit(self.path).query, keep_blank_values=True)
                         if set(query) - {"jobs_offset"} or any(len(values) != 1 for values in query.values()):
@@ -269,7 +279,8 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
             # geometry. Metadata includes ctime so replacement is detected even
             # when a caller preserves the original file size and mtime.
             etag = f'"{stat.st_ino:x}-{stat.st_size:x}-{stat.st_mtime_ns:x}-{stat.st_ctime_ns:x}"'
-            cache = "private, max-age=31536000, immutable" if route.startswith("/assets/") else "private, no-cache"
+            hashed_asset = re.fullmatch(r"/assets/[^/]+-[A-Za-z0-9_-]{8}\.(?:js|css|wasm|woff2?)", route)
+            cache = "private, max-age=31536000, immutable" if hashed_asset else "private, no-cache"
             matched = self.headers.get("If-None-Match", "").split(",")
             unchanged = any(value.strip().removeprefix("W/") in (etag, "*") for value in matched)
             self.headers_for(304 if unchanged else 200, None if unchanged else stat.st_size, mime,

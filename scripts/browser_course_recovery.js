@@ -33,7 +33,7 @@ async page=>{
   await page.waitForFunction(()=>document.querySelector('[aria-label="Comparison atlas workspace"] .live-status')?.textContent?.startsWith('Ready'),null,{timeout:120000});
   assert(JSON.stringify(await coordinates())===JSON.stringify(before),'Reopening comparison lost its source position.');
   await page.getByRole('checkbox',{name:'Compare native spaces',exact:true}).uncheck();
-  await page.getByRole('button',{name:'Return to course view',exact:true}).click();await ready();
+  await page.getByRole('button',{name:'Restore view',exact:true}).click();await ready();
   await primary.getByRole('button',{name:'Save scene',exact:true}).click();
   const original=saved.course.entries[8].scene;
   const scene=await page.evaluate(binding=>Object.keys(localStorage).filter(key=>key.startsWith('neuroimage:model:primary:')).map(key=>JSON.parse(localStorage.getItem(key))).filter(value=>value.build_signature===binding.build_signature).sort((a,b)=>b.saved_utc.localeCompare(a.saved_utc))[0],original);

@@ -1,0 +1,17 @@
+name: Anatomy or teaching proposal
+description: Propose source-supported normal anatomy or a teaching improvement.
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Learning need and proposed behavior
+      description: Describe the anatomical topic, intended learner and the useful interaction or lesson.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Original source evidence
+      description: Provide official source URLs, versions, terms and available anatomical definitions. Explain which representation supports the proposal.
+    validations:
+      required: true

@@ -76,7 +76,7 @@ def main():
     parser.add_argument("--data-root", type=Path)
     parser.add_argument("--state-root", type=Path)
     parser.add_argument("--recipe", default="cerebra")
-    parser.add_argument("--storage-policy", type=Path, default=ROOT / "config/storage-policy.json")
+    parser.add_argument("--storage-policy", type=Path, default=ROOT / "config/storage-portable.json")
     parser.add_argument("--workers", type=int, choices=range(1, 9), default=2)
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--no-start", action="store_true")
@@ -103,8 +103,8 @@ def main():
         policy[name] = value
     for directory in (ROOT, Path(sys.prefix)):
         free = shutil.disk_usage(directory).free / 1024**3
-        if free < policy["ssd_minimum_free_gib"] + 2:
-            raise ValueError(f"Software storage needs 2 GiB plus the {policy['ssd_minimum_free_gib']:g} GiB reserve; {free:.1f} GiB free")
+        if free < policy["ssd_minimum_free_gib"] + 4:
+            raise ValueError(f"Software installation needs 4 GiB plus the {policy['ssd_minimum_free_gib']:g} GiB reserve; {free:.1f} GiB free")
     if args.wheel and (not args.wheel.is_file() or not args.wheel.name.startswith("neuroimage_atlas-") or args.wheel.suffix != ".whl"):
         raise ValueError("Select the supplied NeuroImage Atlas wheel")
     if args.data_root and args.state_root:

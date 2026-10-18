@@ -1,10 +1,10 @@
 {
   "id": "z_anatomy",
-  "version": "0.15.0-detail1",
+  "version": "1.0.0-detail",
   "source_version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc",
   "adapter": "blender-source-surfaces",
   "representation": "surface-model",
-  "title": "Z-Anatomy \u00b7 independent cranial model",
+  "title": "Z-Anatomy · independent cranial model",
   "construction_peak_gib": 3,
   "blender_version": "5.2.2 LTS",
   "source_scale_length": 1.0,
@@ -5020,6 +5020,1098 @@
       "notes": [
         "Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity."
       ]
+    },
+    {
+      "id": "z_anatomy:object:3742982918d8",
+      "input": "blend",
+      "source_name": "Precentral sulcus (inferior part)*.l",
+      "name": "Left Precentral sulcus (inferior part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:a735df7572a6",
+      "input": "blend",
+      "source_name": "Precentral sulcus (inferior part)*.r",
+      "name": "Right Precentral sulcus (inferior part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:129fd3bcf210",
+      "input": "blend",
+      "source_name": "Precentral sulcus (Superior part)*.l",
+      "name": "Left Precentral sulcus (Superior part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:9fa6b32b07b8",
+      "input": "blend",
+      "source_name": "Precentral sulcus (Superior part)*.r",
+      "name": "Right Precentral sulcus (Superior part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:469f4c57bcbf",
+      "input": "blend",
+      "source_name": "Postcentral sulcus.l",
+      "name": "Left Postcentral sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:91153eddef73",
+      "input": "blend",
+      "source_name": "Postcentral sulcus.r",
+      "name": "Right Postcentral sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:498932b9e645",
+      "input": "blend",
+      "source_name": "Paracentral sulcus.l",
+      "name": "Left Paracentral sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:45a26e822c72",
+      "input": "blend",
+      "source_name": "Paracentral sulcus.r",
+      "name": "Right Paracentral sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:9c52a395c62b",
+      "input": "blend",
+      "source_name": "Orbital gyri (Frontomarginal gyrus and sulcus*).l",
+      "name": "Left Orbital gyri (Frontomarginal gyrus and sulcus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:1b81d786d919",
+      "input": "blend",
+      "source_name": "Orbital gyri (Frontomarginal gyrus and sulcus*).r",
+      "name": "Right Orbital gyri (Frontomarginal gyrus and sulcus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:974883cc2acc",
+      "input": "blend",
+      "source_name": "Orbital gyri.l",
+      "name": "Left Orbital gyri",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:703f777e849e",
+      "input": "blend",
+      "source_name": "Orbital gyri.r",
+      "name": "Right Orbital gyri",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:850043662331",
+      "input": "blend",
+      "source_name": "Orbital sulci (H-shaped orbital sulci*).l",
+      "name": "Left Orbital sulci (H-shaped orbital sulci)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:53cc6782f5ba",
+      "input": "blend",
+      "source_name": "Orbital sulci (H-shaped orbital sulci*).r",
+      "name": "Right Orbital sulci (H-shaped orbital sulci)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:6ed5bc9ba895",
+      "input": "blend",
+      "source_name": "Orbital sulci (Lateral Orbital sulcus*).l",
+      "name": "Left Orbital sulci (Lateral Orbital sulcus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:6666d6648205",
+      "input": "blend",
+      "source_name": "Orbital sulci (Lateral Orbital sulcus*).r",
+      "name": "Right Orbital sulci (Lateral Orbital sulcus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:93bf8c09c1c6",
+      "input": "blend",
+      "source_name": "Straight gyrus (Gyrus rectus).l",
+      "name": "Left Straight gyrus (Gyrus rectus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:a06e7a4b44ec",
+      "input": "blend",
+      "source_name": "Straight gyrus (Gyrus rectus).r",
+      "name": "Right Straight gyrus (Gyrus rectus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:d2df51687df8",
+      "input": "blend",
+      "source_name": "Transverse frontopolar gyrus and sulcus*.l",
+      "name": "Left Transverse frontopolar gyrus and sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:b7643f7a7f09",
+      "input": "blend",
+      "source_name": "Transverse frontopolar gyrus and sulcus*.r",
+      "name": "Right Transverse frontopolar gyrus and sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:42af00d95593",
+      "input": "blend",
+      "source_name": "Olfactory sulcus.l",
+      "name": "Left Olfactory sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:6c387c08e49f",
+      "input": "blend",
+      "source_name": "Olfactory sulcus.r",
+      "name": "Right Olfactory sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:105c99c32032",
+      "input": "blend",
+      "source_name": "Cingulate gyrus (Posteroventral part*).l",
+      "name": "Left Cingulate gyrus (Posteroventral part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:af40aca23e11",
+      "input": "blend",
+      "source_name": "Cingulate gyrus (Posteroventral part*).r",
+      "name": "Right Cingulate gyrus (Posteroventral part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:bf1d4119c334",
+      "input": "blend",
+      "source_name": "Cingulate gyrus and sulcus (Middle posterior part).l",
+      "name": "Left Cingulate gyrus and sulcus (Middle posterior part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:b92ba277c849",
+      "input": "blend",
+      "source_name": "Cingulate gyrus and sulcus (Middle posterior part).r",
+      "name": "Right Cingulate gyrus and sulcus (Middle posterior part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:bb7c0defe845",
+      "input": "blend",
+      "source_name": "Cingulate gyrus and sulcus (Posterior dorsal part).l",
+      "name": "Left Cingulate gyrus and sulcus (Posterior dorsal part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:a09e69dd5109",
+      "input": "blend",
+      "source_name": "Cingulate gyrus and sulcus (Posterior dorsal part).r",
+      "name": "Right Cingulate gyrus and sulcus (Posterior dorsal part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:215171340a90",
+      "input": "blend",
+      "source_name": "Cingulate sulcus (Marginal part*).l",
+      "name": "Left Cingulate sulcus (Marginal part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:2496ab989757",
+      "input": "blend",
+      "source_name": "Cingulate sulcus (Marginal part*).r",
+      "name": "Right Cingulate sulcus (Marginal part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:b84454ca3a2c",
+      "input": "blend",
+      "source_name": "Paracentral gyrus and sulcus*.l",
+      "name": "Left Paracentral gyrus and sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:f2e59f472cc7",
+      "input": "blend",
+      "source_name": "Paracentral gyrus and sulcus*.r",
+      "name": "Right Paracentral gyrus and sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:2653c13ca37f",
+      "input": "blend",
+      "source_name": "Subparietal sulcus.l",
+      "name": "Left Subparietal sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:6fa5aa0a14fd",
+      "input": "blend",
+      "source_name": "Subparietal sulcus.r",
+      "name": "Right Subparietal sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        168,
+        177,
+        211
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:64fda20b45b4",
+      "input": "blend",
+      "source_name": "Temporal plane.l",
+      "name": "Left Temporal plane",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        186,
+        151,
+        203
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:56a4ca73f7af",
+      "input": "blend",
+      "source_name": "Temporal plane.r",
+      "name": "Right Temporal plane",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        186,
+        151,
+        203
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:92f27fe3f9cb",
+      "input": "blend",
+      "source_name": "Transverse temporal gyri.l",
+      "name": "Left Transverse temporal gyri",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        186,
+        151,
+        203
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:f58b100a8eb5",
+      "input": "blend",
+      "source_name": "Transverse temporal gyri.r",
+      "name": "Right Transverse temporal gyri",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        186,
+        151,
+        203
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:28c6611bc04f",
+      "input": "blend",
+      "source_name": "Temporal pole.l",
+      "name": "Left Temporal pole",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        186,
+        151,
+        203
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:879c07d3d65e",
+      "input": "blend",
+      "source_name": "Temporal pole.r",
+      "name": "Right Temporal pole",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        186,
+        151,
+        203
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:e94fad339dfa",
+      "input": "blend",
+      "source_name": " Posterior transverse collateral sulcus.l",
+      "name": "Left Posterior transverse collateral sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:f3c1ef08da58",
+      "input": "blend",
+      "source_name": " Posterior transverse collateral sulcus.r",
+      "name": "Right Posterior transverse collateral sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:fc2b096bf5dc",
+      "input": "blend",
+      "source_name": "Inferior temporal sulcus.l",
+      "name": "Left Inferior temporal sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:93f8ba55b306",
+      "input": "blend",
+      "source_name": "Inferior temporal sulcus.r",
+      "name": "Right Inferior temporal sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:daf067f18fca",
+      "input": "blend",
+      "source_name": "Occipitotemporal sulcus (Lateral part*).l",
+      "name": "Left Occipitotemporal sulcus (Lateral part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:1e47e5221c99",
+      "input": "blend",
+      "source_name": "Occipitotemporal sulcus (Lateral part*).r",
+      "name": "Right Occipitotemporal sulcus (Lateral part)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        222,
+        177,
+        137
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:5cab4cdd0b52",
+      "input": "blend",
+      "source_name": "Anterior occipital sulcus*.l",
+      "name": "Left Anterior occipital sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:4bfbf72407f6",
+      "input": "blend",
+      "source_name": "Anterior occipital sulcus*.r",
+      "name": "Right Anterior occipital sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:84ca90032d48",
+      "input": "blend",
+      "source_name": "Inferior occipital gyrus and sulcus*.l",
+      "name": "Left Inferior occipital gyrus and sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:6620bf1c0099",
+      "input": "blend",
+      "source_name": "Inferior occipital gyrus and sulcus*.r",
+      "name": "Right Inferior occipital gyrus and sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:b2a711561412",
+      "input": "blend",
+      "source_name": "Lateral occipital gyrus (Middle occipital gyrus*).l",
+      "name": "Left Lateral occipital gyrus (Middle occipital gyrus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:8af18e866b5c",
+      "input": "blend",
+      "source_name": "Lateral occipital gyrus (Middle occipital gyrus*).r",
+      "name": "Right Lateral occipital gyrus (Middle occipital gyrus)",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:cd0245421902",
+      "input": "blend",
+      "source_name": "Lunate sulcus.l",
+      "name": "Left Lunate sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:956c19f06311",
+      "input": "blend",
+      "source_name": "Lunate sulcus.r",
+      "name": "Right Lunate sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:1cec0e1c6251",
+      "input": "blend",
+      "source_name": "Occipital pole.l",
+      "name": "Left Occipital pole",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:be5a707d5a02",
+      "input": "blend",
+      "source_name": "Occipital pole.r",
+      "name": "Right Occipital pole",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:674629938fdc",
+      "input": "blend",
+      "source_name": "Superior occipital gyri.l",
+      "name": "Left Superior occipital gyri",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:c2e62683a073",
+      "input": "blend",
+      "source_name": "Superior occipital gyri.r",
+      "name": "Right Superior occipital gyri",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:7e471e9e84e3",
+      "input": "blend",
+      "source_name": "Transverse occipital sulcus.l",
+      "name": "Left Transverse occipital sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:0b0ab3bd04e9",
+      "input": "blend",
+      "source_name": "Transverse occipital sulcus.r",
+      "name": "Right Transverse occipital sulcus",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        147,
+        190,
+        179
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:f7c6b86b7d56",
+      "input": "blend",
+      "source_name": "Middle meningeal artery.l",
+      "name": "Left Middle meningeal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        224,
+        102,
+        108
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model.",
+        "The complete source arterial object includes its supplied extracranial-to-cranial course; the project adds no segment partition."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:ca7cbf3b5050",
+      "input": "blend",
+      "source_name": "Middle meningeal artery.r",
+      "name": "Right Middle meningeal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        224,
+        102,
+        108
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model.",
+        "The complete source arterial object includes its supplied extracranial-to-cranial course; the project adds no segment partition."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:71a03ad9416f",
+      "input": "blend",
+      "source_name": "Accessory branch of middle meningeal artery.l",
+      "name": "Left Accessory branch of middle meningeal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        224,
+        102,
+        108
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model.",
+        "The complete source arterial object includes its supplied extracranial-to-cranial course; the project adds no segment partition."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:5debbb4cf000",
+      "input": "blend",
+      "source_name": "Accessory branch of middle meningeal artery.r",
+      "name": "Right Accessory branch of middle meningeal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        224,
+        102,
+        108
+      ],
+      "notes": [
+        "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model.",
+        "The complete source arterial object includes its supplied extracranial-to-cranial course; the project adds no segment partition."
+      ]
     }
   ],
   "teaching_sequences": [
@@ -6501,6 +7593,569 @@
           "prompt": "Locate Right Interpeduncular fossa. Compare the original object with the retained neighboring source context.",
           "question": "Which source object is selected, which side is explicitly supplied, and which boundaries or connections are not separately represented?",
           "answer": "Right Interpeduncular fossa; original object: Interpeduncular fossa.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted."
+        }
+      ]
+    },
+    {
+      "id": "NI-Z1001",
+      "title": "Precentral, postcentral and paracentral sulci",
+      "objective": "Trace the precentral and postcentral sulcal models beside the central sulcus, then follow the medial paracentral context.",
+      "instruction": "Select a structure, rotate the model and adjust neighboring opacity. Compare both supplied sides, then save a response and a view.",
+      "evidence_limit": "Original educational source models in independent XYZ coordinates. Composite objects and source variants in naming retain their original definitions; anatomical interpretation can be reviewed with an instructor.",
+      "structure_ids": [
+        "z_anatomy:object:3742982918d8",
+        "z_anatomy:object:a735df7572a6",
+        "z_anatomy:object:129fd3bcf210",
+        "z_anatomy:object:9fa6b32b07b8",
+        "z_anatomy:object:469f4c57bcbf",
+        "z_anatomy:object:91153eddef73",
+        "z_anatomy:object:498932b9e645",
+        "z_anatomy:object:45a26e822c72",
+        "z_anatomy:object:000693f70b3e",
+        "z_anatomy:object:e88ef796081f",
+        "z_anatomy:object:aa7ea3e17246",
+        "z_anatomy:object:1e67e3f080d1",
+        "z_anatomy:object:67d21c903861",
+        "z_anatomy:object:9fb21d979962"
+      ],
+      "steps": [
+        {
+          "structure_id": "z_anatomy:object:3742982918d8",
+          "prompt": "Locate Left Precentral sulcus (inferior part) and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Left Precentral sulcus (inferior part). Original source object: Precentral sulcus (inferior part)*.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:a735df7572a6",
+          "prompt": "Locate Right Precentral sulcus (inferior part) and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Right Precentral sulcus (inferior part). Original source object: Precentral sulcus (inferior part)*.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:129fd3bcf210",
+          "prompt": "Locate Left Precentral sulcus (Superior part) and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Left Precentral sulcus (Superior part). Original source object: Precentral sulcus (Superior part)*.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:9fa6b32b07b8",
+          "prompt": "Locate Right Precentral sulcus (Superior part) and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Right Precentral sulcus (Superior part). Original source object: Precentral sulcus (Superior part)*.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:469f4c57bcbf",
+          "prompt": "Locate Left Postcentral sulcus and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Left Postcentral sulcus. Original source object: Postcentral sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:91153eddef73",
+          "prompt": "Locate Right Postcentral sulcus and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Right Postcentral sulcus. Original source object: Postcentral sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:498932b9e645",
+          "prompt": "Locate Left Paracentral sulcus and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Left Paracentral sulcus. Original source object: Paracentral sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:45a26e822c72",
+          "prompt": "Locate Right Paracentral sulcus and inspect its neighbors from two angles.",
+          "question": "How do the selected sulcus, central sulcus and adjacent gyri relate when viewed laterally and medially?",
+          "answer": "Right Paracentral sulcus. Original source object: Paracentral sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        }
+      ]
+    },
+    {
+      "id": "NI-Z1002",
+      "title": "Orbital and frontopolar surface anatomy",
+      "objective": "Explore the basal frontal surface, olfactory sulcus, gyrus rectus and the source orbital subdivisions.",
+      "instruction": "Select a structure, rotate the model and adjust neighboring opacity. Compare both supplied sides, then save a response and a view.",
+      "evidence_limit": "Original educational source models in independent XYZ coordinates. Composite objects and source variants in naming retain their original definitions; anatomical interpretation can be reviewed with an instructor.",
+      "structure_ids": [
+        "z_anatomy:object:9c52a395c62b",
+        "z_anatomy:object:1b81d786d919",
+        "z_anatomy:object:974883cc2acc",
+        "z_anatomy:object:703f777e849e",
+        "z_anatomy:object:850043662331",
+        "z_anatomy:object:53cc6782f5ba",
+        "z_anatomy:object:6ed5bc9ba895",
+        "z_anatomy:object:6666d6648205",
+        "z_anatomy:object:93bf8c09c1c6",
+        "z_anatomy:object:a06e7a4b44ec",
+        "z_anatomy:object:d2df51687df8",
+        "z_anatomy:object:b7643f7a7f09",
+        "z_anatomy:object:42af00d95593",
+        "z_anatomy:object:6c387c08e49f",
+        "z_anatomy:object:c1ae492d8bb4",
+        "z_anatomy:object:3746284dd141",
+        "z_anatomy:object:21552444a6d6",
+        "z_anatomy:object:0a4af6588e2a"
+      ],
+      "steps": [
+        {
+          "structure_id": "z_anatomy:object:9c52a395c62b",
+          "prompt": "Locate Left Orbital gyri (Frontomarginal gyrus and sulcus) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Left Orbital gyri (Frontomarginal gyrus and sulcus). Original source object: Orbital gyri (Frontomarginal gyrus and sulcus*).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:1b81d786d919",
+          "prompt": "Locate Right Orbital gyri (Frontomarginal gyrus and sulcus) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Right Orbital gyri (Frontomarginal gyrus and sulcus). Original source object: Orbital gyri (Frontomarginal gyrus and sulcus*).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:974883cc2acc",
+          "prompt": "Locate Left Orbital gyri and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Left Orbital gyri. Original source object: Orbital gyri.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:703f777e849e",
+          "prompt": "Locate Right Orbital gyri and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Right Orbital gyri. Original source object: Orbital gyri.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:850043662331",
+          "prompt": "Locate Left Orbital sulci (H-shaped orbital sulci) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Left Orbital sulci (H-shaped orbital sulci). Original source object: Orbital sulci (H-shaped orbital sulci*).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:53cc6782f5ba",
+          "prompt": "Locate Right Orbital sulci (H-shaped orbital sulci) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Right Orbital sulci (H-shaped orbital sulci). Original source object: Orbital sulci (H-shaped orbital sulci*).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:6ed5bc9ba895",
+          "prompt": "Locate Left Orbital sulci (Lateral Orbital sulcus) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Left Orbital sulci (Lateral Orbital sulcus). Original source object: Orbital sulci (Lateral Orbital sulcus*).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:6666d6648205",
+          "prompt": "Locate Right Orbital sulci (Lateral Orbital sulcus) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Right Orbital sulci (Lateral Orbital sulcus). Original source object: Orbital sulci (Lateral Orbital sulcus*).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:93bf8c09c1c6",
+          "prompt": "Locate Left Straight gyrus (Gyrus rectus) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Left Straight gyrus (Gyrus rectus). Original source object: Straight gyrus (Gyrus rectus).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:a06e7a4b44ec",
+          "prompt": "Locate Right Straight gyrus (Gyrus rectus) and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Right Straight gyrus (Gyrus rectus). Original source object: Straight gyrus (Gyrus rectus).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:d2df51687df8",
+          "prompt": "Locate Left Transverse frontopolar gyrus and sulcus and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Left Transverse frontopolar gyrus and sulcus. Original source object: Transverse frontopolar gyrus and sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:b7643f7a7f09",
+          "prompt": "Locate Right Transverse frontopolar gyrus and sulcus and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Right Transverse frontopolar gyrus and sulcus. Original source object: Transverse frontopolar gyrus and sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:42af00d95593",
+          "prompt": "Locate Left Olfactory sulcus and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Left Olfactory sulcus. Original source object: Olfactory sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:6c387c08e49f",
+          "prompt": "Locate Right Olfactory sulcus and inspect its neighbors from two angles.",
+          "question": "Which source objects border the selected basal frontal region, and how does rotating to an inferior view clarify its position?",
+          "answer": "Right Olfactory sulcus. Original source object: Olfactory sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        }
+      ]
+    },
+    {
+      "id": "NI-Z1003",
+      "title": "Cingulate and medial parietal surface anatomy",
+      "objective": "Follow the medial cortical surface through the cingulate, paracentral and precuneal regions in each supplied hemisphere.",
+      "instruction": "Select a structure, rotate the model and adjust neighboring opacity. Compare both supplied sides, then save a response and a view.",
+      "evidence_limit": "Original educational source models in independent XYZ coordinates. Composite objects and source variants in naming retain their original definitions; anatomical interpretation can be reviewed with an instructor.",
+      "structure_ids": [
+        "z_anatomy:object:105c99c32032",
+        "z_anatomy:object:af40aca23e11",
+        "z_anatomy:object:bf1d4119c334",
+        "z_anatomy:object:b92ba277c849",
+        "z_anatomy:object:bb7c0defe845",
+        "z_anatomy:object:a09e69dd5109",
+        "z_anatomy:object:215171340a90",
+        "z_anatomy:object:2496ab989757",
+        "z_anatomy:object:b84454ca3a2c",
+        "z_anatomy:object:f2e59f472cc7",
+        "z_anatomy:object:2653c13ca37f",
+        "z_anatomy:object:6fa5aa0a14fd",
+        "z_anatomy:object:613a8b5387ce",
+        "z_anatomy:object:121117601039",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "steps": [
+        {
+          "structure_id": "z_anatomy:object:105c99c32032",
+          "prompt": "Locate Left Cingulate gyrus (Posteroventral part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Left Cingulate gyrus (Posteroventral part). Original source object: Cingulate gyrus (Posteroventral part*).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:af40aca23e11",
+          "prompt": "Locate Right Cingulate gyrus (Posteroventral part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Right Cingulate gyrus (Posteroventral part). Original source object: Cingulate gyrus (Posteroventral part*).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:bf1d4119c334",
+          "prompt": "Locate Left Cingulate gyrus and sulcus (Middle posterior part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Left Cingulate gyrus and sulcus (Middle posterior part). Original source object: Cingulate gyrus and sulcus (Middle posterior part).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:b92ba277c849",
+          "prompt": "Locate Right Cingulate gyrus and sulcus (Middle posterior part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Right Cingulate gyrus and sulcus (Middle posterior part). Original source object: Cingulate gyrus and sulcus (Middle posterior part).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:bb7c0defe845",
+          "prompt": "Locate Left Cingulate gyrus and sulcus (Posterior dorsal part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Left Cingulate gyrus and sulcus (Posterior dorsal part). Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:a09e69dd5109",
+          "prompt": "Locate Right Cingulate gyrus and sulcus (Posterior dorsal part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Right Cingulate gyrus and sulcus (Posterior dorsal part). Original source object: Cingulate gyrus and sulcus (Posterior dorsal part).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:215171340a90",
+          "prompt": "Locate Left Cingulate sulcus (Marginal part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Left Cingulate sulcus (Marginal part). Original source object: Cingulate sulcus (Marginal part*).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:2496ab989757",
+          "prompt": "Locate Right Cingulate sulcus (Marginal part) and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Right Cingulate sulcus (Marginal part). Original source object: Cingulate sulcus (Marginal part*).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:b84454ca3a2c",
+          "prompt": "Locate Left Paracentral gyrus and sulcus and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Left Paracentral gyrus and sulcus. Original source object: Paracentral gyrus and sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:f2e59f472cc7",
+          "prompt": "Locate Right Paracentral gyrus and sulcus and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Right Paracentral gyrus and sulcus. Original source object: Paracentral gyrus and sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:2653c13ca37f",
+          "prompt": "Locate Left Subparietal sulcus and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Left Subparietal sulcus. Original source object: Subparietal sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:6fa5aa0a14fd",
+          "prompt": "Locate Right Subparietal sulcus and inspect its neighbors from two angles.",
+          "question": "Which source subdivisions are combined within the selected object, and which neighboring medial structures orient your view?",
+          "answer": "Right Subparietal sulcus. Original source object: Subparietal sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        }
+      ]
+    },
+    {
+      "id": "NI-Z1004",
+      "title": "Temporal plane, transverse temporal gyri and pole",
+      "objective": "Relate the source temporal plane and transverse temporal gyri to the lateral temporal and insular context.",
+      "instruction": "Select a structure, rotate the model and adjust neighboring opacity. Compare both supplied sides, then save a response and a view.",
+      "evidence_limit": "Original educational source models in independent XYZ coordinates. Composite objects and source variants in naming retain their original definitions; anatomical interpretation can be reviewed with an instructor.",
+      "structure_ids": [
+        "z_anatomy:object:64fda20b45b4",
+        "z_anatomy:object:56a4ca73f7af",
+        "z_anatomy:object:92f27fe3f9cb",
+        "z_anatomy:object:f58b100a8eb5",
+        "z_anatomy:object:28c6611bc04f",
+        "z_anatomy:object:879c07d3d65e",
+        "z_anatomy:object:2259f9037229",
+        "z_anatomy:object:5f2249b2b4ff",
+        "z_anatomy:object:93763c954cae",
+        "z_anatomy:object:40f1db4cdb1a",
+        "z_anatomy:object:6eb869a3ba3c",
+        "z_anatomy:object:95bcbf337e82"
+      ],
+      "steps": [
+        {
+          "structure_id": "z_anatomy:object:64fda20b45b4",
+          "prompt": "Locate Left Temporal plane and inspect its neighbors from two angles.",
+          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+          "answer": "Left Temporal plane. Original source object: Temporal plane.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:56a4ca73f7af",
+          "prompt": "Locate Right Temporal plane and inspect its neighbors from two angles.",
+          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+          "answer": "Right Temporal plane. Original source object: Temporal plane.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:92f27fe3f9cb",
+          "prompt": "Locate Left Transverse temporal gyri and inspect its neighbors from two angles.",
+          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+          "answer": "Left Transverse temporal gyri. Original source object: Transverse temporal gyri.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:f58b100a8eb5",
+          "prompt": "Locate Right Transverse temporal gyri and inspect its neighbors from two angles.",
+          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+          "answer": "Right Transverse temporal gyri. Original source object: Transverse temporal gyri.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:28c6611bc04f",
+          "prompt": "Locate Left Temporal pole and inspect its neighbors from two angles.",
+          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+          "answer": "Left Temporal pole. Original source object: Temporal pole.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:879c07d3d65e",
+          "prompt": "Locate Right Temporal pole and inspect its neighbors from two angles.",
+          "question": "How does the temporal plane appear when the lateral temporal context is transparent, and which source components remain distinct?",
+          "answer": "Right Temporal pole. Original source object: Temporal pole.r. Use the visible neighboring source objects to support your spatial description."
+        }
+      ]
+    },
+    {
+      "id": "NI-Z1005",
+      "title": "Inferior temporal and collateral sulcal anatomy",
+      "objective": "Trace the inferior temporal and occipitotemporal source sulci alongside the collateral and parahippocampal context.",
+      "instruction": "Select a structure, rotate the model and adjust neighboring opacity. Compare both supplied sides, then save a response and a view.",
+      "evidence_limit": "Original educational source models in independent XYZ coordinates. Composite objects and source variants in naming retain their original definitions; anatomical interpretation can be reviewed with an instructor.",
+      "structure_ids": [
+        "z_anatomy:object:e94fad339dfa",
+        "z_anatomy:object:f3c1ef08da58",
+        "z_anatomy:object:fc2b096bf5dc",
+        "z_anatomy:object:93f8ba55b306",
+        "z_anatomy:object:daf067f18fca",
+        "z_anatomy:object:1e47e5221c99",
+        "z_anatomy:object:1e3fab57e504",
+        "z_anatomy:object:02ff112205bc",
+        "z_anatomy:object:aa3da22c4906",
+        "z_anatomy:object:c717da109b89",
+        "z_anatomy:object:26aefbf06f7e",
+        "z_anatomy:object:9c53e998b3db",
+        "z_anatomy:object:749ca82610aa",
+        "z_anatomy:object:b2f997ebcf1b"
+      ],
+      "steps": [
+        {
+          "structure_id": "z_anatomy:object:e94fad339dfa",
+          "prompt": "Locate Left Posterior transverse collateral sulcus and inspect its neighbors from two angles.",
+          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+          "answer": "Left Posterior transverse collateral sulcus. Original source object:  Posterior transverse collateral sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:f3c1ef08da58",
+          "prompt": "Locate Right Posterior transverse collateral sulcus and inspect its neighbors from two angles.",
+          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+          "answer": "Right Posterior transverse collateral sulcus. Original source object:  Posterior transverse collateral sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:fc2b096bf5dc",
+          "prompt": "Locate Left Inferior temporal sulcus and inspect its neighbors from two angles.",
+          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+          "answer": "Left Inferior temporal sulcus. Original source object: Inferior temporal sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:93f8ba55b306",
+          "prompt": "Locate Right Inferior temporal sulcus and inspect its neighbors from two angles.",
+          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+          "answer": "Right Inferior temporal sulcus. Original source object: Inferior temporal sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:daf067f18fca",
+          "prompt": "Locate Left Occipitotemporal sulcus (Lateral part) and inspect its neighbors from two angles.",
+          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+          "answer": "Left Occipitotemporal sulcus (Lateral part). Original source object: Occipitotemporal sulcus (Lateral part*).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:1e47e5221c99",
+          "prompt": "Locate Right Occipitotemporal sulcus (Lateral part) and inspect its neighbors from two angles.",
+          "question": "Which sulcal object separates the visible temporal surface regions in this model, and how does its course change with your viewing angle?",
+          "answer": "Right Occipitotemporal sulcus (Lateral part). Original source object: Occipitotemporal sulcus (Lateral part*).r. Use the visible neighboring source objects to support your spatial description."
+        }
+      ]
+    },
+    {
+      "id": "NI-Z1006",
+      "title": "Occipital poles, gyri and sulcal landmarks",
+      "objective": "Explore the lateral occipital surface and pole, then use calcarine and parieto-occipital context to orient the medial surface.",
+      "instruction": "Select a structure, rotate the model and adjust neighboring opacity. Compare both supplied sides, then save a response and a view.",
+      "evidence_limit": "Original educational source models in independent XYZ coordinates. Composite objects and source variants in naming retain their original definitions; anatomical interpretation can be reviewed with an instructor.",
+      "structure_ids": [
+        "z_anatomy:object:5cab4cdd0b52",
+        "z_anatomy:object:4bfbf72407f6",
+        "z_anatomy:object:84ca90032d48",
+        "z_anatomy:object:6620bf1c0099",
+        "z_anatomy:object:b2a711561412",
+        "z_anatomy:object:8af18e866b5c",
+        "z_anatomy:object:cd0245421902",
+        "z_anatomy:object:956c19f06311",
+        "z_anatomy:object:1cec0e1c6251",
+        "z_anatomy:object:be5a707d5a02",
+        "z_anatomy:object:674629938fdc",
+        "z_anatomy:object:c2e62683a073",
+        "z_anatomy:object:7e471e9e84e3",
+        "z_anatomy:object:0b0ab3bd04e9",
+        "z_anatomy:object:d67cd647706e",
+        "z_anatomy:object:8c27f49a316e",
+        "z_anatomy:object:9819465ea2a7",
+        "z_anatomy:object:3a6966c34762",
+        "z_anatomy:object:8a26ee4b8094",
+        "z_anatomy:object:c9238f32f95e",
+        "z_anatomy:object:b0de45bdfd87",
+        "z_anatomy:object:b38bd5e446a8"
+      ],
+      "steps": [
+        {
+          "structure_id": "z_anatomy:object:5cab4cdd0b52",
+          "prompt": "Locate Left Anterior occipital sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Left Anterior occipital sulcus. Original source object: Anterior occipital sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:4bfbf72407f6",
+          "prompt": "Locate Right Anterior occipital sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Right Anterior occipital sulcus. Original source object: Anterior occipital sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:84ca90032d48",
+          "prompt": "Locate Left Inferior occipital gyrus and sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Left Inferior occipital gyrus and sulcus. Original source object: Inferior occipital gyrus and sulcus*.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:6620bf1c0099",
+          "prompt": "Locate Right Inferior occipital gyrus and sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Right Inferior occipital gyrus and sulcus. Original source object: Inferior occipital gyrus and sulcus*.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:b2a711561412",
+          "prompt": "Locate Left Lateral occipital gyrus (Middle occipital gyrus) and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Left Lateral occipital gyrus (Middle occipital gyrus). Original source object: Lateral occipital gyrus (Middle occipital gyrus*).l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:8af18e866b5c",
+          "prompt": "Locate Right Lateral occipital gyrus (Middle occipital gyrus) and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Right Lateral occipital gyrus (Middle occipital gyrus). Original source object: Lateral occipital gyrus (Middle occipital gyrus*).r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:cd0245421902",
+          "prompt": "Locate Left Lunate sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Left Lunate sulcus. Original source object: Lunate sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:956c19f06311",
+          "prompt": "Locate Right Lunate sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Right Lunate sulcus. Original source object: Lunate sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:1cec0e1c6251",
+          "prompt": "Locate Left Occipital pole and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Left Occipital pole. Original source object: Occipital pole.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:be5a707d5a02",
+          "prompt": "Locate Right Occipital pole and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Right Occipital pole. Original source object: Occipital pole.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:674629938fdc",
+          "prompt": "Locate Left Superior occipital gyri and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Left Superior occipital gyri. Original source object: Superior occipital gyri.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:c2e62683a073",
+          "prompt": "Locate Right Superior occipital gyri and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Right Superior occipital gyri. Original source object: Superior occipital gyri.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:7e471e9e84e3",
+          "prompt": "Locate Left Transverse occipital sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Left Transverse occipital sulcus. Original source object: Transverse occipital sulcus.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:0b0ab3bd04e9",
+          "prompt": "Locate Right Transverse occipital sulcus and inspect its neighbors from two angles.",
+          "question": "Which landmark distinguishes the lateral occipital view from the medial calcarine view in the original model?",
+          "answer": "Right Transverse occipital sulcus. Original source object: Transverse occipital sulcus.r. Use the visible neighboring source objects to support your spatial description."
+        }
+      ]
+    },
+    {
+      "id": "NI-Z1007",
+      "title": "Middle meningeal arterial model context",
+      "objective": "Follow the supplied middle meningeal artery and accessory branch models in relation to the transparent temporal and sphenoid bones.",
+      "instruction": "Select a structure, rotate the model and adjust neighboring opacity. Compare both supplied sides, then save a response and a view.",
+      "evidence_limit": "Original educational source models in independent XYZ coordinates. Composite objects and source variants in naming retain their original definitions; anatomical interpretation can be reviewed with an instructor.",
+      "structure_ids": [
+        "z_anatomy:object:f7c6b86b7d56",
+        "z_anatomy:object:ca7cbf3b5050",
+        "z_anatomy:object:71a03ad9416f",
+        "z_anatomy:object:5debbb4cf000",
+        "z_anatomy:object:6d36daa5e529",
+        "z_anatomy:object:de51bcc0183f"
+      ],
+      "steps": [
+        {
+          "structure_id": "z_anatomy:object:f7c6b86b7d56",
+          "prompt": "Locate Left Middle meningeal artery and inspect its neighbors from two angles.",
+          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+          "answer": "Left Middle meningeal artery. Original source object: Middle meningeal artery.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:ca7cbf3b5050",
+          "prompt": "Locate Right Middle meningeal artery and inspect its neighbors from two angles.",
+          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+          "answer": "Right Middle meningeal artery. Original source object: Middle meningeal artery.r. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:71a03ad9416f",
+          "prompt": "Locate Left Accessory branch of middle meningeal artery and inspect its neighbors from two angles.",
+          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+          "answer": "Left Accessory branch of middle meningeal artery. Original source object: Accessory branch of middle meningeal artery.l. Use the visible neighboring source objects to support your spatial description."
+        },
+        {
+          "structure_id": "z_anatomy:object:5debbb4cf000",
+          "prompt": "Locate Right Accessory branch of middle meningeal artery and inspect its neighbors from two angles.",
+          "question": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?",
+          "answer": "Right Accessory branch of middle meningeal artery. Original source object: Accessory branch of middle meningeal artery.r. Use the visible neighboring source objects to support your spatial description."
         }
       ]
     }

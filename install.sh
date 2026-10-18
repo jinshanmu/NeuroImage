@@ -11,7 +11,7 @@ bash install.sh --install-only [--wheel /path/to/neuroimage_atlas-VERSION-py3-no
 
 Options:
   --recipe NAME          Source to acquire and build (default: cerebra)
-  --storage-policy FILE  Reviewed JSON storage policy (default: config/storage-policy.json)
+  --storage-policy FILE  Reviewed JSON storage policy (default: config/storage-portable.json)
   --workers N            Construction workers, 1 to 8 (default: 2)
   --port N               Local browser port (default: 8765)
   --no-start             Finish installation and construction without starting the viewer

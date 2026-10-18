@@ -17,6 +17,7 @@ export class MeshResourceNiivue extends Niivue {
     this.refreshColormaps()
     this.furthestVertexFromOrigin = this.volumes.length ? this.volumeObject3D?.furthestVertexFromOrigin ?? 0 : 0
     for (const mesh of this.meshes) this.furthestVertexFromOrigin = Math.max(this.furthestVertexFromOrigin, mesh.furthestVertexFromOrigin)
-    this.drawScene()
+    // The workspace applies visibility, opacity and view bounds before drawing.
+    // Drawing here would render an intermediate hidden mesh on every insertion.
   }
 }

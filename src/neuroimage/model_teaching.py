@@ -6,6 +6,7 @@ import uuid
 from pydantic import Field, field_validator, model_validator
 
 from .build import utc_now
+from .provenance import processing_record
 from .teaching import TeachingRecipe, TeachingRecord, TeachingSurfaceCutaway
 
 
@@ -142,7 +143,7 @@ def model_teaching_entry(manifest, step, signature, source_annotation=None):
         state["annotations"][0]["source_annotation"] = source_annotation
     scene = {"schema_version": "1.0", "kind": "neuroimage-scene", "title": step["title"], "saved_utc": now,
         **binding, "state": state, "provenance": {"sources": [s.model_dump() for s in manifest.sources],
-            "processing": manifest.build, "anatomical_review": manifest.validation["anatomical_review"],
+            "processing": processing_record(manifest.build), "anatomical_review": manifest.validation["anatomical_review"],
             "representation": "surface-model", "preparation": "Original source mesh target in native XYZ millimeters"}}
     if source_annotation:
         scene["provenance"].update(source_annotations=[source_annotation],

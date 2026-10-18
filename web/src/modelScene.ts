@@ -1,3 +1,4 @@
+import { processingRecord } from './provenance'
 import { validateCutaway } from './cutaway'
 import type { ModelNotebook, ModelScene, ModelView, SurfaceManifest } from './modelTypes'
 import type { Lesson, Vec3 } from './types'
@@ -15,7 +16,7 @@ export function initialModelView(manifest: SurfaceManifest): ModelView {
 export function modelScene(manifest: SurfaceManifest,state: ModelView,title='Independent model teaching scene'): ModelScene {
   return {schema_version:'1.0',kind:'neuroimage-scene',title,saved_utc:new Date().toISOString(),package_id:manifest.package_id,
     package_version:manifest.package_version,build_signature:manifest.build.signature,space_id:manifest.space.id,state:structuredClone(state),
-    provenance:{sources:manifest.sources,processing:manifest.build,anatomical_review:manifest.validation.anatomical_review,
+    provenance:{sources:manifest.sources,processing:processingRecord(manifest.build),anatomical_review:manifest.validation.anatomical_review,
       renderer:__NEUROIMAGE_VIEWER__,representation:'surface-model',source_annotations:state.annotations.flatMap(marker=>marker.source_annotation?[structuredClone(marker.source_annotation)]:[])}}
 }
 export function readModelScene(value: unknown,manifest: SurfaceManifest,lessons: Lesson[]=[]): ModelScene {

@@ -8,7 +8,7 @@ The workspace's **Teaching library** opens prepared image notebooks, independent
 
 Open a source's **Data tools**, select an available local package and choose a compatible **Teaching recipe**. **Prepare teaching** writes a reusable notebook under the data drive's `exports/<dataset>/notebooks/` directory. Its file appears automatically in the teaching library. The same preparation contract supports image and independent model curricula.
 
-Use **Add teaching file** for a scene or notebook exported from the viewer. The library preserves an exact content-addressed copy under `exports/<package>/teaching/<hash>/content.json`. Importing the same file again reuses that copy. Original files, old package versions and earlier prepared notebooks remain intact. The library scans only those two documented export locations; it does not index raw source files or unrelated benchmark artifacts.
+Use **Import teaching file** for a scene or notebook exported from the viewer. The library preserves an exact content-addressed copy under `exports/<package>/teaching/<hash>/content.json`. Importing the same file again reuses that copy. Original files, old package versions and earlier prepared notebooks remain intact. The library scans only those two documented export locations; it does not index raw source files or unrelated benchmark artifacts.
 
 Search by topic, author or source, then choose **Open notebook** or **Open scene**. **Open in a new page** provides a bookmarkable teaching link. A model notebook supports native clipping, object visibility, camera, prompts, ordering, removal/undo, explicit browser save and portable export/import. Image notebooks retain their existing contrast, slice, camera, markers and practice controls. Unsaved notebook drafts survive navigation within the current page. Save or export a notebook before closing the browser.
 
@@ -16,13 +16,17 @@ Search by topic, author or source, then choose **Open notebook** or **Open scene
 
 ## Build a course across sources
 
-For a prepared starting sequence, use **Start from a course plan**. The first plan covers general intracranial anatomy. Choose the exact local package version for each listed source, then **Prepare course**. The operation verifies required source definitions, prepares reusable notebooks and saves the selected original scenes as a course. **Open prepared course** starts the recorded sequence. The organizer also lists the resulting course.
+For a prepared starting sequence, use **Start from a course plan**. The first plan introduces eight CerebrA regions; the general SPL/NAC session follows. Choose the exact local package version for each listed source, then **Prepare course**. The operation verifies required source definitions, prepares reusable notebooks and saves the selected original scenes as a course. **Open prepared course** starts the recorded sequence. The organizer also lists the resulting course.
 
 | Plan | Recorded views | Source configurations |
 | --- | ---: | ---: |
+| Advanced cortical surface anatomy | 60 | 1 |
+| Anterior arterial variation: eight-volunteer comparison | 16 | 8 |
 | BigBrain cortical layers and hippocampal subfields | 30 | 2 |
+| First session: cortex, deep structures and ventricles | 8 | 1 |
 | Cisternal regions: native image and spatial observation | 8 | 2 |
 | Cranial nerves: source objects and regional context | 15 | 4 |
+| Dural arterial and skull-base model context | 4 | 1 |
 | Association and limbic white matter probability anatomy | 34 | 1 |
 | Projection and callosal white matter probability anatomy | 34 | 1 |
 | Brainstem nuclei, root assignments and cranial-nerve context | 24 | 6 |
@@ -33,6 +37,7 @@ For a prepared starting sequence, use **Start from a course plan**. The first pl
 | NextBrain Case 1: histological fine anatomy and MRI | 38 | 7 |
 | NextBrain Case 2: brainstem fine anatomy and MRI | 38 | 4 |
 | Interpreting normal variation across individual and population sources | 11 | 8 |
+| Posterior arterial variation: eight-volunteer comparison | 16 | 8 |
 | Regional anatomy across native source atlases | 22 | 4 |
 | Skull base: source skull, dura and intracranial context | 14 | 4 |
 | Cerebellar lobules, vermis and deep nuclei | 40 | 1 |
@@ -47,7 +52,7 @@ For a prepared starting sequence, use **Start from a course plan**. The first pl
 | Source models: distal arteries, sensory pathways and petrous context | 28 | 1 |
 | Sella, clinoid processes and sphenoidal grooves | 18 | 1 |
 
-The twenty-six plans select 580 views from 75 installed curricula containing 700 views. Views may appear in more than one plan; the counts describe teaching sequences and preserve each source definition. Four [integrated fine-anatomy courses](integrated-fine-anatomy-teaching.md) organize 82 existing observations across independently retained sources. Native images, computational fields and source models keep their recorded evidence descriptions.
+The 31 plans select 684 views from 90 installed curricula containing 796 views. Views may appear in more than one plan; the counts describe teaching sequences and preserve each source definition. Four [integrated fine-anatomy courses](integrated-fine-anatomy-teaching.md) organize 82 existing observations across independently retained sources. Native images, computational fields and source models keep their recorded evidence descriptions.
 
 Preparation progress is saved under `exports/course-preparations/<plan>/<signature>/`. The signature includes the plan, curriculum definitions, selected source manifest hashes, software version and preparation implementation. **Stop course preparation** retains completed notebooks. Repeating the same choices resumes or reuses them. Once a saved course has been edited, the original preparation preserves that course and reports the changed revision. Use **Make a copy** before adapting a prepared sequence when you also want to retain repeatable preparation of the original.
 
@@ -57,7 +62,7 @@ To assemble a different sequence yourself:
 2. Find a notebook or scene below the organizer and choose **Add to course**. A notebook contributes all its recorded views. Each course supports up to 100 views and a 10 MiB JSON file.
 3. Select a view to edit its title or discussion prompt. Use **Move course view earlier/later** to change the order. **Remove course view** has an undo action while the editor remains open.
 4. Choose **Save course** to preserve the course on the data drive. Browser drafts are also retained locally while editing. Save the current draft before selecting another saved course or closing the editor.
-5. Choose **Present course**. The course opens the recorded source, position, selection and display settings. **Return to course view** restores the stored scene after live exploration.
+5. Choose **Present course**. The course opens the recorded source, position, selection and display settings. **Restore view** restores the stored scene after live exploration.
 
 **Compare another recorded view** opens an independently bound course view in the comparison panel. Its position stays separate while the main lesson advances. Each panel uses its own source geometry and coordinates; course organization does not establish an anatomical mapping or registration between datasets. Ordinary comparison controls and per-panel scene export remain available.
 

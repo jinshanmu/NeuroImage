@@ -21,7 +21,7 @@ Use **Compare another recorded view** to keep a second source visible while adva
 
 ## Classroom use and recovery
 
-After live rotation or structure exploration, **Return to course view** restores the recorded source state. Save additional teaching observations as scenes or notebook entries when they should become part of the session. **Export course** retains the portable source-bound sequence, prompts and provenance. The recipients use their own matching local atlas packages.
+After live rotation or structure exploration, **Restore view** restores the recorded source state. Save additional teaching observations as scenes or notebook entries when they should become part of the session. **Export course** retains the portable source-bound sequence, prompts and provenance. The recipients use their own matching local atlas packages.
 
 Use **Export scene** for a durable collection of individual observations and **Export teaching image** for an attributed image package. Browser saves are convenient for short sessions; the tested Chromium profile provides about 5 MB of local storage, shared by scene and notebook drafts at the same service address. A complete scene includes source definitions and processing records. A long teaching session can therefore fill browser storage with a few dozen saved views. The scene-file, notebook-file and data-drive course workflows continue to work at that limit. Retain exported copies before managing browser storage.
 

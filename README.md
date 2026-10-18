@@ -1,89 +1,97 @@
 # NeuroImage Atlas
 
-A local platform for constructing, exploring and teaching normal intracranial neuroanatomy while preserving each source's coordinates, definitions and provenance.
+Explore and teach normal intracranial neuroanatomy in a local web browser. NeuroImage brings independently acquired MRI, CT, source labels, surface models and tractography into a common workflow: obtain a source, build its local atlas, explore its anatomy and save views for teaching.
 
-**0.15.0rc2 is a release candidate prepared for author review.** The software is Apache-2.0. This repository and its software packages contain no acquired images, label arrays, meshes, streamlines or anatomical data derivatives. Users obtain their own datasets under the relevant source terms.
+**Version 1.0.0 is prepared for final author review.** The software is licensed under Apache-2.0. Software archives contain code, recipes, schemas and documentation. Anatomical datasets are acquired separately under their own terms.
 
-## Try the software
+## What you can do
 
-Linux is the verified platform. Use a WebGL2 browser, Python 3.12 in the dedicated `NeuroImage` Conda environment, and the Node version in `.nvmrc` for a source build. Keep the environment, checkout and build workspace on SSD; keep acquired data and local atlases on your chosen data drive.
+- Explore linked orthogonal sections and 3D anatomy; rotate, select, isolate, adjust opacity and inspect source context.
+- Browse ten anatomical groups and 46 detailed topics, including cortical sulci, deep nuclei, brainstem nuclei, ventricles and cisterns, cranial nerves, skull-base anatomy and vessels.
+- Compare normal-source examples in separate views. Eight healthy-volunteer MRA cases support focused anterior and posterior arterial comparison.
+- Learn with guided questions, identification practice and saved study records. Mark steps for review, restore responses and export a backup.
+- Prepare notebooks and courses from recorded views. Each view reopens its matching local source package with the original position, selection and display settings.
+- Work locally after installation and data acquisition. Browser rendering uses local resources.
+
+The verified anatomical collection contains 39 source configurations from 19 resource families, with 1,965 source-specific entries. The software supplies 193 built-in sequences, 90 notebook curricula containing 796 views, and 31 course plans selecting 684 views. Course plans reuse curriculum views; entry counts include repeated and overlapping source definitions.
+
+## Linux installation
+
+The verified platform is **Linux x86_64 with Python 3.12 and a WebGL2 browser**. Install [Conda](https://conda-forge.org/download/) on SSD first. Extract the software source archive or place this checkout on SSD. Choose a data-drive directory for acquired sources and atlases, and a separate SSD directory for workspace state.
+
+From the software directory:
 
 ```bash
-conda env create -f environment.yml
-conda activate NeuroImage
-python -m pip install -r requirements-core.lock.txt -r requirements-dev.lock.txt
-nvm install  # Requires nvm; alternatively install the Node version in .nvmrc.
-nvm use
-npm ci
-npm run build
-python -m pip install --no-deps --no-build-isolation -e .
-neuroimage --version
+bash install.sh \
+  --data-root /path/to/data/NeuroImage \
+  --state-root /path/to/ssd/NeuroImage-state \
+  --recipe cerebra
 ```
 
-If `NeuroImage` already exists, activate it instead of creating it again. A prebuilt wheel contains the offline viewer and does not require Node for normal use. Install its pinned runtime dependencies first, then install the wheel with `python -m pip install --no-deps PATH_TO_WHEEL`.
+This command creates or uses the **NeuroImage** Conda environment, installs pinned dependencies, builds and installs the browser application, obtains CerebrA, constructs and validates its atlas, and starts the local workspace. For a source build, it uses Node 24.21.0 or downloads the pinned official runtime. All Python installation stays in the named environment. Repeating the command reuses verified source files and completed construction outputs.
 
-## Open your first anatomical source
+A supplied wheel includes the viewer and needs no Node installation:
 
 ```bash
+bash install.sh --wheel /path/to/neuroimage_atlas-1.0.0-py3-none-any.whl \
+  --data-root /path/to/data/NeuroImage \
+  --state-root /path/to/ssd/NeuroImage-state --recipe cerebra
+```
+
+Use `--install-only` to install software without acquiring anatomy, or `--no-start` to finish construction without starting the service. `bash install.sh --help` lists all options.
+
+The installer uses [the portable storage profile](config/storage-portable.json), which reserves 10 GiB on the data drive and 2 GiB on software storage in addition to estimated working space. Review these values for your drives or pass `--storage-policy FILE`. The separate [development workstation policy](config/storage-policy.json) retains larger reserves.
+
+MIDA requires a manual download from its official access page. Z-Anatomy construction needs the separately installed Blender version specified by its recipe. The [Linux quickstart](docs/linux-quickstart.md) and [dataset installation table](docs/dataset-installation.md) give the exact workflow and source-specific requirements.
+
+## First use
+
+Open `http://127.0.0.1:8765` in your browser.
+
+1. Choose an anatomical group or dataset. Detailed topics, cases and regional configurations appear on secondary pages.
+2. Open **Structure library** to search, select or isolate structures. **Select all** and **Deselect all** apply to the displayed filter.
+3. Use **Learning tools → Learn** for a guided sequence. Write a response, compare it with the source answer and use **Save response**, **Review again** or **Understood** to keep a study record.
+4. Open **Teaching library** to prepare a course or use a saved notebook. With CerebrA installed, the first-session plan provides eight introductory views.
+5. Export scenes, notebooks and study records for backup. Saved courses also remain on the data drive.
+
+The page supports ordinary browser scrolling and zoom. A bookmarked atlas link reopens its exact source package after a service restart. Source comparisons retain each panel's own coordinates.
+
+To restart the workspace:
+
+```bash
+conda activate NeuroImage
+neuroimage workspace --data-root /path/to/data/NeuroImage \
+  --state-root /path/to/ssd/NeuroImage-state \
+  --storage-policy config/storage-portable.json
+```
+
+Stop it with Ctrl+C. See the [user guide](docs/getting-started.md), [teaching workflows](docs/teaching-library-and-courses.md) and [learning and variation guide](docs/learning-and-variation.md).
+
+## Sources and reproducibility
+
+Every source uses the same acquisition, construction, validation and viewing interfaces. Original definitions, coordinates, licenses and references remain attached to its local package. Measured images, categorical labels, probabilities, streamlines and educational models keep their distinct representations.
+
+```bash
+neuroimage doctor
 neuroimage recipes
 neuroimage recipes cerebra
-neuroimage acquire cerebra --data-root /path/to/data-directory --dry-run
-neuroimage acquire cerebra --data-root /path/to/data-directory
-neuroimage build cerebra --data-root /path/to/data-directory --workers 2
-neuroimage workspace --data-root /path/to/data-directory --state-root /path/to/ssd-state-directory
+neuroimage quickstart cerebra --data-root /path/to/data/NeuroImage \
+  --state-root /path/to/ssd/NeuroImage-state \
+  --storage-policy config/storage-portable.json --dry-run
+neuroimage validate /path/to/exact/manifest.json
 ```
 
-Read the selected source's terms before acquisition. The dry run reports transfer and expansion budgets. Anatomical acquisition and construction use a conservative 400 GiB free-space floor unless an explicit policy is supplied. Set an appropriate policy for your own storage; this repository's `config/storage-policy.json` records the development workstation's capacity policy, without machine-specific paths. No drive is formatted by these commands.
+A dry run reports source terms, manual downloads and storage needs without downloading. Validation checks the package's declared assets and geometry. The [installation and reproduction guide](docs/installation-and-reproduction.md) describes dependency locks, independent software builds and recovery. Portable teaching files reference exact local atlas packages; users sharing a lesson obtain their own matching data. Image exports retain source attribution and require the relevant redistribution permission.
 
-Open `http://127.0.0.1:8765`. Choose a ready anatomical group or dataset. The same source page provides download, construction, validation and opening tools. Use **Structure library** to locate a source-defined entry; **Learning tools** provides notes, source evidence, lessons and notebooks. The source link survives a page refresh, and browser back/forward navigation retains open view state.
+This release supports normal anatomy and variation for education and research. Engineering checks establish software behavior and source preservation. Independent anatomical review and educational outcome studies remain separate work. The [scope and roadmap](docs/release-scope-and-roadmap.md) identifies further anatomical topics.
 
-The [installation and reproduction guide](docs/installation-and-reproduction.md) gives separate wheel and source installation paths, required and optional dependencies, storage setup, acceptance commands and troubleshooting. The [getting-started guide](docs/getting-started.md) covers all source types, validation, viewing and recovery. Every source uses the same acquisition, import, construction, viewing and validation interfaces. Matching original files are reused, interrupted builds resume from verified assets, and source changes produce a distinct package identity.
-
-The [detailed anatomy and variation guide](docs/detailed-anatomy-and-variation.md) describes the 35 subordinate topics, new original model structures, native inner-ear CT and eight-case MRA observation courses.
-
-## What the candidate provides
-
-The accepted anatomical snapshot of 15 October 2026 contains **39 source configurations from 19 upstream families and 1,901 source-specific structure entries**. These are not 1,901 unique anatomical structures or participants. Overlapping and repeated source definitions remain separate. The software contains 186 built-in sequences, 75 curricula with 700 views, and 26 course plans selecting 580 views. Plans reuse curriculum views.
-
-| Evidence | Examples |
-| --- | --- |
-| Image-linked labels and probabilities | SPL/NAC, CerebrA, CIT168, Julich-Brain, Brainstem Navigator and SUIT |
-| Fine histological definitions | Eleven selected NextBrain blocks with source-processed ex vivo MRI |
-| Original surface models | BigBrain layers and hippocampal subfields, Z-Anatomy and the healthy MUG500+ source skull |
-| White matter | HCP1065 trajectories and independent probability fields |
-| Vascular and native image evidence | THU cerebral MRA, IXI MRA, arterial occurrence, venous statistics, meso-vein imaging and HumanBrainAtlas |
-| Source-bound teaching | Notes, markers, hidden-name practice, notebooks, multi-source courses, exports and exact-package recovery |
-
-The [snapshot inventory](config/anatomy-detail-inventory-2026-10-15.json) records exact package versions and source/license references. The [atlas format](docs/atlas-format.md) and [adapter guide](docs/adapter-development.md) describe the contracts.
-
-Source-space preservation includes source-provided standardized templates; it does not imply that every dataset is an unregistered native acquisition. Comparisons open independent spaces. The software does not estimate inter-source registration, anatomical equivalence or patient-specific anatomy. Model-only sources do not acquire an invented MRI counterpart.
-
-## Why this workflow is useful
-
-Anatomy teaching often combines sources that disagree in granularity, coordinates and representation. NeuroImage connects those resources to reusable teaching objects: a saved view names the exact source and construction that made it, and an incompatible package is rejected instead of silently substituted. Educators can collect views into notebooks and courses while readers can trace the original definition.
-
-The application has its own Python construction and validation pipeline and React browser interface. It does not require a running 3D Slicer installation. NiiVue supplies image rendering; NeuroImage adds source adapters, construction fingerprints, exact-package teaching contracts and recovery rules. See the [workflow comparison](docs/software-positioning.md) for its intended role alongside general imaging applications.
-
-## Save and share teaching content
-
-Scenes retain source identity, camera, coordinates, selection, contrast, visibility, annotations and learning state. Notebooks and courses reference exact atlas versions. Portable JSON files contain teaching state and provenance, without embedded anatomical arrays or geometry. Recipients need their own matching local packages.
-
-Scene, notebook and course-draft saves use IndexedDB. Older localStorage records remain readable; an old key is retired only after its explicit replacement commits. Browser quotas and profile clearing can still affect persistence. Export files for durable backup, or save courses on the data drive through the [teaching library](docs/teaching-library-and-courses.md).
-
-Teaching image exports retain source credits and licenses. Export availability does not grant redistribution rights: the relevant source terms still apply.
-
-See the [implemented scope and anatomical development plan](docs/release-scope-and-roadmap.md) for current modules and future fine-anatomy content.
-
-## Evidence and limitations
-
-Engineering validation covers source values, coordinates, overlap preservation, scene identity, restart recovery, archive boundaries and reproducible software builds. Tests do not establish complete anatomical coverage, expert agreement, learning gains or clinical utility. Full independent anatomical review and controlled educational evaluation remain future work.
-
-The current scope is normal intracranial anatomy and variation for learning and teaching. Disease states, diagnostic and treatment workflows are outside this release. Linux has been verified; Windows and macOS have not. See [scope](docs/project-scope.md), [security](SECURITY.md) and [release notes](CHANGELOG.md).
-
-## Develop and cite
+## Development, license and citation
 
 ```bash
-python -m pip install -r requirements-source-inspection.lock.txt  # Include HDF5 tests.
+conda activate NeuroImage
+python -m pip install -r requirements-core.lock.txt -r requirements-dev.lock.txt \
+  -r requirements-source-inspection.lock.txt
+npm ci --ignore-scripts --bin-links=false
 python -m pytest
 npm test
 npm run build
@@ -91,6 +99,8 @@ python scripts/audit_code_release.py --include-untracked
 python scripts/build_distribution.py
 ```
 
-The test suite generates small synthetic fixtures; use an SSD filesystem with symbolic-link support for its boundary tests. Acquired anatomical data are unnecessary for these tests. [Contribution instructions](CONTRIBUTING.md) describe the environment and review expectations. GitHub continuous integration runs equivalent checks; it does not publish releases.
+Use Node 24.21.0, as recorded in `.nvmrc`. Keep the environment, checkout and build workspace on SSD. Tests generate their own small fixtures and require no acquired anatomy. Continuous integration runs validation and builds software artifacts; publication follows author review.
 
-Use [CITATION.cff](CITATION.cff) to cite the software and cite every original dataset used in your work. The associated Neuroinformatics manuscript is in preparation; no journal acceptance or publication is claimed. The code license, [third-party software notices](NOTICE), and individual source terms remain separate.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [community conduct](CODE_OF_CONDUCT.md), [governance](GOVERNANCE.md), [privacy](PRIVACY.md) and [security reporting](SECURITY.md). The [Apache-2.0 license](LICENSE) covers project software; [NOTICE](NOTICE) and the bundled third-party notices identify external software. Each dataset retains its own terms.
+
+Use [CITATION.cff](CITATION.cff) to cite the software and cite each original dataset used in your work. The associated Neuroinformatics manuscript is in preparation.

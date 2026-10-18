@@ -1,0 +1,8 @@
+{
+  "ssd_minimum_free_gib": 2,
+  "hdd_minimum_free_gib": 10,
+  "keep_original_archives": true,
+  "reuse_existing_verified_files": true,
+  "software_distribution_contains_acquired_data": false,
+  "description": "Portable installation profile. Acquisition and construction also reserve each recipe's estimated peak working space. Review these reserves for your own drives."
+}

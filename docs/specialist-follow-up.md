@@ -1,6 +1,6 @@
 # Specialist follow-up after the fine-anatomy increment
 
-The current inventory is `config/anatomy-detail-inventory-2026-10-15.json`: 39 source configurations from 19 upstream families, 1,901 source-specific entries, 186 built-in sequences, 75 installed curricula with 700 recorded views, and twenty-six course plans selecting 580 views. Eighteen original source point annotations provide thirty-six skull-base and sellar views. Counts retain overlapping source definitions. The [detailed anatomy and variation guide](detailed-anatomy-and-variation.md) records the latest source additions; exact-image expert review remains separate.
+The current inventory is `config/anatomy-release-1.0.0.json`: 39 source configurations from 19 upstream families, 1,965 source-specific entries, 193 built-in sequences, 90 installed curricula with 796 recorded views, and 31 course plans selecting 684 views. Eighteen original source point annotations provide thirty-six skull-base and sellar views. Counts retain overlapping source definitions. The [detailed anatomy and variation guide](detailed-anatomy-and-variation.md) records the latest source additions; exact-image expert review remains separate.
 
 ## Delivered specialist capabilities
 
@@ -8,7 +8,7 @@ The current inventory is `config/anatomy-detail-inventory-2026-10-15.json`: 39 s
 
 [BigBrain surfaces](bigbrain-fine-surfaces.md) add fourteen cortical-layer boundary sheets and fourteen hippocampal surfaces in their source reconstruction coordinates. [HCP1065 probability fields](hcp1065-probability-fields.md) add all 64 delivered fields alongside the existing 87 source trajectory collections, with explicit matching reference MRI. [Healthy-source MRA](thu-cerebral-mra.md) supplies eight original volunteers and 151 delivered vessel segment entries. Its twenty-name correspondence is project curated and retains separate review status.
 
-[SUIT cerebellar anatomy](suit-cerebellar-anatomy.md) supplies 34 original lobular and nuclear assignments, all probability channels and original T1. [Z-Anatomy](z-cerebellar-ventricular-context.md) now contains 286 source objects, including inner-ear and CN VIII components, arterial/optic detail, cerebellar surface and peduncular objects, ventricles, aqueduct and choroid plexus. Eighteen [source-authored endpoints](source-annotation-teaching.md) provide skull-base and [sellar/clinoid observations](z-sellar-landmarks.md), each on its original bony context.
+[SUIT cerebellar anatomy](suit-cerebellar-anatomy.md) supplies 34 original lobular and nuclear assignments, all probability channels and original T1. [Z-Anatomy](z-cerebellar-ventricular-context.md) now contains 350 source objects, including inner-ear and CN VIII components, arterial/optic detail, cerebellar surface and peduncular objects, ventricles, aqueduct and choroid plexus. Eighteen [source-authored endpoints](source-annotation-teaching.md) provide skull-base and [sellar/clinoid observations](z-sellar-landmarks.md), each on its original bony context.
 
 VENAT, original meso-vein MRI, HBA T2, MUG500+ mask and author-cleaned skull surface, Mouches arterial occurrence and IXI MRA remain available through the common platform. The current source geometry and evidence distinctions are summarized in [normal-source reconciliation](normal-source-reconciliation.md).
 

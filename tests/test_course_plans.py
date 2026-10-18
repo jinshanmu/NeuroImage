@@ -38,7 +38,7 @@ def plan_fixture(model_source, source, monkeypatch):
 
 def test_installed_plans_reference_real_curriculum_views():
     catalog = plans.plan_catalog()
-    assert len(catalog) == 26 and sum(item["views"] for item in catalog) == 580
+    assert len(catalog) == 31 and sum(item["views"] for item in catalog) == 684
     assert {source["dataset_id"] for item in catalog for source in item["requirements"]} >= {"spl_nac", "cerebra", "cit168_native", "julich_selected", "brainstem_navigator_mni", "hcp1065_tracts", "ixi_mra", "venat", "mesoveins", "mouches_arteries", "mida", "z_anatomy", "mug500_source_mesh", "mug500_healthy", "hba_native"}
 
 

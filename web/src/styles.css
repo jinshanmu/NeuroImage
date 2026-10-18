@@ -244,3 +244,5 @@
 .dataset-configuration{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:20px;text-align:left;min-width:0;line-height:1.6;background:#10212e;border-radius:10px}
 .dataset-configuration>span:first-child{font-size:15px;font-weight:550;overflow-wrap:anywhere}
 .dataset-configuration small{color:#9dc8bb}.dataset-configuration>span:last-child{font-size:12px;color:#92d5c3}
+
+.study-record{margin:16px 0;padding:12px;border:1px solid var(--line,#cbd5db);border-radius:6px;min-width:0;overflow-wrap:anywhere}.study-record h3{margin:0 0 8px}.study-record button{white-space:normal;max-width:100%}.study-record details{margin-top:10px}.lesson-response textarea{width:100%}

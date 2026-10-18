@@ -28,7 +28,7 @@ jobs:
       - name: Install the pinned project stack
         run: |
           python -m pip install -r requirements-core.lock.txt -r requirements-dev.lock.txt -r requirements-source-inspection.lock.txt
-          npm ci
+          npm ci --ignore-scripts --bin-links=false
           python -m pip install --no-deps --no-build-isolation -e .
       - name: Validate source and frontend behavior
         run: |

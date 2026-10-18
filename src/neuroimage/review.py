@@ -13,6 +13,7 @@ from PIL import Image
 from .build import GIB, atomic_json, sha256
 from .validation import validate_package
 from .contracts import Structure, StreamlineStructure, IndependentRegion
+from .provenance import processing_record
 
 DECISIONS = {"not_assessed", "acceptable", "needs_revision", "not_resolvable", "not_applicable"}
 STRUCTURE_CRITERIA = {
@@ -59,7 +60,7 @@ def scene_for(manifest, structure):
                 "camera": [110, 15, 1.4], "pan": [0, 0, 0, 1], "imageContext": True, "window": [image.cal_min, image.cal_max],
                 "annotations": [], "showMarkers": True, "panel": "inspect", "note": "Original source scalar evidence; no MRI or segmented structures." if manifest.representation == "scalar-fields" else "Original native image; no segmented structure labels.",
                 "selectionEvidence": {"kind": "image-cursor", "candidates": []}},
-                "provenance": {"sources": [source.model_dump() for source in manifest.sources], "processing": manifest.build, "anatomical_review": "not_performed"}}
+                "provenance": {"sources": [source.model_dump() for source in manifest.sources], "processing": processing_record(manifest.build), "anatomical_review": "not_performed"}}
     model = manifest.representation == "label-model"
     streamlines = manifest.representation == "mri-streamlines"
     image = next(v for v in manifest.volumes if v.kind == ("labels" if model else "image"))
@@ -79,7 +80,7 @@ def scene_for(manifest, structure):
             "selectionEvidence": {"kind": "source-target", "candidates": [structure.id]},
             **({"focus3D": list(structure.target_ras_mm)} if manifest.representation == "mri-regions" else {}),
             **({"streamlineLevel": "standard", "streamlineSlabMm": 1} if streamlines else {})},
-            "provenance": {"sources": [s.model_dump() for s in manifest.sources], "processing": manifest.build, "anatomical_review": "not_performed"}}
+            "provenance": {"sources": [s.model_dump() for s in manifest.sources], "processing": processing_record(manifest.build), "anatomical_review": "not_performed"}}
 
 
 def prepare_review(manifest_path, data_root, *, limit=20, minimum_free_gib=400):

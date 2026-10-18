@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "neuroimage-atlas"
-version = "0.15.0rc2"
+version = "1.0.0"
 description = "Local normal intracranial anatomy atlas construction and teaching"
 readme = "docs/package-readme.md"
 requires-python = ">=3.12"
 license = "Apache-2.0"
-dependencies = ["numpy>=1.26,<3", "scipy>=1.10,<2", "nibabel>=5,<6", "pynrrd>=1,<2", "scikit-image>=0.24,<1", "pydantic>=2,<3", "pillow>=10,<13", "SimpleITK>=2.5,<3"]
+dependencies = ["numpy>=1.26,<3", "scipy>=1.10,<2", "nibabel>=5,<6", "pynrrd>=1,<2", "scikit-image>=0.24,<1", "pydantic>=2,<3", "pillow>=10,<13", "SimpleITK>=2.5,<3", "packaging>=24,<27"]
 
 [project.scripts]
 neuroimage = "neuroimage.cli:main"

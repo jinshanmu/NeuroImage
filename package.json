@@ -1,6 +1,6 @@
 {
   "name": "neuroimage",
-  "version": "0.15.0-rc.2",
+  "version": "1.0.0",
   "private": true,
   "description": "Intracranial imaging and anatomy atlas for neurosurgical teaching",
   "license": "Apache-2.0",

@@ -1,4 +1,5 @@
 import type { Niivue } from '@niivue/niivue'
+import { modelRenderKey } from './renderState'
 import { NVMesh } from '@niivue/niivue'
 import { unProject } from '@niivue/niivue/utils'
 import { SourceDepthNiivue } from './depthRenderer'
@@ -44,6 +45,7 @@ export class ModelViewer {
   private current:ModelView|null=null
   private generation=0
   private task:Promise<void>|null=null
+  private appliedKey=''
   private disposed=false
   private attached=false
   private released=false
@@ -53,7 +55,7 @@ export class ModelViewer {
     private changed:(patch:Partial<ModelView>)=>void,private status:(message:string)=>void) {
     this.nv=new NativeModelNiivue({backColor:[.025,.045,.066,1],fontColor:[.74,.8,.86,1],
       isOrientCube:false,isOrientationTextVisible:false,show3Dcrosshair:false,isRuler:false,isColorbar:false,
-      isDepthPickMesh:true,dragAndDropEnabled:false,loadingText:'Loading native source model...',logLevel:'error'})
+      isDepthPickMesh:true,dragAndDropEnabled:false,loadingText:'',logLevel:'error'})
     const bounds=new Map(manifest.structures.map(item=>[item.id,item.bounds_native_mm]))
     this.nv.onNativePick=position=>{
       if(!this.current||this.disposed||this.syncing)return
@@ -76,7 +78,9 @@ export class ModelViewer {
   }
   apply(state:ModelView):Promise<void> {
     if(this.disposed)return Promise.resolve()
-    this.current=state;this.generation++
+    this.current=state
+    if(!this.task&&this.appliedKey===modelRenderKey(state))return Promise.resolve()
+    this.generation++
     if(!this.task)this.task=this.drain().finally(()=>{this.task=null;if(this.disposed)this.release()})
     return this.task
   }
@@ -85,6 +89,7 @@ export class ModelViewer {
     while(!this.disposed&&completed!==this.generation) {
       const generation=this.generation,state=this.current!
       await this.render(state,generation);completed=generation
+      if(!this.disposed&&generation===this.generation)this.appliedKey=modelRenderKey(state)
     }
   }
   private async render(state:ModelView,generation:number) {

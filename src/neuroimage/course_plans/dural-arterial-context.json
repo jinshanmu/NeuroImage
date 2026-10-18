@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "kind": "neuroimage-course-plan",
+  "id": "dural-arterial-context",
+  "title": "Dural arterial and skull-base model context",
+  "author": "NeuroImage teaching workspace",
+  "objective": "Compare the supplied anatomical structures in original source context, rotate and inspect their spatial relations, and save focused observations.",
+  "views": [
+    {
+      "id": "z-anatomy-dural-arteries-view-01",
+      "curriculum": "z-anatomy-dural-arteries",
+      "view": "view-01",
+      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?"
+    },
+    {
+      "id": "z-anatomy-dural-arteries-view-02",
+      "curriculum": "z-anatomy-dural-arteries",
+      "view": "view-02",
+      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?"
+    },
+    {
+      "id": "z-anatomy-dural-arteries-view-03",
+      "curriculum": "z-anatomy-dural-arteries",
+      "view": "view-03",
+      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?"
+    },
+    {
+      "id": "z-anatomy-dural-arteries-view-04",
+      "curriculum": "z-anatomy-dural-arteries",
+      "view": "view-04",
+      "prompt": "Which branch is selected, and where does the original object lie relative to the visible skull-base bones?"
+    }
+  ]
+}

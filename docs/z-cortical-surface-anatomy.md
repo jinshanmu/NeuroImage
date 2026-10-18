@@ -1,6 +1,6 @@
 # Cortical surface anatomy in the original Z-Anatomy model
 
-The existing pinned source file supplies 56 additional hemisphere-specific surface objects. Together with the earlier neurovascular, cranial, cerebellar and ventricular content, the 14 October 2026 Z-Anatomy selection contained 213 objects. The [current detailed-anatomy selection](detailed-anatomy-and-variation.md) contains 286 objects. Original object names, hemisphere suffixes, polygon topology, local coordinates and metric world transforms are retained. The recipe records a project display palette for visual separation; the original Blender materials remain in the preserved source file. The original source has already been acquired; this increment downloads and expands zero additional bytes.
+The existing pinned source file supplies 56 additional hemisphere-specific surface objects. Together with the earlier neurovascular, cranial, cerebellar and ventricular content, the 14 October 2026 Z-Anatomy selection contained 213 objects. The [current detailed-anatomy selection](detailed-anatomy-and-variation.md) contains 350 objects. Original object names, hemisphere suffixes, polygon topology, local coordinates and metric world transforms are retained. The recipe records a project display palette for visual separation; the original Blender materials remain in the preserved source file. The original source has already been acquired; this increment downloads and expands zero additional bytes.
 
 ## Regional teaching content
 
