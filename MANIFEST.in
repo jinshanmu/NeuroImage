@@ -1,5 +1,6 @@
 include config/anatomy-release-1.0.0.json
 include install.sh scripts/install_linux.py
+include scripts/browser_course_navigation.js
 include config/storage-portable.json
 include CODE_OF_CONDUCT.md GOVERNANCE.md PRIVACY.md
 include docs/learning-and-variation.md docs/linux-quickstart.md docs/dataset-installation.md
