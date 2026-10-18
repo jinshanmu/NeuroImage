@@ -21,10 +21,10 @@ function GroupCard({group,targets,busy,open,onExplore,topicCount=0}: {group:Brow
   return <article className={'anatomy-card '+(group.id==='general-anatomy'?'whole-brain-card':'')}>
     <button className="anatomy-entry" disabled={busy||!target} onClick={()=>target&&open(target,group)} aria-label={'Browse '+group.title}>
       <span className="anatomy-symbol" aria-hidden="true">{group.id==='general-anatomy'?'◎':'○'}</span>
-      <span>{group.kind==='variation'&&<span className="topic-kind">NORMAL VARIATION OBSERVATIONS</span>}<h2>{group.title}</h2><p>{group.description}</p></span><span className="entry-arrow" aria-hidden="true">↗</span>
+      <span>{group.kind==='variation'&&<span className="topic-kind">VARIATION</span>}<h2>{group.title}</h2><p>{group.description}</p></span><span className="entry-arrow" aria-hidden="true">↗</span>
     </button>
     <div className="anatomy-source">{target?<><label><span className="sr-only">Source for {group.title}</span><SelectField aria-label={'Source for '+group.title} value={target.dataset_id} onChange={event=>setChoice(event.target.value)} disabled={busy}>{choices.map(item=><option key={item.key} value={item.dataset_id}>{item.title}</option>)}</SelectField></label><small>{representation(target.representation)} · {choices.length} {choices.length===1?'source':'sources'}</small></>:<small>Build a source atlas to explore this group</small>}</div>
-    {onExplore&&topicCount>0&&<button className="anatomy-detail-link" disabled={busy} onClick={onExplore} aria-label={'Explore details for '+group.title}>Explore detailed anatomy <span>{topicCount} topics →</span></button>}
+    {onExplore&&topicCount>0&&<button className="anatomy-detail-link" disabled={busy} onClick={onExplore} aria-label={'Explore details for '+group.title}>Detailed anatomy <span>{topicCount} topics →</span></button>}
   </article>
 }
 
@@ -40,7 +40,7 @@ export function AnatomyHome({atlases,workspace,dataset,group,onGroup,onDataset,o
     if(!workspace)return
     setLoading(true);setError('')
     const controller=new AbortController()
-    fetch('/api/workspace',{signal:controller.signal}).then(async response=>{const data=await response.json();if(!response.ok)throw Error(data.error);setSnapshot(data)}).catch(error=>{if(!controller.signal.aborted)setError(String(error))}).finally(()=>{if(!controller.signal.aborted)setLoading(false)})
+    fetch('/api/workspace/browse'+(reload?'?refresh=1':''),{signal:controller.signal}).then(async response=>{const data=await response.json();if(!response.ok)throw Error(data.error);setSnapshot(data)}).catch(error=>{if(!controller.signal.aborted)setError(String(error))}).finally(()=>{if(!controller.signal.aborted)setLoading(false)})
     return()=>controller.abort()
   },[workspace,atlases,reload])
   const targets=useMemo(()=>browseTargets(atlases,snapshot?.packages),[atlases,snapshot])
@@ -88,22 +88,22 @@ export function AnatomyHome({atlases,workspace,dataset,group,onGroup,onDataset,o
   }
   return <main className="anatomy-home">
     <section className="anatomy-main" aria-label="Browse anatomy">
-      <div className="anatomy-home-heading"><div className="eyebrow">{region?'DETAILED ANATOMY AND SOURCE OBSERVATIONS':dataset?'SOURCE ATLAS LIBRARY':'EXPLORE NORMAL INTRACRANIAL ANATOMY'}</div><h1>{region?.title??family?.title??selected?.title??(dataset??'Start with anatomy')}</h1><p>{region?'Choose a detailed topic. Each source opens its own available structures and native context.':family?'Choose a case, region or representation within this dataset.':dataset?'Open the views available from this source.':'Choose a region or system. Move between complete image sections and close anatomical views.'}</p>{region&&<button onClick={()=>onGroup(null)}>Back to anatomy groups</button>}</div>
+      <div className="anatomy-home-heading"><div className="eyebrow">{region?'DETAILED ANATOMY':dataset?'DATASET':'NEUROANATOMY'}</div><h1>{region?.title??family?.title??selected?.title??(dataset??'Browse anatomy')}</h1><p>{region?'Choose a topic and source.':family?'Choose a case, region or representation within this dataset.':dataset?'Open the views available from this source.':'Choose a region or system.'}</p>{region&&<button onClick={()=>onGroup(null)}>Back to anatomy groups</button>}</div>
       {error&&<div className="error" role="alert">{error}<button onClick={()=>setReload(value=>value+1)}>Refresh sources</button><button onClick={()=>setError('')}>Dismiss</button></div>}
       {loading&&<p role="status">Checking your local source library…</p>}
       {notice&&<p role="status">{notice}</p>}
       {opening&&<div className="opening-atlas" role="status">Opening {opening}… Verifying local atlas files.<button onClick={()=>{openingRequest.current?.abort();setOpening('');setNotice('Stopped waiting. Any verification already started continues in the dataset tools.')}}>Stop waiting</button></div>}
       {family&&<div className="dataset-summary"><button onClick={()=>onDataset(null)}>All datasets</button><p>{family.members.length} source configurations · Each keeps its original definitions and coordinates.</p></div>}
       {family&&<div className="dataset-configurations" aria-label={family.title+' source configurations'}>{family.members.map(source=><button key={source.id} className="dataset-configuration" onClick={()=>onDataset(source.id)}><span>{source.title}</span><small>{sourceStatus(source)}</small><span aria-hidden="true">Open →</span></button>)}</div>}
-      {dataset&&!family&&<div className="dataset-summary">{selected?.sources.map((source,index)=><p key={index}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> · {source.version} · {source.license_name}</p>)}{workspace&&!!selected?.sources.length&&<button onClick={()=>onManage(dataset)}>Download, install and build</button>}{parentFamily&&<button onClick={()=>onDataset(familySelection(parentFamily.id))}>Back to {parentFamily.title}</button>}<button onClick={()=>onDataset(null)}>All anatomy groups</button></div>}
+      {dataset&&!family&&<div className="dataset-summary">{selected?.sources.map((source,index)=><p key={index}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> · {source.version} · {source.license_name}</p>)}{workspace&&!!selected?.sources.length&&<button onClick={()=>onManage(dataset)}>Download and build</button>}{parentFamily&&<button onClick={()=>onDataset(familySelection(parentFamily.id))}>Back to {parentFamily.title}</button>}<button onClick={()=>onDataset(null)}>All anatomy groups</button></div>}
       <div className="anatomy-grid">{groups.map(group=><GroupCard key={(dataset??'all')+group.id} group={group} targets={displayed} busy={!!opening||loading} open={(target,group)=>void open(target,group)} onExplore={region?undefined:()=>onGroup(group.id)} topicCount={availableTopics.filter(topic=>topic.parentId===group.id).length}/>)}</div>
       {region&&!groups.length&&!loading&&<p className="empty-library">No detailed topics are available for this source selection.<button onClick={()=>onGroup(null)}>Back to anatomy groups</button></p>}
       {!dataset&&!groups.length&&!loading&&<div className="home-empty"><h2>{targets.length?'Open a source package':'Build your first local atlas'}</h2><p>{targets.length?'Your ready packages are listed below. Each opens in its own source space.':'Choose a dataset from the library, review its source terms, then open its download and construction tools.'}</p><div className="button-row">{targets.map(target=><button key={target.key} disabled={!!opening} onClick={()=>void open(target)}>{target.title}</button>)}</div></div>}
       {dataset&&!family&&!groups.length&&(displayed.length?<div className="dataset-summary">{displayed.map(target=><button key={target.key} disabled={!!opening||loading} onClick={()=>void open(target)}>Open source package</button>)}</div>:<p className="empty-library">Open the source data tools to acquire its files and build a local atlas.</p>)}
-      <p className="home-evidence-note">Each atlas retains its source definitions and native space. Available content includes measured images, source labels and computational or author-defined models.</p>
+      <p className="home-evidence-note">Atlases retain their original definitions and coordinates.</p>
     </section>
     <aside className="dataset-sidebar" aria-label="Dataset deployment">
-      <h2>Datasets</h2><p>Sources in your local library</p>
+      <div className="manager-heading"><h2>Datasets</h2>{workspace&&<button disabled={loading||!!opening} onClick={()=>setReload(value=>value+1)}>Refresh</button>}</div>
       <label className="dataset-search">Find a dataset<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Name or source ID"/></label>
       <label className="check-control"><input type="checkbox" checked={readyOnly} onChange={event=>setReadyOnly(event.target.checked)}/>Ready atlases only</label>
       <p className="small muted" role="status">{filteredFamilies.length} of {families.length} datasets</p>

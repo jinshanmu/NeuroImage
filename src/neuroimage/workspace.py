@@ -12,6 +12,7 @@ import signal
 import subprocess
 import sys
 import threading
+import time
 import traceback
 from typing import Literal
 import uuid
@@ -90,6 +91,8 @@ class Workspace:
         self._closed = False
         self.register_package = None
         self.jobs = {}
+        self._browse_cache = None
+        self._browse_lock = threading.Lock()
         try:
             config = self.state_root / "workspace.json"
             if config.exists() and load_small_json(config).get("data_root") != str(self.data_root):
@@ -114,6 +117,33 @@ class Workspace:
         except BaseException:
             self._lease.close()
             raise
+
+    def browse(self, *, refresh=False):
+        """Bounded home-page discovery; opening still validates every asset."""
+        with self._browse_lock:
+            with self._lock:
+                revision = (len(self.jobs), self._active_id)
+            cached = self._browse_cache
+            if not refresh and cached and cached[0] == revision and time.monotonic() - cached[1] < 30:
+                return json.loads(cached[2])
+            sources = []
+            for name in recipe_names():
+                recipe = load_recipe(name)
+                sources.append({"id": name, "title": recipe["title"], "sources": recipe["sources"],
+                    "inputs_required": len(recipe["inputs"]),
+                    "inputs_present": sum(destination(self.data_root, p).is_file() for p in recipe["inputs"].values())})
+            records = []
+            for record in library_records(self.data_root):
+                if record.get("status") != "available":
+                    continue
+                manifest = load_small_json(record["manifest"], BINDING_BYTES_LIMIT)
+                records.append({key: record[key] for key in ("dataset_id", "title", "package_version", "created_utc", "representation", "status")})
+                records[-1].update(key=package_key(record),
+                    coverage=source_coverage(record["dataset_id"], manifest["structures"]),
+                    detail_coverage=source_details(record["dataset_id"], manifest["structures"]))
+            value = {"sources": sources, "packages": records, "active_job": revision[1]}
+            self._browse_cache = (revision, time.monotonic(), json.dumps(value))
+            return value
 
     def catalog(self, *, jobs_offset=0):
         from .course_plans import plan_catalog

@@ -23,8 +23,10 @@ def validate_package(path, *, verify_hashes=True, verify_geometry=True, cache_po
         resolved = (root / asset.path).resolve()
         if not resolved.is_relative_to(root) or not resolved.is_file():
             raise ValueError(f"Missing or escaping package asset: {asset.path}")
-        with resolved.open("rb") as stream:
-            digest = hashlib.file_digest(stream, "sha256").hexdigest() if verify_hashes else asset.sha256
+        digest = asset.sha256
+        if verify_hashes:
+            with resolved.open("rb") as stream:
+                digest = hashlib.file_digest(stream, "sha256").hexdigest()
         if resolved.stat().st_size != asset.bytes or digest != asset.sha256:
             raise ValueError(f"Package asset checksum/size mismatch: {asset.path}")
     manifest_sha256 = hashlib.sha256(serialized).hexdigest()

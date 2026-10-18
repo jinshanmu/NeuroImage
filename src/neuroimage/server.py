@@ -171,6 +171,11 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 try:
                     if route == "/api/workspace/session":
                         self.json_response({"session_token": token}, head=head)
+                    elif route == "/api/workspace/browse":
+                        query = parse_qs(urlsplit(self.path).query, keep_blank_values=True)
+                        if query and query != {"refresh": ["1"]}:
+                            raise ValueError("Use refresh=1 to refresh local source discovery")
+                        self.json_response({**workspace.browse(refresh=bool(query)), "session_token": token}, head=head)
                     elif route == "/api/workspace":
                         query = parse_qs(urlsplit(self.path).query, keep_blank_values=True)
                         if set(query) - {"jobs_offset"} or any(len(values) != 1 for values in query.values()):
@@ -229,7 +234,18 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 self.send_error(404, "Not an exposed package asset")
                 return
             mime = "application/octet-stream" if file.name.endswith((".nii.gz", ".gii")) else (mimetypes.guess_type(file)[0] or "application/octet-stream")
-            self.headers_for(200, file.stat().st_size, mime)
+            stat = file.stat()
+            # Revalidate local assets without retransmitting unchanged images or
+            # geometry. Metadata includes ctime so replacement is detected even
+            # when a caller preserves the original file size and mtime.
+            etag = f'"{stat.st_ino:x}-{stat.st_size:x}-{stat.st_mtime_ns:x}-{stat.st_ctime_ns:x}"'
+            cache = "private, max-age=31536000, immutable" if route.startswith("/assets/") else "private, no-cache"
+            matched = self.headers.get("If-None-Match", "").split(",")
+            unchanged = any(value.strip().removeprefix("W/") in (etag, "*") for value in matched)
+            self.headers_for(304 if unchanged else 200, None if unchanged else stat.st_size, mime,
+                             extra={"ETag": etag, "Cache-Control": cache})
+            if unchanged:
+                return
             if not head:
                 try:
                     with file.open("rb") as stream:
@@ -237,11 +253,15 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 except (BrokenPipeError, ConnectionResetError):
                     pass
 
-        def headers_for(self, code, length, mime):
+        def headers_for(self, code, length, mime, *, extra=None):
             self.send_response(code)
             self.send_header("Content-Type", mime)
-            self.send_header("Content-Length", str(length))
-            self.send_header("Cache-Control", "no-cache")
+            if length is not None:
+                self.send_header("Content-Length", str(length))
+            self.send_header("Cache-Control", (extra or {}).get("Cache-Control", "no-store"))
+            for key, value in (extra or {}).items():
+                if key != "Cache-Control":
+                    self.send_header(key, value)
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Referrer-Policy", "no-referrer")
             self.send_header("Content-Security-Policy", "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'")
