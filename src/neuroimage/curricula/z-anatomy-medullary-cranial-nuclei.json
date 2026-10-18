@@ -39,14 +39,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Inferior salivatory nucleus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Inferior salivatory nucleus.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:2ffead6d2d6e": 0.45,
@@ -100,14 +100,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Inferior salivatory nucleus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Inferior salivatory nucleus.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -161,14 +161,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Nucleus ambiguus.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus ambiguus.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -222,14 +222,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Nucleus ambiguus.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus ambiguus.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -283,14 +283,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Nucleus of hypoglossal nerve.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of hypoglossal nerve.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -344,14 +344,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Nucleus of hypoglossal nerve.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of hypoglossal nerve.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -405,14 +405,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Nucleus of solitary tract.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The original source uses an edge-based nuclear object with its own Skin and Subdivision modifiers; the pinned author viewport evaluation defines the displayed surface.",
+      "note": "Original source object: Nucleus of solitary tract.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -466,14 +466,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Nucleus of solitary tract.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity. The original source uses an edge-based nuclear object with its own Skin and Subdivision modifiers; the pinned author viewport evaluation defines the displayed surface.",
+      "note": "Original source object: Nucleus of solitary tract.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -527,14 +527,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Posterior nucleus of vagus nerve.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Posterior nucleus of vagus nerve.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,
@@ -588,14 +588,14 @@
         "z_anatomy:object:0b6e15b7e8f7"
       ],
       "prompt": "Inspect the named source nuclear models in medullary and nerve context. Read each original definition before discussing its relative position.",
-      "note": "Original source object: Posterior nucleus of vagus nerve.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Posterior nucleus of vagus nerve.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          9.0
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:16db91d70f1a": 0.45,

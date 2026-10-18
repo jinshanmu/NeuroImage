@@ -37,14 +37,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Accessory nucleus of oculomotor nerve.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Accessory nucleus of oculomotor nerve.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd439599093f": 0.45,
@@ -94,14 +94,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Accessory nucleus of oculomotor nerve.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Accessory nucleus of oculomotor nerve.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd78105c681f": 0.45,
@@ -151,14 +151,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Nucleus of oculomotor nerve.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of oculomotor nerve.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd78105c681f": 0.45,
@@ -208,14 +208,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Nucleus of oculomotor nerve.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of oculomotor nerve.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd78105c681f": 0.45,
@@ -265,14 +265,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Nucleus of trochlear nerve.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of trochlear nerve.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd78105c681f": 0.45,
@@ -322,14 +322,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Nucleus of trochlear nerve.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of trochlear nerve.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd78105c681f": 0.45,
@@ -379,14 +379,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Nucleus of abducens nerve.l. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of abducens nerve.l. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd78105c681f": 0.45,
@@ -436,14 +436,14 @@
         "z_anatomy:object:38427a5d68d8"
       ],
       "prompt": "Distinguish the separately named nuclear objects from the visible nerve models and compare their positions within the source midbrain and pontine context.",
-      "note": "Original source object: Nucleus of abducens nerve.r. Original educational model in independent source XYZ coordinates. No MRI correspondence, quantitative anatomical shape claim, new fiber connection or independent expert anatomy adjudication is asserted. Original author-defined educational surface. A source nuclear or pathway model does not establish microscopic boundaries, cell groups or axonal connectivity.",
+      "note": "Original source object: Nucleus of abducens nerve.r. Author-created educational model in native XYZ coordinates. The view is centered on the selected nuclear model. Rotate it and adjust the surrounding structures to examine its source-defined relationships. Source definitions and attribution are available in Sources.",
       "display": {
         "camera": [
           210,
           15,
-          1.1
+          2.8
         ],
-        "center_on_target": false,
+        "center_on_target": true,
         "opacity": 1,
         "surface_opacity": {
           "z_anatomy:object:fd78105c681f": 0.45,
