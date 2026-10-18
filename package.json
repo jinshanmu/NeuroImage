@@ -9,15 +9,10 @@
     "node": ">=24 <25"
   },
   "dependencies": {
-    "@cornerstonejs/core": "5.11.7",
-    "@cornerstonejs/dicom-image-loader": "5.11.7",
-    "@cornerstonejs/tools": "5.11.7",
-    "@kitware/vtk.js": "36.4.1",
     "@niivue/niivue": "0.69.0",
     "fflate": "0.8.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0",
-    "zustand": "5.0.15"
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
     "@types/node": "24.19.2",
@@ -30,9 +25,7 @@
     "vitest": "5.0.3"
   },
   "overrides": {
-    "fflate": "0.8.3",
-    "adm-zip": "0.6.1",
-    "uuid": "14.0.3"
+    "fflate": "0.8.3"
   },
   "scripts": {
     "dev": "node node_modules/vite/bin/vite.js",

@@ -10,6 +10,7 @@
 - Restore exact local atlas bookmarks after service restart; keep page-based scrolling and complete wrapping labels.
 - Simplify functional labels and remove decorative slogans.
 - Add a resumable Linux installer, pinned runtime bootstrap, source-aware diagnostics, acquisition/construction quickstart, portable storage profile and a complete dataset access table.
+- Remove unused frontend frameworks and their dependencies; retain the four runtime packages used by the application and keep their locked versions unchanged.
 - Update citation, installation, contribution, privacy, security and maintenance documentation for a code-only release. Publication remains pending final author review.
 
 ## 0.15.0rc2 — detailed normal anatomy, prepared for review, 2026-10-15
