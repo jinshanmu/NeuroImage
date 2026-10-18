@@ -19,7 +19,7 @@ async page => {
   // This point was inspected on the full-source fixture at 1600 x 1050.
   await page.locator('.model-canvas-shell canvas').dblclick({position:{x:691,y:362}});await ready();
   assert(await page.locator('.model-coordinate-bar').innerText()!==before,'Real surface picking did not update the native point.');
-  await page.getByRole('button',{name:'Notes, lessons and sources',exact:true}).click();
+  await page.getByRole('button',{name:'Learning tools',exact:true}).click();
   await page.getByRole('textbox',{name:'Model teaching notes',exact:true}).fill('Engineering fixture: independent source model pose and attribution.');
   await page.getByRole('textbox',{name:'New model marker',exact:true}).fill('Retained native surface point.');
   await page.getByRole('button',{name:'Add marker at cursor',exact:true}).click();await ready();
@@ -46,10 +46,10 @@ async page => {
   await page.reload();await open();
   await page.getByLabel('Import model scene file',{exact:true}).setInputFiles('output/playwright/native-model-scene.json');await ready();
   await canvas.screenshot({path:'output/playwright/model-scene-imported.png'});
-  await page.getByRole('button',{name:'Notes, lessons and sources',exact:true}).click();
+  await page.getByRole('button',{name:'Learning tools',exact:true}).click();
   assert(await page.getByRole('textbox',{name:'Model teaching notes',exact:true}).inputValue()===saved.state.note,'Portable scene lost the note.');
   assert((await page.locator('.model-tools .annotation').count())===1,'Portable scene lost the native marker.');
-  await page.getByRole('button',{name:'Lessons',exact:true}).click();
+  await page.getByRole('button',{name:'Learn',exact:true}).click();
   const firstLesson=await page.getByRole('combobox',{name:'Model lesson',exact:true}).locator('option').nth(1).getAttribute('value');
   await page.getByRole('combobox',{name:'Model lesson',exact:true}).selectOption(firstLesson);await ready();
   await page.getByRole('textbox',{name:'Model lesson response',exact:true}).fill('Compare the source-defined arterial branches.');

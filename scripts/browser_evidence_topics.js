@@ -17,7 +17,7 @@ async page => {
   await page.getByRole('combobox',{name:'Source for Cranial nerves',exact:true}).selectOption('z_anatomy');
   await page.getByRole('button',{name:'Browse Cranial nerves',exact:true}).click();
   await page.waitForFunction(()=>document.querySelector('.model-status')?.textContent?.startsWith('Ready'),null,{timeout:60000});
-  await page.getByRole('button',{name:'Notes, lessons and sources',exact:true}).click();await page.getByRole('button',{name:'Lessons',exact:true}).click();
+  await page.getByRole('button',{name:'Learning tools',exact:true}).click();await page.getByRole('button',{name:'Learn',exact:true}).click();
   await page.locator('.teaching-evidence-topics > summary').click();
   assert(await page.getByRole('region',{name:'Cranial nerve names and supplied extents',exact:true}).count()===1,'Independent model lacks nerve extent discussion.');
   assert(await page.getByRole('region',{name:'Skull openings and source resolution',exact:true}).count()===1,'Independent model lacks bone opening discussion.');

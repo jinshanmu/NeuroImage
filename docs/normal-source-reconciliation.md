@@ -38,7 +38,7 @@ Rhoton remains deferred by the owner. Removed TCIA and MSD disease acquisitions 
 
 ## Teaching coverage and evidence
 
-The secondary **Learn** or **Lessons** panel contains six source-matched discussion topics, with questions, reasoning and primary references. They cover cisternal boundaries, normal variation, nerve extents, skull openings, vascular representations and reconstructed image grids. The catalog is `src/neuroimage/catalogs/teaching-evidence.json`. All text is English and topic IDs are stable.
+The secondary **Learn** panel contains six source-matched discussion topics, with questions, reasoning and primary references. They cover cisternal boundaries, normal variation, nerve extents, skull openings, vascular representations and reconstructed image grids. The catalog is `src/neuroimage/catalogs/teaching-evidence.json`. All text is English and topic IDs are stable.
 
 The [primary membrane study by Lü and Zhu](https://doi.org/10.1002/ca.20448) examined adult cadaveric brains microscopically. Its bibliographic abstract was inspected and archived; copyrighted figures and membrane geometry are not incorporated. A source image annotation locates a regional observation, while a named membrane or boundary requires its own evidence. Dural models and generic CSF classes are not substituted for arachnoid membranes.
 

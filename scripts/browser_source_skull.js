@@ -21,7 +21,7 @@ async page => {
   const key = await page.getByRole('combobox', {name: 'Source', exact: true}).inputValue();
   const bookKey = 'neuroimage:model-notebook:primary:' + key + ':skull-base-context';
   assert(!await page.evaluate(k => localStorage.getItem(k), bookKey), 'Preserve an existing source notebook before this first-run fixture.');
-  await page.getByRole('checkbox', {name: 'Highlight selected in cyan', exact: true}).uncheck();
+  await page.getByRole('checkbox', {name: 'Highlight selected', exact: true}).uncheck();
   await page.getByRole('button', {name: 'Full model view', exact: true}).click();
   await ready();
   const canvas = page.getByLabel('Independent native source model', {exact: true});
@@ -32,7 +32,7 @@ async page => {
   };
   await canvas.screenshot({path: output + '/full-model.png'});
   await exportView('full-model');
-  await page.getByRole('button', {name: 'Notes, lessons and sources', exact: true}).click();
+  await page.getByRole('button', {name: 'Learning tools', exact: true}).click();
   await page.getByRole('textbox', {name: 'Model teaching notes', exact: true}).fill('Original author-cleaned A0101 surface. Source cleanup is documented; no project surface repair or fine foraminal labels.');
   await page.getByRole('button', {name: 'Lessons', exact: true}).click();
   await page.getByRole('combobox', {name: 'Model lesson', exact: true}).selectOption('NI-SKM001');
@@ -69,7 +69,7 @@ async page => {
   await page.getByLabel('Import model scene file', {exact: true}).setInputFiles(output + '/cutaway-scene.json');
   await ready();
   await canvas.screenshot({path: output + '/cutaway-imported.png'});
-  await page.getByRole('button', {name: 'Notes, lessons and sources', exact: true}).click();
+  await page.getByRole('button', {name: 'Learning tools', exact: true}).click();
   await page.getByRole('button', {name: 'Lessons', exact: true}).click();
   await page.getByText('My model notebook', {exact: false}).click();
   await page.getByRole('textbox', {name: 'Model notebook prompt', exact: true}).fill('Inspect the native display cutaway. It creates no filled cap, new bone boundary or named foraminal label.');

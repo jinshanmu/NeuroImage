@@ -5,9 +5,9 @@ async page => {
   await page.goto(origin);await page.waitForFunction(()=>!document.querySelector('[aria-label="Browse Arteries and veins"]')?.disabled);
   await page.getByRole('combobox',{name:'Source for Arteries and veins',exact:true}).selectOption('z_anatomy');
   await page.getByRole('button',{name:'Browse Arteries and veins',exact:true}).click();await ready();
-  const toggle=page.getByRole('checkbox',{name:'Highlight selected in cyan',exact:true});
+  const toggle=page.getByRole('checkbox',{name:'Highlight selected',exact:true});
   assert(await toggle.isChecked(),'New model view does not highlight selection.');
-  await page.getByRole('button',{name:'Notes, lessons and sources',exact:true}).click();await page.getByRole('button',{name:'Lessons',exact:true}).click();
+  await page.getByRole('button',{name:'Learning tools',exact:true}).click();await page.getByRole('button',{name:'Learn',exact:true}).click();
   await page.getByRole('combobox',{name:'Model lesson',exact:true}).selectOption('NI-Z102');await ready();
   await page.getByRole('button',{name:'Next structure',exact:true}).click();await ready();
   const canvas=page.getByLabel('Independent native source model',{exact:true});

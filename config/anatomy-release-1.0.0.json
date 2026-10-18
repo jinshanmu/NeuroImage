@@ -6,7 +6,7 @@
   "upstream_source_families": 19,
   "source_specific_structures": 1965,
   "builtin_sequences": 193,
-  "source_annotations": 0,
+  "source_annotations": 18,
   "detailed_topics": 46,
   "curricula_count": 90,
   "curriculum_views": 796,
@@ -401,7 +401,7 @@
       "representation": "surface-model",
       "structures": 350,
       "builtin_sequences": 41,
-      "source_annotations": 0
+      "source_annotations": 18
     }
   ],
   "curricula": [
@@ -1043,5 +1043,6 @@
       "views": 18,
       "sources": 1
     }
-  ]
+  ],
+  "source_annotation_views": 36
 }

@@ -15,7 +15,7 @@ async page => {
     await page.setViewportSize({width,height:1000});await ready();
     await inspect('ordinary');
     const model=await page.locator('.model-workspace').count();
-    for(const name of ['Structure library',model?'Notes, lessons and sources':'Learning tools']){
+    for(const name of ['Structure library',model?'Learning tools':'Learning tools']){
       await page.getByRole('button',{name,exact:true}).click();await ready();await inspect(name);
       if(model)await page.locator(name==='Structure library'?'.model-library':'.model-tools').getByRole('button',{name:'Close',exact:true}).click();
       else await page.getByRole('button',{name:name==='Structure library'?'Close structure library':'Close learning tools',exact:true}).click();

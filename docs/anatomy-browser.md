@@ -22,7 +22,7 @@ Search and select source objects, show or hide them, add brainstem context, isol
 
 New model views highlight the selected object in cyan so it remains identifiable among similarly colored branches. **Highlight selected in cyan** restores the original source color when disabled. This display setting is saved with scenes and explained in teaching image captions. Older scenes without the setting retain their original colors.
 
-Use **Notes, lessons and sources** for location markers, guided source sequences, written responses, source geometry and attribution. Save scenes in the browser or export portable scene files. A model notebook stores multiple source-bound views, prompts and learning responses. Import validates the exact package, native coordinate representation, structure IDs and display settings.
+Use **Learning tools** for location markers, guided source sequences, written responses, source geometry and attribution. Save scenes in the browser or export portable scene files. A model notebook stores multiple source-bound views, prompts and learning responses. Import validates the exact package, native coordinate representation, structure IDs and display settings.
 
 The secondary learning panel also offers **Observation and interpretation**. These source-matched discussions distinguish image observations, source models, population fields and unsupported boundaries or variants. Expand **Compare reasoning** and **References** while discussing a view; they do not add labels to its geometry. The [source reconciliation guide](normal-source-reconciliation.md) records the delivered coverage and concrete follow-up work.
 

@@ -93,6 +93,8 @@ class Workspace:
         self.jobs = {}
         self._browse_cache = None
         self._browse_lock = threading.Lock()
+        self._package_cache = None
+        self._package_lock = threading.Lock()
         try:
             config = self.state_root / "workspace.json"
             if config.exists() and load_small_json(config).get("data_root") != str(self.data_root):
@@ -118,6 +120,18 @@ class Workspace:
             self._lease.close()
             raise
 
+    def package_records(self, *, refresh=False):
+        """Reuse discovery briefly; package activation performs full validation."""
+        with self._lock:
+            revision = (len(self.jobs), self._active_id)
+        with self._package_lock:
+            cached = self._package_cache
+            if not refresh and cached and cached[0] == revision and time.monotonic() - cached[1] < 30:
+                return json.loads(cached[2])
+            records = library_records(self.data_root)
+            self._package_cache = (revision, time.monotonic(), json.dumps(records))
+            return records
+
     def browse(self, *, refresh=False):
         """Bounded home-page discovery; opening still validates every asset."""
         with self._browse_lock:
@@ -133,7 +147,7 @@ class Workspace:
                     "inputs_required": len(recipe["inputs"]),
                     "inputs_present": sum(destination(self.data_root, p).is_file() for p in recipe["inputs"].values())})
             records = []
-            for record in library_records(self.data_root):
+            for record in self.package_records(refresh=refresh):
                 if record.get("status") != "available":
                     continue
                 manifest = load_small_json(record["manifest"], BINDING_BYTES_LIMIT)
@@ -169,7 +183,7 @@ class Workspace:
             book_recipes[name] = recipe
             books.append({"id": name, "dataset_id": recipe["dataset_id"], "title": recipe["title"],
                           "scenes": len(recipe["scenes"]), "review_status": recipe["review_status"]})
-        records = library_records(self.data_root)
+        records = self.package_records()
         for record in records:
             if record.get("status") == "available":
                 record["key"] = package_key(record)
@@ -214,7 +228,7 @@ class Workspace:
             resolve_packages(read_plan(plan_path(request["course_plan"])), request["package_keys"], self.data_root)
             capacity(self.data_root, 128 * 1024 ** 2, self.data_floor_gib)
         else:
-            matches = [r for r in library_records(self.data_root) if r.get("status") == "available" and package_key(r) == request["package_key"]]
+            matches = [r for r in self.package_records() if r.get("status") == "available" and package_key(r) == request["package_key"]]
             if len(matches) != 1:
                 raise ValueError("Choose exactly one available local atlas version")
             request["manifest"] = matches[0]["manifest"]

@@ -8,7 +8,7 @@ async page => {
   const key=await page.getByRole('combobox',{name:'Source',exact:true}).inputValue();
   const source=await page.evaluate(async key=>{const atlas=(await(await fetch('/api/atlases')).json()).atlases.find(a=>a.key===key);const manifest=await(await fetch(atlas.manifest_url)).json();const lessons=(await(await fetch(atlas.base_url+manifest.lessons_file)).json()).lessons;return {manifest,lessons}},key);
   assert(source.lessons.length===14,'Named model paths were not delivered.');
-  await page.getByRole('button',{name:'Notes, lessons and sources',exact:true}).click();await page.getByRole('button',{name:'Lessons',exact:true}).click();
+  await page.getByRole('button',{name:'Learning tools',exact:true}).click();await page.getByRole('button',{name:'Learn',exact:true}).click();
   const storage='neuroimage:model:primary:'+key+':vascular-anatomy',records=[];
   for(const id of ['NI-Z101','NI-Z102','NI-Z103','NI-Z201','NI-Z301','NI-Z302','NI-Z401','NI-Z402']){
     const lesson=source.lessons.find(l=>l.id===id);

@@ -10,6 +10,9 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 from .acquire import capacity, destination
 from .build import atomic_json, build_lock, sha256, utc_now
 from .library import BINDING_BYTES_LIMIT, binding_from_content, library_records, locate_binding
+from .metadata_cache import SummaryCache
+
+_summaries = SummaryCache()
 
 
 class CourseRecord(BaseModel):
@@ -119,6 +122,15 @@ def save_course(value, data_root, *, expected_revision=None, minimum_free_gib=40
     return {"course": course, "revision": digest, "status": "saved"}
 
 
+def _summary(path):
+    course, revision = _read(path)
+    if course["id"] != path.parent.name:
+        raise ValueError("Course file identity differs from its directory")
+    sources = {entry["scene"]["package_id"] for entry in course["entries"]}
+    return {key: course[key] for key in ["id", "title", "author", "objective", "updated_utc"]} | {
+        "revision": revision, "views": len(course["entries"]), "source_count": len(sources)}
+
+
 def course_records(data_root):
     root = Path(data_root).resolve()
     folder = destination(root, "exports/courses")
@@ -127,18 +139,13 @@ def course_records(data_root):
         try:
             if path != _path(root, path.parent.name):
                 raise ValueError("Course path differs from its saved identity")
-            course, revision = _read(path)
-            if course["id"] != path.parent.name:
-                raise ValueError("Course file identity differs from its directory")
-            sources = {entry["scene"]["package_id"] for entry in course["entries"]}
-            result.append({key: course[key] for key in ["id", "title", "author", "objective", "updated_utc"]} |
-                          {"revision": revision, "views": len(course["entries"]), "source_count": len(sources)})
+            result.append(_summaries.read(path, _summary))
         except (OSError, ValueError):
             skipped += 1
     return {"courses": sorted(result, key=lambda item: (item["title"].casefold(), item["id"])), "skipped_files": skipped}
 
 
-def get_course(data_root, identity, *, inspect_sources=True):
+def get_course(data_root, identity, *, inspect_sources=True, packages=None):
     path = _path(data_root, identity)
     course, revision = _read(path)
     if course["id"] != identity:
@@ -152,7 +159,7 @@ def get_course(data_root, identity, *, inspect_sources=True):
         except (ValueError, KeyError, TypeError):
             pass
     if inspect_sources:
-        packages = library_records(data_root)
+        packages = library_records(data_root) if packages is None else packages
         locations = []
         for entry in course["entries"]:
             binding = binding_from_content(entry["scene"])
@@ -167,7 +174,7 @@ def get_course(data_root, identity, *, inspect_sources=True):
     return result
 
 
-def open_course_entry(data_root, identity, entry_id, revision, register_package, *, persist_position=True):
+def open_course_entry(data_root, identity, entry_id, revision, register_package, *, persist_position=True, packages=None):
     saved = get_course(data_root, identity, inspect_sources=False)
     if saved["revision"] != revision:
         raise ValueError("The saved course has changed. Reopen it to present the current revision")
@@ -175,7 +182,7 @@ def open_course_entry(data_root, identity, entry_id, revision, register_package,
     entry = next((entry for entry in entries if entry["id"] == entry_id), None)
     if entry is None:
         raise ValueError("Choose an existing view in this course")
-    match = locate_binding(binding_from_content(entry["scene"]), library_records(data_root))
+    match = locate_binding(binding_from_content(entry["scene"]), library_records(data_root) if packages is None else packages)
     key = register_package(match["manifest"])
     path = _path(data_root, identity)
     with build_lock(path.parent / ".course.lock"):

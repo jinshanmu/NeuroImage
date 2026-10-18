@@ -174,7 +174,8 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                         raise ValueError("Choose a saved course view and revision")
                     identity, operation = route.removeprefix("/api/workspace/courses/").rsplit("/", 1)
                     result = open_course_entry(workspace.data_root, identity,
-                        body["entry_id"], body["revision"], register_package, persist_position=operation == "open")
+                        body["entry_id"], body["revision"], register_package, persist_position=operation == "open",
+                        packages=workspace.package_records())
                 elif route.startswith("/api/workspace/jobs/") and route.endswith("/cancel") and body == {}:
                     result = workspace.cancel(route.removeprefix("/api/workspace/jobs/").removesuffix("/cancel"))
                 else:
@@ -208,10 +209,9 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                             raise ValueError("Use refresh=1 to refresh local source discovery")
                         self.json_response({**workspace.browse(refresh=bool(query)), "session_token": token}, head=head)
                     elif route.startswith("/api/workspace/atlases/"):
-                        from .library import library_records
                         from .workspace import package_key
                         key = route.removeprefix("/api/workspace/atlases/")
-                        matches = [record for record in library_records(workspace.data_root)
+                        matches = [record for record in workspace.package_records()
                                    if record.get("status") == "available" and package_key(record) == key]
                         if len(matches) != 1:
                             raise ValueError("The bookmarked source package is unavailable. Open its dataset to build or recover that exact version.")
@@ -238,18 +238,21 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                         self.json_response(course_records(workspace.data_root), head=head)
                     elif route.startswith("/api/workspace/courses/"):
                         from .courses import get_course
-                        self.json_response(get_course(workspace.data_root, route.removeprefix("/api/workspace/courses/")), head=head)
+                        self.json_response(get_course(workspace.data_root, route.removeprefix("/api/workspace/courses/"),
+                                                       packages=workspace.package_records()), head=head)
                     elif route == "/api/workspace/teaching":
                         from .content_library import teaching_records
                         query = parse_qs(urlsplit(self.path).query, keep_blank_values=True)
-                        if set(query) - {"q", "dataset"} or any(len(values) != 1 for values in query.values()):
+                        if (set(query) - {"q", "dataset", "refresh"} or any(len(values) != 1 for values in query.values())
+                                or "refresh" in query and query["refresh"] != ["1"]):
                             raise ValueError("Use one teaching query and optional source filter")
                         self.json_response(teaching_records(workspace.data_root, query=query.get("q", [""])[0],
-                                                           dataset=query.get("dataset", [""])[0]), head=head)
+                            dataset=query.get("dataset", [""])[0], packages=workspace.package_records(refresh="refresh" in query)), head=head)
                     elif route.startswith("/api/workspace/teaching/"):
                         from .content_library import open_teaching
                         self.json_response(open_teaching(workspace.data_root,
-                            route.removeprefix("/api/workspace/teaching/"), register_package), head=head)
+                            route.removeprefix("/api/workspace/teaching/"), register_package,
+                            packages=workspace.package_records()), head=head)
                     else:
                         self.json_response({"error": "Unknown workspace resource"}, status=404, head=head)
                 except (BrokenPipeError, ConnectionResetError):

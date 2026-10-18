@@ -6,8 +6,10 @@ import json
 from .acquire import capacity, destination
 from .build import atomic_json, build_lock, sha256
 from .library import BINDING_BYTES_LIMIT, binding_from_content, library_records, locate_binding
+from .metadata_cache import SummaryCache
 
 CONTENT_PATTERNS = ("*/notebooks/*/prepared-notebook.json", "*/teaching/*/content.json")
+_summaries = SummaryCache()
 
 
 def read_content(path):
@@ -34,23 +36,28 @@ def _paths(root):
                 yield path
 
 
-def teaching_records(data_root, *, query="", dataset=""):
+def _summary(path):
+    content, binding, digest = read_content(path)
+    return {"key": digest, "kind": binding["kind"], "title": str(content.get("title", "Saved teaching"))[:200],
+            "author": str(content.get("author", ""))[:200], "objective": str(content.get("objective", ""))[:2000],
+            "views": len(content["scenes"]) if binding["kind"] == "neuroimage-teaching-notebook" else 1,
+            "binding": binding, "bytes": path.stat().st_size}
+
+
+def teaching_records(data_root, *, query="", dataset="", packages=None):
     root = Path(data_root).resolve()
     if not isinstance(query, str) or len(query) > 200 or not isinstance(dataset, str) or len(dataset) > 100:
         raise ValueError("Use a teaching query of up to 200 characters and an optional source ID")
-    packages = library_records(root)
+    packages = library_records(root) if packages is None else packages
     records, skipped, seen = [], 0, set()
     for path in sorted(_paths(root)):
         try:
-            content, binding, digest = read_content(path)
+            entry = _summaries.read(path, _summary)
+            binding, digest = entry["binding"], entry["key"]
             if digest in seen:
                 continue
             seen.add(digest)
-            entry = {"key": digest, "kind": binding["kind"], "title": str(content.get("title", "Saved teaching"))[:200],
-                "author": str(content.get("author", ""))[:200], "objective": str(content.get("objective", ""))[:2000],
-                "views": len(content["scenes"]) if binding["kind"] == "neuroimage-teaching-notebook" else 1,
-                "binding": binding, "relative_path": path.relative_to(root).as_posix(),
-                "bytes": path.stat().st_size, "status": "ready", "dataset_id": binding["package_id"]}
+            entry.update(relative_path=path.relative_to(root).as_posix(), status="ready", dataset_id=binding["package_id"])
             try:
                 match = locate_binding(binding, packages)
                 record = next(item for item in packages if item.get("manifest") == match["manifest"])
@@ -68,18 +75,20 @@ def teaching_records(data_root, *, query="", dataset=""):
             "scope": "Prepared and explicitly imported teaching files; exact source package versions are retained"}
 
 
-def open_teaching(data_root, key, register_package):
+def open_teaching(data_root, key, register_package, *, packages=None):
     if not isinstance(key, str) or len(key) != 64 or any(char not in "0123456789abcdef" for char in key):
         raise ValueError("Choose a teaching file from the local library")
     root = Path(data_root).resolve()
     for path in _paths(root):
         try:
+            if _summaries.read(path, _summary)["key"] != key:
+                continue
             content, binding, digest = read_content(path)
         except (OSError, ValueError):
             continue
         if digest != key:
             continue
-        match = locate_binding(binding, library_records(root))
+        match = locate_binding(binding, library_records(root) if packages is None else packages)
         atlas_key = register_package(match["manifest"])
         return {"atlas_key": atlas_key, "content": content, "content_key": digest}
     raise ValueError("Refresh the teaching library to locate this saved file")
