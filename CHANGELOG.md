@@ -2,6 +2,7 @@
 
 ## 0.15.0rc2 — detailed normal anatomy, prepared for review, 2026-10-15
 
+- Refine image and model notebook presentation on 2026-10-18: keep author metadata in the editor and exports, and present the lesson in a bordered card with wrapping text and controls.
 - Preserve the ten main anatomy groups and add 35 source-specific subordinate topics.
 - Connect those topics to all eleven selected NextBrain tissue blocks and all 64 HCP1065 probability fields. Fit visible surfaces when opening detailed image views and keep magnified 3D cursor guides thin.
 - Add native Dataset A inner-ear CT with original intensities, complete three-class labels, six recorded teaching views and explicit acquisition/calibration evidence.

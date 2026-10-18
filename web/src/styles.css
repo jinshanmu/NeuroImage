@@ -25,8 +25,11 @@
 .notebook-entry{border:1px solid #354b59;border-radius:6px;padding:10px;margin:14px 0}
 .teaching-notebook .button-row,.notebook-files{display:flex;gap:5px;flex-wrap:wrap}
 .notebook-message{color:#a6dbc8;font-size:11px;margin:10px 0}
-.notebook-presentation{padding:10px 0;font-size:12px;line-height:1.6}
-.notebook-presentation h3{font-size:15px;color:#d6eee7}
+.notebook-presentation{min-width:0;padding:14px;border:1px solid #354b59;border-radius:6px;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+.teaching-notebook .notebook-presentation h3{font-size:16px;color:#d6eee7}
+.notebook-presentation h3:first-child{margin-top:0}
+.notebook-presentation .button-row{display:flex;flex-wrap:wrap;gap:5px}
+.teaching-notebook .notebook-presentation button{max-width:100%;font-size:12px;white-space:normal;overflow-wrap:anywhere}
 .notebook-prompt{white-space:pre-wrap;border-left:2px solid #75bdaa;padding-left:10px}
 .display-controls{flex-wrap:wrap}
 .display-controls output{min-width:43px;font-size:10px;font-variant-numeric:tabular-nums;color:#b8dfd3}

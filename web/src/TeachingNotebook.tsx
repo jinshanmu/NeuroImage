@@ -110,13 +110,13 @@ export function TeachingNotebook({ manifest, lessons, ready, storageKey, drafts,
     <summary>Teaching notebook <span>{book.scenes.length} scenes{dirty ? ' · unsaved' : ''}</span></summary>
     {!presenting && <p className="muted">Arrange your own source-bound views for a class. Scenes retain coordinates, visibility, camera, notes and practice state. Save your own prompts alongside exact atlas scenes.</p>}
     {presenting && active ? <section className="notebook-presentation" aria-label="Notebook presentation">
-      <h3>{book.title}</h3>{book.author && <p className="small muted">{book.author}</p>}
+      <h3>{book.title}</h3>
       {book.objective && <p>{book.objective}</p>}
       <div className="lesson-progress">Scene {activeIndex + 1} of {book.scenes.length}</div>
       <h3>{active.title}</h3><p className="notebook-prompt">{active.prompt || 'Explore the recorded view and its teaching notes.'}</p>
       <div className="button-row"><button disabled={!ready || busy || activeIndex === 0} onClick={() => open(book.scenes[activeIndex - 1])}>Previous view</button><button disabled={!ready || busy || activeIndex === book.scenes.length - 1} onClick={() => open(book.scenes[activeIndex + 1])}>Next view</button></div>
-      <button disabled={!ready || busy} onClick={() => open(active)}>Return to recorded view</button>
-      <button onClick={() => setPresenting(false)}>Edit notebook</button>
+      <div className="button-row"><button disabled={!ready || busy} onClick={() => open(active)}>Return to recorded view</button>
+      <button onClick={() => setPresenting(false)}>Edit notebook</button></div>
     </section> : <button disabled={!ready || busy || !book.scenes.length} onClick={() => { open(active ?? book.scenes[0]); setPresenting(true) }}>Present notebook</button>}
     <div hidden={presenting}>
     <label>Notebook title<input aria-label="Notebook title" maxLength={120} value={book.title} disabled={busy} onChange={event => edit({ ...book, title: event.target.value })}/></label>

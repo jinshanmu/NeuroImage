@@ -44,10 +44,10 @@ export function ModelTeachingNotebook({manifest,lessons,ready,storageKey,drafts,
   return <details className="teaching-notebook" aria-label="Model teaching notebook editor" open={startPresenting||undefined}>
     <summary>My model notebook · {book.scenes.length} views{dirty?' · unsaved':''}</summary>
     {presenting&&active?<section className="notebook-presentation" aria-label="Model notebook presentation">
-      <h3>{book.title}</h3>{book.author&&<p className="small muted">{book.author}</p>}{book.objective&&<p>{book.objective}</p>}
+      <h3>{book.title}</h3>{book.objective&&<p>{book.objective}</p>}
       <div className="lesson-progress">View {activeIndex+1} of {book.scenes.length}</div><h3>{active.title}</h3><p className="notebook-prompt">{active.prompt||'Explore the recorded source model and its teaching notes.'}</p>
       <div className="button-row"><button disabled={!ready||busy||activeIndex===0} onClick={()=>open(book.scenes[activeIndex-1])}>Previous view</button><button disabled={!ready||busy||activeIndex===book.scenes.length-1} onClick={()=>open(book.scenes[activeIndex+1])}>Next view</button></div>
-      <button disabled={!ready||busy} onClick={()=>open(active)}>Return to recorded view</button><button onClick={()=>setPresenting(false)}>Edit notebook</button>
+      <div className="button-row"><button disabled={!ready||busy} onClick={()=>open(active)}>Return to recorded view</button><button onClick={()=>setPresenting(false)}>Edit notebook</button></div>
     </section>:<button disabled={!ready||busy||!book.scenes.length} onClick={()=>{open(active??book.scenes[0]);setPresenting(true)}}>Present notebook</button>}
     <div hidden={presenting}>
       <label>Notebook title<input aria-label="Model notebook title" maxLength={200} value={book.title} disabled={busy} onChange={event=>edit({...book,title:event.target.value})}/></label>

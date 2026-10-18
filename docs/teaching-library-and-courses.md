@@ -12,6 +12,8 @@ Use **Add teaching file** for a scene or notebook exported from the viewer. The 
 
 Search by topic, author or source, then choose **Open notebook** or **Open scene**. **Open in a new page** provides a bookmarkable teaching link. A model notebook supports native clipping, object visibility, camera, prompts, ordering, removal/undo, explicit browser save and portable export/import. Image notebooks retain their existing contrast, slice, camera, markers and practice controls. Unsaved notebook drafts survive navigation within the current page. Save or export a notebook before closing the browser.
 
+**Present notebook** displays the lesson title, objective, current prompt and navigation controls. Author information remains in the editor and exported notebook metadata. The presentation card follows the browser page width, wraps long text and buttons, and uses the page's scrolling area.
+
 ## Build a course across sources
 
 For a prepared starting sequence, use **Start from a course plan**. The first plan covers general intracranial anatomy. Choose the exact local package version for each listed source, then **Prepare course**. The operation verifies required source definitions, prepares reusable notebooks and saves the selected original scenes as a course. **Open prepared course** starts the recorded sequence. The organizer also lists the resulting course.
