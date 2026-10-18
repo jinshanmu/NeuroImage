@@ -7,8 +7,10 @@ async page => {
   if (!Array.isArray(entries)) throw Error('The local course is unavailable.')
   const pair = entries.flatMap((first, index) => entries.slice(index + 1).map(second => [first, second]))
     .find(([a, b]) => a.scene.package_id === b.scene.package_id && a.scene.package_version === b.scene.package_version &&
-      a.scene.state.kind === b.scene.state.kind && a.scene.state.background === b.scene.state.background)
-  if (!pair) throw Error('Choose a course with two views of the same source and background.')
+      a.scene.state.kind === b.scene.state.kind && a.scene.state.background === b.scene.state.background &&
+      new Set([...a.scene.state.visible, ...b.scene.state.visible]).size <=
+        (saved.locations?.find(location => location.id === a.id)?.representation === 'mri-streamlines' ? 6 : 32))
+  if (!pair) throw Error('Choose two same-source views whose combined surfaces fit the viewer cache.')
   const primary = page.getByRole('region', { name: 'Primary atlas workspace', exact: true })
   const selection = page.getByRole('combobox', { name: 'Course presentation view', exact: true })
   const errors = [], requests = [], timings = []
