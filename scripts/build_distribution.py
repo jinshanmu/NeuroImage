@@ -16,6 +16,7 @@ from audit_code_release import DATA_SUFFIXES
 
 ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED = {"data", "downloads", "raw", "derivatives", "benchmarks", "cache", "exports", "tools", "node_modules", ".internal", "__pycache__"}
+PRIVATE_TEST_FILES = {"neuroimage/demo.py", "tests/test_demo.py", "scripts/prepare_release_model_fixture.py", "TEST_BRANCH_README.txt"}
 
 
 def normalize_archive(path, epoch):
@@ -52,7 +53,8 @@ def audit_archive(path):
             if any(member.issym() or member.islnk() for member in archive.getmembers()):
                 raise ValueError("Software source archive must not contain symbolic or hard links")
             names = archive.getnames()
-    forbidden = [name for name in names if set(Path(name).parts) & EXCLUDED or name.lower().endswith(DATA_SUFFIXES)]
+    forbidden = [name for name in names if set(Path(name).parts) & EXCLUDED or name.lower().endswith(DATA_SUFFIXES)
+                 or any(name == private or name.endswith("/" + private) for private in PRIVATE_TEST_FILES)]
     if forbidden:
         raise ValueError(f"Acquired data or excluded build files found in {path.name}: {forbidden}")
     if not any(name.endswith("neuroimage/web/index.html") for name in names):

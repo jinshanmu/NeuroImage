@@ -23,7 +23,11 @@
   ],
   "exclude_files": [
     "config/storage.local.json",
-    ".env"
+    ".env",
+    "src/neuroimage/demo.py",
+    "tests/test_demo.py",
+    "scripts/prepare_release_model_fixture.py",
+    "TEST_BRANCH_README.txt"
   ],
   "data_export": "A separate user action requiring per-source permissions and provenance",
   "acquired_assets_in_software_release": 0,

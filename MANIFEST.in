@@ -107,3 +107,4 @@ prune node_modules
 prune web/node_modules
 prune src/neuroimage/__pycache__
 global-exclude __pycache__ *.py[cod] .DS_Store
+exclude src/neuroimage/demo.py tests/test_demo.py scripts/prepare_release_model_fixture.py TEST_BRANCH_README.txt
