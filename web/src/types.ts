@@ -53,10 +53,15 @@ export interface SurfaceCutaway {
   position_mm: number;
   structures: string[];
 }
+export interface SurfaceContext { enabled: boolean; opacity: number; structure_ids: string[] }
 export interface ViewState {
   selected: string | null; visible: string[]; position: Vec3; background: string;
   labelOpacity: number; meshOpacity: number; radiological: boolean; layout: 'quad' | 'anatomy' | 'axial' | 'coronal' | 'sagittal' | '3d';
   camera: [number, number, number]; pan: [number, number, number, number]; imageContext: boolean;
+  background2D?: boolean;
+  backgroundOpacity2D?: number;
+  backgroundOpacity3D?: number;
+  surfaceContext?: SurfaceContext;
   focus3D?: Vec3;
   fitVisible3D?: boolean;
   tileLayout?: 'auto' | 'grid' | 'row';

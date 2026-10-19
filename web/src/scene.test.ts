@@ -13,6 +13,31 @@ const manifest = {
 } satisfies Manifest
 
 describe('version-bound scenes', () => {
+  it.each(['ventricles', 'detail-ventricular-system'])('opens every structure in %s and keeps whole-brain entry complete', id => {
+    const source: Manifest = { ...manifest, structures: Array.from({ length: 24 }, (_, i) => ({
+      ...manifest.structures[0], id: `test:${i}`, name: `Source region ${i}`, label_value: i + 1,
+    })) }
+    const scope = {id,title:'Ventricles',structure_ids:source.structures.slice(3,21).map(s=>s.id)}
+    const state = initialState(source, scope)
+    expect(state.visible).toEqual(scope.structure_ids)
+    expect(state.selected).toBe('test:3')
+    expect(state.background2D).toBe(true)
+    expect(state.backgroundOpacity2D).toBe(1)
+    expect(state.imageContext).toBe(false)
+    expect(state.surfaceContext?.enabled ?? false).toBe(false)
+    expect(initialState(source, {...scope,id:'general-anatomy'}).visible).toHaveLength(24)
+    expect(initialState(source, {...scope,structure_ids:[]}).visible).toEqual([])
+  })
+  it('round trips independent background settings and validates source-bound context', () => {
+    const state = {...initialState(manifest), background2D:false, backgroundOpacity2D:.4, backgroundOpacity3D:.15,
+      surfaceContext:{enabled:true,opacity:.25,structure_ids:['test:11']}}
+    expect(readScene(makeScene(manifest,state),manifest).state).toEqual(state)
+    for (const change of [{background2D:'yes'},{backgroundOpacity2D:-.1},{backgroundOpacity3D:NaN},
+      {surfaceContext:{enabled:true,opacity:1.1,structure_ids:['test:11']}},
+      {surfaceContext:{enabled:true,opacity:.2,structure_ids:['other']}}]) {
+      expect(()=>readScene(makeScene(manifest,{...state,...change} as never),manifest)).toThrow('background')
+    }
+  })
   it('opens every source structure and preserves an explicitly saved subset', () => {
     const source: Manifest = { ...manifest, structures: Array.from({ length: 16 }, (_, i) => ({
       ...manifest.structures[0], id: `test:${i}`, name: `Source region ${i}`, label_value: i + 1,

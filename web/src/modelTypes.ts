@@ -1,4 +1,4 @@
-import type { Lesson, Source, SurfaceCutaway, Vec3 } from './types'
+import type { Lesson, Source, SurfaceContext, SurfaceCutaway, Vec3 } from './types'
 
 export interface ModelSurface {
   kind: 'model-surface'; id: string; name: string; source_name: string; category: string;
@@ -34,6 +34,7 @@ export interface ModelView {
   kind: 'source-model-view'; coordinate_system: 'SOURCE_XYZ'; selected: string | null; visible: string[];
   position_native_mm: Vec3; camera: Vec3; focus_native_mm: Vec3 | null; opacity: number;
   surfaceOpacity: Record<string, number>; surfaceCutaway?: SurfaceCutaway;
+  surfaceContext?: SurfaceContext;
   highlightSelected?: boolean;
   annotations: ModelAnnotation[]; showMarkers: boolean; note: string;
   lesson_id: string | null; lesson_step: number; lesson_answer: string; lesson_revealed: boolean;

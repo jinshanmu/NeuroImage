@@ -12,11 +12,14 @@ import { sectionPolygon } from './sectionPlanes'
 import { removedByCutaway } from './cutaway'
 import { depthSamplePixel, decodeSurfaceDepth } from './picking'
 import { refreshOverlayTextures, retainVolumeMetadata } from './volumeResources'
+import { BACKGROUND_COLOR, contextIds, contextOpacity } from './atlasBackground'
 
 // NiiVue 0.69.0 has no independent public visibility flag for 3D volume rendering.
 // This pinned renderer hook preserves its real MRI slice renderer unchanged.
 class AtlasNiivue extends SourceDepthNiivue {
   imageContext = false
+  sliceBackgroundOpacity: number | null = null
+  volumeBackgroundOpacity = 1
   focus3D: Vec3 | null = null
   fitBounds: [Vec3, Vec3] | null = null
   fitting3D = false
@@ -66,6 +69,12 @@ class AtlasNiivue extends SourceDepthNiivue {
       args[3] = [Infinity, Infinity]
     }
     return super.draw2D(...args)
+  }
+  override draw2DMain(...args: Parameters<Niivue['draw2DMain']>) {
+    const background = this.volumes[0], previous = background?.opacity
+    if (background && this.sliceBackgroundOpacity !== null) background.opacity = this.sliceBackgroundOpacity
+    try { super.draw2DMain(...args) }
+    finally { if (background) background.opacity = previous! }
   }
   override draw3D(...args: Parameters<Niivue['draw3D']>) {
     const panel = this.anatomyPanel(this.sliceTypeRender)
@@ -143,7 +152,18 @@ class AtlasNiivue extends SourceDepthNiivue {
     if (this.focus3D) this.pivot3D = [...this.focus3D]
   }
   override drawImage3D(...args: Parameters<Niivue['drawImage3D']>) {
-    if (this.imageContext) super.drawImage3D(...args)
+    if (!this.imageContext) return
+    const shader = this.renderShader
+    if (!shader) return
+    shader.use(this.gl)
+    this.gl.uniform1f(shader.uniforms.backOpacity, this.volumeBackgroundOpacity)
+    this.gl.uniform1f(shader.uniforms.overlays, 0)
+    try { super.drawImage3D(...args) }
+    finally {
+      shader.use(this.gl)
+      this.gl.uniform1f(shader.uniforms.backOpacity, this.volumes[0]?.opacity ?? 1)
+      this.gl.uniform1f(shader.uniforms.overlays, this.overlays.length)
+    }
   }
   override sliceScroll3D(change = 0) {
     const clip = this.scene.clipPlaneDepthAziElevs[this.uiData.activeClipPlaneIndex]
@@ -205,7 +225,7 @@ export class AtlasViewer {
       // A picked isosurface lies between voxel centers. Its nearest categorical
       // voxel may belong to a neighboring structure, including a hidden one.
       // Resolve the visible surface first, then retain voxel lookup as fallback.
-      const selection = this.imageOnly ? this.locate(position) : this.streamlines ? this.locate(position, this.pointerIn3D ? -1 : [2, 1, 0][location.axCorSag] ?? -1) : this.pointerIn3D ? resolveSurfaceSelection(position, this.meshes, voxelSelected,
+      const selection = this.imageOnly ? this.locate(position) : this.streamlines ? this.locate(position, this.pointerIn3D ? -1 : [2, 1, 0][location.axCorSag] ?? -1) : this.pointerIn3D ? resolveSurfaceSelection(position, [...this.meshes].filter(([id]) => this.current!.visible.includes(id)), voxelSelected,
         Math.max(...this.manifest.volumes.find(v => v.kind === (this.independent ? 'image' : 'labels'))!.voxel_size_mm), this.current.selected,
         this.current.surfaceCutaway ? (id, point) => !removedByCutaway(this.current!.surfaceCutaway, id, point) : undefined) : this.locate(position)
       const selected = selection.selected
@@ -264,6 +284,7 @@ export class AtlasViewer {
   }
   private async render(state: ViewState, generation: number) {
     const nv = this.nv
+    const context = new Set(contextIds(state)), renderedIds = new Set([...state.visible, ...context])
     const selectionSettings = (value: ViewState | null) => value && [value.position, value.visible, value.streamlineLevel, value.streamlineSlabMm, value.labelOpacity, value.meshOpacity, value.surfaceOpacity]
     if (this.streamlines && state.selectionEvidence?.kind === 'visible-streamline') {
       this.refreshSelection ||= !same(selectionSettings(state), selectionSettings(this.rendered))
@@ -279,6 +300,9 @@ export class AtlasViewer {
         if (this.disposed) return
         if (this.labelIndex >= 0) {
           compactLabels(nv.volumes[this.labelIndex].img!, this.manifest.structures.filter(s => s.kind !== 'streamline-bundle' && s.kind !== 'independent-region'))
+          // Render the browser's compact palette as categorical labels. The
+          // scalar shader clamps low palette coordinates and can color label 0.
+          nv.volumes[this.labelIndex].hdr!.intent_code = 1002
           nv.volumes[this.labelIndex].cal_min = 0; nv.volumes[this.labelIndex].cal_max = this.manifest.structures.length
         }
         this.background = state.background; this.rendered = null
@@ -332,10 +356,12 @@ export class AtlasViewer {
         polygon: sectionPolygon(this.manifest.volumes.find(volume => volume.id === state.background)!, state.position, plane) }))
       nv.showMarkers = state.showMarkers !== false && !(state.teaching?.practice && !state.teaching.revealed)
       nv.imageContext = !this.model && state.imageContext
+      nv.sliceBackgroundOpacity = this.model ? null : state.background2D === false ? 0 : state.backgroundOpacity2D ?? 1
+      nv.volumeBackgroundOpacity = state.backgroundOpacity3D ?? 1
       nv.opts.show3Dcrosshair = state.show3DCursor !== false
       nv.focus3D = state.focus3D ?? null
       const fitted = (state.fitVisible3D ?? state.layout === 'anatomy') && !state.imageContext
-        ? this.manifest.structures.filter(structure => state.visible.includes(structure.id) && surfaceOpacity(state, structure.id) > 0) : []
+        ? this.manifest.structures.filter(structure => renderedIds.has(structure.id) && contextOpacity(state, structure.id, surfaceOpacity(state, structure.id)) > 0) : []
       nv.fitBounds = fitted.length ? [
         [0, 1, 2].map(axis => Math.min(...fitted.map(structure => structure.bounds_ras_mm[0][axis]))) as Vec3,
         [0, 1, 2].map(axis => Math.max(...fitted.map(structure => structure.bounds_ras_mm[1][axis]))) as Vec3
@@ -354,60 +380,74 @@ export class AtlasViewer {
       nv.scene.pan2Dxyzmm = [...state.pan]
       const visible = new Set(state.visible)
       const textureChanged = !this.rendered || !same(state.visible, this.rendered.visible) || state.labelOpacity !== this.rendered.labelOpacity || state.overlay !== this.rendered.overlay || !same(state.window, this.rendered.window)
+        || (this.model && (state.background2D !== this.rendered.background2D || state.backgroundOpacity2D !== this.rendered.backgroundOpacity2D))
       if (textureChanged) {
         if (!this.model) { nv.volumes[0].cal_min = state.window[0]; nv.volumes[0].cal_max = state.window[1] }
         if (this.labelIndex >= 0) {
         const entries = [{ color: [0, 0, 0], id: '', name: 'Background' }, ...this.manifest.structures]
         // NiiVue's base-slice shader uses global opacity and ignores label alpha.
         // Hidden categorical base labels therefore also require black RGB.
-        const channel = (index: number) => entries.map(entry => this.model && !visible.has(entry.id) ? 0 : entry.color[index])
+        const channel = (index: number) => entries.map(entry => this.model && !visible.has(entry.id)
+          ? entry.id && state.background2D === true ? Math.round(BACKGROUND_COLOR[index] * (state.backgroundOpacity2D ?? 1)) : 0 : entry.color[index])
         nv.volumes[this.labelIndex].setColormapLabel({ I: entries.map((_, i) => i), R: channel(0), G: channel(1), B: channel(2),
           A: entries.map(x => visible.has(x.id) ? 255 : 0), labels: entries.map(x => x.name) })
         nv.volumes[this.labelIndex].opacity = state.overlay === 'probability' ? 0 : state.labelOpacity
         }
         if (this.overlayId && nv.volumes[fieldIndex]) nv.volumes[fieldIndex].opacity = state.labelOpacity
       }
-      for (const [id, mesh] of this.meshes) { mesh.visible = visible.has(id); mesh.opacity = surfaceOpacity(state, id) }
+      for (const [id, mesh] of this.meshes) {
+        mesh.visible = renderedIds.has(id); mesh.opacity = contextOpacity(state, id, surfaceOpacity(state, id))
+        const source = this.manifest.structures.find(item => item.id === id)!
+        if (source.kind !== 'streamline-bundle') {
+          const color = [...(context.has(id) ? BACKGROUND_COLOR : source.color), 255]
+          if (color.some((value, axis) => mesh.rgba255[axis] !== value)) mesh.setProperty('rgba255', new Uint8Array(color), nv.gl)
+        }
+      }
       if (textureChanged) {
         if (this.rendered && !this.model && same(state.window, this.rendered.window)) refreshOverlayTextures(nv)
         else nv.updateGLVolume()
       } else nv.drawScene()
       this.rendered = structuredClone(state)
     } finally { this.syncing = false }
-    for (const id of state.visible) {
-      if (this.disposed || generation !== this.generation) return
-      const structure = this.manifest.structures.find(s => s.id === id)!
-      const level = structure.kind === 'streamline-bundle' ? displayLevel(structure, state.streamlineLevel) : null
-      const file = level?.file ?? structure.mesh_file!
-      if (this.meshFiles.get(id) === file) continue
-      if (this.meshes.has(id)) { this.removeMesh(id); }
-      this.status(this.streamlines ? 'Loading source streamline display subset…' : 'Loading local structure surfaces…')
-      this.syncing = true
-      try {
-        let mesh: NVMesh
-        if (level) {
-          const response = await fetch(this.base + file)
-          if (!response.ok) throw new Error('A source streamline display subset could not be loaded.')
-          const data = parseTck(await response.arrayBuffer(), level)
+    nv.deferMeshUpdates = true
+    try {
+      for (const id of renderedIds) {
+        if (this.disposed || generation !== this.generation) return
+        const structure = this.manifest.structures.find(s => s.id === id)!
+        const level = structure.kind === 'streamline-bundle' ? displayLevel(structure, state.streamlineLevel) : null
+        const file = level?.file ?? structure.mesh_file!
+        if (this.meshFiles.get(id) === file) continue
+        if (this.meshes.has(id)) { this.removeMesh(id); }
+        this.status(this.streamlines ? 'Loading source streamline display subset…' : 'Loading local structure surfaces…')
+        this.syncing = true
+        try {
+          let mesh: NVMesh
+          if (level) {
+            const response = await fetch(this.base + file)
+            if (!response.ok) throw new Error('A source streamline display subset could not be loaded.')
+            const data = parseTck(await response.arrayBuffer(), level)
+            if (this.disposed) return
+            mesh = new NVMesh(data.pts, data.offsetPt0, structure.name, new Uint8Array([...structure.color, 0]), surfaceOpacity(state, id), false, nv.gl)
+            // In 0.69.0 a zero minimum returns before rebuilding fibers. Negative
+            // one disables length filtering while retaining zero-length records.
+            mesh.fiberDither = 0; mesh.fiberColor = 'Fixed'; mesh.fiberLength = -1; mesh.fiberDecimationStride = 1
+            mesh.fiberRadius = 0; mesh.fiberSides = 0; mesh.updateFibers(nv.gl)
+            nv.addMesh(mesh)
+          } else mesh = await nv.addMeshFromUrl({ url: this.base + file, name: structure.source_name + '.gii', rgba255: [...(context.has(id) ? BACKGROUND_COLOR : structure.color), 255], opacity: contextOpacity(state, id, surfaceOpacity(state, id)), visible: false })
           if (this.disposed) return
-          mesh = new NVMesh(data.pts, data.offsetPt0, structure.name, new Uint8Array([...structure.color, 0]), surfaceOpacity(state, id), false, nv.gl)
-          // In 0.69.0 a zero minimum returns before rebuilding fibers. Negative
-          // one disables length filtering while retaining zero-length records.
-          mesh.fiberDither = 0; mesh.fiberColor = 'Fixed'; mesh.fiberLength = -1; mesh.fiberDecimationStride = 1
-          mesh.fiberRadius = 0; mesh.fiberSides = 0; mesh.updateFibers(nv.gl)
-          nv.addMesh(mesh)
-        } else mesh = await nv.addMeshFromUrl({ url: this.base + file, name: structure.source_name + '.gii', rgba255: [...structure.color, 255], opacity: surfaceOpacity(state, id), visible: false })
-        if (this.disposed) return
-        this.meshes.set(id, mesh); this.meshFiles.set(id, file)
-        this.updateCutaway(this.current!)
-        mesh.visible = this.current!.visible.includes(id); mesh.opacity = surfaceOpacity(this.current!, id)
-        nv.drawScene()
-      } finally { this.syncing = false }
-    }
-    if (generation !== this.generation) return
-    for (const [id, mesh] of this.meshes) {
-      if (this.meshes.size <= (this.streamlines ? 6 : 32)) break
-      if (!this.current!.visible.includes(id)) this.removeMesh(id)
+          this.meshes.set(id, mesh); this.meshFiles.set(id, file)
+          this.updateCutaway(this.current!)
+          mesh.visible = this.current!.visible.includes(id) || contextIds(this.current!).includes(id); mesh.opacity = contextOpacity(this.current!, id, surfaceOpacity(this.current!, id))
+        } finally { this.syncing = false }
+      }
+      if (generation !== this.generation) return
+      for (const [id, mesh] of this.meshes) {
+        if (this.meshes.size <= (this.streamlines ? 6 : 32)) break
+        if (!renderedIds.has(id)) this.removeMesh(id)
+      }
+    } finally {
+      nv.deferMeshUpdates = false
+      if (!this.disposed) nv.drawScene()
     }
     if (this.refreshSelection) {
       this.refreshSelection = false

@@ -49,10 +49,11 @@ MIDA requires a manual download from its official access page. Z-Anatomy constru
 Open `http://127.0.0.1:8765` in your browser.
 
 1. Choose an anatomical group or dataset. Detailed topics, cases and regional configurations appear on secondary pages.
-2. Atlases open with all structures visible. Open **Structure library** to search, select or isolate structures. **Select all** and **Deselect all** apply to the displayed filter. Saved scenes and lessons retain their recorded visibility.
-3. Use **Learning tools → Learn** for a guided sequence. Write a response, compare it with the source answer and use **Save response**, **Review again** or **Understood** to keep a study record.
-4. Open **Teaching library** to prepare a course or use a saved notebook. With CerebrA installed, the first-session plan provides eight introductory views.
-5. Export scenes, notebooks and study records for backup. Saved courses also remain on the data drive.
+2. An anatomy group or detailed topic opens with every corresponding structure selected; **Whole brain** and direct source openings select the complete atlas. Open **Structure library** to search, select or isolate structures. **Select all** and **Deselect all** apply to the displayed filter. Saved scenes and lessons retain their recorded visibility.
+3. In a regional view, **Whole-brain background** controls context separately from the selected structures. The 2D background starts on and the 3D background starts off; each has its own opacity control. The 3D context uses neutral-gray brain surfaces from the same source when available. Sources without brain surfaces use their native image extent, labeled **Source background**. Independent model sources provide 3D controls only; a source without whole-brain context identifies that limitation in the controls.
+4. Use **Learning tools → Learn** for a guided sequence. Write a response, compare it with the source answer and use **Save response**, **Review again** or **Understood** to keep a study record.
+5. Open **Teaching library** to prepare a course or use a saved notebook. With CerebrA installed, the first-session plan provides eight introductory views.
+6. Export scenes, notebooks and study records for backup. Saved courses also remain on the data drive.
 
 The page supports ordinary browser scrolling and zoom. A bookmarked atlas link reopens its exact source package after a service restart. Source comparisons retain each panel's own coordinates.
 

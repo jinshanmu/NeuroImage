@@ -2,6 +2,8 @@ import { LessonEvidence } from './LessonEvidence'
 import { StudyRecord } from './LearningProgress'
 import { SelectField } from './SelectField'
 import { StructureVisibilityActions } from './StructureVisibilityActions'
+import { BackgroundControls } from './BackgroundControls'
+import { brainBackgroundIds } from './atlasBackground'
 import { centeredSlicePan } from './independentRegions'
 import { navigate } from './appNavigation'
 import { anatomyGroup, browseTargets, targetScope } from './anatomyNavigation'
@@ -276,12 +278,7 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, rec
         } catch (error) { if (!cancelled) setError(`The saved notebook could not be opened. Its stored copy has been retained. ${String(error)}`) }
       }
       if (cancelled) return
-      let initial = memory.get(viewKey) ?? initialState(m)
-      if (!memory.has(viewKey) && scope && scope.id !== 'general-anatomy' && scope.structure_ids.length) {
-        const matching = m.structures.filter(item => scope.structure_ids.includes(item.id))
-        if (matching.length) initial = { ...locateSourceStructure(initial, m, matching[0].id), pan: [0, 0, 0, 1],
-          ...(anatomyGroup(scope.id)?.parentId ? { fitVisible3D: true } : {}) }
-      }
+      let initial = memory.get(viewKey) ?? initialState(m, scope)
       if (!memory.has(viewKey)) initial = anatomyEntry(initial, m, scope)
       if (!memory.has(viewKey) && startupContent !== undefined) {
         try {
@@ -417,6 +414,19 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, rec
       visible: marker.structure_id ? [...new Set([...state.visible, marker.structure_id])] : state.visible })
   }
   const structures = manifest?.structures.filter(s => (!groupOnly || !scope || scope.structure_ids.includes(s.id)) && (category === 'All structures' || s.category === category) && `${s.name} ${s.source_name} ${s.id}`.toLowerCase().includes(query.toLowerCase())) ?? []
+  const regional = !!scope && scope.id !== 'general-anatomy'
+  const backgroundIds = brainBackgroundIds(manifest?.structures ?? [], atlas.coverage)
+  const surfaceBackground = !!state?.surfaceContext || (!state?.imageContext && !!backgroundIds.length)
+  const background3D = state && (surfaceBackground || !labelModel) ? {
+    enabled: !!state.surfaceContext?.enabled || state.imageContext,
+    opacity: surfaceBackground ? state.surfaceContext?.opacity ?? .15 : state.backgroundOpacity3D ?? 1,
+    toggle: (enabled: boolean) => patch(surfaceBackground
+      ? { surfaceContext: { enabled, opacity: state.surfaceContext?.opacity ?? .15, structure_ids: state.surfaceContext?.structure_ids ?? backgroundIds }, imageContext: false, fitVisible3D: true, focus3D: undefined }
+      : { imageContext: enabled, fitVisible3D: !enabled, focus3D: undefined, camera: [state.camera[0], state.camera[1], .8] }),
+    adjust: (opacity: number) => patch(surfaceBackground
+      ? { surfaceContext: { enabled: true, opacity, structure_ids: state.surfaceContext?.structure_ids ?? backgroundIds } }
+      : { backgroundOpacity3D: opacity }),
+  } : undefined
   return <section ref={workspaceElement} className={`workspace ${compact ? 'compact' : ''} ${expanded ? 'expanded' : ''} ${drawer ? 'showing-' + drawer : ''}`} role={expanded ? 'dialog' : undefined} aria-modal={expanded || undefined} aria-label={expanded ? 'Expanded atlas viewer' : undefined}>
     <aside className={`catalog ${drawer === 'library' ? 'drawer-open' : ''}`}><div className="panel-title"><span>{imageOnly ? 'Source image' : 'Structure library'}</span><span className="count">{imageOnly ? '1' : manifest?.structures.length ?? '—'}</span>{compact && <button aria-label="Close structure library" onClick={() => setDrawer(null)}>Close</button>}</div>
       <p className="muted">Explore the anatomy in its native space.</p>{scope && !!scope.structure_ids.length && <label className="check-control anatomy-scope"><input type="checkbox" checked={groupOnly} onChange={event => setGroupOnly(event.target.checked)}/>{scope.title} only</label>}
@@ -444,7 +454,7 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, rec
         <label>Layout<SelectField aria-label="View layout" value={state?.layout ?? 'quad'} disabled={!ready} onChange={e => patch({ layout: e.target.value as ViewState['layout'] })}>{[['quad', '2D + 3D'], ['anatomy', 'Equal 2D + 3D'], ['axial', 'Axial'], ['coronal', 'Coronal'], ['sagittal', 'Sagittal'], ['3d', '3D anatomy']].map(([v, t]) => <option key={v} value={v}>{t}</option>)}</SelectField></label>
         {state?.layout === 'quad' && <label>Panels<SelectField aria-label="Image panel arrangement" value={state.tileLayout ?? 'grid'} disabled={!ready} onChange={event => patch({tileLayout:event.target.value as ViewState['tileLayout']})}><option value="auto">Fit window</option><option value="grid">2 × 2 grid</option><option value="row">Side by side</option></SelectField></label>}
         <label className="check-control"><input type="checkbox" checked={state?.radiological ?? true} onChange={e => patch({ radiological: e.target.checked })} disabled={!ready}/>Radiological</label>
-        <button onClick={() => manifest && state && setState({ ...initialState(manifest), note: state.note, annotations: state.annotations })} disabled={!ready}>Reset view</button>
+        <button onClick={() => manifest && state && setState({ ...anatomyEntry(initialState(manifest, scope), manifest, scope), note: state.note, annotations: state.annotations })} disabled={!ready}>Reset view</button>
       </div>
       <div className="section-navigation" role="group" aria-label="Section field of view">
         <button disabled={!ready} onClick={() => patch({ pan: [0, 0, 0, 1] })}>Full sections</button>
@@ -462,8 +472,12 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, rec
         <button disabled={!ready || !selected} onClick={() => state && selected && manifest && patch({ ...focusStructure3D(selected, manifest.volumes.find(volume => volume.id === state.background)!, state.camera), fitVisible3D: false })}>Focus selected 3D</button>
         <button disabled={!ready} onClick={() => state && patch({ fitVisible3D: false, focus3D: [...state.position] })}>Center 3D on cursor</button>
         <button disabled={!ready} onClick={() => state && patch({ fitVisible3D: false, focus3D: undefined, camera: [state.camera[0], state.camera[1], .8] })}>Full 3D context</button>
-        {!labelModel && <label className="check-control"><input type="checkbox" checked={state?.imageContext ?? false} onChange={e => patch({ imageContext: e.target.checked })} disabled={!ready}/>{imageOnly ? '3D intensity display' : ctLabels ? '3D CT context' : '3D MRI context'}</label>}
+        {!regional && !labelModel && <label className="check-control"><input type="checkbox" checked={state?.imageContext ?? false} onChange={e => patch({ imageContext: e.target.checked })} disabled={!ready}/>{imageOnly ? '3D intensity display' : ctLabels ? '3D CT context' : '3D MRI context'}</label>}
       </div>
+      {regional && state && <BackgroundControls title={backgroundIds.length ? 'Whole-brain background' : 'Source background'} disabled={!ready}
+        image={{enabled: state.background2D !== false, opacity: state.backgroundOpacity2D ?? 1,
+          toggle: enabled => patch({background2D: enabled}), adjust: opacity => patch({backgroundOpacity2D: opacity})}}
+        model={background3D} unavailable={!background3D ? 'Whole-brain 3D context is unavailable in this source.' : undefined}/>}
       <details className="section-guide-controls"><summary>3D section guides{state?.sectionPlanes?.length ? ` · ${state.sectionPlanes.length} shown` : ''}</summary><div role="group" aria-label="3D section guides">{SECTION_PLANES.map(plane => <label key={plane} className="check-control"><input type="checkbox" aria-label={`Show ${plane} guide`} checked={state?.sectionPlanes?.includes(plane) ?? false} disabled={!ready} onChange={event => patch({ sectionPlanes: event.target.checked ? [...(state?.sectionPlanes ?? []), plane] : state?.sectionPlanes?.filter(value => value !== plane) })}/><span style={{ color: `rgb(${PLANE_COLORS[plane].map(value => Math.round(value * 255)).join(',')})` }}>{plane[0].toUpperCase() + plane.slice(1)}</span></label>)}</div><p className="small muted">Colored planes mark the current RAS sections within the source image field of view. The linked image panels show the corresponding source image texture.</p></details>
       {probabilistic && <div className="probability-evidence"><div><strong>{state?.overlay === 'probability' ? 'Source probability' : independent ? (derivedMask ? 'Project display mask' : 'Selected binary mask') : 'Source navigation labels'}</strong><span>{hidden ? 'Identification target' : selected?.name ?? 'Select a channel'}</span>{state?.overlay === 'probability' && <output aria-label="Source probability at cursor">{formatProbability(probabilityValue, selected?.probability)}</output>}</div>
         {state?.overlay === 'probability' && <div className="probability-scale"><span>{probabilityScale(selected?.probability)[0]}</span><i/><span>{probabilityScale(selected?.probability)[1]}</span></div>}

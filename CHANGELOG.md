@@ -10,7 +10,11 @@
 - Restore exact local atlas bookmarks after service restart; keep page-based scrolling and complete wrapping labels.
 - Reuse the current image or model viewer between course entries from the same source, while restoring every recorded view and keeping comparison coordinates independent.
 - Simplify functional labels and remove decorative slogans.
-- Open atlases with every structure selected, including entry through anatomy groups, and fit image-atlas surfaces to the full visible extent. Preserve saved scene and lesson visibility.
+- Open each anatomy group and detailed topic with all of its corresponding structures selected; whole-brain and direct source entries retain the complete atlas. Keep saved scene and lesson visibility.
+- Add separate background switches and opacity controls: 2D context starts on, 3D context starts off in regional views. Use same-source brain surfaces or the available native image extent without changing foreground selection.
+- Reuse image textures and batch redraws when adding and removing source meshes, including whole-brain background geometry.
+- Render categorical palette indices directly so unlabeled image regions remain transparent.
+- Apply the dark theme to native dropdown options while retaining keyboard selection and full selected labels. Verify browser Back and Forward across groups, topics, teaching and dataset pages.
 - Center and magnify 28 brainstem nuclear teaching views so small target models remain clear alongside their original nerve context.
 - Add a resumable Linux installer, pinned runtime bootstrap, source-aware diagnostics, acquisition/construction quickstart, portable storage profile and a complete dataset access table.
 - Remove unused frontend frameworks and their dependencies; retain the four runtime packages used by the application and keep their locked versions unchanged.

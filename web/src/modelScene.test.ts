@@ -17,6 +17,18 @@ it('opens every source model and preserves an explicitly saved subset',()=>{
   expect(readModelScene(modelScene(source,{...state,visible:[]}),source).state.visible).toEqual([])
 })
 
+it.each(['cranial-nerves','detail-arterial-ring'])('opens every model in %s and restores independent brain context',id=>{
+  const source:SurfaceManifest={...manifest,structures:Array.from({length:24},(_,i)=>({...manifest.structures[0],id:`object-${i}`}))}
+  const scope={id,title:'Source anatomy',structure_ids:source.structures.slice(4,22).map(s=>s.id)}
+  const state=initialModelView(source,scope)
+  expect(state.visible).toEqual(scope.structure_ids)
+  expect(state.selected).toBe('object-4')
+  state.surfaceContext={enabled:true,opacity:.2,structure_ids:['object-0','object-1']}
+  expect(readModelScene(modelScene(source,state),source).state).toEqual(state)
+  expect(initialModelView(source,{...scope,id:'general-anatomy'}).visible).toHaveLength(24)
+  expect(()=>readModelScene(modelScene(source,{...state,surfaceContext:{enabled:true,opacity:.2,structure_ids:['missing']}}),source)).toThrow('background')
+})
+
 it('round-trips a source XYZ view with camera, clipping, markers and notes',()=>{
   const state=initialModelView(manifest)
   state.camera=[85,23,2.5];state.focus_native_mm=[12,17,1598];state.opacity=.7;state.surfaceOpacity={'object-1':.5}

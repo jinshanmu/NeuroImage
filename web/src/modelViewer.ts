@@ -9,6 +9,7 @@ import { pickModelSurface } from './modelSelection'
 import { triangleBounds } from './modelBounds'
 import type { ModelView, SurfaceManifest } from './modelTypes'
 import type { Vec3 } from './types'
+import { BACKGROUND_COLOR, contextIds, contextOpacity } from './atlasBackground'
 
 class NativeModelNiivue extends SourceDepthNiivue {
   modelBounds:[Vec3,Vec3]|null=null
@@ -59,7 +60,7 @@ export class ModelViewer {
     const bounds=new Map(manifest.structures.map(item=>[item.id,item.bounds_native_mm]))
     this.nv.onNativePick=position=>{
       if(!this.current||this.disposed||this.syncing)return
-      const selected=pickModelSurface(position,this.meshes,bounds,this.current.selected,id=>!removedByCutaway(this.current!.surfaceCutaway,id,position))
+      const selected=pickModelSurface(position,this.meshes,bounds,this.current.selected,id=>this.current!.visible.includes(id)&&!removedByCutaway(this.current!.surfaceCutaway,id,position))
       if(selected)this.changed({selected,position_native_mm:position})
     }
     this.nv.onAzimuthElevationChange=(a,e)=>this.emit({camera:[a,e,this.nv.scene.volScaleMultiplier]})
@@ -93,25 +94,28 @@ export class ModelViewer {
     }
   }
   private async render(state:ModelView,generation:number) {
-    const nv=this.nv, visible=new Set(state.visible)
-    for(const [id,mesh] of this.meshes){mesh.visible=visible.has(id);mesh.opacity=state.opacity*(state.surfaceOpacity[id]??1)}
-    for(const id of state.visible) {
-      if(this.disposed||generation!==this.generation)return
-      if(this.meshes.has(id))continue
-      const structure=this.manifest.structures.find(item=>item.id===id)!
-      this.status('Loading '+structure.name)
-      const mesh=await nv.addMeshFromUrl({url:this.base+structure.mesh_file,name:structure.source_name+'.gii',rgba255:[...structure.color,255],visible:false,opacity:1})
-      if(this.disposed)return
-      this.meshes.set(id,mesh)
-      const bounds=mesh.tris?triangleBounds(mesh.pts,mesh.tris):null
-      if(bounds)this.renderedBounds.set(id,bounds)
-      mesh.visible=this.current!.visible.includes(id);mesh.opacity=this.current!.opacity*(this.current!.surfaceOpacity[id]??1)
-    }
-    for(const [id,mesh] of this.meshes)if(this.meshes.size>32&&!visible.has(id)){nv.removeMesh(mesh);this.meshes.delete(id);this.renderedBounds.delete(id)}
+    const nv=this.nv, context=new Set(contextIds(state)), visible=new Set([...state.visible,...context])
+    for(const [id,mesh] of this.meshes){mesh.visible=visible.has(id);mesh.opacity=contextOpacity(state,id,state.opacity*(state.surfaceOpacity[id]??1))}
+    nv.deferMeshUpdates=true
+    try {
+      for(const id of visible) {
+        if(this.disposed||generation!==this.generation)return
+        if(this.meshes.has(id))continue
+        const structure=this.manifest.structures.find(item=>item.id===id)!
+        this.status('Loading '+structure.name)
+        const mesh=await nv.addMeshFromUrl({url:this.base+structure.mesh_file,name:structure.source_name+'.gii',rgba255:[...(context.has(id)?BACKGROUND_COLOR:structure.color),255],visible:false,opacity:1})
+        if(this.disposed)return
+        this.meshes.set(id,mesh)
+        const bounds=mesh.tris?triangleBounds(mesh.pts,mesh.tris):null
+        if(bounds)this.renderedBounds.set(id,bounds)
+        mesh.visible=this.current!.visible.includes(id)||contextIds(this.current!).includes(id);mesh.opacity=contextOpacity(this.current!,id,this.current!.opacity*(this.current!.surfaceOpacity[id]??1))
+      }
+      for(const [id,mesh] of this.meshes)if(this.meshes.size>32&&!visible.has(id)){nv.removeMesh(mesh);this.meshes.delete(id);this.renderedBounds.delete(id)}
+    } finally {nv.deferMeshUpdates=false}
     if(this.disposed||generation!==this.generation)return
     for(const [id,mesh] of this.meshes) {
       const source=this.manifest.structures.find(item=>item.id===id)!
-      const color=state.highlightSelected&&id===state.selected?[90,240,214,255]:[...source.color,255]
+      const color=context.has(id)?[...BACKGROUND_COLOR,255]:state.highlightSelected&&id===state.selected?[90,240,214,255]:[...source.color,255]
       if(color.some((value,axis)=>mesh.rgba255[axis]!==value))mesh.setProperty('rgba255',new Uint8Array(color),nv.gl)
     }
     const displayed=this.manifest.structures.filter(item=>visible.has(item.id))

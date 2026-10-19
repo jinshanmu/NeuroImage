@@ -16,6 +16,22 @@ void main() { color = packFloatToVec4i(gl_FragCoord.z); }
 /** Integer RGB depth survives the default framebuffer's 8-bit UNORM storage. */
 export class SourceDepthNiivue extends StreamlineNiivue {
   private sourceDepthShader: ReturnType<Niivue['createCustomMeshShader']> | null = null
+  private updatingMesh = false
+  deferMeshUpdates = false
+
+  override setMesh(...args: Parameters<Niivue['setMesh']>) {
+    this.updatingMesh = true
+    try { super.setMesh(...args) } finally { this.updatingMesh = false }
+  }
+
+  override updateGLVolume() {
+    if (!this.updatingMesh) { super.updateGLVolume(); return }
+    // The pinned setMesh rebuilds every image texture. Mesh changes only need
+    // updated geometric extents and a redraw; image data and LUTs are unchanged.
+    this.furthestVertexFromOrigin = Math.max(this.volumeObject3D?.furthestVertexFromOrigin ?? 0,
+      ...this.meshes.map(mesh => mesh.furthestVertexFromOrigin))
+    if (!this.deferMeshUpdates) this.drawScene()
+  }
 
   override drawMesh3D(...args: Parameters<Niivue['drawMesh3D']>) {
     if (!this.uiData.mouseDepthPicker) { super.drawMesh3D(...args); return }

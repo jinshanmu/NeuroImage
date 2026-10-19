@@ -210,6 +210,8 @@
 .complete-select-label{min-width:0;white-space:normal;overflow-wrap:anywhere;pointer-events:none}
 .complete-select-arrow{color:#a9c8cd;pointer-events:none}
 .complete-select>select{position:absolute;inset:0;opacity:0;width:100%!important;height:100%!important;min-width:0!important;max-width:none!important;margin:0!important;padding:0!important;cursor:pointer}
+.complete-select>select,select option,select optgroup{color-scheme:dark;background-color:#132231;color:#dbe4ee}
+select option:disabled,select optgroup:disabled{color:#9babbc}
 .complete-select:focus-within{outline:2px solid #8cdacb;outline-offset:2px}
 .complete-select[data-disabled]{opacity:.5}.complete-select[data-disabled]>select{cursor:default}
 .app-header .dataset-picker{flex-wrap:wrap;align-items:center}
@@ -246,6 +248,12 @@
 .dataset-configuration small{color:#9dc8bb}.dataset-configuration>span:last-child{font-size:12px;color:#92d5c3}
 
 .study-record{margin:16px 0;padding:12px;border:1px solid var(--line,#cbd5db);border-radius:6px;min-width:0;overflow-wrap:anywhere}.study-record h3{margin:0 0 8px}.study-record button{white-space:normal;max-width:100%}.study-record details{margin-top:10px}.lesson-response textarea{width:100%}
+
+.background-controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;padding:12px 0;font-size:12px;color:#9eb0c0}
+.background-layer{display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-width:0}
+.background-layer button[aria-pressed=true]{border-color:#71c8b7;color:#a7e9dc;background:#173b3b}
+.background-layer input{width:110px;max-width:100%;accent-color:#7bd8c6}
+.background-layer output{min-width:3ch;font-variant-numeric:tabular-nums}
 
 @supports (field-sizing: content) {
   textarea { field-sizing: content; height: auto; min-height: 4.5rem; max-height: none; resize: none; }

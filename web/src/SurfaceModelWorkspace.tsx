@@ -2,6 +2,8 @@ import { LessonEvidence } from './LessonEvidence'
 import { StudyRecord } from './LearningProgress'
 import { SelectField } from './SelectField'
 import { StructureVisibilityActions } from './StructureVisibilityActions'
+import { BackgroundControls } from './BackgroundControls'
+import { brainBackgroundIds } from './atlasBackground'
 import { ModelTeachingNotebook } from './ModelTeachingNotebook'
 import { readBrowserContent, saveBrowserContent } from './browserStorage'
 import type { ModelNotebookDraft } from './ModelTeachingNotebook'
@@ -43,11 +45,7 @@ export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,star
       if(m.schema_version!=='1.7'||m.representation!=='surface-model'||m.space.coordinate_system!=='SOURCE_XYZ'||m.volumes.length)throw Error('Expected an independent native XYZ surface model.')
       const lessonResponse=await fetch(atlas.base_url+m.lessons_file);if(!lessonResponse.ok)throw Error('Could not open source model lessons.')
       const l:Lesson[]=(await lessonResponse.json()).lessons
-      let initial=memory.get(viewKey)??initialModelView(m), notebook=modelNotebook(m)
-      if(!memory.has(viewKey)&&scope?.structure_ids.length&&!scope.structure_ids.includes(initial.selected??'')) {
-        const matches=m.structures.filter(item=>scope.structure_ids.includes(item.id))
-        if(matches.length)initial={...initial,selected:matches[0].id,position_native_mm:[...matches[0].target_native_mm]}
-      }
+      let initial=memory.get(viewKey)??initialModelView(m,scope), notebook=modelNotebook(m)
       try{const draft=await readBrowserContent(bookKey);if(draft)notebook=readModelNotebook(JSON.parse(draft),m,l)}catch(error){if(!cancelled)setError(`The saved notebook could not be opened. Its stored copy has been retained. ${String(error)}`)}
       const remembered=notebooks.get(bookKey)
       if(remembered)notebook=remembered.book
@@ -92,6 +90,7 @@ export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,star
     return()=>{current=false}
   },[recordedScene,manifest,lessons,ready])
   const selected=manifest?.structures.find(item=>item.id===state?.selected)
+  const backgroundIds=brainBackgroundIds(manifest?.structures??[],atlas.coverage)
   const structures=manifest?.structures.filter(item=>(!groupOnly||!scope||scope.structure_ids.includes(item.id))&&(!category||item.category===category)&&`${item.name} ${item.id} ${item.source_name}`.toLowerCase().includes(query.toLowerCase()))??[]
   const lesson=lessons.find(item=>item.id===state?.lesson_id),step=state?.lesson_step??0
   function choose(item:ModelSurface){if(state)patch({selected:item.id,position_native_mm:[...item.target_native_mm],visible:[...new Set([...state.visible,item.id])]})}
@@ -121,6 +120,11 @@ export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,star
       <div className="view-toolbar"><button disabled={!ready} onClick={()=>state&&patch({focus_native_mm:null,camera:[state.camera[0],state.camera[1],.65]})}>Full model view</button><button disabled={!ready||!selected} onClick={focusSelected}>Focus selected</button><button disabled={!ready||!selected} onClick={()=>selected&&patch({visible:[selected.id],focus_native_mm:null,camera:[110,15,.65]})}>Isolate selected</button>{manifest?.structures.some(item=>item.category==='Brainstem model context')&&<button disabled={!ready} onClick={()=>manifest&&patch({visible:manifest.structures.filter(item=>item.category==='Brainstem model context').map(item=>item.id).concat(state?.visible??[]) .filter((id,i,all)=>all.indexOf(id)===i)})}>Add brainstem context</button>}<label>3D opacity<input aria-label="Model opacity" type="range" min="0" max="1" step=".05" value={state?.opacity??1} onChange={event=>patch({opacity:Number(event.target.value)})}/></label></div>
       <div className="model-coordinate-bar"><label className="check-control"><input type="checkbox" checked={state?.highlightSelected??false} onChange={event=>patch({highlightSelected:event.target.checked})}/>Highlight selected</label><span>Source XYZ (mm): {state?.position_native_mm.map(value=>value.toFixed(2)).join(' · ')}</span><span>{state?.visible.length??0} visible objects</span></div>
       <div className="model-canvas-shell"><canvas ref={canvas} aria-label="Independent native source model"/></div>
+      {scope&&scope.id!=='general-anatomy'&&state&&<BackgroundControls title="Whole-brain background" disabled={!ready}
+        model={backgroundIds.length||state.surfaceContext?{enabled:!!state.surfaceContext?.enabled,opacity:state.surfaceContext?.opacity??.15,
+          toggle:enabled=>patch({surfaceContext:{enabled,opacity:state.surfaceContext?.opacity??.15,structure_ids:state.surfaceContext?.structure_ids??backgroundIds},focus_native_mm:null,camera:[state.camera[0],state.camera[1],.65]}),
+          adjust:opacity=>patch({surfaceContext:{enabled:true,opacity,structure_ids:state.surfaceContext?.structure_ids??backgroundIds}})}:undefined}
+        unavailable={!backgroundIds.length&&!state.surfaceContext?'Whole-brain context is unavailable in this source.':undefined}/>}
       <div className="model-status" role="status">{status}{loadFailed&&<button onClick={()=>window.location.reload()}>Reload viewer</button>}<span>Drag to orbit · Scroll to zoom · Double-click a visible surface to locate</span></div>
       <div className="scene-toolbar"><button disabled={!ready} onClick={()=>void saveScene()}>Save scene</button><button disabled={!ready||!saved} onClick={restoreScene}>Restore saved</button><button disabled={!ready} onClick={()=>void sceneFile()}>Export scene</button><button disabled={!ready} onClick={()=>sceneUpload.current?.click()}>Import scene</button><button className="primary" disabled={!ready||exporting} onClick={()=>void imageExport()}>{exporting?'Preparing export…':'Export teaching image'}</button><input ref={sceneUpload} aria-label="Import model scene file" type="file" accept=".json" hidden onChange={event=>void importFile(event.target.files?.[0])}/></div>
     </div>

@@ -28,6 +28,8 @@ export async function exportTeachingImage(imageUrl: string, manifest: Manifest, 
       ...manifest.structures.filter(s => s.kind === 'streamline-bundle' && state.visible.includes(s.id)).map(s =>
         `${practiceHidden ? 'Visible bundle' : s.name}: ${displayLevel(s as import('./types').StreamlineStructure, state.streamlineLevel).streamline_count} displayed / ${s.streamlines!.source_streamline_count} source trajectories`),
     ] : []),
+    ...(state.background2D !== undefined ? [`2D background: ${state.background2D ? Math.round((state.backgroundOpacity2D ?? 1)*100)+'% opacity' : 'hidden'}`] : []),
+    ...(state.surfaceContext?.enabled ? [`Same-source brain context: neutral gray, ${Math.round(state.surfaceContext.opacity*100)}% opacity; separate from foreground structures.`] : []),
     ...(Object.keys(state.surfaceOpacity ?? {}).length ? [`Individual 3D opacity multipliers: ${Object.keys(state.surfaceOpacity!).length} source regions | Display settings only`] : []),
     ...(state.surfaceCutaway ? [cutawayDescription(state.surfaceCutaway)] : []),
     ...(state.sectionPlanes?.length ? ['3D section guides: ' + state.sectionPlanes.join(', ') + ' | Schematic planes at the cursor; no tissue or image texture'] : []),
