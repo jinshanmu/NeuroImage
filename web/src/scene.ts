@@ -18,14 +18,13 @@ export function initialState(manifest: Manifest): ViewState {
   const regionSpan = Math.max(...first.bounds_ras_mm[1].map((high, i) => high - first.bounds_ras_mm[0][i]), 1)
   const imageSpan = Math.max(...background.shape.map((size, i) => size * background.voxel_size_mm[i]))
   const regionZoom = Math.max(1.4, Math.min(8, imageSpan / (2 * regionSpan)))
-  const visible = manifest.structures.filter(s => ct || ['caudate', 'putamen', 'lateral ventricle', 'thalam'].some(t => s.name.toLowerCase().includes(t))).slice(0, 10).map(s => s.id)
-  return { selected: first.id, visible: [...new Set([...visible, first.id])], position: first.target_ras_mm,
+  return { selected: first.id, visible: manifest.structures.map(s => s.id), position: first.target_ras_mm,
     background: background.id, overlay: streamlines ? 'streamlines' : first.probability ? 'probability' : 'labels', labelOpacity: model || streamlines ? 1 : .45, meshOpacity: 1, radiological: true, layout: 'quad', tileLayout: 'auto',
     camera: [110, 15, model && regionSpan > .6 * imageSpan ? .8 : streamlines ? 1.4 : manifest.representation === 'mri-regions' ? regionZoom : 2],
-    pan: [0, 0, 0, 1], imageContext: false,
+    pan: [0, 0, 0, 1], imageContext: false, fitVisible3D: true,
     window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '', panel: 'inspect', selectionEvidence: { kind: 'source-target', candidates: [first.id] },
     ...(manifest.representation === 'mri-regions' ? { focus3D: [...first.target_ras_mm] as typeof first.target_ras_mm } : {}),
-    ...(ct ? { fitVisible3D: true, show3DCursor: false, labelOpacity: .18 } : {}),
+    ...(ct ? { show3DCursor: false, labelOpacity: .18 } : {}),
     ...(streamlines ? { streamlineLevel: 'standard', streamlineSlabMm: 1 } : {}) }
 }
 export function makeScene(manifest: Manifest, state: ViewState, title = 'Anatomy teaching scene'): SceneFile {

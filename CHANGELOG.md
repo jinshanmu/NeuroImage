@@ -10,6 +10,7 @@
 - Restore exact local atlas bookmarks after service restart; keep page-based scrolling and complete wrapping labels.
 - Reuse the current image or model viewer between course entries from the same source, while restoring every recorded view and keeping comparison coordinates independent.
 - Simplify functional labels and remove decorative slogans.
+- Open atlases with every structure selected, including entry through anatomy groups, and fit image-atlas surfaces to the full visible extent. Preserve saved scene and lesson visibility.
 - Center and magnify 28 brainstem nuclear teaching views so small target models remain clear alongside their original nerve context.
 - Add a resumable Linux installer, pinned runtime bootstrap, source-aware diagnostics, acquisition/construction quickstart, portable storage profile and a complete dataset access table.
 - Remove unused frontend frameworks and their dependencies; retain the four runtime packages used by the application and keep their locked versions unchanged.

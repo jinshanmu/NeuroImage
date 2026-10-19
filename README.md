@@ -49,7 +49,7 @@ MIDA requires a manual download from its official access page. Z-Anatomy constru
 Open `http://127.0.0.1:8765` in your browser.
 
 1. Choose an anatomical group or dataset. Detailed topics, cases and regional configurations appear on secondary pages.
-2. Open **Structure library** to search, select or isolate structures. **Select all** and **Deselect all** apply to the displayed filter.
+2. Atlases open with all structures visible. Open **Structure library** to search, select or isolate structures. **Select all** and **Deselect all** apply to the displayed filter. Saved scenes and lessons retain their recorded visibility.
 3. Use **Learning tools → Learn** for a guided sequence. Write a response, compare it with the source answer and use **Save response**, **Review again** or **Understood** to keep a study record.
 4. Open **Teaching library** to prepare a course or use a saved notebook. With CerebrA installed, the first-session plan provides eight introductory views.
 5. Export scenes, notebooks and study records for backup. Saved courses also remain on the data drive.

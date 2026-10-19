@@ -13,6 +13,16 @@ const manifest = {
 } satisfies Manifest
 
 describe('version-bound scenes', () => {
+  it('opens every source structure and preserves an explicitly saved subset', () => {
+    const source: Manifest = { ...manifest, structures: Array.from({ length: 16 }, (_, i) => ({
+      ...manifest.structures[0], id: `test:${i}`, name: `Source region ${i}`, label_value: i + 1,
+    })) }
+    const state = initialState(source)
+    expect(state.visible).toEqual(source.structures.map(s => s.id))
+    expect(state.fitVisible3D).toBe(true)
+    expect(readScene(makeScene(source, { ...state, visible: ['test:4'] }), source).state.visible).toEqual(['test:4'])
+    expect(readScene(makeScene(source, { ...state, visible: [] }), source).state.visible).toEqual([])
+  })
   it('preserves responsive or explicit panel layouts while retaining legacy grids', () => {
     const state = initialState(manifest)
     expect(state.tileLayout).toBe('auto')

@@ -46,7 +46,7 @@ export function SurfaceModelWorkspace({atlas,memory,notebooks,viewKey,scope,star
       let initial=memory.get(viewKey)??initialModelView(m), notebook=modelNotebook(m)
       if(!memory.has(viewKey)&&scope?.structure_ids.length&&!scope.structure_ids.includes(initial.selected??'')) {
         const matches=m.structures.filter(item=>scope.structure_ids.includes(item.id))
-        if(matches.length)initial={...initial,selected:matches[0].id,position_native_mm:[...matches[0].target_native_mm],visible:matches.slice(0,12).map(item=>item.id)}
+        if(matches.length)initial={...initial,selected:matches[0].id,position_native_mm:[...matches[0].target_native_mm]}
       }
       try{const draft=await readBrowserContent(bookKey);if(draft)notebook=readModelNotebook(JSON.parse(draft),m,l)}catch(error){if(!cancelled)setError(`The saved notebook could not be opened. Its stored copy has been retained. ${String(error)}`)}
       const remembered=notebooks.get(bookKey)

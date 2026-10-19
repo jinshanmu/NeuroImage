@@ -8,8 +8,7 @@ const vec3 = (value: unknown): value is Vec3 => Array.isArray(value) && value.le
 const text = (value: unknown, maximum: number): value is string => typeof value==='string' && value.length<=maximum
 export function initialModelView(manifest: SurfaceManifest): ModelView {
   const first = manifest.structures.find(item=>item.source_name==='Basilar artery') ?? manifest.structures[0]
-  const visible = manifest.structures.filter(item=>['Basilar artery','Posterior cerebral artery.l','Posterior cerebral artery.r','Pons.l','Pons.r','Midbrain.l','Midbrain.r'].includes(item.source_name)).map(item=>item.id)
-  return {kind:'source-model-view',coordinate_system:'SOURCE_XYZ',selected:first.id,visible:[...new Set([...visible,first.id])],
+  return {kind:'source-model-view',coordinate_system:'SOURCE_XYZ',selected:first.id,visible:manifest.structures.map(item=>item.id),
     position_native_mm:[...first.target_native_mm],camera:[110,15,.65],focus_native_mm:null,opacity:1,surfaceOpacity:{},
     annotations:[],showMarkers:true,highlightSelected:true,note:'',lesson_id:null,lesson_step:0,lesson_answer:'',lesson_revealed:false}
 }

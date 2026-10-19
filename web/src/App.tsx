@@ -279,7 +279,7 @@ function AtlasWorkspace({ atlas, memory, notebooks, viewKey, startupContent, rec
       let initial = memory.get(viewKey) ?? initialState(m)
       if (!memory.has(viewKey) && scope && scope.id !== 'general-anatomy' && scope.structure_ids.length) {
         const matching = m.structures.filter(item => scope.structure_ids.includes(item.id))
-        if (matching.length) initial = { ...locateSourceStructure(initial, m, matching[0].id), visible: matching.slice(0, 12).map(item => item.id), pan: [0, 0, 0, 1],
+        if (matching.length) initial = { ...locateSourceStructure(initial, m, matching[0].id), pan: [0, 0, 0, 1],
           ...(anatomyGroup(scope.id)?.parentId ? { fitVisible3D: true } : {}) }
       }
       if (!memory.has(viewKey)) initial = anatomyEntry(initial, m, scope)

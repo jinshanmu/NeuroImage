@@ -9,6 +9,14 @@ const manifest:SurfaceManifest={schema_version:'1.7',representation:'surface-mod
     center_native_mm:[10,20,1600],target_native_mm:[11,21,1601],bounds_native_mm:[[0,0,1500],[20,30,1620]],evidence:'Synthetic test, not anatomy',source_notes:[],review_status:'not_reviewed',
     geometry:{source_input:'fixture',source_object:'Synthetic',source_type:'MESH',source_geometry_file:'fixture.npz',provenance_file:'fixture.json',vertex_count:3,triangle_count:1,target_vertex_index:0,transform_to_native_mm:[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],method:'Synthetic test'}}]}
 
+it('opens every source model and preserves an explicitly saved subset',()=>{
+  const source:SurfaceManifest={...manifest,structures:Array.from({length:16},(_,i)=>({...manifest.structures[0],id:`object-${i}`}))}
+  const state=initialModelView(source)
+  expect(state.visible).toEqual(source.structures.map(item=>item.id))
+  expect(readModelScene(modelScene(source,{...state,visible:['object-4']}),source).state.visible).toEqual(['object-4'])
+  expect(readModelScene(modelScene(source,{...state,visible:[]}),source).state.visible).toEqual([])
+})
+
 it('round-trips a source XYZ view with camera, clipping, markers and notes',()=>{
   const state=initialModelView(manifest)
   state.camera=[85,23,2.5];state.focus_native_mm=[12,17,1598];state.opacity=.7;state.surfaceOpacity={'object-1':.5}
