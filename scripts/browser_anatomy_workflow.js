@@ -26,7 +26,7 @@ async page => {
   };
   try {
     await page.goto(origin + '/?view=teaching&course=retained-historical-course');
-    await page.getByRole('button',{name:'Browse anatomy',exact:true}).waitFor();
+    await page.getByRole('heading',{name:'Browse anatomy',exact:true}).waitFor();
     await page.waitForURL(origin + '/?view=anatomy');
     assert(!await page.getByRole('button',{name:'Teaching library',exact:true}).count(), 'Retired navigation remains.');
     checks.push('Legacy teaching links return to anatomy');

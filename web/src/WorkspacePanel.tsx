@@ -1,6 +1,7 @@
 import { SelectField } from './SelectField'
 import { useEffect, useRef, useState } from 'react'
 import { LibraryStructureSearch } from './LibraryStructureSearch'
+import type { LibrarySnapshot } from './useAnatomyLibrary'
 
 interface Notice { title: string; version: string; url: string; citation: string; license_name: string; license_url: string }
 interface Coverage { id: string; title: string; evidence: string; structures?: number }
@@ -14,7 +15,7 @@ interface SourceChoice {
   inputs_present: number; inputs_required: number; construction_peak_bytes: number; build_capacity_sufficient: boolean
   coverage: Coverage[]
 }
-interface LocalPackage {
+type LocalPackage = {
   key?: string; dataset_id: string; package_version?: string; folder_version: string; title?: string; status: string
   space_name?: string; structures?: number; declared_asset_bytes?: number; detail?: string; completed_assets?: number
   coverage?: Coverage[]
@@ -63,7 +64,7 @@ function CoverageList({ items }: { items: Coverage[] }) {
   </details>
 }
 
-export function WorkspacePanel({ onOpen, dataset }: { dataset?: string; onOpen: (key: string, structureId?: string) => Promise<void> }) {
+export function WorkspacePanel({ onOpen, onLibraryUpdate, dataset }: { dataset?: string; onOpen: (key: string, structureId?: string) => Promise<void>; onLibraryUpdate: (snapshot: LibrarySnapshot) => void }) {
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null), [error, setError] = useState('')
   const [tab, setTab] = useState<'sources' | 'atlases' | 'operations'>('sources'), [revision, setRevision] = useState(0)
   const [pending, setPending] = useState(false), [filter, setFilter] = useState(dataset ?? '')
@@ -78,13 +79,13 @@ export function WorkspacePanel({ onOpen, dataset }: { dataset?: string; onOpen: 
       try {
         const data: Snapshot = await responseJSON(await fetch('/api/workspace?jobs_offset=' + jobsOffset, { signal: controller.signal }))
         if (cancelled) return
-        setSnapshot(data)
+        setSnapshot(data); onLibraryUpdate(data)
         if (data.active_job) timer = setTimeout(refresh, 1800)
       } catch (error) { if (!cancelled) setError(String(error)) }
     }
     void refresh()
     return () => { cancelled = true; controller.abort(); if (timer) clearTimeout(timer) }
-  }, [revision, jobsOffset])
+  }, [revision, jobsOffset, onLibraryUpdate])
   useEffect(() => {
     const job = snapshot?.jobs.find(job => job.id === opening.current?.job)
     if (job?.status === 'complete' && job.result?.atlas_key) {
@@ -101,6 +102,7 @@ export function WorkspacePanel({ onOpen, dataset }: { dataset?: string; onOpen: 
     setPending(true); setError('')
     try {
       const job = await post('/api/workspace/jobs', request)
+      if (snapshot) onLibraryUpdate({ ...snapshot, active_job: job.id })
       if (request.action === 'activate') opening.current = {job: job.id, structureId}
       setTab('operations'); setJobsOffset(0); setRevision(value => value + 1)
     } catch (error) { setError(String(error)) }

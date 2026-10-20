@@ -4,6 +4,8 @@ Start the local Linux workspace and open its loopback URL. The home page present
 
 The dataset sidebar shows local deployment and input-file availability. Select a dataset to see its own anatomical groups and source details. **Download, install and build** opens its acquisition, construction and operation tools one level deeper. Opening an atlas verifies its assets. Incomplete builds do not become browse targets. Normal browsing selects the newest complete local package for the chosen source; saved scenes continue to require their exact original package identity.
 
+Click the **NeuroImage** logo to return home. Each new browser page checks the local library once and reuses those results when returning home or navigating through browser history. Reload the page or use **Refresh** in the dataset sidebar to discover external file changes. Dataset operations update the library when acquisition or construction finishes, including when you return home while an operation is running.
+
 ## Images and anatomical display
 
 The main workspace prioritizes the canvas. **Structure library** opens the structure drawer. Surface display controls and source references appear in expandable sections below the canvas. A group entry filters the structure list to its delivered source entries; turn off the group checkbox to inspect the rest of that same source.

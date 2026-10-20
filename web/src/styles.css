@@ -59,7 +59,8 @@
 .workspace-manager{max-width:1500px;margin:0 auto;padding:30px 28px 70px;line-height:1.6}
 .manager-heading{display:flex;align-items:start;justify-content:space-between;gap:24px;margin-bottom:22px}
 .manager-heading h1{font-size:28px;margin-top:8px}.manager-heading p{color:#a4b8c8;max-width:720px}
-.manager-heading>button{flex:none}.workspace-toggle{white-space:nowrap}
+.manager-heading>button{flex:none}
+.header-note{margin-left:auto}
 .storage-summary{display:grid;grid-template-columns:1fr 1fr .75fr;gap:18px;padding:18px 20px;background:#111f2d;border:1px solid #2b3b4c;border-radius:10px}
 .storage-summary>div{display:flex;flex-direction:column;gap:5px;min-width:0}.storage-summary span,.storage-summary small{color:#a7bac8}
 .workspace-manager code{font-size:11px;overflow-wrap:anywhere;color:#a4c8bf}

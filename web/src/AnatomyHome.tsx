@@ -4,11 +4,10 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { ANATOMY_GROUPS, ANATOMY_TOPICS, browseTargets, groupTargets, targetScope } from './anatomyNavigation'
 import type { AnatomyScope, BrowseGroup, BrowseTarget } from './anatomyNavigation'
 import type { AtlasEntry } from './types'
+import type { AnatomyLibrary, SourceInfo } from './useAnatomyLibrary'
 
-interface SourceInfo { id: string; title: string; inputs_present?: number; inputs_required?: number; sources: {title:string;version:string;license_name:string;url:string}[] }
-interface LibrarySnapshot {session_token:string;sources:SourceInfo[];packages:Record<string,unknown>[];active_job:string|null}
 interface Props {
-  atlases:AtlasEntry[]; workspace:boolean; dataset:string|null;
+  atlases:AtlasEntry[]; workspace:boolean; library:AnatomyLibrary; dataset:string|null;
   group:string|null; onGroup:(group:string|null)=>void;
   onDataset:(dataset:string|null)=>void; onManage:(dataset:string)=>void;
   onOpen:(key:string,structureId?:string,scope?:AnatomyScope,signal?:AbortSignal)=>Promise<void>;
@@ -28,21 +27,15 @@ function GroupCard({group,targets,busy,open,onExplore,topicCount=0}: {group:Brow
   </article>
 }
 
-export function AnatomyHome({atlases,workspace,dataset,group,onGroup,onDataset,onManage,onOpen}:Props) {
-  const [snapshot,setSnapshot]=useState<LibrarySnapshot|null>(null), [error,setError]=useState(''), [opening,setOpening]=useState('')
-  const [loading,setLoading]=useState(workspace)
-  const [query,setQuery]=useState(''), [readyOnly,setReadyOnly]=useState(false), [reload,setReload]=useState(0)
+export function AnatomyHome({atlases,workspace,library,dataset,group,onGroup,onDataset,onManage,onOpen}:Props) {
+  const {snapshot,loading}=library
+  const [error,setError]=useState(''), [opening,setOpening]=useState('')
+  const [query,setQuery]=useState(''), [readyOnly,setReadyOnly]=useState(false)
   const [notice,setNotice]=useState('')
   const openingRequest=useRef<AbortController|null>(null)
   useEffect(()=>()=>openingRequest.current?.abort(),[])
   useEffect(()=>{openingRequest.current?.abort();setOpening('');setNotice('')},[dataset])
-  useEffect(()=>{
-    if(!workspace)return
-    setLoading(true);setError('')
-    const controller=new AbortController()
-    fetch('/api/workspace/browse'+(reload?'?refresh=1':''),{signal:controller.signal}).then(async response=>{const data=await response.json();if(!response.ok)throw Error(data.error);setSnapshot(data)}).catch(error=>{if(!controller.signal.aborted)setError(String(error))}).finally(()=>{if(!controller.signal.aborted)setLoading(false)})
-    return()=>controller.abort()
-  },[workspace,atlases,reload])
+  const refresh=()=>{setError('');void library.refresh(true)}
   const targets=useMemo(()=>browseTargets(atlases,snapshot?.packages),[atlases,snapshot])
   const sourceMap=new Map<string,SourceInfo>((snapshot?.sources??[]).map(source=>[source.id,source]))
   for(const item of targets)if(!sourceMap.has(item.dataset_id))sourceMap.set(item.dataset_id,{id:item.dataset_id,title:item.title,sources:[]})
@@ -89,7 +82,7 @@ export function AnatomyHome({atlases,workspace,dataset,group,onGroup,onDataset,o
   return <main className="anatomy-home">
     <section className="anatomy-main" aria-label="Browse anatomy">
       <div className="anatomy-home-heading"><div className="eyebrow">{region?'DETAILED ANATOMY':dataset?'DATASET':'NEUROANATOMY'}</div><h1>{region?.title??family?.title??selected?.title??(dataset??'Browse anatomy')}</h1><p>{region?'Choose a topic and source.':family?'Choose a case, region or representation within this dataset.':dataset?'Open the views available from this source.':'Choose a region or system.'}</p>{region&&<button onClick={()=>onGroup(null)}>Back to anatomy groups</button>}</div>
-      {error&&<div className="error" role="alert">{error}<button onClick={()=>setReload(value=>value+1)}>Refresh sources</button><button onClick={()=>setError('')}>Dismiss</button></div>}
+      {(error||library.error)&&<div className="error" role="alert">{error||library.error}<button onClick={refresh}>Refresh sources</button><button onClick={()=>{setError('');library.clearError()}}>Dismiss</button></div>}
       {loading&&<p role="status">Checking your local source library…</p>}
       {notice&&<p role="status">{notice}</p>}
       {opening&&<div className="opening-atlas" role="status">Opening {opening}… Verifying local atlas files.<button onClick={()=>{openingRequest.current?.abort();setOpening('');setNotice('Stopped waiting. Any verification already started continues in the dataset tools.')}}>Stop waiting</button></div>}
@@ -103,7 +96,7 @@ export function AnatomyHome({atlases,workspace,dataset,group,onGroup,onDataset,o
       <p className="home-evidence-note">Atlases retain their original definitions and coordinates.</p>
     </section>
     <aside className="dataset-sidebar" aria-label="Dataset deployment">
-      <div className="manager-heading"><h2>Datasets</h2>{workspace&&<button disabled={loading||!!opening} onClick={()=>setReload(value=>value+1)}>Refresh</button>}</div>
+      <div className="manager-heading"><h2>Datasets</h2>{workspace&&<button disabled={loading||!!opening} onClick={refresh}>Refresh</button>}</div>
       <label className="dataset-search">Find a dataset<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Name or source ID"/></label>
       <label className="check-control"><input type="checkbox" checked={readyOnly} onChange={event=>setReadyOnly(event.target.checked)}/>Ready atlases only</label>
       <p className="small muted" role="status">{filteredFamilies.length} of {families.length} datasets</p>

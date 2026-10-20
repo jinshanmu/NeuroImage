@@ -18,6 +18,7 @@ import { focusStructure3D, setSurfaceOpacity, surfaceOpacity } from './display'
 import { SECTION_PLANES, PLANE_COLORS } from './sectionPlanes'
 import { WorkspacePanel } from './WorkspacePanel'
 import { AnatomyHome } from './AnatomyHome'
+import { useAnatomyLibrary } from './useAnatomyLibrary'
 import { SurfaceModelWorkspace } from './SurfaceModelWorkspace'
 import { initialModelView } from './modelScene'
 import type { ModelView, SurfaceManifest } from './modelTypes'
@@ -34,6 +35,7 @@ export default function App() {
   const [homeGroup, setHomeGroup] = useState<string | null>(null)
   const [scope, setScope] = useState<AnatomyScope | undefined>()
   const [workspaceEnabled, setWorkspaceEnabled] = useState(false), [showWorkspace, setShowWorkspace] = useState(false)
+  const library = useAnatomyLibrary(workspaceEnabled)
   const [routeVisit, setRouteVisit] = useState(0), [loadingCatalog, setLoadingCatalog] = useState(true)
   const memory = useRef(new Map<string, ViewState>())
   const modelMemory = useRef(new Map<string, ModelView>())
@@ -118,7 +120,6 @@ export default function App() {
     ? `${entry.title} · ${entry.package_version}` : entry.title
   return <div className={`app ${comparing && !showWorkspace && !home ? 'comparing' : ''}`}>
     <header className="app-header"><a className="brand" href="/?view=anatomy" aria-label="NeuroImage home" onClick={event => { event.preventDefault(); openAnatomyHome() }}><span className="brand-mark">N</span><span>NeuroImage<small>ANATOMY WORKSPACE</small></span></a>
-      <button className="workspace-toggle" aria-pressed={home && !dataset && !showWorkspace} onClick={openAnatomyHome}>Browse anatomy</button>
       {showWorkspace && <button onClick={() => { setShowWorkspace(false); setHome(true); navigate({ view: 'anatomy', dataset: dataset ?? undefined }) }}>Back to dataset</button>}
       {!showWorkspace && !home && <div className="dataset-picker"><label htmlFor="atlas">Source</label><SelectField id="atlas" value={active} onChange={e => { setActive(e.target.value); setScope(undefined); setStartup(null); navigate({ view: 'atlas', atlas: e.target.value }) }}>{atlases.map(a => <option key={a.key} value={a.key}>{atlasLabel(a)}</option>)}</SelectField></div>}
       {!showWorkspace && !home && <label className="check-control"><input type="checkbox" checked={comparing} disabled={!atlas} onChange={e => setComparing(e.target.checked)}/>Compare sources</label>}
@@ -128,8 +129,8 @@ export default function App() {
     {loadingCatalog && <p role="status" className="catalog-status">Loading local sources…</p>}
     {error && <div role="alert" className="error">{error}<button onClick={() => setRouteVisit(value => value + 1)}>Retry</button></div>}
     {comparing && !showWorkspace && !home && <div className="comparison-note">Independent native spaces · Each panel keeps its own coordinates, structure selection and scene. Compare source definitions before interpreting similarities.</div>}
-    {workspaceEnabled && showWorkspace && <WorkspacePanel onOpen={openWorkspaceAtlas} dataset={dataset ?? undefined}/>}
-    {home && !showWorkspace && !loadingCatalog && <AnatomyHome atlases={atlases} workspace={workspaceEnabled} dataset={dataset} group={homeGroup} onGroup={value => { setHomeGroup(value); navigate({ view: 'anatomy', dataset: dataset ?? undefined, group: value ?? undefined }) }} onDataset={value => { setDataset(value); setHomeGroup(null); navigate({ view: 'anatomy', dataset: value ?? undefined }) }} onManage={value => { setDataset(value); setHomeGroup(null); setShowWorkspace(true); navigate({ view: 'workspace', dataset: value }) }} onOpen={openWorkspaceAtlas}/>}
+    {workspaceEnabled && showWorkspace && <WorkspacePanel onOpen={openWorkspaceAtlas} onLibraryUpdate={library.update} dataset={dataset ?? undefined}/>}
+    {home && !showWorkspace && !loadingCatalog && <AnatomyHome atlases={atlases} workspace={workspaceEnabled} library={library} dataset={dataset} group={homeGroup} onGroup={value => { setHomeGroup(value); navigate({ view: 'anatomy', dataset: dataset ?? undefined, group: value ?? undefined }) }} onDataset={value => { setDataset(value); setHomeGroup(null); navigate({ view: 'anatomy', dataset: value ?? undefined }) }} onManage={value => { setDataset(value); setHomeGroup(null); setShowWorkspace(true); navigate({ view: 'workspace', dataset: value }) }} onOpen={openWorkspaceAtlas}/>}
     {!home && !showWorkspace && (atlas ? <main className={`workspace-pair ${comparing ? 'comparison-active' : ''}`}>
       <section className="atlas-slot" aria-label="Primary atlas workspace">{atlas.representation === 'surface-model' ? <SurfaceModelWorkspace key={atlas.key + (scope?.id ?? '')} atlas={atlas} scope={scope} memory={modelMemory.current} viewKey={'primary:' + atlas.key + (scope ? ':' + scope.id : '')} startupContent={startup?.atlas_key === atlas.key ? startup.content : undefined}/> : <AtlasWorkspace key={atlas.key + (scope?.id ?? '')} atlas={atlas} scope={scope} memory={memory.current} viewKey={'primary:' + atlas.key + (scope ? ':' + scope.id : '')} startupContent={startup?.atlas_key === atlas.key ? startup.content : undefined}/>}</section>
       {comparing && second && <section className="atlas-slot" aria-label="Comparison atlas workspace">{second.representation === 'surface-model' ? <SurfaceModelWorkspace key={second.key} atlas={second} memory={modelMemory.current} viewKey={'comparison:' + second.key}/> : <AtlasWorkspace key={second.key} atlas={second} memory={memory.current} viewKey={'comparison:' + second.key}/>}</section>}

@@ -4,6 +4,8 @@
 
 The formal application is checked with `scripts/browser_anatomy_release.js`, using Playwright CLI, an isolated browser profile and the matching local anatomy. It visits each source configuration, verifies structure visibility and rendering, and exercises image layouts, 2D magnification and 3D model framing. It also rejects requests for retired learning resources. See the [simplification boundary](anatomy-release-simplification.md) for preservation and archive checks. Current acceptance requires page-owned scrolling throughout the ordinary interface.
 
+`scripts/browser_home_navigation.js` counts library-discovery requests across group, dataset, management and 2D/3D atlas navigation, including browser history. It checks explicit refresh, document reload, an independent tab, recovery from a failed check and a build completing after leaving management. Operation responses in its build fixture are intercepted in the isolated browser; it does not acquire or construct source data.
+
 The earlier 1.0.0 author-review record is described in [release candidate validation](../release-candidate-validation.md). Its teaching and course helpers remain in the testing branch.
 
 ## Historical source-specific fixtures
