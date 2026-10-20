@@ -4,6 +4,12 @@ import { Niivue } from '@niivue/niivue'
 export class MeshResourceNiivue extends Niivue {
   private changingMesh = false
   private loadingVolumes = false
+  deferVolumeUploads = false
+
+  override gradientGL(...args: Parameters<Niivue['gradientGL']>) {
+    // The default image renderer does not sample a gradient texture.
+    if (this.gradientTextureAmount > 0 || this.opts.gradientOpacity > 0) super.gradientGL(...args)
+  }
 
   override async addVolumesFromUrl(...args: Parameters<Niivue['addVolumesFromUrl']>) {
     this.loadingVolumes = true
@@ -22,7 +28,7 @@ export class MeshResourceNiivue extends Niivue {
   }
 
   override updateGLVolume() {
-    if (this.loadingVolumes) return
+    if (this.loadingVolumes || this.deferVolumeUploads) return
     if (!this.changingMesh) { super.updateGLVolume(); return }
     // NiiVue 0.69.0 setMesh rebuilds all volume textures and gradients. Mesh
     // insertion, removal and ordering need only palettes, bounds and a redraw.

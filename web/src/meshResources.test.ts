@@ -22,6 +22,16 @@ function fixture() {
 }
 
 describe('mesh updates preserve image resources', () => {
+  it('avoids unused gradient work and permits explicitly enabled gradient rendering', () => {
+    const gradient=vi.spyOn(Niivue.prototype,'gradientGL').mockImplementation(()=>{})
+    const {viewer}=fixture()
+    viewer.gradientTextureAmount=0;viewer.opts.gradientOpacity=0
+    viewer.gradientGL({} as Parameters<Niivue['gradientGL']>[0])
+    expect(gradient).not.toHaveBeenCalled()
+    viewer.opts.gradientOpacity=.5
+    viewer.gradientGL({} as Parameters<Niivue['gradientGL']>[0])
+    expect(gradient).toHaveBeenCalledOnce()
+  })
   it('uploads an image stack once while retaining image order and load callbacks', async () => {
     const upload = vi.spyOn(Niivue.prototype, 'updateGLVolume').mockImplementation(() => {})
     const {viewer, volume} = fixture(), labels = {id:'source-labels',img:new Uint16Array([0,1,2])} as NVImage
@@ -46,6 +56,18 @@ describe('mesh updates preserve image resources', () => {
     const {viewer} = fixture()
     await expect(viewer.addVolumesFromUrl([])).rejects.toThrow('Unavailable image')
     expect(upload).not.toHaveBeenCalled()
+    viewer.updateGLVolume()
+    expect(upload).toHaveBeenCalledOnce()
+  })
+
+  it('waits for palette preparation before uploading a complete image stack', async () => {
+    const upload=vi.spyOn(Niivue.prototype,'updateGLVolume').mockImplementation(()=>{})
+    const {viewer,volume}=fixture()
+    vi.spyOn(Niivue.prototype,'addVolumesFromUrl').mockResolvedValue([volume])
+    viewer.deferVolumeUploads=true
+    await viewer.addVolumesFromUrl([])
+    expect(upload).not.toHaveBeenCalled()
+    viewer.deferVolumeUploads=false
     viewer.updateGLVolume()
     expect(upload).toHaveBeenCalledOnce()
   })

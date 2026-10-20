@@ -12,6 +12,7 @@ import time
 from .validation import validate_package
 from .structure_search import search_structures
 from .coverage import source_coverage, source_details
+from .render_cache import RenderCache
 
 
 def create_server(manifest_paths, web_root, port=8765, *, content_path=None, workspace=None):
@@ -20,6 +21,10 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
         raise ValueError("Browser assets are missing. Run npm run build before serving, or install the built wheel.")
     packages, routes, roots, identities = [], {}, {}, {}
     verified_files = {}
+    render_catalogs = {}
+    gzip_routes = set()
+    render_cache = RenderCache(workspace.state_root / "browser-cache" if workspace else Path.home() / ".cache/NeuroImage/browser",
+                               minimum_free_gib=workspace.state_floor_gib if workspace else 0)
     registry_lock = threading.RLock()
     verification_lock = threading.Lock()
     token = secrets.token_urlsafe(32) if workspace else None
@@ -33,7 +38,8 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
             previous = verified_files.get(path)
             if allow_existing and previous:
                 try:
-                    if previous["stamp"] == file_stamp(previous["files"], path.parent):
+                    if (previous["stamp"] == file_stamp(previous["files"], path.parent)
+                            and previous["browser_stamp"] == file_stamp(previous["browser_files"], render_cache.root)):
                         return previous["key"]
                 except (ValueError, OSError):
                     pass
@@ -62,26 +68,35 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
         files = [path, *[path.parent / asset.path for asset in manifest.assets]]
         verified = {"key": key, "files": files, "stamp": file_stamp(files, path.parent)}
         prefix = f"/atlas/{key}/"
+        prepared, browser_files = render_cache.prepare(path, manifest)
+        cached_files = [file for name, file in browser_files.items() if not name.endswith(".nii")]
+        cached_files += [file.with_suffix(file.suffix + ".json") for file in cached_files]
+        verified.update(browser_files=cached_files, browser_stamp=file_stamp(cached_files, render_cache.root))
         with registry_lock:
             if key in identities:
                 if not allow_existing or identities[key] != identity or routes[prefix + "manifest.json"] != path:
                     raise ValueError("The same package identity was selected more than once or changed")
-                verified_files[path] = verified
-                return key
-            identities[key] = identity
-            packages.append({"key": key, "title": manifest.title, "dataset_id": manifest.dataset_id,
-                             "package_version": manifest.package_version, "space": manifest.space.name,
-                             "representation": manifest.representation,
-                             "created_utc": manifest.build.get("created_utc", ""),
-                             "coverage": source_coverage(manifest.dataset_id, [s.model_dump() for s in manifest.structures]),
-                             "detail_coverage": source_details(manifest.dataset_id, [s.model_dump() for s in manifest.structures]),
-                             "manifest_url": prefix + "manifest.json", "base_url": prefix,
-                             "structures": len(manifest.structures)})
+            else:
+                identities[key] = identity
+                packages.append({"key": key, "title": manifest.title, "dataset_id": manifest.dataset_id,
+                                 "package_version": manifest.package_version, "space": manifest.space.name,
+                                 "representation": manifest.representation,
+                                 "created_utc": manifest.build.get("created_utc", ""),
+                                 "coverage": source_coverage(manifest.dataset_id, [s.model_dump() for s in manifest.structures]),
+                                 "detail_coverage": source_details(manifest.dataset_id, [s.model_dump() for s in manifest.structures]),
+                                 "manifest_url": prefix + "manifest.json", "base_url": prefix,
+                                 "structures": len(manifest.structures)})
+            render_catalogs[prefix + "_render.json"] = {"schema_version": "1.0", "assets": prepared}
             routes[prefix + "manifest.json"] = path
             roots[prefix + "manifest.json"] = path.parent
             for asset in manifest.assets:
                 routes[prefix + asset.path] = path.parent / asset.path
                 roots[prefix + asset.path] = path.parent
+            for name, browser_file in browser_files.items():
+                routes[prefix + "_render/" + name] = browser_file
+                roots[prefix + "_render/" + name] = path.parent if name.endswith(".nii") else render_cache.root
+                if name.endswith((".nii", ".ngm")):
+                    gzip_routes.add(prefix + "_render/" + name)
             verified_files[path] = verified
         return key
 
@@ -114,6 +129,9 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
         if any(content.get(field) != value for field, value in binding.items()):
             raise ValueError("The selected scene changed while opening")
     class Handler(BaseHTTPRequestHandler):
+        protocol_version = "HTTP/1.1"
+        disable_nagle_algorithm = True
+
         def log_message(self, format, *args):
             if args and str(args[1] if len(args) > 1 else "").startswith(("4", "5")):
                 super().log_message(format, *args)
@@ -226,6 +244,9 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 if not head:
                     self.wfile.write(initial_content)
                 return
+            if route in render_catalogs:
+                self.json_response(render_catalogs[route], head=head)
+                return
             with registry_lock:
                 file = routes.get(route)
                 allowed_root = roots.get(route)
@@ -248,7 +269,8 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
             matched = self.headers.get("If-None-Match", "").split(",")
             unchanged = any(value.strip().removeprefix("W/") in (etag, "*") for value in matched)
             self.headers_for(304 if unchanged else 200, None if unchanged else stat.st_size, mime,
-                             extra={"ETag": etag, "Cache-Control": cache})
+                             extra={"ETag": etag, "Cache-Control": cache,
+                                    **({"Content-Encoding": "gzip"} if route in gzip_routes else {})})
             if unchanged:
                 return
             if not head:

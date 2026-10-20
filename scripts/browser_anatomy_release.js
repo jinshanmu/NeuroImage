@@ -34,9 +34,11 @@ async page => {
   };
   try {
     for (const source of sources.slice(offset, offset + limit)) {
+      const started = Date.now();
       await page.goto(origin + '/?view=atlas&atlas=' + encodeURIComponent(source.key));
       const model = source.representation === 'surface-model';
       await ready(model);
+      const openMs = Date.now() - started;
       assert(await page.getByRole('button', {name:'Teaching library',exact:true}).count() === 0, 'Teaching library remains.');
       assert(await page.getByRole('button', {name:'Learning tools',exact:true}).count() === 0, 'Learning tools remain.');
       assert(await page.locator('.course-presentation,.model-tools,.inspector').count() === 0, 'A retired panel remains.');
@@ -73,7 +75,7 @@ async page => {
       }
       await canvas.screenshot({path:'output/playwright/atlas-' + source.dataset_id + '.png'});
       assert(await page.locator('[role=alert]').count() === 0, source.key + ': visible error');
-      results.push({dataset:source.dataset_id,key:source.key,representation:source.representation,structures:manifest.structures.length,status:'passed'});
+      results.push({dataset:source.dataset_id,key:source.key,representation:source.representation,structures:manifest.structures.length,open_ms:openMs,status:'passed'});
     }
     assert(!errors.length, errors.join('\n'));
     assert(!retiredRequests.length, 'The viewer requested removed learning resources: ' + retiredRequests.join(', '));

@@ -11,6 +11,8 @@ import type { ModelView, SurfaceManifest } from './modelTypes'
 import type { Vec3 } from './types'
 import { BACKGROUND_COLOR, contextIds, contextOpacity } from './atlasBackground'
 import { loadAssetsInOrder } from './assetLoading'
+import { RenderAssets } from './renderAssets'
+import { addPreparedMesh } from './meshLoading'
 
 class NativeModelNiivue extends SourceDepthNiivue {
   modelBounds:[Vec3,Vec3]|null=null
@@ -53,9 +55,11 @@ export class ModelViewer {
   private released=false
   private syncing=false
   private loading=new AbortController()
+  private resources:RenderAssets
   private resize:ResizeObserver
   constructor(private canvas:HTMLCanvasElement,private manifest:SurfaceManifest,private base:string,
     private changed:(patch:Partial<ModelView>)=>void,private status:(message:string)=>void) {
+    this.resources=new RenderAssets(base)
     this.nv=new NativeModelNiivue({backColor:[.025,.045,.066,1],fontColor:[.74,.8,.86,1],
       isOrientCube:false,isOrientationTextVisible:false,show3Dcrosshair:false,isRuler:false,isColorbar:false,
       isDepthPickMesh:true,dragAndDropEnabled:false,loadingText:'',logLevel:'error'})
@@ -73,7 +77,10 @@ export class ModelViewer {
     if(!this.syncing&&!this.disposed&&this.current&&Object.entries(patch).some(([key,value])=>JSON.stringify(value)!==JSON.stringify(this.current![key as keyof ModelView])))this.changed(patch)
   }
   async initialize(state:ModelView) {
-    await this.nv.attachToCanvas(this.canvas);this.attached=true
+    await Promise.all([
+      this.nv.attachToCanvas(this.canvas).then(()=>{this.attached=true;if(this.disposed)this.release()}),
+      this.resources.load(this.manifest.assets,this.loading.signal),
+    ])
     if(this.disposed){this.release();return}
     this.nv.setSliceType(this.nv.sliceTypeRender)
     this.resize.observe(this.canvas.parentElement!)
@@ -101,10 +108,13 @@ export class ModelViewer {
     nv.deferMeshUpdates=true
     try {
       const missing=[...visible].filter(id=>!this.meshes.has(id)).map(id=>this.manifest.structures.find(item=>item.id===id)!)
-      await loadAssetsInOrder(missing,structure=>this.base+structure.mesh_file,async(structure,buffer)=>{
+      await loadAssetsInOrder(missing,structure=>this.resources.url(structure.mesh_file),async(structure,buffer)=>{
         const id=structure.id
         this.status('Loading '+structure.name)
-        const mesh=await nv.addMeshFromUrl({url:this.base+structure.mesh_file,buffer,name:structure.source_name+'.gii',rgba255:[...(context.has(id)?BACKGROUND_COLOR:structure.color),255],visible:false,opacity:1})
+        const color=[...(context.has(id)?BACKGROUND_COLOR:structure.color),255]
+        const mesh=this.resources.isPreparedMesh(structure.mesh_file)
+          ? addPreparedMesh(nv,buffer,structure.source_name,color,1)
+          : await nv.addMeshFromUrl({url:this.resources.url(structure.mesh_file),buffer,name:structure.source_name+'.gii',rgba255:color,visible:false,opacity:1})
         if(this.disposed)return
         this.meshes.set(id,mesh)
         const bounds=mesh.tris?triangleBounds(mesh.pts,mesh.tris):null

@@ -1,8 +1,8 @@
-import { Niivue, NVMesh, NVImage } from '@niivue/niivue'
+import { Niivue, NVMesh } from '@niivue/niivue'
 import { imageRenderKey } from './renderState'
 import { unProject } from '@niivue/niivue/utils'
 import type { Manifest, Vec3, ViewState } from './types'
-import { regionMemberships, sparseMask, type SparseMask } from './independentRegions'
+import { regionMemberships, type SparseMask } from './independentRegions'
 import { compactLabels } from './palette'
 import { resolveSurfaceSelection } from './selection'
 import { SourceDepthNiivue } from './depthRenderer'
@@ -14,6 +14,9 @@ import { depthSamplePixel, decodeSurfaceDepth } from './picking'
 import { refreshOverlayTextures, retainVolumeMetadata } from './volumeResources'
 import { BACKGROUND_COLOR, contextIds, contextOpacity } from './atlasBackground'
 import { loadAssetsInOrder } from './assetLoading'
+import { readSourceMask } from './maskLoading'
+import { RenderAssets } from './renderAssets'
+import { addPreparedMesh } from './meshLoading'
 
 // NiiVue 0.69.0 has no independent public visibility flag for 3D volume rendering.
 // This pinned renderer hook preserves its real MRI slice renderer unchanged.
@@ -201,8 +204,10 @@ export class AtlasViewer {
   private refreshSelection = false
   private streamlines: boolean
   private loading = new AbortController()
+  private resources: RenderAssets
   constructor(private canvas: HTMLCanvasElement, private manifest: Manifest, private base: string,
     private changed: (patch: Partial<ViewState>) => void, private status: (message: string) => void) {
+    this.resources = new RenderAssets(base)
     this.imageOnly = ['mri-volume', 'scalar-fields'].includes(manifest.representation ?? '')
     this.model = manifest.representation === 'label-model'
     this.streamlines = manifest.representation === 'mri-streamlines'
@@ -260,8 +265,10 @@ export class AtlasViewer {
     if (this.nv.fitBounds) this.emit({ focus3D: this.nv.focus3D!, camera: [this.nv.scene.renderAzimuth, this.nv.scene.renderElevation, this.nv.scene.volScaleMultiplier] })
   }
   async initialize(state: ViewState) {
-    await this.nv.attachToCanvas(this.canvas)
-    this.attached = true
+    await Promise.all([
+      this.nv.attachToCanvas(this.canvas).then(() => { this.attached = true; if (this.disposed) this.release() }),
+      this.resources.load(this.manifest.assets, this.loading.signal),
+    ])
     if (this.disposed) { this.release(); return }
     if (this.labelIndex >= 0 && this.manifest.structures.length + 1 > this.nv.gl.getParameter(this.nv.gl.MAX_TEXTURE_SIZE)) throw new Error('This package has more labels than this GPU can display in one layer.')
     this.resize.observe(this.canvas.parentElement!)
@@ -279,14 +286,17 @@ export class AtlasViewer {
     let completed = -1
     while (!this.disposed && completed !== this.generation) {
       const generation = this.generation, state = this.current!
-      await this.render(state, generation)
+      try { await this.render(state, generation) }
+      finally { this.nv.deferVolumeUploads = false }
       if (!this.disposed && generation === this.generation) this.appliedKey = imageRenderKey(state)
       completed = generation
     }
   }
   private async render(state: ViewState, generation: number) {
     const nv = this.nv
-    let backgroundUploaded = false
+    // Prepare the complete stack and compact label palette before the first
+    // upload. Adding an image or selected field must not upload a partial stack.
+    nv.deferVolumeUploads = true
     const context = new Set(contextIds(state)), renderedIds = new Set([...state.visible, ...context])
     const selectionSettings = (value: ViewState | null) => value && [value.position, value.visible, value.streamlineLevel, value.streamlineSlabMm, value.labelOpacity, value.meshOpacity, value.surfaceOpacity]
     if (this.streamlines && state.selectionEvidence?.kind === 'visible-streamline') {
@@ -297,13 +307,17 @@ export class AtlasViewer {
       this.status(`Loading ${image.name}…`)
       this.syncing = true
       try {
-        await nv.loadVolumes(this.imageOnly || this.streamlines || this.independent ? [{ url: this.base + image.file, name: image.id + '.nii.gz', colormap: 'gray', cal_min: state.window[0], cal_max: state.window[1] }] : this.model ? [{ url: this.base + labels.file, name: 'labels.nii.gz', opacity: 0, cal_min: 0, cal_max: labels.cal_max }] :
-          [{ url: this.base + image.file, name: image.id + '.nii.gz', colormap: 'gray', cal_min: state.window[0], cal_max: state.window[1] },
-           { url: this.base + labels.file, name: 'labels.nii.gz', opacity: 0, cal_min: 0, cal_max: labels.cal_max }])
+        await nv.loadVolumes(this.imageOnly || this.streamlines || this.independent ? [{ url: this.resources.url(image.file), name: image.id + '.nii.gz', colormap: 'gray', cal_min: state.window[0], cal_max: state.window[1] }] : this.model ? [{ url: this.resources.url(labels.file), name: 'labels.nii.gz', opacity: 0, cal_min: 0, cal_max: labels.cal_max }] :
+          [{ url: this.resources.url(image.file), name: image.id + '.nii.gz', colormap: 'gray', cal_min: state.window[0], cal_max: state.window[1] },
+           { url: this.resources.url(labels.file), name: 'labels.nii.gz', opacity: 0, cal_min: 0, cal_max: labels.cal_max }])
         if (this.disposed) return
-        backgroundUploaded = !this.model && nv.volumes[0].cal_min === state.window[0] && nv.volumes[0].cal_max === state.window[1]
         if (this.labelIndex >= 0) {
-          compactLabels(nv.volumes[this.labelIndex].img!, this.manifest.structures.filter(s => s.kind !== 'streamline-bundle' && s.kind !== 'independent-region'))
+          const label = nv.volumes[this.labelIndex]
+          const display = this.manifest.structures.length <= 255 ? new Uint8Array(label.img!.length) : new Uint16Array(label.img!.length)
+          compactLabels(label.img!, this.manifest.structures.filter(s => s.kind !== 'streamline-bundle' && s.kind !== 'independent-region'), display)
+          label.img = display
+          label.hdr!.datatypeCode = display instanceof Uint8Array ? 2 : 512
+          label.hdr!.numBitsPerVoxel = display.BYTES_PER_ELEMENT * 8
           // Render the browser's compact palette as categorical labels. The
           // scalar shader clamps low palette coordinates and can color label 0.
           nv.volumes[this.labelIndex].hdr!.intent_code = 1002
@@ -327,7 +341,7 @@ export class AtlasViewer {
         if (wantedOverlay) {
           const volume = this.manifest.volumes.find(v => v.id === wantedOverlay)!
           this.status('Loading selected source ' + (state.overlay === 'mask' ? 'mask…' : 'probability field…'))
-          await nv.addVolumeFromUrl({ url: this.base + volume.file, name: volume.name, colormap: 'viridis', cal_min: volume.cal_min, cal_max: volume.cal_max, opacity: state.labelOpacity })
+          await nv.addVolumeFromUrl({ url: volume.kind === 'mask' ? this.base + volume.file : this.resources.url(volume.file), name: volume.name, colormap: 'viridis', cal_min: volume.cal_min, cal_max: volume.cal_max, opacity: state.labelOpacity })
           if (this.disposed) return
           this.overlayId = wantedOverlay
           if (state.overlay === 'mask' && selected) {
@@ -345,13 +359,11 @@ export class AtlasViewer {
         const volume = this.manifest.volumes.find(v => v.id === region.mask.volume_id)!
         return { id, region, volume }
       })
-      await loadAssetsInOrder(missing, item => this.base + item.volume.file, async ({ id, region, volume }, buffer) => {
+      await loadAssetsInOrder(missing, item => this.resources.url(item.volume.file), async ({ id, region, volume }, buffer) => {
         this.status('Loading independent source memberships…')
-        // Buffered input skips URL-based decompression, so preserve the actual
-        // NIfTI suffix for the decoder instead of using the human-readable title.
-        const image = await NVImage.loadFromUrl({ url: this.base + volume.file, name: volume.file, buffer })
+        const mask = await readSourceMask(buffer, volume, region.voxel_count)
         if (this.disposed) return
-        this.masks.set(id, sparseMask(image.img!, volume, region.voxel_count))
+        this.masks.set(id, mask)
       }, this.loading.signal, () => !this.disposed && generation === this.generation)
       if (generation !== this.generation) return
     }
@@ -410,10 +422,10 @@ export class AtlasViewer {
           if (color.some((value, axis) => mesh.rgba255[axis] !== value)) mesh.setProperty('rgba255', new Uint8Array(color), nv.gl)
         }
       }
+      nv.deferVolumeUploads = false
       if (textureChanged) {
-        // loadVolumes has already uploaded the new MRI/CT with this window.
-        // Palette compaction only changes the categorical overlay.
-        if (backgroundUploaded || (this.rendered && !this.model && same(state.window, this.rendered.window))) refreshOverlayTextures(nv)
+        // A changed overlay can reuse the already displayed MRI/CT texture.
+        if (this.rendered && !this.model && same(state.window, this.rendered.window)) refreshOverlayTextures(nv)
         else nv.updateGLVolume()
       } else nv.drawScene()
       this.rendered = structuredClone(state)
@@ -426,7 +438,7 @@ export class AtlasViewer {
         const file = level?.file ?? structure.mesh_file!
         return { id, structure, level, file }
       }).filter(item => this.meshFiles.get(item.id) !== item.file)
-      await loadAssetsInOrder(missing, item => this.base + item.file, async ({ id, structure, level, file }, buffer) => {
+      await loadAssetsInOrder(missing, item => this.resources.url(item.file), async ({ id, structure, level, file }, buffer) => {
         if (this.meshes.has(id)) { this.removeMesh(id); }
         this.status(this.streamlines ? 'Loading source streamline display subset…' : 'Loading local structure surfaces…')
         this.syncing = true
@@ -441,7 +453,12 @@ export class AtlasViewer {
             mesh.fiberDither = 0; mesh.fiberColor = 'Fixed'; mesh.fiberLength = -1; mesh.fiberDecimationStride = 1
             mesh.fiberRadius = 0; mesh.fiberSides = 0; mesh.updateFibers(nv.gl)
             nv.addMesh(mesh)
-          } else mesh = await nv.addMeshFromUrl({ url: this.base + file, buffer, name: structure.source_name + '.gii', rgba255: [...(context.has(id) ? BACKGROUND_COLOR : structure.color), 255], opacity: contextOpacity(state, id, surfaceOpacity(state, id)), visible: false })
+          } else {
+            const color = [...(context.has(id) ? BACKGROUND_COLOR : structure.color), 255], opacity = contextOpacity(state, id, surfaceOpacity(state, id))
+            mesh = this.resources.isPreparedMesh(file)
+              ? addPreparedMesh(nv,buffer,structure.source_name,color,opacity)
+              : await nv.addMeshFromUrl({ url: this.resources.url(file), buffer, name: structure.source_name + '.gii', rgba255: color, opacity, visible: false })
+          }
           if (this.disposed) return
           this.meshes.set(id, mesh); this.meshFiles.set(id, file)
           this.updateCutaway(this.current!)

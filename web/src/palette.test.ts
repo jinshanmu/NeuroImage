@@ -7,6 +7,10 @@ it('renders sparse high source values in a small palette while preserving voxels
   const result = compactLabels(original.slice(), labels)
   expect(Array.from(result)).toEqual([0,1,3,0,2,3,1])
   expect(Array.from(result, value => value === 0 ? 0 : labels[value-1].label_value)).toEqual(Array.from(original))
+  const bytes = new Uint8Array(original.length)
+  compactLabels(original,labels,bytes)
+  expect(Array.from(bytes)).toEqual(Array.from(result))
+  expect(Array.from(original)).toEqual([0,4,60004,0,11,60004,4])
 })
 it('rejects duplicate labels and fractional probability values', () => {
   expect(() => compactLabels(new Uint16Array(1), [{label_value: 4}, {label_value: 4}])).toThrow()

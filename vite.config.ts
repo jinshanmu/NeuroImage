@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { createHash } from 'node:crypto'
 import { readdirSync, readFileSync } from 'node:fs'
+import { patchGradientHook } from './web/src/niivuePatch.ts'
 
 const metadata = JSON.parse(readFileSync('package.json', 'utf8'))
 const digest = createHash('sha256')
@@ -26,7 +27,12 @@ const viewer = { version: metadata.version, build_sha256: digest.digest('hex'), 
 
 export default defineConfig({
   root: 'web',
-  plugins: [react()],
+  plugins: [react(), {
+    name: 'niivue-gradient-hook',
+    transform(source, id) {
+      if (id.endsWith('/@niivue/niivue/build/niivue/index.js')) return { code: patchGradientHook(source), map: null }
+    },
+  }],
   define: { __NEUROIMAGE_VIEWER__: JSON.stringify(viewer) },
   build: { outDir: '../src/neuroimage/web', emptyOutDir: true, sourcemap: false },
   server: { host: '127.0.0.1', proxy: { '/api': 'http://127.0.0.1:8765', '/atlas': 'http://127.0.0.1:8765' } },

@@ -1,0 +1,243 @@
+{
+  "date": "2026-10-21",
+  "condition": "Local Chromium, 1440x1000, prepared workspace cache; new document to Ready plus two animation frames; complete initial geometry and source data. Browser cache may be warm.",
+  "configurations": 39,
+  "under_3_seconds": 26,
+  "canvas_pixel_comparison": "All 39 identical to the original full-precision baseline",
+  "results": [
+    {
+      "dataset": "bigbrain_hippocampus",
+      "package": "bigbrain_hippocampus-3583b4ba664391c6",
+      "structures": 14,
+      "open_ms": 2355
+    },
+    {
+      "dataset": "bigbrain_layers",
+      "package": "bigbrain_layers-28962750493fb674",
+      "structures": 14,
+      "open_ms": 2337
+    },
+    {
+      "dataset": "brainstem_navigator_mni",
+      "package": "brainstem_navigator_mni-f753cbca5de01ac4",
+      "structures": 86,
+      "open_ms": 1809
+    },
+    {
+      "dataset": "cerebra",
+      "package": "cerebra-174a5fa31f218a0d",
+      "structures": 102,
+      "open_ms": 2036
+    },
+    {
+      "dataset": "cit168_native",
+      "package": "cit168_native-12b74ee04d2fb842",
+      "structures": 16,
+      "open_ms": 2436
+    },
+    {
+      "dataset": "hba_native",
+      "package": "hba_native-b130a9babcc07247",
+      "structures": 0,
+      "open_ms": 13203
+    },
+    {
+      "dataset": "hcp1065_prob",
+      "package": "hcp1065_prob-6cfd8af637420faa",
+      "structures": 64,
+      "open_ms": 2361
+    },
+    {
+      "dataset": "hcp1065_tracts",
+      "package": "hcp1065_tracts-d646e779e4d93dce",
+      "structures": 87,
+      "open_ms": 7772
+    },
+    {
+      "dataset": "inner_ear_ct_specimen1",
+      "package": "inner_ear_ct_specimen1-8505a304d1cd522a",
+      "structures": 3,
+      "open_ms": 10571
+    },
+    {
+      "dataset": "ixi_mra",
+      "package": "ixi_mra-ef40bd2a0f6f885d",
+      "structures": 0,
+      "open_ms": 1359
+    },
+    {
+      "dataset": "julich_selected",
+      "package": "julich_selected-53ec2653119db4ba",
+      "structures": 314,
+      "open_ms": 2252
+    },
+    {
+      "dataset": "mesoveins",
+      "package": "mesoveins-5deeb2cc2ff15ee8",
+      "structures": 0,
+      "open_ms": 5306
+    },
+    {
+      "dataset": "mida",
+      "package": "mida-3374505761bc6543",
+      "structures": 51,
+      "open_ms": 8240
+    },
+    {
+      "dataset": "mouches_arteries",
+      "package": "mouches_arteries-b70c3929aa9c3de0",
+      "structures": 1,
+      "open_ms": 6443
+    },
+    {
+      "dataset": "mug500_healthy",
+      "package": "mug500_healthy-105c29c690b7272d",
+      "structures": 1,
+      "open_ms": 4844
+    },
+    {
+      "dataset": "mug500_source_mesh",
+      "package": "mug500_source_mesh-24d39ff684e5d6ce",
+      "structures": 1,
+      "open_ms": 1396
+    },
+    {
+      "dataset": "nextbrain_case1_block05",
+      "package": "nextbrain_case1_block05-2a76e6ca515b16ef",
+      "structures": 49,
+      "open_ms": 2962
+    },
+    {
+      "dataset": "nextbrain_case1_block07",
+      "package": "nextbrain_case1_block07-162d0a6bb81e32f6",
+      "structures": 15,
+      "open_ms": 3303
+    },
+    {
+      "dataset": "nextbrain_case1_block08",
+      "package": "nextbrain_case1_block08-c382663422fb6ec9",
+      "structures": 16,
+      "open_ms": 2871
+    },
+    {
+      "dataset": "nextbrain_case1_block25",
+      "package": "nextbrain_case1_block25-613e83c27c9484fb",
+      "structures": 7,
+      "open_ms": 4713
+    },
+    {
+      "dataset": "nextbrain_case1_block33",
+      "package": "nextbrain_case1_block33-6973746dc56fba92",
+      "structures": 125,
+      "open_ms": 3994
+    },
+    {
+      "dataset": "nextbrain_case1_block41",
+      "package": "nextbrain_case1_block41-335e70ef9a0e0e91",
+      "structures": 85,
+      "open_ms": 3633
+    },
+    {
+      "dataset": "nextbrain_case1_block45",
+      "package": "nextbrain_case1_block45-b79c11e74431f091",
+      "structures": 136,
+      "open_ms": 4162
+    },
+    {
+      "dataset": "nextbrain_case2_block06",
+      "package": "nextbrain_case2_block06-c05d1368c39641db",
+      "structures": 32,
+      "open_ms": 2667
+    },
+    {
+      "dataset": "nextbrain_case2_block07",
+      "package": "nextbrain_case2_block07-6c0f1658a9056e7e",
+      "structures": 46,
+      "open_ms": 2183
+    },
+    {
+      "dataset": "nextbrain_case2_block16",
+      "package": "nextbrain_case2_block16-c363da4a31687a34",
+      "structures": 41,
+      "open_ms": 2326
+    },
+    {
+      "dataset": "nextbrain_case2_block38",
+      "package": "nextbrain_case2_block38-0c51242409cb8e18",
+      "structures": 19,
+      "open_ms": 2162
+    },
+    {
+      "dataset": "spl_nac",
+      "package": "spl_nac-5540cfe690956d43",
+      "structures": 105,
+      "open_ms": 2349
+    },
+    {
+      "dataset": "suit_cerebellum",
+      "package": "suit_cerebellum-8aedcbdb455603b3",
+      "structures": 34,
+      "open_ms": 884
+    },
+    {
+      "dataset": "thu_mra_case001",
+      "package": "thu_mra_case001-3b4756cdbf0e57ca",
+      "structures": 17,
+      "open_ms": 733
+    },
+    {
+      "dataset": "thu_mra_case006",
+      "package": "thu_mra_case006-59113420268411ec",
+      "structures": 19,
+      "open_ms": 944
+    },
+    {
+      "dataset": "thu_mra_case007",
+      "package": "thu_mra_case007-b7b50d1b059e00e2",
+      "structures": 18,
+      "open_ms": 711
+    },
+    {
+      "dataset": "thu_mra_case009",
+      "package": "thu_mra_case009-74f45536d0575f3d",
+      "structures": 20,
+      "open_ms": 647
+    },
+    {
+      "dataset": "thu_mra_case010",
+      "package": "thu_mra_case010-6cc58fb03b703bd8",
+      "structures": 19,
+      "open_ms": 795
+    },
+    {
+      "dataset": "thu_mra_case014",
+      "package": "thu_mra_case014-9473fce0f5e218a6",
+      "structures": 20,
+      "open_ms": 941
+    },
+    {
+      "dataset": "thu_mra_case021",
+      "package": "thu_mra_case021-80ee0b80f4c91f19",
+      "structures": 19,
+      "open_ms": 917
+    },
+    {
+      "dataset": "thu_mra_case030",
+      "package": "thu_mra_case030-7ab8af66974506c7",
+      "structures": 19,
+      "open_ms": 893
+    },
+    {
+      "dataset": "venat",
+      "package": "venat-9c534558d7670c46",
+      "structures": 0,
+      "open_ms": 3503
+    },
+    {
+      "dataset": "z_anatomy",
+      "package": "z_anatomy-060008dffc3a5669",
+      "structures": 350,
+      "open_ms": 1017
+    }
+  ]
+}

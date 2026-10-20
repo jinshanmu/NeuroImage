@@ -132,6 +132,13 @@ def test_bookmark_recovers_only_the_exact_local_package(source, tmp_path):
             assert json.load(response)["atlas_key"] == key
         with urllib.request.urlopen(url + "/api/atlases") as response:
             assert [record["key"] for record in json.load(response)["atlases"]] == [key]
+        with urllib.request.urlopen(url + "/atlas/" + key + "/_render.json") as response:
+            browser_assets = json.load(response)["assets"]
+        image = next(asset for asset in manifest["assets"] if asset["path"].endswith(".nii.gz") and asset["role"] == "image")
+        browser = browser_assets[image["path"]]
+        with urllib.request.urlopen(url + "/atlas/" + key + "/_render/" + browser["file"]) as response:
+            assert response.headers["Content-Encoding"] == "gzip"
+            assert response.read() == (manifest_path.parent / image["path"]).read_bytes()
         with pytest.raises(urllib.error.HTTPError) as result:
             urllib.request.urlopen(url + "/api/workspace/atlases/synthetic-another-version")
         assert result.value.code == 400

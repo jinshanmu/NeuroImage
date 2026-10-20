@@ -163,7 +163,20 @@ def main(argv=None):
                     data_floor_gib=policy.get("hdd_minimum_free_gib", 400), state_floor_gib=policy.get("ssd_minimum_free_gib", 60))
                 try:
                     server = create_server([], Path(__file__).with_name("web"), args.port, workspace=manager)
+                    # Prepare reusable browser buffers before accepting browsing
+                    # requests. Newly constructed packages use the same registrar.
+                    latest = {}
+                    for record in sorted(manager.package_records(), key=lambda item: item.get("created_utc", "")):
+                        if record.get("status") == "available":
+                            latest[record["dataset_id"]] = record
+                    for record in latest.values():
+                        try:
+                            manager.register_package(record["manifest"])
+                        except (ValueError, OSError) as error:
+                            print(f"Could not prepare {record['dataset_id']}: {error}", flush=True)
                 except BaseException:
+                    if "server" in locals():
+                        server.server_close()
                     manager.close()
                     raise
             else:

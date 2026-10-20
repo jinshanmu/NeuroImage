@@ -31,11 +31,11 @@ async page => {
           await route.fulfill({json:{...data,atlases:[]}});
         });
       }
-      await page.route(url => url.pathname.startsWith('/atlas/' + source.key + '/') && /\.(nii\.gz|gii)$/.test(url.pathname), async route => {
+      await page.route(url => url.pathname.startsWith('/atlas/' + source.key + '/') && /\.(nii(?:\.gz)?|gii|ngm|nim)$/.test(url.pathname), async route => {
         if (first) { first = false; await gate; }
         await route.continue();
       });
-      const assetRequest = page.waitForRequest(request => request.url().includes('/atlas/' + source.key + '/') && /\.(nii\.gz|gii)$/.test(new URL(request.url()).pathname));
+      const assetRequest = page.waitForRequest(request => request.url().includes('/atlas/' + source.key + '/') && /\.(nii(?:\.gz)?|gii|ngm|nim)$/.test(new URL(request.url()).pathname));
       if (source === image) {
         await page.goto(origin + '/?view=anatomy');
         await page.getByRole('combobox',{name:'Source for Cerebral cortex',exact:true}).selectOption('cerebra');
@@ -71,8 +71,11 @@ async page => {
         const alternate = manifest.volumes.find(volume => volume.kind === 'image' && volume.id !== originalId);
         assert(alternate, 'The image fixture needs two original MRI contrasts.');
         const canvas = page.locator('.canvas-shell canvas'), before = await canvas.screenshot();
+        const browserAssets = await (await page.request.get(origin + '/atlas/' + source.key + '/_render.json')).json();
         const switchContrast = async volume => {
-          const response = page.waitForResponse(response => new URL(response.url()).pathname === '/atlas/' + source.key + '/' + volume.file);
+          const cached = browserAssets.assets[volume.file];
+          const path = '/atlas/' + source.key + '/' + (cached ? '_render/' + cached.file : volume.file);
+          const response = page.waitForResponse(response => new URL(response.url()).pathname === path);
           await contrast.selectOption(volume.id); await response; await ready();
         };
         await switchContrast(alternate);
@@ -87,7 +90,7 @@ async page => {
       checks.push(source.dataset_id + ': Loading stays inside the opaque atlas frame until the atlas is usable');
       await page.unrouteAll({behavior:'wait'});
     }
-    await page.route(url => url.pathname.startsWith('/atlas/' + model.key + '/') && url.pathname.endsWith('.gii'),
+    await page.route(url => url.pathname.startsWith('/atlas/' + model.key + '/') && /\.(gii|ngm)$/.test(url.pathname),
       route => route.fulfill({status:503,body:'Simulated unreadable asset'}));
     await page.goto(origin + '/?view=atlas&atlas=' + model.key);
     await page.getByRole('button',{name:'Reload viewer',exact:true}).waitFor();

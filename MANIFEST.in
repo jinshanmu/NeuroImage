@@ -92,4 +92,7 @@ global-exclude __pycache__ *.py[cod] .DS_Store
 exclude src/neuroimage/demo.py tests/test_demo.py scripts/prepare_release_model_fixture.py TEST_BRANCH_README.txt
 include scripts/browser_anatomy_release.js scripts/browser_anatomy_workflow.js scripts/browser_home_navigation.js
 include scripts/browser_atlas_loading.js
+include scripts/verify_browser_cache.mjs
+include docs/development/atlas-loading.md
+include docs/development/atlas-loading-timings.json
 include docs/development/anatomy-release-simplification.md
