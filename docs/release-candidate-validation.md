@@ -8,9 +8,9 @@ Run `python -m pytest`, `npm test`, and `npm run build` from an independently ex
 
 Browser review uses independently acquired local anatomy in an isolated profile. Check library discovery and source opening; source-specific viewing; scene save/restore; notebook capture, import, export and presentation; course recovery; ordinary and expanded layouts; open structure and learning panels; browser resizing and page zoom. The document must own vertical scrolling. Text, controls and canvas bounds must fit the page at the checked sizes. A renderer may clip its drawing surface without creating an inner page scrollbar.
 
-`scripts/browser_page_flow.js` repeats the whole-page overflow checks at 1600, 1100, 800 and 390 CSS pixels against an already opened atlas or native model. Run it through Playwright CLI in an isolated profile. It examines every visible scroll container, not just canvas ancestors.
+`scripts/browser_page_flow.js` (testing branch) repeats the whole-page overflow checks at 1600, 1100, 800 and 390 CSS pixels against an already opened atlas or native model. Run it through Playwright CLI in an isolated profile. It examines every visible scroll container, not just canvas ancestors.
 
-`scripts/browser_course_navigation.js` checks a saved course in an isolated browser profile. It warms two views of the same source and background, then verifies repeated view restoration, reuse of the same canvas and absence of repeated source-asset requests. The check changes the test course position and browser scene saves.
+`scripts/browser_course_navigation.js` (testing branch) checks a saved course in an isolated browser profile. It warms two views of the same source and background, then verifies repeated view restoration, reuse of the same canvas and absence of repeated source-asset requests. The check changes the test course position and browser scene saves.
 
 Historical browser scripts retain their documented source and interface assumptions. Their presence does not imply that every historical script was rerun for this candidate. New release evidence distinguishes current software checks from the preserved anatomical-source receipts. Engineering checks do not establish anatomical completeness or educational effectiveness.
 

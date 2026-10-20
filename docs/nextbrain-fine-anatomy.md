@@ -1,5 +1,7 @@
 # NextBrain native fine anatomy
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 Eleven source-preserving tissue-block packages extend the atlas with hippocampal layers, amygdalar subdivisions, thalamic nuclei, hypothalamic and basal forebrain regions, deep cerebellar nuclei, and detailed brainstem nuclei and pathways. Each block has the matching source-processed ex vivo T2 MRI, categorical labels, unsmoothed surfaces, original source names, citations and acquisition records. The accepted four-panel frontend is unchanged.
 
 The selected source is Case 1, P57-16, from the author's [pinned repository](https://github.com/UCL/NextBrain-Case-1/tree/21b097d599fbeae883119c768ff7897dd438d4d2). Supplementary Table 1 of the [source publication](https://doi.org/10.1038/s41586-025-09708-2) reports a right hemisphere and no incidental findings for this case. The case-level scope record is `config/nextbrain-case-scope-2026-10-13.json`. The individual packages do not use the mixed-case population atlas. The original UCL deposit supplies CC0 terms; the source lookup table is extracted separately from its archive.
@@ -49,10 +51,7 @@ Open the workspace and choose the local NextBrain tissue block. Each package inc
 
 Four `nextbrain-case2-blockNN-fine-anatomy` curricula add another 38 views and 19 built-in sequences. The `nextbrain-case2-brainstem-fine-anatomy` course connects midbrain, pons and medullary observations. The source defines fine nuclei, root assignments, tracts and crossings within the delivered blocks; the model surfaces retain that partial tissue coverage.
 
-```bash
-neuroimage teaching prepare nextbrain-case1-block05-fine-anatomy \
-  --atlas /path/to/manifest.json --data-root /path/to/data
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 The workspace can prepare the same content through the existing teaching controls. Scenes and exports retain the selected block, package signature, source identity and physical target. The labels originate from histological delineation and author reconstruction; the MRI provides context at its own sampling. Instructors can review individual examples independently of the engineering acceptance.
 

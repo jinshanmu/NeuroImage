@@ -155,9 +155,8 @@ def test_mask_origin_and_probability_units_must_be_explicitly_supported(region_s
     with pytest.raises(ValueError, match="supported probability units"): independent_catalog(recipe)
 
 
-def test_region_teaching_and_review_keep_independent_semantics(region_source):
+def test_region_review_keeps_independent_semantics(region_source):
     from neuroimage.review import prepare_review, read_plan
-    from neuroimage.teaching import prepare
     path = construct(region_source)
     packet = prepare_review(path, region_source[0], limit=2, minimum_free_gib=0)
     root = Path(packet)
@@ -166,46 +165,3 @@ def test_region_teaching_and_review_keep_independent_semantics(region_source):
     comparison = json.loads((root / plan["cases"][0]["categorical_scene_file"]).read_text())
     assert comparison["state"]["overlay"] == "mask"
     assert comparison["state"]["pan"] == [0, 0, 0, 1]
-    recipe = {"schema_version": "1.0", "id": "region-teaching", "dataset_id": "region_test", "required_source": {"id": "test", "version": "1"},
-              "title": "Independent source fixture", "author": "Generated test", "objective": "Test source memberships", "review_status": "draft_not_expert_reviewed",
-              "scenes": [{"id": "source-mask", "title": "Source mask", "selected": "region_test:region:A", "visible": ["region_test:region:A", "region_test:region:B"],
-                          "background": "t2", "prompt": "Generated fixture", "note": "Not anatomy", "display": {"overlay": "mask", "slice_zoom": 4.0, "label_opacity": .18}}]}
-    recipe_path = region_source[0] / "teaching.json"; recipe_path.write_text(json.dumps(recipe))
-    result = prepare(path, recipe_path, region_source[0], minimum_free_gib=0)
-    scene = json.loads(Path(result["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    assert scene["overlay"] == "mask" and scene["pan"][3] == 4
-    assert scene["labelOpacity"] == .18
-    reference = nib.load(region_source[1].input_paths["t2"])
-    center = nib.affines.apply_affine(reference.affine, (np.array(reference.shape) - 1) / 2)
-    np.testing.assert_allclose((center - scene["pan"][:3]) / scene["pan"][3], scene["position"])
-    step = recipe["scenes"][0]
-    step["display"]["overlay"] = "probability"
-    step["source_voxel"] = {"volume_id": "A_probability", "index": [2, 2, 4]}
-    recipe_path.write_text(json.dumps(recipe))
-    sampled = prepare(path, recipe_path, region_source[0], minimum_free_gib=0)
-    state = json.loads(Path(sampled["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    np.testing.assert_array_equal(state["position"], nib.affines.apply_affine(reference.affine, [2, 2, 4]))
-    assert state["focus3D"] == state["position"] == state["annotations"][0]["position_ras_mm"]
-    assert "recorded value 0.2" in state["note"]
-    assert state["selectionEvidence"] == {"kind": "independent-mask", "candidates": []}
-    step["source_voxel"] = {"volume_id": "A_mask", "index": [3, 4, 5]}
-    recipe_path.write_text(json.dumps(recipe))
-    sampled = prepare(path, recipe_path, region_source[0], minimum_free_gib=0)
-    state = json.loads(Path(sampled["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    assert state["selectionEvidence"] == {"kind": "independent-mask", "candidates": ["region_test:region:A", "region_test:region:B"]}
-    step["visible"] = ["region_test:region:A"]
-    recipe_path.write_text(json.dumps(recipe))
-    sampled = prepare(path, recipe_path, region_source[0], minimum_free_gib=0)
-    state = json.loads(Path(sampled["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    assert state["selectionEvidence"] == {"kind": "independent-mask", "candidates": ["region_test:region:A"]}
-    step["display"]["slice_zoom"] = 1.0
-    recipe_path.write_text(json.dumps(recipe))
-    sampled = prepare(path, recipe_path, region_source[0], minimum_free_gib=0)
-    state = json.loads(Path(sampled["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    assert state["pan"] == [0, 0, 0, 1]
-    np.testing.assert_array_equal(state["position"], nib.affines.apply_affine(reference.affine, [3, 4, 5]))
-    for anchor, message in [({"volume_id": "B_probability", "index": [2, 2, 4]}, "selected structure"),
-                            ({"volume_id": "A_probability", "index": [-1, 2, 4]}, "outside"),
-                            ({"volume_id": "A_probability", "index": [0, 0, 0]}, "positive recorded")]:
-        step["source_voxel"] = anchor; recipe_path.write_text(json.dumps(recipe))
-        with pytest.raises(ValueError, match=message): prepare(path, recipe_path, region_source[0], minimum_free_gib=0)

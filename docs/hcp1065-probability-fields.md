@@ -1,5 +1,7 @@
 # HCP1065 independent white matter probability fields
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 The `hcp1065_prob` recipe adds all 64 original NIfTI probability fields from the [author's HCP1065 release](https://brain.labsolver.org/hcp_trk_atlas.html). It complements the existing 87 streamline bundles. Association, cingulum, fornix, descending, corticostriatal, corticopontine and thalamic subdivisions are available, together with corpus callosum body, forceps major, forceps minor and tapetum fields. Original file names and stable source IDs are retained, including the publisher's `Cingulum_Rarolfactory` spelling.
 
 The source is diffusion-tractography population inference from HCP young adults. Probability describes source tractography support through a template voxel. Each field retains its complete original scalar values and overlaps with other fields. The downloaded inventory has 64 files; the paper's main analysis describes 52 pathways. These refer to different inventories. The paper also reports differing tracking yields for several bundles. The project retains published values rather than recomputing denominators.
@@ -29,7 +31,7 @@ Eleven source-grounded lesson sequences cover every field. Four curricula provid
 - `hcp1065-association-limbic-probability`: 34 views.
 - `hcp1065-projection-commissural-probability`: 34 views.
 
-Prepare either with `neuroimage teaching course-prepare PLAN --packages choices.json --data-root /path/to/data`, where the choices file maps `hcp1065_prob` to an exact local package key. The first attempted combined course exceeded 10 MiB; all four completed notebooks were reused by the two final plans. The dated benchmark retains that diagnostic and the preparation receipts.
+In the testing branch, prepare either with `neuroimage teaching course-prepare PLAN --packages choices.json --data-root /path/to/data`, where the choices file maps `hcp1065_prob` to an exact local package key. The first attempted combined course exceeded 10 MiB; all four completed notebooks were reused by the two final plans. The dated benchmark retains that diagnostic and the preparation receipts.
 
 ## Engineering evidence and instructor review
 

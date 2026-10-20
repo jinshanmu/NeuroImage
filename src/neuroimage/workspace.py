@@ -1,9 +1,8 @@
-"""Local source-to-teaching jobs with separate state storage and reusable checkpoints."""
+"""Local atlas acquisition and construction jobs with separate state storage and reusable checkpoints."""
 from __future__ import annotations
 
 import argparse
 import fcntl
-import hashlib
 import json
 import os
 from pathlib import Path
@@ -23,8 +22,7 @@ from .acquire import acquisition_plan, capacity, destination
 from .adapters import load_recipe, recipe_names
 from .build import GIB, atomic_json, utc_now
 from .coverage import module_catalog, source_coverage, source_details
-from .library import BINDING_BYTES_LIMIT, content_binding, library_records
-from .teaching import curriculum_names, curriculum_path, curriculum_matches
+from .library import BINDING_BYTES_LIMIT, library_records
 
 JOB_ID = re.compile(r"^[a-f0-9]{32}$")
 ACTIVE = {"running", "stopping"}
@@ -33,19 +31,15 @@ LOG_LIMIT = 1024 ** 2
 
 class JobRequest(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
-    action: Literal["acquire", "build", "activate", "prepare", "prepare-course"]
+    action: Literal["acquire", "build", "activate"]
     recipe: str | None = Field(default=None, min_length=1, max_length=100)
     package_key: str | None = Field(default=None, min_length=1, max_length=256)
-    curriculum: str | None = Field(default=None, min_length=1, max_length=100)
-    course_plan: str | None = Field(default=None, min_length=1, max_length=100)
-    package_keys: dict[str, str] | None = Field(default=None, min_length=1, max_length=32)
 
     @model_validator(mode="after")
     def required_fields(self):
         expected = {"acquire": {"recipe"}, "build": {"recipe"},
-                    "activate": {"package_key"}, "prepare": {"package_key", "curriculum"},
-                    "prepare-course": {"course_plan", "package_keys"}}[self.action]
-        supplied = {name for name in ("recipe", "package_key", "curriculum", "course_plan", "package_keys") if getattr(self, name) is not None}
+                    "activate": {"package_key"}}[self.action]
+        supplied = {name for name in ("recipe", "package_key") if getattr(self, name) is not None}
         if supplied != expected:
             raise ValueError(f"Action {self.action} requires exactly: {', '.join(sorted(expected))}")
         return self
@@ -108,7 +102,7 @@ class Workspace:
                     job = load_small_json(folder / "status.json")
                     if job.get("id") != folder.name:
                         continue
-                    if job.get("status") in ACTIVE:
+                    if job.get("status") in ACTIVE and job.get("request", {}).get("action") not in {"prepare", "prepare-course"}:
                         job.update(status="interrupted", finished_utc=utc_now(),
                                    detail="The previous workspace ended. Run the same operation to reuse verified source files and checkpoints.")
                         atomic_json(folder / "status.json", job)
@@ -160,7 +154,6 @@ class Workspace:
             return value
 
     def catalog(self, *, jobs_offset=0):
-        from .course_plans import plan_catalog
         if not isinstance(jobs_offset, int) or isinstance(jobs_offset, bool) or jobs_offset < 0:
             raise ValueError("Operation history offset must be a nonnegative integer")
         import shutil
@@ -177,22 +170,17 @@ class Workspace:
                                 "build_capacity_sufficient": plan["free_bytes"] >= peak + self.data_floor_gib * GIB})
             except (ValueError, OSError) as error:
                 sources.append({"id": name, "title": recipe["title"], "error": str(error), "sources": recipe["sources"], "coverage": source_coverage(name)})
-        books, book_recipes = [], {}
-        for name in curriculum_names():
-            recipe = json.loads(curriculum_path(name).read_text())
-            book_recipes[name] = recipe
-            books.append({"id": name, "dataset_id": recipe["dataset_id"], "title": recipe["title"],
-                          "scenes": len(recipe["scenes"]), "review_status": recipe["review_status"]})
         records = self.package_records()
         for record in records:
             if record.get("status") == "available":
                 record["key"] = package_key(record)
                 manifest = load_small_json(record["manifest"], BINDING_BYTES_LIMIT)
-                record["compatible_curricula"] = [name for name, recipe in book_recipes.items() if curriculum_matches(recipe, manifest)]
                 record["coverage"] = source_coverage(record["dataset_id"], manifest["structures"])
                 record["detail_coverage"] = source_details(record["dataset_id"], manifest["structures"])
         with self._lock:
-            ordered = sorted(self.jobs.values(), key=lambda j: (j["started_utc"], j["id"]), reverse=True)
+            ordered = sorted((job for job in self.jobs.values()
+                              if job.get("request", {}).get("action") in {"acquire", "build", "activate"}),
+                             key=lambda j: (j["started_utc"], j["id"]), reverse=True)
             jobs = ordered[jobs_offset:jobs_offset + 30]
             jobs = json.loads(json.dumps(jobs))
             active = self._active_id
@@ -200,7 +188,7 @@ class Workspace:
                 "data_free_bytes": shutil.disk_usage(self.data_root).free,
                 "state_free_bytes": shutil.disk_usage(self.state_root).free,
                 "data_floor_gib": self.data_floor_gib, "state_floor_gib": self.state_floor_gib,
-                "workers": self.workers, "sources": sources, "packages": records, "curricula": books, "course_plans": plan_catalog(),
+                "workers": self.workers, "sources": sources, "packages": records,
                 "modules": [{"id": module["id"], "title": module["title"]} for module in module_catalog()],
                 "jobs": jobs, "jobs_total": len(ordered), "jobs_offset": jobs_offset, "jobs_limit": 30, "active_job": active,
                 "source_status_scope": "Presence and size metadata only; acquisition and construction verify source hashes. Opening an atlas verifies its assets and geometry."}
@@ -221,26 +209,11 @@ class Workspace:
             budget = (acquisition_plan(request["recipe"], self.data_root, minimum_free_gib=self.data_floor_gib)["peak_additional_bytes"]
                       if action == "acquire" else max(2, float(recipe.get("construction_peak_gib", 2))) * GIB)
             capacity(self.data_root, budget, self.data_floor_gib)
-        elif action == "prepare-course":
-            from .course_plans import plan_names, plan_path, read_plan, resolve_packages
-            if request["course_plan"] not in plan_names():
-                raise ValueError("Choose an installed course plan")
-            resolve_packages(read_plan(plan_path(request["course_plan"])), request["package_keys"], self.data_root)
-            capacity(self.data_root, 128 * 1024 ** 2, self.data_floor_gib)
         else:
             matches = [r for r in self.package_records() if r.get("status") == "available" and package_key(r) == request["package_key"]]
             if len(matches) != 1:
                 raise ValueError("Choose exactly one available local atlas version")
             request["manifest"] = matches[0]["manifest"]
-            if action == "prepare":
-                if request["curriculum"] not in curriculum_names():
-                    raise ValueError("Choose an installed teaching recipe")
-                recipe = json.loads(curriculum_path(request["curriculum"]).read_text())
-                if recipe["dataset_id"] != matches[0]["dataset_id"]:
-                    raise ValueError("This teaching recipe belongs to another source dataset")
-                if not curriculum_matches(recipe, load_small_json(request["manifest"], BINDING_BYTES_LIMIT)):
-                    raise ValueError("This atlas version lacks the source version or structures required by the teaching recipe")
-                capacity(self.data_root, 64 * 1024 ** 2, self.data_floor_gib)
         return request
 
     def _command(self, request_path):
@@ -312,10 +285,6 @@ class Workspace:
             if not stopped and code == 0 and result:
                 if result.get("manifest") and self.register_package:
                     result["atlas_key"] = self.register_package(Path(result["manifest"]))
-                if result.get("notebook"):
-                    result["notebook_sha256"] = hashlib.sha256(Path(result["notebook"]).read_bytes()).hexdigest()
-                    result["content_url"] = "/api/workspace/content/" + ident
-                    result["open_url"] = "/?workspace-content=" + ident
             with self._lock:
                 job = self.jobs[ident]
                 if stopped or job["status"] == "stopping":
@@ -375,32 +344,6 @@ class Workspace:
                 except ProcessLookupError:
                     pass
 
-    def content(self, ident):
-        if not JOB_ID.fullmatch(ident):
-            raise ValueError("Unknown prepared teaching file")
-        with self._lock:
-            job = self.jobs.get(ident)
-            if not job or job.get("status") != "complete" or job["request"]["action"] != "prepare":
-                raise ValueError("This job has no completed teaching file")
-            result = dict(job["result"])
-        path = Path(result["notebook"])
-        if not path.resolve().is_relative_to(self.data_root / "exports"):
-            raise ValueError("The teaching file is outside the configured export root")
-        book = load_small_json(path, BINDING_BYTES_LIMIT)
-        if hashlib.sha256(path.read_bytes()).hexdigest() != result["notebook_sha256"]:
-            raise ValueError("The prepared file has changed; open the edited file explicitly with neuroimage open")
-        binding = content_binding(path)
-        if binding["package_id"] + "-" + binding["package_version"] != result["atlas_key"]:
-            raise ValueError("The prepared file no longer matches its exact source package")
-        manifest = load_small_json(result["manifest"], BINDING_BYTES_LIMIT)
-        identity = {"package_id": manifest["package_id"], "package_version": manifest["package_version"],
-                    "build_signature": manifest["build"]["signature"], "space_id": manifest["space"]["id"]}
-        if any(binding[key] != value for key, value in identity.items()):
-            raise ValueError("The local atlas no longer matches the exact prepared teaching source")
-        if self.register_package:
-            self.register_package(Path(result["manifest"]))
-        return {"atlas_key": result["atlas_key"], "content": book}
-
     def close(self):
         with self._lock:
             if self._closed:
@@ -435,15 +378,6 @@ def run_worker(path):
         result = {"manifest": str(build_atlas(request["recipe"], root, workers=request["workers"], minimum_free_gib=floor))}
     elif action == "activate":
         result = {"manifest": request["manifest"]}
-    elif action == "prepare":
-        from .teaching import prepare
-        result = {**prepare(request["manifest"], curriculum_path(request["curriculum"]), root, minimum_free_gib=floor),
-                  "manifest": request["manifest"]}
-    elif action == "prepare-course":
-        from .course_plans import plan_path, prepare_course
-        result = prepare_course(plan_path(request["course_plan"]), request["package_keys"], root,
-                                minimum_free_gib=floor, progress=lambda event: print(json.dumps(event), flush=True))
-        result["open_url"] = "/?course=" + result["course_id"]
     else:
         raise ValueError("Unknown workspace operation")
     print(json.dumps({"event": "workspace-result", "result": result}), flush=True)

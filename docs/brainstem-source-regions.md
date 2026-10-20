@@ -1,5 +1,7 @@
 # Independent brainstem regions
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 NeuroImage 0.10.0 extends the original twelve-region package to all 76 delivered MNI brainstem fields and all ten delivered MNI diencephalic fields through the shared local workflow. The catalogue retains both whole regions and their source subdivisions, so its 86 entries are not 86 independent nuclei. The original twelve-region package remains available for earlier teaching scenes. Each region retains its complete scalar probability field and its independently delivered binary navigation mask. Overlaps remain simultaneous memberships.
 
 ## Source and scope
@@ -40,11 +42,7 @@ After moving the cursor, **Source mask membership at cursor** lists every visibl
 
 ## Prepare and teach
 
-```bash
-neuroimage teaching prepare brainstem-source-regions \
-  --atlas "$NEUROIMAGE_MANIFEST" --data-root "$NEUROIMAGE_DATA_ROOT"
-neuroimage open "$NEUROIMAGE_NOTEBOOK" --data-root "$NEUROIMAGE_DATA_ROOT"
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 Set `NEUROIMAGE_NOTEBOOK` to the preparer's printed notebook path. The installed six-view curriculum covers paired red nuclei with nigral context, the binary mask in FA context, collicular source regions, a verified PAG/DR overlap voxel, positive PAG support outside its binary mask, and paired inferior olivary regions. The views include editable prompts, notes, source-bound points and exact display settings. Return to the recorded view after exploration, advance through the sequence and export a credited image or the portable notebook. Opening a file preserves an existing saved browser notebook.
 
@@ -54,7 +52,7 @@ The expanded nine built-in exploration sequences, retained six-view example and 
 
 ## Verify and recover
 
-`scripts/check_independent_regions.py` compares every output scalar value and affine with the independently acquired NIfTI files using direct NiBabel reads. It also checks the inclusive threshold, source-side centroids and every overlapping voxel. `scripts/browser_independent_regions.js` exercises the actual browser; `scripts/check_region_browser.py` independently compares its readouts and GPU mesh digests with source arrays and GIFTI geometry, and checks restoration pixels and export notices. These engineering checks do not establish histological accuracy.
+`scripts/check_independent_regions.py` compares every output scalar value and affine with the independently acquired NIfTI files using direct NiBabel reads. It also checks the inclusive threshold, source-side centroids and every overlapping voxel. `scripts/browser_independent_regions.js` (testing branch) exercises the actual browser; `scripts/check_region_browser.py` independently compares its readouts and GPU mesh digests with source arrays and GIFTI geometry, and checks restoration pixels and export notices. These engineering checks do not establish histological accuracy.
 
 Scenes and notebooks require the exact package signature and native space. Use `neuroimage locate <file> --data-root <root>` to find the matching manifest, then `neuroimage open <file> --data-root <root>`. Preserve user-edited exports and review assessments separately from reconstructible caches. Build and serving use the same entry points as all other datasets, including side-by-side native-space comparison. No cross-atlas anatomical fusion is implied.
 

@@ -1,7 +1,7 @@
 async page=>{
   const origin=new URL(page.url()).origin,errors=[];const assert=(ok,message)=>{if(!ok)throw Error(message)};
   const onError=error=>errors.push(String(error));page.on('pageerror',onError);
-  const ready=async()=>{await page.waitForFunction(()=>/^(Ready|Scene saved|Saved scene restored|Scene file restored|Teaching export prepared)/.test(document.querySelector('.live-status')?.textContent??''),null,{timeout:120000});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))};
+  const ready=async()=>{await page.waitForFunction(()=>/^(Ready|Scene saved|Saved scene restored|Scene file restored|Image export prepared)/.test(document.querySelector('.live-status')?.textContent??''),null,{timeout:120000});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))};
   await ready();const source=await page.getByLabel('Source',{exact:true}).inputValue();
   assert(source==='julich_selected-53ec2653119db4ba','Open the exact inspected Julich source for this pointer fixture.');
   const position=()=>Promise.all(['R','A','S'].map(axis=>page.getByLabel(axis+' coordinate in millimeters').inputValue().then(Number)));
@@ -30,7 +30,7 @@ async page=>{
   await page.getByLabel('Import scene file',{exact:true}).setInputFiles(output+'/scene.json');await ready();await page.mouse.move(10,20);
   assert(await page.getByLabel('View layout',{exact:true}).inputValue()==='anatomy','Portable import lost the large 3D layout.');
   assert(baseline.equals(await canvas.screenshot()),'Portable layout import changed rendered pixels.');
-  event=page.waitForEvent('download');await page.getByRole('button',{name:'Export teaching image',exact:true}).click();await(await event).saveAs(output+'/teaching.zip');
+  event=page.waitForEvent('download');await page.getByRole('button',{name:'Export image',exact:true}).click();await(await event).saveAs(output+'/teaching.zip');
   page.off('pageerror',onError);assert(!errors.length,errors.join('\n'));
   return {status:'passed',source,initial,coronal_pointer:section,surface_pointer:surface,restored_pixel_difference:0,imported_pixel_difference:0,page_errors:errors,checks:['Three unchanged source image planes beside enlarged 3D','Layout switch retains native coordinates','Actual coronal pointer keeps its A coordinate','Actual 3D source surface updates linked image location','Left CA1 selection from inspected source surface','Pixel-identical scene restoration and portable import','Credited teaching export']};
 }

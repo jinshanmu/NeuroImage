@@ -5,7 +5,7 @@ import { readdirSync, readFileSync } from 'node:fs'
 
 const metadata = JSON.parse(readFileSync('package.json', 'utf8'))
 const digest = createHash('sha256')
-const files = ['package.json', 'package-lock.json', 'vite.config.ts', 'tsconfig.json', 'web/index.html', 'src/neuroimage/catalogs/teaching-evidence.json',
+const files = ['package.json', 'package-lock.json', 'vite.config.ts', 'tsconfig.json', 'web/index.html',
   ...readdirSync('web/src', { recursive: true }).filter(name => /\.(ts|tsx|css)$/.test(String(name)) && !String(name).endsWith('.test.ts')).map(name => 'web/src/' + name)]
 for (const file of files.sort()) { digest.update(file + '\0'); digest.update(readFileSync(file)) }
 const viewer = { version: metadata.version, build_sha256: digest.digest('hex'), renderer: 'NiiVue', renderer_version: metadata.dependencies['@niivue/niivue'],
@@ -22,7 +22,7 @@ const viewer = { version: metadata.version, build_sha256: digest.digest('hex'), 
   source_model: { coordinates: 'Independent SOURCE_XYZ millimeters; no RAS assignment or image volume', selection: 'native triangle surface distance after framebuffer-depth unprojection; no source vertex changes', default_framing: 'complete visible source bounds before user magnification', selection_highlight: 'optional cyan display color; preserved in scenes; legacy scenes retain source colors' },
   image_panel_layout: 'responsive fit, explicit grid or row; retained in scene; legacy scenes preserve the original grid; equal anatomy panels stay in one full-width row at every window size; 3D is last on the right; optional visible-source bounds fitting preserves complete geometry',
   depth_picking: 'integer framebuffer pixel read and matching pixel-center unprojection; explicit 24-bit RGB integer depth without dithering; unblended surface depth for positive-opacity geometry; hidden and zero-opacity geometry excluded',
-  teaching_markers: { source: 'user-authored RAS coordinates', slice_tolerance_mm: .05, three_dimensional: 'projected-through-anatomy' } }
+  scene_markers: { source: 'preserved source-bound RAS annotations', slice_tolerance_mm: .05, three_dimensional: 'projected-through-anatomy' } }
 
 export default defineConfig({
   root: 'web',

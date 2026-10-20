@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { initialModelView, modelScene, readModelScene, modelNotebook, readModelNotebook } from './modelScene'
+import { initialModelView, modelScene, readModelScene } from './modelScene'
 import type { NativeSourceAnnotation, SurfaceManifest } from './modelTypes'
 
 const manifest:SurfaceManifest={schema_version:'1.7',representation:'surface-model',package_id:'fixture',dataset_id:'fixture',title:'Synthetic source model',package_version:'v1',
@@ -37,8 +37,6 @@ it('round-trips a source XYZ view with camera, clipping, markers and notes',()=>
   const scene=modelScene(manifest,state)
   expect(readModelScene(JSON.parse(JSON.stringify(scene)),manifest).state).toEqual(state)
   expect(JSON.stringify(scene.state)).not.toMatch(/position_ras|background|imageContext/)
-  const book=modelNotebook(manifest);book.scenes=[{id:'view-1',title:'Test view',prompt:'Observe the synthetic object.',scene}]
-  expect(readModelNotebook(book,manifest).scenes[0].scene.state).toEqual(state)
 })
 
 it('retains selection highlighting while keeping legacy source colors unchanged',()=>{
@@ -54,10 +52,9 @@ it('rejects another model version, invented RAS assignment and unknown or malfor
   expect(()=>readModelScene({...scene,package_version:'v2'},manifest)).toThrow('exact original')
   for(const change of [{coordinate_system:'RAS'},{visible:['unknown']},{position_native_mm:[0,1,NaN]},{surfaceOpacity:{unknown:.4}},{background:'pretend-mri'}])
     expect(()=>readModelScene({...scene,state:{...scene.state,...change}},manifest)).toThrow()
-  expect(()=>readModelNotebook({...modelNotebook(manifest),scenes:[null]},manifest)).toThrow('Invalid model notebook view')
 })
 
-it('preserves original source annotation evidence through scene and notebook recapture',()=>{
+it('preserves original source annotation evidence through scene recapture',()=>{
   const source=structuredClone(manifest)
   source.build.inputs=[{id:'fixture',sha256:'b'.repeat(64)}]
   source.build.recipe={adapter:'blender-source-surfaces',mesh_geometry_stage:'author-viewport'}
@@ -72,8 +69,6 @@ it('preserves original source annotation evidence through scene and notebook rec
   const scene=readModelScene(JSON.parse(JSON.stringify(modelScene(source,state))),source)
   expect(scene.state.annotations[0].source_annotation).toEqual(record)
   expect(scene.provenance.source_annotations).toEqual([record])
-  const book=modelNotebook(source);book.scenes=[{id:'one',title:'Source marker',prompt:'Inspect the original annotation.',scene}]
-  expect(readModelNotebook(book,source).scenes[0].scene.provenance.source_annotations).toEqual([record])
   for(const change of [{source_sha256:'a'.repeat(64)},{context_object:'Other'},{source_stage:'base'},{hook_vertex_indices:[0]},
     {position_native_mm:[0,0,0]},{points_native_mm:[[498,-199,1603],[495,-196,1607]]},{context_transform_to_native_mm:null}]){
     const bad=structuredClone(scene);Object.assign(bad.state.annotations[0].source_annotation!,change)
@@ -81,4 +76,11 @@ it('preserves original source annotation evidence through scene and notebook rec
   }
   const moved=structuredClone(scene);moved.state.annotations[0].position_native_mm[0]+=1
   expect(()=>readModelScene(moved,source)).toThrow('native point')
+})
+
+it('opens a historical model lesson as ordinary source anatomy',()=>{
+  const state=initialModelView(manifest)
+  const legacy={...modelScene(manifest,state),state:{...state,lesson_id:'old',lesson_step:9,lesson_answer:'Preserved original',lesson_revealed:false}}
+  expect(readModelScene(legacy,manifest).state).toEqual(state)
+  expect(legacy.state.lesson_answer).toBe('Preserved original')
 })

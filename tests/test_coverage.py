@@ -2,7 +2,6 @@
 from copy import deepcopy
 
 from neuroimage.coverage import source_coverage, source_details, topic_catalog
-from neuroimage.teaching import curriculum_matches
 
 
 def test_old_model_does_not_claim_new_specialist_labels():
@@ -39,22 +38,3 @@ def test_image_region_coverage_requires_native_context_without_claiming_cistern_
     coverage = {entry["id"]: entry for entry in source_coverage("spl_nac", entries)}
     assert coverage["cisternal-regions"]["structures"] == 0
     assert "cisternal-regions" not in {entry["id"] for entry in source_coverage("spl_nac", entries[:-1])}
-
-
-def test_teaching_compatibility_checks_exact_source_and_required_evidence():
-    manifest = {"dataset_id": "fixture", "sources": [{"id": "source", "version": "1"}],
-                "representation": "mri-labels", "structures": [{"id": "first"}],
-                "volumes": [{"id": "t2", "kind": "image"}, {"id": "labels", "kind": "labels"}]}
-    recipe = {"dataset_id": "fixture", "required_source": {"id": "source", "version": "1"},
-              "scenes": [{"selected": "first", "visible": ["first"], "background": "t2"}]}
-    assert curriculum_matches(recipe, manifest)
-    changed = deepcopy(recipe); changed["scenes"][0]["visible"].append("new-nerve")
-    assert not curriculum_matches(changed, manifest)
-    changed = deepcopy(recipe); changed["scenes"][0]["display"] = {"surface_opacity": {"missing-context": .2}}
-    assert not curriculum_matches(changed, manifest)
-    changed = deepcopy(recipe); changed["required_source"]["version"] = "2"
-    assert not curriculum_matches(changed, manifest)
-    changed = deepcopy(recipe); changed["scenes"][0]["source_voxel"] = {"volume_id": "absent-probability", "index": [0, 0, 0]}
-    assert not curriculum_matches(changed, manifest)
-    changed = deepcopy(manifest); changed["representation"] = "label-model"
-    assert not curriculum_matches(recipe, changed)

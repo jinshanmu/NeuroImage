@@ -5,8 +5,7 @@
       "enum": [
         "acquire",
         "build",
-        "activate",
-        "prepare"
+        "activate"
       ],
       "title": "Action",
       "type": "string"
@@ -38,20 +37,6 @@
       ],
       "default": null,
       "title": "Package Key"
-    },
-    "curriculum": {
-      "anyOf": [
-        {
-          "maxLength": 100,
-          "minLength": 1,
-          "type": "string"
-        },
-        {
-          "type": "null"
-        }
-      ],
-      "default": null,
-      "title": "Curriculum"
     }
   },
   "required": [

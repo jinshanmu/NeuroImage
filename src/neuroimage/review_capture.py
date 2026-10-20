@@ -15,11 +15,8 @@ SCRIPT = r'''async page => {
   const catalog = await page.evaluate(async () => (await (await fetch('/api/atlases')).json()).atlases);
   const atlas = catalog.find(a => a.key === work.package_id + '-' + work.package_version);
   if (!atlas) throw new Error('The matching review package must be offered by the current local service.');
-  const compare = page.getByRole('checkbox', {name:'Compare native spaces',exact:true});
-  if (await compare.isChecked()) await compare.uncheck();
-  await page.getByRole('combobox',{name:'Local atlas',exact:true}).selectOption(atlas.key);
-  await page.waitForSelector('button.primary:not([disabled])', {timeout:45000});
-  await page.getByRole('button',{name:'Inspect',exact:true}).click();
+  await page.goto(new URL('/?view=atlas&atlas=' + encodeURIComponent(atlas.key), page.url()).href);
+  await page.waitForFunction(() => document.querySelector('.live-status')?.textContent?.startsWith('Ready'), null, {timeout:120000});
   const completed=[];
   for (const item of work.cases) {
     await page.locator('.scene-toolbar input[type=file]').setInputFiles(item.scene);
@@ -27,7 +24,7 @@ SCRIPT = r'''async page => {
     if (await page.getByRole('alert').count()) throw new Error(await page.getByRole('alert').textContent());
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     const download = page.waitForEvent('download');
-    await page.getByRole('button',{name:'Export teaching image',exact:true}).click();
+    await page.getByRole('button',{name:'Export image',exact:true}).click();
     await (await download).saveAs(item.output);
     completed.push(item.id);
   }
@@ -39,9 +36,6 @@ SCRIPT = r'''async page => {
 def capture_review(packet, *, cli="playwright-cli", session="neuroimage"):
     root = Path(packet).resolve(); plan = read_plan(root)
     assembled = assemble_review(root)
-    if plan["kind"] == "neuroimage-notebook-review-packet":
-        print(json.dumps(assembled), flush=True)
-        return assembled
     state_path = root / "capture-state.json"
     state = json.loads(state_path.read_text())["completed"] if state_path.exists() else {}
     pending = [case for case in plan["cases"] if case["id"] not in state or not (root / case["image_file"]).is_file()

@@ -1,5 +1,7 @@
 # Native MRA image observations
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 NeuroImage 0.10 adds an explicit image-only representation (`mri-volume`, manifest 1.6). It packages one original NIfTI acquisition in its native space, with zero invented structures and no label volume, segmented surface or computed vessel centerline. It uses the same acquisition, construction, validation, workspace, scene, notebook and credited-export interfaces as the labelled atlas sources.
 
 The first recipe selects `IXI002-Guys-0828-MRA.nii.gz` from the existing IXI MRA archive. The [official IXI page](https://brain-development.org/ixi-dataset/) describes a healthy-subject cohort and specifies [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). Preserve the source attribution and applicable data-license terms in derivatives. Cohort membership is not an independent expert review of this particular image.
@@ -28,11 +30,7 @@ The 3D intensity view uses the pinned renderer's ray rendering. It is not a maxi
 
 Teaching markers and notes may describe an observation, with their structure association left empty. No automatic structure-identification answers are provided. Scene files and prepared notebooks retain contrast, intensity-render visibility, camera, native position and annotations. Exported images retain source attribution, exact display state, renderer identity and source-license evidence. The notebook can be prepared directly:
 
-```bash
-neuroimage teaching prepare ixi-native-mra-observation \
-  --atlas /path/on/hdd/NeuroImage/derivatives/ixi_mra/PACKAGE_VERSION/manifest.json \
-  --data-root /path/on/hdd/NeuroImage
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 Use `neuroimage review notebook` with the captured views for image-observation review. Structure-review packets require actual source structures and are not generated for image-only packages. Independent review remains pending until an explicitly scoped instructor judgment is recorded.
 
@@ -40,4 +38,4 @@ Use `neuroimage review notebook` with the captured views for image-observation r
 
 The native voxel axes are LAS in an oblique millimeter grid. RAS display coordinates describe this acquisition only; they do not establish AC-PC alignment, template registration or correspondence with another IXI contrast. Different images remain independent in comparison panels. Filename subject identity alone does not validate an image fusion.
 
-`scripts/browser_native_image.js` exercises source-voxel sampling, outside-coverage handling, contrast, volume visibility, display convention, magnification, annotations and scene recovery in a real Linux browser. `scripts/check_native_image.py` independently reads the original NIfTI and compares bytes, arrays, affine, source samples, unchanged 2D pixels during 3D toggling, restored pixels and export attribution. `scripts/browser_native_image_teaching.js` captures the four prepared views and a same-point full/magnified pair. These are engineering checks, not expert anatomical approval or evidence of a population variation distribution.
+`scripts/browser_native_image.js` (testing branch) exercises source-voxel sampling, outside-coverage handling, contrast, volume visibility, display convention, magnification, annotations and scene recovery in a real Linux browser. `scripts/check_native_image.py` independently reads the original NIfTI and compares bytes, arrays, affine, source samples, unchanged 2D pixels during 3D toggling, restored pixels and export attribution. `scripts/browser_native_image_teaching.js` (testing branch) captures the four prepared views and a same-point full/magnified pair. These are engineering checks, not expert anatomical approval or evidence of a population variation distribution.

@@ -19,7 +19,7 @@ export function projectSliceMarker(position: Vec3, slice: Slice): [number, numbe
   return [left + fx * width, top + (1 - fy) * height]
 }
 
-/** Numbered teaching overlays using the pinned renderer's actual view matrices. */
+/** Retained scene annotations using the pinned renderer's actual view matrices. */
 export class TeachingNiivue extends MeshResourceNiivue {
   markers: Annotation[] = []
   showMarkers = true

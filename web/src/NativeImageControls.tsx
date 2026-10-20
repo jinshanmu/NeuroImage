@@ -17,7 +17,7 @@ export function NativeImageControls({ manifest, state, value, ready, base, patch
       if (next.every(Number.isFinite) && next[0] < next[1]) patch({ window: next })
     }}/></label>)}
     <button disabled={!ready} onClick={() => patch({ window: [image.cal_min, image.cal_max] })}>Reset image contrast</button>
-    <p className="small muted">{image.scalar ? 'The 3D view displays the original statistical field. Read values in the recorded source units and use the metric definition for interpretation.' : 'The 3D view displays source intensities. Study bright structures in adjacent source sections and record image observations with teaching markers.'}</p>
+    <p className="small muted">{image.scalar ? 'The 3D view displays the original statistical field. Read values in the recorded source units and use the metric definition for interpretation.' : 'The 3D view displays source intensities. Inspect bright structures in adjacent source sections and save a scene to retain the current view.'}</p>
     {image.scalar && <details><summary>Field definition</summary><p>{image.scalar.derivation}</p><p>{image.scalar.reference}</p></details>}
     <a href={base + image.file} download>Download {image.native_frame ? 'native frame' : 'original'} NIfTI {image.scalar ? 'field' : 'image'}</a>
     {image.native_frame && <p><a href={base+image.native_frame.source_file} download>Download original complete source series</a></p>}

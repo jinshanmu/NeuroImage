@@ -93,7 +93,8 @@ def test_request_schema_rejects_commands_paths_and_mismatched_actions(workspace)
 
 
 def test_history_pages_preserve_every_completed_record_and_stable_order(workspace):
-    workspace.jobs = {f"{index:032x}": {"id": f"{index:032x}", "started_utc": "2026-10-13T00:00:00Z", "status": "complete"}
+    workspace.jobs = {f"{index:032x}": {"id": f"{index:032x}", "started_utc": "2026-10-13T00:00:00Z", "status": "complete",
+                                      "request": {"action": "activate", "package_key": "synthetic"}}
                       for index in range(65)}
     original = json.dumps(workspace.jobs, sort_keys=True)
     pages = [workspace.catalog(jobs_offset=offset) for offset in (0, 30, 60)]
@@ -162,29 +163,3 @@ def test_workspace_api_requires_local_origin_and_token(workspace, monkeypatch):
             urllib.request.urlopen(url + "/api/workspace/content/../../workspace.json")
     finally:
         server.shutdown(); server.server_close(); thread.join()
-
-
-def test_prepared_content_rechecks_exact_source_and_changed_file(source):
-    from neuroimage.review import scene_for
-    from neuroimage.validation import validate_package
-    path = build(source); manifest = validate_package(path)
-    manager = Workspace(source[0], source[0].parent / (source[0].name + "-state"), data_floor_gib=0, state_floor_gib=0)
-    try:
-        scene = scene_for(manifest, manifest.structures[0])
-        folder = source[0] / "exports/fixture"; folder.mkdir(parents=True)
-        content = folder / "scene.json"; atomic_json(content, scene)
-        ident = uuid.uuid4().hex
-        key = manifest.package_id + "-" + manifest.package_version
-        result = {"manifest": str(path), "notebook": str(content), "atlas_key": key,
-                  "notebook_sha256": hashlib.sha256(content.read_bytes()).hexdigest()}
-        manager.jobs[ident] = {"status": "complete", "request": {"action": "prepare"}, "result": result}
-        seen = []; manager.register_package = lambda file: seen.append(file) or key
-        assert manager.content(ident)["atlas_key"] == key and seen == [path]
-        scene["space_id"] = "unmatched-native-space"; atomic_json(content, scene)
-        with pytest.raises(ValueError, match="changed"):
-            manager.content(ident)
-        result["notebook_sha256"] = hashlib.sha256(content.read_bytes()).hexdigest()
-        with pytest.raises(ValueError, match="exact prepared teaching source"):
-            manager.content(ident)
-    finally:
-        manager.close()

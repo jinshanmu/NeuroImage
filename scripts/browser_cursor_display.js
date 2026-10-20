@@ -1,7 +1,7 @@
 async page => {
   const errors=[]; page.on('pageerror',error=>errors.push(String(error)));
   const assert=(value,message)=>{if(!value)throw new Error(message);};
-  const ready=async()=>{await page.waitForFunction(()=>/^(Ready|Scene saved|Saved scene restored|Scene file restored|Teaching export prepared)/.test(document.querySelector('.live-status')?.textContent??''),null,{timeout:90000});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));};
+  const ready=async()=>{await page.waitForFunction(()=>/^(Ready|Scene saved|Saved scene restored|Scene file restored|Image export prepared)/.test(document.querySelector('.live-status')?.textContent??''),null,{timeout:90000});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));};
   const tag=new URL(page.url()).searchParams.get('acceptance-output')??'development';assert(/^[a-z0-9-]{1,48}$/.test(tag),'Use a filename-safe output tag.');
   await page.setViewportSize({width:1720,height:1120});await ready();
   await page.getByRole('button',{name:'Reset view',exact:true}).click();await ready();
@@ -28,7 +28,7 @@ async page => {
     let download=page.waitForEvent('download');await page.getByRole('button',{name:'Export scene',exact:true}).click();await(await download).saveAs(output+'/scene.json');
     await page.getByRole('button',{name:'Reset view',exact:true}).click();await ready();assert(await toggle.isChecked(),'Legacy/default scene did not show its 3D cursor.');
     await page.getByLabel('Import scene file').setInputFiles(output+'/scene.json');await ready();assert(!await toggle.isChecked(),'Portable scene import lost cursor visibility.');await canvas.screenshot({path:prefix+'imported.png'});
-    download=page.waitForEvent('download');await page.getByRole('button',{name:'Export teaching image',exact:true}).click();await(await download).saveAs(output+'/teaching-image.zip');
+    download=page.waitForEvent('download');await page.getByRole('button',{name:'Export image',exact:true}).click();await(await download).saveAs(output+'/teaching-image.zip');
     assert(!errors.length,'Cursor control produced browser errors.');
     return{status:'passed',package_version:scene.package_version,position_ras_mm:original,scene,images_prefix:prefix,export:output.replace(/^data\//,'')+'/teaching-image.zip',page_errors:errors};
   }finally{await page.evaluate(({key,previous})=>previous===null?localStorage.removeItem(key):localStorage.setItem(key,previous),{key,previous});}

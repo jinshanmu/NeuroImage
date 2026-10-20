@@ -14,5 +14,5 @@ declare const __NEUROIMAGE_VIEWER__: {
   streamline_rendering: { coordinates: string; two_dimensional: string; geometry: string; color: string; selection_tolerance_mm: number }
   section_guides: { geometry: string; source: string; depth_picking: false }
   surface_opacity: string
-  teaching_markers: { source: string; slice_tolerance_mm: number; three_dimensional: string }
+  scene_markers: { source: string; slice_tolerance_mm: number; three_dimensional: string }
 }

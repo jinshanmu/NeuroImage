@@ -1,6 +1,6 @@
-# Independent anatomical and lesson review
+# Independent anatomical review
 
-Engineering validation establishes file integrity and defined spatial relationships. Independent human review is still required to assess anatomical definitions, source limitations and teaching content. The review workflow never changes an atlas's `not_reviewed` status automatically.
+Engineering validation establishes file integrity and defined spatial relationships. Independent human review is still required to assess anatomical definitions and source limitations. The review workflow never changes an atlas's `not_reviewed` status automatically. Historical packets containing lessons remain usable with the testing branch.
 
 ## Prepare source-bound material
 
@@ -10,15 +10,15 @@ Use the same `NeuroImage` environment and configured data root as construction. 
 neuroimage review prepare "$ATLAS_MANIFEST" --data-root "$ATLAS_DATA_ROOT" --storage-policy config/storage-policy.json
 ```
 
-The command prints a packet directory under `benchmarks/<dataset_id>/review-<version>`. By default it selects up to 20 structures across deep structures, ventricles, cortex, brainstem and cerebellum, according to the package's actual coverage. It includes every available lesson and a scene for each lesson step. A reduced `--limit` supports focused feedback; record the actual reviewed scope. Source streamline packages use trajectory-specific criteria and actual retained vertex targets. Expert review is tracked independently of software implementation and engineering acceptance.
+The command prints a packet directory under `benchmarks/<dataset_id>/review-<version>`. By default it selects up to 20 structures across deep structures, ventricles, cortex, brainstem and cerebellum, according to the package's actual coverage. A reduced `--limit` supports focused feedback; record the actual reviewed scope. Source streamline packages use trajectory-specific criteria and actual retained vertex targets. Expert review is tracked independently of software implementation and engineering acceptance.
 
-Each packet contains the exact source manifest, licenses, fixed source-target scenes, an English offline assessment page, a review plan and a blank JSON assessment template. Source publications and successful engineering tests are not prefilled as reviewer judgments. Twenty structures with four criteria each and eight lessons with three criteria each produce 104 initially unassessed criteria.
+Each packet contains the exact source manifest, licenses, fixed source-target scenes, an English offline assessment page, a review plan and a blank JSON assessment template. Source publications and successful engineering tests are not prefilled as reviewer judgments. Twenty structures with four criteria each produce 80 initially unassessed criteria.
 
 The plan retains native coordinates, source names and uncertainty. Paired structures may be shown together where the source provides explicit matching left/right names. A target is a real labelled voxel or retained trajectory vertex, not a claimed anatomical landmark. An individual, template and composite model require different interpretations even when their structure names are similar.
 
 ## Capture and inspect
 
-Open the matching package in the local viewer. Import each `scenes/NI-R*.json` file and use **Export teaching image**. Save the corresponding ZIP in the packet's `captures` directory as `NI-R001.zip`, `NI-R002.zip`, and so on. Then assemble:
+Open the matching package in the local viewer. Import each `scenes/NI-R*.json` file and use **Export image**. Save the corresponding ZIP in the packet's `captures` directory as `NI-R001.zip`, `NI-R002.zip`, and so on. Then assemble:
 
 ```bash
 neuroimage review assemble "$REVIEW_PACKET"
@@ -34,7 +34,7 @@ neuroimage review capture "$REVIEW_PACKET" --cli playwright-cli --session neuroi
 
 The browser must already be open at the local viewer, with the matching package offered by its service. This optional helper requires an independently installed Playwright CLI and a browser with working file downloads; it does not install tools or change the browser configuration. Captures run in batches of four and report progress. Rerunning skips verified images. The diagnostic `capture-log.txt` remains with the local packet. After an interrupted or failed capture, inspect the reported error and resume the command; quarantine a corrupt capture ZIP before retrying it.
 
-Open the packet's `index.html` locally. Inspect all images and reopen the supplied scenes in the exact matching atlas whenever a static view is insufficient. Assess orientation, label definition, image correspondence and uncertainty for each structure. Review each lesson's anatomy, instructions and limitations. Use **Not resolvable** when the available evidence cannot support a judgment. Explain requested revisions and non-applicability.
+Open the packet's `index.html` locally. Inspect all images and reopen the supplied scenes in the exact matching atlas whenever a static view is insufficient. Assess orientation, label definition, image correspondence and uncertainty for each structure. Use **Not resolvable** when the available evidence cannot support a judgment. Explain requested revisions and non-applicability.
 
 ## Save and check a manual record
 

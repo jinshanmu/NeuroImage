@@ -1,4 +1,5 @@
-/** Store teaching content without sharing the small localStorage quota. */
+/** Store scenes without sharing the small localStorage quota. */
+// Keep the historical database name so existing scenes and other records survive.
 const DATABASE = 'neuroimage-teaching'
 const STORE = 'content'
 const MAX_BYTES = 12 * 1024 ** 2
@@ -25,7 +26,7 @@ function openDatabase(): Promise<IDBDatabase> {
 }
 
 function checkKey(key: string) {
-  if (!key.startsWith('neuroimage:') || key.length > 1024) throw new Error('Invalid teaching storage key.')
+  if (!key.startsWith('neuroimage:') || key.length > 1024) throw new Error('Invalid scene storage key.')
 }
 
 async function transaction(key: string, operation: 'get' | 'put' | 'delete', value?: string): Promise<string | null> {
@@ -43,7 +44,7 @@ async function transaction(key: string, operation: 'get' | 'put' | 'delete', val
     // A successful request is not proof that the surrounding write committed.
     work.oncomplete = () => {
       database.close()
-      if (result !== null && typeof result !== 'string') reject(new Error('The stored teaching file is unreadable. Its original copy has been retained.'))
+      if (result !== null && typeof result !== 'string') reject(new Error('The stored scene is unreadable. Its original copy has been retained.'))
       else resolve(result as string | null)
     }
     work.onabort = () => { database.close(); reject(work.error ?? new Error('Saving was interrupted. Export a file to retain your work.')) }
@@ -66,7 +67,7 @@ export async function readBrowserContent(key: string): Promise<string | null> {
 }
 
 export async function saveBrowserContent(key: string, value: string): Promise<void> {
-  if (new TextEncoder().encode(value).length > MAX_BYTES) throw new Error('This browser record is too large. Split the notebook or course and export a file.')
+  if (new TextEncoder().encode(value).length > MAX_BYTES) throw new Error('This scene is too large for browser storage. Export a scene file.')
   await transaction(key, 'put', value)
   // Retire only this old key, and only after its replacement has committed.
   try { globalThis.localStorage?.removeItem(key) } catch { /* The committed record remains authoritative. */ }

@@ -9,7 +9,6 @@ import pytest
 from neuroimage import build as pipeline
 from neuroimage.adapters import ImportedDataset
 from neuroimage.contracts import Manifest
-from neuroimage.teaching import prepare, curriculum_matches
 from neuroimage.validation import validate_package
 
 
@@ -52,24 +51,3 @@ def test_native_image_bytes_grid_empty_catalog_and_checkpoint_recovery(native_im
     changed = manifest.model_dump(); changed['volumes'][0]['kind'] = 'labels'
     with pytest.raises(ValueError):
         Manifest.model_validate(changed)
-
-
-def test_image_anchored_teaching_retains_native_sample_and_contrast(native_image):
-    root, _, values, affine = native_image
-    path = pipeline.build_atlas('native_test', root, minimum_free_gib=0)
-    recipe = {'schema_version': '1.0', 'id': 'image-observation', 'dataset_id': 'native_test',
-              'required_source': {'id': 'test', 'version': '1'}, 'title': 'Native image observation', 'author': 'Test',
-              'objective': 'Observe unchanged image samples.', 'review_status': 'draft_not_expert_reviewed',
-              'scenes': [{'id': 'oblique-point', 'title': 'One source point', 'selected': None, 'visible': [], 'background': 'mra',
-                          'prompt': 'Observe source intensity.', 'note': 'Generated fixture.',
-                          'image_anchor': {'volume_id': 'mra', 'index': [2, 4, 6], 'label': 'Source sample', 'reference': 'Generated voxel'},
-                          'display': {'window': [100, 700], 'image_context': True, 'slice_zoom': 1.0}}]}
-    filename = root / 'teaching.json'; filename.write_text(json.dumps(recipe))
-    assert curriculum_matches(recipe, json.loads(path.read_text()))
-    result = prepare(path, filename, root, minimum_free_gib=0)
-    state = json.loads(Path(result['notebook']).read_text())['scenes'][0]['scene']['state']
-    assert np.allclose(state['position'], nib.affines.apply_affine(affine, [2, 4, 6]))
-    assert state['selected'] is None and state['visible'] == [] and state['overlay'] == 'none'
-    assert state['window'] == [100, 700] and state['imageContext'] is True and state['pan'] == [0, 0, 0, 1]
-    assert state['annotations'][0]['structure_id'] is None
-    assert f'recorded value {values[2, 4, 6]}' in state['note']

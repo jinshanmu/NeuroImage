@@ -1,5 +1,7 @@
 # Source-preserving HCP1065 streamline teaching
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 The `hcp1065_tracts` recipe adds all 87 delivered source computational streamline collections to the shared local atlas workflow: 34 association, 34 projection, two commissural, seven cerebellar and ten cranial-nerve collections. These are source definitions, not 87 independently reviewed anatomical tracts. The original six-bundle package remains available for historical scenes. It supplies reference T1/T2 MRI, physical 2D trajectory sections and 3D line geometry. All original decoded trajectories and vertices remain in the local package. The software distribution includes only the recipe, interface, implementation and English curriculum.
 
 ## Source relationship and limits
@@ -59,10 +61,7 @@ Use **Compare native spaces** to inspect another source independently. It does n
 
 The installed English curriculum introduces the source model, paired arcuate bundles, paired corticospinal bundles, corpus callosum, middle cerebellar peduncle, and the effect of display sampling. Its discussion prompts stay within those supplied definitions and spatial observations. All teaching content remains an unreviewed draft.
 
-```bash
-neuroimage teaching prepare hcp1065-streamline-introduction --atlas "$ATLAS_MANIFEST" --data-root "$ATLAS_DATA_ROOT" --storage-policy config/storage-policy.json
-neuroimage open path/to/prepared-notebook.json --data-root "$ATLAS_DATA_ROOT"
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 `open` resolves the exact package and presents the first view. Use **Next view** and **Previous view** in class, and **Return to recorded view** after exploring. Editing a view does not overwrite the recorded scene. Save or export explicitly when retaining your changes. Fourteen source-group exploration sequences are also available through **Learn**, including identification practice based on source collection names. The ten-view `hcp1065-specialist-pathways` notebook covers the broader collection in groups of at most six visible bundles; this limits loading and visual clutter while preserving the complete source in the package.
 
@@ -72,8 +71,8 @@ Scenes and notebooks preserve the exact package identity, cursor, selected/visib
 
 Construction checks every retained point against the source-declared reference field of view, every subset against its original line indices and coordinates, target membership, source counts, bounds, centroids and sided definitions. The viewer checks canonical TCK boundaries explicitly, including the first and last trajectories.
 
-The real-browser fixture `scripts/browser_streamlines.js` records actual uploaded GPU vertices, line indices and section matrices, then exercises visibility, overlap selection, pointer picking, opacity, sampling and scene/export recovery. `scripts/check_streamline_browser.py` independently decodes original TRK files and compares them with the GPU coordinate digests, projected slice pixels and source-segment distances. This verifies engineering correspondence, not tract validity or expert suitability.
+The real-browser fixture `scripts/browser_streamlines.js` (testing branch) records actual uploaded GPU vertices, line indices and section matrices, then exercises visibility, overlap selection, pointer picking, opacity, sampling and scene/export recovery. `scripts/check_streamline_browser.py` independently decodes original TRK files and compares them with the GPU coordinate digests, projected slice pixels and source-segment distances. This verifies engineering correspondence, not tract validity or expert suitability.
 
-For the installed six-view notebook, run `scripts/browser_teaching_delivery.js` through the CLI, then check its output with `python scripts/check_streamline_browser.py --data-root <root> --teaching-log <CLI-output> --notebook <prepared-notebook.json>`. This independently checks the original line/vertex targets, exported scene states, all source notices, and pixel equality after returning to the recorded view and reimporting the notebook.
+For the installed six-view notebook, run `scripts/browser_teaching_delivery.js` (testing branch) through the CLI, then check its output with `python scripts/check_streamline_browser.py --data-root <root> --teaching-log <CLI-output> --notebook <prepared-notebook.json>`. This independently checks the original line/vertex targets, exported scene states, all source notices, and pixel equality after returning to the recorded view and reimporting the notebook.
 
 Stop a build with Ctrl+C and rerun the identical command. Verified completed assets are reused; missing products are repaired through the same checkpoint path. The measured expanded-package repeat reused all 617 assets without geometry recomputation. Never delete source acquisitions or historical packages referenced by scenes. Use `neuroimage locate` to recover the exact package for a saved teaching file. See the [general recovery instructions](getting-started.md#recover-safely).

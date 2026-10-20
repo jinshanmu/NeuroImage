@@ -67,31 +67,21 @@ def content_binding(path):
     """Read identity only; detailed view-state validation remains the viewer's responsibility."""
     path = Path(path)
     if path.stat().st_size > BINDING_BYTES_LIMIT:
-        raise ValueError("Saved content exceeds the 10 MiB notebook limit")
+        raise ValueError("Saved content exceeds the 10 MiB scene limit")
     with path.open("rb") as stream:
         serialized = stream.read(BINDING_BYTES_LIMIT + 1)
     if len(serialized) > BINDING_BYTES_LIMIT:
-        raise ValueError("Saved content exceeds the 10 MiB notebook limit")
+        raise ValueError("Saved content exceeds the 10 MiB scene limit")
     return binding_from_content(json.loads(serialized))
 
 
 def binding_from_content(content):
     """Validate shared scene identity independently of the view representation."""
-    if not isinstance(content, dict) or content.get("schema_version") != "1.0" or content.get("kind") not in {
-        "neuroimage-scene", "neuroimage-teaching-notebook"
-    }:
-        raise ValueError("Expected a NeuroImage scene or teaching notebook with schema version 1.0")
+    if not isinstance(content, dict) or content.get("schema_version") != "1.0" or content.get("kind") != "neuroimage-scene":
+        raise ValueError("Expected a NeuroImage scene with schema version 1.0")
     binding = {key: content.get(key) for key in BOUND_FIELDS}
     if any(not isinstance(value, str) or not value or len(value) > 256 for value in binding.values()):
         raise ValueError("Saved content has an incomplete atlas binding")
-    if content["kind"] == "neuroimage-teaching-notebook":
-        scenes = content.get("scenes")
-        if not isinstance(scenes, list) or len(scenes) > 50:
-            raise ValueError("A teaching notebook requires an array of no more than 50 scenes")
-        for entry in scenes:
-            scene = entry.get("scene") if isinstance(entry, dict) else None
-            if not isinstance(scene, dict) or any(scene.get(key) != value for key, value in binding.items()):
-                raise ValueError("An embedded scene does not match the notebook's atlas version or native space")
     return {"kind": content["kind"], **binding}
 
 

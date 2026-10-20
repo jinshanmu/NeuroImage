@@ -1,4 +1,4 @@
-import type { Lesson, Source, SurfaceContext, SurfaceCutaway, Vec3 } from './types'
+import type { Source, SurfaceContext, SurfaceCutaway, Vec3 } from './types'
 
 export interface ModelSurface {
   kind: 'model-surface'; id: string; name: string; source_name: string; category: string;
@@ -37,7 +37,6 @@ export interface ModelView {
   surfaceContext?: SurfaceContext;
   highlightSelected?: boolean;
   annotations: ModelAnnotation[]; showMarkers: boolean; note: string;
-  lesson_id: string | null; lesson_step: number; lesson_answer: string; lesson_revealed: boolean;
 }
 export interface ModelScene {
   schema_version: '1.0'; kind: 'neuroimage-scene'; title: string; saved_utc: string;
@@ -45,10 +44,3 @@ export interface ModelScene {
   state: ModelView; provenance: { sources: Source[]; processing: SurfaceManifest['build'];
     anatomical_review: string; renderer: typeof __NEUROIMAGE_VIEWER__; representation: 'surface-model'; source_annotations?: NativeSourceAnnotation[] };
 }
-export interface ModelNotebook {
-  schema_version: '1.0'; kind: 'neuroimage-teaching-notebook'; title: string; created_utc: string; updated_utc: string;
-  author?: string; objective?: string;
-  package_id: string; package_version: string; build_signature: string; space_id: string;
-  scenes: { id: string; title: string; prompt: string; scene: ModelScene }[];
-}
-export type ModelLessons = Lesson[]

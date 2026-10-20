@@ -19,13 +19,8 @@ DECISIONS = {"not_assessed", "acceptable", "needs_revision", "not_resolvable", "
 STRUCTURE_CRITERIA = {
     "orientation": "Laterality and orientation markers agree with the source anatomy",
     "definition": "The represented label extent matches its stated source definition",
-    "image_correspondence": "Image-to-label correspondence is adequate for the stated teaching use",
+    "image_correspondence": "Image-to-label correspondence is adequate for the stated anatomical interpretation",
     "uncertainty": "Sampling limits, source inference and incomplete coverage are explained",
-}
-LESSON_CRITERIA = {
-    "anatomy": "Anatomical statements and structure relationships are supported",
-    "teaching": "Instructions and identification tasks are clear and appropriate",
-    "limitations": "Source limitations and uncertainty remain clear",
 }
 REVIEW_TERMS = [
     "left caudate", "right caudate", "left putamen", "right putamen", "left thalam", "right thalam",
@@ -58,7 +53,7 @@ def scene_for(manifest, structure):
                 "space_id": manifest.space.id, "state": {"selected": None, "visible": [], "position": center,
                 "background": image.id, "overlay": "none", "labelOpacity": 0, "meshOpacity": 1, "radiological": True, "layout": "quad",
                 "camera": [110, 15, 1.4], "pan": [0, 0, 0, 1], "imageContext": True, "window": [image.cal_min, image.cal_max],
-                "annotations": [], "showMarkers": True, "panel": "inspect", "note": "Original source scalar evidence; no MRI or segmented structures." if manifest.representation == "scalar-fields" else "Original native image; no segmented structure labels.",
+                "annotations": [], "showMarkers": True, "note": "Original source scalar evidence; no MRI or segmented structures." if manifest.representation == "scalar-fields" else "Original native image; no segmented structure labels.",
                 "selectionEvidence": {"kind": "image-cursor", "candidates": []}},
                 "provenance": {"sources": [source.model_dump() for source in manifest.sources], "processing": processing_record(manifest.build), "anatomical_review": "not_performed"}}
     model = manifest.representation == "label-model"
@@ -76,7 +71,7 @@ def scene_for(manifest, structure):
             "space_id": manifest.space.id, "state": {"selected": structure.id, "visible": visible, "position": list(structure.target_ras_mm),
             "background": image.id, "overlay": "streamlines" if streamlines else "probability" if structure.probability else "labels", "labelOpacity": 1 if model or streamlines else .45, "meshOpacity": 1, "radiological": True, "layout": "quad",
             "camera": [110, 15, 1.4 if streamlines else region_zoom if manifest.representation == "mri-regions" else 2], "pan": pan, "imageContext": False, "window": [image.cal_min, image.cal_max],
-            "annotations": [], "panel": "inspect", "note": "Prepared for independent anatomical review; no reviewer judgment has been recorded.",
+            "annotations": [], "note": "Prepared for independent anatomical review; no reviewer judgment has been recorded.",
             "selectionEvidence": {"kind": "source-target", "candidates": [structure.id]},
             **({"focus3D": list(structure.target_ras_mm)} if manifest.representation == "mri-regions" else {}),
             **({"streamlineLevel": "standard", "streamlineSlabMm": 1} if streamlines else {})},
@@ -93,8 +88,7 @@ def prepare_review(manifest_path, data_root, *, limit=20, minimum_free_gib=400):
         raise ValueError("The selected data root must already exist")
     selected = review_structures(manifest, limit)
     if not selected:
-        raise ValueError("This package has no source structures. Prepare image-anchored teaching views and use 'review notebook' instead.")
-    lessons = json.loads((manifest_path.parent / manifest.lessons_file).read_text())["lessons"]
+        raise ValueError("This package has no source structures. Inspect the original image in the anatomy browser.")
     implementation = [sha256(Path(__file__)), sha256(Path(__file__).with_name("templates") / "review.html")]
     signature = hashlib.sha256(json.dumps({"manifest": sha256(manifest_path), "cases": [s.id for s in selected], "implementation": implementation}, sort_keys=True).encode()).hexdigest()
     root = data_root / "benchmarks" / manifest.dataset_id / ("review-" + signature[:12])
@@ -112,14 +106,14 @@ def prepare_review(manifest_path, data_root, *, limit=20, minimum_free_gib=400):
             "space_id": manifest.space.id, "space_name": manifest.space.name, "source_manifest_sha256": sha256(manifest_path),
             "anatomical_review": "not_performed", "estimated_peak_additional_bytes": peak_bytes,
             "capture_rendering_requirements": {"mesh_projection_in_2d": False, "label_sampling": "nearest-neighbor"},
-            "structure_criteria": {**STRUCTURE_CRITERIA, **({"image_correspondence": "The absence of original MRI is explicit; categorical model sections are clearly distinguished from MRI"} if manifest.representation == "label-model" else {})}, "lesson_criteria": LESSON_CRITERIA, "cases": [], "lessons": lessons,
+            "structure_criteria": {**STRUCTURE_CRITERIA, **({"image_correspondence": "The absence of original MRI is explicit; categorical model sections are clearly distinguished from MRI"} if manifest.representation == "label-model" else {})}, "cases": [],
             "sources": [s.model_dump() for s in manifest.sources]}
     if any(s.probability for s in selected):
         plan["structure_criteria"].update(image_correspondence="Source probabilities and categorical navigation labels are correctly related to the supplied MRI in its declared native space",
                                           uncertainty="The source's probability interpretation, uncertainty and computational derivations are explicit and distinguished from direct observations")
     if manifest.representation == "mri-streamlines":
-        plan["structure_criteria"].update(definition="The displayed source bundle and its course are appropriate for preliminary spatial identification teaching",
-            image_correspondence="The source-declared template relationship and physical section intersections are adequate for the stated teaching use",
+        plan["structure_criteria"].update(definition="The displayed source bundle and its course are appropriate for preliminary spatial identification",
+            image_correspondence="The source-declared template relationship and physical section intersections are adequate for the stated anatomical interpretation",
             uncertainty="Estimated trajectories, display sampling, endpoints and source-count limitations are distinguished from observed axons and validated connections")
     for index, structure in enumerate(selected, 1):
         ident = f"NI-R{index:03}"
@@ -132,23 +126,11 @@ def prepare_review(manifest_path, data_root, *, limit=20, minimum_free_gib=400):
             relative = f"scenes/{ident}-labels.json"
             atomic_json(root / relative, comparison)
             plan["cases"][-1]["categorical_scene_file"] = relative
-    by_id = {s.id: s for s in manifest.structures}
-    for lesson in lessons:
-        lesson["review_scene_files"] = []
-        for index, step in enumerate(lesson["steps"], 1):
-            relative = f"scenes/{lesson['id']}-step{index:02}.json"
-            scene = scene_for(manifest, by_id[step["structure_id"]])
-            scene["state"]["visible"] = lesson["structure_ids"]
-            scene["state"].update(panel="learn", teaching={"lesson_id": lesson["id"], "step": index - 1, "practice": False, "answer": "", "revealed": False})
-            atomic_json(root / relative, scene)
-            lesson["review_scene_files"].append(relative)
     items = [{"item_id": c["id"], "kind": "structure", "criteria": {key: "not_assessed" for key in STRUCTURE_CRITERIA}, "notes": ""} for c in plan["cases"]]
-    items.extend({"item_id": lesson["id"], "kind": "lesson", "criteria": {key: "not_assessed" for key in LESSON_CRITERIA}, "notes": ""} for lesson in lessons)
     assessment = {"schema_version": "1.0", "kind": "neuroimage-manual-assessment", "packet_version": plan["packet_version"],
                   "package_id": manifest.package_id, "package_version": manifest.package_version, "build_signature": manifest.build["signature"], "space_id": manifest.space.id,
                   "reviewer": {"name": "", "qualifications": "", "affiliation": "", "date": ""}, "items": items, "overall_notes": ""}
     shutil.copyfile(manifest_path, root / "source-manifest.json")
-    shutil.copyfile(manifest_path.parent / manifest.lessons_file, root / "source-lessons.json")
     for asset in manifest.assets:
         if asset.role == "license":
             destination = root / asset.path; destination.parent.mkdir(parents=True, exist_ok=True)
@@ -194,11 +176,10 @@ def validate_capture(path, plan, case):
 def read_plan(root):
     root = Path(root).resolve()
     plan = json.loads((root / "review-plan.json").read_text())
-    if plan.get("kind") == "neuroimage-notebook-review-packet":
-        from .notebook_review import read_notebook_plan
-        return read_notebook_plan(root)
     if plan.get("kind") != "neuroimage-review-packet" or plan.get("schema_version") != "1.0" or sha256(root / "source-manifest.json") != plan.get("source_manifest_sha256"):
         raise ValueError("Review packet identity or source manifest was changed")
+    if plan.get("lessons"):
+        raise ValueError("Open historical lesson review packets with the testing branch. The original packet is unchanged.")
     source = json.loads((root / "source-manifest.json").read_text())
     if any(plan.get(key) != source.get(key) for key in ("package_id", "package_version")) or plan.get("space_id") != source["space"]["id"] or plan.get("build_signature") != source["build"]["signature"]:
         raise ValueError("Review plan no longer matches its source package identity")
@@ -220,9 +201,6 @@ def read_plan(root):
 
 def assemble_review(packet, *, keep_captures=False):
     root = Path(packet).resolve(); plan = read_plan(root)
-    if plan["kind"] == "neuroimage-notebook-review-packet":
-        return {"status": "complete", "captured": len(plan["cases"]), "required": len(plan["cases"]),
-                "anatomical_review": "not_performed", "index": str(root / "index.html")}
     state_path = root / "capture-state.json"
     state = json.loads(state_path.read_text()) if state_path.exists() else {"packet_version": plan["packet_version"], "completed": {}}
     if state.get("packet_version") != plan["packet_version"]:
@@ -260,11 +238,7 @@ def check_assessment(assessment_path, packet):
     for field in ("packet_version", "package_id", "package_version", "build_signature", "space_id"):
         if data.get(field) != plan[field]:
             raise ValueError(f"Assessment belongs to a different review packet: {field}")
-    if plan["kind"] == "neuroimage-notebook-review-packet":
-        expected = {case["id"]: ("notebook-view", set(plan["lesson_criteria"])) for case in plan["cases"]}
-    else:
-        expected = {c["id"]: ("structure", set(STRUCTURE_CRITERIA)) for c in plan["cases"]}
-        expected.update({lesson["id"]: ("lesson", set(LESSON_CRITERIA)) for lesson in plan["lessons"]})
+    expected = {c["id"]: ("structure", set(STRUCTURE_CRITERIA)) for c in plan["cases"]}
     seen = set(); assessed = total = revisions = unresolved = 0
     for item in data.get("items", []):
         ident = item.get("item_id")
@@ -300,10 +274,6 @@ def render_review(root):
         comparison_link = (f'<p><a href="{esc(case["categorical_scene_file"])}" download>Download the categorical comparison scene</a></p>' if case.get("categorical_scene_file") else '')
         picture = f'<img src="{esc(case["image_file"])}" alt="Source-bound sections and surface view of {esc(s["name"])}">' if (root / case["image_file"]).is_file() else '<div class="pending">Image capture pending. Open the accompanying scene in the matching local atlas.</div>'
         sections.append(f'<article id="{case["id"]}"><div class="eyebrow">{case["id"]} · STRUCTURE</div><h2>{esc(s["name"])}</h2><p>{esc(s["laterality"])} · {esc(s["category"])} · <code>{esc(s["id"])}</code></p>{picture}<p>{esc(s["evidence"])}</p>{probability_note}<ul>' + ''.join(f'<li>{esc(note)}</li>' for note in s['source_notes']) + f'</ul><a href="{esc(case["scene_file"])}" download>Download the exact review scene</a>{comparison_link}<div class="criteria" data-item="{case["id"]}"></div></article>')
-    names = {item["id"]: item["name"] for item in json.loads((root / "source-manifest.json").read_text())["structures"]}
-    for lesson in plan["lessons"]:
-        steps = '<ol>' + ''.join(f'<li><strong>{esc(names[step["structure_id"]])}</strong><p>{esc(step["prompt"])}</p><p class="muted">{esc(step["question"])}</p><a href="{esc(lesson["review_scene_files"][index])}" download>Download this step scene</a></li>' for index, step in enumerate(lesson["steps"])) + '</ol>'
-        sections.append(f'<article id="{esc(lesson["id"])}"><div class="eyebrow">{esc(lesson["id"])} · LESSON</div><h2>{esc(lesson["title"])}</h2><p>{esc(lesson["objective"])}</p><p>{esc(lesson["instruction"])}</p>{steps}<p class="muted">{esc(lesson["evidence_limit"])}</p><div class="criteria" data-item="{esc(lesson["id"])}"></div></article>')
     sources = ''.join(f'<li><strong>{esc(s["title"])}</strong><p>{esc(s["citation"])}</p><a href="{esc(s["license_file"])}">Local source license: {esc(s["license_name"])}</a></li>' for s in plan['sources'])
     template = (Path(__file__).with_name('templates') / 'review.html').read_text()
     replacements = {"@@TITLE@@": esc(plan['space_name']), "@@VERSION@@": esc(plan['package_version']), "@@CONTENT@@": ''.join(sections), "@@SOURCES@@": sources,

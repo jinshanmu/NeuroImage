@@ -217,108 +217,8 @@ def test_server_only_exposes_selected_files(source):
         server.shutdown(); server.server_close(); thread.join()
 
 
-def test_installed_teaching_preparation_preserves_source_targets_and_reuses(source):
-    from neuroimage.teaching import prepare, curriculum_names, curriculum_path
-    assert "spl-first-session" in curriculum_names()
-    assert json.loads(curriculum_path("spl-first-session").read_text())["dataset_id"] == "spl_nac"
-    manifest_path = build(source)
-    recipe = {"schema_version": "1.0", "id": "synthetic-teaching", "dataset_id": "synthetic",
-              "required_source": {"id": "synthetic", "version": "1"}, "title": "Synthetic spatial lesson",
-              "author": "Generated fixture", "objective": "Verify source binding and display state", "review_status": "draft_not_expert_reviewed",
-              "scenes": [{"id": "left-region", "title": "Source region", "selected": "synthetic:label:11",
-                          "visible": ["synthetic:label:11", "synthetic:label:50"], "background": "t1",
-                          "prompt": "Inspect this synthetic fixture", "note": "Not anatomical teaching",
-                          "display": {"show_3d_cursor": False, "surface_opacity": {"synthetic:label:50": .2}, "surface_cutaway": {"axis": 1, "side": -1, "position_mm": -8.75, "structures": ["synthetic:label:50"]}, "section_planes": ["axial", "sagittal"], "camera": [110, 15, 3], "center_on_target": True}}]}
-    recipe_path = source[0] / "teaching-recipe.json"; recipe_path.write_text(json.dumps(recipe))
-    result = prepare(manifest_path, recipe_path, source[0], minimum_free_gib=0)
-    book_path = Path(result["notebook"]); before = book_path.read_bytes()
-    book = json.loads(before); scene = book["scenes"][0]["scene"]
-    manifest = pipeline.validate_package(manifest_path)
-    assert scene["state"]["position"] == list(manifest.structures[0].target_ras_mm)
-    assert scene["state"]["surfaceOpacity"] == {"synthetic:label:50": .2}
-    assert scene["state"]["show3DCursor"] is False
-    assert scene["state"]["surfaceCutaway"] == {"axis": 1, "side": -1, "position_mm": -8.75, "structures": ["synthetic:label:50"]}
-    assert scene["state"]["sectionPlanes"] == ["axial", "sagittal"]
-    assert scene["state"]["camera"] == [110, 15, 3]
-    assert scene["state"]["focus3D"] == scene["state"]["position"]
-    assert prepare(manifest_path, recipe_path, source[0], minimum_free_gib=0)["status"] == "reused"
-    assert book_path.read_bytes() == before
-    focused_recipe = json.loads(json.dumps(recipe))
-    focused_recipe["scenes"][0]["display"].pop("center_on_target")
-    focused_recipe["scenes"][0]["display"]["focus_selected_3d"] = True
-    focused_recipe["scenes"][0]["display"]["layout"] = "anatomy"
-    recipe_path.write_text(json.dumps(focused_recipe))
-    focused_path = Path(prepare(manifest_path, recipe_path, source[0], minimum_free_gib=0)["notebook"])
-    focused_state = json.loads(focused_path.read_text())["scenes"][0]["scene"]["state"]
-    assert focused_state["position"] == scene["state"]["position"]
-    assert focused_state["layout"] == "anatomy"
-    assert focused_state["visible"] == scene["state"]["visible"]
-    assert focused_state["pan"] == scene["state"]["pan"]
-    assert focused_state["camera"][:2] == [110, 15]
-    assert focused_state["camera"][2] != 3
-    assert focused_state["focus3D"] == [(low + high) / 2 for low, high in zip(*manifest.structures[0].bounds_ras_mm)]
-    assert json.loads(recipe_path.read_text())["scenes"][0]["display"]["camera"] == [110, 15, 3]
-    assert prepare(manifest_path, recipe_path, source[0], minimum_free_gib=0)["status"] == "reused"
-    recipe["scenes"][0]["display"]["surface_opacity"] = {"unknown": .2}; recipe_path.write_text(json.dumps(recipe))
-    with pytest.raises(ValueError, match="unknown source structure"):
-        prepare(manifest_path, recipe_path, source[0], minimum_free_gib=0)
-    assert book_path.read_bytes() == before
-    book_path.write_text("User-modified content remains intact")
-    recipe["scenes"][0]["display"]["surface_opacity"] = {"synthetic:label:50": .2}; recipe_path.write_text(json.dumps(recipe))
-    with pytest.raises(ValueError, match="Existing prepared content changed"):
-        prepare(manifest_path, recipe_path, source[0], minimum_free_gib=0)
-
-    assert book_path.read_text() == "User-modified content remains intact"
 
 
-def test_regional_teaching_annotation_binds_image_without_claiming_label(source):
-    from neuroimage.teaching import prepare
-    path = build(source)
-    recipe = {"schema_version": "1.0", "id": "regional-image-teaching", "dataset_id": "synthetic",
-              "required_source": {"id": "synthetic", "version": "1"}, "title": "Generated regional teaching",
-              "author": "Generated fixture", "objective": "Bind a region to source image coordinates", "review_status": "draft_not_expert_reviewed",
-              "scenes": [{"id": "image-region", "title": "Generated image region", "selected": "synthetic:label:11",
-                          "visible": ["synthetic:label:11"], "background": "t1", "prompt": "Inspect the fixture image",
-                          "note": "Generated evidence; not anatomy", "display": {"slice_zoom": 1.0},
-                          "image_anchor": {"volume_id": "t1", "index": [9, 8, 6], "label": "Generated region",
-                                           "reference": "Synthetic test construction"}}]}
-    recipe_path = source[0] / "regional-recipe.json"; recipe_path.write_text(json.dumps(recipe))
-    result = prepare(path, recipe_path, source[0], minimum_free_gib=0)
-    state = json.loads(Path(result["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    image = nib.load(source[1].input_paths["t1"])
-    expected = nib.affines.apply_affine(image.affine, [9, 8, 6])
-    assert nib.load(source[1].input_paths["labels"]).dataobj[9, 8, 6] == 0
-    np.testing.assert_array_equal(state["position"], expected)
-    assert state["selected"] == "synthetic:label:11"
-    assert state["selectionEvidence"] == {"kind": "teaching-marker", "candidates": []}
-    assert state["annotations"][0]["structure_id"] is None
-    assert state["annotations"][0]["position_ras_mm"] == state["position"] == state["focus3D"]
-    assert "not a segmented structure" in state["note"]
-    assert "Expert placement review is pending" in state["note"]
-    assert state["pan"] == [0, 0, 0, 1]
-    assert prepare(path, recipe_path, source[0], minimum_free_gib=0)["status"] == "reused"
-    recipe["scenes"][0]["display"]["center_on_target"] = False
-    recipe["scenes"][0]["display"]["tile_layout"] = "row"
-    recipe_path.write_text(json.dumps(recipe))
-    contextual = prepare(path, recipe_path, source[0], minimum_free_gib=0)
-    contextual_state = json.loads(Path(contextual["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    assert "focus3D" not in contextual_state
-    assert contextual_state["tileLayout"] == "row"
-    assert contextual_state["position"] == state["position"]
-    assert contextual_state["pan"] == state["pan"]
-    recipe["scenes"][0]["display"]["center_on_target"] = True
-    recipe_path.write_text(json.dumps(recipe))
-    focused = prepare(path, recipe_path, source[0], minimum_free_gib=0)
-    focused_state = json.loads(Path(focused["notebook"]).read_text())["scenes"][0]["scene"]["state"]
-    assert focused_state["focus3D"] == state["position"]
-    for anchor, error in [({"volume_id": "labels", "index": [9, 8, 6]}, "displayed native image"),
-                          ({"volume_id": "t1", "index": [20, 8, 6]}, "outside the displayed")]:
-        recipe["scenes"][0]["image_anchor"].update(anchor)
-        recipe_path.write_text(json.dumps(recipe))
-        with pytest.raises(ValueError, match=error): prepare(path, recipe_path, source[0], minimum_free_gib=0)
-    recipe["scenes"][0]["source_voxel"] = {"volume_id": "t1", "index": [1, 1, 1]}
-    recipe_path.write_text(json.dumps(recipe))
-    with pytest.raises(ValueError, match="not both"): prepare(path, recipe_path, source[0], minimum_free_gib=0)
 
 
 def test_startup_content_matches_exact_package_and_never_exposes_its_directory(source):
@@ -390,9 +290,17 @@ def test_review_packet_preserves_drafts_and_starts_without_judgments(source):
     (root / "assessment-template.json").write_text(json.dumps(assessment))
     assert prepare_review(path, source[0], minimum_free_gib=0) == root
     assert "Preserve this local reviewer draft" in (root / "assessment-template.json").read_text()
-    assert len(list((root / "scenes").glob("NI-L*-step*.json"))) > 0
-    lesson_scene = json.loads(next((root / "scenes").glob("NI-L*-step01.json")).read_text())
-    assert lesson_scene["state"]["panel"] == "learn" and lesson_scene["state"]["teaching"]["step"] == 0
+    assert not list((root / "scenes").glob("NI-L*-step*.json"))
+    assert all(item["kind"] == "structure" for item in assessment["items"])
+    assert not (root / "source-lessons.json").exists()
+    plan_path = root / "review-plan.json"
+    plan = json.loads(plan_path.read_text())
+    plan["lessons"] = [{"id": "historical-lesson"}]
+    plan_path.write_text(json.dumps(plan))
+    before = {p: p.read_bytes() for p in root.rglob("*") if p.is_file()}
+    with pytest.raises(ValueError, match="testing branch"):
+        check_assessment(root / "assessment-template.json", root)
+    assert all(p.read_bytes() == content for p, content in before.items())
 
 
 def test_review_accepts_legacy_packages_without_optional_probability_fields(source):
@@ -526,7 +434,7 @@ def test_saved_content_locates_exact_historical_package_and_rejects_guessing(sou
         locate_content(content, source[0])
 
 
-def test_notebook_locator_checks_every_embedded_source_binding(source):
+def test_notebook_locator_is_unavailable_in_the_anatomy_release(source):
     from neuroimage.library import content_binding, locate_content
     path = build(source); manifest = json.loads(path.read_text())
     binding = {'package_id':manifest['package_id'], 'package_version':manifest['package_version'],
@@ -534,10 +442,9 @@ def test_notebook_locator_checks_every_embedded_source_binding(source):
     scene = {'kind':'neuroimage-scene', 'schema_version':'1.0', **binding}
     notebook = {'kind':'neuroimage-teaching-notebook', 'schema_version':'1.0', **binding, 'scenes':[{'scene':scene}]}
     content = source[0] / 'teaching-notebook.json'; content.write_text(json.dumps(notebook))
-    assert locate_content(content, source[0])['manifest'] == str(path)
-    scene['space_id'] = 'unrelated'; content.write_text(json.dumps(notebook))
-    with pytest.raises(ValueError, match='embedded scene'):
-        content_binding(content)
+    with pytest.raises(ValueError, match='Expected a NeuroImage scene'):
+        locate_content(content, source[0])
+    assert json.loads(content.read_text()) == notebook
     content.write_text(json.dumps({'kind':'not-supported', **binding}))
     with pytest.raises(ValueError, match='Expected a NeuroImage scene'):
         content_binding(content)

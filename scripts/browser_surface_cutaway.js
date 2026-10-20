@@ -56,7 +56,7 @@ async page => {
     };
   });
   const ready = async () => {
-    await page.waitForFunction(() => /^(Ready|Scene saved|Saved scene restored|Scene file restored|Teaching export prepared)/.test(document.querySelector('.live-status')?.textContent ?? ''), null, {timeout:90000});
+    await page.waitForFunction(() => /^(Ready|Scene saved|Saved scene restored|Scene file restored|Image export prepared)/.test(document.querySelector('.live-status')?.textContent ?? ''), null, {timeout:90000});
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   };
   await page.setViewportSize({width:1720,height:1200}); await page.reload(); await ready();
@@ -150,7 +150,7 @@ async page => {
     await page.getByLabel('Show Pons', {exact:true}).check(); await capture('context', [0,1,0,-20]);
     assert(records.at(-1).draws.some(draw=>!draw.native_fragment_cut), 'A non-target source surface was also clipped.');
     await page.getByLabel('Import scene file').setInputFiles(output + '/scene.json'); await ready();
-    const teaching = page.waitForEvent('download'); await page.getByRole('button', {name:'Export teaching image', exact:true}).click();
+    const teaching = page.waitForEvent('download'); await page.getByRole('button', {name:'Export image', exact:true}).click();
     await (await teaching).saveAs(output + '/teaching-image.zip');
     await page.screenshot({path:'output/playwright/surface-cutaway-controls.png'});
     assert(!errors.length && !external.length, 'The native cutaway workflow had page errors or external requests.');

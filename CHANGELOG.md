@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0 — anatomy browsing simplification, 2026-10-20
+
+- Remove Teaching library, course management and presentation, Learning tools, guided lessons, identification practice, study records and notebook authoring/presentation from the formal branch. Preserve their complete implementation in `codex/release-testing`.
+- Remove corresponding server routes, CLI commands, preparation jobs, curricula, course plans and dedicated frontend components.
+- Retain all anatomy sources, source coverage, native sections, surfaces, fields, trajectories, backgrounds, independent comparisons and source-bound scene/image export.
+- Move anatomical display controls and source attribution into inline viewer details. Open historical scenes as ordinary anatomy views without retired lesson state.
+- Preserve existing acquired data, user files and browser records.
+
 ## 1.0.0 — prepared for author review, 2026-10-19
 
 - Add 64 source-preserved cortical and dural model objects and 32 arterial comparison views across eight healthy-volunteer MRA cases. Keep the ten main groups and expand the detailed index to 46 topics.

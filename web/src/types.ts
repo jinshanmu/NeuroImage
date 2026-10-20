@@ -43,10 +43,8 @@ export interface AnatomyEntry {
 }
 export interface AnatomyCoverage { id: string; title: string; evidence: string; parent_id?: string; kind?: string; structures?: number; structure_ids?: string[]; entry?: AnatomyEntry }
 export interface AtlasEntry { representation?: string; created_utc?: string; coverage?: AnatomyCoverage[]; detail_coverage?: AnatomyCoverage[]; key: string; title: string; dataset_id: string; package_version: string; space: string; manifest_url: string; base_url: string; structures: number }
-export interface Lesson { id: string; title: string; objective: string; instruction: string; structure_ids: string[]; review_status: string; steps: { structure_id: string; prompt: string; question: string; answer?: string }[]; sources: string[]; evidence_limit: string; references?: {title:string;url:string}[] }
 export interface Annotation { id: string; text: string; position_ras_mm: Vec3; structure_id: string | null }
 export interface SelectionEvidence { kind: 'source-target' | 'label-voxel' | 'independent-mask' | 'visible-surface' | 'visible-streamline' | 'probability-cursor' | 'teaching-marker' | 'image-cursor'; candidates: string[]; sectionAxis?: 0 | 1 | 2 }
-export interface TeachingState { lesson_id: string; step: number; practice: boolean; answer: string; revealed: boolean }
 export interface SurfaceCutaway {
   axis: 0 | 1 | 2;
   side: -1 | 1;
@@ -67,8 +65,6 @@ export interface ViewState {
   tileLayout?: 'auto' | 'grid' | 'row';
   window: [number, number]; annotations: Annotation[]; note: string;
   selectionEvidence?: SelectionEvidence;
-  panel?: 'inspect' | 'learn' | 'sources';
-  teaching?: TeachingState;
   overlay?: 'labels' | 'mask' | 'probability' | 'streamlines' | 'none';
   showMarkers?: boolean;
   show3DCursor?: boolean;

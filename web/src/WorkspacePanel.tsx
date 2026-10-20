@@ -17,24 +17,22 @@ interface SourceChoice {
 interface LocalPackage {
   key?: string; dataset_id: string; package_version?: string; folder_version: string; title?: string; status: string
   space_name?: string; structures?: number; declared_asset_bytes?: number; detail?: string; completed_assets?: number
-  compatible_curricula?: string[]
   coverage?: Coverage[]
 }
 interface Job {
   id: string; status: string; started_utc: string; finished_utc?: string; detail: string
-  request: { action: string; recipe?: string; package_key?: string; curriculum?: string; course_plan?: string }
+  request: { action: string; recipe?: string; package_key?: string }
   events: Record<string, unknown>[]
-  result?: { atlas_key?: string; open_url?: string; reused?: number; downloads?: number; extracted?: number }
+  result?: { atlas_key?: string; reused?: number; downloads?: number; extracted?: number }
 }
 interface Snapshot {
   session_token: string; data_root: string; state_root: string; data_free_bytes: number; state_free_bytes: number
   data_floor_gib: number; state_floor_gib: number; workers: number; active_job: string | null
   sources: SourceChoice[]; packages: LocalPackage[]; jobs: Job[]; jobs_total: number; jobs_offset: number; jobs_limit: number
-  curricula: { id: string; dataset_id: string; title: string; scenes: number }[]
   modules: { id: string; title: string }[]
 }
 const bytes = (value: number) => value >= 1024 ** 3 ? `${(value / 1024 ** 3).toFixed(2)} GiB` : `${(value / 1024 ** 2).toFixed(1)} MiB`
-const labels: Record<string, string> = { acquire: 'Acquire or verify sources', build: 'Build or resume atlas', activate: 'Open local atlas', prepare: 'Prepare teaching notebook', 'prepare-course': 'Prepare teaching course' }
+const labels: Record<string, string> = { acquire: 'Acquire or verify sources', build: 'Build or resume atlas', activate: 'Open local atlas' }
 
 function progressText(event: Record<string, unknown>): string | null {
   switch (event.event) {
@@ -46,7 +44,6 @@ function progressText(event: Record<string, unknown>): string | null {
     case 'probability-ready': return `Source probability ready: ${event.id}`
     case 'meshes-ready': return `Surfaces completed: ${event.completed} of ${event.pending_total}`
     case 'build-complete': return `Atlas ready; ${event.reused} assets reused, ${event.built} constructed.`
-    case 'course-notebook-ready': return `Course notebooks ready: ${event.completed} of ${event.total}.`
     case 'workspace-failure': return String(event.message)
     default: return null
   }
@@ -71,7 +68,6 @@ export function WorkspacePanel({ onOpen, dataset }: { dataset?: string; onOpen: 
   const [tab, setTab] = useState<'sources' | 'atlases' | 'operations'>('sources'), [revision, setRevision] = useState(0)
   const [pending, setPending] = useState(false), [filter, setFilter] = useState(dataset ?? '')
   useEffect(() => { setFilter(dataset ?? ''); setTab('sources') }, [dataset])
-  const [curricula, setCurricula] = useState<Record<string, string>>({})
   const [module, setModule] = useState('')
   const [jobsOffset, setJobsOffset] = useState(0)
   const opening = useRef<{job: string; structureId?: string} | null>(null)
@@ -120,14 +116,13 @@ export function WorkspacePanel({ onOpen, dataset }: { dataset?: string; onOpen: 
   const coversModule = (items?: Coverage[]) => !module || !!items?.some(item => item.id === module)
   const records = snapshot?.packages.filter(record => (!filter || record.dataset_id === filter) && coversModule(record.coverage)) ?? []
   const sources = snapshot?.sources.filter(source => (!filter || source.id === filter) && coversModule(source.coverage)) ?? []
-  const compatible = (record: LocalPackage) => snapshot?.curricula.filter(recipe => record.compatible_curricula?.includes(recipe.id)) ?? []
   return <section className="workspace-manager" aria-label="Local data workspace">
-    <div className="manager-heading"><div><div className="eyebrow">LOCAL SOURCE-TO-TEACHING WORKFLOW</div><h1>Dataset installation and construction</h1><p>Acquire source files, construct an atlas, then explore its native anatomy and prepare teaching views.</p></div><button onClick={() => setRevision(value => value + 1)} disabled={pending}>Refresh workspace</button></div>
+    <div className="manager-heading"><div><div className="eyebrow">LOCAL ANATOMY WORKSPACE</div><h1>Dataset installation and construction</h1><p>Acquire source files, construct an atlas, then explore its native anatomy in 2D and 3D.</p></div><button onClick={() => setRevision(value => value + 1)} disabled={pending}>Refresh workspace</button></div>
     {error && <div className="error" role="alert">{error}<button aria-label="Dismiss workspace error" onClick={() => setError('')}>×</button></div>}
     {!snapshot ? <p role="status">Opening the local workspace…</p> : <>
       <div className="storage-summary"><div><strong>Imaging data</strong><span>{bytes(snapshot.data_free_bytes)} free · {snapshot.data_floor_gib} GiB safety floor</span><code>{snapshot.data_root}</code></div><div><strong>Workspace state</strong><span>{bytes(snapshot.state_free_bytes)} free · {snapshot.state_floor_gib} GiB safety floor</span><code>{snapshot.state_root}</code></div><div><strong>Execution</strong><span>One operation at a time</span><span>{snapshot.workers} construction workers</span><small>Original data and completed checkpoints are retained when stopped.</small></div></div>
       <nav className="manager-tabs" aria-label="Workspace sections">{(['sources', 'atlases', 'operations'] as const).map(value => <button key={value} aria-pressed={tab === value} onClick={() => setTab(value)}>{value === 'sources' ? 'Source recipes' : value === 'atlases' ? 'Local atlases' : `Operations${snapshot.active_job ? ' · running' : ''}`}</button>)}</nav>
-      {tab !== 'operations' && <label className="module-filter">Learning module<SelectField aria-label="Learning module" value={module} onChange={event => setModule(event.target.value)}><option value="">All anatomy modules</option>{snapshot.modules.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</SelectField></label>}
+      {tab !== 'operations' && <label className="module-filter">Anatomy group<SelectField aria-label="Anatomy group" value={module} onChange={event => setModule(event.target.value)}><option value="">All anatomy modules</option>{snapshot.modules.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</SelectField></label>}
       {tab === 'sources' && <><p className="muted">File presence is shown below. Acquisition verifies source hashes and reuses matching files. Each dataset retains its own source terms.</p><div className="source-grid">{sources.map(source => <article className="source-card" key={source.id} aria-label={source.title}>
         <h2>{source.title}</h2><p className="small muted">{source.id} · {source.inputs_present ?? 0}/{source.inputs_required ?? '—'} required inputs present</p>
         <CoverageList items={source.coverage} />
@@ -142,12 +137,11 @@ export function WorkspacePanel({ onOpen, dataset }: { dataset?: string; onOpen: 
           </details>
         </>}
       </article>)}</div></>}
-      <div hidden={tab !== 'atlases'} className="local-library"><label>Dataset<SelectField aria-label="Workspace dataset filter" value={filter} onChange={event => setFilter(event.target.value)}><option value="">All source datasets</option>{snapshot.sources.map(source => <option key={source.id} value={source.id}>{source.id}</option>)}</SelectField></label><p className="muted">Package presence and sizes are inspected here. Opening verifies the selected version's assets and geometry. Saved teaching content always resolves its exact original package.</p>
+      <div hidden={tab !== 'atlases'} className="local-library"><label>Dataset<SelectField aria-label="Workspace dataset filter" value={filter} onChange={event => setFilter(event.target.value)}><option value="">All source datasets</option>{snapshot.sources.map(source => <option key={source.id} value={source.id}>{source.id}</option>)}</SelectField></label><p className="muted">Package presence and sizes are inspected here. Opening verifies the selected version's assets and geometry.</p>
         <LibraryStructureSearch dataset={filter} module={module} revision={revision} busy={busy} open={(key, structureId) => void start({action: 'activate', package_key: key}, structureId)}/>
         {!records.length && <p>Choose another module or dataset, or build a source recipe matching these filters.</p>}
         {records.map(record => <article className="local-package" key={record.dataset_id + record.folder_version}><div><h2>{record.title ?? record.dataset_id}</h2><p>{record.space_name ?? 'Construction incomplete'} · <code>{record.package_version ?? record.folder_version}</code></p><p className="muted">{record.status === 'available' ? `${record.structures} source structures · ${bytes(record.declared_asset_bytes ?? 0)}` : record.detail}</p><CoverageList items={record.coverage ?? []} /></div>
           {record.status === 'available' && record.key ? <div className="package-actions"><button className="primary" disabled={busy} onClick={() => void start({ action: 'activate', package_key: record.key })}>Open atlas</button>
-            {!!compatible(record).length && <><SelectField aria-label={'Teaching recipe for ' + record.key} value={curricula[record.key] ?? compatible(record)[0].id} onChange={event => setCurricula(value => ({ ...value, [record.key!]: event.target.value }))}>{compatible(record).map(recipe => <option key={recipe.id} value={recipe.id}>{recipe.title} · {recipe.scenes} views</option>)}</SelectField><button disabled={busy} onClick={() => void start({ action: 'prepare', package_key: record.key, curriculum: curricula[record.key!] ?? compatible(record)[0].id })}>Prepare teaching</button></>}
           </div> : <span className="job-status">{record.status}</span>}
         </article>)}
       </div>
@@ -155,9 +149,9 @@ export function WorkspacePanel({ onOpen, dataset }: { dataset?: string; onOpen: 
         <p role="status">{snapshot.jobs_total ? `Operations ${snapshot.jobs_offset + 1}–${snapshot.jobs_offset + snapshot.jobs.length} of ${snapshot.jobs_total}` : 'Ready to prepare a local source.'}</p>
         {snapshot.jobs_total > snapshot.jobs_limit && <div className="button-row" aria-label="Operation history pages"><button disabled={busy || snapshot.jobs_offset === 0} onClick={() => setJobsOffset(Math.max(0, snapshot.jobs_offset - snapshot.jobs_limit))}>Newer operations</button><button disabled={busy || snapshot.jobs_offset + snapshot.jobs_limit >= snapshot.jobs_total} onClick={() => setJobsOffset(snapshot.jobs_offset + snapshot.jobs_limit)}>Older operations</button></div>}
         {snapshot.jobs.map(job => <article key={job.id} className="workspace-job" aria-label={'Operation ' + job.id}>
-        <div className="job-heading"><h2>{labels[job.request.action] ?? job.request.action}</h2><span className={'job-status ' + job.status}>{job.status}</span></div><p>{job.request.recipe ?? job.request.course_plan ?? job.request.package_key} {job.request.curriculum && '· ' + job.request.curriculum}</p><p role={job.status === 'running' ? 'status' : undefined}>{job.status === 'running' ? 'The local operation is running. Verified files and matching checkpoints are reused.' : job.detail}</p>
+        <div className="job-heading"><h2>{labels[job.request.action] ?? job.request.action}</h2><span className={'job-status ' + job.status}>{job.status}</span></div><p>{job.request.recipe ?? job.request.package_key}</p><p role={job.status === 'running' ? 'status' : undefined}>{job.status === 'running' ? 'The local operation is running. Verified files and matching checkpoints are reused.' : job.detail}</p>
         {!!job.events.length && <ul className="job-progress" aria-label="Operation progress">{job.events.map(progressText).filter(Boolean).slice(-5).map((message, index) => <li key={index}>{message}</li>)}</ul>}
-        {job.status === 'complete' && job.result && <div className="button-row">{job.result.atlas_key && <button className="primary" disabled={busy} onClick={() => void start({action: 'activate', package_key: job.result!.atlas_key!})}>Browse atlas</button>}{job.result.open_url && <a className="action-link" href={job.result.open_url}>{job.request.action==='prepare-course'?'Open prepared course':'Open prepared notebook'}</a>}{job.result.reused !== undefined && <span>{job.result.reused} source files reused · {job.result.downloads ?? 0} downloaded · {job.result.extracted ?? 0} extracted</span>}</div>}
+        {job.status === 'complete' && job.result && <div className="button-row">{job.result.atlas_key && <button className="primary" disabled={busy} onClick={() => void start({action: 'activate', package_key: job.result!.atlas_key!})}>Browse atlas</button>}{job.result.reused !== undefined && <span>{job.result.reused} source files reused · {job.result.downloads ?? 0} downloaded · {job.result.extracted ?? 0} extracted</span>}</div>}
         {job.id === snapshot.active_job && <button disabled={pending || job.status === 'stopping'} onClick={() => void stop(job.id)}>Stop operation</button>}
         <details><summary>Timing and recovery</summary><p>Started {job.started_utc}{job.finished_utc && ` · Finished ${job.finished_utc}`}</p><p>Repeat the same source operation to reuse verified files and matching checkpoints. Diagnostic log:</p><code>{snapshot.state_root}/jobs/{job.id}/operation.log</code></details>
       </article>)}</div>}

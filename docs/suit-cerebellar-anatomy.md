@@ -1,5 +1,7 @@
 # SUIT cerebellar lobules and deep nuclei
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 The `suit_cerebellum` recipe constructs all 34 original anatomical compartments from the [DiedrichsenLab cerebellar atlas collection](https://github.com/DiedrichsenLab/cerebellar_atlases/tree/6857dfa732de6dd60c94da2f84d0b15ccf316618), pinned to commit `6857dfa732de6dd60c94da2f84d0b15ccf316618`. The original SUIT T1 template, categorical assignments and 34 continuous probability channels share the publisher's SUIT physical coordinate frame. They provide hemispheric lobules, vermal compartments and bilateral dentate, interposed and fastigial nuclei.
 
 The source combines lobules I–IV. Its interposed assignment combines emboliform and globose nuclei. These groupings remain intact. Lobular fields describe 20 healthy young participants; nuclear fields describe a separate 23-participant group. The source nuclear delineations use susceptibility-weighted 7 T images; the displayed T1 is the population template that provides shared spatial context. See the [source description](https://diedrichsenlab.org/imaging/propatlas.htm) and the retained original atlas descriptor.
@@ -28,15 +30,12 @@ The three original image files total 43,119,561 bytes. Four small source descrip
 
 Three curricula contain 40 views: 20 hemispheric lobular views, eight vermal views and 12 nuclear views. Nuclear views alternate original probability and categorical overlays. Revised presets show opaque nuclear groups from an inferior camera direction, with a full T1 context followed by same-point enlargement. The existing **3D anatomy** and **Fit visible 3D** controls provide a complete standalone nuclear view. All views retain the accepted three-MRI-plus-3D row. The course plan `suit-cerebellar-fine-anatomy` binds all views to an explicitly selected package:
 
-```bash
-neuroimage teaching course-prepare suit-cerebellar-fine-anatomy \
-  --packages choices.json --data-root /path/to/data
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 The choices file maps `suit_cerebellum` to its local package key. Interrupted preparation reuses completed notebooks. Saved scenes and credited exports retain native coordinates, source identities, processing records and license text.
 
 ## Verification and attribution
 
-`scripts/verify_suit_native_sources.py` checks original arrays, each probability channel, TSV identities, hemisphere assignments, the complete physical-coordinate mapping and the original scale precision. `scripts/browser_suit_cerebellum.js` exercises all 40 views, source probability readouts, saved-scene restoration, portable import and credited export. `scripts/verify_suit_browser.py` compares those actual readouts with original 4D source samples and verifies restored image pixels and export bindings.
+`scripts/verify_suit_native_sources.py` checks original arrays, each probability channel, TSV identities, hemisphere assignments, the complete physical-coordinate mapping and the original scale precision. `scripts/browser_suit_cerebellum.js` (testing branch) exercises all 40 views, source probability readouts, saved-scene restoration, portable import and credited export. `scripts/verify_suit_browser.py` compares those actual readouts with original 4D source samples and verifies restored image pixels and export bindings.
 
 The retained specific `tpl-SUIT/LICENSE` covers the SUIT template, associated files and atlases under CC BY-NC 3.0. It accompanies every local package and teaching export. Cite Diedrichsen (2006), *NeuroImage* 33:127–138; Diedrichsen et al. (2009), *NeuroImage* 46:39–46; and Diedrichsen et al. (2011), *NeuroImage* 54:1786–1794. The software distribution contains the adapter and recipes; users acquire their own source data. Engineering acceptance and instructor review are recorded separately.

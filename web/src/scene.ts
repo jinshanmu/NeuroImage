@@ -1,5 +1,5 @@
 import { processingRecord } from './provenance'
-import type { Lesson, Manifest, SceneFile, ViewState } from './types'
+import type { Manifest, SceneFile, ViewState } from './types'
 import { validateCutaway } from './cutaway'
 import { scopedStructures, validSurfaceContext } from './atlasBackground'
 import type { AnatomyScope } from './anatomyNavigation'
@@ -16,7 +16,7 @@ export function initialState(manifest: Manifest, scope?: AnatomyScope): ViewStat
     return { selected: null, visible: [], position, background: background.id, overlay: 'none', labelOpacity: 0, meshOpacity: 1,
       radiological: true, layout: 'quad', tileLayout: 'auto', camera: [110, 15, .8], pan: [0, 0, 0, 1], imageContext: !scope || scope.id === 'general-anatomy',
       background2D: true, backgroundOpacity2D: 1, backgroundOpacity3D: !scope || scope.id === 'general-anatomy' ? 1 : .2,
-      window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '', panel: 'inspect',
+      window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '',
       selectionEvidence: { kind: 'image-cursor', candidates: [] } }
   }
   const regionSpan = Math.max(...first.bounds_ras_mm[1].map((high, i) => high - first.bounds_ras_mm[0][i]), 1)
@@ -27,21 +27,23 @@ export function initialState(manifest: Manifest, scope?: AnatomyScope): ViewStat
     camera: [110, 15, model && regionSpan > .6 * imageSpan ? .8 : streamlines ? 1.4 : manifest.representation === 'mri-regions' ? regionZoom : 2],
     pan: [0, 0, 0, 1], imageContext: false, fitVisible3D: true,
     background2D: true, backgroundOpacity2D: 1, backgroundOpacity3D: .2,
-    window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '', panel: 'inspect', selectionEvidence: { kind: 'source-target', candidates: [first.id] },
+    window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '', selectionEvidence: { kind: 'source-target', candidates: [first.id] },
     ...(manifest.representation === 'mri-regions' ? { focus3D: [...first.target_ras_mm] as typeof first.target_ras_mm } : {}),
     ...(ct ? { show3DCursor: false, labelOpacity: .18 } : {}),
     ...(streamlines ? { streamlineLevel: 'standard', streamlineSlabMm: 1 } : {}) }
 }
-export function makeScene(manifest: Manifest, state: ViewState, title = 'Anatomy teaching scene'): SceneFile {
+export function makeScene(manifest: Manifest, state: ViewState, title = 'Anatomy scene'): SceneFile {
+  // Old scene files can carry retired learning state. Keep their anatomy only.
+  const { teaching: _teaching, panel: _panel, ...view } = state as ViewState & { teaching?: unknown; panel?: unknown }
   return { schema_version: '1.0', kind: 'neuroimage-scene', title, saved_utc: new Date().toISOString(),
     package_id: manifest.package_id, package_version: manifest.package_version, build_signature: manifest.build.signature,
-    space_id: manifest.space.id, state: structuredClone(state),
+    space_id: manifest.space.id, state: structuredClone(view),
     provenance: { sources: manifest.sources, processing: processingRecord(manifest.build), anatomical_review: manifest.validation.anatomical_review, renderer: __NEUROIMAGE_VIEWER__ } }
 }
 function finiteArray(value: unknown, length: number): value is number[] {
   return Array.isArray(value) && value.length === length && value.every(x => typeof x === 'number' && Number.isFinite(x))
 }
-export function readScene(input: unknown, manifest: Manifest, lessons: Lesson[] = []): SceneFile {
+export function readScene(input: unknown, manifest: Manifest): SceneFile {
   if (!input || typeof input !== 'object') throw new Error('This file is not a NeuroImage scene.')
   const scene = input as SceneFile
   if (scene.kind !== 'neuroimage-scene' || scene.schema_version !== '1.0') throw new Error('Unsupported scene format.')
@@ -81,12 +83,6 @@ export function readScene(input: unknown, manifest: Manifest, lessons: Lesson[] 
     if (['mri-volume', 'scalar-fields'].includes(manifest.representation ?? '') && s.overlay !== 'none') throw new Error('An image-only source cannot imply a label overlay.')
     if (manifest.representation === 'mri-regions' && s.overlay === undefined) throw new Error('Independent regions require an explicit evidence overlay.')
     if (s.overlay !== undefined && (!overlays.includes(s.overlay) || (s.overlay === 'probability' && !manifest.structures.some(structure => structure.probability)))) throw new Error('Scene probability overlay is unavailable.')
-  }
-  if (s.panel !== undefined && !['inspect', 'learn', 'sources'].includes(s.panel)) throw new Error('Scene has an invalid workspace panel.')
-  if (s.teaching !== undefined) {
-    const teaching = s.teaching, lesson = lessons.find(value => value.id === teaching?.lesson_id)
-    if (!teaching || !lesson || !Number.isInteger(teaching.step) || teaching.step < 0 || teaching.step >= lesson.steps.length || typeof teaching.practice !== 'boolean' || typeof teaching.revealed !== 'boolean' || typeof teaching.answer !== 'string' || teaching.answer.length > 2000)
-      throw new Error('Scene teaching context does not match an available lesson or step.')
   }
   if (typeof s.note !== 'string' || s.note.length > 10000 || !Array.isArray(s.annotations) || s.annotations.length > 200 || s.annotations.some(a => !a || typeof a.id !== 'string' || typeof a.text !== 'string' || a.text.length > 2000 || !finiteArray(a.position_ras_mm, 3) || (a.structure_id !== null && !ids.has(a.structure_id)))) throw new Error('Scene has invalid annotations.')
   return makeScene(manifest, s, typeof scene.title === 'string' ? scene.title : 'Restored scene')

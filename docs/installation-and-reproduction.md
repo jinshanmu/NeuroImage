@@ -4,7 +4,7 @@ This guide applies to NeuroImage Atlas **1.0.0**, prepared for author review. Us
 
 ## Runtime and dependencies
 
-Linux x86_64, Python 3.12 and Chromium with WebGL2 are the verified platform. Command-line acquisition and construction run without a display; viewing needs WebGL2. Keep the `NeuroImage` environment, software checkout, dependencies, temporary files and build outputs on SSD. Keep original anatomy, local atlases and teaching exports on the selected data drive.
+Linux x86_64, Python 3.12 and Chromium with WebGL2 are the verified platform. Command-line acquisition and construction run without a display; viewing needs WebGL2. Keep the `NeuroImage` environment, software checkout, dependencies, temporary files and build outputs on SSD. Keep original anatomy, local atlases and scene/image exports on the selected data drive.
 
 | Component | Role | Recorded version |
 | --- | --- | --- |
@@ -76,11 +76,11 @@ python scripts/build_distribution.py --skip-web-build
 
 The public source audit checks repository boundaries and the distribution audit checks archive members and bundled viewer notices. The release candidate has an additional source-tree audit for machine-specific paths, unexpected binaries, credentials and symbolic links. Release verification records the actual commands and platform. Other operating systems need their own validation before being listed as supported.
 
-## Source and teaching reproduction
+## Source and scene reproduction
 
-Data reproduction uses the exact original inputs, license evidence, recipe, implementation and construction options recorded in each local manifest. Preserve historical atlas packages referenced by saved teaching views. `neuroimage locate EXPORTED_SCENE --data-root DATA_ROOT` resolves the exact required local package. A source update may create another package identity; previously saved views remain attached to their original source.
+Data reproduction uses the exact original inputs, license evidence, recipe, implementation and construction options recorded in each local manifest. Preserve historical atlas packages referenced by saved scenes. `neuroimage locate EXPORTED_SCENE --data-root DATA_ROOT` resolves the exact required local package. A source update may create another package identity; previously saved views remain attached to their original source.
 
-The 1.0.0 teaching format keeps source and processing metadata in every scene. Repeated full recipe text is referenced at `manifest.json#/build/recipe` in the exact source package. Full provenance accompanies exported teaching images. Historical scenes containing an embedded recipe remain readable. Study records are portable JSON with source identity, stable lesson/structure IDs, written responses and self-rated review status.
+The 1.0.0 scene format keeps source and processing metadata in every scene. Repeated full recipe text is referenced at `manifest.json#/build/recipe` in the exact source package. Full provenance accompanies exported images. Historical scenes containing an embedded recipe remain readable; retired lesson state is ignored. Notebooks, courses and study records remain supported by the testing branch.
 
 ## Recovery
 
@@ -94,6 +94,6 @@ The 1.0.0 teaching format keeps source and processing metadata in every scene. R
 | A publisher cannot be reached | Retry the same command; retain partial files; consult the official source page |
 | Port 8765 is occupied | Choose `--port 8766` and use its printed URL |
 | WebGL rendering fails | Check WebGL2 support and record the browser, renderer, source and error |
-| Saved teaching content needs an older source | Restore its exact historical package and use `neuroimage locate` |
+| A saved scene needs an older source | Restore its exact historical package and use `neuroimage locate` |
 
-Browser saves are specific to the profile and service origin, including the port. Export scenes, notebooks, courses and study records for durable recovery. Removing the software leaves original data and local teaching exports intact.
+Browser saves are specific to the profile and service origin, including the port. Export scenes for durable recovery. Removing the software leaves original data and local exports intact. The formal-branch simplification does not delete existing notebook, course or study records.

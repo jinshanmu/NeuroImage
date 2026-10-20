@@ -78,7 +78,7 @@ This checks record identity and completeness. It does not certify anatomy or rev
 
 `scripts/check_specialist_sources.py` independently compares original HCP TrackVis points with complete TCK trajectories, every selected MIDA voxel with the filtered local model, and original arterial/TOF arrays with the retained volumes. The arterial mask must equal the explicitly declared inclusive percentage threshold. Model surfaces retain the original half-grid construction vertices, including very small source nerve classes.
 
-`scripts/browser_specialist_notebooks.js` exercises actual local workspace preparation, exact notebook startup, full-section magnification, display-convention changes, source-bound image export and portable notebook restoration. Its recorded graphics measurements cover WebGL buffers and JavaScript heap, not complete driver or texture allocation.
+`scripts/browser_specialist_notebooks.js` (testing branch) exercises actual local workspace preparation, exact notebook startup, full-section magnification, display-convention changes, source-bound image export and portable notebook restoration. Its recorded graphics measurements cover WebGL buffers and JavaScript heap, not complete driver or texture allocation.
 
 `scripts/browser_surface_cutaway.js` records the actual GPU clipping plane, original vertex-buffer identity, complete-section pixels and depth-picking behavior. `scripts/check_surface_cutaway.py` independently checks restored images and the picked point against original surface triangles. The four-view skull-context notebook exercises cutaway preparation, presentation, clearing and source-bound export.
 

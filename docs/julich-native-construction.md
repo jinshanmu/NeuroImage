@@ -1,5 +1,7 @@
 # Julich-Brain source MPM with its native asymmetric reference
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 The `julich_selected` recipe constructs the complete delivered Julich-Brain 3.0.3 maximum-probability map described by the pinned source configuration. It retains 314 nonzero entries: 302 hemisphere-specific regional assignments and 12 source GapMaps. These counts refer to source entries, including left/right counterparts; they are not a count of unique anatomical structures. The source filename says 3.0.3 and its explicit labelled-map configuration is retained with the original download.
 
 ## Source correspondence and license
@@ -18,14 +20,7 @@ Primary source records:
 
 ## Reproducible local workflow
 
-```bash
-neuroimage acquire julich_selected --data-root "$ATLAS_DATA_ROOT"
-neuroimage build julich_selected --data-root "$ATLAS_DATA_ROOT" --workers 6
-neuroimage library --data-root "$ATLAS_DATA_ROOT" --dataset julich_selected
-neuroimage validate "$ATLAS_MANIFEST"
-neuroimage teaching prepare julich-central-cortex --atlas "$ATLAS_MANIFEST" --data-root "$ATLAS_DATA_ROOT"
-neuroimage workspace --data-root "$ATLAS_DATA_ROOT" --state-root "$ATLAS_WORKSPACE_STATE"
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 Set `ATLAS_MANIFEST` to the printed successful manifest before validating or preparing teaching. Acquisition reuses the checksum-pinned original inputs. Construction keeps per-asset checkpoints and validates a completed package on resume. The complete source inventory must equal the nonzero values found in the original categorical volume; a dropped region or invented value fails construction.
 

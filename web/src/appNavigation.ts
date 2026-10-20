@@ -1,12 +1,9 @@
-/** Small, shareable routes; teaching content stays in its own storage. */
+/** Shareable anatomy, source-management and atlas routes. */
 export type AppDestination = {
-  view?: 'anatomy' | 'teaching' | 'workspace' | 'atlas'
+  view?: 'anatomy' | 'workspace' | 'atlas'
   dataset?: string
   atlas?: string
   group?: string
-  course?: string
-  teaching?: string
-  editCourse?: string
 }
 
 export function destinationUrl(destination: AppDestination): string {
@@ -15,10 +12,16 @@ export function destinationUrl(destination: AppDestination): string {
   if (destination.dataset) query.set('dataset', destination.dataset)
   if (destination.atlas) query.set('atlas', destination.atlas)
   if (destination.group) query.set('group', destination.group)
-  if (destination.course) query.set('course', destination.course)
-  if (destination.teaching) query.set('teaching-content', destination.teaching)
-  if (destination.editCourse) query.set('edit-course', destination.editCourse)
   return '/' + (query.size ? '?' + query.toString() : '')
+}
+
+/** Retired teaching bookmarks return to anatomy without requesting removed APIs. */
+export function normalizeBrowseLocation(path: string): string {
+  const url = new URL(path, 'http://localhost')
+  const retired = ['course', 'teaching-content', 'workspace-content', 'edit-course']
+  if (url.searchParams.get('view') === 'teaching' || retired.some(key => url.searchParams.has(key)))
+    return destinationUrl({ view: 'anatomy' })
+  return path
 }
 
 export function navigate(destination: AppDestination): void {

@@ -7,6 +7,5 @@ export function locateSourceStructure(state: ViewState, manifest: Manifest, stru
   return { ...state, selected: structure.id, position: [...structure.target_ras_mm],
     selectionEvidence: {kind: 'source-target', candidates: [structure.id]},
     visible: [...new Set([...state.visible, structure.id])], layout: 'quad', pan: [0, 0, 0, 1],
-    camera: initialState(manifest).camera, focus3D: undefined, surfaceCutaway: undefined,
-    teaching: undefined, panel: 'inspect' }
+    camera: initialState(manifest).camera, focus3D: undefined, surfaceCutaway: undefined }
 }

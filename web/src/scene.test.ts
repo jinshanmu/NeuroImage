@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { initialState, makeScene, readScene } from './scene'
 import { locateSourceStructure } from './navigation'
-import type { Lesson, Manifest } from './types'
+import type { Manifest } from './types'
 
 const manifest = {
   schema_version: '1.0', package_id: 'synthetic', dataset_id: 'synthetic', package_version: 'v1', title: 'Synthetic test package',
@@ -72,11 +72,11 @@ describe('version-bound scenes', () => {
   })
   it('opens an exact source search target in full sections without changing saved notes or another view', () => {
     const previous = { ...initialState(manifest), note: 'Retained instructor note', visible: [] as string[], pan: [2, 4, 6, 3] as [number, number, number, number], layout: '3d' as const,
-      teaching: { lesson_id: 'old', step: 0, practice: true, answer: '', revealed: false }, surfaceCutaway: {axis: 0 as const, side: 1 as const, position_mm: 0, structures: ['test:11']} }
+      surfaceCutaway: {axis: 0 as const, side: 1 as const, position_mm: 0, structures: ['test:11']} }
     const state = locateSourceStructure(previous, manifest, 'test:11')
     expect(state.position).toEqual([-2, 1, 0]); expect(state.visible).toEqual(['test:11'])
     expect(state.pan).toEqual([0, 0, 0, 1]); expect(state.layout).toBe('quad')
-    expect(state.note).toBe('Retained instructor note'); expect(state.teaching).toBeUndefined(); expect(state.surfaceCutaway).toBeUndefined()
+    expect(state.note).toBe('Retained instructor note'); expect(state.surfaceCutaway).toBeUndefined()
     expect(previous.pan).toEqual([2, 4, 6, 3]); expect(previous.visible).toEqual([])
     expect(() => locateSourceStructure(previous, manifest, 'another-source:11')).toThrow('selected atlas version')
     expect(readScene(makeScene(manifest, state), manifest).state.position).toEqual(state.position)
@@ -101,20 +101,15 @@ describe('version-bound scenes', () => {
     expect(()=>readScene(makeScene(fields,{...state,overlay:'labels'}),fields)).toThrow('label overlay')
   })
 
-  const lessons: Lesson[] = [{ id: 'test-lesson', title: 'Synthetic lesson', objective: 'Exercise state preservation', instruction: 'Generated test content',
-    structure_ids: ['test:11'], review_status: 'not_reviewed', sources: [], evidence_limit: 'Synthetic test fixture',
-    steps: [{ structure_id: 'test:11', prompt: 'Generated first step', question: 'Synthetic?' }, { structure_id: 'test:11', prompt: 'Generated second step', question: 'Synthetic?' }] }]
-  it('preserves lesson step and unrevealed identification work while accepting older scenes', () => {
-    const state = initialState(manifest)
-    state.panel = 'learn'; state.teaching = { lesson_id: 'test-lesson', step: 1, practice: true, answer: 'An unfinished response', revealed: false }
-    expect(readScene(makeScene(manifest, state), manifest, lessons).state).toEqual(state)
-    delete state.panel; delete state.teaching
-    expect(readScene(makeScene(manifest, state), manifest, lessons).state.teaching).toBeUndefined()
-  })
-  it.each([{ lesson_id: 'missing' }, { step: -1 }, { step: 2 }, { step: .5 }, { answer: 1 }, { revealed: 'yes' }])('rejects unavailable or malformed teaching context %#', change => {
-    const state = initialState(manifest)
-    state.teaching = { lesson_id: 'test-lesson', step: 1, practice: true, answer: '', revealed: false, ...change } as typeof state.teaching
-    expect(() => readScene(makeScene(manifest, state), manifest, lessons)).toThrow('teaching context')
+  it('opens historical learning scenes as ordinary anatomy without losing native display state', () => {
+    const state = {...initialState(manifest), visible: [], note: 'Preserved observation'}
+    const old = {...makeScene(manifest, state), state: {...state, panel: 'learn',
+      teaching: {lesson_id: 'retired-lesson', step: 5, practice: true, answer: 'Old response', revealed: false}}}
+    const restored = readScene(old, manifest)
+    expect(restored.state).toEqual(state)
+    expect(old.state.teaching.answer).toBe('Old response')
+    expect(restored.state).not.toHaveProperty('teaching')
+    expect(restored.state).not.toHaveProperty('panel')
   })
   it('restores declared categorical models without treating labels as MRI', () => {
     const model: Manifest = { ...manifest, schema_version: '1.1', representation: 'label-model', volumes: [{ ...manifest.volumes[0], id: 'labels', kind: 'labels' }] }

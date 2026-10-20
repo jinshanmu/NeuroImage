@@ -33,8 +33,8 @@ export async function exportModelImage(imageURL:string,manifest:SurfaceManifest,
     'scene.json':strToU8(JSON.stringify(modelScene(manifest,state),null,2)),
     'provenance.json':strToU8(JSON.stringify(manifest,null,2)),
     'rendering.json':strToU8(JSON.stringify(__NEUROIMAGE_VIEWER__,null,2)),
-    'teaching-notes.txt':strToU8([state.note,'',...state.annotations.map((item,i)=>`${i+1}. ${item.text}\nSOURCE_XYZ mm: ${item.position_native_mm.join(', ')}\nSource object: ${item.structure_id??'none'}`)].join('\n')),
-    'README.txt':strToU8('NeuroImage independent model teaching export\n\nRetain all source licenses, attribution and processing records. Source licenses govern the derived image. SOURCE_XYZ retains the original source axes. Source annotation markers carry their original input, author-indicated endpoint and metric transform; added markers and notes record user observations. Scene restoration uses the exact original local model package. This export contains the image, source-bound scene, notes, processing metadata and attribution.\n'),
+    'notes.txt':strToU8([state.note,'',...state.annotations.map((item,i)=>`${i+1}. ${item.text}\nSOURCE_XYZ mm: ${item.position_native_mm.join(', ')}\nSource object: ${item.structure_id??'none'}`)].join('\n')),
+    'README.txt':strToU8('NeuroImage independent model image export\n\nRetain all source licenses, attribution and processing records. Source licenses govern the derived image. SOURCE_XYZ retains the original source axes. Source annotation markers carry their original input, author-indicated endpoint and metric transform; added markers and notes record user observations. Scene restoration uses the exact original local model package. This export contains the image, source-bound scene, notes, processing metadata and attribution.\n'),
   }
   const sourceAnnotations=state.annotations.flatMap(item=>item.source_annotation?[item.source_annotation]:[])
   if(sourceAnnotations.length)files['source-annotations.json']=strToU8(JSON.stringify(sourceAnnotations,null,2))
@@ -42,5 +42,5 @@ export async function exportModelImage(imageURL:string,manifest:SurfaceManifest,
     const response=await fetch(base+license.path);if(!response.ok)throw Error('A required source license could not be included. Export cancelled.')
     files[license.path]=new Uint8Array(await response.arrayBuffer())
   }
-  download(zipSync(files,{level:6}).buffer as ArrayBuffer,manifest.package_id+'-model-teaching-export.zip','application/zip')
+  download(zipSync(files,{level:6}).buffer as ArrayBuffer,manifest.package_id+'-model-image-export.zip','application/zip')
 }

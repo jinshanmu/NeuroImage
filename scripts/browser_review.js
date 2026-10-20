@@ -24,7 +24,7 @@ async page => {
   await page.locator('article').first().scrollIntoViewIfNeeded();
   await page.screenshot({path:'output/playwright/review-case-validated.png'});
   assert(!failures.length,failures.join('\n'));
-  return {status:'passed',captured_structures:plan.cases.length,lessons:plan.lessons.length,criteria:values.length,
+  return {status:'passed',captured_structures:plan.cases.length,criteria:values.length,
     checks:['all local images loaded','all judgments start unassessed','blank assessment export and import','different native-space assessment rejected'],
     page_errors:failures,anatomical_review:'not_performed'};
 }

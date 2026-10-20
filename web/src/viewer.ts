@@ -354,7 +354,7 @@ export class AtlasViewer {
       this.updateCutaway(state)
       nv.sectionGuides = (state.sectionPlanes ?? []).map(plane => ({ plane,
         polygon: sectionPolygon(this.manifest.volumes.find(volume => volume.id === state.background)!, state.position, plane) }))
-      nv.showMarkers = state.showMarkers !== false && !(state.teaching?.practice && !state.teaching.revealed)
+      nv.showMarkers = state.showMarkers !== false
       nv.imageContext = !this.model && state.imageContext
       nv.sliceBackgroundOpacity = this.model ? null : state.background2D === false ? 0 : state.backgroundOpacity2D ?? 1
       nv.volumeBackgroundOpacity = state.backgroundOpacity3D ?? 1

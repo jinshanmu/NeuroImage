@@ -1,5 +1,7 @@
 # Original temporal-bone CT and fluid-space labels
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 `inner_ear_ct_specimen1` uses original specimen 1 from Dataset A of
 [Human Inner Ear Anatomy](https://zenodo.org/records/8277159), version 1.0.
 The [associated study](https://doi.org/10.1038/s41598-023-45466-9) distinguishes
@@ -12,15 +14,7 @@ assets remain on the configured data drive, outside software distributions.
 Use the dedicated `NeuroImage` environment. HDF5 construction has one optional
 dependency, also used by the original-source inspection utility:
 
-```bash
-conda activate NeuroImage
-python -m pip install -r requirements-source-inspection.lock.txt
-neuroimage acquire inner_ear_ct_specimen1 --data-root <data-root>
-neuroimage build inner_ear_ct_specimen1 --data-root <data-root>
-neuroimage validate <manifest-path>
-neuroimage teaching prepare inner-ear-ct-specimen1-fluid-spaces \
-  --atlas <manifest-path> --data-root <data-root>
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 The package declares an `hdf5` extra for compatible installations. For this
 unpublished candidate, install the supplied wheel and the pinned optional lock

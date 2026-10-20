@@ -29,7 +29,7 @@ Repeat the same commands to recover completed downloads, source geometry and pac
 
 Five built-in sequences and two curricula provide 30 source-bound views. The `bigbrain-fine-surface-anatomy` course presents cortical boundaries and hippocampal subfields together while retaining exact package bindings. Prepared cutaways expose the supplied nested surfaces through native Y = 0 mm; they are visibility controls with open surface edges. The complete surfaces remain recoverable.
 
-`scripts/verify_gifti_source.py` compares every delivered vertex and triangle directly with the acquired original GIfTI files and checks retained coordinate metadata. An unchanged build reuses all 45 assets in each package. `scripts/browser_bigbrain_fine_surfaces.js` exercises each prepared view and its source binding, portable scenes and attributed image exports. Anatomical instructor review is recorded independently from these engineering checks.
+`scripts/verify_gifti_source.py` compares every delivered vertex and triangle directly with the acquired original GIfTI files and checks retained coordinate metadata. An unchanged build reuses all 45 assets in each package. `scripts/browser_bigbrain_fine_surfaces.js` (testing branch) exercises each prepared view and its source binding, portable scenes and attributed image exports. Anatomical instructor review is recorded independently from these engineering checks.
 
 ## Retained source-readiness finding
 

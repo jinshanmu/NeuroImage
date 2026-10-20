@@ -1,5 +1,7 @@
 # Sellar and clinoid source landmarks
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 The `z-anatomy-sellar-landmarks` curriculum provides eighteen views of nine original author locations on the Z-Anatomy sphenoid bone. It reuses the accepted native source model, its original geometry and the existing source-annotation adapter. Each location has a complete bone-context view and a focused view of the same point.
 
 The locations are the sella turcica, hypophysial fossa, tuberculum sellae, dorsum sellae, anterior clinoid process, source-labeled `(Middle clinoid process)`, posterior clinoid process, carotid sulcus and chiasmatic sulcus. The parentheses around the middle clinoid name belong to the source label. This source-model example is retained as delivered; an individual normal-variant case requires separate source evidence.
@@ -10,10 +12,7 @@ All nine annotations are original two-vertex author label lines. Their active Ho
 
 Acquire and build `z_anatomy` through the common source workflow, then use the exact resulting manifest:
 
-```bash
-neuroimage teaching prepare z-anatomy-sellar-landmarks \
-  --atlas /path/to/z_anatomy/manifest.json --data-root /path/to/data
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 In the teaching library, the course plan **Sella, clinoid processes and sphenoidal grooves** prepares the complete sequence from one explicitly selected Z-Anatomy package. Compare the marker with the complete sphenoid, move to the focused view, then rotate the original surface to inspect neighboring features. The marker number and text identify the source location. **Return to recorded view** recovers the original camera and source point after exploration.
 

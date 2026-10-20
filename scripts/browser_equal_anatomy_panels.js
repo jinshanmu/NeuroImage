@@ -5,7 +5,7 @@ async page => {
   page.on('pageerror', onError);
   await page.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : (external.push(route.request().url()), route.abort()));
   const ready = async () => {
-    await page.waitForFunction(() => /^(Ready|Scene saved|Saved scene restored|Scene file restored|Teaching export prepared)/.test(document.querySelector('.live-status')?.textContent ?? ''), null, {timeout: 120000});
+    await page.waitForFunction(() => /^(Ready|Scene saved|Saved scene restored|Scene file restored|Image export prepared)/.test(document.querySelector('.live-status')?.textContent ?? ''), null, {timeout: 120000});
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   };
   const position = () => Promise.all(['R', 'A', 'S'].map(axis => page.getByLabel(axis + ' coordinate in millimeters').inputValue().then(Number)));
@@ -89,7 +89,7 @@ async page => {
   await page.getByLabel('Import scene file', {exact: true}).setInputFiles(output + '/scene.json'); await ready(); await page.mouse.move(10, 20);
   const imported = await comparePixels(baseline, await canvas.screenshot());
   event = page.waitForEvent('download');
-  await page.getByRole('button', {name: 'Export teaching image', exact: true}).click(); await (await event).saveAs(output + '/teaching.zip');
+  await page.getByRole('button', {name: 'Export image', exact: true}).click(); await (await event).saveAs(output + '/teaching.zip');
   const captures = [];
   await page.getByRole('button', {name: 'Expand viewer', exact: true}).click();
   for (const viewport of [{width: 1100, height: 900}, {width: 900, height: 800}, {width: 900, height: 1400}]) {

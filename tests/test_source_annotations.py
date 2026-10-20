@@ -7,10 +7,30 @@ import numpy as np
 import pytest
 
 from neuroimage import source_annotations as annotations
-from neuroimage.model_teaching import ModelSourceAnnotation
-from neuroimage.teaching import prepare
 from neuroimage.validation import validate_package
-from test_model_teaching import model_source
+
+
+from neuroimage import build as pipeline
+from neuroimage.adapters import ImportedDataset, load_recipe
+from neuroimage.model_build import model_catalog
+from test_stl_geometry import fixture as write_stl
+
+
+@pytest.fixture
+def model_source(tmp_path, monkeypatch):
+    recipe = load_recipe("mug500_source_mesh")
+    recipe.update(id="synthetic-model", title="Synthetic source model", source_version="synthetic-1",
+                  sources=[{**recipe["sources"][0], "id": "synthetic-model", "version": "synthetic-1",
+                            "citation": "Generated test geometry", "license_name": "CC0"}],
+                  inputs={"stl": "source.stl", "license": "license.txt"}, teaching_sequences=[])
+    recipe["space"].update(id="synthetic-xyz", name="Synthetic native XYZ", reference="Generated test geometry")
+    recipe["objects"][0].update(id="synthetic-model:object:one", source_name="source.stl", name="Synthetic object")
+    write_stl(tmp_path / "source.stl")
+    (tmp_path / "license.txt").write_text("Generated test geometry. CC0.\n")
+    imported = ImportedDataset(recipe, {key: tmp_path / value for key, value in recipe["inputs"].items()}, model_catalog(recipe))
+    monkeypatch.setattr(pipeline, "import_dataset", lambda *args: imported)
+    path = pipeline.build_atlas(recipe["id"], tmp_path, workers=1, minimum_free_gib=0)
+    return tmp_path, path, {}
 
 
 @pytest.fixture
@@ -64,11 +84,6 @@ def test_changed_source_mapping_is_rejected(source, field, value):
         annotations.validate_annotation(record, specs[0], manifest, source_hash, "a" * 64)
 
 
-def test_text_endpoint_or_boolean_index_cannot_be_selected(source):
-    *_, specs = source
-    for index in (0, True, 1.0):
-        with pytest.raises(ValueError):
-            ModelSourceAnnotation.model_validate({**specs[0], "source_vertex_index": index})
 
 
 def extractor(monkeypatch, manifest, interrupted=False):
@@ -110,26 +125,3 @@ def test_completed_annotations_resume_without_rewriting_after_interruption(sourc
     first.write_text("{}")
     with pytest.raises(ValueError, match="Cached source annotation changed"):
         annotations.prepare_source_annotations(manifest, steps, root, 0)
-
-
-def test_shared_notebook_retains_each_source_record_and_reuses_without_runtime(source, monkeypatch):
-    root, path, recipe, manifest, specs = source
-    monkeypatch.setattr("neuroimage.teaching.validate_package", lambda *args, **kwargs: manifest)
-    calls = extractor(monkeypatch, manifest)
-    for step, spec in zip(recipe["scenes"], specs):
-        step["source_annotation"] = spec
-        step["display"].update(show_markers=True, center_on_target=True)
-    recipe_path = root / "annotations.json"
-    recipe_path.write_text(json.dumps(recipe))
-    result = prepare(path, recipe_path, root, 0)
-    book_path = Path(result["notebook"])
-    saved = book_path.read_bytes(), book_path.stat().st_mtime_ns
-    for entry in json.loads(saved[0])["scenes"]:
-        scene = entry["scene"]; marker = scene["state"]["annotations"][0]
-        assert marker["source_annotation"] == scene["provenance"]["source_annotations"][0]
-        assert marker["position_native_mm"] == scene["state"]["position_native_mm"] == scene["state"]["focus_native_mm"]
-        assert marker["source_annotation"]["source_sha256"]
-    monkeypatch.setattr(annotations, "blender_runtime", lambda *args: pytest.fail("A completed notebook should reuse without Blender"))
-    assert prepare(path, recipe_path, root, 0)["status"] == "reused"
-    assert (book_path.read_bytes(), book_path.stat().st_mtime_ns) == saved
-    assert len(calls) == 1

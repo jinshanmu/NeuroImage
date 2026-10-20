@@ -1,5 +1,7 @@
 # Native image frames and source skull masks
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 The anatomy browser can display a complete original image, one explicitly selected frame of a source series, or a categorical source mask. These representations share acquisition, construction, validation, navigation, scenes and attributed export interfaces. They do not imply equivalent anatomical evidence.
 
 ## Meso-vein MRI
@@ -54,10 +56,7 @@ Four installed curricula add 22 source-bound views: `hba-native-t2-observation` 
 
 In the secondary dataset tools, choose **Local atlases**, select the curriculum beside the matching package and select **Prepare teaching**. **Open prepared notebook** opens its exact source and the teaching panel automatically. The equivalent command is:
 
-```sh
-neuroimage teaching prepare hba-native-t2-observation --atlas /path/to/hba/manifest.json --data-root /path/to/data
-neuroimage open /path/to/prepared-notebook.json --data-root /path/to/data
-```
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.
 
 Select **Next view** to follow the sequence. **Return to recorded view** recovers its cursor, contrast and full or enlarged view after live exploration. Export the notebook to preserve the complete sequence; teaching image exports retain individual source and license records. Viewing or importing a notebook does not overwrite a previously saved browser notebook.
 

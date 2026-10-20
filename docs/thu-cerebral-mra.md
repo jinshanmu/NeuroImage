@@ -1,5 +1,7 @@
 # Healthy-volunteer cerebral MRA and arterial segments
 
+This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+
 Eight local source recipes now pair original MRA with author-provided semantic vessel segments. The first three were `thu_mra_case009`, `thu_mra_case001` and `thu_mra_case030`. Those three contain 20, 17 and 19 nonzero source values, respectively. The [normal-variation expansion](detailed-anatomy-and-variation.md) adds cases 006, 007, 010, 014 and 021, giving eight cases and 151 source-specific segment entries in total. The common acquisition retains one shared 1,198,822,695-byte archive and extracts only the selected case files. Existing original files are verified and reused.
 
 The [publisher dataset page](https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html) describes 109 healthy UNC volunteers and permits noncommercial research and educational use. Preserve that exact permission notice and cite Tan et al., *Computerized Medical Imaging and Graphics* 114 (2024), 102364, [doi:10.1016/j.compmedimag.2024.102364](https://doi.org/10.1016/j.compmedimag.2024.102364). The study's other clinical cohorts are separate from this public healthy-volunteer archive. The paper reports 104 public cases in its semantic experiments, whereas the downloaded archive contains 109 image/label pairs; the acquisition inventory records the delivered files without assigning an undocumented experimental inclusion flag.
@@ -28,21 +30,7 @@ Activate the dedicated NeuroImage environment, then run:
 neuroimage acquire thu_mra_case009 --data-root /path/to/data
 neuroimage build thu_mra_case009 --data-root /path/to/data --workers 4
 neuroimage workspace --data-root /path/to/data --state-root /path/to/ssd/state
-```
-
-Repeat the same commands for cases 001 and 030. The source archive expands to approximately 1.205 GB if fully extracted; each selected case requires approximately 11 MB of original files. Construction reserves 2 GiB per case above the configured HDD safety floor. The pinned software runtime closure includes SimpleITK. No new registration or interpolation step is required.
-
-Open **Cerebral MRA** in the anatomy workspace. The three source-bound curricula contain four observation groups and eight views per case. The course `thu-mra-arterial-observation` organizes all 24 views. Prepare it with an explicit package mapping using `neuroimage teaching course-prepare`, or use the existing teaching workspace controls. Scene exports bind the exact package, source coordinate frame, view settings and attribution.
-
-`verify_thu_mra_source.py` compares original MHA samples, independent SimpleITK physical points, paired grids and original FCSV coordinates. `browser_thu_mra.js` exercises all views, saved-scene restoration, portable import and teaching exports through the accepted frontend. `verify_fine_anatomy_browser.py` checks restored MRI pixels and archive attribution. The local dated benchmark folder contains full results; acquired data and derived packages remain outside software distributions.
-
-## Image clarity and source projections
-
-The October 14 instructor response requested clearer review images. Revised presets use the complete opaque arterial context, an inferior 3D camera, source intensity window 0.5–11, and section-label opacity 0.16. All 24 revised views passed native-position, saved-scene, portable-import and attributed-export checks. Original rejected captures and superseded notebooks remain in the dated benchmark history. The current course ID is `e3a0d26c-8ed7-53b7-94a7-813f99373b3e`.
-
-For a continuous source-signal overview, `scripts/export_native_mra_projection.py` computes an axial maximum-intensity projection directly from a declared original slice interval. It records the complete provenance, slice indices, physical slab edges, selected source label, intensity window and image hash beside the PNG. The figure labels its computed projection and overlapping depths. It retains native X,Y samples with nearest-sample display. The case 009 review uses original slices 18–63 and a separate complete inferior 3D view at zoom 2.0. Both show anterior toward the top and the source right side on the left. The exact-image instructor record is separate from engineering acceptance.
-
-```bash
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.bash
 python -m pip install -r requirements-teaching.lock.txt
 python scripts/export_native_mra_projection.py \
   --manifest /path/to/data/derivatives/thu_mra_case009/PACKAGE/manifest.json \

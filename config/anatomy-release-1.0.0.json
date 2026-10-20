@@ -1,18 +1,11 @@
 {
   "recorded_utc": "2026-10-18T17:12:34.321511+00:00",
   "software_version": "1.0.0",
-  "scope": "Configured original-source entries and English teaching sequences. Counts retain overlapping and repeated source definitions.",
+  "scope": "Configured original-source anatomy entries in the formal browsing release. Counts include overlapping and repeated source definitions.",
   "source_count": 39,
   "upstream_source_families": 19,
   "source_specific_structures": 1965,
-  "builtin_sequences": 193,
-  "source_annotations": 18,
-  "source_annotation_views": 36,
   "detailed_topics": 46,
-  "curricula_count": 90,
-  "curriculum_views": 796,
-  "course_plan_count": 31,
-  "course_plan_views": 684,
   "sources": [
     {
       "dataset_id": "bigbrain_hippocampus",
@@ -20,9 +13,7 @@
       "package_version": "3583b4ba664391c6",
       "manifest": "derivatives/bigbrain_hippocampus/3583b4ba664391c6/manifest.json",
       "representation": "surface-model",
-      "structures": 14,
-      "builtin_sequences": 3,
-      "source_annotations": 0
+      "structures": 14
     },
     {
       "dataset_id": "bigbrain_layers",
@@ -30,1019 +21,312 @@
       "package_version": "28962750493fb674",
       "manifest": "derivatives/bigbrain_layers/28962750493fb674/manifest.json",
       "representation": "surface-model",
-      "structures": 14,
-      "builtin_sequences": 2,
-      "source_annotations": 0
+      "structures": 14
     },
     {
       "dataset_id": "brainstem_navigator_mni",
-      "title": "Brainstem Navigator \u00b7 brainstem and diencephalic source regions",
+      "title": "Brainstem Navigator · brainstem and diencephalic source regions",
       "package_version": "f753cbca5de01ac4",
       "manifest": "derivatives/brainstem_navigator_mni/f753cbca5de01ac4/manifest.json",
       "representation": "mri-regions",
-      "structures": 86,
-      "builtin_sequences": 9,
-      "source_annotations": 0
+      "structures": 86
     },
     {
       "dataset_id": "cerebra",
-      "title": "CerebrA \u00b7 MNI 2009c symmetric",
+      "title": "CerebrA · MNI 2009c symmetric",
       "package_version": "174a5fa31f218a0d",
       "manifest": "derivatives/cerebra/174a5fa31f218a0d/manifest.json",
       "representation": "mri-labels",
-      "structures": 102,
-      "builtin_sequences": 8,
-      "source_annotations": 0
+      "structures": 102
     },
     {
       "dataset_id": "cit168_native",
-      "title": "CIT168 \u00b7 native probabilistic subcortical atlas",
+      "title": "CIT168 · native probabilistic subcortical atlas",
       "package_version": "12b74ee04d2fb842",
       "manifest": "derivatives/cit168_native/12b74ee04d2fb842/manifest.json",
       "representation": "mri-labels",
-      "structures": 16,
-      "builtin_sequences": 5,
-      "source_annotations": 0
+      "structures": 16
     },
     {
       "dataset_id": "hba_native",
-      "title": "HumanBrainAtlas \u00b7 healthy participant 01 T2",
+      "title": "HumanBrainAtlas · healthy participant 01 T2",
       "package_version": "b130a9babcc07247",
       "manifest": "derivatives/hba_native/b130a9babcc07247/manifest.json",
       "representation": "mri-volume",
-      "structures": 0,
-      "builtin_sequences": 0,
-      "source_annotations": 0
+      "structures": 0
     },
     {
       "dataset_id": "hcp1065_prob",
-      "title": "HCP1065 \u00b7 native white matter probability fields",
+      "title": "HCP1065 · native white matter probability fields",
       "package_version": "6cfd8af637420faa",
       "manifest": "derivatives/hcp1065_prob/6cfd8af637420faa/manifest.json",
       "representation": "mri-regions",
-      "structures": 64,
-      "builtin_sequences": 11,
-      "source_annotations": 0
+      "structures": 64
     },
     {
       "dataset_id": "hcp1065_tracts",
-      "title": "HCP1065 \u00b7 expanded source streamline bundles",
+      "title": "HCP1065 · expanded source streamline bundles",
       "package_version": "d646e779e4d93dce",
       "manifest": "derivatives/hcp1065_tracts/d646e779e4d93dce/manifest.json",
       "representation": "mri-streamlines",
-      "structures": 87,
-      "builtin_sequences": 14,
-      "source_annotations": 0
+      "structures": 87
     },
     {
       "dataset_id": "inner_ear_ct_specimen1",
-      "title": "Inner-ear CT \u00b7 Dataset A specimen 1",
+      "title": "Inner-ear CT · Dataset A specimen 1",
       "package_version": "8505a304d1cd522a",
       "manifest": "derivatives/inner_ear_ct_specimen1/8505a304d1cd522a/manifest.json",
       "representation": "ct-labels",
-      "structures": 3,
-      "builtin_sequences": 2,
-      "source_annotations": 0
+      "structures": 3
     },
     {
       "dataset_id": "ixi_mra",
-      "title": "IXI MRA \u00b7 native source image IXI002",
+      "title": "IXI MRA · native source image IXI002",
       "package_version": "ef40bd2a0f6f885d",
       "manifest": "derivatives/ixi_mra/ef40bd2a0f6f885d/manifest.json",
       "representation": "mri-volume",
-      "structures": 0,
-      "builtin_sequences": 0,
-      "source_annotations": 0
+      "structures": 0
     },
     {
       "dataset_id": "julich_selected",
-      "title": "Julich-Brain 3.0.3 \u00b7 native cytoarchitectonic MPM",
+      "title": "Julich-Brain 3.0.3 · native cytoarchitectonic MPM",
       "package_version": "53ec2653119db4ba",
       "manifest": "derivatives/julich_selected/53ec2653119db4ba/manifest.json",
       "representation": "mri-labels",
-      "structures": 314,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 314
     },
     {
       "dataset_id": "mesoveins",
-      "title": "Meso-vein MRI \u00b7 native healthy participant 01",
+      "title": "Meso-vein MRI · native healthy participant 01",
       "package_version": "5deeb2cc2ff15ee8",
       "manifest": "derivatives/mesoveins/5deeb2cc2ff15ee8/manifest.json",
       "representation": "mri-volume",
-      "structures": 0,
-      "builtin_sequences": 0,
-      "source_annotations": 0
+      "structures": 0
     },
     {
       "dataset_id": "mida",
-      "title": "MIDA \u00b7 cranial nerves and skull-base context",
+      "title": "MIDA · cranial nerves and skull-base context",
       "package_version": "3374505761bc6543",
       "manifest": "derivatives/mida/3374505761bc6543/manifest.json",
       "representation": "label-model",
-      "structures": 51,
-      "builtin_sequences": 10,
-      "source_annotations": 0
+      "structures": 51
     },
     {
       "dataset_id": "mouches_arteries",
-      "title": "Healthy-subject arterial occurrence \u00b7 native TOF atlas",
+      "title": "Healthy-subject arterial occurrence · native TOF atlas",
       "package_version": "b70c3929aa9c3de0",
       "manifest": "derivatives/mouches_arteries/b70c3929aa9c3de0/manifest.json",
       "representation": "mri-regions",
-      "structures": 1,
-      "builtin_sequences": 1,
-      "source_annotations": 0
+      "structures": 1
     },
     {
       "dataset_id": "mug500_healthy",
-      "title": "MUG500+ \u00b7 healthy skull A0101",
+      "title": "MUG500+ · healthy skull A0101",
       "package_version": "105c29c690b7272d",
       "manifest": "derivatives/mug500_healthy/105c29c690b7272d/manifest.json",
       "representation": "label-model",
-      "structures": 1,
-      "builtin_sequences": 1,
-      "source_annotations": 0
+      "structures": 1
     },
     {
       "dataset_id": "mug500_source_mesh",
-      "title": "MUG500+ \u00b7 author-cleaned A0101 skull",
+      "title": "MUG500+ · author-cleaned A0101 skull",
       "package_version": "24d39ff684e5d6ce",
       "manifest": "derivatives/mug500_source_mesh/24d39ff684e5d6ce/manifest.json",
       "representation": "surface-model",
-      "structures": 1,
-      "builtin_sequences": 1,
-      "source_annotations": 0
+      "structures": 1
     },
     {
       "dataset_id": "nextbrain_case1_block05",
-      "title": "NextBrain Case 1 \u00b7 Forebrain P3.3",
+      "title": "NextBrain Case 1 · Forebrain P3.3",
       "package_version": "2a76e6ca515b16ef",
       "manifest": "derivatives/nextbrain_case1_block05/2a76e6ca515b16ef/manifest.json",
       "representation": "mri-labels",
-      "structures": 49,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 49
     },
     {
       "dataset_id": "nextbrain_case1_block07",
-      "title": "NextBrain Case 1 \u00b7 Forebrain A3.2",
+      "title": "NextBrain Case 1 · Forebrain A3.2",
       "package_version": "162d0a6bb81e32f6",
       "manifest": "derivatives/nextbrain_case1_block07/162d0a6bb81e32f6/manifest.json",
       "representation": "mri-labels",
-      "structures": 15,
-      "builtin_sequences": 1,
-      "source_annotations": 0
+      "structures": 15
     },
     {
       "dataset_id": "nextbrain_case1_block08",
-      "title": "NextBrain Case 1 \u00b7 Forebrain A2.3",
+      "title": "NextBrain Case 1 · Forebrain A2.3",
       "package_version": "c382663422fb6ec9",
       "manifest": "derivatives/nextbrain_case1_block08/c382663422fb6ec9/manifest.json",
       "representation": "mri-labels",
-      "structures": 16,
-      "builtin_sequences": 2,
-      "source_annotations": 0
+      "structures": 16
     },
     {
       "dataset_id": "nextbrain_case1_block25",
-      "title": "NextBrain Case 1 \u00b7 Cerebellum C1.1",
+      "title": "NextBrain Case 1 · Cerebellum C1.1",
       "package_version": "613e83c27c9484fb",
       "manifest": "derivatives/nextbrain_case1_block25/613e83c27c9484fb/manifest.json",
       "representation": "mri-labels",
-      "structures": 7,
-      "builtin_sequences": 2,
-      "source_annotations": 0
+      "structures": 7
     },
     {
       "dataset_id": "nextbrain_case1_block33",
-      "title": "NextBrain Case 1 \u00b7 Forebrain P1.3",
+      "title": "NextBrain Case 1 · Forebrain P1.3",
       "package_version": "6973746dc56fba92",
       "manifest": "derivatives/nextbrain_case1_block33/6973746dc56fba92/manifest.json",
       "representation": "mri-labels",
-      "structures": 125,
-      "builtin_sequences": 3,
-      "source_annotations": 0
+      "structures": 125
     },
     {
       "dataset_id": "nextbrain_case1_block41",
-      "title": "NextBrain Case 1 \u00b7 Forebrain P2.2",
+      "title": "NextBrain Case 1 · Forebrain P2.2",
       "package_version": "335e70ef9a0e0e91",
       "manifest": "derivatives/nextbrain_case1_block41/335e70ef9a0e0e91/manifest.json",
       "representation": "mri-labels",
-      "structures": 85,
-      "builtin_sequences": 3,
-      "source_annotations": 0
+      "structures": 85
     },
     {
       "dataset_id": "nextbrain_case1_block45",
-      "title": "NextBrain Case 1 \u00b7 Forebrain A1.3",
+      "title": "NextBrain Case 1 · Forebrain A1.3",
       "package_version": "b79c11e74431f091",
       "manifest": "derivatives/nextbrain_case1_block45/b79c11e74431f091/manifest.json",
       "representation": "mri-labels",
-      "structures": 136,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 136
     },
     {
       "dataset_id": "nextbrain_case2_block06",
-      "title": "NextBrain Case 2 \u00b7 Pons B2.1",
+      "title": "NextBrain Case 2 · Pons B2.1",
       "package_version": "c05d1368c39641db",
       "manifest": "derivatives/nextbrain_case2_block06/c05d1368c39641db/manifest.json",
       "representation": "mri-labels",
-      "structures": 32,
-      "builtin_sequences": 5,
-      "source_annotations": 0
+      "structures": 32
     },
     {
       "dataset_id": "nextbrain_case2_block07",
-      "title": "NextBrain Case 2 \u00b7 Midbrain B1.1",
+      "title": "NextBrain Case 2 · Midbrain B1.1",
       "package_version": "6c0f1658a9056e7e",
       "manifest": "derivatives/nextbrain_case2_block07/6c0f1658a9056e7e/manifest.json",
       "representation": "mri-labels",
-      "structures": 46,
-      "builtin_sequences": 6,
-      "source_annotations": 0
+      "structures": 46
     },
     {
       "dataset_id": "nextbrain_case2_block16",
-      "title": "NextBrain Case 2 \u00b7 Pontomedullary region B3.1",
+      "title": "NextBrain Case 2 · Pontomedullary region B3.1",
       "package_version": "c363da4a31687a34",
       "manifest": "derivatives/nextbrain_case2_block16/c363da4a31687a34/manifest.json",
       "representation": "mri-labels",
-      "structures": 41,
-      "builtin_sequences": 5,
-      "source_annotations": 0
+      "structures": 41
     },
     {
       "dataset_id": "nextbrain_case2_block38",
-      "title": "NextBrain Case 2 \u00b7 Medulla B4.1",
+      "title": "NextBrain Case 2 · Medulla B4.1",
       "package_version": "0c51242409cb8e18",
       "manifest": "derivatives/nextbrain_case2_block38/0c51242409cb8e18/manifest.json",
       "representation": "mri-labels",
-      "structures": 19,
-      "builtin_sequences": 3,
-      "source_annotations": 0
+      "structures": 19
     },
     {
       "dataset_id": "spl_nac",
-      "title": "SPL/NAC \u00b7 normal volunteer",
+      "title": "SPL/NAC · normal volunteer",
       "package_version": "5540cfe690956d43",
       "manifest": "derivatives/spl_nac/5540cfe690956d43/manifest.json",
       "representation": "mri-labels",
-      "structures": 105,
-      "builtin_sequences": 8,
-      "source_annotations": 0
+      "structures": 105
     },
     {
       "dataset_id": "suit_cerebellum",
-      "title": "SUIT \u00b7 cerebellar lobules and deep nuclei",
+      "title": "SUIT · cerebellar lobules and deep nuclei",
       "package_version": "8aedcbdb455603b3",
       "manifest": "derivatives/suit_cerebellum/8aedcbdb455603b3/manifest.json",
       "representation": "mri-labels",
-      "structures": 34,
-      "builtin_sequences": 3,
-      "source_annotations": 0
+      "structures": 34
     },
     {
       "dataset_id": "thu_mra_case001",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 001",
+      "title": "Cerebral MRA · healthy volunteer 001",
       "package_version": "3b4756cdbf0e57ca",
       "manifest": "derivatives/thu_mra_case001/3b4756cdbf0e57ca/manifest.json",
       "representation": "mri-labels",
-      "structures": 17,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 17
     },
     {
       "dataset_id": "thu_mra_case006",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 006",
+      "title": "Cerebral MRA · healthy volunteer 006",
       "package_version": "59113420268411ec",
       "manifest": "derivatives/thu_mra_case006/59113420268411ec/manifest.json",
       "representation": "mri-labels",
-      "structures": 19,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 19
     },
     {
       "dataset_id": "thu_mra_case007",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 007",
+      "title": "Cerebral MRA · healthy volunteer 007",
       "package_version": "b7b50d1b059e00e2",
       "manifest": "derivatives/thu_mra_case007/b7b50d1b059e00e2/manifest.json",
       "representation": "mri-labels",
-      "structures": 18,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 18
     },
     {
       "dataset_id": "thu_mra_case009",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 009",
+      "title": "Cerebral MRA · healthy volunteer 009",
       "package_version": "74f45536d0575f3d",
       "manifest": "derivatives/thu_mra_case009/74f45536d0575f3d/manifest.json",
       "representation": "mri-labels",
-      "structures": 20,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 20
     },
     {
       "dataset_id": "thu_mra_case010",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 010",
+      "title": "Cerebral MRA · healthy volunteer 010",
       "package_version": "6cc58fb03b703bd8",
       "manifest": "derivatives/thu_mra_case010/6cc58fb03b703bd8/manifest.json",
       "representation": "mri-labels",
-      "structures": 19,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 19
     },
     {
       "dataset_id": "thu_mra_case014",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 014",
+      "title": "Cerebral MRA · healthy volunteer 014",
       "package_version": "9473fce0f5e218a6",
       "manifest": "derivatives/thu_mra_case014/9473fce0f5e218a6/manifest.json",
       "representation": "mri-labels",
-      "structures": 20,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 20
     },
     {
       "dataset_id": "thu_mra_case021",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 021",
+      "title": "Cerebral MRA · healthy volunteer 021",
       "package_version": "80ee0b80f4c91f19",
       "manifest": "derivatives/thu_mra_case021/80ee0b80f4c91f19/manifest.json",
       "representation": "mri-labels",
-      "structures": 19,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 19
     },
     {
       "dataset_id": "thu_mra_case030",
-      "title": "Cerebral MRA \u00b7 healthy volunteer 030",
+      "title": "Cerebral MRA · healthy volunteer 030",
       "package_version": "7ab8af66974506c7",
       "manifest": "derivatives/thu_mra_case030/7ab8af66974506c7/manifest.json",
       "representation": "mri-labels",
-      "structures": 19,
-      "builtin_sequences": 4,
-      "source_annotations": 0
+      "structures": 19
     },
     {
       "dataset_id": "venat",
-      "title": "VENAT \u00b7 native venous statistical fields",
+      "title": "VENAT · native venous statistical fields",
       "package_version": "9c534558d7670c46",
       "manifest": "derivatives/venat/9c534558d7670c46/manifest.json",
       "representation": "scalar-fields",
-      "structures": 0,
-      "builtin_sequences": 0,
-      "source_annotations": 0
+      "structures": 0
     },
     {
       "dataset_id": "z_anatomy",
-      "title": "Z-Anatomy \u00b7 independent cranial model",
+      "title": "Z-Anatomy · independent cranial model",
       "package_version": "060008dffc3a5669",
       "manifest": "derivatives/z_anatomy/060008dffc3a5669/manifest.json",
       "representation": "surface-model",
-      "structures": 350,
-      "builtin_sequences": 41,
-      "source_annotations": 18
+      "structures": 350
     }
   ],
-  "curricula": [
-    {
-      "id": "bigbrain-hippocampus-observation",
-      "dataset": "bigbrain_hippocampus",
-      "views": 14
-    },
-    {
-      "id": "bigbrain-layers-observation",
-      "dataset": "bigbrain_layers",
-      "views": 16
-    },
-    {
-      "id": "brainstem-expanded-regions",
-      "dataset": "brainstem_navigator_mni",
-      "views": 18
-    },
-    {
-      "id": "brainstem-source-regions",
-      "dataset": "brainstem_navigator_mni",
-      "views": 6
-    },
-    {
-      "id": "cerebra-source-foundations",
-      "dataset": "cerebra",
-      "views": 8
-    },
-    {
-      "id": "cit168-probability-regions",
-      "dataset": "cit168_native",
-      "views": 8
-    },
-    {
-      "id": "hba-native-t2-observation",
-      "dataset": "hba_native",
-      "views": 6
-    },
-    {
-      "id": "hcp1065-probability-association",
-      "dataset": "hcp1065_prob",
-      "views": 22
-    },
-    {
-      "id": "hcp1065-probability-commissural",
-      "dataset": "hcp1065_prob",
-      "views": 8
-    },
-    {
-      "id": "hcp1065-probability-limbic",
-      "dataset": "hcp1065_prob",
-      "views": 12
-    },
-    {
-      "id": "hcp1065-probability-projection",
-      "dataset": "hcp1065_prob",
-      "views": 26
-    },
-    {
-      "id": "hcp1065-specialist-pathways",
-      "dataset": "hcp1065_tracts",
-      "views": 10
-    },
-    {
-      "id": "hcp1065-streamline-introduction",
-      "dataset": "hcp1065_tracts",
-      "views": 6
-    },
-    {
-      "id": "inner-ear-ct-specimen1-fluid-spaces",
-      "dataset": "inner_ear_ct_specimen1",
-      "views": 6
-    },
-    {
-      "id": "ixi-native-mra-observation",
-      "dataset": "ixi_mra",
-      "views": 4
-    },
-    {
-      "id": "julich-central-cortex",
-      "dataset": "julich_selected",
-      "views": 8
-    },
-    {
-      "id": "julich-cerebellar-nuclei",
-      "dataset": "julich_selected",
-      "views": 8
-    },
-    {
-      "id": "julich-deep-regions",
-      "dataset": "julich_selected",
-      "views": 8
-    },
-    {
-      "id": "julich-medial-temporal",
-      "dataset": "julich_selected",
-      "views": 8
-    },
-    {
-      "id": "mesoveins-native-observation",
-      "dataset": "mesoveins",
-      "views": 4
-    },
-    {
-      "id": "mida-cranial-skull-context",
-      "dataset": "mida",
-      "views": 9
-    },
-    {
-      "id": "mida-skull-cutaway",
-      "dataset": "mida",
-      "views": 4
-    },
-    {
-      "id": "mouches-arterial-occurrence",
-      "dataset": "mouches_arteries",
-      "views": 5
-    },
-    {
-      "id": "mug500-skull-observation",
-      "dataset": "mug500_healthy",
-      "views": 4
-    },
-    {
-      "id": "mug500-source-skull-context",
-      "dataset": "mug500_source_mesh",
-      "views": 2
-    },
-    {
-      "id": "nextbrain-case1-block05-fine-anatomy",
-      "dataset": "nextbrain_case1_block05",
-      "views": 8
-    },
-    {
-      "id": "nextbrain-case1-block07-fine-anatomy",
-      "dataset": "nextbrain_case1_block07",
-      "views": 2
-    },
-    {
-      "id": "nextbrain-case1-block08-fine-anatomy",
-      "dataset": "nextbrain_case1_block08",
-      "views": 4
-    },
-    {
-      "id": "nextbrain-case1-block25-fine-anatomy",
-      "dataset": "nextbrain_case1_block25",
-      "views": 4
-    },
-    {
-      "id": "nextbrain-case1-block33-fine-anatomy",
-      "dataset": "nextbrain_case1_block33",
-      "views": 6
-    },
-    {
-      "id": "nextbrain-case1-block41-fine-anatomy",
-      "dataset": "nextbrain_case1_block41",
-      "views": 6
-    },
-    {
-      "id": "nextbrain-case1-block45-fine-anatomy",
-      "dataset": "nextbrain_case1_block45",
-      "views": 8
-    },
-    {
-      "id": "nextbrain-case2-block06-fine-anatomy",
-      "dataset": "nextbrain_case2_block06",
-      "views": 10
-    },
-    {
-      "id": "nextbrain-case2-block07-fine-anatomy",
-      "dataset": "nextbrain_case2_block07",
-      "views": 12
-    },
-    {
-      "id": "nextbrain-case2-block16-fine-anatomy",
-      "dataset": "nextbrain_case2_block16",
-      "views": 10
-    },
-    {
-      "id": "nextbrain-case2-block38-fine-anatomy",
-      "dataset": "nextbrain_case2_block38",
-      "views": 6
-    },
-    {
-      "id": "spl-cisternal-regions",
-      "dataset": "spl_nac",
-      "views": 6
-    },
-    {
-      "id": "spl-first-session",
-      "dataset": "spl_nac",
-      "views": 6
-    },
-    {
-      "id": "spl-spatial-relations",
-      "dataset": "spl_nac",
-      "views": 6
-    },
-    {
-      "id": "suit-deep-nuclei",
-      "dataset": "suit_cerebellum",
-      "views": 12
-    },
-    {
-      "id": "suit-hemispheric-lobules",
-      "dataset": "suit_cerebellum",
-      "views": 20
-    },
-    {
-      "id": "suit-vermis",
-      "dataset": "suit_cerebellum",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case001-arterial-observation",
-      "dataset": "thu_mra_case001",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case001-variation-comparison",
-      "dataset": "thu_mra_case001",
-      "views": 4
-    },
-    {
-      "id": "thu-mra-case006-arterial-observation",
-      "dataset": "thu_mra_case006",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case006-variation-comparison",
-      "dataset": "thu_mra_case006",
-      "views": 4
-    },
-    {
-      "id": "thu-mra-case007-arterial-observation",
-      "dataset": "thu_mra_case007",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case007-variation-comparison",
-      "dataset": "thu_mra_case007",
-      "views": 4
-    },
-    {
-      "id": "thu-mra-case009-arterial-observation",
-      "dataset": "thu_mra_case009",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case009-variation-comparison",
-      "dataset": "thu_mra_case009",
-      "views": 4
-    },
-    {
-      "id": "thu-mra-case010-arterial-observation",
-      "dataset": "thu_mra_case010",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case010-variation-comparison",
-      "dataset": "thu_mra_case010",
-      "views": 4
-    },
-    {
-      "id": "thu-mra-case014-arterial-observation",
-      "dataset": "thu_mra_case014",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case014-variation-comparison",
-      "dataset": "thu_mra_case014",
-      "views": 4
-    },
-    {
-      "id": "thu-mra-case021-arterial-observation",
-      "dataset": "thu_mra_case021",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case021-variation-comparison",
-      "dataset": "thu_mra_case021",
-      "views": 4
-    },
-    {
-      "id": "thu-mra-case030-arterial-observation",
-      "dataset": "thu_mra_case030",
-      "views": 8
-    },
-    {
-      "id": "thu-mra-case030-variation-comparison",
-      "dataset": "thu_mra_case030",
-      "views": 4
-    },
-    {
-      "id": "venat-native-field-comparison",
-      "dataset": "venat",
-      "views": 8
-    },
-    {
-      "id": "z-anatomy-arterial-context",
-      "dataset": "z_anatomy",
-      "views": 13
-    },
-    {
-      "id": "z-anatomy-brainstem-surface-landmarks",
-      "dataset": "z_anatomy",
-      "views": 10
-    },
-    {
-      "id": "z-anatomy-central-sulci",
-      "dataset": "z_anatomy",
-      "views": 8
-    },
-    {
-      "id": "z-anatomy-cerebellar-surface",
-      "dataset": "z_anatomy",
-      "views": 18
-    },
-    {
-      "id": "z-anatomy-cerebellar-vermis",
-      "dataset": "z_anatomy",
-      "views": 13
-    },
-    {
-      "id": "z-anatomy-commissural-limbic-models",
-      "dataset": "z_anatomy",
-      "views": 9
-    },
-    {
-      "id": "z-anatomy-cortical-frontal-central",
-      "dataset": "z_anatomy",
-      "views": 20
-    },
-    {
-      "id": "z-anatomy-cortical-medial-basal",
-      "dataset": "z_anatomy",
-      "views": 16
-    },
-    {
-      "id": "z-anatomy-cortical-temporal-parietal",
-      "dataset": "z_anatomy",
-      "views": 20
-    },
-    {
-      "id": "z-anatomy-distal-arteries",
-      "dataset": "z_anatomy",
-      "views": 12
-    },
-    {
-      "id": "z-anatomy-dural-arteries",
-      "dataset": "z_anatomy",
-      "views": 4
-    },
-    {
-      "id": "z-anatomy-facial-auditory-vestibular-nuclei",
-      "dataset": "z_anatomy",
-      "views": 10
-    },
-    {
-      "id": "z-anatomy-inferior-temporal",
-      "dataset": "z_anatomy",
-      "views": 6
-    },
-    {
-      "id": "z-anatomy-limbic-deep-models",
-      "dataset": "z_anatomy",
-      "views": 8
-    },
-    {
-      "id": "z-anatomy-medial-cingulate",
-      "dataset": "z_anatomy",
-      "views": 12
-    },
-    {
-      "id": "z-anatomy-medullary-cranial-nuclei",
-      "dataset": "z_anatomy",
-      "views": 10
-    },
-    {
-      "id": "z-anatomy-nerve-roots",
-      "dataset": "z_anatomy",
-      "views": 8
-    },
-    {
-      "id": "z-anatomy-occipital-surface",
-      "dataset": "z_anatomy",
-      "views": 14
-    },
-    {
-      "id": "z-anatomy-ocular-motor-nuclei",
-      "dataset": "z_anatomy",
-      "views": 8
-    },
-    {
-      "id": "z-anatomy-orbital-frontal",
-      "dataset": "z_anatomy",
-      "views": 14
-    },
-    {
-      "id": "z-anatomy-petrous-neuroanatomy",
-      "dataset": "z_anatomy",
-      "views": 4
-    },
-    {
-      "id": "z-anatomy-sellar-landmarks",
-      "dataset": "z_anatomy",
-      "views": 18
-    },
-    {
-      "id": "z-anatomy-sellar-model-context",
-      "dataset": "z_anatomy",
-      "views": 2
-    },
-    {
-      "id": "z-anatomy-skull-dura",
-      "dataset": "z_anatomy",
-      "views": 7
-    },
-    {
-      "id": "z-anatomy-skull-landmarks",
-      "dataset": "z_anatomy",
-      "views": 18
-    },
-    {
-      "id": "z-anatomy-striatal-pallidal-models",
-      "dataset": "z_anatomy",
-      "views": 8
-    },
-    {
-      "id": "z-anatomy-superior-temporal",
-      "dataset": "z_anatomy",
-      "views": 6
-    },
-    {
-      "id": "z-anatomy-thalamic-midbrain-models",
-      "dataset": "z_anatomy",
-      "views": 8
-    },
-    {
-      "id": "z-anatomy-venous-context",
-      "dataset": "z_anatomy",
-      "views": 5
-    },
-    {
-      "id": "z-anatomy-ventricular-context",
-      "dataset": "z_anatomy",
-      "views": 7
-    },
-    {
-      "id": "z-anatomy-visual-auditory-pathways",
-      "dataset": "z_anatomy",
-      "views": 12
-    }
-  ],
-  "course_plans": [
-    {
-      "id": "advanced-cortical-surfaces",
-      "title": "Advanced cortical surface anatomy",
-      "views": 60,
-      "sources": 1
-    },
-    {
-      "id": "anterior-arterial-variation",
-      "title": "Anterior arterial variation: eight-volunteer comparison",
-      "views": 16,
-      "sources": 8
-    },
-    {
-      "id": "bigbrain-fine-surface-anatomy",
-      "title": "BigBrain cortical layers and hippocampal subfields",
-      "views": 30,
-      "sources": 2
-    },
-    {
-      "id": "cerebra-first-session",
-      "title": "First session: cortex, deep structures and ventricles",
-      "views": 8,
-      "sources": 1
-    },
-    {
-      "id": "cisternal-spatial-observation",
-      "title": "Cisternal regions: native image and spatial observation",
-      "views": 8,
-      "sources": 2
-    },
-    {
-      "id": "cranial-nerve-context",
-      "title": "Cranial nerves: source objects and regional context",
-      "views": 15,
-      "sources": 4
-    },
-    {
-      "id": "dural-arterial-context",
-      "title": "Dural arterial and skull-base model context",
-      "views": 4,
-      "sources": 1
-    },
-    {
-      "id": "hcp1065-association-limbic-probability",
-      "title": "Association and limbic white matter probability anatomy",
-      "views": 34,
-      "sources": 1
-    },
-    {
-      "id": "hcp1065-projection-commissural-probability",
-      "title": "Projection and callosal white matter probability anatomy",
-      "views": 34,
-      "sources": 1
-    },
-    {
-      "id": "integrated-brainstem-cranial-anatomy",
-      "title": "Brainstem nuclei, root assignments and cranial-nerve context",
-      "views": 24,
-      "sources": 6
-    },
-    {
-      "id": "integrated-cerebellar-fine-anatomy",
-      "title": "Cerebellar surfaces, lobular fields and deep nuclei",
-      "views": 26,
-      "sources": 3
-    },
-    {
-      "id": "integrated-cortical-surface-layers",
-      "title": "Cortical folds, cytoarchitectonic assignments and layer boundaries",
-      "views": 17,
-      "sources": 3
-    },
-    {
-      "id": "integrated-hippocampal-fine-anatomy",
-      "title": "Hippocampal layers, subfields and white-matter context",
-      "views": 15,
-      "sources": 4
-    },
-    {
-      "id": "intracranial-foundations",
-      "title": "Intracranial anatomy: first teaching session",
-      "views": 6,
-      "sources": 1
-    },
-    {
-      "id": "nextbrain-case1-fine-anatomy",
-      "title": "NextBrain Case 1: histological fine anatomy and MRI",
-      "views": 38,
-      "sources": 7
-    },
-    {
-      "id": "nextbrain-case2-brainstem-fine-anatomy",
-      "title": "NextBrain Case 2: brainstem fine anatomy and MRI",
-      "views": 38,
-      "sources": 4
-    },
-    {
-      "id": "normal-variation-evidence-comparison",
-      "title": "Interpreting normal variation across individual and population sources",
-      "views": 11,
-      "sources": 8
-    },
-    {
-      "id": "posterior-arterial-variation",
-      "title": "Posterior arterial variation: eight-volunteer comparison",
-      "views": 16,
-      "sources": 8
-    },
-    {
-      "id": "regional-source-comparisons",
-      "title": "Regional anatomy across native source atlases",
-      "views": 22,
-      "sources": 4
-    },
-    {
-      "id": "skull-base-context",
-      "title": "Skull base: source skull, dura and intracranial context",
-      "views": 14,
-      "sources": 4
-    },
-    {
-      "id": "suit-cerebellar-fine-anatomy",
-      "title": "Cerebellar lobules, vermis and deep nuclei",
-      "views": 40,
-      "sources": 1
-    },
-    {
-      "id": "thu-mra-arterial-observation",
-      "title": "Cerebral arterial segments in healthy volunteer MRA",
-      "views": 24,
-      "sources": 3
-    },
-    {
-      "id": "thu-mra-normal-variation-observations",
-      "title": "Normal arterial variation: source observations across eight volunteers",
-      "views": 16,
-      "sources": 8
-    },
-    {
-      "id": "vascular-source-observation",
-      "title": "Vascular anatomy: native images, fields and source models",
-      "views": 18,
-      "sources": 5
-    },
-    {
-      "id": "white-matter-pathways",
-      "title": "White matter: supplied streamline pathways",
-      "views": 10,
-      "sources": 1
-    },
-    {
-      "id": "z-anatomy-cerebellar-ventricular-context",
-      "title": "Cerebellar and ventricular source-model relationships",
-      "views": 38,
-      "sources": 1
-    },
-    {
-      "id": "z-anatomy-cortical-frontal-central",
-      "title": "Frontal and central cortical surface relationships",
-      "views": 20,
-      "sources": 1
-    },
-    {
-      "id": "z-anatomy-cortical-medial-basal",
-      "title": "Medial and basal cortical surface relationships",
-      "views": 16,
-      "sources": 1
-    },
-    {
-      "id": "z-anatomy-cortical-temporal-parietal",
-      "title": "Temporal, parietal and insular surface relationships",
-      "views": 20,
-      "sources": 1
-    },
-    {
-      "id": "z-anatomy-fine-neurovascular-context",
-      "title": "Source models: distal arteries, sensory pathways and petrous context",
-      "views": 28,
-      "sources": 1
-    },
-    {
-      "id": "z-anatomy-sellar-landmarks",
-      "title": "Sella, clinoid processes and sphenoidal grooves",
-      "views": 18,
-      "sources": 1
-    }
+  "feature_scope_updated": "2026-10-20",
+  "retained_in_testing_branch": [
+    "teaching-library",
+    "courses",
+    "course-presentation",
+    "learning-tools",
+    "notebooks",
+    "study-records"
   ]
 }

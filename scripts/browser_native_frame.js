@@ -3,7 +3,7 @@ async page => {
   const assert=(ok,message)=>{if(!ok)throw Error(message)};
   const onError=error=>errors.push(String(error));page.on('pageerror',onError);
   await page.unroute('**/*');await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():(external.push(route.request().url()),route.abort()));
-  const ready=async()=>{await page.waitForFunction(()=>/^(Ready|Scene saved|Saved scene restored|Scene file restored|Teaching export prepared)/.test(document.querySelector('.live-status')?.textContent??''),null,{timeout:120000});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))};
+  const ready=async()=>{await page.waitForFunction(()=>/^(Ready|Scene saved|Saved scene restored|Scene file restored|Image export prepared)/.test(document.querySelector('.live-status')?.textContent??''),null,{timeout:120000});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))};
   await page.goto(origin);await page.waitForFunction(()=>!document.querySelector('[aria-label="Browse Arteries and veins"]')?.disabled);
   await page.getByRole('combobox',{name:'Source for Arteries and veins',exact:true}).selectOption('mesoveins');
   await page.getByRole('button',{name:'Browse Arteries and veins',exact:true}).click();await ready();
@@ -34,7 +34,7 @@ async page => {
   await page.getByRole('button',{name:'Reset view',exact:true}).click();await ready();
   await page.getByLabel('Import scene file',{exact:true}).setInputFiles('output/playwright/mesoveins-scene.json');await ready();
   await canvas.screenshot({path:'output/playwright/native-frame-imported.png'});
-  download=page.waitForEvent('download');await page.getByRole('button',{name:'Export teaching image',exact:true}).click();await(await download).saveAs('data/benchmarks/mesoveins/browser-teaching-fixture.zip');
+  download=page.waitForEvent('download');await page.getByRole('button',{name:'Export image',exact:true}).click();await(await download).saveAs('data/benchmarks/mesoveins/browser-teaching-fixture.zip');
   await page.screenshot({path:'output/playwright/mesoveins-native-frame.png'});
   const graphics=await canvas.evaluate(canvas=>{const gl=canvas.getContext('webgl2');return {error:gl.getError(),maximum_3d_texture:gl.getParameter(gl.MAX_3D_TEXTURE_SIZE)}});
   assert(!errors.length&&!external.length&&graphics.error===0,errors.concat(external).join('\n'));

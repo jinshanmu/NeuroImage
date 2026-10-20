@@ -26,7 +26,7 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
 
     def register_package(path, *, allow_existing=True):
         path = Path(path).resolve()
-        # Saved course views often revisit one package. Within this process,
+        # Anatomy browsing can revisit one package. Within this process,
         # unchanged files can reuse its completed verification. A replacement,
         # edit, missing asset or path change always returns to full validation.
         with verification_lock:
@@ -103,16 +103,16 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
         binding = content_binding(content_path)
         matches = [key for key, identity in identities.items() if all(binding[field] == value for field, value in identity.items())]
         if len(matches) != 1:
-            raise ValueError("The selected teaching content does not match one of the served atlas versions and native spaces")
+            raise ValueError("The selected scene does not match one of the served atlas versions and native spaces")
         initial_key = matches[0]
         # Serve one validated, immutable in-memory snapshot, never its parent directory.
         with Path(content_path).open("rb") as stream:
             initial_content = stream.read(BINDING_BYTES_LIMIT + 1)
         if len(initial_content) > BINDING_BYTES_LIMIT:
-            raise ValueError("Selected teaching content exceeds the 10 MiB limit")
+            raise ValueError("Selected scene exceeds the 10 MiB limit")
         content = json.loads(initial_content)
         if any(content.get(field) != value for field, value in binding.items()):
-            raise ValueError("The selected teaching content changed while opening")
+            raise ValueError("The selected scene changed while opening")
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, format, *args):
             if args and str(args[1] if len(args) > 1 else "").startswith(("4", "5")):
@@ -150,7 +150,7 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 return
             length = self.headers.get("Content-Length", "")
             route = urlsplit(self.path).path
-            maximum = 10 * 1024 ** 2 if route in {"/api/workspace/teaching", "/api/workspace/courses"} else 8192
+            maximum = 8192
             if not length.isdigit() or not 0 < int(length) <= maximum or self.headers.get_content_type() != "application/json":
                 self.json_response({"error": f"Send a JSON request of up to {maximum} bytes"}, status=400)
                 return
@@ -159,23 +159,6 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 route = urlsplit(self.path).path
                 if route == "/api/workspace/jobs":
                     result = workspace.start(body)
-                elif route == "/api/workspace/teaching":
-                    from .content_library import import_teaching
-                    result = import_teaching(body, workspace.data_root, minimum_free_gib=workspace.data_floor_gib)
-                elif route == "/api/workspace/courses":
-                    from .courses import save_course
-                    if not isinstance(body, dict) or set(body) - {"course", "expected_revision"} or "course" not in body:
-                        raise ValueError("Send a course and its previous saved revision")
-                    result = save_course(body["course"], workspace.data_root, expected_revision=body.get("expected_revision"),
-                                         minimum_free_gib=workspace.data_floor_gib)
-                elif route.startswith("/api/workspace/courses/") and route.endswith(("/open", "/preview")):
-                    from .courses import open_course_entry
-                    if not isinstance(body, dict) or set(body) != {"entry_id", "revision"}:
-                        raise ValueError("Choose a saved course view and revision")
-                    identity, operation = route.removeprefix("/api/workspace/courses/").rsplit("/", 1)
-                    result = open_course_entry(workspace.data_root, identity,
-                        body["entry_id"], body["revision"], register_package, persist_position=operation == "open",
-                        packages=workspace.package_records())
                 elif route.startswith("/api/workspace/jobs/") and route.endswith("/cancel") and body == {}:
                     result = workspace.cancel(route.removeprefix("/api/workspace/jobs/").removesuffix("/cancel"))
                 else:
@@ -229,30 +212,8 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                                                    dataset=query.get("dataset", [""])[0], module=query.get("module", [""])[0],
                                                    offset=int(query.get("offset", ["0"])[0]))
                         self.json_response(result, head=head)
-                    elif route.startswith("/api/workspace/content/"):
-                        self.json_response(workspace.content(route.removeprefix("/api/workspace/content/")), head=head)
                     elif route.startswith("/api/workspace/jobs/"):
                         self.json_response(workspace.job_status(route.removeprefix("/api/workspace/jobs/")), head=head)
-                    elif route == "/api/workspace/courses":
-                        from .courses import course_records
-                        self.json_response(course_records(workspace.data_root), head=head)
-                    elif route.startswith("/api/workspace/courses/"):
-                        from .courses import get_course
-                        self.json_response(get_course(workspace.data_root, route.removeprefix("/api/workspace/courses/"),
-                                                       packages=workspace.package_records()), head=head)
-                    elif route == "/api/workspace/teaching":
-                        from .content_library import teaching_records
-                        query = parse_qs(urlsplit(self.path).query, keep_blank_values=True)
-                        if (set(query) - {"q", "dataset", "refresh"} or any(len(values) != 1 for values in query.values())
-                                or "refresh" in query and query["refresh"] != ["1"]):
-                            raise ValueError("Use one teaching query and optional source filter")
-                        self.json_response(teaching_records(workspace.data_root, query=query.get("q", [""])[0],
-                            dataset=query.get("dataset", [""])[0], packages=workspace.package_records(refresh="refresh" in query)), head=head)
-                    elif route.startswith("/api/workspace/teaching/"):
-                        from .content_library import open_teaching
-                        self.json_response(open_teaching(workspace.data_root,
-                            route.removeprefix("/api/workspace/teaching/"), register_package,
-                            packages=workspace.package_records()), head=head)
                     else:
                         self.json_response({"error": "Unknown workspace resource"}, status=404, head=head)
                 except (BrokenPipeError, ConnectionResetError):
