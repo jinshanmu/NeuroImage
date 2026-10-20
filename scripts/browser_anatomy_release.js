@@ -27,8 +27,9 @@ async page => {
   const ready = async model => {
     await page.waitForFunction(model => {
       const selector = model ? '.model-status' : '.live-status';
-      return document.querySelector(selector)?.textContent?.startsWith('Ready');
+      return document.querySelector(selector)?.textContent?.startsWith('Ready') || !!document.querySelector('[role=alert]');
     }, model, {timeout: 120000});
+    assert(await page.getByRole('alert').count() === 0, 'A viewer error is visible: ' + (await page.getByRole('alert').allTextContents()).join(' · '));
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   };
   try {

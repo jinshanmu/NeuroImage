@@ -6,6 +6,8 @@ The dataset sidebar shows local deployment and input-file availability. Select a
 
 Click the **NeuroImage** logo to return home. Each new browser page checks the local library once and reuses those results when returning home or navigating through browser history. Reload the page or use **Refresh** in the dataset sidebar to discover external file changes. Dataset operations update the library when acquisition or construction finishes, including when you return home while an operation is running.
 
+While an atlas opens, its canvas shows **Loading** on the canvas's normal opaque background. The rest of the page remains visible. The image and visible source structures appear together when ready for interaction; errors expose a recovery control. Home entries use the exact-package verification endpoint directly. Source assets are read ahead in a bounded queue and installed in their original order; image uploads reuse an already prepared background when only the label palette changes.
+
 ## Images and anatomical display
 
 The main workspace prioritizes the canvas. **Structure library** opens the structure drawer. Surface display controls and source references appear in expandable sections below the canvas. A group entry filters the structure list to its delivered source entries; turn off the group checkbox to inspect the rest of that same source.

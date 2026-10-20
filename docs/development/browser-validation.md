@@ -6,6 +6,8 @@ The formal application is checked with `scripts/browser_anatomy_release.js`, usi
 
 `scripts/browser_home_navigation.js` counts library-discovery requests across group, dataset, management and 2D/3D atlas navigation, including browser history. It checks explicit refresh, document reload, an independent tab, recovery from a failed check and a build completing after leaving management. Operation responses in its build fixture are intercepted in the isolated browser; it does not acquire or construct source data.
 
+`scripts/browser_atlas_loading.js` delays real image/model asset responses to check that **Loading** stays inside the atlas canvas on its normal opaque background while page navigation remains visible. It checks direct exact-package activation from home, ready-state image/model controls, MRI contrast changes and exact pixel restoration, and recovery from an unreadable asset. Use it with CerebrA and Z-Anatomy in an isolated profile. Run the full source-configuration check after renderer loading changes to verify complete geometry and native 2D/3D controls.
+
 The earlier 1.0.0 author-review record is described in [release candidate validation](../release-candidate-validation.md). Its teaching and course helpers remain in the testing branch.
 
 ## Historical source-specific fixtures

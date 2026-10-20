@@ -22,6 +22,34 @@ function fixture() {
 }
 
 describe('mesh updates preserve image resources', () => {
+  it('uploads an image stack once while retaining image order and load callbacks', async () => {
+    const upload = vi.spyOn(Niivue.prototype, 'updateGLVolume').mockImplementation(() => {})
+    const {viewer, volume} = fixture(), labels = {id:'source-labels',img:new Uint16Array([0,1,2])} as NVImage
+    viewer.volumes = []
+    viewer.onImageLoaded = vi.fn()
+    vi.spyOn(Niivue.prototype, 'addVolumesFromUrl').mockImplementation(async function (this: Niivue) {
+      this.addVolume(volume); this.addVolume(labels)
+      expect(upload).not.toHaveBeenCalled()
+      return [volume, labels]
+    })
+    expect(await viewer.addVolumesFromUrl([])).toEqual([volume, labels])
+    expect(viewer.volumes).toEqual([volume, labels])
+    expect(viewer.back).toBe(volume)
+    expect(viewer.overlays).toEqual([labels])
+    expect(viewer.onImageLoaded).toHaveBeenCalledTimes(2)
+    expect(upload).toHaveBeenCalledOnce()
+  })
+
+  it('restores ordinary volume updates after an image load fails', async () => {
+    const upload = vi.spyOn(Niivue.prototype, 'updateGLVolume').mockImplementation(() => {})
+    vi.spyOn(Niivue.prototype, 'addVolumesFromUrl').mockRejectedValue(Error('Unavailable image'))
+    const {viewer} = fixture()
+    await expect(viewer.addVolumesFromUrl([])).rejects.toThrow('Unavailable image')
+    expect(upload).not.toHaveBeenCalled()
+    viewer.updateGLVolume()
+    expect(upload).toHaveBeenCalledOnce()
+  })
+
   it('adds, reorders and removes original meshes without reuploading image textures', () => {
     const upload = vi.spyOn(Niivue.prototype, 'updateGLVolume').mockImplementation(() => {})
     const {viewer,volume} = fixture(), imageSamples = volume.img

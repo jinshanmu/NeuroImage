@@ -13,6 +13,7 @@ import { removedByCutaway } from './cutaway'
 import { depthSamplePixel, decodeSurfaceDepth } from './picking'
 import { refreshOverlayTextures, retainVolumeMetadata } from './volumeResources'
 import { BACKGROUND_COLOR, contextIds, contextOpacity } from './atlasBackground'
+import { loadAssetsInOrder } from './assetLoading'
 
 // NiiVue 0.69.0 has no independent public visibility flag for 3D volume rendering.
 // This pinned renderer hook preserves its real MRI slice renderer unchanged.
@@ -199,6 +200,7 @@ export class AtlasViewer {
   private masks = new Map<string, SparseMask>()
   private refreshSelection = false
   private streamlines: boolean
+  private loading = new AbortController()
   constructor(private canvas: HTMLCanvasElement, private manifest: Manifest, private base: string,
     private changed: (patch: Partial<ViewState>) => void, private status: (message: string) => void) {
     this.imageOnly = ['mri-volume', 'scalar-fields'].includes(manifest.representation ?? '')
@@ -284,6 +286,7 @@ export class AtlasViewer {
   }
   private async render(state: ViewState, generation: number) {
     const nv = this.nv
+    let backgroundUploaded = false
     const context = new Set(contextIds(state)), renderedIds = new Set([...state.visible, ...context])
     const selectionSettings = (value: ViewState | null) => value && [value.position, value.visible, value.streamlineLevel, value.streamlineSlabMm, value.labelOpacity, value.meshOpacity, value.surfaceOpacity]
     if (this.streamlines && state.selectionEvidence?.kind === 'visible-streamline') {
@@ -298,6 +301,7 @@ export class AtlasViewer {
           [{ url: this.base + image.file, name: image.id + '.nii.gz', colormap: 'gray', cal_min: state.window[0], cal_max: state.window[1] },
            { url: this.base + labels.file, name: 'labels.nii.gz', opacity: 0, cal_min: 0, cal_max: labels.cal_max }])
         if (this.disposed) return
+        backgroundUploaded = !this.model && nv.volumes[0].cal_min === state.window[0] && nv.volumes[0].cal_max === state.window[1]
         if (this.labelIndex >= 0) {
           compactLabels(nv.volumes[this.labelIndex].img!, this.manifest.structures.filter(s => s.kind !== 'streamline-bundle' && s.kind !== 'independent-region'))
           // Render the browser's compact palette as categorical labels. The
@@ -335,17 +339,20 @@ export class AtlasViewer {
       if (generation !== this.generation) return
     }
     if (this.independent) {
-      for (const id of state.visible) {
-        if (this.disposed || generation !== this.generation) return
-        if (this.masks.has(id)) continue
+      const missing = state.visible.filter(id => !this.masks.has(id)).map(id => {
         const region = this.manifest.structures.find(s => s.id === id)!
         if (region.kind !== 'independent-region') throw new Error('Independent region contract mismatch.')
         const volume = this.manifest.volumes.find(v => v.id === region.mask.volume_id)!
+        return { id, region, volume }
+      })
+      await loadAssetsInOrder(missing, item => this.base + item.volume.file, async ({ id, region, volume }, buffer) => {
         this.status('Loading independent source memberships…')
-        const image = await NVImage.loadFromUrl({ url: this.base + volume.file, name: volume.name })
+        // Buffered input skips URL-based decompression, so preserve the actual
+        // NIfTI suffix for the decoder instead of using the human-readable title.
+        const image = await NVImage.loadFromUrl({ url: this.base + volume.file, name: volume.file, buffer })
         if (this.disposed) return
         this.masks.set(id, sparseMask(image.img!, volume, region.voxel_count))
-      }
+      }, this.loading.signal, () => !this.disposed && generation === this.generation)
       if (generation !== this.generation) return
     }
     this.syncing = true
@@ -404,28 +411,29 @@ export class AtlasViewer {
         }
       }
       if (textureChanged) {
-        if (this.rendered && !this.model && same(state.window, this.rendered.window)) refreshOverlayTextures(nv)
+        // loadVolumes has already uploaded the new MRI/CT with this window.
+        // Palette compaction only changes the categorical overlay.
+        if (backgroundUploaded || (this.rendered && !this.model && same(state.window, this.rendered.window))) refreshOverlayTextures(nv)
         else nv.updateGLVolume()
       } else nv.drawScene()
       this.rendered = structuredClone(state)
     } finally { this.syncing = false }
     nv.deferMeshUpdates = true
     try {
-      for (const id of renderedIds) {
-        if (this.disposed || generation !== this.generation) return
+      const missing = [...renderedIds].map(id => {
         const structure = this.manifest.structures.find(s => s.id === id)!
         const level = structure.kind === 'streamline-bundle' ? displayLevel(structure, state.streamlineLevel) : null
         const file = level?.file ?? structure.mesh_file!
-        if (this.meshFiles.get(id) === file) continue
+        return { id, structure, level, file }
+      }).filter(item => this.meshFiles.get(item.id) !== item.file)
+      await loadAssetsInOrder(missing, item => this.base + item.file, async ({ id, structure, level, file }, buffer) => {
         if (this.meshes.has(id)) { this.removeMesh(id); }
         this.status(this.streamlines ? 'Loading source streamline display subset…' : 'Loading local structure surfaces…')
         this.syncing = true
         try {
           let mesh: NVMesh
           if (level) {
-            const response = await fetch(this.base + file)
-            if (!response.ok) throw new Error('A source streamline display subset could not be loaded.')
-            const data = parseTck(await response.arrayBuffer(), level)
+            const data = parseTck(buffer, level)
             if (this.disposed) return
             mesh = new NVMesh(data.pts, data.offsetPt0, structure.name, new Uint8Array([...structure.color, 0]), surfaceOpacity(state, id), false, nv.gl)
             // In 0.69.0 a zero minimum returns before rebuilding fibers. Negative
@@ -433,13 +441,13 @@ export class AtlasViewer {
             mesh.fiberDither = 0; mesh.fiberColor = 'Fixed'; mesh.fiberLength = -1; mesh.fiberDecimationStride = 1
             mesh.fiberRadius = 0; mesh.fiberSides = 0; mesh.updateFibers(nv.gl)
             nv.addMesh(mesh)
-          } else mesh = await nv.addMeshFromUrl({ url: this.base + file, name: structure.source_name + '.gii', rgba255: [...(context.has(id) ? BACKGROUND_COLOR : structure.color), 255], opacity: contextOpacity(state, id, surfaceOpacity(state, id)), visible: false })
+          } else mesh = await nv.addMeshFromUrl({ url: this.base + file, buffer, name: structure.source_name + '.gii', rgba255: [...(context.has(id) ? BACKGROUND_COLOR : structure.color), 255], opacity: contextOpacity(state, id, surfaceOpacity(state, id)), visible: false })
           if (this.disposed) return
           this.meshes.set(id, mesh); this.meshFiles.set(id, file)
           this.updateCutaway(this.current!)
           mesh.visible = this.current!.visible.includes(id) || contextIds(this.current!).includes(id); mesh.opacity = contextOpacity(this.current!, id, surfaceOpacity(this.current!, id))
         } finally { this.syncing = false }
-      }
+      }, this.loading.signal, () => !this.disposed && generation === this.generation)
       if (generation !== this.generation) return
       for (const [id, mesh] of this.meshes) {
         if (this.meshes.size <= (this.streamlines ? 6 : 32)) break
@@ -526,7 +534,7 @@ export class AtlasViewer {
     this.meshes.clear(); this.meshFiles.clear(); this.masks.clear()
   }
   dispose() {
-    this.disposed = true; this.generation++; this.resize.disconnect(); this.canvas.removeEventListener('mousedown', this.pointer, true); this.canvas.removeEventListener('mousemove', this.pointer, true)
+    this.disposed = true; this.loading.abort(); this.generation++; this.resize.disconnect(); this.canvas.removeEventListener('mousedown', this.pointer, true); this.canvas.removeEventListener('mousemove', this.pointer, true)
     if (!this.task) this.release()
   }
 }

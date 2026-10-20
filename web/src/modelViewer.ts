@@ -10,6 +10,7 @@ import { triangleBounds } from './modelBounds'
 import type { ModelView, SurfaceManifest } from './modelTypes'
 import type { Vec3 } from './types'
 import { BACKGROUND_COLOR, contextIds, contextOpacity } from './atlasBackground'
+import { loadAssetsInOrder } from './assetLoading'
 
 class NativeModelNiivue extends SourceDepthNiivue {
   modelBounds:[Vec3,Vec3]|null=null
@@ -51,6 +52,7 @@ export class ModelViewer {
   private attached=false
   private released=false
   private syncing=false
+  private loading=new AbortController()
   private resize:ResizeObserver
   constructor(private canvas:HTMLCanvasElement,private manifest:SurfaceManifest,private base:string,
     private changed:(patch:Partial<ModelView>)=>void,private status:(message:string)=>void) {
@@ -98,18 +100,18 @@ export class ModelViewer {
     for(const [id,mesh] of this.meshes){mesh.visible=visible.has(id);mesh.opacity=contextOpacity(state,id,state.opacity*(state.surfaceOpacity[id]??1))}
     nv.deferMeshUpdates=true
     try {
-      for(const id of visible) {
-        if(this.disposed||generation!==this.generation)return
-        if(this.meshes.has(id))continue
-        const structure=this.manifest.structures.find(item=>item.id===id)!
+      const missing=[...visible].filter(id=>!this.meshes.has(id)).map(id=>this.manifest.structures.find(item=>item.id===id)!)
+      await loadAssetsInOrder(missing,structure=>this.base+structure.mesh_file,async(structure,buffer)=>{
+        const id=structure.id
         this.status('Loading '+structure.name)
-        const mesh=await nv.addMeshFromUrl({url:this.base+structure.mesh_file,name:structure.source_name+'.gii',rgba255:[...(context.has(id)?BACKGROUND_COLOR:structure.color),255],visible:false,opacity:1})
+        const mesh=await nv.addMeshFromUrl({url:this.base+structure.mesh_file,buffer,name:structure.source_name+'.gii',rgba255:[...(context.has(id)?BACKGROUND_COLOR:structure.color),255],visible:false,opacity:1})
         if(this.disposed)return
         this.meshes.set(id,mesh)
         const bounds=mesh.tris?triangleBounds(mesh.pts,mesh.tris):null
         if(bounds)this.renderedBounds.set(id,bounds)
         mesh.visible=this.current!.visible.includes(id)||contextIds(this.current!).includes(id);mesh.opacity=contextOpacity(this.current!,id,this.current!.opacity*(this.current!.surfaceOpacity[id]??1))
-      }
+      },this.loading.signal,()=>!this.disposed&&generation===this.generation)
+      if(this.disposed||generation!==this.generation)return
       for(const [id,mesh] of this.meshes)if(this.meshes.size>32&&!visible.has(id)){nv.removeMesh(mesh);this.meshes.delete(id);this.renderedBounds.delete(id)}
     } finally {nv.deferMeshUpdates=false}
     if(this.disposed||generation!==this.generation)return
@@ -146,5 +148,5 @@ export class ModelViewer {
   bounds(id:string):[Vec3,Vec3]|undefined {return this.renderedBounds.get(id)??this.manifest.structures.find(item=>item.id===id)?.bounds_native_mm}
   capture(){this.nv.drawScene();return this.canvas.toDataURL('image/png')}
   private release(){if(!this.attached||this.released)return;this.released=true;this.nv.cleanup();this.nv.gl.getExtension('WEBGL_lose_context')?.loseContext();this.meshes.clear()}
-  dispose(){this.disposed=true;this.generation++;this.resize.disconnect();if(!this.task)this.release()}
+  dispose(){this.disposed=true;this.loading.abort();this.generation++;this.resize.disconnect();if(!this.task)this.release()}
 }

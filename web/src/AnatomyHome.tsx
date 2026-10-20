@@ -31,10 +31,9 @@ export function AnatomyHome({atlases,workspace,library,dataset,group,onGroup,onD
   const {snapshot,loading}=library
   const [error,setError]=useState(''), [opening,setOpening]=useState('')
   const [query,setQuery]=useState(''), [readyOnly,setReadyOnly]=useState(false)
-  const [notice,setNotice]=useState('')
   const openingRequest=useRef<AbortController|null>(null)
   useEffect(()=>()=>openingRequest.current?.abort(),[])
-  useEffect(()=>{openingRequest.current?.abort();setOpening('');setNotice('')},[dataset])
+  useEffect(()=>{openingRequest.current?.abort();setOpening('')},[dataset])
   const refresh=()=>{setError('');void library.refresh(true)}
   const targets=useMemo(()=>browseTargets(atlases,snapshot?.packages),[atlases,snapshot])
   const sourceMap=new Map<string,SourceInfo>((snapshot?.sources??[]).map(source=>[source.id,source]))
@@ -54,38 +53,27 @@ export function AnatomyHome({atlases,workspace,library,dataset,group,onGroup,onD
   async function open(target:BrowseTarget,group?:BrowseGroup) {
     openingRequest.current?.abort()
     const controller=new AbortController();openingRequest.current=controller
-    setError('');setNotice('');setOpening(group?.title??target.title)
+    setError('');setOpening(group?.title??target.title)
     try {
       let key=target.key
       if(!target.active) {
-        if(!snapshot)throw Error('The local data service is unavailable.')
-        const response=await fetch('/api/workspace/jobs',{method:'POST',signal:controller.signal,headers:{'Content-Type':'application/json','X-NeuroImage-Token':snapshot.session_token},body:JSON.stringify({action:'activate',package_key:key})})
-        const job=await response.json();if(!response.ok)throw Error(job.error)
-        // Stay on the anatomical entry while the local service verifies its source assets.
-        for(;;) {
-          const result=await fetch('/api/workspace/jobs/'+encodeURIComponent(job.id),{signal:controller.signal}), updated=await result.json()
-          if(!result.ok)throw Error(updated.error)
-          if(updated?.status==='complete'){key=updated.result.atlas_key;break}
-          if(updated&&['failed','cancelled','interrupted'].includes(updated.status))throw Error(updated.detail)
-          await new Promise<void>((resolve,reject)=>{
-            const abort=()=>{clearTimeout(timer);reject(new DOMException('Stopped waiting','AbortError'))}
-            const timer=setTimeout(()=>{controller.signal.removeEventListener('abort',abort);resolve()},1000)
-            controller.signal.addEventListener('abort',abort,{once:true})
-            if(controller.signal.aborted)abort()
-          })
-        }
+        // The bookmark endpoint performs the same exact-package verification
+        // directly, without starting a worker and polling an activation job.
+        const response=await fetch('/api/workspace/atlases/'+encodeURIComponent(key),{signal:controller.signal})
+        const result=await response.json()
+        if(!response.ok)throw Error(result.error??'The local atlas could not be opened.')
+        key=result.atlas_key
       }
       controller.signal.throwIfAborted()
       await onOpen(key,undefined,group?targetScope(group,target):undefined,controller.signal)
     } catch(error){if(!controller.signal.aborted)setError(String(error))} finally{if(openingRequest.current===controller)setOpening('')}
   }
-  return <main className="anatomy-home">
+  return <main className="anatomy-home" aria-busy={!!opening}>
     <section className="anatomy-main" aria-label="Browse anatomy">
       <div className="anatomy-home-heading"><div className="eyebrow">{region?'DETAILED ANATOMY':dataset?'DATASET':'NEUROANATOMY'}</div><h1>{region?.title??family?.title??selected?.title??(dataset??'Browse anatomy')}</h1><p>{region?'Choose a topic and source.':family?'Choose a case, region or representation within this dataset.':dataset?'Open the views available from this source.':'Choose a region or system.'}</p>{region&&<button onClick={()=>onGroup(null)}>Back to anatomy groups</button>}</div>
       {(error||library.error)&&<div className="error" role="alert">{error||library.error}<button onClick={refresh}>Refresh sources</button><button onClick={()=>{setError('');library.clearError()}}>Dismiss</button></div>}
       {loading&&<p role="status">Checking your local source library…</p>}
-      {notice&&<p role="status">{notice}</p>}
-      {opening&&<div className="opening-atlas" role="status">Opening {opening}… Verifying local atlas files.<button onClick={()=>{openingRequest.current?.abort();setOpening('');setNotice('Stopped waiting. Any verification already started continues in the dataset tools.')}}>Stop waiting</button></div>}
+      {opening&&<p role="status">Loading</p>}
       {family&&<div className="dataset-summary"><button onClick={()=>onDataset(null)}>All datasets</button><p>{family.members.length} source configurations · Each keeps its original definitions and coordinates.</p></div>}
       {family&&<div className="dataset-configurations" aria-label={family.title+' source configurations'}>{family.members.map(source=><button key={source.id} className="dataset-configuration" onClick={()=>onDataset(source.id)}><span>{source.title}</span><small>{sourceStatus(source)}</small><span aria-hidden="true">Open →</span></button>)}</div>}
       {dataset&&!family&&<div className="dataset-summary">{selected?.sources.map((source,index)=><p key={index}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> · {source.version} · {source.license_name}</p>)}{workspace&&!!selected?.sources.length&&<button onClick={()=>onManage(dataset)}>Download and build</button>}{parentFamily&&<button onClick={()=>onDataset(familySelection(parentFamily.id))}>Back to {parentFamily.title}</button>}<button onClick={()=>onDataset(null)}>All anatomy groups</button></div>}
