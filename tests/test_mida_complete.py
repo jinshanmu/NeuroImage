@@ -92,6 +92,7 @@ def test_complete_mida_new_air_labels_preserve_oblique_source_values_and_space(t
     recipe["selection"] = [item for item in recipe["selection"] if item["value"] in keep]
     recipe["inputs"] = {"labels": "labels.nii.gz", "label_table": "labels.txt", "license": "license.txt"}
     recipe["teaching_sequences"] = []
+    recipe["construction_peak_gib"] = 1
     _write_lut(tmp_path / "labels.txt", _audit()["structures"])
     (tmp_path / "license.txt").write_text("Synthetic regression fixture; CC0.\n")
     labels = np.zeros((16, 8, 8), dtype=np.uint16)
