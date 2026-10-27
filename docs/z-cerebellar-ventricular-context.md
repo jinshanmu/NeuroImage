@@ -1,6 +1,6 @@
 # Cerebellar and ventricular source models
 
-The cerebellar and ventricular increment brought the Z-Anatomy selection to 157 objects; the [current detailed-anatomy selection](detailed-anatomy-and-variation.md) contains 350. That 38-object increment reuses the already acquired and pinned `Startup.blend`; its original source commit is `9de5d6912a1b0df9cab739d57f00e036b0496ddc`. These additions provide 31 cerebellar and peduncular objects, four ventricular objects, a midbrain aqueduct and bilateral choroid plexus.
+The cerebellar and ventricular increment brought the Z-Anatomy selection to 157 objects; the [current detailed-anatomy selection](detailed-anatomy-and-variation.md) contains 398 under the same `z_anatomy` source identity. That 38-object increment reuses the already acquired and pinned `Startup.blend`; its original source commit is `9de5d6912a1b0df9cab739d57f00e036b0496ddc`. These additions provide 31 cerebellar and peduncular objects, four ventricular objects, a midbrain aqueduct and bilateral choroid plexus.
 
 The cerebellar selection includes paired anterior and posterior quadrangular, superior and inferior semilunar, gracile and biventral lobules, tonsils, central lobule wings and flocculi. Nine original vermal objects cover the lingula, central lobule, culmen, declive, folium, tuber, pyramis, uvula and nodule. Original floccular and superior cerebellar peduncle objects supply additional context. Names follow the publisher's traditional terminology. They remain independent of the SUIT numeric labels and histological region definitions.
 

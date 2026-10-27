@@ -1,4 +1,6 @@
 async page => {
+  // Development-branch reference: requires the retained scene/import/export footer.
+  // This historical workflow is not a formal-release acceptance script.
   const origin = new URL(page.url()).origin, errors = [], external = [];
   const assert = (ok, message) => { if (!ok) throw Error(message); };
   const onError = error => errors.push(String(error));

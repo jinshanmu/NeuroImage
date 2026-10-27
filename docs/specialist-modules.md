@@ -2,24 +2,25 @@
 
 The specialist extension uses the same acquisition, construction, native-space viewing and teaching interfaces as the general brain atlas. Linux is the current acceptance target. Windows and macOS acceptance is deferred. The code distribution contains no acquired images, labels, trajectories or local atlas packages.
 
+The current coverage table below describes enabled specialist sources. Later teaching-workflow and validation sections are historical records from `codex/release-testing`. Their IXI and Mouches examples are excluded from current acquisition, construction, discovery and opening. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md).
+
 ## Coverage and evidence
 
 | Module | Source evidence currently available | Coverage limits |
 | --- | --- | --- |
 | White-matter pathways | 87 HCP1065 source collections: 77 brain pathway collections and 10 paired cranial-nerve trajectory collections | Population computational tractography, not observed axons, tissue boundaries or validated functional connections. The cerebellum and vermis collections do not each define one tract. |
-| Arterial anatomy | Original Mouches/Forkert arterial-occurrence percentages and matched average TOF from screened healthy-source MRA | No named branch partition. The 25% binary mask and navigation surface are project display derivatives. Source percentages remain unchanged, including values below this threshold. |
-| Native MRA observations | One original IXI MRA acquisition with native intensities, three sections and 3D intensity rendering | No vessel segmentation, branch labels or independently reviewed anatomical normality. Bright signal alone does not identify a vessel. Acquired slab coverage is limited. |
+| Arterial anatomy | Eight THU Cerebral MRA cases with original image and named arterial-segment labels | Each case retains its own native grid and delivered label extent. Branch partitions and source omissions remain explicit; correspondence and independent anatomical review are not inferred. |
 | Cranial nerves | MIDA source classes I–XII, with separately named V2 and V3 classes; HCP computed pairs II, III, V, VII and VIII | MIDA sides and cisternal, foraminal or extracranial segments are not separately partitioned. HCP trajectories do not establish a complete nerve course. |
 | Brainstem nuclear context | All 76 delivered brainstem fields and ten diencephalic fields from Brainstem Navigator, with source T2/FA templates | Compound nuclei remain combined and numbered subdivisions remain source-specific. A named parent and its component fields may overlap. Cranial nerve courses are not inferred. |
 | Cisternal regions | Six explicitly unreviewed regional observation anchors in real SPL/NAC T2 MRI; MIDA general and ventricular CSF classes | The observation anchors are teaching annotations. General CSF is not a set of named cistern segmentations. No membrane or compartment boundary is reconstructed. |
 | Skull-base context | MIDA skull classes, dura, sphenoidal sinus air, mastoid air, cochlea and semicircular canals | Individual skull-base bones and foramina are not separately labelled. Original MIDA MRI is unavailable. |
 | Vascular model context | MIDA whole-source artery and vein classes | Broader head and neck extents are retained. These are not named arterial branches or venous sinus subdivisions. |
 
-All packages preserve their own coordinates and source definitions. HCP uses its publisher-declared ICBM 2009a asymmetric reference. The Mouches volumes retain their delivered shared grid without asserting an interchangeable relation to another MNI release. Compare other sources in independent panels; do not superimpose them without a separately validated correspondence.
+All packages preserve their own coordinates and source definitions. HCP uses its publisher-declared ICBM 2009a asymmetric reference. Compare other sources in independent panels; do not superimpose them without a separately validated correspondence.
 
 The original HCP abbreviation spreadsheet repeats left-side suffixes in the definitions of `C_FP_R` and `TR_S_R`. The recipe retains these discrepancies in source notes. Display-side names follow the original filenames, with independently checked native RAS centroids. No coordinates are mirrored to resolve the naming discrepancy.
 
-## Source-to-teaching workflow
+## Historical source-to-teaching workflow
 
 Start the installed Linux workspace with separate data and state roots:
 

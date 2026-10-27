@@ -3,16 +3,17 @@ import { validateCutaway } from './cutaway'
 import type { ModelScene, ModelView, SurfaceManifest } from './modelTypes'
 import type { Vec3 } from './types'
 import { validSourceAnnotation } from './sourceAnnotation'
-import { scopedStructures, validSurfaceContext } from './atlasBackground'
+import { validSurfaceContext } from './atlasBackground'
 import type { AnatomyScope } from './anatomyNavigation'
 
 const vec3 = (value: unknown): value is Vec3 => Array.isArray(value) && value.length === 3 && value.every(x=>typeof x==='number' && Number.isFinite(x))
 const text = (value: unknown, maximum: number): value is string => typeof value==='string' && value.length<=maximum
 export function initialModelView(manifest: SurfaceManifest, scope?: AnatomyScope): ModelView {
-  const structures=scopedStructures(manifest.structures,scope)
-  const first = structures.find(item=>item.source_name==='Basilar artery') ?? structures[0] ?? manifest.structures[0]
+  const group=scope?.structure_ids.length?new Set(scope.structure_ids):null
+  const structures=group?manifest.structures.filter(structure=>group.has(structure.id)):manifest.structures
+  const first = structures[0] ?? manifest.structures[0]
   return {kind:'source-model-view',coordinate_system:'SOURCE_XYZ',selected:structures.length?first.id:null,visible:structures.map(item=>item.id),
-    position_native_mm:[...first.target_native_mm],camera:[110,15,.65],focus_native_mm:null,opacity:1,surfaceOpacity:{},
+    position_native_mm:[...first.target_native_mm],camera:[110,15,.65],focus_native_mm:null,opacity:.5,surfaceOpacity:{},
     annotations:[],showMarkers:true,highlightSelected:true,note:''}
 }
 export function modelScene(manifest: SurfaceManifest,state: ModelView,title='Independent model scene'): ModelScene {

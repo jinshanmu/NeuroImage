@@ -1,6 +1,6 @@
 # Current project scope
 
-NeuroImage currently targets normal intracranial neuroanatomy and normal anatomical variation for neurosurgical learning and teaching. Develop a general, extensible 2D and 3D platform first, then add reviewed anatomy modules. The current scope was confirmed on 2026-10-11.
+NeuroImage currently targets normal intracranial neuroanatomy and normal anatomical variation for neurosurgical learning and teaching. Develop a general, extensible 2D and 3D platform first, then add reviewed anatomy modules. The current source scope was updated on 2026-10-24.
 
 ## Learning objectives
 
@@ -14,7 +14,7 @@ Disease states, lesion/tumor labels, pathological deformation and diagnostic or 
 
 ## Resources and acquisition
 
-Prioritize SPL/NAC, MNI/CerebrA, CIT168, HCP1065, IXI, NextBrain, MIDA, Brainstem Navigator, BigBrain, Julich and relevant gross-anatomy references. TopCoW may support reviewed normal vascular anatomy and variation. A clinical source does not establish that every scan is normal: select appropriate anatomy examples and document review instead of assigning an unsupported health status.
+Prioritize enabled sources including SPL/NAC, MNI/CerebrA, CIT168, HCP1065, MIDA, Brainstem Navigator, BigBrain, Julich and relevant gross-anatomy references. NextBrain, IXI MRA, HumanBrainAtlas, Meso-vein MRI, VENAT, the Mouches arterial occurrence atlas, Human Inner Ear CT and the clinical TopCoW/TopBrain cohorts are excluded from current acquisition, construction, discovery and opening. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Dedicated ophthalmology, otology and dental datasets are deferred. Normal cranial-nerve and skull-base structures within MIDA, Z-Anatomy and SPL/NAC remain enabled. TopCoW and TopBrain clinical cohorts have no verified healthy-only vascular subset in the current evaluation; vessel labels do not establish normal vascular anatomy.
 
 UCSF-PDGM and MSD BrainTumour remain in the acquisition inventory only as source/license records outside the current phase. Their project data were removed at user request; the deletion audit remains a local administration record. Further disease-cohort downloads are stopped. Their planning selection is zero, and they are excluded from current atlas development and acceptance. Rhoton Collection remains deferred by user choice.
 

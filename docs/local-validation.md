@@ -28,8 +28,8 @@ Julich-Brain v3.0.3 labels are in MNI 2009c asymmetric space. BigBrain volumes e
 | --- | --- | --- | --- |
 | Coordinates and laterality | SPL, MNI, CIT168, synthetic volumes | Affine round trips, voxel/world positions and orientation markers | Software behavior |
 | Labels to meshes | SPL, CerebrA, CIT168, MIDA | Surface distance, volume change, components and defects | Within-source geometric correspondence |
-| Brainstem/nuclei | Brainstem Navigator, NextBrain, BigBrain, Julich | Native-image correspondence, landmarks and expert review | Specimen and preparation differences remain explicit |
-| Vessels/topology | TopCoW, reviewed IXI | Dice, centerline distances, branch/connectivity errors | State evaluation split and available annotations |
+| Brainstem/nuclei | Brainstem Navigator, BigBrain, Julich | Native-image correspondence, landmarks and expert review | Specimen and preparation differences remain explicit |
+| Vessels/topology | THU Cerebral MRA labels | Dice, centerline distances, branch/connectivity errors | State evaluation split and available annotations |
 | Tracts | HCP1065 TRK, TT/FIB | Bounding boxes, laterality, counts and voxelization | Inferred streamlines are not direct axonal measurements |
 | Skull-base relationships | MIDA and appropriate reviewed gross-anatomy sources | Adjacency/viewpoint checks and specialist review | Normal anatomy for learning and teaching |
 

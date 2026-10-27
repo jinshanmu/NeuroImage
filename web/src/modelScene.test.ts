@@ -13,8 +13,29 @@ it('opens every source model and preserves an explicitly saved subset',()=>{
   const source:SurfaceManifest={...manifest,structures:Array.from({length:16},(_,i)=>({...manifest.structures[0],id:`object-${i}`}))}
   const state=initialModelView(source)
   expect(state.visible).toEqual(source.structures.map(item=>item.id))
+  expect(state.opacity).toBe(.5)
   expect(readModelScene(modelScene(source,{...state,visible:['object-4']}),source).state.visible).toEqual(['object-4'])
   expect(readModelScene(modelScene(source,{...state,visible:[]}),source).state.visible).toEqual([])
+})
+
+it('preserves an explicitly saved model opacity when the new default is fifty percent',()=>{
+  const state={...initialModelView(manifest),opacity:.8}
+  expect(readModelScene(modelScene(manifest,state),manifest).state.opacity).toBe(.8)
+  expect(state.position_native_mm).toEqual(manifest.structures[0].target_native_mm)
+})
+
+it('initially selects the first source group object ahead of basilar names and preferred subjects',()=>{
+  const source:SurfaceManifest={...manifest,structures:[{...manifest.structures[0],source_name:'First source object',target_native_mm:[111.125,-222.5,1601.75]},
+    {...manifest.structures[0],id:'artery',source_name:'Basilar artery',target_native_mm:[4,5,6]},
+    {...manifest.structures[0],id:'subject',source_name:'Source nerve',target_native_mm:[1,2,3]}]}
+  const scope={id:'detail-subject',title:'Subject',structure_ids:['subject','artery','object-1'],primary_structure_ids:['subject']}
+  const state=initialModelView(source,scope)
+  expect(state.visible).toEqual(['object-1','artery','subject'])
+  expect(state.selected).toBe('object-1')
+  expect(state.position_native_mm).toEqual([111.125,-222.5,1601.75])
+  expect(initialModelView(source).selected).toBe('object-1')
+  expect(initialModelView(source).position_native_mm).toEqual(source.structures[0].target_native_mm)
+  expect(readModelScene(modelScene(source,{...state,selected:'subject'}),source).state.selected).toBe('subject')
 })
 
 it.each(['cranial-nerves','detail-arterial-ring'])('opens every model in %s and restores independent brain context',id=>{
@@ -25,8 +46,29 @@ it.each(['cranial-nerves','detail-arterial-ring'])('opens every model in %s and 
   expect(state.selected).toBe('object-4')
   state.surfaceContext={enabled:true,opacity:.2,structure_ids:['object-0','object-1']}
   expect(readModelScene(modelScene(source,state),source).state).toEqual(state)
-  expect(initialModelView(source,{...scope,id:'general-anatomy'}).visible).toHaveLength(24)
+  expect(initialModelView(source,{...scope,id:'general-anatomy'}).visible).toEqual(scope.structure_ids)
+  expect(initialModelView(source,{...scope,structure_ids:[]}).visible).toEqual(source.structures.map(structure=>structure.id))
   expect(()=>readModelScene(modelScene(source,{...state,surfaceContext:{enabled:true,opacity:.2,structure_ids:['missing']}}),source)).toThrow('background')
+})
+
+it('starts a whole-brain model with exact scoped source objects and keeps saved visibility independent',()=>{
+  const source:SurfaceManifest={...manifest,structures:[{...manifest.structures[0],source_name:'Basilar artery'},
+    {...manifest.structures[0],id:'context',source_name:'Source context'},
+    {...manifest.structures[0],id:'subject',source_name:'Source subject',target_native_mm:[1,2,3]}]}
+  const scope={id:'general-anatomy',title:'Whole brain',structure_ids:['subject','missing','context','subject'],primary_structure_ids:['subject','object-1']}
+  const state=initialModelView(source,scope)
+  expect(state.visible).toEqual(['context','subject'])
+  expect(state.selected).toBe('context')
+  expect(state.visible).toContain(state.selected)
+  expect(state.position_native_mm).toEqual(source.structures[1].target_native_mm)
+  const saved=modelScene(source,{...state,visible:['object-1'],selected:'object-1',note:'Explicit source observation'})
+  const before=JSON.stringify(saved)
+  expect(readModelScene(saved,source).state.visible).toEqual(['object-1'])
+  expect(readModelScene(saved,source).state.selected).toBe('object-1')
+  expect(JSON.stringify(saved)).toBe(before)
+  const unavailable=initialModelView(source,{...scope,structure_ids:['missing']})
+  expect(unavailable.visible).toEqual([])
+  expect(unavailable.selected).toBeNull()
 })
 
 it('round-trips a source XYZ view with camera, clipping, markers and notes',()=>{
@@ -37,6 +79,17 @@ it('round-trips a source XYZ view with camera, clipping, markers and notes',()=>
   const scene=modelScene(manifest,state)
   expect(readModelScene(JSON.parse(JSON.stringify(scene)),manifest).state).toEqual(state)
   expect(JSON.stringify(scene.state)).not.toMatch(/position_ras|background|imageContext/)
+})
+
+it.each([true,false])('round-trips optional following cuts without assigning anatomical axes: %s',followCursor=>{
+  const state=initialModelView(manifest)
+  state.position_native_mm=[11.123456789,21.234567891,1601.345678912]
+  state.surfaceCutaway={axis:2,side:1,position_mm:state.position_native_mm[2],structures:['object-1'],followCursor}
+  const restored=readModelScene(JSON.parse(JSON.stringify(modelScene(manifest,state))),manifest).state
+  expect(restored).toEqual(state)
+  expect(restored.coordinate_system).toBe('SOURCE_XYZ')
+  expect(restored).not.toHaveProperty('position_ras_mm')
+  expect(()=>readModelScene(modelScene(manifest,{...state,surfaceCutaway:{...state.surfaceCutaway,followCursor:'yes'} as never}),manifest)).toThrow('XYZ model cutaway')
 })
 
 it('retains selection highlighting while keeping legacy source colors unchanged',()=>{

@@ -1,0 +1,5602 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-26",
+  "dataset_id": "spl_nac",
+  "complete_recipe": "src/neuroimage/recipes/spl_nac_complete.json",
+  "legacy_recipe_sha256": "6b7dbb2675f0e23f92502c410089974da9e30e950a059c6855b937bb7ce34693",
+  "method": "Read the original NRRD with pynrrd index_order=F, count every stored integer value, intersect nonzero values with the delivered LUT in LUT order, and retain each original named value without unions. No model rasterization, interpolation, re-registration or hemispheric partition.",
+  "source_files": {
+    "labels": {
+      "file": "raw/spl_nac/brain-2017-01/volumes/labels/hncma-atlas.nrrd",
+      "bytes": 466100,
+      "sha256": "d40a8b7d3adc1e8bec3c276a895db6aaed913aa83a2161015da1083face636ae"
+    },
+    "label_table": {
+      "file": "raw/spl_nac/brain-2017-01/labelinfo/hncma-atlas-lut.tsv",
+      "bytes": 15663,
+      "sha256": "9f15a66b83d1088f8d49fdf23a5c40d28dadc84f6c121ded37f511db7e604b70"
+    },
+    "metadata_table": {
+      "file": "raw/spl_nac/brain-2017-01/labelinfo/brain-atlas-labels-with-metadata.tsv",
+      "bytes": 20103,
+      "sha256": "13a6a22b3bd7cef6129c9b2474fbc8ff1e22d41562a892e25770181c86088ab4"
+    }
+  },
+  "source_grid": {
+    "shape": [
+      256,
+      256,
+      256
+    ],
+    "space": "left-posterior-superior",
+    "space_directions": [
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "space_origin": [
+      -128.0,
+      -128.0,
+      128.0
+    ],
+    "declared_units": "mm",
+    "image_grid_correspondence": "Same-volunteer MRI and source labels. Their affine origins differ by 0.5 mm on each world axis; each native grid is retained. No additional registration is applied."
+  },
+  "counts": {
+    "lut_rows_including_zero": 344,
+    "present_nonzero_values": 312,
+    "present_named_labels": 311,
+    "unnamed_present_nonzero_labels": 1,
+    "legacy_direct_labels": 101,
+    "legacy_union_structures": 4,
+    "legacy_union_requested_values": 94,
+    "legacy_union_present_values": 90,
+    "named_labels_missing_direct_legacy_selection": 210,
+    "named_labels_not_covered_by_any_legacy_structure": 120,
+    "source_vtk_files": 359,
+    "source_vtk_label_ids": 328
+  },
+  "classification_note": "Eligibility and category are project routing buckets based on explicit source names. They do not create new anatomical boundaries or claim an independent medical review. Whole source optic nerves may include extracranial extent and are kept separately flagged.",
+  "eligibility_counts": {
+    "intracranial_source": 234,
+    "cranial_nerve_whole_source": 2,
+    "extracranial_head_neck": 73,
+    "orbital_source": 2
+  },
+  "category_counts": {
+    "White matter context": 12,
+    "Ventricles": 7,
+    "Cerebellum": 70,
+    "Deep structures": 61,
+    "Brainstem": 11,
+    "Cranial nerves": 2,
+    "Cerebral cortex": 70,
+    "Pituitary structures": 3,
+    "Head and neck muscles": 71,
+    "Eye globes": 2,
+    "Oral and pharyngeal structures": 2
+  },
+  "structures": [
+    {
+      "value": 2,
+      "source_name": "white matter of left cerebral hemisphere",
+      "source_color": "rgb(250,250,225)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 232456,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "white matter of left cerebral hemisphere",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2_white_matter_of_left_cerebral_hemisphere.vtk"
+      ]
+    },
+    {
+      "value": 4,
+      "source_name": "left lateral ventricle",
+      "source_color": "rgb(88,106,215)",
+      "category": "Ventricles",
+      "eligibility": "intracranial_source",
+      "voxel_count": 10162,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left lateral ventricle",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4_left_lateral_ventricle.vtk"
+      ]
+    },
+    {
+      "value": 5,
+      "source_name": "temporal horn of left lateral ventricle",
+      "source_color": "rgb(88,106,215)",
+      "category": "Ventricles",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1109,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "temporal horn of left lateral ventricle",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5_temporal_horn_of_left_lateral_ventricle.vtk"
+      ]
+    },
+    {
+      "value": 7,
+      "source_name": "white matter of left hemisphere of cerebellum",
+      "source_color": "rgb(180,210,120)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 14138,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "white matter of left hemisphere of cerebellum",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_7_white_matter_of_left_hemisphere_of_cerebellum.vtk"
+      ]
+    },
+    {
+      "value": 11,
+      "source_name": "left caudate nucleus",
+      "source_color": "rgb(30,111,85)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4711,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left caudate nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_11_left_caudate_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 12,
+      "source_name": "left putamen",
+      "source_color": "rgb(210,157,166)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 5958,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left putamen",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_12_left_putamen.vtk"
+      ]
+    },
+    {
+      "value": 13,
+      "source_name": "left globus pallidus pars externa",
+      "source_color": "rgb(15,50,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1382,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left globus pallidus pars externa",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_13_left_globus_pallidus_pars_externa.vtk"
+      ]
+    },
+    {
+      "value": 15,
+      "source_name": "fourth ventricle",
+      "source_color": "rgb(88,106,215)",
+      "category": "Ventricles",
+      "eligibility": "intracranial_source",
+      "voxel_count": 5582,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "fourth ventricle",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_15_fourth_ventricle.vtk"
+      ]
+    },
+    {
+      "value": 17,
+      "source_name": "left hippocampus",
+      "source_color": "rgb(220,215,20)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4641,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left hippocampus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_17_left_hippocampus.vtk"
+      ]
+    },
+    {
+      "value": 18,
+      "source_name": "left amygdala",
+      "source_color": "rgb(98,153,112)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1733,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left amygdala",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_18_left_amygdala.vtk"
+      ]
+    },
+    {
+      "value": 19,
+      "source_name": "aqueduct",
+      "source_color": "rgb(88,106,215)",
+      "category": "Ventricles",
+      "eligibility": "intracranial_source",
+      "voxel_count": 216,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "cerebral aqueduct",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_19_aqueduct.vtk"
+      ]
+    },
+    {
+      "value": 24,
+      "source_name": "third ventricle",
+      "source_color": "rgb(88,106,215)",
+      "category": "Ventricles",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1212,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "third ventricle",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_24_third_ventricle.vtk"
+      ]
+    },
+    {
+      "value": 25,
+      "source_name": "left globus pallidus pars interna",
+      "source_color": "rgb(255,165,0)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 890,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left globus pallidus pars interna",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_25_left_globus_pallidus_pars_interna.vtk"
+      ]
+    },
+    {
+      "value": 26,
+      "source_name": "left nucleus accumbens",
+      "source_color": "rgb(165,0,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 868,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left nucleus accumbens",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_26_left_nucleus_accumbens.vtk"
+      ]
+    },
+    {
+      "value": 35,
+      "source_name": "pons",
+      "source_color": "rgb(50,50,135)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 18163,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "unsegmented region of pons",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_35_pons.vtk"
+      ]
+    },
+    {
+      "value": 40,
+      "source_name": "part of midbrain",
+      "source_color": "rgb(145,92,109)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 10387,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "unsegmented region of midbrain",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_40_part_of_midbrain.vtk"
+      ]
+    },
+    {
+      "value": 41,
+      "source_name": "white matter of right cerebral hemisphere",
+      "source_color": "rgb(250,250,225)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 235883,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "white matter of right cerebral hemisphere",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_41_white_matter_of_right_cerebral_hemisphere.vtk"
+      ]
+    },
+    {
+      "value": 43,
+      "source_name": "right lateral ventricle",
+      "source_color": "rgb(88,106,215)",
+      "category": "Ventricles",
+      "eligibility": "intracranial_source",
+      "voxel_count": 8341,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right lateral ventricle",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_43_right_lateral_ventricle.vtk"
+      ]
+    },
+    {
+      "value": 44,
+      "source_name": "temporal horn of right lateral ventricle",
+      "source_color": "rgb(88,106,215)",
+      "category": "Ventricles",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1071,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "temporal horn of right lateral ventricle",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_44_temporal_horn_of_right_lateral_ventricle.vtk"
+      ]
+    },
+    {
+      "value": 46,
+      "source_name": "white matter of right hemisphere of cerebellum",
+      "source_color": "rgb(180,210,120)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 13537,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "white matter of right hemisphere of cerebellum",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_46_white_matter_of_right_hemisphere_of_cerebellum.vtk"
+      ]
+    },
+    {
+      "value": 50,
+      "source_name": "right caudate nucleus",
+      "source_color": "rgb(30,111,85)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4645,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right caudate nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_50_right_caudate_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 51,
+      "source_name": "right putamen",
+      "source_color": "rgb(210,157,166)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 5607,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right putamen",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_51_right_putamen.vtk"
+      ]
+    },
+    {
+      "value": 52,
+      "source_name": "right globus pallidus pars externa",
+      "source_color": "rgb(15,50,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1377,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right globus pallidus pars externa",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_52_right_globus_pallidus_pars_externa.vtk"
+      ]
+    },
+    {
+      "value": 53,
+      "source_name": "right hippocampus",
+      "source_color": "rgb(220,215,20)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4378,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right hippocampus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_53_right_hippocampus.vtk"
+      ]
+    },
+    {
+      "value": 54,
+      "source_name": "right amygdala",
+      "source_color": "rgb(98,153,112)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2166,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right amygdala",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_54_right_amygdala.vtk"
+      ]
+    },
+    {
+      "value": 58,
+      "source_name": "right nucleus accumbens",
+      "source_color": "rgb(165,0,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 808,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right nucleus accumbens",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_58_right_nucleus_accumbens.vtk"
+      ]
+    },
+    {
+      "value": 61,
+      "source_name": "medulla oblongata",
+      "source_color": "rgb(135,205,235)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 7085,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "medulla oblongata",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_61_medulla_oblongata.vtk"
+      ]
+    },
+    {
+      "value": 66,
+      "source_name": "left substantia nigra",
+      "source_color": "rgb(0,108,112)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 325,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left substantia nigra",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_66_left_substantia_nigra.vtk"
+      ]
+    },
+    {
+      "value": 71,
+      "source_name": "right substantia nigra",
+      "source_color": "rgb(0,108,112)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 331,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right substantia nigra",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_71_right_substantia_nigra.vtk"
+      ]
+    },
+    {
+      "value": 72,
+      "source_name": "pineal body",
+      "source_color": "rgb(253,135,192)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 99,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "pineal body",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_72_pineal_body.vtk"
+      ]
+    },
+    {
+      "value": 77,
+      "source_name": "left optic nerve",
+      "source_color": "rgb(216,220,84)",
+      "category": "Cranial nerves",
+      "eligibility": "cranial_nerve_whole_source",
+      "voxel_count": 466,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_77_left_optic_nerve.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_77_left_optic_nerve1.vtk"
+      ]
+    },
+    {
+      "value": 78,
+      "source_name": "left optic tract",
+      "source_color": "rgb(156,171,108)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 330,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left optic tract",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_78_left_optic_tract.vtk"
+      ]
+    },
+    {
+      "value": 79,
+      "source_name": "left red nucleus",
+      "source_color": "rgb(255,150,10)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 148,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left red nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_79_left_red_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 83,
+      "source_name": "right globus pallidus pars interna",
+      "source_color": "rgb(255,165,0)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1022,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right globus pallidus pars interna",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_83_right_globus_pallidus_pars_interna.vtk"
+      ]
+    },
+    {
+      "value": 84,
+      "source_name": "right red nucleus",
+      "source_color": "rgb(255,150,10)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 148,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right red nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_84_right_red_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 85,
+      "source_name": "optic chiasm",
+      "source_color": "rgb(99,106,24)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 398,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "optic chiasm",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_85_optic_chiasm.vtk"
+      ]
+    },
+    {
+      "value": 96,
+      "source_name": "pellucid septum",
+      "source_color": "rgb(205,10,125)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 433,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "pellucid septum",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_96_pellucid_septum.vtk"
+      ]
+    },
+    {
+      "value": 100,
+      "source_name": "left mammillothalamic tract",
+      "source_color": "rgb(125,140,180)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 30,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left mammillothalamic tract",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_100_left_mammillothalamic_tract.vtk"
+      ]
+    },
+    {
+      "value": 142,
+      "source_name": "anterior commissure",
+      "source_color": "rgb(220,225,70)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 726,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "anterior commissure",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_142_anterior_commissure.vtk"
+      ]
+    },
+    {
+      "value": 200,
+      "source_name": "right mammillothalamic tract",
+      "source_color": "rgb(125,140,180)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 33,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right mammillothalamic tract",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_200_right_mammillothalamic_tract.vtk"
+      ]
+    },
+    {
+      "value": 215,
+      "source_name": "right optic nerve",
+      "source_color": "rgb(216,220,84)",
+      "category": "Cranial nerves",
+      "eligibility": "cranial_nerve_whole_source",
+      "voxel_count": 500,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_215_right_optic_nerve.vtk"
+      ]
+    },
+    {
+      "value": 216,
+      "source_name": "right optic tract",
+      "source_color": "rgb(156,171,108)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 357,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right optic tract",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_216_right_optic_tract.vtk"
+      ]
+    },
+    {
+      "value": 300,
+      "source_name": "left I II v",
+      "source_color": "rgb(235,63,159)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 337,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_300_left-I_II-v.vtk"
+      ]
+    },
+    {
+      "value": 301,
+      "source_name": "left III v",
+      "source_color": "rgb(31,175,72)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 939,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left III v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_301_left-III-v.vtk"
+      ]
+    },
+    {
+      "value": 302,
+      "source_name": "left IV v",
+      "source_color": "rgb(214,27,150)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1472,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left IV v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_302_left-IV-v.vtk"
+      ]
+    },
+    {
+      "value": 303,
+      "source_name": "left V v",
+      "source_color": "rgb(220,39,44)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1903,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left V v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_303_left-V-v.vtk"
+      ]
+    },
+    {
+      "value": 304,
+      "source_name": "left VI v",
+      "source_color": "rgb(49,95,178)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 575,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VI v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_304_left-VI-v.vtk"
+      ]
+    },
+    {
+      "value": 305,
+      "source_name": "left VIIAf v",
+      "source_color": "rgb(241,235,27)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 86,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIAf v",
+      "source_metadata_notes": "",
+      "source_models": []
+    },
+    {
+      "value": 306,
+      "source_name": "left VIIAt v",
+      "source_color": "rgb(158,56,161)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 20,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIAt v",
+      "source_metadata_notes": "",
+      "source_models": []
+    },
+    {
+      "value": 307,
+      "source_name": "left VIIB v",
+      "source_color": "rgb(56,120,63)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 176,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIB v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_307_left-VIIB-v.vtk"
+      ]
+    },
+    {
+      "value": 308,
+      "source_name": "left VIIIA v",
+      "source_color": "rgb(149,75,64)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 787,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIIA v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_308_left-VIIIA-v.vtk"
+      ]
+    },
+    {
+      "value": 309,
+      "source_name": "left VIIIB v",
+      "source_color": "rgb(116,64,163)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 306,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIIB v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_309_left-VIIIB-v.vtk"
+      ]
+    },
+    {
+      "value": 310,
+      "source_name": "left IX v",
+      "source_color": "rgb(124,139,88)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 457,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left IX v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_310_left-IX-v.vtk"
+      ]
+    },
+    {
+      "value": 311,
+      "source_name": "left X v",
+      "source_color": "rgb(245,213,21)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 251,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left X v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_311_left-X-v.vtk"
+      ]
+    },
+    {
+      "value": 312,
+      "source_name": "left III m",
+      "source_color": "rgb(115,204,130)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 26,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left III m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_312_left-III-m.vtk"
+      ]
+    },
+    {
+      "value": 313,
+      "source_name": "left IV m",
+      "source_color": "rgb(220,113,174)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 260,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left IV m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_313_left-IV-m.vtk"
+      ]
+    },
+    {
+      "value": 314,
+      "source_name": "left V m",
+      "source_color": "rgb(216,106,116)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 806,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left V m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_314_left-V-m.vtk"
+      ]
+    },
+    {
+      "value": 315,
+      "source_name": "left VI m",
+      "source_color": "rgb(43,169,230)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2897,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VI m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_315_left-VI-m.vtk"
+      ]
+    },
+    {
+      "value": 316,
+      "source_name": "left VIIA crusI m",
+      "source_color": "rgb(237,229,148)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1007,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIA crusI m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_316_left-VIIA_crusI-m.vtk"
+      ]
+    },
+    {
+      "value": 317,
+      "source_name": "left VIIA crusII m",
+      "source_color": "rgb(174,116,152)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1842,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIA crusII m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_317_left-VIIA_crusII-m.vtk"
+      ]
+    },
+    {
+      "value": 318,
+      "source_name": "left VIIB m",
+      "source_color": "rgb(103,164,114)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 861,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIB m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_318_left-VIIB-m.vtk"
+      ]
+    },
+    {
+      "value": 319,
+      "source_name": "left VIIIA m",
+      "source_color": "rgb(167,123,89)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 773,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIIA m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_319_left-VIIIA-m.vtk"
+      ]
+    },
+    {
+      "value": 320,
+      "source_name": "left VIIIB m",
+      "source_color": "rgb(164,123,187)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 617,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIIB m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_320_left-VIIIB-m.vtk"
+      ]
+    },
+    {
+      "value": 321,
+      "source_name": "left IX m",
+      "source_color": "rgb(189,199,129)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2645,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left IX m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_321_left-IX-m.vtk"
+      ]
+    },
+    {
+      "value": 322,
+      "source_name": "left X m",
+      "source_color": "rgb(243,231,100)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 410,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left X m",
+      "source_metadata_notes": "",
+      "source_models": []
+    },
+    {
+      "value": 323,
+      "source_name": "left V l",
+      "source_color": "rgb(243,182,191)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2868,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left V l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_323_left-V-l.vtk"
+      ]
+    },
+    {
+      "value": 324,
+      "source_name": "left VI l",
+      "source_color": "rgb(171,216,143)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 6995,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VI l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_324_left-VI-l.vtk"
+      ]
+    },
+    {
+      "value": 327,
+      "source_name": "left VIIA crusI l1",
+      "source_color": "rgb(243,241,133)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4326,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIA crusI l1",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_327_left-VIIA_crusI-l1.vtk"
+      ]
+    },
+    {
+      "value": 328,
+      "source_name": "left VIIA crusII l1",
+      "source_color": "rgb(223,162,214)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1940,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIA crusII l1",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_328_left-VIIA_crusII-l1.vtk"
+      ]
+    },
+    {
+      "value": 329,
+      "source_name": "left VIIB l",
+      "source_color": "rgb(147,210,194)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2177,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIB l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_329_left-VIIB-l.vtk"
+      ]
+    },
+    {
+      "value": 330,
+      "source_name": "left VIIIA l",
+      "source_color": "rgb(216,190,132)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2731,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIIA l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_330_left-VIIIA-l.vtk"
+      ]
+    },
+    {
+      "value": 331,
+      "source_name": "left VIIIB l",
+      "source_color": "rgb(175,176,221)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 6243,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIIB l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_331_left-VIIIB-l.vtk"
+      ]
+    },
+    {
+      "value": 332,
+      "source_name": "left VIIA crusI l2",
+      "source_color": "rgb(236,245,196)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 7341,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIA crusI l2",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_332_left-VIIA_crusI-l2.vtk"
+      ]
+    },
+    {
+      "value": 333,
+      "source_name": "left VIIA crusII l2",
+      "source_color": "rgb(241,216,238)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 453,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60001
+      ],
+      "source_metadata_name": "left VIIA crusII l2",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_333_left-VIIA_crusII-l2.vtk"
+      ]
+    },
+    {
+      "value": 334,
+      "source_name": "right I II v",
+      "source_color": "rgb(235,63,159)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 201,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right I II v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_334_right-I_II-v.vtk"
+      ]
+    },
+    {
+      "value": 335,
+      "source_name": "right III v",
+      "source_color": "rgb(31,175,72)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 749,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right III v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_335_right-III-v.vtk"
+      ]
+    },
+    {
+      "value": 336,
+      "source_name": "right IV v",
+      "source_color": "rgb(214,27,150)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 845,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right IV v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_336_right-IV-v.vtk"
+      ]
+    },
+    {
+      "value": 337,
+      "source_name": "right V v",
+      "source_color": "rgb(220,39,44)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 910,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right V v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_337_right-V-v.vtk"
+      ]
+    },
+    {
+      "value": 338,
+      "source_name": "right VI v",
+      "source_color": "rgb(49,95,178)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 432,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VI v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_338_right-VI-v.vtk"
+      ]
+    },
+    {
+      "value": 339,
+      "source_name": "right VIIAf v",
+      "source_color": "rgb(241,235,27)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 86,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIAf v",
+      "source_metadata_notes": "",
+      "source_models": []
+    },
+    {
+      "value": 340,
+      "source_name": "right VIIAt v",
+      "source_color": "rgb(158,56,161)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 21,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIAt v",
+      "source_metadata_notes": "",
+      "source_models": []
+    },
+    {
+      "value": 341,
+      "source_name": "right VIIB v",
+      "source_color": "rgb(56,120,63)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 128,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIB v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_341_right-VIIB-v.vtk"
+      ]
+    },
+    {
+      "value": 342,
+      "source_name": "right VIIIA v",
+      "source_color": "rgb(149,75,64)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 450,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIIA v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_342_right-VIIIA-v.vtk"
+      ]
+    },
+    {
+      "value": 343,
+      "source_name": "right VIIIB v",
+      "source_color": "rgb(116,64,163)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 98,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIIB v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_343_right-VIIIB-v.vtk"
+      ]
+    },
+    {
+      "value": 344,
+      "source_name": "right IX v",
+      "source_color": "rgb(124,139,88)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 189,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right IX v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_344_right-IX-v.vtk"
+      ]
+    },
+    {
+      "value": 345,
+      "source_name": "right X v",
+      "source_color": "rgb(245,213,21)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 79,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right X v",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_345_right-X-v.vtk"
+      ]
+    },
+    {
+      "value": 346,
+      "source_name": "right III m",
+      "source_color": "rgb(115,204,130)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 139,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right III m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_346_right-III-m.vtk"
+      ]
+    },
+    {
+      "value": 347,
+      "source_name": "right IV m",
+      "source_color": "rgb(220,113,174)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 895,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right IV m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_347_right-IV-m.vtk"
+      ]
+    },
+    {
+      "value": 348,
+      "source_name": "right V m",
+      "source_color": "rgb(216,106,116)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1962,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right V m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_348_right-V-m.vtk"
+      ]
+    },
+    {
+      "value": 349,
+      "source_name": "right VI m",
+      "source_color": "rgb(43,169,230)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2437,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VI m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_349_right-VI-m.vtk"
+      ]
+    },
+    {
+      "value": 350,
+      "source_name": "right VIIA crusI m",
+      "source_color": "rgb(237,229,148)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1160,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIA crusI m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_350_right-VIIA_crusI-m.vtk"
+      ]
+    },
+    {
+      "value": 351,
+      "source_name": "right VIIA crusII m",
+      "source_color": "rgb(174,116,152)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1324,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIA crusII m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_351_right-VIIA_crusII-m.vtk"
+      ]
+    },
+    {
+      "value": 352,
+      "source_name": "right VIIB m",
+      "source_color": "rgb(103,164,114)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 832,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIB m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_352_right-VIIB-m.vtk"
+      ]
+    },
+    {
+      "value": 353,
+      "source_name": "right VIIIA m",
+      "source_color": "rgb(167,123,89)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1178,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIIA m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_353_right-VIIIA-m.vtk"
+      ]
+    },
+    {
+      "value": 354,
+      "source_name": "right VIIIB m",
+      "source_color": "rgb(164,123,187)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 3095,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIIB m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_354_right-VIIIB-m.vtk"
+      ]
+    },
+    {
+      "value": 355,
+      "source_name": "right IX m",
+      "source_color": "rgb(189,199,129)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2224,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right IX m",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_355_right-IX-m.vtk"
+      ]
+    },
+    {
+      "value": 356,
+      "source_name": "right X m",
+      "source_color": "rgb(243,231,100)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 600,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right X m",
+      "source_metadata_notes": "",
+      "source_models": []
+    },
+    {
+      "value": 357,
+      "source_name": "right V l",
+      "source_color": "rgb(243,182,191)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2556,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right V l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_357_right-V-l.vtk"
+      ]
+    },
+    {
+      "value": 358,
+      "source_name": "right VI l",
+      "source_color": "rgb(171,216,143)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 6537,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VI l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_358_right-VI-l.vtk"
+      ]
+    },
+    {
+      "value": 361,
+      "source_name": "right VIIA crusI l1",
+      "source_color": "rgb(243,241,133)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4073,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIA crusI l1",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_361_right-VIIA_crusI-l1.vtk"
+      ]
+    },
+    {
+      "value": 362,
+      "source_name": "right VIIA crusII l1",
+      "source_color": "rgb(223,162,214)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1729,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIA crusII l1",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_362_right-VIIA_crusII-l1.vtk"
+      ]
+    },
+    {
+      "value": 363,
+      "source_name": "right VIIB l",
+      "source_color": "rgb(147,210,194)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1370,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIB l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_363_right-VIIB-l.vtk"
+      ]
+    },
+    {
+      "value": 364,
+      "source_name": "right VIIIA l",
+      "source_color": "rgb(216,190,132)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2775,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIIA l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_364_right-VIIIA-l.vtk"
+      ]
+    },
+    {
+      "value": 365,
+      "source_name": "right VIIIB l",
+      "source_color": "rgb(175,176,221)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4136,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIIB l",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_365_right-VIIIB-l.vtk"
+      ]
+    },
+    {
+      "value": 366,
+      "source_name": "right VIIA crusI l2",
+      "source_color": "rgb(236,245,196)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 7997,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIA crusI l2",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_366_right-VIIA_crusI-l2.vtk"
+      ]
+    },
+    {
+      "value": 367,
+      "source_name": "right VIIA crusII l2",
+      "source_color": "rgb(241,216,238)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1551,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60002
+      ],
+      "source_metadata_name": "right VIIA crusII l2",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_367_right-VIIA_crusII-l2.vtk"
+      ]
+    },
+    {
+      "value": 371,
+      "source_name": "left Dentate nucleus",
+      "source_color": "rgb(100,200,100)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 903,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left Dentate nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_371_left-Dentate-nucleus.vtk"
+      ]
+    },
+    {
+      "value": 373,
+      "source_name": "left FaGE nuclei",
+      "source_color": "rgb(255,0,0)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 368,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left FaGE nuclei",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_373_left-FaGE_nuclei.vtk"
+      ]
+    },
+    {
+      "value": 375,
+      "source_name": "right Dentate nucleus",
+      "source_color": "rgb(100,200,100)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 912,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right Dentate nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_375_right-Dentate-nucleus.vtk"
+      ]
+    },
+    {
+      "value": 377,
+      "source_name": "right FaGE nuclei",
+      "source_color": "rgb(255,0,0)",
+      "category": "Cerebellum",
+      "eligibility": "intracranial_source",
+      "voxel_count": 346,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right FaGE nuclei",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_377_right-FaGE_nuclei.vtk"
+      ]
+    },
+    {
+      "value": 380,
+      "source_name": "left anterior superior hypothalamus",
+      "source_color": "rgb(243,136,62)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 46,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left anterior superior hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_380_left_anterior_superior_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 381,
+      "source_name": "left anterior inferior hypothalamus",
+      "source_color": "rgb(135,247,4)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 27,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left anterior inferior hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_381_left_anterior_inferior_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 382,
+      "source_name": "left superior tuberal hypothalamus",
+      "source_color": "rgb(147,69,18)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 247,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior tuberal hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_382_left_superior_tuberal_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 383,
+      "source_name": "left inferior tuberal hypothalamus",
+      "source_color": "rgb(4,235,125)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 200,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left inferior tuberal hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_383_left_inferior_tuberal_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 384,
+      "source_name": "left posterior superior hypothalamus",
+      "source_color": "rgb(125,38,205)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 93,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left posterior superior hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_384_left_posterior_superior_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 385,
+      "source_name": "right anterior superior hypothalamus",
+      "source_color": "rgb(243,136,62)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 46,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right anterior superior hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_385_right_anterior_superior_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 386,
+      "source_name": "right anterior inferior hypothalamus",
+      "source_color": "rgb(135,247,4)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 27,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right anterior inferior hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_386_right_anterior_inferior_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 387,
+      "source_name": "right superior tuberal hypothalamus",
+      "source_color": "rgb(147,69,18)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 256,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior tuberal hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_387_right_superior_tuberal_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 388,
+      "source_name": "right inferior tuberal hypothalamus",
+      "source_color": "rgb(4,235,125)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 209,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right inferior tuberal hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_388_right_inferior_tuberal_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 389,
+      "source_name": "right posterior superior hypothalamus",
+      "source_color": "rgb(125,38,205)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 56,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right posterior superior hypothalamus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_389_right_posterior_superior_hypothalamus.vtk"
+      ]
+    },
+    {
+      "value": 390,
+      "source_name": "right subthalamic nucleus",
+      "source_color": "rgb(200,25,140)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 32,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right subthalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_390_right_subthalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 391,
+      "source_name": "left subthalamic nucleus",
+      "source_color": "rgb(200,25,140)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 32,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left subthalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_391_left_subthalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 500,
+      "source_name": "right internal medullary lamina",
+      "source_color": "rgb(200,200,200)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 558,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right internal medullary lamina",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_500_right_internal_medullary_lamina.vtk"
+      ]
+    },
+    {
+      "value": 501,
+      "source_name": "left internal medullary lamina",
+      "source_color": "rgb(200,200,200)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 503,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left internal medullary lamina",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_501_left_internal_medullary_lamina.vtk"
+      ]
+    },
+    {
+      "value": 502,
+      "source_name": "right medial geniculate body",
+      "source_color": "rgb(125,250,20)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 168,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right medial geniculate body",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_502_right_medial_geniculate_body.vtk"
+      ]
+    },
+    {
+      "value": 503,
+      "source_name": "left medial geniculate body",
+      "source_color": "rgb(125,250,20)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 163,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left medial geniculate body",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_503_left_medial_geniculate_body.vtk"
+      ]
+    },
+    {
+      "value": 504,
+      "source_name": "right lateral geniculate body",
+      "source_color": "rgb(100,180,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 260,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right lateral geniculate body",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_504_right_lateral_geniculate_body.vtk"
+      ]
+    },
+    {
+      "value": 505,
+      "source_name": "left lateral geniculate body",
+      "source_color": "rgb(100,180,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 263,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left lateral geniculate body",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_505_left_lateral_geniculate_body.vtk"
+      ]
+    },
+    {
+      "value": 506,
+      "source_name": "right pulvinar",
+      "source_color": "rgb(63,105,225)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1706,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right pulvinar",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_506_right_pulvinar.vtk"
+      ]
+    },
+    {
+      "value": 507,
+      "source_name": "left pulvinar",
+      "source_color": "rgb(63,105,225)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2020,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left pulvinar",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_507_left_pulvinar.vtk"
+      ]
+    },
+    {
+      "value": 508,
+      "source_name": "right anterior thalamic nucleus",
+      "source_color": "rgb(255,25,130)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 230,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right anterior thalamic nucleus",
+      "source_metadata_notes": "in the old SPL-BrainAtlas-Colorfile.txtLandRare mislabeled (switched)",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_508_right_anterior_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 509,
+      "source_name": "left anterior thalamic nucleus",
+      "source_color": "rgb(255,25,130)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 196,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left anterior thalamic nucleus",
+      "source_metadata_notes": "in the old SPL-BrainAtlas-Colorfile.txtLandRare mislabeled (switched)",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_509_left_anterior_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 510,
+      "source_name": "right dorsomedial thalamic nucleus",
+      "source_color": "rgb(60,190,130)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 874,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right dorsomedial thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_510_right_dorsomedial_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 511,
+      "source_name": "left dorsomedial thalamic nucleus",
+      "source_color": "rgb(60,190,130)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 930,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left dorsomedial thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_511_left_dorsomedial_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 512,
+      "source_name": "right centromedian thalamic nucleus",
+      "source_color": "rgb(190,180,105)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 232,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right centromedian thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_512_right_centromedian_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 513,
+      "source_name": "left centromedian thalamic nucleus",
+      "source_color": "rgb(190,180,105)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 257,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left centromedian thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_513_left_centromedian_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 514,
+      "source_name": "right ventral anterior thalamic nucleus",
+      "source_color": "rgb(255,213,0)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 795,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right ventral anterior thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_514_right_ventral_anterior_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 515,
+      "source_name": "left ventral anterior thalamic nucleus",
+      "source_color": "rgb(255,213,0)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 735,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left ventral anterior thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_515_left_ventral_anterior_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 516,
+      "source_name": "right ventral lateral thalamic nucleus",
+      "source_color": "rgb(60,180,180)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 888,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right ventral lateral thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_516_right_ventral_lateral_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 517,
+      "source_name": "left ventral lateral thalamic nucleus",
+      "source_color": "rgb(60,180,180)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 933,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left ventral lateral thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_517_left_ventral_lateral_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 518,
+      "source_name": "right lateral posterior thalamic nucleus",
+      "source_color": "rgb(205,130,0)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 704,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right lateral posterior thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_518_right_lateral_posterior_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 519,
+      "source_name": "left lateral posterior thalamic nucleus",
+      "source_color": "rgb(205,130,0)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 981,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left lateral posterior thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_519_left_lateral_posterior_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 520,
+      "source_name": "right lateral dorsal thalamic nucleus",
+      "source_color": "rgb(175,195,220)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 88,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right lateral dorsal thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_520_right_lateral_dorsal_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 521,
+      "source_name": "left lateral dorsal thalamic nucleus",
+      "source_color": "rgb(175,195,220)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 176,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left lateral dorsal thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_521_left_lateral_dorsal_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 522,
+      "source_name": "right ventral posteromedial thalamic nucleus",
+      "source_color": "rgb(225,170,105)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 261,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right ventral posteromedial thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_522_right_ventral_posteromedial_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 523,
+      "source_name": "left ventral posteromedial thalamic nucleus",
+      "source_color": "rgb(225,170,105)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 205,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left ventral posteromedial thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_523_left_ventral_posteromedial_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 524,
+      "source_name": "right ventral posterolateral thalamic nucleus",
+      "source_color": "rgb(230,130,130)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 969,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60004
+      ],
+      "source_metadata_name": "right ventral posterolateral thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_524_right_ventral_posterolateral_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 525,
+      "source_name": "left ventral posterolateral thalamic nucleus",
+      "source_color": "rgb(230,130,130)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1057,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [
+        60003
+      ],
+      "source_metadata_name": "left ventral posterolateral thalamic nucleus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_525_left_ventral_posterolateral_thalamic_nucleus.vtk"
+      ]
+    },
+    {
+      "value": 1000,
+      "source_name": "left insula",
+      "source_color": "rgb(125,5,25)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 6885,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "unsegmented region of left insula",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1000_left_insula.vtk"
+      ]
+    },
+    {
+      "value": 1001,
+      "source_name": "left superior temporal gyrus (banks of left superior temporal sulcus)",
+      "source_color": "rgb(25,100,40)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2669,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior temporal gyrus (banks of left superior temporal sulcus)",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1001_left_superior_temporal_gyrus_(banks_of_left_superior_temporal_sulcus).vtk"
+      ]
+    },
+    {
+      "value": 1002,
+      "source_name": "caudal part of left anterior cingulate gyrus",
+      "source_color": "rgb(125,100,160)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1740,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "caudal part of left anterior cingulate gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1002_caudal_part_of_left_anterior_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1003,
+      "source_name": "posterior part of left middle frontal gyrus",
+      "source_color": "rgb(100,25,0)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 6912,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "posterior part of left middle frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1003_posterior_part_of_left_middle_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1005,
+      "source_name": "left cuneus",
+      "source_color": "rgb(220,20,100)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2734,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left cuneus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1005_left_cuneus.vtk"
+      ]
+    },
+    {
+      "value": 1006,
+      "source_name": "left ambiens gyrus",
+      "source_color": "rgb(185,15,10)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2117,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left ambiens gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1006_left_ambiens_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1007,
+      "source_name": "left fusiform gyrus",
+      "source_color": "rgb(180,220,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 9883,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left fusiform gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1007_left_fusiform_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1008,
+      "source_name": "left inferior parietal lobule",
+      "source_color": "rgb(185,90,185)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 12947,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "unsegmented region of left inferior parietal lobule",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1008_left_inferior_parietal_lobule.vtk"
+      ]
+    },
+    {
+      "value": 1009,
+      "source_name": "left inferior temporal gyrus",
+      "source_color": "rgb(180,40,120)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 10433,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left inferior temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1009_left_inferior_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1010,
+      "source_name": "isthmus of left cingulate gyrus",
+      "source_color": "rgb(140,20,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2219,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "isthmus of left cingulate gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1010_isthmus_of_left_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1011,
+      "source_name": "left lateral occipital gyrus",
+      "source_color": "rgb(20,30,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 13771,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left lateral occipital gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1011_left_lateral_occipital_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1012,
+      "source_name": "left lateral orbital gyrus",
+      "source_color": "rgb(35,75,50)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 8616,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left lateral orbital gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1012_left_lateral_orbital_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1013,
+      "source_name": "left lingual gyrus",
+      "source_color": "rgb(225,140,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 8406,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left lingual gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1013_left_lingual_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1014,
+      "source_name": "left straight gyrus",
+      "source_color": "rgb(200,35,75)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4709,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left straight gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1014_left_straight_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1015,
+      "source_name": "left middle temporal gyrus",
+      "source_color": "rgb(160,100,50)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 13043,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left middle temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1015_left_middle_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1016,
+      "source_name": "left parahippocampal gyrus",
+      "source_color": "rgb(244,244,24)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1989,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left parahippocampal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1016_left_parahippocampal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1017,
+      "source_name": "left paracentral lobule",
+      "source_color": "rgb(60,175,80)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 5156,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left paracentral lobule",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1017_left_paracentral_lobule.vtk"
+      ]
+    },
+    {
+      "value": 1018,
+      "source_name": "opercular part of left inferior frontal gyrus",
+      "source_color": "rgb(220,180,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 5691,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "opercular part of left inferior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1018_opercular_part_of_left_inferior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1019,
+      "source_name": "orbital part of left inferior frontal gyrus",
+      "source_color": "rgb(220,140,180)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2367,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "orbital part of left inferior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1019_orbital_part_of_left_inferior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1020,
+      "source_name": "triangular part of left inferior frontal gyrus",
+      "source_color": "rgb(220,60,20)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4025,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "triangular part of left inferior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1020_triangular_part_of_left_inferior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1021,
+      "source_name": "left visual cortex",
+      "source_color": "rgb(120,100,60)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1860,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left visual cortex",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1021_left_visual_cortex.vtk"
+      ]
+    },
+    {
+      "value": 1022,
+      "source_name": "left postcentral gyrus",
+      "source_color": "rgb(195,40,40)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 12306,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left postcentral gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1022_left_postcentral_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1023,
+      "source_name": "left posterior cingulate gyrus",
+      "source_color": "rgb(220,180,220)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 3722,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left posterior cingulate gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1023_left_posterior_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1024,
+      "source_name": "left precentral gyrus",
+      "source_color": "rgb(95,75,175)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 16832,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left precentral gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1024_left_precentral_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1025,
+      "source_name": "left precuneus",
+      "source_color": "rgb(160,140,180)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 11954,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left precuneus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1025_left_precuneus.vtk"
+      ]
+    },
+    {
+      "value": 1026,
+      "source_name": "rostral part of left anterior cingulate gyrus",
+      "source_color": "rgb(80,20,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2224,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "rostral part of left anterior cingulate gyrus",
+      "source_metadata_notes": "look at structure id",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1026_rostral_part_of_left_anterior_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1027,
+      "source_name": "anterior part of left middle frontal gyrus",
+      "source_color": "rgb(75,50,125)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 14334,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "anterior part of left middle frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1027_anterior_part_of_left_middle_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1028,
+      "source_name": "left superior frontal gyrus",
+      "source_color": "rgb(50,160,150)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 24162,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1028_left_superior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1029,
+      "source_name": "left superior parietal lobule",
+      "source_color": "rgb(20,180,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 16159,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior parietal lobule",
+      "source_metadata_notes": "may include precuneus in labeling",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1029_left_superior_parietal_lobule.vtk"
+      ]
+    },
+    {
+      "value": 1030,
+      "source_name": "left superior temporal gyrus",
+      "source_color": "rgb(140,220,220)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 13342,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1030_left_superior_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1031,
+      "source_name": "left supramarginal gyrus",
+      "source_color": "rgb(80,160,20)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 13695,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left supramarginal gyrus",
+      "source_metadata_notes": "May include angular gyrus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1031_left_supramarginal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1032,
+      "source_name": "left frontal pole",
+      "source_color": "rgb(100,0,100)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 994,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left frontal pole",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1032_left_frontal_pole.vtk"
+      ]
+    },
+    {
+      "value": 1033,
+      "source_name": "left temporal pole",
+      "source_color": "rgb(70,70,70)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 3243,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left temporal pole",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1033_left_temporal_pole.vtk"
+      ]
+    },
+    {
+      "value": 1034,
+      "source_name": "left transverse temporal gyrus",
+      "source_color": "rgb(150,150,200)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2422,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left transverse temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1034_left_transverse_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 1035,
+      "source_name": "left limen insulae",
+      "source_color": "rgb(145,50,65)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 548,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "limen of left insula",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_1035_left_limen_insulae.vtk"
+      ]
+    },
+    {
+      "value": 2000,
+      "source_name": "right insula",
+      "source_color": "rgb(125,5,25)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 6453,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "unsegmented region of right insula",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2000_right_insula.vtk"
+      ]
+    },
+    {
+      "value": 2001,
+      "source_name": "right superior temporal gyrus (banks of right superior temporal sulcus)",
+      "source_color": "rgb(25,100,40)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2377,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior temporal gyrus (banks of right superior temporal sulcus)",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2001_right_superior_temporal_gyrus_(banks_of_right_superior_temporal_sulcus).vtk"
+      ]
+    },
+    {
+      "value": 2002,
+      "source_name": "caudal part of right anterior cingulate gyrus",
+      "source_color": "rgb(125,100,160)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 3021,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "caudal part of right anterior cingulate gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2002_caudal_part_of_right_anterior_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2003,
+      "source_name": "posterior part of right middle frontal gyrus",
+      "source_color": "rgb(100,25,0)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4817,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "posterior part of right middle frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2003_posterior_part_of_right_middle_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2005,
+      "source_name": "right cuneus",
+      "source_color": "rgb(220,20,100)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4344,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right cuneus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2005_right_cuneus.vtk"
+      ]
+    },
+    {
+      "value": 2006,
+      "source_name": "right ambiens gyrus",
+      "source_color": "rgb(185,15,10)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2781,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right ambiens gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2006_right_ambiens_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2007,
+      "source_name": "right fusiform gyrus",
+      "source_color": "rgb(180,220,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 10968,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right fusiform gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2007_right_fusiform_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2008,
+      "source_name": "right inferior parietal lobule",
+      "source_color": "rgb(185,90,185)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 16166,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "unsegmented region of right inferior parietal lobule",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2008_right_inferior_parietal_lobule.vtk"
+      ]
+    },
+    {
+      "value": 2009,
+      "source_name": "right inferior temporal gyrus",
+      "source_color": "rgb(180,40,120)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 11153,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right inferior temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2009_right_inferior_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2010,
+      "source_name": "isthmus of right cingulate gyrus",
+      "source_color": "rgb(140,20,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2682,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "isthmus of right cingulate gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2010_isthmus_of_right_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2011,
+      "source_name": "right lateral occipital gyrus",
+      "source_color": "rgb(20,30,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 12427,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right lateral occipital gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2011_right_lateral_occipital_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2012,
+      "source_name": "right lateral orbital gyrus",
+      "source_color": "rgb(35,75,50)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 8611,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right lateral orbital gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2012_right_lateral_orbital_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2013,
+      "source_name": "right lingual gyrus",
+      "source_color": "rgb(225,140,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 7479,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right lingual gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2013_right_lingual_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2014,
+      "source_name": "right straight gyrus",
+      "source_color": "rgb(200,35,75)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 5345,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right straight gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2014_right_straight_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2015,
+      "source_name": "right middle temporal gyrus",
+      "source_color": "rgb(160,100,50)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 12780,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right middle temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2015_right_middle_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2016,
+      "source_name": "right parahippocampal gyrus",
+      "source_color": "rgb(244,244,24)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1900,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right parahippocampal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2016_right_parahippocampal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2017,
+      "source_name": "right paracentral lobule",
+      "source_color": "rgb(60,175,80)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4533,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right paracentral lobule",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2017_right_paracentral_lobule.vtk"
+      ]
+    },
+    {
+      "value": 2018,
+      "source_name": "opercular part of right inferior frontal gyrus",
+      "source_color": "rgb(220,180,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 3805,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "opercular part of right inferior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2018_opercular_part_of_right_inferior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2019,
+      "source_name": "orbital part of right inferior frontal gyrus",
+      "source_color": "rgb(220,140,180)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 3127,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "orbital part of right inferior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2019_orbital_part_of_right_inferior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2020,
+      "source_name": "triangular part of right inferior frontal gyrus",
+      "source_color": "rgb(220,60,20)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4395,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "triangular part of right inferior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2020_triangular_part_of_right_inferior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2021,
+      "source_name": "right visual cortex",
+      "source_color": "rgb(120,100,60)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 3197,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right visual cortex",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2021_right_visual_cortex.vtk"
+      ]
+    },
+    {
+      "value": 2022,
+      "source_name": "right postcentral gyrus",
+      "source_color": "rgb(195,40,40)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 9844,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right postcentral gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2022_right_postcentral_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2023,
+      "source_name": "right posterior cingulate gyrus",
+      "source_color": "rgb(220,180,220)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 4188,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right posterior cingulate gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2023_right_posterior_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2024,
+      "source_name": "right precentral gyrus",
+      "source_color": "rgb(95,75,175)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 15323,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right precentral gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2024_right_precentral_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2025,
+      "source_name": "right precuneus",
+      "source_color": "rgb(160,140,180)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 12104,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right precuneus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2025_right_precuneus.vtk"
+      ]
+    },
+    {
+      "value": 2026,
+      "source_name": "rostral part of right anterior cingulate gyrus",
+      "source_color": "rgb(80,20,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1983,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "rostral part of right anterior cingulate gyrus",
+      "source_metadata_notes": "look at structure id",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2026_rostral_part_of_right_anterior_cingulate_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2027,
+      "source_name": "anterior part of right middle frontal gyrus",
+      "source_color": "rgb(75,50,125)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 19140,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "anterior part of right middle frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2027_anterior_part_of_right_middle_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2028,
+      "source_name": "right superior frontal gyrus",
+      "source_color": "rgb(50,160,150)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 23461,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior frontal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2028_right_superior_frontal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2029,
+      "source_name": "right superior parietal lobule",
+      "source_color": "rgb(20,180,140)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 14368,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior parietal lobule",
+      "source_metadata_notes": "may include precuneus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2029_right_superior_parietal_lobule.vtk"
+      ]
+    },
+    {
+      "value": 2030,
+      "source_name": "right superior temporal gyrus",
+      "source_color": "rgb(140,220,220)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 13983,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2030_right_superior_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2031,
+      "source_name": "right supramarginal gyrus",
+      "source_color": "rgb(80,160,20)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 10853,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right supramarginal gyrus",
+      "source_metadata_notes": "may include angular  gyrus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2031_right_supramarginal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2032,
+      "source_name": "right frontal pole",
+      "source_color": "rgb(100,0,100)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 815,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right frontal pole",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2032_right_frontal_pole.vtk"
+      ]
+    },
+    {
+      "value": 2033,
+      "source_name": "right temporal pole",
+      "source_color": "rgb(70,70,70)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2588,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right temporal pole",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2033_right_temporal_pole.vtk"
+      ]
+    },
+    {
+      "value": 2034,
+      "source_name": "right transverse temporal gyrus",
+      "source_color": "rgb(150,150,200)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2161,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right transverse temporal gyrus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2034_right_transverse_temporal_gyrus.vtk"
+      ]
+    },
+    {
+      "value": 2035,
+      "source_name": "right limen insulae",
+      "source_color": "rgb(145,50,65)",
+      "category": "Cerebral cortex",
+      "eligibility": "intracranial_source",
+      "voxel_count": 918,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "limen of right insula",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_2035_right_limen_insulae.vtk"
+      ]
+    },
+    {
+      "value": 3000,
+      "source_name": "right claustrum",
+      "source_color": "rgb(230,155,215)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 1830,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "right claustrum",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3000_right_claustrum.vtk"
+      ]
+    },
+    {
+      "value": 3001,
+      "source_name": "left claustrum",
+      "source_color": "rgb(230,155,215)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 2798,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "left claustrum",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3001_left_claustrum.vtk"
+      ]
+    },
+    {
+      "value": 3002,
+      "source_name": "right mammillary body",
+      "source_color": "rgb(155,230,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 76,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right mammillary body",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3002_right_mammillary_body.vtk"
+      ]
+    },
+    {
+      "value": 3003,
+      "source_name": "left mammillary body",
+      "source_color": "rgb(155,230,255)",
+      "category": "Deep structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 67,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left mammillary body",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3003_left_mammillary_body.vtk"
+      ]
+    },
+    {
+      "value": 3004,
+      "source_name": "corpus callosum",
+      "source_color": "rgb(97,113,158)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 26984,
+      "legacy_direct_selection": true,
+      "legacy_union_values": [],
+      "source_metadata_name": "corpus callosum",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3004_corpus_callosum.vtk"
+      ]
+    },
+    {
+      "value": 3005,
+      "source_name": "right fornix of forebrain",
+      "source_color": "rgb(64,123,147)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 760,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right fornix of forebrain",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3005_right_fornix_of_forebrain.vtk"
+      ]
+    },
+    {
+      "value": 3007,
+      "source_name": "left fornix of forebrain",
+      "source_color": "rgb(64,123,147)",
+      "category": "White matter context",
+      "eligibility": "intracranial_source",
+      "voxel_count": 741,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left fornix of forebrain",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3007_left_fornix_of_forebrain.vtk"
+      ]
+    },
+    {
+      "value": 3008,
+      "source_name": "infundibulum of neurohypophysis",
+      "source_color": "rgb(35,195,35)",
+      "category": "Pituitary structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 78,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "infundibulum of neurohypophysis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3008_infundibulum_of_neurohypophysis.vtk"
+      ]
+    },
+    {
+      "value": 3011,
+      "source_name": "adenohypophysis",
+      "source_color": "rgb(60,143,83)",
+      "category": "Pituitary structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 227,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "adenohypophysis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3011_adenohypophysis.vtk"
+      ]
+    },
+    {
+      "value": 3012,
+      "source_name": "neurohypophysis",
+      "source_color": "rgb(92,162,109)",
+      "category": "Pituitary structures",
+      "eligibility": "intracranial_source",
+      "voxel_count": 177,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "unsegmented region of neurohypophysis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3012_neurohypophysis.vtk"
+      ]
+    },
+    {
+      "value": 3020,
+      "source_name": "right superior colliculus",
+      "source_color": "rgb(241,214,145)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 68,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3020_right_superior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3020_right_superior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 3021,
+      "source_name": "left superior colliculus",
+      "source_color": "rgb(221,130,101)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 67,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3021_left_superior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3021_left_superior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 3022,
+      "source_name": "right inferior colliculus",
+      "source_color": "rgb(177,122,101)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 66,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3022_right_inferior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3022_right_inferior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 3023,
+      "source_name": "left inferior colliculus",
+      "source_color": "rgb(111,184,210)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 65,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3023_left_inferior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3023_left_inferior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 3030,
+      "source_name": "brachia of right superior colliculus",
+      "source_color": "rgb(145,140,220)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 88,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3030_brachia_of_right_superior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3030_brachia_of_right_superior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 3031,
+      "source_name": "brachia of left superior colliculus",
+      "source_color": "rgb(175,240,140)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 84,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3031_brachia_of_left_superior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3031_brachia_of_left_superior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 3032,
+      "source_name": "brachia of right inferior colliculus",
+      "source_color": "rgb(120,210,210)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 79,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3032_brachia_of_right_inferior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3032_brachia_of_right_inferior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 3033,
+      "source_name": "brachia of left inferior colliculus",
+      "source_color": "rgb(140,140,114)",
+      "category": "Brainstem",
+      "eligibility": "intracranial_source",
+      "voxel_count": 80,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": null,
+      "source_metadata_notes": null,
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3033_brachia_of_left_inferior_colliculus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_3033_brachia_of_left_inferior_colliculus1.vtk"
+      ]
+    },
+    {
+      "value": 4001,
+      "source_name": "left temporalis",
+      "source_color": "rgb(153,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 40007,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left temporalis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4001_left_temporalis.vtk"
+      ]
+    },
+    {
+      "value": 4002,
+      "source_name": "right temporalis",
+      "source_color": "rgb(153,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 37656,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right temporalis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4002_right_temporalis.vtk"
+      ]
+    },
+    {
+      "value": 4003,
+      "source_name": "left masseter",
+      "source_color": "rgb(133,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 22321,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left masseter",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4003_left_masseter.vtk"
+      ]
+    },
+    {
+      "value": 4004,
+      "source_name": "right masseter",
+      "source_color": "rgb(133,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 23311,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right masseter",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4004_right_masseter.vtk"
+      ]
+    },
+    {
+      "value": 4005,
+      "source_name": "left lateral pterygoid",
+      "source_color": "rgb(110,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 6384,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left lateral pterygoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4005_left_lateral_pterygoid.vtk"
+      ]
+    },
+    {
+      "value": 4006,
+      "source_name": "right lateral pterygoid",
+      "source_color": "rgb(110,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 5185,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right lateral pterygoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4006_right_lateral_pterygoid.vtk"
+      ]
+    },
+    {
+      "value": 4007,
+      "source_name": "left medial pterygoid",
+      "source_color": "rgb(90,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 8289,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left medial pterygoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4007_left_medial_pterygoid.vtk"
+      ]
+    },
+    {
+      "value": 4008,
+      "source_name": "right medial pterygoid",
+      "source_color": "rgb(90,0,51)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 8445,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right medial pterygoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4008_right_medial_pterygoid.vtk"
+      ]
+    },
+    {
+      "value": 4011,
+      "source_name": "left medial rectus",
+      "source_color": "rgb(90,79,130)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 764,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left medial rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4011_left_medial_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4012,
+      "source_name": "right medial rectus",
+      "source_color": "rgb(90,79,130)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 728,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right medial rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4012_right_medial_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4013,
+      "source_name": "left superior rectus",
+      "source_color": "rgba(111,88,147,0.098)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 728,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4013_left_superior_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4014,
+      "source_name": "right superior rectus",
+      "source_color": "rgb(111,88,147)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 804,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4014_right_superior_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4015,
+      "source_name": "left superior oblique",
+      "source_color": "rgb(123,98,130)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 530,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior oblique",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4015_left_superior_oblique.vtk"
+      ]
+    },
+    {
+      "value": 4016,
+      "source_name": "right superior oblique",
+      "source_color": "rgb(123,98,130)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 477,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior oblique",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4016_right_superior_oblique.vtk"
+      ]
+    },
+    {
+      "value": 4017,
+      "source_name": "left inferior rectus",
+      "source_color": "rgb(135,108,144)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 667,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left inferior rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4017_left_inferior_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4018,
+      "source_name": "right inferior rectus",
+      "source_color": "rgb(135,108,144)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 692,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right inferior rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4018_right_inferior_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4019,
+      "source_name": "left lateral rectus",
+      "source_color": "rgb(150,120,160)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1301,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left lateral rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4019_left_lateral_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4020,
+      "source_name": "right lateral rectus",
+      "source_color": "rgb(150,120,160)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1499,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right lateral rectus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4020_right_lateral_rectus.vtk"
+      ]
+    },
+    {
+      "value": 4021,
+      "source_name": "left levator palpebrae superioris",
+      "source_color": "rgb(170,120,160)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 705,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left levator palpebrae superioris",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4021_left_levator_palpebrae_superioris.vtk"
+      ]
+    },
+    {
+      "value": 4022,
+      "source_name": "right levator palpebrae superioris",
+      "source_color": "rgb(170,120,160)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 779,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right levator palpebrae superioris",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4022_right_levator_palpebrae_superioris.vtk"
+      ]
+    },
+    {
+      "value": 4027,
+      "source_name": "left eyeball",
+      "source_color": "rgb(163,191,218)",
+      "category": "Eye globes",
+      "eligibility": "orbital_source",
+      "voxel_count": 7026,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left eyeball",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4027_left_eyeball.vtk"
+      ]
+    },
+    {
+      "value": 4028,
+      "source_name": "right eyeball",
+      "source_color": "rgb(163,191,218)",
+      "category": "Eye globes",
+      "eligibility": "orbital_source",
+      "voxel_count": 7342,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right eyeball",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4028_right_eyeball.vtk"
+      ]
+    },
+    {
+      "value": 4030,
+      "source_name": "uvula",
+      "source_color": "rgb(180,75,20)",
+      "category": "Oral and pharyngeal structures",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 69,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "uvula",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4030_uvula.vtk"
+      ]
+    },
+    {
+      "value": 4031,
+      "source_name": "left tensor veli palatini",
+      "source_color": "rgb(165,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 209,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left tensor veli palatini",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4031_left_tensor_veli_palatini.vtk"
+      ]
+    },
+    {
+      "value": 4032,
+      "source_name": "right tensor veli palatini",
+      "source_color": "rgb(165,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 234,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right tensor veli palatini",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4032_right_tensor_veli_palatini.vtk"
+      ]
+    },
+    {
+      "value": 4033,
+      "source_name": "left palatoglossus",
+      "source_color": "rgb(210,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1034,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left palatoglossus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4033_left_palatoglossus.vtk"
+      ]
+    },
+    {
+      "value": 4034,
+      "source_name": "right palatoglossus",
+      "source_color": "rgb(210,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 995,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right palatoglossus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4034_right_palatoglossus.vtk"
+      ]
+    },
+    {
+      "value": 4035,
+      "source_name": "left levator veli palatini",
+      "source_color": "rgb(235,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 400,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left levator veli palatini",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4035_left_levator_veli_palatini.vtk"
+      ]
+    },
+    {
+      "value": 4036,
+      "source_name": "right levator veli palatini",
+      "source_color": "rgb(235,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 410,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right levator veli palatini",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4036_right_levator_veli_palatini.vtk"
+      ]
+    },
+    {
+      "value": 4037,
+      "source_name": "left palatopharyngeus",
+      "source_color": "rgb(198,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 452,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left palatopharyngeus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4037_left_palatopharyngeus.vtk"
+      ]
+    },
+    {
+      "value": 4038,
+      "source_name": "right palatopharyngeus",
+      "source_color": "rgb(198,85,25)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 355,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right palatopharyngeus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4038_right_palatopharyngeus.vtk"
+      ]
+    },
+    {
+      "value": 4041,
+      "source_name": "left zygomaticus major",
+      "source_color": "rgb(200,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1433,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left zygomaticus major",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4041_left_zygomaticus_major.vtk"
+      ]
+    },
+    {
+      "value": 4042,
+      "source_name": "right zygomaticus major",
+      "source_color": "rgb(200,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1437,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right zygomaticus major",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4042_right_zygomaticus_major.vtk"
+      ]
+    },
+    {
+      "value": 4043,
+      "source_name": "left nasalis",
+      "source_color": "rgb(220,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 385,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left nasalis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4043_left_nasalis.vtk"
+      ]
+    },
+    {
+      "value": 4044,
+      "source_name": "right nasalis",
+      "source_color": "rgb(220,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 426,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right nasalis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4044_right_nasalis.vtk"
+      ]
+    },
+    {
+      "value": 4045,
+      "source_name": "left levator labii superioris",
+      "source_color": "rgb(210,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 449,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left levator labii superioris",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4045_left_levator_labii_superioris.vtk"
+      ]
+    },
+    {
+      "value": 4046,
+      "source_name": "right levator labii superioris",
+      "source_color": "rgb(210,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 423,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right levator labii superioris",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4046_right_levator_labii_superioris.vtk"
+      ]
+    },
+    {
+      "value": 4047,
+      "source_name": "left buccinator",
+      "source_color": "rgb(190,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 4081,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left buccinator",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4047_left_buccinator.vtk"
+      ]
+    },
+    {
+      "value": 4048,
+      "source_name": "right buccinator",
+      "source_color": "rgb(190,125,125)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 3746,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right buccinator",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4048_right_buccinator.vtk"
+      ]
+    },
+    {
+      "value": 4050,
+      "source_name": "tongue",
+      "source_color": "rgb(166,84,94)",
+      "category": "Oral and pharyngeal structures",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 69168,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "tongue",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4050_tongue.vtk"
+      ]
+    },
+    {
+      "value": 4051,
+      "source_name": "left hyoglossus",
+      "source_color": "rgb(180,115,115)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 679,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left hyoglossus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4051_left_hyoglossus.vtk"
+      ]
+    },
+    {
+      "value": 4052,
+      "source_name": "right hyoglossus",
+      "source_color": "rgb(180,115,115)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 689,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right hyoglossus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4052_right_hyoglossus.vtk"
+      ]
+    },
+    {
+      "value": 4060,
+      "source_name": "middle constrictor",
+      "source_color": "rgb(150,70,70)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 8957,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "middle constrictor",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4060_middle_constrictor.vtk"
+      ]
+    },
+    {
+      "value": 4061,
+      "source_name": "left stylopharyngeus",
+      "source_color": "rgb(180,70,70)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 163,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left stylopharyngeus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4061_left_stylopharyngeus.vtk"
+      ]
+    },
+    {
+      "value": 4062,
+      "source_name": "right stylopharyngeus",
+      "source_color": "rgb(180,70,70)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 178,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right stylopharyngeus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4062_right_stylopharyngeus.vtk"
+      ]
+    },
+    {
+      "value": 4071,
+      "source_name": "left rectus capitis posterior minor",
+      "source_color": "rgb(145,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1407,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left rectus capitis posterior minor",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4071_left_rectus_capitis_posterior_minor.vtk"
+      ]
+    },
+    {
+      "value": 4072,
+      "source_name": "right rectus capitis posterior minor",
+      "source_color": "rgb(145,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1334,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right rectus capitis posterior minor",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4072_right_rectus_capitis_posterior_minor.vtk"
+      ]
+    },
+    {
+      "value": 4073,
+      "source_name": "left longissimus capitis",
+      "source_color": "rgb(200,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1714,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left longissimus capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4073_left_longissimus_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4074,
+      "source_name": "right longissimus capitis",
+      "source_color": "rgb(200,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1901,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right longissimus capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4074_right_longissimus_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4075,
+      "source_name": "left semispinalis capitis",
+      "source_color": "rgb(255,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 21124,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left semispinalis capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4075_left_semispinalis_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4076,
+      "source_name": "right semispinalis capitis",
+      "source_color": "rgb(255,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 23776,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right semispinalis capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4076_right_semispinalis_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4077,
+      "source_name": "left longus colli",
+      "source_color": "rgb(215,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1524,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left longus colli",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4077_left_longus_colli.vtk"
+      ]
+    },
+    {
+      "value": 4078,
+      "source_name": "right longus colli",
+      "source_color": "rgb(215,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 1553,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right longus colli",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4078_right_longus_colli.vtk"
+      ]
+    },
+    {
+      "value": 4079,
+      "source_name": "left superior oblique capitis",
+      "source_color": "rgb(200,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 3642,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left superior oblique capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4079_left_superior_oblique_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4080,
+      "source_name": "right superior oblique capitis",
+      "source_color": "rgb(200,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 2821,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right superior oblique capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4080_right_superior_oblique_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4081,
+      "source_name": "left stylohyoid",
+      "source_color": "rgb(175,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 45,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left stylohyoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4081_left_stylohyoid.vtk"
+      ]
+    },
+    {
+      "value": 4082,
+      "source_name": "right stylohyoid",
+      "source_color": "rgb(175,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 72,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right stylohyoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4082_right_stylohyoid.vtk"
+      ]
+    },
+    {
+      "value": 4083,
+      "source_name": "left anterior rectus capitis",
+      "source_color": "rgb(215,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 883,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left anterior rectus capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4083_left_anterior_rectus_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4084,
+      "source_name": "right anterior rectus capitis",
+      "source_color": "rgb(215,100,80)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 831,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right anterior rectus capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4084_right_anterior_rectus_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4085,
+      "source_name": "left trapezius",
+      "source_color": "rgb(155,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 2107,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left trapezius",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4085_left_trapezius.vtk"
+      ]
+    },
+    {
+      "value": 4086,
+      "source_name": "right trapezius",
+      "source_color": "rgb(155,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 2399,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right trapezius",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4086_right_trapezius.vtk"
+      ]
+    },
+    {
+      "value": 4087,
+      "source_name": "left longus capitis",
+      "source_color": "rgb(210,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 6282,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left longus capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4087_left_longus_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4088,
+      "source_name": "right longus capitis",
+      "source_color": "rgb(210,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 6156,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right longus capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4088_right_longus_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4089,
+      "source_name": "left sternocleidomastoid",
+      "source_color": "rgb(160,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 8943,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left sternocleidomastoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4089_left_sternocleidomastoid.vtk"
+      ]
+    },
+    {
+      "value": 4090,
+      "source_name": "right sternocleidomastoid",
+      "source_color": "rgb(160,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 5773,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right sternocleidomastoid",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4090_right_sternocleidomastoid.vtk"
+      ]
+    },
+    {
+      "value": 4091,
+      "source_name": "left middle scalenus",
+      "source_color": "rgb(165,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 4293,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left middle scalenus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4091_left_middle_scalenus.vtk"
+      ]
+    },
+    {
+      "value": 4092,
+      "source_name": "right middle scalenus",
+      "source_color": "rgb(165,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 3955,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right middle scalenus",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4092_right_middle_scalenus.vtk"
+      ]
+    },
+    {
+      "value": 4093,
+      "source_name": "left digastric",
+      "source_color": "rgb(170,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 3602,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left digastric",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4093_left_digastric.vtk"
+      ]
+    },
+    {
+      "value": 4094,
+      "source_name": "right digastric",
+      "source_color": "rgb(170,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 3564,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right digastric",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4094_right_digastric.vtk"
+      ]
+    },
+    {
+      "value": 4095,
+      "source_name": "left splenius capitis",
+      "source_color": "rgb(180,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 13343,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left splenius capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4095_left_splenius_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4096,
+      "source_name": "right splenius capitis",
+      "source_color": "rgb(180,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 14553,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right splenius capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4096_right_splenius_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4097,
+      "source_name": "left inferior oblique capitis",
+      "source_color": "rgb(185,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 6986,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left inferior oblique capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4097_left_inferior_oblique_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4098,
+      "source_name": "right inferior oblique capitis",
+      "source_color": "rgb(185,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 7460,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right inferior oblique capitis",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4098_right_inferior_oblique_capitis.vtk"
+      ]
+    },
+    {
+      "value": 4099,
+      "source_name": "left rectus capitis posterior major",
+      "source_color": "rgb(215,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 3322,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "left rectus capitis posterior major",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4099_left_rectus_capitis_posterior_major.vtk"
+      ]
+    },
+    {
+      "value": 4100,
+      "source_name": "right rectus capitis posterior major",
+      "source_color": "rgb(215,80,100)",
+      "category": "Head and neck muscles",
+      "eligibility": "extracranial_head_neck",
+      "voxel_count": 3003,
+      "legacy_direct_selection": false,
+      "legacy_union_values": [],
+      "source_metadata_name": "right rectus capitis posterior major",
+      "source_metadata_notes": "",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_4100_right_rectus_capitis_posterior_major.vtk"
+      ]
+    }
+  ],
+  "unnamed_present_values": [
+    {
+      "value": 1,
+      "voxel_count": 1,
+      "reason": "No source LUT definition; no anatomical name invented."
+    }
+  ],
+  "lut_only_absent_from_label_volume": [
+    {
+      "value": 3,
+      "source_name": "skin",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3_skin.vtk"
+      ]
+    },
+    {
+      "value": 8,
+      "source_name": "left cerebellar cortex",
+      "source_models": []
+    },
+    {
+      "value": 27,
+      "source_name": "left middle cerebellar peduncle",
+      "source_models": []
+    },
+    {
+      "value": 28,
+      "source_name": "left hypothalamus",
+      "source_models": []
+    },
+    {
+      "value": 31,
+      "source_name": "choroid plexus of left cerebral hemisphere",
+      "source_models": []
+    },
+    {
+      "value": 34,
+      "source_name": "left superior cerebellar peduncle",
+      "source_models": []
+    },
+    {
+      "value": 47,
+      "source_name": "right cerebellar cortex",
+      "source_models": []
+    },
+    {
+      "value": 60,
+      "source_name": "right hypothalamus",
+      "source_models": []
+    },
+    {
+      "value": 63,
+      "source_name": "choroid plexus of right cerebral hemisphere",
+      "source_models": []
+    },
+    {
+      "value": 2108,
+      "source_name": "right angular and supramarginal gyri (obsolete label)",
+      "source_models": []
+    },
+    {
+      "value": 5001,
+      "source_name": "left calcarine sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5001_left_calcarine_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5001_left_calcarine_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5002,
+      "source_name": "right calcarine sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5002_right_calcarine_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5002_right_calcarine_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5003,
+      "source_name": "left central sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5003_left_central_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5003_left_central_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5004,
+      "source_name": "right central sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5004_right_central_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5004_right_central_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5005,
+      "source_name": "left cingulate sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5005_left_cingulate_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5005_left_cingulate_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5006,
+      "source_name": "right cingulate sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5006_right_cingulate_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5006_right_cingulate_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5007,
+      "source_name": "left collateral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5007_left_collateral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5007_left_collateral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5008,
+      "source_name": "right collateral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5008_right_collateral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5008_right_collateral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5009,
+      "source_name": "left inferior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5009_left_inferior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5009_left_inferior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5010,
+      "source_name": "right inferior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5010_right_inferior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5010_right_inferior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5011,
+      "source_name": "left intraparietal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5011_left_intraparietal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5011_left_intraparietal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5012,
+      "source_name": "right intraparietal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5012_right_intraparietal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5012_right_intraparietal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5013,
+      "source_name": "left parieto-occipital sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5013_left_parieto-occipital_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5013_left_parieto-occipital_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5014,
+      "source_name": "right parieto-occipital sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5014_right_parieto-occipital_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5014_right_parieto-occipital_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5015,
+      "source_name": "left postcentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5015_left_postcentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5015_left_postcentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5016,
+      "source_name": "right postcentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5016_right_postcentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5016_right_postcentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5017,
+      "source_name": "left precentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5017_left_precentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5017_left_precentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5018,
+      "source_name": "right precentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5018_right_precentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5018_right_precentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5019,
+      "source_name": "left superior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5019_left_superior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5019_left_superior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5020,
+      "source_name": "right superior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5020_right_superior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5020_right_superior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5021,
+      "source_name": "left superior temporal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5021_left_superior_temporal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5021_left_superior_temporal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5022,
+      "source_name": "right superior temporal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5022_right_superior_temporal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5022_right_superior_temporal_sulcus1.vtk"
+      ]
+    }
+  ],
+  "legacy_union_values_absent_from_volume": [
+    325,
+    326,
+    359,
+    360
+  ],
+  "vtk_only_named_values": [
+    {
+      "value": 3,
+      "source_name": "skin",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_3_skin.vtk"
+      ]
+    },
+    {
+      "value": 5001,
+      "source_name": "left calcarine sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5001_left_calcarine_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5001_left_calcarine_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5002,
+      "source_name": "right calcarine sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5002_right_calcarine_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5002_right_calcarine_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5003,
+      "source_name": "left central sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5003_left_central_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5003_left_central_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5004,
+      "source_name": "right central sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5004_right_central_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5004_right_central_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5005,
+      "source_name": "left cingulate sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5005_left_cingulate_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5005_left_cingulate_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5006,
+      "source_name": "right cingulate sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5006_right_cingulate_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5006_right_cingulate_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5007,
+      "source_name": "left collateral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5007_left_collateral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5007_left_collateral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5008,
+      "source_name": "right collateral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5008_right_collateral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5008_right_collateral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5009,
+      "source_name": "left inferior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5009_left_inferior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5009_left_inferior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5010,
+      "source_name": "right inferior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5010_right_inferior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5010_right_inferior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5011,
+      "source_name": "left intraparietal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5011_left_intraparietal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5011_left_intraparietal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5012,
+      "source_name": "right intraparietal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5012_right_intraparietal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5012_right_intraparietal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5013,
+      "source_name": "left parieto-occipital sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5013_left_parieto-occipital_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5013_left_parieto-occipital_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5014,
+      "source_name": "right parieto-occipital sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5014_right_parieto-occipital_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5014_right_parieto-occipital_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5015,
+      "source_name": "left postcentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5015_left_postcentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5015_left_postcentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5016,
+      "source_name": "right postcentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5016_right_postcentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5016_right_postcentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5017,
+      "source_name": "left precentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5017_left_precentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5017_left_precentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5018,
+      "source_name": "right precentral sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5018_right_precentral_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5018_right_precentral_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5019,
+      "source_name": "left superior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5019_left_superior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5019_left_superior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5020,
+      "source_name": "right superior frontal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5020_right_superior_frontal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5020_right_superior_frontal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5021,
+      "source_name": "left superior temporal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5021_left_superior_temporal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5021_left_superior_temporal_sulcus1.vtk"
+      ]
+    },
+    {
+      "value": 5022,
+      "source_name": "right superior temporal sulcus",
+      "source_models": [
+        "raw/spl_nac/brain-2017-01/models/Model_5022_right_superior_temporal_sulcus.vtk",
+        "raw/spl_nac/brain-2017-01/models/Model_5022_right_superior_temporal_sulcus1.vtk"
+      ]
+    }
+  ],
+  "duplicate_vtk_label_ids": {
+    "3020": [
+      "raw/spl_nac/brain-2017-01/models/Model_3020_right_superior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3020_right_superior_colliculus1.vtk"
+    ],
+    "3021": [
+      "raw/spl_nac/brain-2017-01/models/Model_3021_left_superior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3021_left_superior_colliculus1.vtk"
+    ],
+    "3022": [
+      "raw/spl_nac/brain-2017-01/models/Model_3022_right_inferior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3022_right_inferior_colliculus1.vtk"
+    ],
+    "3023": [
+      "raw/spl_nac/brain-2017-01/models/Model_3023_left_inferior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3023_left_inferior_colliculus1.vtk"
+    ],
+    "3030": [
+      "raw/spl_nac/brain-2017-01/models/Model_3030_brachia_of_right_superior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3030_brachia_of_right_superior_colliculus1.vtk"
+    ],
+    "3031": [
+      "raw/spl_nac/brain-2017-01/models/Model_3031_brachia_of_left_superior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3031_brachia_of_left_superior_colliculus1.vtk"
+    ],
+    "3032": [
+      "raw/spl_nac/brain-2017-01/models/Model_3032_brachia_of_right_inferior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3032_brachia_of_right_inferior_colliculus1.vtk"
+    ],
+    "3033": [
+      "raw/spl_nac/brain-2017-01/models/Model_3033_brachia_of_left_inferior_colliculus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_3033_brachia_of_left_inferior_colliculus1.vtk"
+    ],
+    "5001": [
+      "raw/spl_nac/brain-2017-01/models/Model_5001_left_calcarine_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5001_left_calcarine_sulcus1.vtk"
+    ],
+    "5002": [
+      "raw/spl_nac/brain-2017-01/models/Model_5002_right_calcarine_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5002_right_calcarine_sulcus1.vtk"
+    ],
+    "5003": [
+      "raw/spl_nac/brain-2017-01/models/Model_5003_left_central_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5003_left_central_sulcus1.vtk"
+    ],
+    "5004": [
+      "raw/spl_nac/brain-2017-01/models/Model_5004_right_central_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5004_right_central_sulcus1.vtk"
+    ],
+    "5005": [
+      "raw/spl_nac/brain-2017-01/models/Model_5005_left_cingulate_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5005_left_cingulate_sulcus1.vtk"
+    ],
+    "5006": [
+      "raw/spl_nac/brain-2017-01/models/Model_5006_right_cingulate_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5006_right_cingulate_sulcus1.vtk"
+    ],
+    "5007": [
+      "raw/spl_nac/brain-2017-01/models/Model_5007_left_collateral_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5007_left_collateral_sulcus1.vtk"
+    ],
+    "5008": [
+      "raw/spl_nac/brain-2017-01/models/Model_5008_right_collateral_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5008_right_collateral_sulcus1.vtk"
+    ],
+    "5009": [
+      "raw/spl_nac/brain-2017-01/models/Model_5009_left_inferior_frontal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5009_left_inferior_frontal_sulcus1.vtk"
+    ],
+    "5010": [
+      "raw/spl_nac/brain-2017-01/models/Model_5010_right_inferior_frontal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5010_right_inferior_frontal_sulcus1.vtk"
+    ],
+    "5011": [
+      "raw/spl_nac/brain-2017-01/models/Model_5011_left_intraparietal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5011_left_intraparietal_sulcus1.vtk"
+    ],
+    "5012": [
+      "raw/spl_nac/brain-2017-01/models/Model_5012_right_intraparietal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5012_right_intraparietal_sulcus1.vtk"
+    ],
+    "5013": [
+      "raw/spl_nac/brain-2017-01/models/Model_5013_left_parieto-occipital_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5013_left_parieto-occipital_sulcus1.vtk"
+    ],
+    "5014": [
+      "raw/spl_nac/brain-2017-01/models/Model_5014_right_parieto-occipital_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5014_right_parieto-occipital_sulcus1.vtk"
+    ],
+    "5015": [
+      "raw/spl_nac/brain-2017-01/models/Model_5015_left_postcentral_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5015_left_postcentral_sulcus1.vtk"
+    ],
+    "5016": [
+      "raw/spl_nac/brain-2017-01/models/Model_5016_right_postcentral_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5016_right_postcentral_sulcus1.vtk"
+    ],
+    "5017": [
+      "raw/spl_nac/brain-2017-01/models/Model_5017_left_precentral_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5017_left_precentral_sulcus1.vtk"
+    ],
+    "5018": [
+      "raw/spl_nac/brain-2017-01/models/Model_5018_right_precentral_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5018_right_precentral_sulcus1.vtk"
+    ],
+    "5019": [
+      "raw/spl_nac/brain-2017-01/models/Model_5019_left_superior_frontal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5019_left_superior_frontal_sulcus1.vtk"
+    ],
+    "5020": [
+      "raw/spl_nac/brain-2017-01/models/Model_5020_right_superior_frontal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5020_right_superior_frontal_sulcus1.vtk"
+    ],
+    "5021": [
+      "raw/spl_nac/brain-2017-01/models/Model_5021_left_superior_temporal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5021_left_superior_temporal_sulcus1.vtk"
+    ],
+    "5022": [
+      "raw/spl_nac/brain-2017-01/models/Model_5022_right_superior_temporal_sulcus.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_5022_right_superior_temporal_sulcus1.vtk"
+    ],
+    "77": [
+      "raw/spl_nac/brain-2017-01/models/Model_77_left_optic_nerve.vtk",
+      "raw/spl_nac/brain-2017-01/models/Model_77_left_optic_nerve1.vtk"
+    ]
+  },
+  "vtk_only_plan": "Create an independent native surface-source configuration from explicitly referenced original VTK POLYDATA and source atlasStructure-all.json/MRML model names. Preserve source points, cells, original transforms and source units; compare bounds and MRML correspondence before claiming MRI registration. Select the canonical DataSource reference where duplicate numeric labels occur and retain provenance for each alternative. Existing adapters do not ingest VTK directly, so add a tested source reader/adapter rather than rasterizing or inventing volume voxels. Keep the existing spl_nac and new named-volume configuration available independently.",
+  "enabled_recipe_scope": {
+    "eligible_categories": [
+      "intracranial_source",
+      "cranial_nerve_whole_source"
+    ],
+    "structure_count": 236,
+    "excluded_named_source_values": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4011,
+      4012,
+      4013,
+      4014,
+      4015,
+      4016,
+      4017,
+      4018,
+      4019,
+      4020,
+      4021,
+      4022,
+      4027,
+      4028,
+      4030,
+      4031,
+      4032,
+      4033,
+      4034,
+      4035,
+      4036,
+      4037,
+      4038,
+      4041,
+      4042,
+      4043,
+      4044,
+      4045,
+      4046,
+      4047,
+      4048,
+      4050,
+      4051,
+      4052,
+      4060,
+      4061,
+      4062,
+      4071,
+      4072,
+      4073,
+      4074,
+      4075,
+      4076,
+      4077,
+      4078,
+      4079,
+      4080,
+      4081,
+      4082,
+      4083,
+      4084,
+      4085,
+      4086,
+      4087,
+      4088,
+      4089,
+      4090,
+      4091,
+      4092,
+      4093,
+      4094,
+      4095,
+      4096,
+      4097,
+      4098,
+      4099,
+      4100
+    ],
+    "note": "The recipe retains the current neuroanatomical scope; the audit records all 311 named nonzero labels. The 73 extracranial head/neck labels and two eye globes are not enabled."
+  },
+  "constructed_package": {
+    "manifest_relative_to_data_root": "derivatives/spl_nac_complete/946b93b535a34682/manifest.json",
+    "package_version": "946b93b535a34682",
+    "structures": 236,
+    "assets": 243,
+    "validation": "fresh asset SHA256 and geometry validation passed; anatomical review not performed",
+    "source_round_trip_checks": [
+      {
+        "volume": "labels",
+        "exact_source_values": true,
+        "exact_source_shape_and_affine": true,
+        "label_rule": "Original values retained for exactly the 236 scoped named source labels; all other source values map to 0."
+      },
+      {
+        "volume": "t1",
+        "exact_source_values": true,
+        "exact_source_shape_and_affine": true,
+        "label_rule": "Original MRI values retained without interpolation."
+      },
+      {
+        "volume": "t2",
+        "exact_source_values": true,
+        "exact_source_shape_and_affine": true,
+        "label_rule": "Original MRI values retained without interpolation."
+      }
+    ]
+  }
+}

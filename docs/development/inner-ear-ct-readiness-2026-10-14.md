@@ -1,5 +1,7 @@
 # Original inner-ear CT source readiness
 
+**Archived inspection:** the dedicated Human Inner Ear CT source is excluded from the current scope. Source definitions, licenses, inspection and exclusion records, and saved-scene records are retained. User-authorized data removal is documented in the [local data cleanup record](../maintenance/local-data-cleanup-2026-10-24.md). Storage statements below describe the earlier inspection.
+
 The selected input is original cadaveric Dataset A specimen `1.hdf5` from [Stebani, Blaimer, Neun, Pelt and Rak, Zenodo release 8277159](https://doi.org/10.5281/zenodo.8277159), version 1.0, licensed CC BY 4.0. The [primary paper](https://doi.org/10.1038/s41598-023-45466-9) distinguishes its 43-specimen Dataset A from clinical Dataset B. Only this Dataset A instance was acquired. Publisher metadata, the paper and individual license evidence are retained on the HDD.
 
 The original file contains 530,856,520 bytes. Its publisher MD5 is `3c5fa93c3ddd037adf48b6f10d631ea6`; the local SHA256 is `6a4e9e6e9b217a4262379dbf03c9b7e67d75e25306a84418c135e4ffc6281f96`. Acquisition reused the first 10 MiB of a slow sequential transfer with the existing eight-connection downloader. Verification completed at 14:11:49 UTC. The 3 GiB peak estimate and 400 GiB HDD reserve were respected.

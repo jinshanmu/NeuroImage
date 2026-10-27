@@ -1,55 +1,56 @@
-import { datasetFamilies, familySelection, selectedFamilyId } from './datasetFamilies'
+import { datasetFamilies, datasetOptionName, familySelection, selectedFamilyId } from './datasetFamilies'
+import { DatasetDetail } from './DatasetDetail'
 import { SelectField } from './SelectField'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { ANATOMY_GROUPS, ANATOMY_TOPICS, browseTargets, groupTargets, targetScope } from './anatomyNavigation'
 import type { AnatomyScope, BrowseGroup, BrowseTarget } from './anatomyNavigation'
 import type { AtlasEntry } from './types'
 import type { AnatomyLibrary, SourceInfo } from './useAnatomyLibrary'
+import { canonicalBrowseSourceId, sourceIsBrowsable } from './sourceBrowse'
 
 interface Props {
   atlases:AtlasEntry[]; workspace:boolean; library:AnatomyLibrary; dataset:string|null;
   group:string|null; onGroup:(group:string|null)=>void;
-  onDataset:(dataset:string|null)=>void; onManage:(dataset:string)=>void;
+  onDataset:(dataset:string|null)=>void;
   onOpen:(key:string,structureId?:string,scope?:AnatomyScope,signal?:AbortSignal)=>Promise<void>;
 }
-const representation=(value?:string)=>value==='ct-labels'?'CT + source anatomy':value==='surface-model'?'Independent 3D model':value==='scalar-fields'?'Native statistical fields':value==='label-model'?'3D label model':value==='mri-streamlines'?'MRI + source trajectories':value==='mri-volume'?'Native MRI':'MRI + anatomy'
-
 function GroupCard({group,targets,busy,open,onExplore,topicCount=0}: {group:BrowseGroup;targets:BrowseTarget[];busy:boolean;open:(target:BrowseTarget,group:BrowseGroup)=>void;onExplore?:()=>void;topicCount?:number}) {
   const choices=groupTargets(group,targets), [choice,setChoice]=useState('')
   const target=choices.find(item=>item.dataset_id===choice)??choices[0]
+  const regionalTopicsOnly=!target&&!!onExplore&&topicCount>0
   return <article className={'anatomy-card '+(group.id==='general-anatomy'?'whole-brain-card':'')}>
-    <button className="anatomy-entry" disabled={busy||!target} onClick={()=>target&&open(target,group)} aria-label={'Browse '+group.title}>
+    <button className="anatomy-entry" disabled={busy||(!target&&!regionalTopicsOnly)} onClick={()=>target?open(target,group):onExplore?.()} aria-label={'Browse '+group.title}>
       <span className="anatomy-symbol" aria-hidden="true">{group.id==='general-anatomy'?'◎':'○'}</span>
-      <span>{group.kind==='variation'&&<span className="topic-kind">VARIATION</span>}<h2>{group.title}</h2><p>{group.description}</p></span><span className="entry-arrow" aria-hidden="true">↗</span>
+      <span>{group.kind==='variation'&&<span className="topic-kind">VARIATION</span>}<h2>{group.title}</h2></span><span className="entry-arrow" aria-hidden="true">↗</span>
     </button>
-    <div className="anatomy-source">{target?<><label><span className="sr-only">Source for {group.title}</span><SelectField aria-label={'Source for '+group.title} value={target.dataset_id} onChange={event=>setChoice(event.target.value)} disabled={busy}>{choices.map(item=><option key={item.key} value={item.dataset_id}>{item.title}</option>)}</SelectField></label><small>{representation(target.representation)} · {choices.length} {choices.length===1?'source':'sources'}</small></>:<small>Build a source atlas to explore this group</small>}</div>
+    <div className="anatomy-source">{target?<><label><span className="sr-only">Source for {group.title}</span><SelectField aria-label={'Source for '+group.title} value={target.dataset_id} onChange={event=>setChoice(event.target.value)} disabled={busy}>{choices.map(item=><option key={item.key} value={item.dataset_id}>{datasetOptionName(item)}</option>)}</SelectField></label><small>{choices.length} {choices.length===1?'source':'sources'}</small></>:<small>{regionalTopicsOnly?'Regional topics only':'No local atlas available'}</small>}</div>
     {onExplore&&topicCount>0&&<button className="anatomy-detail-link" disabled={busy} onClick={onExplore} aria-label={'Explore details for '+group.title}>Detailed anatomy <span>{topicCount} {topicCount===1?'topic':'topics'} →</span></button>}
   </article>
 }
 
-export function AnatomyHome({atlases,workspace,library,dataset,group,onGroup,onDataset,onManage,onOpen}:Props) {
+export function AnatomyHome({atlases,workspace,library,dataset,group,onGroup,onDataset,onOpen}:Props) {
   const {snapshot,loading}=library
   const [error,setError]=useState(''), [opening,setOpening]=useState('')
-  const [query,setQuery]=useState(''), [readyOnly,setReadyOnly]=useState(false)
   const openingRequest=useRef<AbortController|null>(null)
   useEffect(()=>()=>openingRequest.current?.abort(),[])
-  useEffect(()=>{openingRequest.current?.abort();setOpening('')},[dataset])
+  useEffect(()=>{openingRequest.current?.abort();setOpening('');window.scrollTo(0,0)},[dataset])
   const refresh=()=>{setError('');void library.refresh(true)}
-  const targets=useMemo(()=>browseTargets(atlases,snapshot?.packages),[atlases,snapshot])
-  const sourceMap=new Map<string,SourceInfo>((snapshot?.sources??[]).map(source=>[source.id,source]))
-  for(const item of targets)if(!sourceMap.has(item.dataset_id))sourceMap.set(item.dataset_id,{id:item.dataset_id,title:item.title,sources:[]})
+  const targets=useMemo(()=>browseTargets(atlases,snapshot?.packages).filter(target=>sourceIsBrowsable(target.dataset_id)),[atlases,snapshot])
+  const sourceMap=new Map<string,SourceInfo>((snapshot?.sources??[]).filter(source=>sourceIsBrowsable(source.id)).map(source=>[source.id,source]))
+  for(const item of targets)if(!sourceMap.has(item.dataset_id))sourceMap.set(item.dataset_id,{id:item.dataset_id,title:item.title,sources:item.sources??[],dataset_info:item.dataset_info})
   const readyDatasets=new Set(targets.map(target=>target.dataset_id))
   const sources=[...sourceMap.values()].sort((a,b)=>Number(readyDatasets.has(b.id))-Number(readyDatasets.has(a.id))||a.title.localeCompare(b.title))
-  const selected=sources.find(item=>item.id===dataset)
+  const canonicalDataset=dataset?canonicalBrowseSourceId(dataset):dataset
+  const selected=sources.find(item=>item.id===canonicalDataset)
   const families=datasetFamilies(sources).sort((a,b)=>Number(b.members.some(source=>readyDatasets.has(source.id)))-Number(a.members.some(source=>readyDatasets.has(source.id)))||a.title.localeCompare(b.title))
+  const canShowEmpty=!loading&&!library.error&&(!workspace||snapshot!==null)
   const family=families.find(item=>item.id===selectedFamilyId(dataset))
-  const parentFamily=families.find(item=>item.members.some(source=>source.id===dataset))
-  const filteredFamilies=families.filter(item=>(!readyOnly||item.members.some(source=>readyDatasets.has(source.id)))&&(item.title+' '+item.id).toLowerCase().includes(query.trim().toLowerCase()))
-  const sourceStatus=(source:SourceInfo)=>readyDatasets.has(source.id)?'Atlas ready':source.inputs_present===source.inputs_required&&!!source.inputs_required?'Source files present':source.inputs_present?'Source files incomplete':'Not acquired'
-  const displayed=dataset?targets.filter(item=>item.dataset_id===dataset):targets
-  const region=ANATOMY_GROUPS.find(item=>item.id===group||item.coverageIds?.includes(group??''))
+  const parentFamily=families.find(item=>item.members.some(source=>source.id===canonicalDataset))
+  const datasetFamily=family??parentFamily
+  const displayed=targets
+  const region=!dataset?ANATOMY_GROUPS.find(item=>item.id===group||item.coverageIds?.includes(group??'')):undefined
   const availableTopics=ANATOMY_TOPICS.filter(topic=>groupTargets(topic,displayed).length)
-  const groups=region?availableTopics.filter(topic=>topic.parentId===region.id):ANATOMY_GROUPS.filter(group=>groupTargets(group,displayed).length)
+  const groups=region?availableTopics.filter(topic=>topic.parentId===region.id):ANATOMY_GROUPS.filter(group=>groupTargets(group,displayed).length||(dataset&&availableTopics.some(topic=>topic.parentId===group.id)))
   async function open(target:BrowseTarget,group?:BrowseGroup) {
     openingRequest.current?.abort()
     const controller=new AbortController();openingRequest.current=controller
@@ -70,31 +71,21 @@ export function AnatomyHome({atlases,workspace,library,dataset,group,onGroup,onD
   }
   return <main className="anatomy-home" aria-busy={!!opening}>
     <section className="anatomy-main" aria-label="Browse anatomy">
-      <div className="anatomy-home-heading"><div className="eyebrow">{region?'DETAILED ANATOMY':dataset?'DATASET':'NEUROANATOMY'}</div><h1>{region?.title??family?.title??selected?.title??(dataset??'Browse anatomy')}</h1><p>{region?'Choose a topic and source.':family?'Choose a case, region or representation within this dataset.':dataset?'Open the views available from this source.':'Choose a region or system.'}</p>{region&&<button onClick={()=>onGroup(null)}>Back to anatomy groups</button>}</div>
+      <div className="anatomy-home-heading">{(region||dataset)&&<div className="eyebrow">{region?'DETAILED ANATOMY':'DATASET'}</div>}<h1>{region?.title??datasetFamily?.title??selected?.title??(dataset??'Browse anatomy')}</h1>{!dataset&&region&&<p>Choose a topic and source.</p>}{region&&<button onClick={()=>onGroup(null)}>Back to anatomy groups</button>}</div>
       {(error||library.error)&&<div className="error" role="alert">{error||library.error}<button onClick={refresh}>Refresh sources</button><button onClick={()=>{setError('');library.clearError()}}>Dismiss</button></div>}
-      {loading&&<p role="status">Checking your local source library…</p>}
-      {opening&&<p role="status">Loading</p>}
-      {family&&<div className="dataset-summary"><button onClick={()=>onDataset(null)}>All datasets</button><p>{family.members.length} source configurations · Each keeps its original definitions and coordinates.</p></div>}
-      {family&&<div className="dataset-configurations" aria-label={family.title+' source configurations'}>{family.members.map(source=><button key={source.id} className="dataset-configuration" onClick={()=>onDataset(source.id)}><span>{source.title}</span><small>{sourceStatus(source)}</small><span aria-hidden="true">Open →</span></button>)}</div>}
-      {dataset&&!family&&<div className="dataset-summary">{selected?.sources.map((source,index)=><p key={index}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a> · {source.version} · {source.license_name}</p>)}{workspace&&!!selected?.sources.length&&<button onClick={()=>onManage(dataset)}>Download and build</button>}{parentFamily&&<button onClick={()=>onDataset(familySelection(parentFamily.id))}>Back to {parentFamily.title}</button>}<button onClick={()=>onDataset(null)}>All anatomy groups</button></div>}
-      <div className="anatomy-grid">{groups.map(group=><GroupCard key={(dataset??'all')+group.id} group={group} targets={displayed} busy={!!opening||loading} open={(target,group)=>void open(target,group)} onExplore={region?undefined:()=>onGroup(group.id)} topicCount={availableTopics.filter(topic=>topic.parentId===group.id).length}/>)}</div>
-      {region&&!groups.length&&!loading&&<p className="empty-library">No detailed topics are available for this source selection.<button onClick={()=>onGroup(null)}>Back to anatomy groups</button></p>}
-      {!dataset&&!groups.length&&!loading&&<div className="home-empty"><h2>{targets.length?'Open a source package':'Build your first local atlas'}</h2><p>{targets.length?'Your ready packages are listed below. Each opens in its own source space.':'Choose a dataset from the library, review its source terms, then open its download and construction tools.'}</p><div className="button-row">{targets.map(target=><button key={target.key} disabled={!!opening} onClick={()=>void open(target)}>{target.title}</button>)}</div></div>}
-      {dataset&&!family&&!groups.length&&(displayed.length?<div className="dataset-summary">{displayed.map(target=><button key={target.key} disabled={!!opening||loading} onClick={()=>void open(target)}>Open source package</button>)}</div>:<p className="empty-library">Open the source data tools to acquire its files and build a local atlas.</p>)}
-      <p className="home-evidence-note">Atlases retain their original definitions and coordinates.</p>
+      {loading&&!opening&&<p role="status">Loading</p>}
+      {opening&&<p role="status">Opening atlas…</p>}
+      {dataset&&datasetFamily&&<DatasetDetail family={datasetFamily} targets={targets} busy={!!opening||loading} onOpen={target=>void open(target)}/>}
+      {dataset&&!datasetFamily&&canShowEmpty&&<p className="empty-library">This dataset is not available in the current source library.</p>}
+      {!dataset&&<div className="anatomy-grid">{groups.map(group=><GroupCard key={'all'+group.id} group={group} targets={displayed} busy={!!opening||loading} open={(target,group)=>void open(target,group)} onExplore={region?undefined:()=>onGroup(group.id)} topicCount={availableTopics.filter(topic=>topic.parentId===group.id).length}/>)}</div>}
+      {region&&!groups.length&&canShowEmpty&&<p className="empty-library">No detailed topics are available for this source selection.<button onClick={()=>onGroup(null)}>Back to anatomy groups</button></p>}
+      {!dataset&&!region&&!groups.length&&canShowEmpty&&<div className="home-empty"><h2>{targets.length?'Open a source package':'No local atlases available'}</h2><p>{targets.length?'Your ready packages are listed below. Each opens in its own source space.':'No atlas is currently available in the local library.'}</p><div className="button-row">{targets.map(target=><button key={target.key} disabled={!!opening} onClick={()=>void open(target)}>{target.title}</button>)}</div></div>}
     </section>
     <aside className="dataset-sidebar" aria-label="Dataset deployment">
-      <div className="manager-heading"><h2>Datasets</h2>{workspace&&<button disabled={loading||!!opening} onClick={refresh}>Refresh</button>}</div>
-      <label className="dataset-search">Find a dataset<input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="Name or source ID"/></label>
-      <label className="check-control"><input type="checkbox" checked={readyOnly} onChange={event=>setReadyOnly(event.target.checked)}/>Ready atlases only</label>
-      <p className="small muted" role="status">{filteredFamilies.length} of {families.length} datasets</p>
-      {workspace&&!snapshot&&loading&&<small>Checking local deployment…</small>}
-      {!filteredFamilies.length&&!loading&&<p>No datasets match these filters.<button onClick={()=>{setQuery('');setReadyOnly(false)}}>Clear filters</button></p>}
-      {filteredFamilies.map(item=>{
-        const ready=item.members.filter(source=>readyDatasets.has(source.id)).length
-        return <button className="dataset-row" key={item.id} aria-pressed={family?.id===item.id||parentFamily?.id===item.id} onClick={()=>onDataset(familySelection(item.id))}><span>{item.title}</span><small className={ready?'ready-state':''}>{ready?`${ready} ready ${ready===1?'configuration':'configurations'}`:'Not yet built'}</small></button>
-      })}
-      <p className="small muted">Select a dataset to browse its cases, regions and available source representations.</p>
+      <div className="manager-heading"><h2>Datasets</h2></div>
+      {(canShowEmpty||families.length>0)&&<p className="small muted" role="status">{families.length} {families.length===1?'dataset':'datasets'}</p>}
+      {!families.length&&canShowEmpty&&<p>No datasets are available.</p>}
+      {families.map(item=><button className="dataset-row" key={item.id} aria-pressed={family?.id===item.id||parentFamily?.id===item.id} onClick={()=>onDataset(familySelection(item.id))}><span>{item.title}</span></button>)}
     </aside>
   </main>
 }

@@ -14,8 +14,8 @@ flowchart LR
     D --> E[Versioned atlas manifest and assets]
     E --> F[Hash and geometry validation]
     F --> G[Offline 2D and 3D viewer]
-    G --> H[Source-bound scenes]
-    G --> I[Credited image exports]
+    G --> H[Development scene tools]
+    G --> I[Development image exports]
     E --> J[Independent review material]
     H --> K[Exact historical package locator]
     K --> E
@@ -23,13 +23,13 @@ flowchart LR
 
 Each package retains its own native space. The common RAS millimetre convention is a coordinate description, not a registration between subjects or templates. Side-by-side comparison has independent selection, position, contrast and scene state in each panel. A shared name such as MNI does not establish correspondence.
 
-Python modules separate source acquisition, catalogue adapters, construction, contracts, numerical validation, package discovery and review materials. The React/TypeScript viewer uses NiiVue 0.69.0 and local static assets. Browsing requires no external service. Python uses the independent `NeuroImage` environment; the frontend toolchain and build caches stay on SSD, while originals and atlas products stay on HDD.
+Python modules separate source acquisition, catalogue adapters, construction, contracts, numerical validation, package discovery and review materials. The React/TypeScript viewer uses NiiVue 0.69.0 and local static assets. Browsing requires no external service. Source acquisition and construction use the CLI; the browser discovers and opens existing local atlas packages. Python uses the independent `NeuroImage` environment; the frontend toolchain and build caches stay on SSD, while originals and atlas products stay on HDD.
 
 ## Source coverage
 
-Version 1.0.0 retains 39 source configurations from 19 families, 1,965 source-specific entries and 46 detailed topics; see the [current inventory](../config/anatomy-release-1.0.0.json) and [browsing guide](learning-and-variation.md). The [15 October inventory](../config/anatomy-detail-inventory-2026-10-15.json) preserves an earlier increment. Teaching libraries, curricula, course management and learning tools remain in the testing branch; they are excluded from the formal application.
+Version 1.0.0 enables 22 source configurations from 12 families and 1,390 source-specific entries. Its 52-topic catalog has 46 topics with enabled sources and 136 topic–source bindings; see the [current inventory](../config/anatomy-release-1.0.0.json) and [browsing guide](learning-and-variation.md). NextBrain, IXI MRA, HumanBrainAtlas, Meso-vein MRI, VENAT, the Mouches arterial occurrence atlas, Human Inner Ear CT and the clinical TopCoW/TopBrain cohorts are excluded from current acquisition, construction, discovery and opening. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). The [15 October inventory](../config/anatomy-detail-inventory-2026-10-15.json) preserves an earlier increment and does not describe current availability. Teaching libraries, curricula, course management and learning tools remain in the testing branch; they are excluded from the formal application.
 
-The following table documents the earlier eight-source baseline retained for comparison with the initial implementation:
+The following table documents the earlier eight-source baseline retained for comparison with the initial implementation. Its Mouches/Forkert and IXI rows are historical; both sources are excluded from current use:
 
 | Source package | Actual representation | Entries | Draft sequences | Native context |
 | --- | --- | ---: | ---: | --- |
@@ -64,7 +64,7 @@ The three orthogonal sections and 3D view share a physical cursor. Structure sel
 
 Users control structure visibility, opacity, contrast, layout, 3D magnification and section pan. Full sections provide global context before cursor-centered magnification. A saved native-RAS cutaway can hide one half-space of selected 3D source surfaces while leaving all 2D sections and original geometry unchanged; no cap or internal anatomy is generated. Historical scene annotations retain native coordinates and source association. Scene files preserve the anatomical display state. Imports must match package ID, version, build signature and native space. Retired lesson and practice state is ignored.
 
-Exports retain the rendered image, exact scene, complete source/processing declarations, rendering policy, source license notices and any retained scene notes.
+The formal browser retains anatomical viewing controls and access to source introductions through home dataset pages. Its footer scene tools, image exports and MRI interaction-hint/Ready footer are preserved in `codex/release-testing` at commit `006221e`; the model status and selected-object controls remain in the formal viewer. Development exports retain the rendered image, exact scene, source/processing declarations, rendering policy, license notices and scene notes. Existing saved records are retained, and formal CLI startup still opens historical scenes. See the [preservation record](development/anatomy-release-simplification.md#viewer-footer-update-2026-10-24).
 
 `neuroimage library` discovers existing complete and interrupted builds. `neuroimage locate` finds the exact package required by a saved scene. Completed construction reuses intact assets without decompression or geometry work. Startup always checks every asset hash and may reuse unchanged successful geometry checks; explicit validation recomputes geometry.
 
@@ -74,6 +74,6 @@ Exports retain the rendered image, exact scene, complete source/processing decla
 2. Use browsing sessions to refine navigation and source-definition explanations. Preserve reproducible scenes for reported problems.
 3. Add one specialist evidence type at a time only after checking its source definitions, coordinate relationships, coverage, license evidence and validation method. Extend contracts when the representation requires it.
 
-HCP source trajectories and independent probability regions have distinct, validated representations. Delivered vascular, cranial-nerve and skull context uses the same source-specific acquisition and package workflow; cisternal observation points remain teaching annotations rather than inferred compartment segmentations. See [specialist coverage](specialist-modules.md) and the current inventory for the precise limitations. Selected Julich-Brain, BigBrain, NextBrain and IXI configurations are implemented; additional acquisitions or representations require separate evaluation. New evidence must not be forced into another representation or registered merely for visual convenience. Other retained datasets and user originals remain intact.
+HCP source trajectories and independent probability regions have distinct, validated representations. Delivered vascular, cranial-nerve and skull context uses the same source-specific acquisition and package workflow; cisternal observation points remain teaching annotations rather than inferred compartment segmentations. See [specialist coverage](specialist-modules.md) and the current inventory for the precise limitations. Selected Julich-Brain and BigBrain configurations remain enabled. NextBrain and the excluded image/statistical-source implementations are retained historically, without current acquisition or opening; additional acquisitions or representations require separate evaluation. New evidence must not be forced into another representation or registered merely for visual convenience. Other retained datasets and user originals remain intact.
 
 The [release-candidate validation record](release-candidate-validation.md) distinguishes current checks from historical development receipts. Expert review is separate from engineering acceptance, and no engineering milestone establishes completion of independent anatomical or educational evaluation. See the [adapter development guide](adapter-development.md) for extension responsibilities and verification.

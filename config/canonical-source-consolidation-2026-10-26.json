@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Consolidate expanded structures into the original source identity; preserve old package files for saved scenes.",
+  "sources": {
+    "mida": {
+      "canonical_recipe": "src/neuroimage/recipes/mida.json",
+      "canonical_recipe_sha256": "429878dee840539b7fca3939df3e22c29bb97024117fb809f915263760bf1dd6",
+      "version": "4",
+      "structure_count": 53,
+      "previous_recipe": "config/source-recipe-history/mida-3.json",
+      "previous_recipe_sha256": "9d60f07f29fe4fd33d3c9afd133219f4af74c2db553e3c3be0dec1cd4c9ee3c9",
+      "expanded_recipe_sha256": "5e56fefddbc1d5bbad4045361af80bf038e3dfbe758d64bb346bc93729b1a631",
+      "expanded_manifest": "/media/data/NeuroImage/derivatives/mida_complete/d1c4dffce471571e/manifest.json",
+      "expanded_manifest_sha256": "e92e9897762435625df1ac1937b24732eee17e0021247635fa1a9572af0c137d",
+      "retained_previous_manifests": [
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/mida/3374505761bc6543/manifest.json",
+          "sha256": "d3388e6d51f3b3683610ee2fb23d7f9f079b11fc1255eb14e840f40ef0c6c3e4",
+          "structures": 51
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/mida/4ef69f89e4797533/manifest.json",
+          "sha256": "4e811835dd7e331ee5fd28322c8acf3166b03fb63c022ead130959df3baabae6",
+          "structures": 25
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/mida/6a7747e5f05667a2/manifest.json",
+          "sha256": "77148bb46736b3bfea6be72a077b62c9dcf7832255280b0cfc437b47349390a2",
+          "structures": 25
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/mida/78eea107ad672a3a/manifest.json",
+          "sha256": "e885912d95ab9a423629f5013758a54fc629c8394e52e0acd2e5b81a76f52818",
+          "structures": 51
+        }
+      ],
+      "canonical_manifest": "/media/data/NeuroImage/derivatives/mida/4cd60a4bfa857ae4/manifest.json",
+      "canonical_manifest_sha256": "96a56fbff6cdbf574939e1769e6f6c546a4b8bada28c4bbd1fae2bd8fd4c2138",
+      "canonical_key": "mida-4cd60a4bfa857ae4",
+      "fresh_validation": {
+        "asset_sha256": "fresh",
+        "geometry": "fresh",
+        "cache_written": false
+      },
+      "exact_structure_records": true,
+      "exact_volume_records": true,
+      "exact_space_and_sources": true,
+      "exact_inputs": true,
+      "exact_recipe_except_identity_and_version": true,
+      "exact_meshes": 53,
+      "exact_source_geometry_arrays": 0,
+      "byte_identical_volumes": 1,
+      "retained_previous_assets_hash_verified": 168,
+      "seconds": 27.883
+    },
+    "z_anatomy": {
+      "canonical_recipe": "src/neuroimage/recipes/z_anatomy.json",
+      "canonical_recipe_sha256": "7f15d699869664a6b1ee77e7d8b2e304025c0eff6173ffc3795adeb72a23db30",
+      "version": "1.1.0-detail",
+      "structure_count": 398,
+      "previous_recipe": "config/source-recipe-history/z_anatomy-1.0.0-detail.json",
+      "previous_recipe_sha256": "19d3e4f57223947f5748a811d758257d39f9da33c6f7b090f35c6cde8088efcd",
+      "expanded_recipe_sha256": "5df1814fd54552fa9866f984a05ee725a36fe6b96d1af82d02f221eabfb3dab0",
+      "expanded_manifest": "/media/data/NeuroImage/derivatives/z_anatomy_complete/ccc2d9769ab65838/manifest.json",
+      "expanded_manifest_sha256": "0706562433d3b274edc87b90dfdb91533e97a8f61d04fde07fdfbd36e2cb2442",
+      "retained_previous_manifests": [
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/060008dffc3a5669/manifest.json",
+          "sha256": "7e2ead670b83ea4a47e434d2e5aacca1f6f61c92c0bc9d27f0e49e7a5140e9f8",
+          "structures": 350
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/116d469d946f0e96/manifest.json",
+          "sha256": "0f3028eeda7f06b429c9d75e3e43f51af3d9a320208e122aa247af4ea00306d7",
+          "structures": 350
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/4354792550bcf1c4/manifest.json",
+          "sha256": "5b1ce7e2e2099b50f2879033fc4169854f76ced1040e5dfaaac4e4d43759967f",
+          "structures": 213
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/51f4a68312ebb38a/manifest.json",
+          "sha256": "8e6369077896a9e9ad06d3f9864a6c7ba52bd83e81239e7ebf8cb03a50c771e9",
+          "structures": 94
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/563dca501f66b3fb/manifest.json",
+          "sha256": "aa394fabf6ead5c5aff60f5bf571d7aef7b9fbcbdc5d17ea733f019a749708e6",
+          "structures": 157
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/7efd82c59b06f015/manifest.json",
+          "sha256": "6b7dea12adadbb2ef972972a6d353f78bc07da728d70c6d70b9cddff887ef424",
+          "structures": 94
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/89a81be4cf511f19/manifest.json",
+          "sha256": "4815515cc07e79a43c8c9e7f2fba490cb8f9c83e1f160ff9890c6d3be0f6dbf4",
+          "structures": 286
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/ce8b178f36fea7be/manifest.json",
+          "sha256": "063a1007e77a11809f92373e302905d10d2fda67245f3ac64c256073f8b049f4",
+          "structures": 94
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/d6eb1a83d8d930cd/manifest.json",
+          "sha256": "b23ff383e76911adf90c2745c6ed82bfc1e23f78259b7d337dab3481fdcbd030",
+          "structures": 94
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/dec8e85dcd4597f1/manifest.json",
+          "sha256": "0759d886f29212a963d7160171ee1c9f72d3f32a44330e8e1256cbf56bcc705f",
+          "structures": 119
+        },
+        {
+          "manifest": "/media/data/NeuroImage/derivatives/z_anatomy/ea4ae67d89ec388a/manifest.json",
+          "sha256": "abd2fc4b35a96af5038a4c15a96c6dbcbea4ede874d50278e5af4c65b89d0b44",
+          "structures": 213
+        }
+      ],
+      "canonical_manifest": "/media/data/NeuroImage/derivatives/z_anatomy/83604816ef597dcf/manifest.json",
+      "canonical_manifest_sha256": "16acb1a78a8b9133c45d43431ad18cbe7b90edef7998ca99eee3df52cb4a5822",
+      "canonical_key": "z_anatomy-83604816ef597dcf",
+      "fresh_validation": {
+        "asset_sha256": "fresh",
+        "geometry": "fresh",
+        "cache_written": false
+      },
+      "exact_structure_records": true,
+      "exact_volume_records": true,
+      "exact_space_and_sources": true,
+      "exact_inputs": true,
+      "exact_recipe_except_identity_and_version": true,
+      "exact_meshes": 398,
+      "exact_source_geometry_arrays": 2830,
+      "byte_identical_volumes": 0,
+      "retained_previous_assets_hash_verified": 6236,
+      "seconds": 40.464
+    }
+  }
+}

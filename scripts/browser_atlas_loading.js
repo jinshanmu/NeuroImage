@@ -12,10 +12,16 @@ async page => {
   page.on('pageerror', onError); page.on('request', onRequest);
   page.setDefaultTimeout(120000); page.setDefaultNavigationTimeout(120000);
   const ready = async () => {
-    await page.locator('.live-status,.model-status').filter({hasText:/^Ready/}).first().waitFor();
+    await page.waitForFunction(() => !!document.querySelector('.canvas-shell[data-ready="true"],.model-canvas-shell[data-ready="true"]') ||
+      !!document.querySelector('[role=alert],.load-error'), null, {timeout:120000});
     await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
-    assert(await page.getByRole('button',{name:'Save scene',exact:true}).isEnabled(), 'The atlas appeared before it was usable.');
-    assert(!await page.getByRole('alert').count(), 'The atlas reported an error.');
+    assert(await page.locator('[role=alert],.load-error').count() === 0, 'The atlas reported an error.');
+    assert(await page.locator('.canvas-shell[data-ready="true"],.model-canvas-shell[data-ready="true"]').count() === 1,
+      'The atlas canvas did not become ready.');
+    const control = await page.locator('.model-canvas-shell').count()
+      ? page.getByRole('button',{name:'Full model view',exact:true})
+      : page.getByRole('combobox',{name:'View layout',exact:true});
+    assert(await control.isEnabled(), 'The atlas appeared before its viewing controls were usable.');
   };
   let release;
   try {
@@ -46,13 +52,14 @@ async page => {
       const loading = await page.evaluate(() => {
         const screen = document.querySelector('.atlas-loading'), style = getComputedStyle(screen), bounds = screen.getBoundingClientRect();
         const frame = screen.closest('.canvas-shell,.model-canvas-shell'), box = frame.getBoundingClientRect();
-        return {text:screen.innerText.trim(),background:style.backgroundColor,frameBackground:getComputedStyle(frame).backgroundColor,opacity:style.opacity,
+        return {text:screen.innerText.trim(),background:style.backgroundColor,frameBackground:getComputedStyle(frame).backgroundColor,opacity:style.opacity,ready:frame.dataset.ready,
           local:bounds.top > 0 && bounds.height < innerHeight && bounds.width === frame.clientWidth && bounds.height === frame.clientHeight &&
             bounds.left >= box.left && bounds.right <= box.right && bounds.top >= box.top && bounds.bottom <= box.bottom,
           header:getComputedStyle(document.querySelector('.app-header')).visibility === 'visible',
           canvases:Array.from(frame.querySelectorAll('canvas')).every(canvas => getComputedStyle(canvas).visibility === 'hidden')};
       });
       assert(loading.text === 'Loading', 'The canvas loading message contains extra text: ' + loading.text);
+      assert(loading.ready === 'false', 'An unfinished atlas claimed to be ready.');
       assert(/^rgb\(/.test(loading.background) && loading.background === loading.frameBackground && loading.opacity === '1', 'The loading background does not match the opaque canvas background.');
       assert(loading.local && loading.header && loading.canvases, 'Loading escaped the atlas frame or exposed an unfinished canvas.');
       assert(await page.getByRole('link',{name:'NeuroImage home',exact:true}).isVisible(), 'Home navigation was hidden while loading.');
@@ -96,6 +103,8 @@ async page => {
     await page.getByRole('button',{name:'Reload viewer',exact:true}).waitFor();
     assert(!await page.locator('.atlas-loading').isVisible(), 'A failed atlas stayed behind a permanent loading screen.');
     assert(await page.getByRole('alert').count() > 0, 'A source error was hidden.');
+    assert(await page.locator('.model-canvas-shell').getAttribute('data-ready') === 'false',
+      'A failed source was marked as ready.');
     checks.push('An unreadable source leaves the loading screen and exposes recovery');
     assert(!errors.length, errors.join('\n'));
     return {status:'passed',checks,page_errors:errors};

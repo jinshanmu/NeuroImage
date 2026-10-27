@@ -1,4 +1,6 @@
 async page => {
+  // Development-branch reference: requires the retained scene/import/export footer.
+  // This historical workflow is not a formal-release acceptance script.
   const errors=[]; page.on('pageerror',error=>errors.push(String(error)));
   const assert=(value,message)=>{if(!value)throw new Error(message);};
   const ready=async()=>{await page.waitForFunction(()=>/^(Ready|Scene saved|Saved scene restored|Scene file restored|Image export prepared)/.test(document.querySelector('.live-status')?.textContent??''),null,{timeout:90000});await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));};

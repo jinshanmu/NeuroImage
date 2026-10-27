@@ -1,0 +1,1678 @@
+{
+  "recorded_utc": "2026-10-26T10:54:18.858024+00:00",
+  "status": "passed",
+  "case_count": 109,
+  "anatomical_structure_count": 2027,
+  "new_cases_built": 101,
+  "new_anatomical_structures": 1876,
+  "original_eight_manifests_unchanged": true,
+  "all_original_source_hashes_verified": true,
+  "all_case_checks": [
+    {
+      "dataset_id": "thu_mra_case001",
+      "package_version": "3b4756cdbf0e57ca",
+      "manifest_sha256": "566e92cc0b90729029dca9416428a3fa3bcacb0a10bf3c48d39cc48583bd36b9",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case001-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case002",
+      "package_version": "ca3d09b7b30fd273",
+      "manifest_sha256": "639668b3091439bec365a185e5fb354df68f764a95ff6cfca2125ed2cc04e8b2",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [
+        14,
+        19,
+        20
+      ],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case002-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case003",
+      "package_version": "7eafaaf9b2be796e",
+      "manifest_sha256": "55720b4cdd4f3704cfe6ae955dcf02552eeeddbd7d7359cb3486f4f96e2ef3fa",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [
+        5,
+        16
+      ],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case003-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case004",
+      "package_version": "641e362e279c5d07",
+      "manifest_sha256": "54bd19dcae062e59850da76904c516502da2dadd8888f8e8528276c0ad07b969",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case004-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case005",
+      "package_version": "7b67f4aa28c2c614",
+      "manifest_sha256": "8e9a12f3f23b65ba9efee8139161981b3afff195dd5e66ed9f0285cc9819109c",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [
+        14,
+        17,
+        18,
+        19,
+        20
+      ],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case005-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case006",
+      "package_version": "59113420268411ec",
+      "manifest_sha256": "ba4c5bcfb4065e258a9be977cc49e378620e4722449cf5359d84b3e6f8f503ae",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case006-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case007",
+      "package_version": "b7b50d1b059e00e2",
+      "manifest_sha256": "85069d84401f1d8a32a3f32406c73b0af37730d1b7abdf3a0b241d69844eac97",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case007-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case008",
+      "package_version": "9ce3cdb81c178f86",
+      "manifest_sha256": "48c5d9c3708fed2d177d6534af8e0d137e077f53b421d96e180038c874f9803e",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case008-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case009",
+      "package_version": "74f45536d0575f3d",
+      "manifest_sha256": "8037e789afcd091e60054321354e345ad2a63ae9bc9e1ca3d6db729fec1d3d89",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case009-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case010",
+      "package_version": "6cc58fb03b703bd8",
+      "manifest_sha256": "b457aaab60ca9de3e72e1d18031788c18b6067754936f7685f30ac35592e43a2",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case010-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case011",
+      "package_version": "36605a36f96fad92",
+      "manifest_sha256": "1bcfd91dca12b95e1ea7b14ee345e5f0f3ad51ac996f01823f27350d99aeddbe",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case011-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case012",
+      "package_version": "ecd778ca3bf35f84",
+      "manifest_sha256": "ba9eb341f241957f5f196520344e694e344fac2baacf63074bfcbb06a7173537",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [
+        16
+      ],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case012-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case013",
+      "package_version": "834c6d4af1aefdbc",
+      "manifest_sha256": "c737bfa48897d57e2c304947351d2bc1f832ad1f606ca3d62d4f4e8b87c95a11",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case013-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case014",
+      "package_version": "9473fce0f5e218a6",
+      "manifest_sha256": "3ef4376b9d0648457693f22f55479e72ae0d8c3f6c102dd3c037476db993d4b2",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case014-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case015",
+      "package_version": "fa2cfa75eb7236d5",
+      "manifest_sha256": "ac37b1f72d891138bcae31cc1aa921cc8cc6fc51fd4d9ed2b0f7f3da83b03850",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case015-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case016",
+      "package_version": "e21b15c1731dc3fa",
+      "manifest_sha256": "d8f2414d562de393cd8c1d6fc625bd3b9c371a9fe5827d852f289652c3d79447",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case016-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case017",
+      "package_version": "be384627ae68e27d",
+      "manifest_sha256": "e14eb79e7131453f3caa382cb4367a7f7ddc2d0c8812f9ece929f34fb423abed",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case017-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case018",
+      "package_version": "8cd0cd6f21ab7de7",
+      "manifest_sha256": "2b33c3462e665954964100c3ba8b47b6061681337a351a9be125bb3174c8c73d",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case018-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case019",
+      "package_version": "f20b7582612c191e",
+      "manifest_sha256": "3ae77bd3f02f5bfb87ca0e071efb20b40aad5d04b8e85b4c5f5a929dba70c862",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case019-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case020",
+      "package_version": "d1e08894066b7365",
+      "manifest_sha256": "2a353f44f1bcf7b67816f14ef4d832b1da14a757befa00f760bcd0f21d9af19a",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case020-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case021",
+      "package_version": "80ee0b80f4c91f19",
+      "manifest_sha256": "5bed37dd7a288a5128d880ab36fc1f483d51f7d526d2332b2e4be64331b1bda7",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case021-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case022",
+      "package_version": "18f02b35a8a3a72a",
+      "manifest_sha256": "86a8ac539bbb4e1313aa14d597b24f9a627c5ebef1d94794c7bd11915fd040df",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case022-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case023",
+      "package_version": "18e7b430d5ee834c",
+      "manifest_sha256": "f9d9a416d7f5992a862e417e2db452d3f60976430b0ea20a5934ad377b71a276",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case023-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case024",
+      "package_version": "236f44726039a2a6",
+      "manifest_sha256": "8f44208c8a6258dd81c93fce1eb6d8b4ea227407c75f39adb375a59ed0062dbc",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case024-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case025",
+      "package_version": "a27c4745f2bf9b7b",
+      "manifest_sha256": "4a3a62e05cb8a2c0fb85a891bef71773882cbd071bc152313bb1ce48fa2f3577",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case025-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case026",
+      "package_version": "51d563e100f8835a",
+      "manifest_sha256": "b4b8b3d5844ec1ad53c4c2b4a307b5394c468c3e6a4d9693008dd28753537293",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case026-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case027",
+      "package_version": "2a8bdc66fbebf3fb",
+      "manifest_sha256": "3f63f004402db735228ce2d4f58a9d17128a76b05c80fda2027bb8cab6e3bfff",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case027-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case028",
+      "package_version": "b6d15e843d073c73",
+      "manifest_sha256": "e149a1f430c39e6d78f90541ef0e6a0e2765fc307d392ca9249860dbf809a403",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case028-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case029",
+      "package_version": "06e900f57437a531",
+      "manifest_sha256": "0528c3746fab6187e99fe63e8d58409123eb62b96fc2d5e38c0934958179d264",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case029-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case030",
+      "package_version": "7ab8af66974506c7",
+      "manifest_sha256": "0c3a1105b898ed1fb32ebf38aa1d3a0eae4f1b18f486fd2e3ec1ff14f42a68ac",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case030-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case031",
+      "package_version": "1d2e768d63fd4533",
+      "manifest_sha256": "f14221e96441f9810b6427f6396fda8b48d65cb0ff33dfed08710e0feac7baa1",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case031-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case032",
+      "package_version": "2bd68ff3748271c1",
+      "manifest_sha256": "043feb5991c458f327363a32d03946c02e058bd1ddd097b9f2fc0007da30e944",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case032-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case033",
+      "package_version": "b5921afdbce283b3",
+      "manifest_sha256": "d981828325d07f2145f736759d7822c303e556344b35501ec1f8d0cd3d2fa004",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case033-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case034",
+      "package_version": "e2159884f0f0a674",
+      "manifest_sha256": "32278d40af22fd6fbc464a651273d8312370ea33f1719afb23920c652539b7e5",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case034-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case035",
+      "package_version": "14cae34a3eb4111e",
+      "manifest_sha256": "1fb0fac3f5edf80a1089bf5fbfd3ff227b65dc2d02379d26a0ca841911dd7f35",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case035-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case036",
+      "package_version": "72805c61e34ee7a6",
+      "manifest_sha256": "02494e21dc2e4b4bc70e70bf4d1bd44a0b1673d151d59acad4df08427a94b8bc",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case036-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case037",
+      "package_version": "25af54bb6cb4d936",
+      "manifest_sha256": "ac2d8b72c66e7bded99ba0340c3748e92f1cf42f60a11487a7053daf0eaf17f7",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case037-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case038",
+      "package_version": "afb6cc2111d0aaf0",
+      "manifest_sha256": "055c511bfcebebb54d361468f49a04957ac6a217dfa1c062418a36320ada4bc4",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case038-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case039",
+      "package_version": "cb10f3c162c631b8",
+      "manifest_sha256": "86d2e6bf3297a62f4628d5e4e775000f7ce0c87cb58cf1fa58d00caf4d99811e",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case039-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case040",
+      "package_version": "f1ef5f95593c8514",
+      "manifest_sha256": "bbad741ee461c2468ead050de77058027b0859e6e9ae492cd710f6f7b6610b8b",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case040-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case041",
+      "package_version": "0b94a1901a2c519e",
+      "manifest_sha256": "409cfd5ed306ecc2182a0702f1583bfccd7f5ad6d2d9457400c7dc1c1538be27",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case041-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case042",
+      "package_version": "48f5013a88428c76",
+      "manifest_sha256": "55d74864983c0da5df89a5d9421454ad3f4b755157a4ed98cf3d5a1720cd3756",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case042-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case043",
+      "package_version": "103acf873d2c0cff",
+      "manifest_sha256": "65952a6e5135606fb2724ebadf68926a21d913196e2c19c72b65c16b9676fb37",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case043-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case044",
+      "package_version": "42e5f8a411bed0fc",
+      "manifest_sha256": "f484ead1bb2c17beabb1c4cae7b8cd9bbcf621be08bcc0da514683aa6baaab83",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case044-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case045",
+      "package_version": "ac7b2952c7253c72",
+      "manifest_sha256": "8cad6a62f336960c97b441b99f22331ec39d211d54ccba66a41a7e55bf316c4b",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case045-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case046",
+      "package_version": "7691b7ce5f22512d",
+      "manifest_sha256": "ff61f82d6408c32f97737f0a306f636cff6c8394ca6cbfc0aa33fcbfae5c2d2a",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case046-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case047",
+      "package_version": "44525d5153f4a4a0",
+      "manifest_sha256": "6775cdfeeba00d7c24f3db0637318294ae0dfcd265508452fe17d4b0f58481c7",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case047-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case048",
+      "package_version": "4ed507224b7fd2d5",
+      "manifest_sha256": "b7de234472124a5251daf5d2ed1516b3ce2e4d8c326729dd74f13e953f32d25f",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case048-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case049",
+      "package_version": "05dbd719f19ddae6",
+      "manifest_sha256": "6a5ebd67299cdcb25d2654fda74fe4f03fdbf4a59460dfb45316509179458981",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case049-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case050",
+      "package_version": "2f4179868c6fa075",
+      "manifest_sha256": "805c3b9eda7cba41be53c352f27173c2c2b7a9bf63ef2e756b9b524d712925fe",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case050-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case051",
+      "package_version": "08a2c01a864304c2",
+      "manifest_sha256": "e1546343bc12b5f505e4cf390482b77efec430c76449a814e65dd8da64c55bca",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case051-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case052",
+      "package_version": "d12660e121d78280",
+      "manifest_sha256": "bc31c520a6212609e316fd1d013266c511b5fc9c468a8b39a39aae52c922ded7",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case052-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case053",
+      "package_version": "07005d61b8f40a8e",
+      "manifest_sha256": "e533b80b3c6d2a45d366ae678c73f3afa2412e985c89fab90da4cb20f02b3729",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case053-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case054",
+      "package_version": "27817837d3274fc8",
+      "manifest_sha256": "0cc8ca31cb4abe0dd0f0daa78e1ca411f02ac213f42a357b9afc1068c748b573",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case054-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case055",
+      "package_version": "7937b43582bbe1a0",
+      "manifest_sha256": "0075d1ab2292ca52bac497dc9b84afa06ba3979f99ee3bbd740590cdc5de9e7e",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case055-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case056",
+      "package_version": "a1ce55d436875780",
+      "manifest_sha256": "f844fd0d9494b8bccf20073c16fd15e8de7c0edef08ab47f60bf5d896c676c32",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case056-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case057",
+      "package_version": "2534f95a32fe7ed3",
+      "manifest_sha256": "ef4f3a4425bb88f5bc27fc3cd715b3dd865893684bd735add72379ce0c6abe87",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case057-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case058",
+      "package_version": "734100c5e9c5a86a",
+      "manifest_sha256": "49e45822acee49b90785a49a53c86bcd01e410c0bc286388f655d3225b80cdc2",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case058-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case059",
+      "package_version": "1e0379ca1c388683",
+      "manifest_sha256": "a0e0b0f5b25ad2f9cff932a1abae22b71b8e6048a83c716bf729663b32bf0a91",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case059-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case060",
+      "package_version": "1f28d7f0a668b183",
+      "manifest_sha256": "ff8cdb16affdcff328dee5f352d374b4edec295d4e1471670c7c4bfc99c42511",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case060-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case061",
+      "package_version": "181f498f9eb9bc83",
+      "manifest_sha256": "ffafc7e49e4f438df6e90faaf49138a008833c54b22fe5f48e6d64ff3e77834f",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case061-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case062",
+      "package_version": "f1c405df863a752b",
+      "manifest_sha256": "d0a9a1b712d73c824970e388e0cca7e3d94c1ff9c6f51919b66e3ca3f316c88d",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case062-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case063",
+      "package_version": "34eb98642b742efb",
+      "manifest_sha256": "181a7014d1792def73f649d87f2c641837543d98bb89ec6efd75a326229b6f8a",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case063-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case064",
+      "package_version": "6b74845907b2aafd",
+      "manifest_sha256": "a779a1b8725cb3d7b9e7e6ba20b9581d711b3c3e1fb2d55811579d34c60ab7fb",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case064-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case065",
+      "package_version": "e21215817357968e",
+      "manifest_sha256": "b07e5fb40a81650c25fe0327707a566b11ca0a6c0a428ab0b3297c199752aada",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case065-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case066",
+      "package_version": "74b0ec01ca0083d6",
+      "manifest_sha256": "de61afc7293b252fe046b0aca45c7d9f7baeb49aaf6de18c8c01838982adeb36",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case066-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case067",
+      "package_version": "ff00633a58c973cf",
+      "manifest_sha256": "7c59b9b8c4181773e49cca8bb5f238043c6e0d49e40a89509f277efb0c90fae4",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case067-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case068",
+      "package_version": "36dace0fa423be28",
+      "manifest_sha256": "e2abdd2ca762a93436fe3bfcf9c9ac06383fafda3d7289c4c950efe4092e8b20",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case068-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case069",
+      "package_version": "b4e4ceb18a3c45fa",
+      "manifest_sha256": "0b1f6a62ddc3b3aa18a180d5f569538129f41869af931859184548cad4e97497",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case069-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case070",
+      "package_version": "1f6dbc64577a3f53",
+      "manifest_sha256": "df34c276c30c81eec1f1726f90be7a298a788ffc8cc4889e5cefafe8b317a235",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case070-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case071",
+      "package_version": "6d8757d2e9f3e415",
+      "manifest_sha256": "73cc92981aea976410d69d33249e66e301a6cd66c4205a2fd40fc4101dd31824",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case071-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case072",
+      "package_version": "c32b3e2f7fb1763f",
+      "manifest_sha256": "c977c593c1997f4ed740a6b23e7072f2d33c8fe9649fa0e95f1253e7f1fcbf8e",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case072-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case073",
+      "package_version": "94d16fed5992efe3",
+      "manifest_sha256": "fe2ad7281bb442aac9b5961d0cbc13877059dcfe65c028c378bb33fb5f7c5519",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case073-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case074",
+      "package_version": "d4ba025c9b4f92fa",
+      "manifest_sha256": "0240866052ea094092d415dc616103f66a7e7f53f81d507b02b761c6fea47f5b",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case074-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case075",
+      "package_version": "fe541d629b99338d",
+      "manifest_sha256": "455e93f89861eed495173a6cf7651e233ca51c49bf57884446f247ce46d24a86",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case075-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case076",
+      "package_version": "ca30c168f8f8e9c7",
+      "manifest_sha256": "643584ec41de4b4cea6c20df11023c851282513be37318c011d093341a70a6d0",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case076-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case077",
+      "package_version": "3e515bb639950e78",
+      "manifest_sha256": "846635d4f57bf1fb308c4e835698ee2d84851c5b9d0e207b443018b5b140a053",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case077-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case078",
+      "package_version": "66b99c42216a688d",
+      "manifest_sha256": "b2fcd4da0cfd4393f2d72161b58ef3ece7423f55c191aa600c6d7f746e5dffbb",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case078-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case079",
+      "package_version": "959949ff42ad9071",
+      "manifest_sha256": "667d87369f1d9e32611df1da4887cad3c335330d417c1a37e2ec94ee7fb3da97",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [
+        16
+      ],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case079-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case080",
+      "package_version": "a0220d3d50bb9e6e",
+      "manifest_sha256": "6cda2b5c8c1fe985466034ccaef703334a2ced0839c0ca2a699d53d56f69bfad",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case080-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case081",
+      "package_version": "8f1d139c80f2d931",
+      "manifest_sha256": "b84ce027e6efc3fd1b34920c162434d347ad8f3d32b73cd056b6307572792716",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case081-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case082",
+      "package_version": "2424b600c619eb30",
+      "manifest_sha256": "9ab4c7e662a86ef3e223c2885e094d32e1fc0278060645b3160503ffaf36b245",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case082-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case083",
+      "package_version": "c4ff587c48898003",
+      "manifest_sha256": "b5bb8a1624befe3d617cf8063cff1f2758344d0c5103a07245082c067e4696ad",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case083-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case084",
+      "package_version": "5abf20726f2e3d93",
+      "manifest_sha256": "b4306b1681c73202f5d102fa3b48447aa55c44fa66ff15974a57e329231f37f7",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case084-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case085",
+      "package_version": "069e4bc17bb1a021",
+      "manifest_sha256": "e22d26c530f525c1f99aea75745a79191864420af15cf67817a4b75fbbda3217",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case085-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case086",
+      "package_version": "049c4568d91d80b0",
+      "manifest_sha256": "1b60ec47d84a29b467a0d053f269897ac6a7c17efd4990dafc9cca16abe34a54",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case086-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case087",
+      "package_version": "b6d4ad8cd45145ad",
+      "manifest_sha256": "9ab81a82506d25366f6ed72c5d8006a8df7f273e0512f99892d8a5abc35497c6",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case087-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case088",
+      "package_version": "0597f24247ddcdc0",
+      "manifest_sha256": "f6a39bce73fe82c6225ebfbcf439cb28f1b57e89d3621e43d07a55069cb6ff34",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case088-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case089",
+      "package_version": "50d9996d0bbafd4d",
+      "manifest_sha256": "44873700a23b8bdbfa2b8db5c62dc4a7d99c21e60a3c78c828f4ac44e0371a75",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case089-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case090",
+      "package_version": "f0f4aa0076df3c75",
+      "manifest_sha256": "17d4b3011ddef120fa23f22323571eefaa2abb9fed7b035b5d44d404193e1bea",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case090-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case091",
+      "package_version": "7a533fe103e3f455",
+      "manifest_sha256": "6a3463974791a5a282958df04fe02b4afff36348e103ef329691cf823f499911",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case091-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case092",
+      "package_version": "76077c9add884d3d",
+      "manifest_sha256": "b721075bb4399b55caca0691a09e8fd8c0a424d059818dbc5846f49f1720dcf5",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case092-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case093",
+      "package_version": "5848b503c7f73a2d",
+      "manifest_sha256": "b5f324a7a5d53d43890be44d07b7157b8cc2d99b6ed48cf259c7e1d12f7a87a0",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case093-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case094",
+      "package_version": "357eed3298d5ef99",
+      "manifest_sha256": "0e05b80e7219597de73d989f477c2838347f4a4a02d208d8c0cf6826baa45972",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case094-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case095",
+      "package_version": "1b18ad8d144833b4",
+      "manifest_sha256": "0ec44850a4bfcc469df508f2d011bcc0d1840b2585ada568446da85582f23b18",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case095-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case096",
+      "package_version": "d3130874429f4725",
+      "manifest_sha256": "23af7ecf577b5fe34ebdc1dd7760bb1d638993ce8fa63790e368ada129866136",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case096-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case097",
+      "package_version": "5f7c4f07f261fd52",
+      "manifest_sha256": "dbc764711d45acb96d59c483820be11967c8d222938af946afbbff60ec1d15ca",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case097-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case098",
+      "package_version": "ec07a0d20047734b",
+      "manifest_sha256": "e7ec74988cb0c55509abc71acc37833212fcf4a4aaa9f561587169dd0328f29e",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case098-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case099",
+      "package_version": "7da1f99175fe577d",
+      "manifest_sha256": "24e635d8ef8a650377dab32c685f699c77e5d8301c560eb00a36d681cdf756ee",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case099-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case100",
+      "package_version": "f5c3105e30d365a0",
+      "manifest_sha256": "6cfd41ad37ac7c01abccbdd652423afa3442338b8cc6e99c7169144d17081aa9",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case100-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case101",
+      "package_version": "30d00303028fbef8",
+      "manifest_sha256": "0a29fb15dc83334979c7384dd877d19fdec21651f7e10cc12d917a77d9055d05",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case101-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case102",
+      "package_version": "a5afe12e0e6ae19e",
+      "manifest_sha256": "b6186214b7adb71c17ba3fbd7b3fa051b13da6a34d7a69e2577e0c4534381ac4",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case102-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case103",
+      "package_version": "830210599ba371fd",
+      "manifest_sha256": "f600f2e741f64367904f0b3d63598690dacf421d769b39e136be03b6087ef544",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case103-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case104",
+      "package_version": "a6ba8ce8e707fa33",
+      "manifest_sha256": "87244a35928888ce47222cc371cd633c7c5a21f099890b990b1357b7d66fef31",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case104-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case105",
+      "package_version": "c99eb4482e9f3b32",
+      "manifest_sha256": "2f33fba8e1eb6462981c6aa9f752124e3f07a73c9037041787d1f763c6a3983f",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case105-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case106",
+      "package_version": "d888833a9fc3dc90",
+      "manifest_sha256": "d76fc5da61f793153e641a0acc1503d02ae1c2460584a4e5d35d3a1481d60f21",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case106-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case107",
+      "package_version": "f000d8eefef38a26",
+      "manifest_sha256": "aef26c7b1c11aabcb4ee9861c59670463575c7bf3fc8cf822aee9775f7c8c5f5",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case107-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case108",
+      "package_version": "564dc530e84e5553",
+      "manifest_sha256": "6dce5ae67ca044ed7018d3780bbf0cf3caddd0d25aa5ec6c3154f501e0bfd7b3",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case108-source-verification.json"
+    },
+    {
+      "dataset_id": "thu_mra_case109",
+      "package_version": "9b4c72090f62d9a0",
+      "manifest_sha256": "af279f334317e313e092f5f89cea7c8d565db1fbe8d158e6339ea7d56c81ab27",
+      "original_samples_identical": true,
+      "source_landmarks_checked": 20,
+      "source_landmarks_outside_crop": [],
+      "source_voxel_counts": {
+        "mra": 2949120,
+        "labels": 2949120
+      },
+      "maximum_physical_point_error_mm": 3.7630357315729178e-06,
+      "verifier_sha256": "267fac08057a764f5531888acc1280ea1f89f6ee635d69574ff830b380ccb59c",
+      "receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/case109-source-verification.json"
+    }
+  ],
+  "name_correspondence_status": "project_correspondence_pending_instructor_review",
+  "scope": "Original paired MRI and labels retained voxel for voxel and in physical millimeter coordinates. The 12 source landmarks outside five delivered crops remain unchanged; no missing segments or landmarks are reconstructed.",
+  "all_218_exported_affines_and_mm_units_verified": true,
+  "maximum_affine_component_error_mm": 1.5132904040981998e-08,
+  "affine_units_receipt": "benchmarks/thu_cerebral_mra/full-cohort-20261026/affine-units-verification.json",
+  "affine_units_receipt_sha256": "1a805d80617246a6bf04c9fe3a04c2d07eaec13642b62d4cb0e0dbc0090a04e4",
+  "case_catalog_sha256": "9484854a23a285b7d964e10ae26c359376907714101cf34b39abb9fceacb3ea3",
+  "source_archive_sha256": "fc174e2da9827df331a94e9530f2b59742a9e890dde935088ac9decbbed1b82e",
+  "new_original_mri_bytes": 1115524280,
+  "new_package_bytes": 1207058836,
+  "concurrent_build_cases": 1,
+  "workers_per_case": 2,
+  "maximum_build_rss_kib": 301336,
+  "measured_total_construction_wall_seconds": 279.659
+}

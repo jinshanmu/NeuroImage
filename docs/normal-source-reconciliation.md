@@ -1,5 +1,7 @@
 # Normal-source reconciliation and specialist evidence
 
+**Historical reconciliation record:** dated inventories and source-opening recommendations below describe an earlier scope. NextBrain, IXI, HumanBrainAtlas, Meso-vein MRI, VENAT, the arterial occurrence atlas, Human Inner Ear CT and the clinical TopCoW/TopBrain cohorts are excluded from the current application. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Consult the [current release inventory](../config/anatomy-release-1.0.0.json) for enabled sources.
+
 The 2026-10-13 increment reconciles the 41 recorded source entries in `config/normal-source-reconciliation-2026-10-13.json`. Thirteen sources had local browser packages at that reconciliation checkpoint. The later 2026-10-14 inventory contains 33 source configurations from 18 upstream families; see `config/anatomy-coverage-fine-2026-10-14.json`. This is a bounded inventory of the available project resources and newly investigated sources, not a claim that all public intracranial imaging has been exhausted. Acquisition and construction states describe work performed; each source retains its individual license through the same platform interfaces.
 
 ## Delivered additions

@@ -1,5 +1,15 @@
 export type Vec3 = [number, number, number]
 export interface Source { id: string; title: string; version: string; url: string; citation: string; license_name: string; license_url: string; license_file: string }
+export interface DatasetSource {
+  id?: string; title: string; version: string; url: string; citation?: string;
+  license_name: string; license_url?: string; license_file?: string;
+}
+export interface DatasetInfo {
+  description: string[]; scope_notes: string[];
+  space: { name: string; correspondence: string; unit_basis?: string };
+  representation: string; case_id: string | null; case_label: string | null; atlas_label: string;
+  image_evidence?: Pick<ImageEvidence, 'modality' | 'acquisition' | 'sampling' | 'intensity_units' | 'calibration' | 'source_dataset'>[];
+}
 export interface ScalarEvidence { source_input: string; metric: string; units: string; statistic: string; interpretation: string; derivation: string; reference: string; valid_range?: [number, number] | null }
 export interface ImageEvidence { modality: 'MRI' | 'CT'; source_input: string; source_dataset: string; intensity_units: string; calibration: string; acquisition: string; sampling: string }
 export interface Volume { image_evidence?: ImageEvidence | null; scalar?: ScalarEvidence | null; native_frame?: { source_input: string; source_file: string; source_shape: [number,number,number,number]; frame: number; extraction: string } | null; id: string; name: string; kind: 'image' | 'scalar' | 'labels' | 'mask' | 'probability'; file: string; shape: Vec3; affine_ras_mm: number[][]; voxel_size_mm: Vec3; orientation: string; cal_min: number; cal_max: number }
@@ -41,8 +51,8 @@ export interface AnatomyEntry {
   source_id: string; source_version: string; volume_id: string; shape: Vec3; affine_ras_mm: number[][];
   index: Vec3; selected: string | null; visible: string[]; surface_opacity?: Record<string, number>; label: string; reference: string;
 }
-export interface AnatomyCoverage { id: string; title: string; evidence: string; parent_id?: string; kind?: string; structures?: number; structure_ids?: string[]; entry?: AnatomyEntry }
-export interface AtlasEntry { representation?: string; created_utc?: string; coverage?: AnatomyCoverage[]; detail_coverage?: AnatomyCoverage[]; key: string; title: string; dataset_id: string; package_version: string; space: string; manifest_url: string; base_url: string; structures: number }
+export interface AnatomyCoverage { id: string; title: string; evidence: string; coverage_note?: string; parent_id?: string; kind?: string; structures?: number; structure_ids?: string[]; primary_structure_ids?: string[]; entry?: AnatomyEntry }
+export interface AtlasEntry { dataset_info?: DatasetInfo; sources?: DatasetSource[]; representation?: string; created_utc?: string; coverage?: AnatomyCoverage[]; detail_coverage?: AnatomyCoverage[]; key: string; title: string; dataset_id: string; package_version: string; space: string; manifest_url: string; base_url: string; structures: number }
 export interface Annotation { id: string; text: string; position_ras_mm: Vec3; structure_id: string | null }
 export interface SelectionEvidence { kind: 'source-target' | 'label-voxel' | 'independent-mask' | 'visible-surface' | 'visible-streamline' | 'probability-cursor' | 'teaching-marker' | 'image-cursor'; candidates: string[]; sectionAxis?: 0 | 1 | 2 }
 export interface SurfaceCutaway {
@@ -50,12 +60,17 @@ export interface SurfaceCutaway {
   side: -1 | 1;
   position_mm: number;
   structures: string[];
+  followCursor?: boolean;
 }
 export interface SurfaceContext { enabled: boolean; opacity: number; structure_ids: string[] }
 export interface ViewState {
   selected: string | null; visible: string[]; position: Vec3; background: string;
-  labelOpacity: number; meshOpacity: number; radiological: boolean; layout: 'quad' | 'anatomy' | 'axial' | 'coronal' | 'sagittal' | '3d';
+  labelOpacity: number; meshOpacity: number; radiological: boolean;
+  // Legacy scenes can still contain 'anatomy'; the viewer opens it as quad/row.
+  layout: 'quad' | 'anatomy' | 'axial' | 'coronal' | 'sagittal' | '3d';
   camera: [number, number, number]; pan: [number, number, number, number]; imageContext: boolean;
+  // Optional relative 3D magnification; legacy camera scales remain readable.
+  zoom3D?: number;
   background2D?: boolean;
   backgroundOpacity2D?: number;
   backgroundOpacity3D?: number;
@@ -67,6 +82,8 @@ export interface ViewState {
   selectionEvidence?: SelectionEvidence;
   overlay?: 'labels' | 'mask' | 'probability' | 'streamlines' | 'none';
   showMarkers?: boolean;
+  showCursor?: boolean;
+  // Legacy cursor setting remains readable; explicit showCursor takes precedence.
   show3DCursor?: boolean;
   surfaceOpacity?: Record<string, number>;
   surfaceCutaway?: SurfaceCutaway;

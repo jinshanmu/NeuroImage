@@ -22,7 +22,11 @@ from .acquire import acquisition_plan, capacity, destination
 from .adapters import load_recipe, recipe_names
 from .build import GIB, atomic_json, utc_now
 from .coverage import module_catalog, source_coverage, source_details
+from .dataset_info import dataset_info, manifest_dataset_info
 from .library import BINDING_BYTES_LIMIT, library_records
+from .dataset_policy import require_supported_dataset
+from .case_selection import selection_revision
+from .browse_policy import source_is_browsable
 
 JOB_ID = re.compile(r"^[a-f0-9]{32}$")
 ACTIVE = {"running", "stopping"}
@@ -117,7 +121,7 @@ class Workspace:
     def package_records(self, *, refresh=False):
         """Reuse discovery briefly; package activation performs full validation."""
         with self._lock:
-            revision = (len(self.jobs), self._active_id)
+            revision = (len(self.jobs), self._active_id, selection_revision())
         with self._package_lock:
             cached = self._package_cache
             if not refresh and cached and cached[0] == revision and time.monotonic() - cached[1] < 30:
@@ -130,23 +134,30 @@ class Workspace:
         """Bounded home-page discovery; opening still validates every asset."""
         with self._browse_lock:
             with self._lock:
-                revision = (len(self.jobs), self._active_id)
+                revision = (len(self.jobs), self._active_id, selection_revision())
             cached = self._browse_cache
             if not refresh and cached and cached[0] == revision and time.monotonic() - cached[1] < 30:
                 return json.loads(cached[2])
             sources = []
+            input_presence = {}
+            def present(relative):
+                if relative not in input_presence:
+                    input_presence[relative] = destination(self.data_root, relative).is_file()
+                return input_presence[relative]
             for name in recipe_names():
                 recipe = load_recipe(name)
                 sources.append({"id": name, "title": recipe["title"], "sources": recipe["sources"],
+                    "dataset_info": dataset_info(recipe),
                     "inputs_required": len(recipe["inputs"]),
-                    "inputs_present": sum(destination(self.data_root, p).is_file() for p in recipe["inputs"].values())})
+                    "inputs_present": sum(present(p) for p in recipe["inputs"].values())})
             records = []
             for record in self.package_records(refresh=refresh):
-                if record.get("status") != "available":
+                if record.get("status") != "available" or not source_is_browsable(record["dataset_id"]):
                     continue
                 manifest = load_small_json(record["manifest"], BINDING_BYTES_LIMIT)
                 records.append({key: record[key] for key in ("dataset_id", "title", "package_version", "created_utc", "representation", "status")})
                 records[-1].update(key=package_key(record),
+                    dataset_info=manifest_dataset_info(manifest), sources=manifest["sources"],
                     coverage=source_coverage(record["dataset_id"], manifest["structures"]),
                     detail_coverage=source_details(record["dataset_id"], manifest["structures"]))
             value = {"sources": sources, "packages": records, "active_job": revision[1]}
@@ -165,16 +176,20 @@ class Workspace:
                 present = sum(destination(self.data_root, p).is_file() for p in recipe["inputs"].values())
                 peak = max(2, float(recipe.get("construction_peak_gib", 2))) * GIB
                 sources.append({"id": name, "title": recipe["title"], "representation": recipe.get("representation", "mri-labels"),
+                                "dataset_info": dataset_info(recipe),
                                 "sources": recipe["sources"], "coverage": source_coverage(name), "plan": plan, "inputs_present": present,
                                 "inputs_required": len(recipe["inputs"]), "construction_peak_bytes": int(peak),
                                 "build_capacity_sufficient": plan["free_bytes"] >= peak + self.data_floor_gib * GIB})
             except (ValueError, OSError) as error:
-                sources.append({"id": name, "title": recipe["title"], "error": str(error), "sources": recipe["sources"], "coverage": source_coverage(name)})
+                sources.append({"id": name, "title": recipe["title"], "error": str(error), "sources": recipe["sources"],
+                                "dataset_info": dataset_info(recipe), "coverage": source_coverage(name)})
         records = self.package_records()
         for record in records:
             if record.get("status") == "available":
                 record["key"] = package_key(record)
                 manifest = load_small_json(record["manifest"], BINDING_BYTES_LIMIT)
+                record["dataset_info"] = manifest_dataset_info(manifest)
+                record["sources"] = manifest["sources"]
                 record["coverage"] = source_coverage(record["dataset_id"], manifest["structures"])
                 record["detail_coverage"] = source_details(record["dataset_id"], manifest["structures"])
         with self._lock:
@@ -203,6 +218,7 @@ class Workspace:
         request = JobRequest.model_validate(value).model_dump(exclude_none=True)
         action = request["action"]
         if action in {"acquire", "build"}:
+            require_supported_dataset(request["recipe"])
             if request["recipe"] not in recipe_names():
                 raise ValueError("Choose an installed source recipe")
             recipe = load_recipe(request["recipe"])
@@ -210,6 +226,7 @@ class Workspace:
                       if action == "acquire" else max(2, float(recipe.get("construction_peak_gib", 2))) * GIB)
             capacity(self.data_root, budget, self.data_floor_gib)
         else:
+            require_supported_dataset(request["package_key"])
             matches = [r for r in self.package_records() if r.get("status") == "available" and package_key(r) == request["package_key"]]
             if len(matches) != 1:
                 raise ValueError("Choose exactly one available local atlas version")

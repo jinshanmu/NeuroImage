@@ -1,5 +1,27 @@
 import { NVImage, type Niivue } from '@niivue/niivue'
 
+export interface PreparedVolume {
+  image: NVImage;
+  options: Parameters<Niivue['addVolumeFromUrl']>[0];
+}
+
+/** Fetch and decode without replacing the still-interactive native stack. */
+export async function prepareVolume(viewer: Pick<Niivue, 'opts'>, options: PreparedVolume['options']): Promise<PreparedVolume> {
+  const normalized = { ...options, trustCalMinMax: viewer.opts.trustCalMinMax,
+    limitFrames4D: options.limitFrames4D || viewer.opts.limitFrames4D }
+  return { image: await NVImage.loadFromUrl(normalized), options: normalized }
+}
+
+/** Register an already prepared image through the normal native ownership path. */
+export function addPreparedVolume(viewer: Pick<Niivue, 'document' | 'mediaUrlMap' | 'addVolume' | 'onColormapChange' | 'onVolumeAddedFromUrl'>, prepared: PreparedVolume): void {
+  const { image, options } = prepared
+  viewer.document.addImageOptions(image, options)
+  image.onColormapChange = viewer.onColormapChange
+  viewer.mediaUrlMap.set(image, options.url)
+  viewer.addVolume(image)
+  viewer.onVolumeAddedFromUrl(options, image)
+}
+
 /** Overlay visibility and opacity do not change the original background image. */
 export function refreshOverlayTextures(viewer: Pick<Niivue, 'volumes' | 'refreshColormaps' | 'closePAQD' | 'refreshLayers' | 'drawScene'>) {
   viewer.refreshColormaps()

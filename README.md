@@ -1,17 +1,17 @@
 # NeuroImage Atlas
 
-Explore normal intracranial neuroanatomy in a local web browser. NeuroImage brings independently acquired MRI, CT, source labels, surface models and tractography into a common workflow: obtain a source, build its local atlas, explore its anatomy and save source-bound views.
+Explore normal intracranial neuroanatomy in a local web browser. NeuroImage brings independently acquired MRI, CT, source labels, surface models and tractography into a common workflow: obtain a source, build its local atlas, explore its native anatomy.
 
 **Version 1.0.0 is prepared for final author review.** The software is licensed under Apache-2.0. Software archives contain code, recipes, schemas and documentation. Anatomical datasets are acquired separately under their own terms.
 
 ## What you can do
 
 - Explore linked orthogonal sections and 3D anatomy; rotate, select, isolate, adjust opacity and inspect source context.
-- Browse ten anatomical groups and 46 detailed topics, including cortical sulci, deep nuclei, brainstem nuclei, ventricles and cisterns, cranial nerves, skull-base anatomy and vessels.
-- Compare normal-source examples in separate views. Eight healthy-volunteer MRA cases support focused anterior and posterior arterial comparison.
+- Browse ten anatomical groups and a 52-topic detailed catalog (46 topics currently have enabled sources), including cortical sulci, deep nuclei, brainstem nuclei, ventricles and cisterns, cranial nerves, skull-base anatomy and vessels.
+- Compare normal-source examples in separate views. Ten healthy-volunteer MRA cases support focused anterior and posterior arterial comparison.
 - Work locally after installation and data acquisition. Browser rendering uses local resources.
 
-The anatomical collection contains 39 source configurations from 19 resource families, with 1,965 source-specific entries. Entry counts include repeated and overlapping source definitions. The formal release focuses on anatomy browsing; teaching libraries, courses and learning tools remain in `codex/release-testing`.
+The enabled anatomical collection contains 22 source configurations from 12 resource families, with 1,390 source-specific entries and 136 detailed topic–source bindings. NextBrain, IXI MRA, HumanBrainAtlas, Meso-vein MRI, VENAT, the Mouches arterial occurrence atlas, Human Inner Ear CT and the clinical TopCoW/TopBrain cohorts are excluded from the current application. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](docs/maintenance/local-data-cleanup-2026-10-24.md). Entry counts include repeated and overlapping source definitions. The formal release focuses on anatomy browsing; teaching libraries, courses and learning tools remain in `codex/release-testing`.
 
 ## Linux installation
 
@@ -44,15 +44,16 @@ MIDA requires a manual download from its official access page. Z-Anatomy constru
 
 ## First use
 
-Open `http://127.0.0.1:8765` in your browser.
+Open `http://127.0.0.1:8765` in your browser. The webpage opens prepared local atlases. Installation, source acquisition and atlas construction use the command-line tools described above.
 
-1. Choose an anatomical group or dataset. Detailed topics, cases and regional configurations appear on secondary pages.
-2. An anatomy group or detailed topic opens with every corresponding structure selected; **Whole brain** and direct source openings select the complete atlas. Open **Structure library** to search, select or isolate structures. **Select all** and **Deselect all** apply to the displayed filter. Saved scenes retain their recorded visibility.
+1. Choose an anatomical group or dataset. A dataset opens its introduction and atlas buttons grouped by case or source resource; each button opens the complete atlas directly. Anatomical groups retain their separate detailed-topic pages.
+2. An anatomy group or detailed topic opens with every corresponding structure selected; **Whole brain** and direct source openings select the complete atlas. Open **Structure library** to search, select or isolate structures. **Select all** and **Deselect all** apply to the displayed filter. Historical scenes opened through the CLI retain their recorded visibility.
 3. In a regional view, **Whole-brain background** controls context separately from the selected structures. The 2D background starts on and the 3D background starts off; each has its own opacity control. The 3D context uses neutral-gray brain surfaces from the same source when available. Sources without brain surfaces use their native image extent, labeled **Source background**. Independent model sources provide 3D controls only; a source without whole-brain context identifies that limitation in the controls.
-4. Use **Surface display and cursor** for cutaway, selected opacity and cursor controls. Open **Sources and coordinates** for citations and licenses.
-5. Save or export scenes for backup; **Export image** includes source attribution and licenses.
+4. Use **Surface display and cursor** for cutaway, selected opacity and cursor controls. Choose the dataset on the home page for its introduction, citations, licenses, coverage and coordinate definitions.
 
 The page supports ordinary browser scrolling and zoom. A bookmarked atlas link reopens its exact source package after a service restart. Source comparisons retain each panel's own coordinates.
+
+The viewer footer, scene-saving/import/export controls and image-export controls are preserved in `codex/release-testing` at commit `006221e`. Existing scene files and browser records are retained, and the CLI can still open a scene against its exact local atlas package. See the [footer preservation record](docs/development/anatomy-release-simplification.md#viewer-footer-update-2026-10-24).
 
 To restart the workspace:
 
@@ -79,7 +80,7 @@ neuroimage quickstart cerebra --data-root /path/to/data/NeuroImage \
 neuroimage validate /path/to/exact/manifest.json
 ```
 
-A dry run reports source terms, manual downloads and storage needs without downloading. Validation checks the package's declared assets and geometry. The [installation and reproduction guide](docs/installation-and-reproduction.md) describes dependency locks, independent software builds and recovery. Portable scene files reference exact local atlas packages; users sharing a scene obtain their own matching data. Image exports retain source attribution and require the relevant redistribution permission.
+A dry run reports source terms, manual downloads and storage needs without downloading. Validation checks the package's declared assets and geometry. The [installation and reproduction guide](docs/installation-and-reproduction.md) describes dependency locks, independent software builds and recovery. Portable scene files reference exact local atlas packages; users sharing a scene obtain their own matching data. Existing image exports retain source attribution and require the relevant redistribution permission.
 
 This release supports normal anatomy and variation for education and research. Engineering checks establish software behavior and source preservation. Independent anatomical review and educational outcome studies remain separate work. The [scope and roadmap](docs/release-scope-and-roadmap.md) identifies further anatomical topics.
 

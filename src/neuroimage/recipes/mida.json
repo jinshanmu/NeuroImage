@@ -1,7 +1,7 @@
 {
   "id": "mida",
   "adapter": "mida-nifti",
-  "version": "3",
+  "version": "4",
   "title": "MIDA \u00b7 cranial nerves and skull-base context",
   "representation": "label-model",
   "construction_peak_gib": 8,
@@ -32,6 +32,13 @@
     }
   ],
   "selection": [
+    {
+      "value": 1,
+      "source_name": "Dura",
+      "name": "Dura",
+      "category": "Meninges and CSF",
+      "notes": []
+    },
     {
       "value": 2,
       "source_name": "Cerebellum Gray Matter",
@@ -192,43 +199,6 @@
       "notes": []
     },
     {
-      "value": 99,
-      "source_name": "Substantia Nigra",
-      "name": "Substantia nigra",
-      "category": "Brainstem",
-      "notes": []
-    },
-    {
-      "value": 100,
-      "source_name": "Cerebral Peduncles",
-      "name": "Cerebral peduncles",
-      "category": "Brainstem",
-      "notes": []
-    },
-    {
-      "value": 101,
-      "source_name": "Optic Chiasm",
-      "name": "Optic chiasm",
-      "category": "Intracranial pathways",
-      "notes": []
-    },
-    {
-      "value": 116,
-      "source_name": "Thalamus",
-      "name": "Thalamus",
-      "category": "Deep structures",
-      "notes": [
-        "A source-defined region; other separately labelled model structures are excluded from this categorical value."
-      ]
-    },
-    {
-      "value": 1,
-      "source_name": "Dura",
-      "name": "Dura",
-      "category": "Meninges and CSF",
-      "notes": []
-    },
-    {
       "value": 24,
       "source_name": "Blood Arteries",
       "name": "Arteries (source class)",
@@ -244,6 +214,24 @@
       "category": "Vascular source classes",
       "notes": [
         "This whole head-and-neck source class combines vessels and does not provide named arterial branches or venous subdivisions. The complete original extent is retained; it is not an intracranial-only segmentation."
+      ]
+    },
+    {
+      "value": 26,
+      "source_name": "Air Internal - Ethmoidal Sinus",
+      "name": "Ethmoidal sinus air",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 27,
+      "source_name": "Air Internal - Frontal Sinus",
+      "name": "Frontal sinus air",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
       ]
     },
     {
@@ -326,6 +314,27 @@
       "notes": [
         "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
       ]
+    },
+    {
+      "value": 99,
+      "source_name": "Substantia Nigra",
+      "name": "Substantia nigra",
+      "category": "Brainstem",
+      "notes": []
+    },
+    {
+      "value": 100,
+      "source_name": "Cerebral Peduncles",
+      "name": "Cerebral peduncles",
+      "category": "Brainstem",
+      "notes": []
+    },
+    {
+      "value": 101,
+      "source_name": "Optic Chiasm",
+      "name": "Optic chiasm",
+      "category": "Intracranial pathways",
+      "notes": []
     },
     {
       "value": 102,
@@ -452,12 +461,22 @@
       "notes": [
         "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
       ]
+    },
+    {
+      "value": 116,
+      "source_name": "Thalamus",
+      "name": "Thalamus",
+      "category": "Deep structures",
+      "notes": [
+        "A source-defined region; other separately labelled model structures are excluded from this categorical value."
+      ]
     }
   ],
   "scope_notes": [
     "Only the listed source classes are selected. Selected cranial nerves, arteries and veins retain their complete delivered extents, including any extracranial or cervical portions. These context classes are not restricted to the cranial cavity and have no invented side or segment subdivisions. Unselected tissues remain in the preserved original source.",
     "The original source table contains 116 values, including its background value 50. Values not selected here map to output background 0.",
-    "No synthetic MRI, reflection, registration, smoothing, decimation or artificial subdivision is performed."
+    "No synthetic MRI, reflection, registration, smoothing, decimation or artificial subdivision is performed.",
+    "The complete current neurocranial scope contains 53 source classes, including the original ethmoidal and frontal sinus air classes alongside sphenoidal and mastoid air. Remaining source classes cover cervical spinal/vertebral, maxillofacial, eye, ear-specialist, muscle and other extra-intracranial tissues or source background; they remain in the original preserved model and source audit."
   ],
   "acquisition": "Run neuroimage acquire mida --data-root <existing-data-root>. Pinned extracted source members are verified and reused first. Otherwise a verified existing MIDA.zip is selectively expanded. If required inputs and the archive are absent, the command gives the official access page, expected size and exact destination; it does not submit an access request.",
   "archives": [

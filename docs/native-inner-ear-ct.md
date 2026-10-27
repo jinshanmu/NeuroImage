@@ -1,5 +1,7 @@
 # Original temporal-bone CT and fluid-space labels
 
+**Archived source guide: this dedicated otology dataset is excluded from current acquisition, construction, discovery and opening.** Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Commands, source-preservation statements and validation results below describe the former implementation. Named cochlear and vestibular structures within MIDA and Z-Anatomy remain enabled.
+
 This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
 
 `inner_ear_ct_specimen1` uses original specimen 1 from Dataset A of

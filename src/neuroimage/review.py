@@ -12,7 +12,8 @@ import zipfile
 from PIL import Image
 from .build import GIB, atomic_json, sha256
 from .validation import validate_package
-from .contracts import Structure, StreamlineStructure, IndependentRegion
+from .contracts import Manifest, Structure, StreamlineStructure, IndependentRegion
+from .dataset_policy import require_supported_dataset
 from .provenance import processing_record
 
 DECISIONS = {"not_assessed", "acceptable", "needs_revision", "not_resolvable", "not_applicable"}
@@ -82,7 +83,10 @@ def prepare_review(manifest_path, data_root, *, limit=20, minimum_free_gib=400):
     if not 1 <= limit <= 60:
         raise ValueError("A review packet must contain 1 to 60 structures")
     manifest_path = Path(manifest_path).resolve()
+    declared = Manifest.model_validate_json(manifest_path.read_bytes())
+    require_supported_dataset(declared.dataset_id, [declared.package_id, *(source.id for source in declared.sources)])
     manifest = validate_package(manifest_path)
+    require_supported_dataset(manifest.dataset_id, [manifest.package_id, *(source.id for source in manifest.sources)])
     data_root = Path(data_root).resolve()
     if not data_root.is_dir():
         raise ValueError("The selected data root must already exist")

@@ -13,7 +13,7 @@ Linux x86_64, Python 3.12 and Chromium with WebGL2 are the verified platform. Co
 | WebGL2 browser | Interactive source sections and 3D anatomy | Browser and renderer in release verification |
 | Node and npm | Frontend builds and tests | Node 24.21.0; `.nvmrc` and `package-lock.json` |
 | Python build and test tools | Source packaging and tests | `requirements-dev.lock.txt` |
-| h5py | Original inner-ear HDF5 CT construction | `requirements-source-inspection.lock.txt` |
+| h5py | Optional archived-source inspection and development fixtures | `requirements-source-inspection.lock.txt` |
 | Blender | Original Z-Anatomy object construction | Separate Blender 5.2.2 LTS application and embedded Python |
 | Matplotlib | Optional native projection exports | `requirements-teaching.lock.txt` |
 | aria2, dcm2niix and git-annex | Optional acquisition/source inspection helpers | `environment.yml`; selected source guide |

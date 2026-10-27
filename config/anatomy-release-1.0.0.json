@@ -1,11 +1,11 @@
 {
   "recorded_utc": "2026-10-18T17:12:34.321511+00:00",
   "software_version": "1.0.0",
-  "scope": "Configured original-source anatomy entries in the formal browsing release. Counts include overlapping and repeated source definitions.",
-  "source_count": 39,
-  "upstream_source_families": 19,
-  "source_specific_structures": 1965,
-  "detailed_topics": 46,
+  "scope": "Enabled normal neuroanatomy sources and documented normal variation. Dedicated eye, ear, dental and maxillofacial resources are paused; image-only, unnamed statistical and unverified clinical sources are excluded. Source definitions, licenses, inspection records and saved scenes are retained; excluded local data are cleaned under the 2026-10-24 audited removal record. Counts include overlapping source definitions.",
+  "source_count": 22,
+  "upstream_source_families": 12,
+  "source_specific_structures": 1390,
+  "detailed_topics": 52,
   "sources": [
     {
       "dataset_id": "bigbrain_hippocampus",
@@ -48,14 +48,6 @@
       "structures": 16
     },
     {
-      "dataset_id": "hba_native",
-      "title": "HumanBrainAtlas · healthy participant 01 T2",
-      "package_version": "b130a9babcc07247",
-      "manifest": "derivatives/hba_native/b130a9babcc07247/manifest.json",
-      "representation": "mri-volume",
-      "structures": 0
-    },
-    {
       "dataset_id": "hcp1065_prob",
       "title": "HCP1065 · native white matter probability fields",
       "package_version": "6cfd8af637420faa",
@@ -72,22 +64,6 @@
       "structures": 87
     },
     {
-      "dataset_id": "inner_ear_ct_specimen1",
-      "title": "Inner-ear CT · Dataset A specimen 1",
-      "package_version": "8505a304d1cd522a",
-      "manifest": "derivatives/inner_ear_ct_specimen1/8505a304d1cd522a/manifest.json",
-      "representation": "ct-labels",
-      "structures": 3
-    },
-    {
-      "dataset_id": "ixi_mra",
-      "title": "IXI MRA · native source image IXI002",
-      "package_version": "ef40bd2a0f6f885d",
-      "manifest": "derivatives/ixi_mra/ef40bd2a0f6f885d/manifest.json",
-      "representation": "mri-volume",
-      "structures": 0
-    },
-    {
       "dataset_id": "julich_selected",
       "title": "Julich-Brain 3.0.3 · native cytoarchitectonic MPM",
       "package_version": "53ec2653119db4ba",
@@ -96,28 +72,12 @@
       "structures": 314
     },
     {
-      "dataset_id": "mesoveins",
-      "title": "Meso-vein MRI · native healthy participant 01",
-      "package_version": "5deeb2cc2ff15ee8",
-      "manifest": "derivatives/mesoveins/5deeb2cc2ff15ee8/manifest.json",
-      "representation": "mri-volume",
-      "structures": 0
-    },
-    {
       "dataset_id": "mida",
       "title": "MIDA · cranial nerves and skull-base context",
       "package_version": "3374505761bc6543",
       "manifest": "derivatives/mida/3374505761bc6543/manifest.json",
       "representation": "label-model",
       "structures": 51
-    },
-    {
-      "dataset_id": "mouches_arteries",
-      "title": "Healthy-subject arterial occurrence · native TOF atlas",
-      "package_version": "b70c3929aa9c3de0",
-      "manifest": "derivatives/mouches_arteries/b70c3929aa9c3de0/manifest.json",
-      "representation": "mri-regions",
-      "structures": 1
     },
     {
       "dataset_id": "mug500_healthy",
@@ -134,94 +94,6 @@
       "manifest": "derivatives/mug500_source_mesh/24d39ff684e5d6ce/manifest.json",
       "representation": "surface-model",
       "structures": 1
-    },
-    {
-      "dataset_id": "nextbrain_case1_block05",
-      "title": "NextBrain Case 1 · Forebrain P3.3",
-      "package_version": "2a76e6ca515b16ef",
-      "manifest": "derivatives/nextbrain_case1_block05/2a76e6ca515b16ef/manifest.json",
-      "representation": "mri-labels",
-      "structures": 49
-    },
-    {
-      "dataset_id": "nextbrain_case1_block07",
-      "title": "NextBrain Case 1 · Forebrain A3.2",
-      "package_version": "162d0a6bb81e32f6",
-      "manifest": "derivatives/nextbrain_case1_block07/162d0a6bb81e32f6/manifest.json",
-      "representation": "mri-labels",
-      "structures": 15
-    },
-    {
-      "dataset_id": "nextbrain_case1_block08",
-      "title": "NextBrain Case 1 · Forebrain A2.3",
-      "package_version": "c382663422fb6ec9",
-      "manifest": "derivatives/nextbrain_case1_block08/c382663422fb6ec9/manifest.json",
-      "representation": "mri-labels",
-      "structures": 16
-    },
-    {
-      "dataset_id": "nextbrain_case1_block25",
-      "title": "NextBrain Case 1 · Cerebellum C1.1",
-      "package_version": "613e83c27c9484fb",
-      "manifest": "derivatives/nextbrain_case1_block25/613e83c27c9484fb/manifest.json",
-      "representation": "mri-labels",
-      "structures": 7
-    },
-    {
-      "dataset_id": "nextbrain_case1_block33",
-      "title": "NextBrain Case 1 · Forebrain P1.3",
-      "package_version": "6973746dc56fba92",
-      "manifest": "derivatives/nextbrain_case1_block33/6973746dc56fba92/manifest.json",
-      "representation": "mri-labels",
-      "structures": 125
-    },
-    {
-      "dataset_id": "nextbrain_case1_block41",
-      "title": "NextBrain Case 1 · Forebrain P2.2",
-      "package_version": "335e70ef9a0e0e91",
-      "manifest": "derivatives/nextbrain_case1_block41/335e70ef9a0e0e91/manifest.json",
-      "representation": "mri-labels",
-      "structures": 85
-    },
-    {
-      "dataset_id": "nextbrain_case1_block45",
-      "title": "NextBrain Case 1 · Forebrain A1.3",
-      "package_version": "b79c11e74431f091",
-      "manifest": "derivatives/nextbrain_case1_block45/b79c11e74431f091/manifest.json",
-      "representation": "mri-labels",
-      "structures": 136
-    },
-    {
-      "dataset_id": "nextbrain_case2_block06",
-      "title": "NextBrain Case 2 · Pons B2.1",
-      "package_version": "c05d1368c39641db",
-      "manifest": "derivatives/nextbrain_case2_block06/c05d1368c39641db/manifest.json",
-      "representation": "mri-labels",
-      "structures": 32
-    },
-    {
-      "dataset_id": "nextbrain_case2_block07",
-      "title": "NextBrain Case 2 · Midbrain B1.1",
-      "package_version": "6c0f1658a9056e7e",
-      "manifest": "derivatives/nextbrain_case2_block07/6c0f1658a9056e7e/manifest.json",
-      "representation": "mri-labels",
-      "structures": 46
-    },
-    {
-      "dataset_id": "nextbrain_case2_block16",
-      "title": "NextBrain Case 2 · Pontomedullary region B3.1",
-      "package_version": "c363da4a31687a34",
-      "manifest": "derivatives/nextbrain_case2_block16/c363da4a31687a34/manifest.json",
-      "representation": "mri-labels",
-      "structures": 41
-    },
-    {
-      "dataset_id": "nextbrain_case2_block38",
-      "title": "NextBrain Case 2 · Medulla B4.1",
-      "package_version": "0c51242409cb8e18",
-      "manifest": "derivatives/nextbrain_case2_block38/0c51242409cb8e18/manifest.json",
-      "representation": "mri-labels",
-      "structures": 19
     },
     {
       "dataset_id": "spl_nac",
@@ -304,14 +176,6 @@
       "structures": 19
     },
     {
-      "dataset_id": "venat",
-      "title": "VENAT · native venous statistical fields",
-      "package_version": "9c534558d7670c46",
-      "manifest": "derivatives/venat/9c534558d7670c46/manifest.json",
-      "representation": "scalar-fields",
-      "structures": 0
-    },
-    {
       "dataset_id": "z_anatomy",
       "title": "Z-Anatomy · independent cranial model",
       "package_version": "060008dffc3a5669",
@@ -328,5 +192,22 @@
     "learning-tools",
     "notebooks",
     "study-records"
-  ]
+  ],
+  "available_detailed_topics": 46,
+  "detailed_topic_bindings": 136,
+  "source_scope_updated": "2026-10-24",
+  "excluded_source_families": [
+    "NextBrain",
+    "IXI",
+    "HumanBrainAtlas",
+    "Meso-vein MRI",
+    "VENAT",
+    "Arterial occurrence atlas",
+    "Human Inner Ear CT",
+    "TopCoW",
+    "TopBrain",
+    "UCSF-PDGM",
+    "MSD BrainTumour"
+  ],
+  "local_cleanup_record": "docs/maintenance/local-data-cleanup-2026-10-24.md"
 }

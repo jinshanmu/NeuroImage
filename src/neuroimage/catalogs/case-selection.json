@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "maximum_cases_per_family": 10,
+  "counting_rule": "Count independent source cases within each source family. Labels, source meshes, native representations and package versions of the same case count once.",
+  "families": {
+    "thu_mra": {
+      "title": "THU Cerebral MRA",
+      "case_ids": ["001", "006", "007", "009", "010", "014", "015", "019", "021", "030"]
+    },
+    "mug500": {
+      "title": "MUG500+",
+      "case_ids": ["A0031", "A0032", "A0033", "A0034", "A0035", "A0101", "A0102", "A0103", "A0104", "A0105"]
+    }
+  }
+}

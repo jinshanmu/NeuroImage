@@ -12,9 +12,13 @@ export function anatomyEntry(state: ViewState, manifest: Manifest, scope?: Anato
     entry.index.some((v,i)=>!Number.isInteger(v)||v<0||v>=volume.shape[i])) return state
   const ids = new Set(manifest.structures.map(s=>s.id))
   if (entry.visible.some(id=>!ids.has(id)) || (entry.selected!==null&&!ids.has(entry.selected))) return state
-  const position = volume.affine_ras_mm.slice(0,3).map(row=>row[3]+entry.index.reduce((sum,v,i)=>sum+row[i]*v,0)) as Vec3
-  return {...state,selected:entry.selected && state.visible.includes(entry.selected) ? entry.selected : state.selected,background:volume.id,position,
-    window:[volume.cal_min,volume.cal_max],pan:[0,0,0,1],layout:'quad',camera:[110,15,1.4],
-    surfaceOpacity:entry.surface_opacity,selectionEvidence:{kind:'teaching-marker',candidates:[]},
-    annotations:[...state.annotations,{id:`anatomy-entry:${scope!.id}`,text:`${entry.label} · regional observation anchor. ${entry.reference}`,position_ras_mm:position,structure_id:null}]}
+  const anchor = volume.affine_ras_mm.slice(0,3).map(row=>row[3]+entry.index.reduce((sum,v,i)=>sum+row[i]*v,0)) as Vec3
+  const structure = manifest.structures.find(item=>item.id===state.selected && state.visible.includes(item.id))
+  // Regional image settings and annotations may accompany a structural view,
+  // but must not move its initial cursor away from the first library object.
+  const position = structure ? [...state.position] as Vec3 : anchor
+  return {...state,selected:structure ? structure.id : entry.selected && state.visible.includes(entry.selected) ? entry.selected : state.selected,background:volume.id,position,
+    window:[volume.cal_min,volume.cal_max],pan:[0,0,0,1],layout:'quad',camera:[110,15,1.4],zoom3D:1,
+    surfaceOpacity:entry.surface_opacity,selectionEvidence:structure ? {kind:'source-target',candidates:[structure.id]} : {kind:'teaching-marker',candidates:[]},
+    annotations:[...state.annotations,{id:`anatomy-entry:${scope!.id}`,text:`${entry.label} · regional observation anchor. ${entry.reference}`,position_ras_mm:anchor,structure_id:null}]}
 }

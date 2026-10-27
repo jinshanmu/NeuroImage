@@ -35,7 +35,7 @@ def model_catalog(recipe):
     structures = []
     if recipe.get("mesh_geometry_stage", "base") not in {"base", "author-viewport"}:
         raise ValueError("Unknown source mesh geometry stage")
-    if recipe["adapter"] in {"stl-source-surfaces", "gifti-source-surfaces"}:
+    if recipe["adapter"] in {"stl-source-surfaces", "gifti-source-surfaces", "vtk-source-surfaces"}:
         scale = recipe.get("source_to_mm")
         if (not isinstance(scale, (int, float)) or isinstance(scale, bool) or not np.isfinite(scale) or scale <= 0
                 or not recipe["space"].get("unit_basis") or recipe.get("mesh_geometry_stage", "base") != "base"
@@ -99,8 +99,8 @@ def construct(imported, root, signature, inputs, software, libraries, workers, a
     cache_parameters = {
         "source_inputs": [{key: record[key] for key in ("id", "sha256")} for record in inputs
                           if record["id"] in {item["source_input"] for item in imported.structures}]}
-    if recipe["adapter"] in {"stl-source-surfaces", "gifti-source-surfaces"}:
-        extractor = "stl_extract.py" if recipe["adapter"] == "stl-source-surfaces" else "gifti_extract.py"
+    if recipe["adapter"] in {"stl-source-surfaces", "gifti-source-surfaces", "vtk-source-surfaces"}:
+        extractor = {"stl-source-surfaces": "stl_extract.py", "gifti-source-surfaces": "gifti_extract.py", "vtk-source-surfaces": "vtk_extract.py"}[recipe["adapter"]]
         cache_parameters.update(extractor=software[extractor], source_to_mm=recipe["source_to_mm"])
     else:
         cache_parameters.update(extractor=software["blender_extract.py"], blender=libraries["blender_embedded_runtime"],
@@ -121,11 +121,13 @@ def construct(imported, root, signature, inputs, software, libraries, workers, a
         missing.append({"key": key, "source_name": item["source_name"], "source_type": item["source_type"], "source_input": item["source_input"]})
     print(json.dumps({"event": "build-start", "dataset": recipe["id"], "package_version": signature[:16],
                       "source_objects": len(keyed), "pending_extraction": len(missing), "estimated_peak_gib": peak, "free_gib": round(available, 2)}), flush=True)
-    if missing and recipe["adapter"] in {"stl-source-surfaces", "gifti-source-surfaces"}:
+    if missing and recipe["adapter"] in {"stl-source-surfaces", "gifti-source-surfaces", "vtk-source-surfaces"}:
         if recipe["adapter"] == "stl-source-surfaces":
             from .stl_extract import extract_source
-        else:
+        elif recipe["adapter"] == "gifti-source-surfaces":
             from .gifti_extract import extract_source
+        else:
+            from .vtk_extract import extract_source
         for item in missing:
             source_hash = next(record["sha256"] for record in inputs if record["id"] == item["source_input"])
             extract_source(imported.input_paths[item["source_input"]], source_cache, item, source_hash, recipe["source_to_mm"])

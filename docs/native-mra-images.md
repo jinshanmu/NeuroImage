@@ -1,6 +1,6 @@
 # Native MRA image observations
 
-This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+**Archived source guide: IXI is excluded from acquisition, construction, discovery and opening.** Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Commands, storage statements, interface descriptions and teaching-validation records below document the earlier implementation.
 
 NeuroImage 0.10 adds an explicit image-only representation (`mri-volume`, manifest 1.6). It packages one original NIfTI acquisition in its native space, with zero invented structures and no label volume, segmented surface or computed vessel centerline. It uses the same acquisition, construction, validation, workspace, scene, notebook and credited-export interfaces as the labelled atlas sources.
 

@@ -32,6 +32,26 @@ def test_quickstart_rejects_nested_or_symbolic_storage_before_work(tmp_path):
         quickstart("cerebra", link, separate, dry_run=True)
 
 
+@pytest.mark.parametrize("dry_run", [True, False])
+@pytest.mark.parametrize("recipe", ["nextbrain_case1_block05", "nextbrain_case2_block07",
+                                   "ixi_mra", "hba_native", "mesoveins", "venat", "mouches_arteries"])
+def test_quickstart_rejects_excluded_sources_without_touching_existing_data(
+        tmp_path, monkeypatch, recipe, dry_run):
+    data, state = tmp_path / "data", tmp_path / "state"
+    data.mkdir(); state.mkdir()
+    original = data / "preserved-source-original.bin"
+    original.write_bytes(b"Preserved original source bytes")
+    events = []
+    monkeypatch.setattr("neuroimage.setup.acquire", lambda *args, **kwargs: events.append("acquire"))
+    monkeypatch.setattr("neuroimage.setup.build_atlas", lambda *args, **kwargs: events.append("build"))
+    with pytest.raises(ValueError, match="excluded"):
+        quickstart(recipe, data, state, dry_run=dry_run)
+    assert events == []
+    assert original.read_bytes() == b"Preserved original source bytes"
+    assert sorted(data.iterdir()) == [original]
+    assert not list(state.iterdir())
+
+
 def test_quickstart_uses_shared_acquisition_construction_and_validation(tmp_path, monkeypatch):
     data, state = tmp_path / "data", tmp_path / "state"
     data.mkdir(); state.mkdir()

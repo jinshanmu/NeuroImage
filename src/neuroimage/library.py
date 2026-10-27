@@ -1,10 +1,37 @@
 """Discover local construction results and resolve exact saved-content bindings."""
 from pathlib import Path
 import json
+import os
 from .validation import validate_package
+from .dataset_policy import dataset_is_excluded, require_supported_dataset
 
 BOUND_FIELDS = ("package_id", "package_version", "build_signature", "space_id")
 BINDING_BYTES_LIMIT = 10 * 1024 * 1024
+
+
+def _package_folders(derivative_root, dataset):
+    folders = []
+    with os.scandir(derivative_root) as datasets:
+        for source in datasets:
+            if dataset_is_excluded(source.name) or (dataset is not None and source.name != dataset):
+                continue
+            try:
+                if not source.is_dir():
+                    continue
+                with os.scandir(source.path) as versions:
+                    for version in versions:
+                        try:
+                            if not version.is_dir():
+                                continue
+                            with os.scandir(version.path) as entries:
+                                names = {entry.name for entry in entries}
+                        except OSError:
+                            continue  # Match glob discovery when a concurrent operation removes a folder.
+                        if "manifest.json" in names or ".build-state.json" in names:
+                            folders.append(Path(version.path))
+            except OSError:
+                continue
+    return sorted(folders)
 
 
 def library_records(data_root, *, dataset=None):
@@ -17,10 +44,11 @@ def library_records(data_root, *, dataset=None):
         raise ValueError("The derivatives directory must stay inside the configured data root")
     if not derivative_root.is_dir():
         return []
-    folders = sorted({p.parent for pattern in ("*/*/manifest.json", "*/*/.build-state.json")
-                      for p in derivative_root.glob(pattern)})
+    folders = _package_folders(derivative_root, dataset)
     records = []
     for folder in folders:
+        if dataset_is_excluded(folder.parent.name):
+            continue
         if dataset is not None and folder.parent.name != dataset:
             continue
         record = {"dataset_id": folder.parent.name, "folder_version": folder.name,
@@ -33,7 +61,15 @@ def library_records(data_root, *, dataset=None):
             if manifest_path.exists():
                 if manifest_path.is_symlink():
                     raise ValueError("Library manifests must not be symbolic links")
+                declared = json.loads(manifest_path.read_bytes())
+                if not isinstance(declared, dict):
+                    raise ValueError("Library manifest must be an object")
+                if dataset_is_excluded(declared.get("dataset_id"), [declared.get("package_id"),
+                        *(source.get("id") for source in declared.get("sources", []) if isinstance(source, dict))]):
+                    continue
                 manifest = validate_package(manifest_path, verify_hashes=False, verify_geometry=False)
+                if dataset_is_excluded(manifest.dataset_id, [manifest.package_id, *(source.id for source in manifest.sources)]):
+                    continue
                 record.update({
                     "status": "available", "manifest": str(manifest_path), "title": manifest.title,
                     "dataset_id": manifest.dataset_id, "package_id": manifest.package_id,
@@ -93,6 +129,7 @@ def locate_content(path, data_root):
 
 def locate_binding(binding, records):
     """Resolve one immutable binding against an already inspected local library."""
+    require_supported_dataset(binding["package_id"])
     matches = [record for record in records if record["status"] == "available"
                and all(record.get(key) == binding[key] for key in BOUND_FIELDS)]
     if not matches:

@@ -2,7 +2,7 @@
 
 This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
 
-Eight local source recipes now pair original MRA with author-provided semantic vessel segments. The first three were `thu_mra_case009`, `thu_mra_case001` and `thu_mra_case030`. Those three contain 20, 17 and 19 nonzero source values, respectively. The [normal-variation expansion](detailed-anatomy-and-variation.md) adds cases 006, 007, 010, 014 and 021, giving eight cases and 151 source-specific segment entries in total. The common acquisition retains one shared 1,198,822,695-byte archive and extracts only the selected case files. Existing original files are verified and reused.
+All 109 delivered volunteers have source recipes, `thu_mra_case001` through `thu_mra_case109`, pairing original MRA with author-provided semantic vessel segments. Their actual nonempty inventories contain 2,027 source-specific segment entries. The original eight recipes (001, 006, 007, 009, 010, 014, 021 and 030; 151 entries) remain unchanged; the other 101 cases add 1,876 entries. A per-case catalog records source hashes, physical grids, label voxel counts and delivered landmark IDs. The common acquisition retains one shared 1,198,822,695-byte archive and extracts only the selected case files. Existing original files are verified and reused.
 
 The [publisher dataset page](https://ivg.au.tsinghua.edu.cn/dataset/Cerebral-MRA/Cerebral-MRA.html) describes 109 healthy UNC volunteers and permits noncommercial research and educational use. Preserve that exact permission notice and cite Tan et al., *Computerized Medical Imaging and Graphics* 114 (2024), 102364, [doi:10.1016/j.compmedimag.2024.102364](https://doi.org/10.1016/j.compmedimag.2024.102364). The study's other clinical cohorts are separate from this public healthy-volunteer archive. The paper reports 104 public cases in its semantic experiments, whereas the downloaded archive contains 109 image/label pairs; the acquisition inventory records the delivered files without assigning an undocumented experimental inclusion flag.
 
@@ -13,6 +13,8 @@ Each supplied image and label has 192 × 160 × 96 samples at 0.513393 × 0.5133
 The generic `source-mri-label-volume` adapter uses explicit source values and source evidence. Self-contained MetaImage files are read with the verified SimpleITK 2.5.6 runtime. Z,Y,X array storage becomes X,Y,Z indexing; the LPS-to-RAS basis conversion retains every physical point. Millimeter units require an explicit recipe declaration. NIfTI export preserves original scalar values. The source labels remain discrete, and the 3D boundary is extracted at half-voxel level. The complete MRI and categorical arrays are compared with the originals after construction.
 
 The delivered preprocessed Slicer FCSV files contain 20 points. The website describes 19 landmarks and its figure uses a different numbering convention. The original point IDs remain unchanged. Original-acquisition FCSV coordinates are archived separately; no transform to the original UNC scans or another atlas is inferred.
+
+Twelve delivered points fall outside the cropped image in five cases: 002 (three), 003 (two), 005 (five), 012 (one) and 079 (one). Their original coordinates and crop-external indices are retained in the case catalog and package provenance. They are not moved, clamped or reconstructed. The engineering verifier distinguishes these explicitly inventoried source limitations from an unexpected coordinate mismatch.
 
 ## Arterial name correspondence
 
@@ -28,9 +30,13 @@ Activate the dedicated NeuroImage environment, then run:
 
 ```bash
 neuroimage acquire thu_mra_case009 --data-root /path/to/data
-neuroimage build thu_mra_case009 --data-root /path/to/data --workers 4
+neuroimage build thu_mra_case009 --data-root /path/to/data --workers 2
 neuroimage workspace --data-root /path/to/data --state-root /path/to/ssd/state
-Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls.bash
+```
+
+Open the matching source through **Browse anatomy**; use the [current browser guide](getting-started.md) for display and scene controls. Any delivered three-digit case ID from 001 to 109 can be used in these commands.
+
+```bash
 python -m pip install -r requirements-teaching.lock.txt
 python scripts/export_native_mra_projection.py \
   --manifest /path/to/data/derivatives/thu_mra_case009/PACKAGE/manifest.json \

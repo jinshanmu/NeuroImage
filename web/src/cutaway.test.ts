@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { cutawayAtCursor, cutawayPlane, removedByCutaway, validateCutaway } from './cutaway'
+import { cursorCutaway, cutawayAtCursor, cutawayPlane, removedByCutaway, validateCutaway } from './cutaway'
 import type { SurfaceCutaway } from './types'
 import { resolveSurfaceSelection } from './selection'
 
@@ -15,16 +15,31 @@ describe('source RAS surface cutaway', () => {
       }
     }
   })
-  it('records an independent fixed plane and target list at the physical cursor', () => {
+  it('starts a following plane at the physical cursor with an independent target list', () => {
     const position: [number, number, number] = [-3, 8, 15], structures = ['skull','skull']
     const cut = cutawayAtCursor(position, structures)
     position[2] = 99; structures.push('nerve')
-    expect(cut).toEqual({axis:2,side:1,position_mm:15,structures:['skull']})
+    expect(cut).toEqual({axis:2,side:1,position_mm:15,structures:['skull'],followCursor:true})
     expect(validateCutaway(cut, new Set(['skull']))).toBe(true)
+  })
+  it.each([0, 1, 2] as const)('follows the precise physical cursor along axis %s without changing targets or direction', axis => {
+    const cut = { ...cutawayAtCursor([0, 0, 0], ['skull'], axis), side: -1 as const }
+    const position = [1.123456789, -8.234567891, 3.345678912]
+    const resolved = cursorCutaway(cut, position)!
+    expect(resolved).toEqual({ ...cut, position_mm: position[axis] })
+    expect(cut.position_mm).toBe(0)
+    expect(resolved.structures).toBe(cut.structures)
+    expect(cursorCutaway(resolved, position)).toBe(resolved)
+  })
+  it.each([undefined, false])('keeps legacy and explicitly fixed planes stationary: %s', followCursor => {
+    const cut: SurfaceCutaway = { axis: 2, side: 1, position_mm: 12, structures: ['skull'], ...(followCursor === false ? { followCursor } : {}) }
+    expect(cursorCutaway(cut, [4, 8, 90])).toBe(cut)
+    expect(validateCutaway(cut, new Set(['skull']))).toBe(true)
+    expect(cursorCutaway(undefined, [4, 8, 90])).toBeUndefined()
   })
   it('rejects invalid directions, unknown structures and nonfinite planes', () => {
     const cut = cutawayAtCursor([0, 0, 0], ['skull']), ids = new Set(['skull'])
-    for (const change of [{axis:3},{axis:'2'},{side:0},{position_mm:NaN},{position_mm:Infinity},{position_mm:1e30},{structures:[]},{structures:['skull','skull']},{structures:['nerve']},{unexpected:true}])
+    for (const change of [{axis:3},{axis:'2'},{side:0},{position_mm:NaN},{position_mm:Infinity},{position_mm:1e30},{structures:[]},{structures:['skull','skull']},{structures:['nerve']},{followCursor:'yes'},{followCursor:null},{followCursor:1},{unexpected:true}])
       expect(validateCutaway({...cut,...change}, ids)).toBe(false)
     expect(validateCutaway(null, ids)).toBe(false)
   })

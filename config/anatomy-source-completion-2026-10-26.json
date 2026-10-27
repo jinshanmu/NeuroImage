@@ -1,0 +1,117 @@
+{
+  "recorded_utc": "2026-10-26T12:21:48.544219+00:00",
+  "scope": "Existing normal intracranial neuroanatomy and skull context; at most ten independent cases per source family. Representations and package versions do not multiply case counts.",
+  "historical_release_baseline": "config/anatomy-release-1.0.0.json",
+  "upstream_source_families": 12,
+  "enabled_source_configurations": 44,
+  "source_specific_structure_entries": 1737,
+  "counts_note": "Entries are source/case/representation-specific, not distinct organs across atlases.",
+  "case_selection_authority": "src/neuroimage/catalogs/case-selection.json",
+  "case_selection_sha256": "a5c281db4ef0064b3561d0c9511bd3de1878ee69c107159450438477e249ac60",
+  "current_cases": {
+    "thu_mra": [
+      "001",
+      "006",
+      "007",
+      "009",
+      "010",
+      "014",
+      "015",
+      "019",
+      "021",
+      "030"
+    ],
+    "mug500": [
+      "A0031",
+      "A0032",
+      "A0033",
+      "A0034",
+      "A0035",
+      "A0101",
+      "A0102",
+      "A0103",
+      "A0104",
+      "A0105"
+    ]
+  },
+  "structural_additions": [
+    {
+      "dataset_id": "spl_nac",
+      "structures": 236,
+      "package_version": "ad0584ea18912049"
+    },
+    {
+      "dataset_id": "spl_nac_sulci",
+      "structures": 22,
+      "package_version": "0b38777fbd2f9fa1"
+    },
+    {
+      "dataset_id": "brainstem_navigator_iit",
+      "structures": 86,
+      "package_version": "a930c9dc35a28565"
+    },
+    {
+      "dataset_id": "mida",
+      "structures": 53,
+      "package_version": "4cd60a4bfa857ae4"
+    },
+    {
+      "dataset_id": "z_anatomy",
+      "structures": 398,
+      "package_version": "83604816ef597dcf"
+    }
+  ],
+  "surplus_case_cleanup": {
+    "thu_removed_cases": 99,
+    "thu_deleted_files": 2630,
+    "thu_deleted_bytes": 3479957631,
+    "mug_deleted_files": 807,
+    "mug_deleted_bytes": 22874623665,
+    "total_deleted_file_bytes": 26354581296,
+    "selected_original_inputs_and_package_hashes_preserved": true,
+    "retained_records": [
+      "source definitions and provenance metadata",
+      "licenses",
+      "independent verification receipts",
+      "saved user scenes, annotations, notes and exports"
+    ],
+    "thu_shared_archives": "Mixed 109-case image/label archive and original landmark archive removed after the selected originals were separately verified and retained.",
+    "mug_retained_archives": [
+      "A0031-A0035.zip",
+      "A0101-A0105.zip"
+    ]
+  },
+  "validation": {
+    "python_tests": 843,
+    "frontend_tests": 664,
+    "retained_mug_independent_source_cases": 10,
+    "retained_mug_original_voxels_compared": 806879232,
+    "retained_mug_original_facets_compared": 21558759,
+    "retained_mug_source_differences": 0,
+    "browser_case_groups": {
+      "THU Cerebral MRA": 10,
+      "MUG500+": 10
+    },
+    "unselected_case_api_rejected": true,
+    "retained_mug_model_opens_without_expanded_stl": true
+  },
+  "interface": "Existing page structure, primary/detailed groups and controls retained; additional data use existing source selectors. Workspace startup opens and prepares only the selected exact package.",
+  "source_consolidation": {
+    "normal_source_names_preserved": true,
+    "parallel_complete_configurations_in_normal_browse": false,
+    "supplemental_same_source_representations_not_duplicate_source_options": [
+      "spl_nac_sulci",
+      "brainstem_navigator_iit"
+    ],
+    "policy": "src/neuroimage/catalogs/source-browse.json",
+    "original_sources_updated_in_place": {
+      "spl_nac": 236,
+      "mida": 53,
+      "z_anatomy": 398
+    },
+    "evidence": [
+      "config/canonical-source-consolidation-2026-10-26.json",
+      "config/spl-nac-canonical-integration-2026-10-26.json"
+    ]
+  }
+}

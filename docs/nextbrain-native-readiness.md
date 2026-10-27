@@ -1,5 +1,7 @@
 # NextBrain native source readiness
 
+**Archived source inspection: NextBrain is excluded from the current application.** Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Commands and storage statements below describe the earlier inspection and integration state.
+
 This is the preserved 2026-10-13 readiness inspection. The subsequent native 3D block integration is described in [NextBrain native fine anatomy](nextbrain-fine-anatomy.md). That integration reads the original label-volume headers directly and preserves the unresolved differences found in the separate source browser representations.
 
 At the time of this inspection, NextBrain was outside the fifteen installed source configurations and the accepted 0.13.1 inventory remained unchanged. The normal-case decision is recorded in `config/nextbrain-case-scope-2026-10-13.json`; source-correspondence findings are recorded separately in `config/nextbrain-native-readiness-2026-10-13.json`.

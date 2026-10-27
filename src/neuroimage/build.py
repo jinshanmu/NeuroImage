@@ -66,7 +66,7 @@ def fingerprint(imported):
               for key, path in sorted(imported.input_paths.items())]
     # Serving or CLI-only changes must not invalidate otherwise identical anatomy.
     # The software release number alone does not alter data construction.
-    implementation = ["adapters.py", "build.py", "contracts.py", "geometry.py", "lessons.py"]
+    implementation = ["adapters.py", "build.py", "contracts.py", "dataset_policy.py", "geometry.py", "lessons.py"]
     if imported.recipe.get("adapter") == "siibra-labelled-map":
         implementation += ["label_mapping.py"]
     if imported.recipe.get("adapter") == "source-lut-nifti":
@@ -82,7 +82,7 @@ def fingerprint(imported):
     if imported.recipe.get("representation") in ("mri-volume", "scalar-fields"):
         implementation += ["volume_build.py"]
     if imported.recipe.get("representation") == "surface-model":
-        extractor = {"stl-source-surfaces": "stl_extract.py", "gifti-source-surfaces": "gifti_extract.py",
+        extractor = {"stl-source-surfaces": "stl_extract.py", "gifti-source-surfaces": "gifti_extract.py", "vtk-source-surfaces": "vtk_extract.py",
                      "blender-source-surfaces": "blender_extract.py"}[imported.recipe["adapter"]]
         implementation += ["model_build.py", "model_geometry.py", extractor]
     software = {name: sha256(Path(__file__).with_name(name)) for name in implementation}
@@ -119,7 +119,9 @@ def build_atlas(recipe_name, data_root, *, workers=4, minimum_free_gib=400):
 def build_imported_atlas(imported, data_root, *, workers=4, minimum_free_gib=400):
     """Construct an adapter result, including a locally generated test fixture."""
     import re
+    from .dataset_policy import require_supported_dataset
     recipe_name = imported.recipe["id"]
+    require_supported_dataset(recipe_name, (source["id"] for source in imported.recipe["sources"]))
     if not re.fullmatch(r"[a-z][a-z0-9_-]{0,99}", recipe_name):
         raise ValueError("A dataset ID must be a lowercase name, not a path")
     started = time.monotonic()

@@ -1,6 +1,6 @@
-# Local anatomy workspace
+# Local anatomy service and CLI maintenance
 
-The workspace provides source acquisition, construction, verification, discovery and browsing through one local browser interface.
+The local service discovers and verifies prepared atlas packages for anatomy browsing. Source acquisition and atlas construction use command-line tools. The webpage presents dataset introductions, ready atlas buttons and the viewer.
 
 ## Start
 
@@ -14,29 +14,37 @@ Open `http://127.0.0.1:8765`. Use `--no-browser` to print the address, or `--por
 
 The data and state roots must be separate, non-nested directories. The default floors are 400 GiB free on the data drive and 60 GiB on the state drive. Use `--storage-policy config/storage-portable.json` for the documented portable profile.
 
-## Source to atlas
+## Prepare or update anatomy through the CLI
 
-1. In **Browse anatomy**, choose a dataset and open **Download, install and build**.
-2. Inspect source versions, licenses, required files and storage budgets. Manual downloads use the same declared input paths.
-3. **Acquire or verify** reuses matching files and resumes interrupted transfers.
-4. **Build or resume** reuses completed construction outputs when their signatures match.
-5. **Open atlas** validates and opens that exact local package. Historical versions remain separately available.
+Inspect the source version, licenses, required files and storage budget in the terminal. Manual downloads use the declared input paths; the [dataset installation guide](dataset-installation.md) lists source-specific requirements.
 
-**Local atlases** provides source-specific structure search. Use names, original abbreviations or stable IDs. Opening a result selects its exact source target and preserves native coordinates. Image-only acquisitions have no invented labels.
+```bash
+neuroimage recipes cerebra
+neuroimage acquire cerebra --data-root /path/to/data/NeuroImage --dry-run
+neuroimage acquire cerebra --data-root /path/to/data/NeuroImage
+neuroimage build cerebra --data-root /path/to/data/NeuroImage
+neuroimage validate /path/to/exact/manifest.json
+```
+
+Acquisition reuses verified source files. Repeating construction reuses completed outputs when their signatures match. Use the exact manifest path printed by construction. After adding or replacing packages, restart the local service and reload the browser to discover the updated library.
+
+## Browse and inspect the local library
+
+Choose an anatomical group or dataset on the home page. Dataset pages show the introduction, source terms and atlas buttons grouped by case or resource. Each ready button opens the complete source atlas directly; unavailable entries show their local availability status. The **NeuroImage** logo returns home. Source websites, licenses, acquisition metadata and coordinate definitions remain available in dataset details.
+
+The terminal supports library-wide inspection and structure search:
 
 ```bash
 neuroimage search "trigeminal" --data-root /path/to/data/NeuroImage
 neuroimage library --data-root /path/to/data/NeuroImage
 ```
 
-The [browser guide](getting-started.md) covers sections, surfaces, cutaway, backgrounds, comparison and scene export.
+The [browser guide](getting-started.md) covers sections, surfaces, cutaway, backgrounds and same-category comparison. Browser scene and image-export tools remain in `codex/release-testing`; existing scene files can still be located and opened through the CLI.
 
-## Stop and recover
+## Stop and retain maintenance records
 
-One operation runs at a time. **Stop operation** interrupts the owned process group while retaining originals and completed checkpoints. Closing the browser does not cancel work. Ctrl+C stops the service.
+Ctrl+C stops the service or the active CLI command. Repeating the same acquisition or construction command reuses its verified files and completed checkpoints.
 
-Reuse the same roots to retain operation history. Acquisition, build and activation records are shown in pages of thirty. An interrupted process is recorded as interrupted; repeat the same source operation to resume. The state lock prevents concurrent owners.
+Reuse the same roots to retain maintenance receipts, operation history, logs and saved-scene records. The state lock prevents concurrent service owners. The webpage has no installation, construction or operation-management controls. Teaching operation records remain historical testing-branch material.
 
-Old teaching operation files remain on disk for the testing workflow but have no actions or links in this release. Notebook and course creation, preparation, import, management and presentation endpoints are removed. The job API accepts only `acquire`, `build` and `activate`; the schema is in `schemas/workspace-request.schema.json`.
-
-All mutations require the local page's exact origin and session token. Ordinary `neuroimage serve` is a viewing service. Software distributions contain no acquired anatomy.
+Ordinary `neuroimage serve` also provides a viewing service for explicit local packages. Software distributions contain no acquired anatomy.

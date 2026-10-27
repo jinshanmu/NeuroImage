@@ -1,0 +1,1704 @@
+{
+  "audit_date": "2026-10-26",
+  "dataset_id": "spl_nac_sulci",
+  "recipe": "src/neuroimage/recipes/spl_nac_sulci.json",
+  "source_model_count": 22,
+  "source_point_count": 44760,
+  "source_triangle_count": 87888,
+  "source_line_count": 0,
+  "source_strip_count": 0,
+  "source_vertex_cell_count": 0,
+  "coordinate_system": "SOURCE_XYZ",
+  "source_to_mm": 1.0,
+  "unit_basis": "The source MRML scene identifies 3D Slicer 4.4.0. Official Slicer coordinate documentation declares native model vertices in millimeters. The source scene retains same-subject MRI with 0.75 mm spacing and model coordinates of comparable head-scale magnitude. Original point coordinates retain metric scale 1.0; no image alignment or anatomical axis conversion is asserted. Documentation: https://www.slicer.org/wiki/Slicer3%3ACoordinates",
+  "unit_documentation_url": "https://www.slicer.org/wiki/Slicer3%3ACoordinates",
+  "source_mrml_version": "Slicer4.4.0",
+  "explicit_unit_or_coordinate_system_on_vtk_files": false,
+  "source_mri_scene_spacing_mm": [
+    0.75,
+    0.75,
+    0.75
+  ],
+  "source_models_have_transform_node_reference": false,
+  "source_scene_linear_transform": "identity; no model references it",
+  "source_file_choice": "Canonical source catalogue DataSource and active MRML ModelStorage files ending sulcus1.vtk. Unsuffixed copies contain identical geometric arrays and are not additional anatomical structures.",
+  "independent_vtk_reader_version": "9.7.1",
+  "independent_vtk_reader_scope": "Read-only audit cross-check; VTK is not a construction or application runtime dependency.",
+  "source_attributes": "Original binary attribute arrays are retained in the new source-geometry NPZ records with original names, association, binary hashes and provenance. Display mesh generation preserves vertices and face indices exactly.",
+  "structures": [
+    {
+      "value": 5001,
+      "source_annotation": "left calcarine sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5001_left_calcarine_sulcus1.vtk",
+      "source_sha256": "26c230fa7dee74dd4d8ff70e58335cf451764940ada933f09664bf2e5a6e5057",
+      "source_catalog_id": "#left_calcarine_sulcus",
+      "source_data_source_id": "#left_calcarine_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode330",
+      "source_storage_node_id": "vtkMRMLModelStorageNode328",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1960,
+      "source_triangles": 3880,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -21.794443130493164,
+          -81.80530548095703,
+          -36.49420928955078
+        ],
+        [
+          4.113344669342041,
+          -31.068082809448242,
+          -14.181890487670898
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 3880,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "05edea659e4396e9642f65bf1230ad31e1fb6a6c74531d99e82ce7e6d8b476f6",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1960,
+          "source_type": "int",
+          "source_binary_sha256": "8d35e17fa345d7f836c3a150f6062bf4eb1bad03cc4f14fd87d1bdd3b42e0f2e",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1960,
+          "source_type": "float",
+          "source_binary_sha256": "6fb74454fdf69f1b248144ae50f12c2dd1c50bf7fad828ae794db4e2126d0654",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1960,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "3875ef92c0e65a283247dc60b486d410e316d6b0c4cd9921e6b663254926ced1",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5002,
+      "source_annotation": "right calcarine sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5002_right_calcarine_sulcus1.vtk",
+      "source_sha256": "c38d7a5bfed9fb71cb2a99f489c5694d895b6699da229cb3a5bf6d8e36dc2959",
+      "source_catalog_id": "#right_calcarine_sulcus",
+      "source_data_source_id": "#right_calcarine_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode164",
+      "source_storage_node_id": "vtkMRMLModelStorageNode161",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1640,
+      "source_triangles": 3240,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          14.358863830566406,
+          -81.30855560302734,
+          -30.794269561767578
+        ],
+        [
+          29.532020568847656,
+          -23.943239212036133,
+          -10.894591331481934
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 3240,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "32cf338c938633ac5547198c65c565fae08741f43388e1637a111b087c9f2368",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1640,
+          "source_type": "int",
+          "source_binary_sha256": "253d4ce0b3d70dcacaa3bc5d669b9a76dd0594a2a9b03bcd76e40f766831b386",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1640,
+          "source_type": "float",
+          "source_binary_sha256": "2a9c932e30d19b177dc0382d6be7ab5864b44b6310040ed232595b55625a06bf",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1640,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "825a15bd001a2d2fc4ca0e9173f9a83b8bd3ff3fe7b34794b7ca17eeedf739b4",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5003,
+      "source_annotation": "left central sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5003_left_central_sulcus1.vtk",
+      "source_sha256": "b7146297312214df826f05fe4d23d9ec47569612d8eab401a4ca501b9b507ac9",
+      "source_catalog_id": "#left_central_sulcus",
+      "source_data_source_id": "#left_central_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode321",
+      "source_storage_node_id": "vtkMRMLModelStorageNode323",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2280,
+      "source_triangles": 4520,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -55.78754806518555,
+          -41.79623031616211,
+          10.411572456359863
+        ],
+        [
+          1.1411421298980713,
+          -4.949879169464111,
+          51.55554962158203
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 4520,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "9d25cc896215509c7d7f7d04902316b14b234b6371ac8dd6e5b747509ecbe39b",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2280,
+          "source_type": "int",
+          "source_binary_sha256": "3b55e24a244db2c5003361cfad1f63a611149463fe94ee09bb1376d7f47bc5a0",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2280,
+          "source_type": "float",
+          "source_binary_sha256": "dfe06e616ffddf05fef16a06370261425fe7241299ae7fa67747456dc7195bd0",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2280,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "2f825fa86d0c12c38ff7da856061ea9adfab630d6ac930d3f3897fa23c6ebd7c",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5004,
+      "source_annotation": "right central sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5004_right_central_sulcus1.vtk",
+      "source_sha256": "496f76a3f2fa5dc0db6f0c894fe563b3b76d5ac6dbbe0c5f8472853f7632503d",
+      "source_catalog_id": "#right_central_sulcus",
+      "source_data_source_id": "#right_central_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode170",
+      "source_storage_node_id": "vtkMRMLModelStorageNode167",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2620,
+      "source_triangles": 5200,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          11.719880104064941,
+          -36.843727111816406,
+          2.7242729663848877
+        ],
+        [
+          56.201751708984375,
+          9.800585746765137,
+          48.92665100097656
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 5200,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "6f9e28147549839d139e5b04251d4e388608e341e714e4c29cf51d35c3892608",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2620,
+          "source_type": "int",
+          "source_binary_sha256": "371200d19d9c252b6e3fe0b9431fc342070e72b3d21274abca410b2cca2f2b33",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2620,
+          "source_type": "float",
+          "source_binary_sha256": "ae8cd36b117e5b07f8efc154983beb1d97e3986bc82134eea2e4ab67c97d1e93",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2620,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "ce73af191617c94b67512f462caead1707e028507c376dbc8a1859cff4bf4091",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5005,
+      "source_annotation": "left cingulate sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5005_left_cingulate_sulcus1.vtk",
+      "source_sha256": "b1eabf6c7bd716435811afe9cad5ff3ea6d5dfa98017769cd5a1e26471c17592",
+      "source_catalog_id": "#left_cingulate_sulcus",
+      "source_data_source_id": "#left_cingulate_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode328",
+      "source_storage_node_id": "vtkMRMLModelStorageNode326",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 3000,
+      "source_triangles": 5960,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -14.252245903015137,
+          -59.334510803222656,
+          16.840194702148438
+        ],
+        [
+          -4.940603256225586,
+          48.631046295166016,
+          43.099300384521484
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 5960,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "26f31f8279feecbcabd86757b4f2de7cae23d360d36c2f553906e1179eef164a",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 3000,
+          "source_type": "int",
+          "source_binary_sha256": "9c1772cea5b9c88dd65e8bdf291e5e0cc13b15de0a309fec426a9d6f5e2305fe",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 3000,
+          "source_type": "float",
+          "source_binary_sha256": "a02c744c4f1dd6bb69ab837b2e07542534e1093e1fbfcc8066fbe875acf1a382",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 3000,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "5e0a0e5319f8a0d01d59d6627622d721484f6248a7701d68a91c7433ace3cf83",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5006,
+      "source_annotation": "right cingulate sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5006_right_cingulate_sulcus1.vtk",
+      "source_sha256": "a5b7661c83a5a1014e7626acab9a15c2442438844b0c968d14033f044cecb7d5",
+      "source_catalog_id": "#right_cingulate_sulcus",
+      "source_data_source_id": "#right_cingulate_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode183",
+      "source_storage_node_id": "vtkMRMLModelStorageNode180",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 3760,
+      "source_triangles": 7480,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          2.981752395629883,
+          -43.37089538574219,
+          -5.416831016540527
+        ],
+        [
+          23.828102111816406,
+          54.26497268676758,
+          47.361637115478516
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 7480,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "f6861932c75fa41060e1bd61b0a54160e6d4fb182154a02ba91db86b664cabf2",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 3760,
+          "source_type": "int",
+          "source_binary_sha256": "0f4d4e4d410cecc71f6bf554300ac015fe7d97b70637ea7f9a475d6fefadd987",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 3760,
+          "source_type": "float",
+          "source_binary_sha256": "c8c0d255070758b7275c8638dab7768df20a9a2121d65968a4cbb6c2312b385b",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 3760,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "2373a839213351f324812baa55da5fe24be56d21ff383b739af1777e261862c5",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5007,
+      "source_annotation": "left collateral sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5007_left_collateral_sulcus1.vtk",
+      "source_sha256": "1bab7a4da1e5f4a6aa831a47a0db3dbeece5662e462289cb615f008e3ed93388",
+      "source_catalog_id": "#left_collateral_sulcus",
+      "source_data_source_id": "#left_collateral_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode320",
+      "source_storage_node_id": "vtkMRMLModelStorageNode322",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2060,
+      "source_triangles": 4080,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -36.73471450805664,
+          -74.84593963623047,
+          -33.208885192871094
+        ],
+        [
+          -16.147449493408203,
+          11.147494316101074,
+          -14.754657745361328
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 4080,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "3388f8f9454884056d775fa2e500082ce24b60b77fc62f4ab8ad6566b6d5a46e",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2060,
+          "source_type": "int",
+          "source_binary_sha256": "c10519678c683bae39429574de500e48c7f42b6f779117f4e8bc60f43f0745b7",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2060,
+          "source_type": "float",
+          "source_binary_sha256": "373a64ae562805a8eb49f344b10f0555050b64e93d00e78f7ef393b05a2a64b2",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2060,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "4fc096f525f79a9186371ebb716c5ab300167611cffc1cfa0ec093fe2642d691",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5008,
+      "source_annotation": "right collateral sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5008_right_collateral_sulcus1.vtk",
+      "source_sha256": "09b112d19e1743783dd5675503a49038e044bb21e10ca8eb35266cdab1668ec9",
+      "source_catalog_id": "#right_collateral_sulcus",
+      "source_data_source_id": "#right_collateral_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode199",
+      "source_storage_node_id": "vtkMRMLModelStorageNode196",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1360,
+      "source_triangles": 2658,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          33.12062454223633,
+          -50.95526885986328,
+          -36.355003356933594
+        ],
+        [
+          42.275482177734375,
+          6.015560626983643,
+          -23.570262908935547
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 2658,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "4e9940f3972fca895f69db4c64d923a96add161b8a43c5d3902067c284929eea",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1360,
+          "source_type": "int",
+          "source_binary_sha256": "a3d8aebefd2363147dc0d0d478c3995d6c4cce340c66cdca467df6564926479d",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1360,
+          "source_type": "float",
+          "source_binary_sha256": "bb61b6bc3cb57b745b4dc1ffd0a759ab7b5a69cdd69be3b6c02de79e7d8209c2",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1360,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "3127246da747a6627461c5cc287e77ca40fe8a420852c99fcd4a30d98b05c4bc",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5009,
+      "source_annotation": "left inferior frontal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5009_left_inferior_frontal_sulcus1.vtk",
+      "source_sha256": "643416711181ee278fc1722f636734e91042148d2fe0db19e3bd921ae33d83b3",
+      "source_catalog_id": "#left_inferior_frontal_sulcus",
+      "source_data_source_id": "#left_inferior_frontal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode323",
+      "source_storage_node_id": "vtkMRMLModelStorageNode324",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1300,
+      "source_triangles": 2498,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -42.776824951171875,
+          13.556780815124512,
+          19.788013458251953
+        ],
+        [
+          -31.543928146362305,
+          50.903602600097656,
+          35.197776794433594
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 2498,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "fef9f3ba28ca035011dcc92704e7d4373ac6da3648d62d941111bb32988fd16a",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1300,
+          "source_type": "int",
+          "source_binary_sha256": "3ac8e2e5fd535ce727c90bcc0ed4bc6c9ee72d465ab84fa70570722bcd18252e",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1300,
+          "source_type": "float",
+          "source_binary_sha256": "23d8abcdef59770642d265439b5ec3acb42a416754af9c4af07d61f057f0ea59",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1300,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "a9decb013fb3183485e341789ebb77489e8681c4b51785896149d0c3a34438d3",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5010,
+      "source_annotation": "right inferior frontal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5010_right_inferior_frontal_sulcus1.vtk",
+      "source_sha256": "9d15debcdd241c94ff0c596bac3a1ce56849aaaea62c0776e18a09687e9695db",
+      "source_catalog_id": "#right_inferior_frontal_sulcus",
+      "source_data_source_id": "#right_inferior_frontal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode223",
+      "source_storage_node_id": "vtkMRMLModelStorageNode220",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 700,
+      "source_triangles": 1254,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          35.010379791259766,
+          21.245473861694336,
+          1.1194335222244263
+        ],
+        [
+          41.45539474487305,
+          57.904541015625,
+          22.95397186279297
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 1254,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "9eec13e96f8d29594d50963a2b9f44ae65c12c94eb28050ce729a9286aa6e14e",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 700,
+          "source_type": "int",
+          "source_binary_sha256": "8461bc25e84aa6934ea7376cefe83d4bf8f41d3b9f1d7b074fb140706ac1f295",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 700,
+          "source_type": "float",
+          "source_binary_sha256": "d2ac74df3bea238beaf0d27cfbe96020655b67c3012ed2750b4d066cfb652832",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 700,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "80ddc40472b6372c630fc4facd578eae6d32277662fc2b3d686a2c7f006a75bd",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5011,
+      "source_annotation": "left intraparietal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5011_left_intraparietal_sulcus1.vtk",
+      "source_sha256": "66d11eb4a56cb37f9ead0061c4ea35e524b4dea6668e147f0bbfc677f329574e",
+      "source_catalog_id": "#left_intraparietal_sulcus",
+      "source_data_source_id": "#left_intraparietal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode329",
+      "source_storage_node_id": "vtkMRMLModelStorageNode327",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2920,
+      "source_triangles": 5760,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -30.434762954711914,
+          -85.79442596435547,
+          -24.07245445251465
+        ],
+        [
+          -17.031620025634766,
+          -39.87938690185547,
+          23.026742935180664
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 5760,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "c60832f37a37f8a4456da60f2ecd3440454ce78dd7cfa814765b864359b34a97",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2920,
+          "source_type": "int",
+          "source_binary_sha256": "c6a5ae674c37f73c23b0a76aef45a232d9c13b2b9181187fcc3834e846b7c826",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2920,
+          "source_type": "float",
+          "source_binary_sha256": "b3ed506598d08a728c25072b2db7d01a681e02f20b56d230885af21512e173f0",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2920,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "4ac5d2c6e462211ef1311e176f22ffab2645f026ff877ca41bb773fcb293936c",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5012,
+      "source_annotation": "right intraparietal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5012_right_intraparietal_sulcus1.vtk",
+      "source_sha256": "5bdf28014fe6349ed41e1b9100b038f071b4a0bfbbe24218adf0f40cc90b6950",
+      "source_catalog_id": "#right_intraparietal_sulcus",
+      "source_data_source_id": "#right_intraparietal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode224",
+      "source_storage_node_id": "vtkMRMLModelStorageNode221",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1860,
+      "source_triangles": 3618,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          20.801342010498047,
+          -82.82311248779297,
+          -18.973926544189453
+        ],
+        [
+          43.33222198486328,
+          -38.929264068603516,
+          16.72850227355957
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 3618,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "07da876b8545a49796afc8e066d47bfe5d7b789881946a1cbbf507756077d282",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1860,
+          "source_type": "int",
+          "source_binary_sha256": "7680618fd29ab339361715404e979432f48c43c06889a6257c2c25c276647fba",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1860,
+          "source_type": "float",
+          "source_binary_sha256": "f2095879999073416513b82b1ac4a7a28dc09fd0ccdfeec57c982596cb2ac36b",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1860,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "9ea7fdf9beca76c95835dda374cf22e3802ee7138a2ebc53018f4bfebdf8b0ee",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5013,
+      "source_annotation": "left parieto-occipital sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5013_left_parieto-occipital_sulcus1.vtk",
+      "source_sha256": "8718c249a279ac64c77f2e88c85b0496ca1c06a27e5ff58da45b27ee4a2d6eb2",
+      "source_catalog_id": "#left_parieto-occipital_sulcus",
+      "source_data_source_id": "#left_parieto-occipital_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode331",
+      "source_storage_node_id": "vtkMRMLModelStorageNode329",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1040,
+      "source_triangles": 2018,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -18.141321182250977,
+          -81.3058090209961,
+          -11.488935470581055
+        ],
+        [
+          -8.418368339538574,
+          -54.07482147216797,
+          13.583687782287598
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 2018,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "22a854b0efb620adba8797a2ce6fc6a3aae8c0ed906cabeb922e6dce06e0994f",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1040,
+          "source_type": "int",
+          "source_binary_sha256": "3aedb396e82e62f45f4928e17dc4cf5074513b507d62c9948c81624df373530a",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1040,
+          "source_type": "float",
+          "source_binary_sha256": "b1a1f8df66956e971f69817330f614bb740c9ed3409efc991699ba4dd3960b00",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1040,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "044718f7fc2c140c09fd7d1a6fe6d693cde4cc0320539d38d107089ea4aebb13",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5014,
+      "source_annotation": "right parieto-occipital sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5014_right_parieto-occipital_sulcus1.vtk",
+      "source_sha256": "7d510d6fe4bc43972bd0488d364760635b03394db3946ec8573494da519a226c",
+      "source_catalog_id": "#right_parieto-occipital_sulcus",
+      "source_data_source_id": "#right_parieto-occipital_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode311",
+      "source_storage_node_id": "vtkMRMLModelStorageNode309",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1300,
+      "source_triangles": 2538,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          22.845062255859375,
+          -78.56241607666016,
+          -15.250777244567871
+        ],
+        [
+          31.937862396240234,
+          -40.08207321166992,
+          12.016573905944824
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 2538,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "6a66b61d513f8a5795daa416333ebca4ebe06b0825a6069586b97cec16ea1d3c",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1300,
+          "source_type": "int",
+          "source_binary_sha256": "379c864c9d4bb1a02df2515da70cdec174af5c6262d0aac73be0a8515a478539",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1300,
+          "source_type": "float",
+          "source_binary_sha256": "0c1e32c995659241b51b95843ea973edbf9330b10e7338bacfa8c6011c39ef54",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1300,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "3c1945ae8012f3f36d05e5b0fc460bfd7281ca5a954cf10f85f839970d7a0461",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5015,
+      "source_annotation": "left postcentral sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5015_left_postcentral_sulcus1.vtk",
+      "source_sha256": "27ce5195c89ceeedab514d7a932e3d222cfe9c7a5b0d01f23f89470b6102b0a9",
+      "source_catalog_id": "#left_postcentral_sulcus",
+      "source_data_source_id": "#left_postcentral_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode332",
+      "source_storage_node_id": "vtkMRMLModelStorageNode330",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2940,
+      "source_triangles": 5778,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -44.588348388671875,
+          -50.19002914428711,
+          11.046806335449219
+        ],
+        [
+          -2.341585397720337,
+          -15.455058097839355,
+          47.22304916381836
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 5778,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "fa138d8243b74db6e3ae16a48934198a5a2cbdd522eece4d962ac3c1267dd599",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2940,
+          "source_type": "int",
+          "source_binary_sha256": "89af0ebd6c97735cb9c8332009c3c5dc744d9c2cb14042c75ccfe459b8fbe32e",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2940,
+          "source_type": "float",
+          "source_binary_sha256": "c9fb3d92aa4d59432f956c76790e728889c15ca06e438e3457d6b09ee9145ac8",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2940,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "e214d063db30c8b04568d064f0ad0396f9c8043be99c67b80589b4e233be2d5a",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5016,
+      "source_annotation": "right postcentral sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5016_right_postcentral_sulcus1.vtk",
+      "source_sha256": "bbc15b19b9984fb6256f9f148bafb10d1f47f5fc2463f2206c2b50b2ceb27790",
+      "source_catalog_id": "#right_postcentral_sulcus",
+      "source_data_source_id": "#right_postcentral_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode312",
+      "source_storage_node_id": "vtkMRMLModelStorageNode318",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2140,
+      "source_triangles": 4240,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          12.063776016235352,
+          -51.29198455810547,
+          10.068190574645996
+        ],
+        [
+          57.435855865478516,
+          -2.3691418170928955,
+          39.75875473022461
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 4240,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "a9ab3c39b2da2844d8770ce6af2857dc059519d431bacf4619f0fe7a9b7b4ce0",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2140,
+          "source_type": "int",
+          "source_binary_sha256": "f0efc443bc39003def59eb40b40cb7344a915b241bd5406d7c4e6b3a09e4fa51",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2140,
+          "source_type": "float",
+          "source_binary_sha256": "7339515a4b26f6210d50dde8440695e5c58cfaac12919ebd92ac1664cef082c1",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2140,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "0e2dd3630ab9d68c465411cab95ac4fc2fd3360a51c85561881700d94eeecdcf",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5017,
+      "source_annotation": "left precentral sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5017_left_precentral_sulcus1.vtk",
+      "source_sha256": "21646328a5772b6080c133c2083082fabdaf5ba9892a9eaa6a90bababa8cfc3e",
+      "source_catalog_id": "#left_precentral_sulcus",
+      "source_data_source_id": "#left_precentral_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode326",
+      "source_storage_node_id": "vtkMRMLModelStorageNode325",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2100,
+      "source_triangles": 4014,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -50.18107986450195,
+          -23.04741096496582,
+          10.176400184631348
+        ],
+        [
+          -1.6327673196792603,
+          15.276800155639648,
+          55.55875778198242
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 4014,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "907a1569b807908295574d317852381c9f61a726f1975f357022a7ba76de50e3",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2100,
+          "source_type": "int",
+          "source_binary_sha256": "f3ed61283de1c39d04e851755de3d69a91e07350190c5033807f758025c116e0",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2100,
+          "source_type": "float",
+          "source_binary_sha256": "ac491d9abfa4b776efddb74ce2a05d4c0441d9bd126a0ed80aff37ae37086ffa",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2100,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "34b93df8da7309525ffb8806a9835f41c66200fdadf4968ce939b7f28d00f437",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5018,
+      "source_annotation": "right precentral sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5018_right_precentral_sulcus1.vtk",
+      "source_sha256": "d544cee713851b4184aab18af45bb33b2290ef85a9e75a30fcc4c561416c8a3e",
+      "source_catalog_id": "#right_precentral_sulcus",
+      "source_data_source_id": "#right_precentral_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode315",
+      "source_storage_node_id": "vtkMRMLModelStorageNode319",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 1600,
+      "source_triangles": 3014,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          12.591582298278809,
+          -16.766328811645508,
+          15.670936584472656
+        ],
+        [
+          53.37241744995117,
+          20.906532287597656,
+          50.019317626953125
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 3014,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "ac1edeedecc2738774b1d02758aa61ab9871710de2d92dcfd8acd54f6a1fc9eb",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 1600,
+          "source_type": "int",
+          "source_binary_sha256": "5c1a67d35f08ef3a37c3350f78819d02a0227e617918fb48f38fce29f67d9471",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 1600,
+          "source_type": "float",
+          "source_binary_sha256": "4518210968fce72b58471c630be86b3176469c6eae8edc865bd0aee0ec74bc4f",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 1600,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "efec686a7d2e279ff007cee0552166c53f85e0063e8b2b2fd4079e6d1bc739c8",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5019,
+      "source_annotation": "left superior frontal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5019_left_superior_frontal_sulcus1.vtk",
+      "source_sha256": "05fe633e82fc6db31a3d4abaacc8b43a65a02f7f9a8f29b415b822fe5fa61eb9",
+      "source_catalog_id": "#left_superior_frontal_sulcus",
+      "source_data_source_id": "#left_superior_frontal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode155",
+      "source_storage_node_id": "vtkMRMLModelStorageNode152",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2080,
+      "source_triangles": 4120,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -24.967815399169922,
+          -8.23492431640625,
+          33.5263786315918
+        ],
+        [
+          -14.285703659057617,
+          53.02378463745117,
+          47.59069061279297
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 4120,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "e9da1b9cedacad35a72f101ec57fa55393c1f3be9f3d8b2d6b07ff78a85c3b9f",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2080,
+          "source_type": "int",
+          "source_binary_sha256": "1e156db8ee6d0bb9190baaec6af7bd79382b1deb4d95ae7d05e58a5990185b7b",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2080,
+          "source_type": "float",
+          "source_binary_sha256": "6433e95ecf80a156c03ad13b11a9a6e42e7b1f490f1078830d573164f9860381",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2080,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "7e69611f69328033e2b508b72d9000eab29f0231051eff0f93114e8464b74b91",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5020,
+      "source_annotation": "right superior frontal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5020_right_superior_frontal_sulcus1.vtk",
+      "source_sha256": "7c7bb5df70d0bfcc9bc385d1ec4a893adbfab4754dcc34775315c8a9dffafd40",
+      "source_catalog_id": "#right_superior_frontal_sulcus",
+      "source_data_source_id": "#right_superior_frontal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode318",
+      "source_storage_node_id": "vtkMRMLModelStorageNode320",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2020,
+      "source_triangles": 4000,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          15.149045944213867,
+          -20.57410430908203,
+          30.408517837524414
+        ],
+        [
+          39.76610565185547,
+          43.6088981628418,
+          47.9070930480957
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 4000,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "8402c4d480aad29f2708d7ec015eeb193bb746001c63455479a39f1db4663fd2",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2020,
+          "source_type": "int",
+          "source_binary_sha256": "1f7d19c43be81b7391984791839205ec481955762dcdb9afc9cb3ae8a6ae399f",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2020,
+          "source_type": "float",
+          "source_binary_sha256": "75a5ebf04f5ab205c4baac8ef81994244d0f52a71fe7b6b9d919b9e85e8a522a",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2020,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "e24d7634ee6ebfbe0980213e71bcdf7883954ae8ca3c0bb2ba7d84d594a18a22",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5021,
+      "source_annotation": "left superior temporal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5021_left_superior_temporal_sulcus1.vtk",
+      "source_sha256": "1187219fc4cb76025d34870b14c659508f8c2440aad6be3c6c496ea5f55593f2",
+      "source_catalog_id": "#left_superior_temporal_sulcus",
+      "source_data_source_id": "#left_superior_temporal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode157",
+      "source_storage_node_id": "vtkMRMLModelStorageNode154",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2040,
+      "source_triangles": 3978,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          -47.942535400390625,
+          -59.521236419677734,
+          -23.860904693603516
+        ],
+        [
+          -35.93687057495117,
+          16.040918350219727,
+          -1.014204502105713
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 3978,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "74650561938d2d4d679c5fab3f0581017d1b4350a7a4c97b3c0231ee1409feaf",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2040,
+          "source_type": "int",
+          "source_binary_sha256": "502d79032bf68b2ba43b3c7e2d34bb8983e5d1d016408093b94b9ad6c9c11ef1",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2040,
+          "source_type": "float",
+          "source_binary_sha256": "68d63eb83fd01e30d799397592975233bafa4e7f3ee33188f1e005da7043e7f3",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2040,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "86e610abcfb14b99c2768f948b30a3e34d6d935045163768fb9317afd36da6aa",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    },
+    {
+      "value": 5022,
+      "source_annotation": "right superior temporal sulcus",
+      "source_file": "raw/spl_nac/brain-2017-01/models/Model_5022_right_superior_temporal_sulcus1.vtk",
+      "source_sha256": "e5e8b12384916f93b71a99b992ea930369836af538745423cbdc7e397fc758a7",
+      "source_catalog_id": "#right_superior_temporal_sulcus",
+      "source_data_source_id": "#right_superior_temporal_sulcus_ModelDS",
+      "source_model_node_id": "vtkMRMLModelNode319",
+      "source_storage_node_id": "vtkMRMLModelStorageNode321",
+      "source_geometry_authoritative": false,
+      "format": "legacy VTK 4.1 BINARY POLYDATA",
+      "source_point_type": "float32",
+      "source_points": 2040,
+      "source_triangles": 4040,
+      "source_lines": 0,
+      "source_strips": 0,
+      "source_vertex_cells": 0,
+      "all_points_finite": true,
+      "all_faces_original_triangles": true,
+      "degenerate_triangles": 0,
+      "bounds_source_mm": [
+        [
+          38.433265686035156,
+          -43.97398376464844,
+          -29.55559730529785
+        ],
+        [
+          47.32229995727539,
+          25.314119338989258,
+          4.8397016525268555
+        ]
+      ],
+      "source_attributes": [
+        {
+          "association": "cell",
+          "name": "vtkOriginalCellIds",
+          "components": 1,
+          "tuples": 4040,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "40317e3d6c8909678a8300c767f3304e64452101c3840721e3d4a401d89bc7ee",
+          "retained_npz_key": "source_cell_vtkOriginalCellIds"
+        },
+        {
+          "association": "point",
+          "name": "Labels",
+          "components": 1,
+          "tuples": 2040,
+          "source_type": "int",
+          "source_binary_sha256": "502d79032bf68b2ba43b3c7e2d34bb8983e5d1d016408093b94b9ad6c9c11ef1",
+          "retained_npz_key": "source_point_Labels"
+        },
+        {
+          "association": "point",
+          "name": "TubeNormals",
+          "components": 3,
+          "tuples": 2040,
+          "source_type": "float",
+          "source_binary_sha256": "358aa472356c2bdcba5c015ed62c56e89746c35fd7760127f7ef4f6a0047d8a8",
+          "retained_npz_key": "source_point_TubeNormals"
+        },
+        {
+          "association": "point",
+          "name": "vtkOriginalPointIds",
+          "components": 1,
+          "tuples": 2040,
+          "source_type": "vtkIdType",
+          "source_binary_sha256": "4f5a69d3c28c27015c9a46012f373ec060564053a6f79f222e44455612f5ac13",
+          "retained_npz_key": "source_point_vtkOriginalPointIds"
+        }
+      ],
+      "source_transform_applied": false,
+      "canonical_and_unsuffixed_geometry_equal": true,
+      "independent_vtk_reader_points_and_topology_exact": true
+    }
+  ],
+  "source_records": {
+    "source_catalog": {
+      "file": "raw/spl_nac/brain-2017-01/atlasStructure-all.json",
+      "sha256": "7a680bf2529cf6e518474f98eb94be07c55354d0f229425febbf31e366d2f0cf"
+    },
+    "source_scene": {
+      "file": "raw/spl_nac/brain-2017-01/brain-atlas.mrml",
+      "sha256": "023041f947261759fd4bc99ecb841cc2face8a4aad9c8de4ce9629112f5190d4"
+    },
+    "label_table": {
+      "file": "raw/spl_nac/brain-2017-01/labelinfo/hncma-atlas-lut.tsv",
+      "sha256": "9f15a66b83d1088f8d49fdf23a5c40d28dadc84f6c121ded37f511db7e604b70"
+    }
+  },
+  "archive_verified_member_count": 26,
+  "retained_package_geometry_and_all_attributes_verified_against_independent_vtk_reader": [
+    "spl_nac_sulci:object:5001",
+    "spl_nac_sulci:object:5002",
+    "spl_nac_sulci:object:5003",
+    "spl_nac_sulci:object:5004",
+    "spl_nac_sulci:object:5005",
+    "spl_nac_sulci:object:5006",
+    "spl_nac_sulci:object:5007",
+    "spl_nac_sulci:object:5008",
+    "spl_nac_sulci:object:5009",
+    "spl_nac_sulci:object:5010",
+    "spl_nac_sulci:object:5011",
+    "spl_nac_sulci:object:5012",
+    "spl_nac_sulci:object:5013",
+    "spl_nac_sulci:object:5014",
+    "spl_nac_sulci:object:5015",
+    "spl_nac_sulci:object:5016",
+    "spl_nac_sulci:object:5017",
+    "spl_nac_sulci:object:5018",
+    "spl_nac_sulci:object:5019",
+    "spl_nac_sulci:object:5020",
+    "spl_nac_sulci:object:5021",
+    "spl_nac_sulci:object:5022"
+  ],
+  "constructed_package": {
+    "manifest_relative_to_data_root": "derivatives/spl_nac_sulci/0b38777fbd2f9fa1/manifest.json",
+    "package_version": "0b38777fbd2f9fa1",
+    "source_models": 22,
+    "assets": 69,
+    "validation": "fresh asset SHA256 and geometry passed; independent VTK reader confirms every original point, triangle and source attribute; anatomical review not performed"
+  }
+}

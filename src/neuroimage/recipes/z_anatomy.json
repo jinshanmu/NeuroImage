@@ -1,6 +1,6 @@
 {
   "id": "z_anatomy",
-  "version": "1.0.0-detail",
+  "version": "1.1.0-detail",
   "source_version": "9de5d6912a1b0df9cab739d57f00e036b0496ddc",
   "adapter": "blender-source-surfaces",
   "representation": "surface-model",
@@ -59,7 +59,10 @@
     "Source labels for foramina and canals include two-point locator objects, not hole surfaces. They are not included in this surface catalogue. Individual bones provide conceptual skull-base context.",
     "Falx and tentorial model sheets are dural context, not arachnoid membranes or segmented cistern boundaries.",
     "No disease, lesion, clinical decision function, image fusion or blanket expert review is included.",
-    "Additional source nuclear, commissural, limbic and pituitary models retain their original object hierarchy. The combined lentiform object overlaps separate source components; surface extent and low-order model shape do not establish individual microscopic anatomy."
+    "Additional source nuclear, commissural, limbic and pituitary models retain their original object hierarchy. The combined lentiform object overlaps separate source components; surface extent and low-order model shape do not establish individual microscopic anatomy.",
+    "This configuration preserves the earlier 350 source objects unchanged and adds 48 explicitly audited source objects. The source file contains a whole-body model; this bounded inventory covers the current intracranial and cranial-context scope, not every source object or every human anatomical structure.",
+    "Whole-body, dedicated eye/ear/dental/maxillofacial additions, source text/locator objects and unlabelled helper curves are excluded by the recorded source-object audit. Original source-defined surfaces may overlap.",
+    "Telencephalic white matter is a broad tissue model, not a new named tract. Native named sinus surfaces are author-defined skull cavity models, not CT intensities, inferred air masks or new neural tissue."
   ],
   "objects": [
     {
@@ -6111,6 +6114,870 @@
       "notes": [
         "Original Z-Anatomy object with its source-defined boundaries, combined names and laterality. The displayed geometry is an educational model.",
         "The complete source arterial object includes its supplied extracranial-to-cranial course; the project adds no segment partition."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:435fdb5f6d4a",
+      "input": "blend",
+      "source_name": "Anterior temporal branch.l",
+      "name": "Left Anterior temporal branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:ba5d53c7a95e",
+      "input": "blend",
+      "source_name": "Anterior temporal branch.r",
+      "name": "Right Anterior temporal branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:aa9bd7bfeb58",
+      "input": "blend",
+      "source_name": "Artery of central sulcus.l",
+      "name": "Left Artery of central sulcus",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:bfb83a221efa",
+      "input": "blend",
+      "source_name": "Artery of central sulcus.r",
+      "name": "Right Artery of central sulcus",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:72dc4ebb9dc5",
+      "input": "blend",
+      "source_name": "Artery of precentral sulcus.l",
+      "name": "Left Artery of precentral sulcus",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:3246cb7033aa",
+      "input": "blend",
+      "source_name": "Artery of precentral sulcus.r",
+      "name": "Right Artery of precentral sulcus",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:5f9d6d578879",
+      "input": "blend",
+      "source_name": "Branch to angular gyrus.l",
+      "name": "Left Branch to angular gyrus",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:2dcf4a2159a6",
+      "input": "blend",
+      "source_name": "Branch to angular gyrus.r",
+      "name": "Right Branch to angular gyrus",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:2c482f949962",
+      "input": "blend",
+      "source_name": "Distal lateral striate branches.l",
+      "name": "Left Distal lateral striate branches",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:715fc6a833f4",
+      "input": "blend",
+      "source_name": "Distal lateral striate branches.r",
+      "name": "Right Distal lateral striate branches",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:3cbe1ac35fd9",
+      "input": "blend",
+      "source_name": "Lateral frontobasal artery.l",
+      "name": "Left Lateral frontobasal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:16873bf58b66",
+      "input": "blend",
+      "source_name": "Lateral frontobasal artery.r",
+      "name": "Right Lateral frontobasal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:f0bbb58fcb74",
+      "input": "blend",
+      "source_name": "Lateral occipital artery.l",
+      "name": "Left Lateral occipital artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:d053ffd45e3c",
+      "input": "blend",
+      "source_name": "Lateral occipital artery.r",
+      "name": "Right Lateral occipital artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:854dad1ff048",
+      "input": "blend",
+      "source_name": "Medial occipital artery.l",
+      "name": "Left Medial occipital artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:24fee8216732",
+      "input": "blend",
+      "source_name": "Medial occipital artery.r",
+      "name": "Right Medial occipital artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:0824c9249ebb",
+      "input": "blend",
+      "source_name": "Parieto-occipital artery.l",
+      "name": "Left Parieto-occipital artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:0630442ad843",
+      "input": "blend",
+      "source_name": "Parieto-occipital artery.r",
+      "name": "Right Parieto-occipital artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:f86195bf664e",
+      "input": "blend",
+      "source_name": "Postcentral arterial branch.l",
+      "name": "Left Postcentral arterial branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:81a0f5c05e5c",
+      "input": "blend",
+      "source_name": "Postcentral arterial branch.r",
+      "name": "Right Postcentral arterial branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:7bd5060fa9a0",
+      "input": "blend",
+      "source_name": "Posterior parietal artery.l",
+      "name": "Left Posterior parietal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:2876ac27e6ac",
+      "input": "blend",
+      "source_name": "Posterior parietal artery.r",
+      "name": "Right Posterior parietal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:1b816c51b9f4",
+      "input": "blend",
+      "source_name": "Posterior temporal branch.l",
+      "name": "Left Posterior temporal branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:d30a126b9da8",
+      "input": "blend",
+      "source_name": "Posterior temporal branch.r",
+      "name": "Right Posterior temporal branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:7bb45d26d884",
+      "input": "blend",
+      "source_name": "Prefrontal artery.l",
+      "name": "Left Prefrontal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:6b798a0ab07c",
+      "input": "blend",
+      "source_name": "Prefrontal artery.r",
+      "name": "Right Prefrontal artery",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:56e941416bd1",
+      "input": "blend",
+      "source_name": "Proximal lateral striate branches.l",
+      "name": "Left Proximal lateral striate branches",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:0fb7938ede03",
+      "input": "blend",
+      "source_name": "Proximal lateral striate branches.r",
+      "name": "Right Proximal lateral striate branches",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:85c63c4017dc",
+      "input": "blend",
+      "source_name": "Temporo-occipital branch.l",
+      "name": "Left Temporo-occipital branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "left",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:a207ebfe08e3",
+      "input": "blend",
+      "source_name": "Temporo-occipital branch.r",
+      "name": "Right Temporo-occipital branch",
+      "source_type": "CURVE",
+      "category": "Arterial model branches",
+      "laterality": "right",
+      "color": [
+        232,
+        91,
+        98
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source assigns this complete named beveled curve to its arterial collection. The original branch name and all authored curve controls, bevel and sampling resolution are retained; parent-artery segmentation and individual variation are not inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:7fb0559a6684",
+      "input": "blend",
+      "source_name": "Base of peduncle.l",
+      "name": "Left Base of peduncle",
+      "source_type": "MESH",
+      "category": "Cerebellar source model",
+      "laterality": "left",
+      "color": [
+        217,
+        181,
+        104
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source groups Base of peduncle under Superior cerebellar peduncle. Its original abbreviated name and geometry are retained; no crus-cerebri identity or additional tissue boundary is invented."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:4fd61ca6382b",
+      "input": "blend",
+      "source_name": "Base of peduncle.r",
+      "name": "Right Base of peduncle",
+      "source_type": "MESH",
+      "category": "Cerebellar source model",
+      "laterality": "right",
+      "color": [
+        217,
+        181,
+        104
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source groups Base of peduncle under Superior cerebellar peduncle. Its original abbreviated name and geometry are retained; no crus-cerebri identity or additional tissue boundary is invented."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:e1353d1ccb2b",
+      "input": "blend",
+      "source_name": "Lat_Fis-ant-Horizont.l",
+      "name": "Left Lat_Fis-ant-Horizont",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:d3d6a1751ba4",
+      "input": "blend",
+      "source_name": "Lat_Fis-ant-Horizont.r",
+      "name": "Right Lat_Fis-ant-Horizont",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:4c474e902c8b",
+      "input": "blend",
+      "source_name": "Lat_Fis-ant-Vertical.l",
+      "name": "Left Lat_Fis-ant-Vertical",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:e6c9fb686c11",
+      "input": "blend",
+      "source_name": "Lat_Fis-ant-Vertical.r",
+      "name": "Right Lat_Fis-ant-Vertical",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:8ed00c00dc7a",
+      "input": "blend",
+      "source_name": "Lat_Fis-post.l",
+      "name": "Left Lat_Fis-post",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:e04abf27eb22",
+      "input": "blend",
+      "source_name": "Lat_Fis-post.r",
+      "name": "Right Lat_Fis-post",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:befcf83dda1c",
+      "input": "blend",
+      "source_name": "Sulcus interm_prim-Jensen.l",
+      "name": "Left Sulcus interm_prim-Jensen",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "left",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:251c4391450d",
+      "input": "blend",
+      "source_name": "Sulcus interm_prim-Jensen.r",
+      "name": "Right Sulcus interm_prim-Jensen",
+      "source_type": "MESH",
+      "category": "Cerebral cortical source model",
+      "laterality": "right",
+      "color": [
+        181,
+        166,
+        203
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source sulcal surface model with the original author abbreviation retained. It is a supplied sheet, not a newly segmented cortical volume or an annotation line."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:853582468d96",
+      "input": "blend",
+      "source_name": "White matter of telencephalon.l",
+      "name": "Left White matter of telencephalon",
+      "source_type": "MESH",
+      "category": "Cerebral white matter model context",
+      "laterality": "left",
+      "color": [
+        235,
+        225,
+        202
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source whole-tissue white-matter context, not a separately reconstructed tract or a claim of microscopic connectivity."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:06bc214bd4b1",
+      "input": "blend",
+      "source_name": "White matter of telencephalon.r",
+      "name": "Right White matter of telencephalon",
+      "source_type": "MESH",
+      "category": "Cerebral white matter model context",
+      "laterality": "right",
+      "color": [
+        235,
+        225,
+        202
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Source whole-tissue white-matter context, not a separately reconstructed tract or a claim of microscopic connectivity."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:adef6b509aa6",
+      "input": "blend",
+      "source_name": "Parietal bone.l",
+      "name": "Left Parietal bone",
+      "source_type": "MESH",
+      "category": "Skull-base model bones",
+      "laterality": "left",
+      "color": [
+        230,
+        215,
+        180
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "This source parietal bone belongs to the cranial vault. It extends the existing skull-context collection and must not be interpreted as a bone confined to the skull base."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:6196f4850bc8",
+      "input": "blend",
+      "source_name": "Parietal bone.r",
+      "name": "Right Parietal bone",
+      "source_type": "MESH",
+      "category": "Skull-base model bones",
+      "laterality": "right",
+      "color": [
+        230,
+        215,
+        180
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "This source parietal bone belongs to the cranial vault. It extends the existing skull-context collection and must not be interpreted as a bone confined to the skull base."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:30b27b1e0b7f",
+      "input": "blend",
+      "source_name": "Meningeal branch of maxillary nerve.l",
+      "name": "Left Meningeal branch of maxillary nerve",
+      "source_type": "CURVE",
+      "category": "Cranial nerve models",
+      "laterality": "left",
+      "color": [
+        244,
+        210,
+        90
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source explicitly names this meningeal branch of the maxillary nerve. It remains the complete supplied dural branch model; no new cranial-nerve segment partition is inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:141be4914f3a",
+      "input": "blend",
+      "source_name": "Meningeal branch of maxillary nerve.r",
+      "name": "Right Meningeal branch of maxillary nerve",
+      "source_type": "CURVE",
+      "category": "Cranial nerve models",
+      "laterality": "right",
+      "color": [
+        244,
+        210,
+        90
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "The source explicitly names this meningeal branch of the maxillary nerve. It remains the complete supplied dural branch model; no new cranial-nerve segment partition is inferred."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:ebb4e50743b9",
+      "input": "blend",
+      "source_name": "Sinus of frontal bone",
+      "name": "Sinus of frontal bone",
+      "source_type": "MESH",
+      "category": "Skull cavity model context",
+      "laterality": "midline",
+      "color": [
+        192,
+        184,
+        156
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Original author-named bone-sinus surface, independently targeted by the corresponding source septum locator. This is a source model of a skull cavity, not a measured CT air segmentation or new neural tissue."
+      ]
+    },
+    {
+      "id": "z_anatomy:object:0e6c941dc13f",
+      "input": "blend",
+      "source_name": "Sinus of sphenoid bone",
+      "name": "Sinus of sphenoid bone",
+      "source_type": "MESH",
+      "category": "Skull cavity model context",
+      "laterality": "midline",
+      "color": [
+        192,
+        184,
+        156
+      ],
+      "notes": [
+        "The complete original named object, native transform and author viewport geometry are retained without clipping, subdivision, smoothing, new registration or anatomical axis assignment.",
+        "Original author-named bone-sinus surface, independently targeted by the corresponding source septum locator. This is a source model of a skull cavity, not a measured CT air segmentation or new neural tissue."
       ]
     }
   ],

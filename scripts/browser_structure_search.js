@@ -1,6 +1,9 @@
 async page => {
+  // Development-branch reference for the former Local atlases / Data and builds panel.
+  // This historical workflow is not formal acceptance for the current atlas browser.
   const origin = new URL(page.url()).origin, errors = [], external = [], opened = [];
   const assert = (value, message) => { if (!value) throw new Error(message); };
+  const retiredDatasets = ['ixi_mra','hba_native','mesoveins','venat','mouches_arteries'];
   const tag = new URL(page.url()).searchParams.get('acceptance-output') ?? 'development';
   assert(/^[a-z0-9-]{1,48}$/.test(tag), 'Use a filename-safe acceptance tag.');
   page.on('pageerror', error => errors.push(String(error)));
@@ -26,8 +29,15 @@ async page => {
   assert(next.offset === 100 && next.total === broad.total, 'The next result page lost its source count.');
   const ids = new Set(broad.matches.map(item => item.atlas_key + ':' + item.structure_id));
   assert(next.matches.every(item => !ids.has(item.atlas_key + ':' + item.structure_id)), 'Search pages repeat source entries.');
-  const imageOnly = await query('left', () => page.getByLabel('Workspace dataset filter').selectOption('ixi_mra'));
-  assert(imageOnly.total === 0 && imageOnly.offset === 0, 'An image-only source acquired invented structure entries or retained an invalid page.');
+  const filters = page.getByLabel('Workspace dataset filter');
+  assert(await filters.locator('option').evaluateAll((options, retired) =>
+    options.every(option => !retired.includes(option.value)), retiredDatasets),
+    'Structure search still offers a retired source.');
+  assert([...broad.matches,...next.matches].every(item => !retiredDatasets.includes(item.dataset_id)),
+    'Structure search exposes a retired source package.');
+  const filtered = await query('left', () => filters.selectOption('inner_ear_ct_specimen1'));
+  assert(filtered.offset === 0 && filtered.matches.every(item => item.dataset_id === 'inner_ear_ct_specimen1'),
+    'A retained source filter acquired unrelated structures or retained an invalid result page.');
   await query('left', () => page.getByLabel('Workspace dataset filter').selectOption(''));
   const repeated = await query('trigeminal');
   const nerves = repeated.matches.filter(item => item.dataset_id === 'mida');
@@ -38,7 +48,6 @@ async page => {
     {query:'CNIII_L',dataset:'hcp1065_tracts',version:'d646e779e4d93dce'},
     {query:'RN_l',dataset:'brainstem_navigator_mni',version:'f753cbca5de01ac4'},
     {query:'left putamen',dataset:'cerebra',version:'41f2dadc334622e8'},
-    {query:'arterial',dataset:'mouches_arteries',version:'b70c3929aa9c3de0'},
   ];
   const position = () => Promise.all(['R','A','S'].map(axis => page.getByLabel(axis + ' coordinate in millimeters').inputValue().then(Number)));
   const ready = async () => { await page.waitForFunction(() => /^(Ready|Scene saved|Saved scene restored)/.test(document.querySelector('.live-status')?.textContent ?? ''), null, {timeout:90000}); await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))); };
@@ -73,5 +82,5 @@ async page => {
     opened.push({dataset_id:fixture.dataset,package_version:fixture.version,structure_id:match.structure_id,source_position_ras_mm:actual,return_position_ras_mm:await position()});
   }
   assert(!errors.length && !external.length, 'Structure lookup used external services or produced browser errors.');
-  return {status:'passed',broad_results:broad.total,pagination:[broad.matches.length,next.matches.length],historical_trigeminal_versions:nerves.map(item=>item.package_version),image_only_structure_matches:imageOnly.total,opened,page_errors:errors,external_requests:external};
+  return {status:'passed',broad_results:broad.total,pagination:[broad.matches.length,next.matches.length],historical_trigeminal_versions:nerves.map(item=>item.package_version),filtered_structure_matches:filtered.total,opened,page_errors:errors,external_requests:external};
 }

@@ -10,7 +10,7 @@ Local environments, installed applications, caches and machine-specific configur
 
 ## Uniform dataset support
 
-Use one adapter contract for import, atlas construction, viewing and validation. This covers SPL/NAC, MNI, CerebrA, HCP, NextBrain, IXI, MIDA, Brainstem Navigator, BigBrain, Julich and other selected resources. Priority follows anatomical value and implementation needs. Use a common dataset layout and record each license individually.
+Use one adapter contract for import, atlas construction, viewing and validation. This covers enabled sources such as SPL/NAC, MNI/CerebrA, HCP, MIDA, Brainstem Navigator, BigBrain and Julich. NextBrain, IXI MRA, HumanBrainAtlas, Meso-vein MRI, VENAT, the Mouches arterial occurrence atlas, Human Inner Ear CT and the clinical TopCoW/TopBrain cohorts are excluded from current acquisition, construction, discovery and opening. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Archived source definitions are not supported current inputs. Priority follows anatomical value and implementation needs. Use a common dataset layout and record each license individually.
 
 Each resource record contains its exact version, source, acquisition method, required files, geometry conventions, checksums and license evidence. Some providers offer direct downloads; others use an account, application or manual import. The adapter imports an existing lawfully obtained archive without redistributing it. These acquisition differences do not change the dataset's development status.
 

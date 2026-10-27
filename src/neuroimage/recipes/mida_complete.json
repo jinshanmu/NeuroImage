@@ -1,0 +1,677 @@
+{
+  "id": "mida_complete",
+  "adapter": "mida-nifti",
+  "version": "1",
+  "title": "MIDA · complete neurocranial source labels",
+  "representation": "label-model",
+  "construction_peak_gib": 8,
+  "space": {
+    "id": "mida-v1-native",
+    "name": "MIDA v1 native model space",
+    "reference": "Delivered MIDA_v1.nii qform/sform and millimeter units",
+    "correspondence": "Preserve the delivered oblique voxel-to-RAS affine. Original MRI is not distributed. No correspondence to another dataset or to vendor STL coordinates is assumed."
+  },
+  "inputs": {
+    "labels": "raw/mida/MIDA_v1_voxels/MIDA_v1.nii",
+    "label_table": "raw/mida/MIDA_v1_voxels/MIDA_v1.txt",
+    "license": "licenses/mida/license-2024.pdf"
+  },
+  "images": [],
+  "source_version": "MIDA-v1.0-local-archive-sha256-pinned",
+  "require_same_grid": true,
+  "sources": [
+    {
+      "id": "mida",
+      "title": "MIDA anatomical model",
+      "version": "v1.0 voxel distribution; SHA256-pinned user-provided archive",
+      "url": "https://itis.swiss/virtual-population/regional-human-models/mida-model",
+      "citation": "Iacono MI et al. MIDA: A Multimodal Imaging-Based Detailed Anatomical Model of the Human Head and Neck. PLoS ONE 10(4), e0124126 (2015). doi:10.1371/journal.pone.0124126.",
+      "license_name": "ITIS MIDA License 2024",
+      "license_url": "https://itis.swiss/assets/Downloads/VirtualPopulation/License_Agreements/LicenseAgreementMIDA_2024.pdf",
+      "license_input": "license"
+    }
+  ],
+  "selection": [
+    {
+      "value": 1,
+      "source_name": "Dura",
+      "name": "Dura",
+      "category": "Meninges and CSF",
+      "notes": []
+    },
+    {
+      "value": 2,
+      "source_name": "Cerebellum Gray Matter",
+      "name": "Cerebellum gray matter",
+      "category": "Cerebellum",
+      "notes": []
+    },
+    {
+      "value": 3,
+      "source_name": "Pineal Body",
+      "name": "Pineal body",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 4,
+      "source_name": "Amygdala",
+      "name": "Amygdala",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 5,
+      "source_name": "Hippocampus",
+      "name": "Hippocampus",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 6,
+      "source_name": "CSF Ventricles",
+      "name": "Ventricular CSF",
+      "category": "Ventricles",
+      "notes": [
+        "A combined source label represents the ventricular CSF spaces; no separate ventricular subdivision is created."
+      ]
+    },
+    {
+      "value": 7,
+      "source_name": "Caudate Nucleus",
+      "name": "Caudate nucleus",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 8,
+      "source_name": "Putamen",
+      "name": "Putamen",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 9,
+      "source_name": "Cerebellum White Matter",
+      "name": "Cerebellum white matter",
+      "category": "Cerebellum",
+      "notes": []
+    },
+    {
+      "value": 10,
+      "source_name": "Brain Gray Matter",
+      "name": "Brain gray matter",
+      "category": "Cerebral tissue",
+      "notes": [
+        "This source tissue class is not a cortical parcellation or an exhaustive white-matter tract inventory."
+      ]
+    },
+    {
+      "value": 11,
+      "source_name": "Brainstem Midbrain",
+      "name": "Midbrain",
+      "category": "Brainstem",
+      "notes": [
+        "A source-defined region; other separately labelled model structures are excluded from this categorical value."
+      ]
+    },
+    {
+      "value": 12,
+      "source_name": "Brain White Matter",
+      "name": "Brain white matter",
+      "category": "Cerebral tissue",
+      "notes": [
+        "This source tissue class is not a cortical parcellation or an exhaustive white-matter tract inventory."
+      ]
+    },
+    {
+      "value": 14,
+      "source_name": "Brainstem Pons",
+      "name": "Pons",
+      "category": "Brainstem",
+      "notes": [
+        "A source-defined region; other separately labelled model structures are excluded from this categorical value."
+      ]
+    },
+    {
+      "value": 15,
+      "source_name": "Brainstem Medulla",
+      "name": "Medulla",
+      "category": "Brainstem",
+      "notes": [
+        "A source-defined region; other separately labelled model structures are excluded from this categorical value."
+      ]
+    },
+    {
+      "value": 16,
+      "source_name": "Nucleus Accumbens",
+      "name": "Nucleus accumbens",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 17,
+      "source_name": "Globus Pallidus",
+      "name": "Globus pallidus",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 18,
+      "source_name": "Optic Tract",
+      "name": "Optic tract",
+      "category": "Intracranial pathways",
+      "notes": []
+    },
+    {
+      "value": 19,
+      "source_name": "Hypophysis or Pituitary Gland",
+      "name": "Pituitary gland",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 20,
+      "source_name": "Mammillary Body",
+      "name": "Mammillary body",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 21,
+      "source_name": "Hypothalamus",
+      "name": "Hypothalamus",
+      "category": "Deep structures",
+      "notes": []
+    },
+    {
+      "value": 22,
+      "source_name": "Commissura (Anterior)",
+      "name": "Anterior commissure",
+      "category": "Intracranial pathways",
+      "notes": []
+    },
+    {
+      "value": 23,
+      "source_name": "Commissura (Posterior)",
+      "name": "Posterior commissure",
+      "category": "Intracranial pathways",
+      "notes": []
+    },
+    {
+      "value": 24,
+      "source_name": "Blood Arteries",
+      "name": "Arteries (source class)",
+      "category": "Vascular source classes",
+      "notes": [
+        "This whole head-and-neck source class combines vessels and does not provide named arterial branches or venous subdivisions. The complete original extent is retained; it is not an intracranial-only segmentation."
+      ]
+    },
+    {
+      "value": 25,
+      "source_name": "Blood Veins",
+      "name": "Veins (source class)",
+      "category": "Vascular source classes",
+      "notes": [
+        "This whole head-and-neck source class combines vessels and does not provide named arterial branches or venous subdivisions. The complete original extent is retained; it is not an intracranial-only segmentation."
+      ]
+    },
+    {
+      "value": 26,
+      "source_name": "Air Internal - Ethmoidal Sinus",
+      "name": "Ethmoidal sinus air",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 27,
+      "source_name": "Air Internal - Frontal Sinus",
+      "name": "Frontal sinus air",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 29,
+      "source_name": "Air Internal - Sphenoidal Sinus",
+      "name": "Sphenoidal sinus air",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 30,
+      "source_name": "Air Internal - Mastoid",
+      "name": "Mastoid air",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 32,
+      "source_name": "CSF General",
+      "name": "General CSF (source class)",
+      "category": "Meninges and CSF",
+      "notes": [
+        "General source CSF is not a set of separately delineated cisterns. Named cisternal teaching annotations identify regions for discussion, not verified segmentation boundaries or membrane anatomy."
+      ]
+    },
+    {
+      "value": 33,
+      "source_name": "Ear Cochlea",
+      "name": "Cochlea",
+      "category": "Temporal bone context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 34,
+      "source_name": "Ear Semicircular Canals",
+      "name": "Semicircular canals",
+      "category": "Temporal bone context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 40,
+      "source_name": "Skull",
+      "name": "Skull (source class)",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 52,
+      "source_name": "Skull Diploë",
+      "name": "Skull diploe",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 53,
+      "source_name": "Skull Inner Table",
+      "name": "Skull inner table",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 54,
+      "source_name": "Skull Outer Table",
+      "name": "Skull outer table",
+      "category": "Skull-base context",
+      "notes": [
+        "The complete source label is retained as anatomical context. No new skull-base subdivision, foramen boundary or cranial-cavity crop is inferred."
+      ]
+    },
+    {
+      "value": 99,
+      "source_name": "Substantia Nigra",
+      "name": "Substantia nigra",
+      "category": "Brainstem",
+      "notes": []
+    },
+    {
+      "value": 100,
+      "source_name": "Cerebral Peduncles",
+      "name": "Cerebral peduncles",
+      "category": "Brainstem",
+      "notes": []
+    },
+    {
+      "value": 101,
+      "source_name": "Optic Chiasm",
+      "name": "Optic chiasm",
+      "category": "Intracranial pathways",
+      "notes": []
+    },
+    {
+      "value": 102,
+      "source_name": "Cranial Nerve I - Olfactory",
+      "name": "Cranial nerve I - Olfactory",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 103,
+      "source_name": "Cranial Nerve II - Optic",
+      "name": "Cranial nerve II - Optic",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 104,
+      "source_name": "Cranial Nerve III - Oculomotor",
+      "name": "Cranial nerve III - Oculomotor",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 105,
+      "source_name": "Cranial Nerve IV - Trochlear",
+      "name": "Cranial nerve IV - Trochlear",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 106,
+      "source_name": "Cranial Nerve V - Trigeminal",
+      "name": "Cranial nerve V - Trigeminal",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 107,
+      "source_name": "Cranial Nerve V2 - Maxillary Division",
+      "name": "Cranial nerve V2 - Maxillary Division",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 108,
+      "source_name": "Cranial Nerve V3 - Mandibular Division",
+      "name": "Cranial nerve V3 - Mandibular Division",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 109,
+      "source_name": "Cranial Nerve VI - Abducens",
+      "name": "Cranial nerve VI - Abducens",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 110,
+      "source_name": "Cranial Nerve VII - Facial",
+      "name": "Cranial nerve VII - Facial",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 111,
+      "source_name": "Cranial Nerve VIII - Vestibulocochlear",
+      "name": "Cranial nerve VIII - Vestibulocochlear",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 112,
+      "source_name": "Cranial Nerve IX - Glossopharyngeal",
+      "name": "Cranial nerve IX - Glossopharyngeal",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 113,
+      "source_name": "Cranial Nerve X - Vagus",
+      "name": "Cranial nerve X - Vagus",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 114,
+      "source_name": "Cranial Nerve XI - Accessory",
+      "name": "Cranial nerve XI - Accessory",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 115,
+      "source_name": "Cranial Nerve XII - Hypoglossal",
+      "name": "Cranial nerve XII - Hypoglossal",
+      "category": "Cranial nerves",
+      "notes": [
+        "The source label retains its entire delivered course, including any extracranial or cervical portions. It does not separately label cisternal, foraminal or peripheral segments."
+      ]
+    },
+    {
+      "value": 116,
+      "source_name": "Thalamus",
+      "name": "Thalamus",
+      "category": "Deep structures",
+      "notes": [
+        "A source-defined region; other separately labelled model structures are excluded from this categorical value."
+      ]
+    }
+  ],
+  "scope_notes": [
+    "Only the listed source classes are selected. Selected cranial nerves, arteries and veins retain their complete delivered extents, including any extracranial or cervical portions. These context classes are not restricted to the cranial cavity and have no invented side or segment subdivisions. Unselected tissues remain in the preserved original source.",
+    "The original source table contains 116 values, including its background value 50. Values not selected here map to output background 0.",
+    "No synthetic MRI, reflection, registration, smoothing, decimation or artificial subdivision is performed.",
+    "The complete current neurocranial scope contains 53 source classes, including the original ethmoidal and frontal sinus air classes alongside sphenoidal and mastoid air. Remaining source classes cover cervical spinal/vertebral, maxillofacial, eye, ear-specialist, muscle and other extra-intracranial tissues or source background; they remain in the original preserved model and source audit."
+  ],
+  "acquisition": "Run neuroimage acquire mida_complete --data-root <existing-data-root>. Pinned extracted source members are verified and reused first. Otherwise a verified existing MIDA.zip is selectively expanded. If required inputs and the archive are absent, the command gives the official access page, expected size and exact destination; it does not submit an access request.",
+  "archives": [
+    {
+      "dataset_id": "mida",
+      "filename": "MIDA.zip",
+      "url": null,
+      "access_url": "https://doi.org/10.13099/ViP-MIDA-V1.0",
+      "bytes": 483104849,
+      "sha256": "1c8267f9502eab6b3e0375ed86b8b61d13c9b9743fbf46e9f41aa3c6045be214",
+      "hash_basis": "Verified local user-provided archive; not a publisher signature",
+      "members": [
+        {
+          "member": "MIDA_v1_voxels/MIDA_v1.nii",
+          "target": "raw/mida/MIDA_v1_voxels/MIDA_v1.nii",
+          "bytes": 161280352,
+          "sha256": "568ea20d0a9ec81bf772154e608ae98708f4b28f04d0ac241824163ded7b0c01"
+        },
+        {
+          "member": "MIDA_v1_voxels/MIDA_v1.txt",
+          "target": "raw/mida/MIDA_v1_voxels/MIDA_v1.txt",
+          "bytes": 4993,
+          "sha256": "6e5153ed3a8d0ae82e9b9bdfae04a1ff9fa89c10de960b1985f39ec03c33e693"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/mida/license-2024.pdf",
+      "url": "https://itis.swiss/assets/Downloads/VirtualPopulation/License_Agreements/LicenseAgreementMIDA_2024.pdf",
+      "maximum_bytes": 4194304
+    }
+  ],
+  "teaching_sequences": [
+    {
+      "id": "NI-M001",
+      "title": "Deep anatomy and orientation",
+      "structure_ids": [
+        "mida:label:7",
+        "mida:label:8",
+        "mida:label:17",
+        "mida:label:116",
+        "mida:label:6"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M002",
+      "title": "Brainstem and posterior fossa",
+      "structure_ids": [
+        "mida:label:11",
+        "mida:label:14",
+        "mida:label:15",
+        "mida:label:2",
+        "mida:label:9"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M003",
+      "title": "Anterior cranial nerves and visual pathway",
+      "structure_ids": [
+        "mida:label:102",
+        "mida:label:103",
+        "mida:label:101",
+        "mida:label:18"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M004",
+      "title": "Ocular motor nerves and skull context",
+      "structure_ids": [
+        "mida:label:104",
+        "mida:label:105",
+        "mida:label:109",
+        "mida:label:40",
+        "mida:label:29"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M005",
+      "title": "Trigeminal source divisions",
+      "structure_ids": [
+        "mida:label:106",
+        "mida:label:107",
+        "mida:label:108",
+        "mida:label:40"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M006",
+      "title": "Cerebellopontine and lower cranial nerves",
+      "structure_ids": [
+        "mida:label:110",
+        "mida:label:111",
+        "mida:label:112",
+        "mida:label:113",
+        "mida:label:114",
+        "mida:label:115",
+        "mida:label:14",
+        "mida:label:15"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M007",
+      "title": "Arterial and venous source classes",
+      "structure_ids": [
+        "mida:label:24",
+        "mida:label:25",
+        "mida:label:11",
+        "mida:label:14"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M008",
+      "title": "Dura, general CSF and ventricular CSF",
+      "structure_ids": [
+        "mida:label:1",
+        "mida:label:32",
+        "mida:label:6",
+        "mida:label:14"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M009",
+      "title": "Skull layers and central skull-base context",
+      "structure_ids": [
+        "mida:label:40",
+        "mida:label:52",
+        "mida:label:53",
+        "mida:label:54",
+        "mida:label:29",
+        "mida:label:19"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    },
+    {
+      "id": "NI-M010",
+      "title": "Temporal bone and inner-ear context",
+      "structure_ids": [
+        "mida:label:30",
+        "mida:label:33",
+        "mida:label:34",
+        "mida:label:110",
+        "mida:label:111",
+        "mida:label:40"
+      ],
+      "objective": "Identify the delivered model classes and inspect their spatial relationships within the same native anatomy.",
+      "instruction": "Use complete categorical sections before magnification. Change per-structure opacity or isolate a source label to expose context. The full source extent is preserved even where a vessel or nerve continues outside the cranial cavity.",
+      "evidence_limit": "Unreviewed source model; original MRI is unavailable. Many values combine both sides. Whole vascular classes do not identify branches, general CSF does not segment named cisterns, and skull classes do not separately delineate foramina.",
+      "step_prompt": "Locate this source-defined structure in the full available sections, then magnify at the same point and compare the 3D representation.",
+      "step_question": "Which source structure or class is selected, and what does its representation not establish?"
+    }
+  ]
+}

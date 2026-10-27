@@ -1,6 +1,6 @@
 # Native image frames and source skull masks
 
-This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+**Source status as of 24 October 2026:** Meso-vein MRI, HumanBrainAtlas and VENAT are excluded from acquisition, construction, discovery and opening. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). MUG500+ skull labels and meshes remain enabled. Excluded-source commands, storage statements and teaching-validation records below document the earlier implementation; current anatomy browsing is described in [getting started](getting-started.md).
 
 The anatomy browser can display a complete original image, one explicitly selected frame of a source series, or a categorical source mask. These representations share acquisition, construction, validation, navigation, scenes and attributed export interfaces. They do not imply equivalent anatomical evidence.
 

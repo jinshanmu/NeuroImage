@@ -1,0 +1,2657 @@
+{
+  "schema_version": "1",
+  "source_record": "10.6084/m9.figshare.9616319.v20",
+  "expected_healthy_cases": 500,
+  "cases": {
+    "A0102": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0101-A0105.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386211",
+        "bytes": 964272652,
+        "sha256": "26cc84334568fd3ce12504d272e8f8008e7c20efbac581420a69e75d80ca8c62",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 58a27a52d5d8233ee6a76990e6e90f22"
+      },
+      "labels": {
+        "member": "A0101-A0105/A0102/A0102.nrrd",
+        "target": "raw/mug500_healthy/A0102.nrrd",
+        "bytes": 1943364,
+        "sha256": "f53006ba65c7fbfee8bd20e0724dc1719cae841e202d6b895af3dacf4ada80f6"
+      },
+      "stl": {
+        "member": "A0101-A0105/A0102/A0102_clear.stl",
+        "target": "raw/mug500_healthy/A0102_clear.stl",
+        "bytes": 109847084,
+        "sha256": "7a6deed45f4afdae93fe5bd2e3ce0b78051bb7fd508623cc4b86746307134df3"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          297
+        ],
+        "space_directions": [
+          [
+            0.50390625,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.50390625,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -128.748046875,
+          -128.748046875,
+          -111.00000000000006
+        ]
+      }
+    },
+    "A0103": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0101-A0105.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386211",
+        "bytes": 964272652,
+        "sha256": "26cc84334568fd3ce12504d272e8f8008e7c20efbac581420a69e75d80ca8c62",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 58a27a52d5d8233ee6a76990e6e90f22"
+      },
+      "labels": {
+        "member": "A0101-A0105/A0103/A0103.nrrd",
+        "target": "raw/mug500_healthy/A0103.nrrd",
+        "bytes": 1409487,
+        "sha256": "3181158057c489cb15b4d0e40d1529c46e1e48815b2bdb055b489483ac23a7dd"
+      },
+      "stl": {
+        "member": "A0101-A0105/A0103/A0103_clear.stl",
+        "target": "raw/mug500_healthy/A0103_clear.stl",
+        "bytes": 123947034,
+        "sha256": "e827730fb4bb8679e823146e2216057f1481223089eb34e7d81148aa8ab8e06d"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          287
+        ],
+        "space_directions": [
+          [
+            0.4843750000000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4843750000000001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -123.75781250000003,
+          -123.75781250000001,
+          -107.25
+        ]
+      }
+    },
+    "A0104": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0101-A0105.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386211",
+        "bytes": 964272652,
+        "sha256": "26cc84334568fd3ce12504d272e8f8008e7c20efbac581420a69e75d80ca8c62",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 58a27a52d5d8233ee6a76990e6e90f22"
+      },
+      "labels": {
+        "member": "A0101-A0105/A0104/A0104.nrrd",
+        "target": "raw/mug500_healthy/A0104.nrrd",
+        "bytes": 1381884,
+        "sha256": "3342bb00834ca9f6e85e9f7dafef2acce7b2d351969e0376758687b3a3d35164"
+      },
+      "stl": {
+        "member": "A0101-A0105/A0104/A0104_clear.stl",
+        "target": "raw/mug500_healthy/A0104_clear.stl",
+        "bytes": 92496834,
+        "sha256": "e2dcf6a43d38193ae37f4a7fc26c3411e4ed3b02ca9c27eef3ba0dc11b71d1dd"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          331
+        ],
+        "space_directions": [
+          [
+            0.6132812499999999,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6132812499999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7499999999999999
+          ]
+        ],
+        "space_origin": [
+          -156.69335937499997,
+          -156.69335937499994,
+          -123.75
+        ]
+      }
+    },
+    "A0105": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0101-A0105.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386211",
+        "bytes": 964272652,
+        "sha256": "26cc84334568fd3ce12504d272e8f8008e7c20efbac581420a69e75d80ca8c62",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 58a27a52d5d8233ee6a76990e6e90f22"
+      },
+      "labels": {
+        "member": "A0101-A0105/A0105/A0105.nrrd",
+        "target": "raw/mug500_healthy/A0105.nrrd",
+        "bytes": 2069194,
+        "sha256": "c5dc317403559fe5fbe4554d36932d456ef9a0dfc49021c84c909fc718d95c02"
+      },
+      "stl": {
+        "member": "A0101-A0105/A0105/A0105_clear.stl",
+        "target": "raw/mug500_healthy/A0105_clear.stl",
+        "bytes": 110665034,
+        "sha256": "271af02e31998800af792ca413d0a993e1a89a1a57d945c1d56a86f809ad6f4e"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          305
+        ],
+        "space_directions": [
+          [
+            0.45898437499999994,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.45898437499999994,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7499999999999999
+          ]
+        ],
+        "space_origin": [
+          -117.27050781249999,
+          -117.27050781249996,
+          -114.00000000000001
+        ]
+      }
+    },
+    "A0001": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0001/A0001.nrrd",
+        "target": "raw/mug500_healthy/A0001.nrrd",
+        "bytes": 2649408,
+        "sha256": "269837b6347d27dcad3acc22f4e4c0fdfa19232630177a32d93d1dec785a73a2"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0001/A0001_clear.stl",
+        "target": "raw/mug500_healthy/A0001_clear.stl",
+        "bytes": 111450934,
+        "sha256": "63e16826b23816f3b24d3d2a5788467180709760055f93f9270b01cc444ca652"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          320
+        ],
+        "space_directions": [
+          [
+            0.505859375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.505859375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -129.2470703125,
+          -129.2470703125,
+          -119.625
+        ]
+      }
+    },
+    "A0002": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0002/A0002.nrrd",
+        "target": "raw/mug500_healthy/A0002.nrrd",
+        "bytes": 2017647,
+        "sha256": "2429de792774bd790675d60d4462d3314d5184f7a1a5267619c9a4cd5f8e9fa6"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0002/A0002_clear.stl",
+        "target": "raw/mug500_healthy/A0002_clear.stl",
+        "bytes": 120487834,
+        "sha256": "835532490c10dd74242e0d085bc8ca41e91d3246c5a7d65841982c35cdd1eef4"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          274
+        ],
+        "space_directions": [
+          [
+            0.513671875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.513671875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -131.2431640625,
+          -131.2431640625,
+          -65.25000000000004
+        ]
+      }
+    },
+    "A0003": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0003/A0003.nrrd",
+        "target": "raw/mug500_healthy/A0003.nrrd",
+        "bytes": 2241705,
+        "sha256": "220270adc3a5cfde12c9b661ee1c163002165f0201cd3a690a12a7f70196095a"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0003/A0003_clear.stl",
+        "target": "raw/mug500_healthy/A0003_clear.stl",
+        "bytes": 131613984,
+        "sha256": "d60c957ea35c98974f29a30252af3a0bcfb980bd6f5a3df71415fc91f8933492"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          324
+        ],
+        "space_directions": [
+          [
+            0.4765624999999999,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4765624999999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -121.76171874999999,
+          -121.76171874999999,
+          -121.125
+        ]
+      }
+    },
+    "A0004": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0004/A0004.nrrd",
+        "target": "raw/mug500_healthy/A0004.nrrd",
+        "bytes": 3084131,
+        "sha256": "372767458270c6fe2c0f6d41324abda685aa8797381bf97ff71e239ec921447d"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0004/A0004_clear.stl",
+        "target": "raw/mug500_healthy/A0004_clear.stl",
+        "bytes": 126131234,
+        "sha256": "8d22c61ed4d8e0bce03682c4d4daed091a575bc07e5536c694d9778643beebab"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          309
+        ],
+        "space_directions": [
+          [
+            0.455078125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.455078125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -116.2724609375,
+          -116.27246093749997,
+          -115.5
+        ]
+      }
+    },
+    "A0005": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0005/A0005.nrrd",
+        "target": "raw/mug500_healthy/A0005.nrrd",
+        "bytes": 1485080,
+        "sha256": "04c87c52c9e1e6dcc102eae7d9eb2d30f2f3aca1ae2cc33d9af03c27db06c2eb"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0005/A0005_clear.stl",
+        "target": "raw/mug500_healthy/A0005_clear.stl",
+        "bytes": 110023384,
+        "sha256": "b50f2ded43826a97b242fcd2e1c93a70965d841c97e328b2f8224bf810ac7f83"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          293
+        ],
+        "space_directions": [
+          [
+            0.5078125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5078125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -129.74609375,
+          -129.74609375,
+          -109.5
+        ]
+      }
+    },
+    "A0006": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0006/A0006.nrrd",
+        "target": "raw/mug500_healthy/A0006.nrrd",
+        "bytes": 3523324,
+        "sha256": "71245e0daa41a1f7af6ba2af0dcd31ce5260b92fc1625801d126609b937ecf0c"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0006/A0006_clear.stl",
+        "target": "raw/mug500_healthy/A0006_clear.stl",
+        "bytes": 88497384,
+        "sha256": "8181563208c647ef3cbef94a997e1ea896bab10012fb03fe9d6f087703edd7d0"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          480
+        ],
+        "space_directions": [
+          [
+            0.611328125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.611328125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -156.1943359375,
+          -156.1943359375,
+          -179.625
+        ]
+      }
+    },
+    "A0007": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0007/A0007.nrrd",
+        "target": "raw/mug500_healthy/A0007.nrrd",
+        "bytes": 1837474,
+        "sha256": "4f36debdcab0a29574e409414e7a14e5f89cfaea04afa34f3f606d29e2777e41"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0007/A0007_clear.stl",
+        "target": "raw/mug500_healthy/A0007_clear.stl",
+        "bytes": 148853834,
+        "sha256": "dc978a29abbd540cf6310632ece1938e10018b91e3174d899c00e3a7dccd6634"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          378,
+          493,
+          328
+        ],
+        "space_directions": [
+          [
+            0.45703124999999994,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.45703124999999994,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -91.17773437499999,
+          -116.77148437499999,
+          -122.62500000000001
+        ]
+      }
+    },
+    "A0008": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0008/A0008.nrrd",
+        "target": "raw/mug500_healthy/A0008.nrrd",
+        "bytes": 1806876,
+        "sha256": "24da0f69557c1a514a42f834642b41b1bd0450e5003a83e2bb8858a701ebd9a8"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0008/A0008_clear.stl",
+        "target": "raw/mug500_healthy/A0008_clear.stl",
+        "bytes": 99863134,
+        "sha256": "080c1bd2405c9f5aa89c6edc9d51d974aa26f2bd3338fbb50a651c089372efd4"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          319
+        ],
+        "space_directions": [
+          [
+            0.5078125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5078125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -129.74609375,
+          -129.74609375,
+          -119.25000000000003
+        ]
+      }
+    },
+    "A0009": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0009/A0009.nrrd",
+        "target": "raw/mug500_healthy/A0009.nrrd",
+        "bytes": 2256562,
+        "sha256": "01ec7186b70c882749c593a2fc193ceee5031438563b6280664580be507eb2ce"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0009/A0009_clear.stl",
+        "target": "raw/mug500_healthy/A0009_clear.stl",
+        "bytes": 144223284,
+        "sha256": "9befc842298e6737f35a5fe954641136598a186b8684056699d48174621aa698"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          289
+        ],
+        "space_directions": [
+          [
+            0.46484375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.46484375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -118.76757812500003,
+          -118.76757812500004,
+          -108.00000000000003
+        ]
+      }
+    },
+    "A0010": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0001-A0010/A0010/A0010.nrrd",
+        "target": "raw/mug500_healthy/A0010.nrrd",
+        "bytes": 3142920,
+        "sha256": "2106a0d57b9a59ccabdcc5ae8f75da25a4b73197346d31c7caaec82a942649af"
+      },
+      "stl": {
+        "member": "A0001-A0010/A0010/A0010_clear.stl",
+        "target": "raw/mug500_healthy/A0010_clear.stl",
+        "bytes": 163148684,
+        "sha256": "18013ab851a461c4fb25da7377fa86a9235a0cabe877411be038806670e0a6bd"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          304
+        ],
+        "space_directions": [
+          [
+            0.43164062500000006,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.43164062500000006,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -110.28417968750001,
+          -110.28417968750001,
+          -113.62500000000001
+        ]
+      }
+    },
+    "A0011": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0011/A0011.nrrd",
+        "target": "raw/mug500_healthy/A0011.nrrd",
+        "bytes": 906282,
+        "sha256": "fd48b1bdaf4db052a9653d0d15cf4339983c7dab5caf12fea6cdc71662ed28cf"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0011/A0011_clear.stl",
+        "target": "raw/mug500_healthy/A0011_clear.stl",
+        "bytes": 116249234,
+        "sha256": "28039e2dfaf76721599bcaf94937da0ee4218af17bc529b00c43f3b0c4d10c6a"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          314,
+          489,
+          313
+        ],
+        "space_directions": [
+          [
+            0.505859375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.505859375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -80.1787109375,
+          -129.2470703125,
+          -114.37500000000007
+        ]
+      }
+    },
+    "A0012": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0012/A0012.nrrd",
+        "target": "raw/mug500_healthy/A0012.nrrd",
+        "bytes": 2140742,
+        "sha256": "e55977b2098f2e68092b6156695ab6d09d04819bf032cfc034ffc9e8a08480fe"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0012/A0012_clear.stl",
+        "target": "raw/mug500_healthy/A0012_clear.stl",
+        "bytes": 105071134,
+        "sha256": "b76a584fce2bde9016d66cc19e3977222e85090ade2920917adbe4aed5cd6761"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          284
+        ],
+        "space_directions": [
+          [
+            0.53515625,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.53515625,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -136.732421875,
+          -136.73242187500003,
+          -106.12499999999997
+        ]
+      }
+    },
+    "A0013": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0013/A0013.nrrd",
+        "target": "raw/mug500_healthy/A0013.nrrd",
+        "bytes": 2974143,
+        "sha256": "62b8ebdd15be91e9515f35f3fbb734f81cfae4844a47aadf5f4a360bd0a305f2"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0013/A0013_clear.stl",
+        "target": "raw/mug500_healthy/A0013_clear.stl",
+        "bytes": 112625134,
+        "sha256": "2d5f66a85ea259dc1b7fe8761fa7c78ed251f7e1f4cabe1f136c32772d469ac4"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          325
+        ],
+        "space_directions": [
+          [
+            0.43359375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.43359375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -110.783203125,
+          -110.78320312499997,
+          -121.5
+        ]
+      }
+    },
+    "A0014": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0014/A0014.nrrd",
+        "target": "raw/mug500_healthy/A0014.nrrd",
+        "bytes": 905764,
+        "sha256": "36d41468075654e80d9d3f8aaf0a4c0c98b01bfbc578f23f156e123cdec331a0"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0014/A0014_clear.stl",
+        "target": "raw/mug500_healthy/A0014_clear.stl",
+        "bytes": 105334784,
+        "sha256": "5155a0b593d816a97ffaeab78ac75864912b924f48745e4b34e860f9623c153f"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          374,
+          512,
+          287
+        ],
+        "space_directions": [
+          [
+            0.42187500000000006,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.42187500000000006,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -77.83593750000004,
+          -107.78906249999999,
+          -107.25
+        ]
+      }
+    },
+    "A0015": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0015/A0015.nrrd",
+        "target": "raw/mug500_healthy/A0015.nrrd",
+        "bytes": 1844943,
+        "sha256": "503a5481663ce8ae34f35465a75cfb790e0de168b0b4a7e22caa941df2f5c711"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0015/A0015_clear.stl",
+        "target": "raw/mug500_healthy/A0015_clear.stl",
+        "bytes": 121509884,
+        "sha256": "8b283b0dd66b3024473170a524a5643a05f0dc5bcee90913f584af2334d830b7"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          314
+        ],
+        "space_directions": [
+          [
+            0.505859375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.505859375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -129.2470703125,
+          -129.2470703125,
+          -117.37500000000003
+        ]
+      }
+    },
+    "A0016": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0016/A0016.nrrd",
+        "target": "raw/mug500_healthy/A0016.nrrd",
+        "bytes": 2453025,
+        "sha256": "96e356e51c8fa9273574c3d10299283f285d412d18769ee41617025c9729c5ed"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0016/A0016_clear.stl",
+        "target": "raw/mug500_healthy/A0016_clear.stl",
+        "bytes": 115750834,
+        "sha256": "0787e317c7fe3244e5a80b14a9f91fb385d98e3eee71eb41f79e2101ea5c221a"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          395
+        ],
+        "space_directions": [
+          [
+            0.5078125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5078125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -129.74609375,
+          -129.74609375,
+          -147.75
+        ]
+      }
+    },
+    "A0017": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0017/A0017.nrrd",
+        "target": "raw/mug500_healthy/A0017.nrrd",
+        "bytes": 3689024,
+        "sha256": "0f7d1730f87d38f27288b009ca99eb2ac6b1b14c59a5a78f0e7e5af73442222d"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0017/A0017_clear.stl",
+        "target": "raw/mug500_healthy/A0017_clear.stl",
+        "bytes": 100258434,
+        "sha256": "a216264e9d799374d922846c03fb2d716d703adc232300073f2e8257cdd99007"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          393
+        ],
+        "space_directions": [
+          [
+            0.52734375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.52734375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -134.736328125,
+          -134.736328125,
+          -147.00000000000003
+        ]
+      }
+    },
+    "A0018": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0018/A0018.nrrd",
+        "target": "raw/mug500_healthy/A0018.nrrd",
+        "bytes": 1230740,
+        "sha256": "b25420dd30557a7f1d6083ad6cbf1044eb7753a647ff54e7ae7be685954aa61c"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0018/A0018_clear.stl",
+        "target": "raw/mug500_healthy/A0018_clear.stl",
+        "bytes": 90423884,
+        "sha256": "30e294f940028ad8c98c0c75cf9493b9752b96df71f2b24070b993f19eea8d45"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          336
+        ],
+        "space_directions": [
+          [
+            0.572265625,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.572265625,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -146.2138671875,
+          -146.2138671875,
+          -125.625
+        ]
+      }
+    },
+    "A0019": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0019/A0019.nrrd",
+        "target": "raw/mug500_healthy/A0019.nrrd",
+        "bytes": 2558115,
+        "sha256": "78151a32c2ffaa668528a6feb76e4233d7c99b43ada28443a5b09f7ac94a14df"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0019/A0019_clear.stl",
+        "target": "raw/mug500_healthy/A0019_clear.stl",
+        "bytes": 135806734,
+        "sha256": "bf9dcbb6e37e98320c572a5bd70ec5cc61ee94e26cb5cdc02c76f0f5113b2a27"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          312
+        ],
+        "space_directions": [
+          [
+            0.4628906250000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4628906250000001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -118.26855468750004,
+          -118.2685546875,
+          -116.62499999999999
+        ]
+      }
+    },
+    "A0020": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0001-A0020.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/28828353",
+        "bytes": 3921502882,
+        "sha256": "dce0d96e67ce53890a465f92106a97d1802c5512b3cc021291f49c59c5a7448f",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 8fd0ead1013e01abc41bf6899a604c21"
+      },
+      "labels": {
+        "member": "A0011-A0020/A0020/A0020.nrrd",
+        "target": "raw/mug500_healthy/A0020.nrrd",
+        "bytes": 1962359,
+        "sha256": "759c816b9416875e7d3c6d5114adfc27b3f63f1a5ebb4dcc3c0dfb8bc55c5b74"
+      },
+      "stl": {
+        "member": "A0011-A0020/A0020/A0020_clear.stl",
+        "target": "raw/mug500_healthy/A0020_clear.stl",
+        "bytes": 161901884,
+        "sha256": "5cdbe83c0a41f388515a47d61f358bb6808cd0490622de69ad4f85bfe84e645a"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          287
+        ],
+        "space_directions": [
+          [
+            0.4609375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4609375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -117.76953125000003,
+          -117.76953124999997,
+          -107.25000000000003
+        ]
+      }
+    },
+    "A0101": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0101-A0105.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386211",
+        "bytes": 964272652,
+        "sha256": "26cc84334568fd3ce12504d272e8f8008e7c20efbac581420a69e75d80ca8c62",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 58a27a52d5d8233ee6a76990e6e90f22"
+      },
+      "labels": {
+        "member": "A0101-A0105/A0101/A0101.nrrd",
+        "target": "raw/mug500_healthy/A0101.nrrd",
+        "bytes": 1698816,
+        "sha256": "1aeb7c5660c0b064c8b5bcf40a7a7498a50d29d35943a09fc555e5ae4f9cd553"
+      },
+      "stl": {
+        "member": "A0101-A0105/A0101/A0101_clear.stl",
+        "target": "raw/mug500_healthy/A0101_clear.stl",
+        "bytes": 90265284,
+        "sha256": "3c0b3ffc7f9b5306ba83ca5503a8b4b7034599476799d0541743b4b2f8913f42"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          307
+        ],
+        "space_directions": [
+          [
+            0.529296875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.529296875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -135.2353515625,
+          -135.2353515625,
+          -114.75
+        ]
+      }
+    },
+    "A0021": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0021/A0021.nrrd",
+        "target": "raw/mug500_healthy/A0021.nrrd",
+        "bytes": 2474898,
+        "sha256": "1487e00d98dfb046408c8d286d189693088a461725a81edf3a39a208ee6ea876"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0021/A0021_clear.stl",
+        "target": "raw/mug500_healthy/A0021_clear.stl",
+        "bytes": 100536884,
+        "sha256": "7d7e9aff38607a99ca5c16f071b56ef01b4379ec7dc1a1bc55f415cd8b75ed35"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          259
+        ],
+        "space_directions": [
+          [
+            0.44140625,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.44140625,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -112.779296875,
+          -112.77929687499997,
+          -96.75
+        ]
+      }
+    },
+    "A0022": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0022/A0022.nrrd",
+        "target": "raw/mug500_healthy/A0022.nrrd",
+        "bytes": 3257607,
+        "sha256": "26503f5b73f816719b3f1261f6576b3f13ce644a8c7c79ea6d3a4bcb0a3a141d"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0022/A0022_clear.stl",
+        "target": "raw/mug500_healthy/A0022_clear.stl",
+        "bytes": 132503184,
+        "sha256": "48caa5aa7343e04a62042cca2c0ef76217b8445d810b01cd99498b73b26a590a"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          329
+        ],
+        "space_directions": [
+          [
+            0.41015625000000006,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.41015625000000006,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -104.79492187500001,
+          -104.794921875,
+          -123.00000000000001
+        ]
+      }
+    },
+    "A0023": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0023/A0023.nrrd",
+        "target": "raw/mug500_healthy/A0023.nrrd",
+        "bytes": 1627007,
+        "sha256": "d9f8e95b95c0a40a9c6d2025778160db685838121551bec86c4242489fd76064"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0023/A0023_clear.stl",
+        "target": "raw/mug500_healthy/A0023_clear.stl",
+        "bytes": 100631434,
+        "sha256": "ff8a2a85b5528f78611a5bada53d08fc15053346c61f613f20afbae353df4720"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          285
+        ],
+        "space_directions": [
+          [
+            0.6132812499999999,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6132812499999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7499999999999999
+          ]
+        ],
+        "space_origin": [
+          -156.69335937499997,
+          -156.69335937499994,
+          -106.49999999999997
+        ]
+      }
+    },
+    "A0024": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0024/A0024.nrrd",
+        "target": "raw/mug500_healthy/A0024.nrrd",
+        "bytes": 2039763,
+        "sha256": "955543e4c1b75aa71ee29600c882016e5b832133ebe496b01db45639e194359e"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0024/A0024_clear.stl",
+        "target": "raw/mug500_healthy/A0024_clear.stl",
+        "bytes": 134673834,
+        "sha256": "2b8b2eeb10036c556facad9a643981dc58d4ab9b15d1f3238ea76cd08e83f478"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          278
+        ],
+        "space_directions": [
+          [
+            0.45898437499999994,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.45898437499999994,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7499999999999999
+          ]
+        ],
+        "space_origin": [
+          -117.27050781249999,
+          -117.27050781249996,
+          -103.875
+        ]
+      }
+    },
+    "A0025": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0025/A0025.nrrd",
+        "target": "raw/mug500_healthy/A0025.nrrd",
+        "bytes": 3076696,
+        "sha256": "46ec818b4e97118a199861e19afcd3ac90fa0655049241c01987137089425f0f"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0025/A0025_clear.stl",
+        "target": "raw/mug500_healthy/A0025_clear.stl",
+        "bytes": 113561034,
+        "sha256": "1aa81442c60cdacf779cbf7c1abb186f863a5abe70957f0ac25c0fc4abe29709"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          336
+        ],
+        "space_directions": [
+          [
+            0.4921875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4921875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -125.75390625000001,
+          -125.75390624999999,
+          -125.62499999999997
+        ]
+      }
+    },
+    "A0026": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0026/A0026.nrrd",
+        "target": "raw/mug500_healthy/A0026.nrrd",
+        "bytes": 2851362,
+        "sha256": "fa21fb8625ee4ad4c0eea2cdd4385415bbd4f2a46699851424dc0548133a287e"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0026/A0026_clear.stl",
+        "target": "raw/mug500_healthy/A0026_clear.stl",
+        "bytes": 123464434,
+        "sha256": "9a926b9ffecab53867311f18ca0602e6b4c9c8b32ced112b1d47362746829b46"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          291
+        ],
+        "space_directions": [
+          [
+            0.42578124999999994,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.42578124999999994,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -108.787109375,
+          -108.78710937499999,
+          -108.74999999999999
+        ]
+      }
+    },
+    "A0027": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0027/A0027.nrrd",
+        "target": "raw/mug500_healthy/A0027.nrrd",
+        "bytes": 1667461,
+        "sha256": "d47ec2ce59944cffa1dc66a8f8562e4d7d87096d6be540c1a2bd8cb39a34dd80"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0027/A0027_clear.stl",
+        "target": "raw/mug500_healthy/A0027_clear.stl",
+        "bytes": 77972234,
+        "sha256": "bf0c56f2d80dbb554aa93a16cf7827aa2ed4967b2d1b04773019b3f5fd6e0232"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          324
+        ],
+        "space_directions": [
+          [
+            0.587890625,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.587890625,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -150.2060546875,
+          -150.20605468749997,
+          -121.125
+        ]
+      }
+    },
+    "A0028": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0028/A0028.nrrd",
+        "target": "raw/mug500_healthy/A0028.nrrd",
+        "bytes": 2168099,
+        "sha256": "f25feb408fddb2867dab0a88a718ac5296c6f9fda0b63ad9b021886a2bb578b2"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0028/A0028_clear.stl",
+        "target": "raw/mug500_healthy/A0028_clear.stl",
+        "bytes": 100840884,
+        "sha256": "9dff8619085063ea79eaeaa4373344caee69a698bedef9667be11ca2bfe1b5ca"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          321
+        ],
+        "space_directions": [
+          [
+            0.44921875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.44921875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -114.775390625,
+          -114.77539062499999,
+          -120.00000000000003
+        ]
+      }
+    },
+    "A0029": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0029/A0029.nrrd",
+        "target": "raw/mug500_healthy/A0029.nrrd",
+        "bytes": 2808717,
+        "sha256": "62e6eddac93772d80204903cc9b1dafdac376e382d7e5bbfe211d97b5a21e06e"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0029/A0029_clear.stl",
+        "target": "raw/mug500_healthy/A0029_clear.stl",
+        "bytes": 148211484,
+        "sha256": "c9b424b82bf371aedc69526e20e1bf33dbd2269586f904569361f30e5f561ed7"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          277
+        ],
+        "space_directions": [
+          [
+            0.5234375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5234375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7499999999999999
+          ]
+        ],
+        "space_origin": [
+          -133.73828125,
+          -133.73828125,
+          -103.5
+        ]
+      }
+    },
+    "A0030": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0021-A0030.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/31222528",
+        "bytes": 2659770253,
+        "sha256": "ee8d6b9daec5e0907c233d5e17b56da38c34ecfd64cd1f3925305b9a1cc66859",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 895a890c2732e1f96cd9c2c158cb328a"
+      },
+      "labels": {
+        "member": "A0021-A0030/A0030/A0030.nrrd",
+        "target": "raw/mug500_healthy/A0030.nrrd",
+        "bytes": 2396624,
+        "sha256": "d55a1dddbd24af4d74259bce2489282782f880029d323ad41ff89e61cb7bd46a"
+      },
+      "stl": {
+        "member": "A0021-A0030/A0030/A0030_clear.stl",
+        "target": "raw/mug500_healthy/A0030_clear.stl",
+        "bytes": 118152234,
+        "sha256": "ce10c129d32801d1feec0e6b79b15ebc314319beb2fc9743e561eade9bf04d7d"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          272
+        ],
+        "space_directions": [
+          [
+            0.546875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.546875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -139.7265625,
+          -139.7265625,
+          -101.625
+        ]
+      }
+    },
+    "A0031": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0031-A0035.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386103",
+        "bytes": 1051991353,
+        "sha256": "4510217d9705f3898d3575f8a7416650fecc57992ae8b8271055d0d9db1ce475",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 471215a302b4a813fb2b787e92650b27"
+      },
+      "labels": {
+        "member": "A0031-A0035/A0031/A0031.nrrd",
+        "target": "raw/mug500_healthy/A0031.nrrd",
+        "bytes": 2256848,
+        "sha256": "6c6e674852916a7aab98b732d705cc5624fb9cc2886561888fcc24eaa38d744d"
+      },
+      "stl": {
+        "member": "A0031-A0035/A0031/A0031_clear.stl",
+        "target": "raw/mug500_healthy/A0031_clear.stl",
+        "bytes": 105100234,
+        "sha256": "2d9cda053603b55d677c6edde3178900f26944394e24ac5e50a3732e8dab7823"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          320
+        ],
+        "space_directions": [
+          [
+            0.53125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.53125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -135.734375,
+          -135.73437499999994,
+          -119.625
+        ]
+      }
+    },
+    "A0032": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0031-A0035.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386103",
+        "bytes": 1051991353,
+        "sha256": "4510217d9705f3898d3575f8a7416650fecc57992ae8b8271055d0d9db1ce475",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 471215a302b4a813fb2b787e92650b27"
+      },
+      "labels": {
+        "member": "A0031-A0035/A0032/A0032.nrrd",
+        "target": "raw/mug500_healthy/A0032.nrrd",
+        "bytes": 1697937,
+        "sha256": "a82c19e5f9d782c5dcfacd6fc3f57294233ae37d2d0c762f0ca5af2286c4499a"
+      },
+      "stl": {
+        "member": "A0031-A0035/A0032/A0032_clear.stl",
+        "target": "raw/mug500_healthy/A0032_clear.stl",
+        "bytes": 100186684,
+        "sha256": "1cb9b01614f2b7116782ee8b04b5a93e75c7e8105dbc633438aa1f864feaf41a"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          308
+        ],
+        "space_directions": [
+          [
+            0.5703125000000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5703125000000001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -145.71484374999997,
+          -145.71484374999997,
+          -115.12500000000001
+        ]
+      }
+    },
+    "A0033": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0031-A0035.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386103",
+        "bytes": 1051991353,
+        "sha256": "4510217d9705f3898d3575f8a7416650fecc57992ae8b8271055d0d9db1ce475",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 471215a302b4a813fb2b787e92650b27"
+      },
+      "labels": {
+        "member": "A0031-A0035/A0033/A0033.nrrd",
+        "target": "raw/mug500_healthy/A0033.nrrd",
+        "bytes": 1642718,
+        "sha256": "84e6d99f7ae25b8574207a0998ddd03d1a4e921403359afc3adbb2055190c5a7"
+      },
+      "stl": {
+        "member": "A0031-A0035/A0033/A0033_clear.stl",
+        "target": "raw/mug500_healthy/A0033_clear.stl",
+        "bytes": 107678734,
+        "sha256": "85679796f8a4be4abfe6c273333f26ed670b43a06f27bc664cf04610ceaf4921"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          299
+        ],
+        "space_directions": [
+          [
+            0.521484375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.521484375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -133.2392578125,
+          -133.2392578125,
+          -111.75000000000004
+        ]
+      }
+    },
+    "A0034": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0031-A0035.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386103",
+        "bytes": 1051991353,
+        "sha256": "4510217d9705f3898d3575f8a7416650fecc57992ae8b8271055d0d9db1ce475",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 471215a302b4a813fb2b787e92650b27"
+      },
+      "labels": {
+        "member": "A0031-A0035/A0034/A0034.nrrd",
+        "target": "raw/mug500_healthy/A0034.nrrd",
+        "bytes": 2296502,
+        "sha256": "7fd8319c60290f026c398c6032e1b05a3fa18593f4ff4ac3bb7c70f8234fcfe1"
+      },
+      "stl": {
+        "member": "A0031-A0035/A0034/A0034_clear.stl",
+        "target": "raw/mug500_healthy/A0034_clear.stl",
+        "bytes": 111413334,
+        "sha256": "de5c07e13fc339bd24129768186abe09b8dfc5ccf88b0425e279ff4e710a2d8c"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          308
+        ],
+        "space_directions": [
+          [
+            0.537109375,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.537109375,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -137.2314453125,
+          -137.23144531249997,
+          -115.125
+        ]
+      }
+    },
+    "A0035": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0031-A0035.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386103",
+        "bytes": 1051991353,
+        "sha256": "4510217d9705f3898d3575f8a7416650fecc57992ae8b8271055d0d9db1ce475",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 471215a302b4a813fb2b787e92650b27"
+      },
+      "labels": {
+        "member": "A0031-A0035/A0035/A0035.nrrd",
+        "target": "raw/mug500_healthy/A0035.nrrd",
+        "bytes": 2832074,
+        "sha256": "79ce1e0fce1d385b84b500ba45fe86aa3068672586919d0fd774a93d01a2e6e1"
+      },
+      "stl": {
+        "member": "A0031-A0035/A0035/A0035_clear.stl",
+        "target": "raw/mug500_healthy/A0035_clear.stl",
+        "bytes": 126338534,
+        "sha256": "95aca2698e4118eb57a70fef6bd63fd4019a72796654a9115c03d14464c0c29d"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          316
+        ],
+        "space_directions": [
+          [
+            0.42773437500000006,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.42773437500000006,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7499999999999999
+          ]
+        ],
+        "space_origin": [
+          -109.2861328125,
+          -109.2861328125,
+          -118.12500000000003
+        ]
+      }
+    },
+    "A0041": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0041-A0045.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386112",
+        "bytes": 1601085702,
+        "sha256": "92731d7ff09c661aa23b80d7433b2852b616ad2ce915661f21c121342a9bf909",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 81f681a0e566b318b8b548d93c33d3a6"
+      },
+      "labels": {
+        "member": "A0041-A0045/A0041/A0041.nrrd",
+        "target": "raw/mug500_healthy/A0041.nrrd",
+        "bytes": 2743972,
+        "sha256": "6c2e1371a9f82158949511a90f8d6c47c1c2195d65f5e72f4921f97e560fda55"
+      },
+      "stl": {
+        "member": "A0041-A0045/A0041/A0041_clear.stl",
+        "target": "raw/mug500_healthy/A0041_clear.stl",
+        "bytes": 99174134,
+        "sha256": "8911de5a3a9dfd87a20d511f3b66981d6ec29df962955a4f82b1910b28b618de"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          319
+        ],
+        "space_directions": [
+          [
+            0.5078125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5078125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -129.74609375,
+          -129.74609375,
+          -119.25000000000003
+        ]
+      }
+    },
+    "A0042": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0041-A0045.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386112",
+        "bytes": 1601085702,
+        "sha256": "92731d7ff09c661aa23b80d7433b2852b616ad2ce915661f21c121342a9bf909",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 81f681a0e566b318b8b548d93c33d3a6"
+      },
+      "labels": {
+        "member": "A0041-A0045/A0042/A0042.nrrd",
+        "target": "raw/mug500_healthy/A0042.nrrd",
+        "bytes": 2513969,
+        "sha256": "855dfe9677136e8ce965970a96004028974e5f9514b9d4555ebe0dc174c84117"
+      },
+      "stl": {
+        "member": "A0041-A0045/A0042/A0042_clear.stl",
+        "target": "raw/mug500_healthy/A0042_clear.stl",
+        "bytes": 116005384,
+        "sha256": "1d62b2751d1b2303990c4e6589be95bad6913b491818bc9076926c731588008d"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          305
+        ],
+        "space_directions": [
+          [
+            0.4628906250000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4628906250000001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -118.26855468750004,
+          -118.2685546875,
+          -114.00000000000001
+        ]
+      }
+    },
+    "A0043": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0041-A0045.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386112",
+        "bytes": 1601085702,
+        "sha256": "92731d7ff09c661aa23b80d7433b2852b616ad2ce915661f21c121342a9bf909",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 81f681a0e566b318b8b548d93c33d3a6"
+      },
+      "labels": {
+        "member": "A0041-A0045/A0043/A0043.nrrd",
+        "target": "raw/mug500_healthy/A0043.nrrd",
+        "bytes": 3610214,
+        "sha256": "e1b237825b5956ca935b88d1808d7d1c1485f73f9f373da4930341f0d483c627"
+      },
+      "stl": {
+        "member": "A0041-A0045/A0043/A0043_clear.stl",
+        "target": "raw/mug500_healthy/A0043_clear.stl",
+        "bytes": 161468534,
+        "sha256": "80d980cb9fc3fb673ad7030f46708c84b9327f82c539034f7c2d804519ad0cce"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          337
+        ],
+        "space_directions": [
+          [
+            0.44921875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.44921875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -114.775390625,
+          -114.77539062499999,
+          -126.00000000000003
+        ]
+      }
+    },
+    "A0044": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0041-A0045.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386112",
+        "bytes": 1601085702,
+        "sha256": "92731d7ff09c661aa23b80d7433b2852b616ad2ce915661f21c121342a9bf909",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 81f681a0e566b318b8b548d93c33d3a6"
+      },
+      "labels": {
+        "member": "A0041-A0045/A0044/A0044.nrrd",
+        "target": "raw/mug500_healthy/A0044.nrrd",
+        "bytes": 1973743,
+        "sha256": "022335316d9410272d36ff3f3d154938cfd1dabfa12e11b08442684c85898a95"
+      },
+      "stl": {
+        "member": "A0041-A0045/A0044/A0044_clear.stl",
+        "target": "raw/mug500_healthy/A0044_clear.stl",
+        "bytes": 83665584,
+        "sha256": "b8cc8ce98efb5f840f082f1cae04dcf01d6e5fa034533f42403e6b3707602efd"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          317
+        ],
+        "space_directions": [
+          [
+            0.546875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.546875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -139.7265625,
+          -139.7265625,
+          -118.5
+        ]
+      }
+    },
+    "A0045": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0041-A0045.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386112",
+        "bytes": 1601085702,
+        "sha256": "92731d7ff09c661aa23b80d7433b2852b616ad2ce915661f21c121342a9bf909",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 81f681a0e566b318b8b548d93c33d3a6"
+      },
+      "labels": {
+        "member": "A0041-A0045/A0045/A0045.nrrd",
+        "target": "raw/mug500_healthy/A0045.nrrd",
+        "bytes": 2843905,
+        "sha256": "7a1e822a047a83611947696d570e0cb540865d0ab44504e10e5f93cf52efede9"
+      },
+      "stl": {
+        "member": "A0041-A0045/A0045/A0045_clear.stl",
+        "target": "raw/mug500_healthy/A0045_clear.stl",
+        "bytes": 139089634,
+        "sha256": "610b9608c48807fc29676ab0ef4cb66d8742bdce576754e229089ac0c0656654"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          287
+        ],
+        "space_directions": [
+          [
+            0.41210937500000006,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.41210937500000006,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000001
+          ]
+        ],
+        "space_origin": [
+          -105.29394531249999,
+          -105.29394531249999,
+          -107.25
+        ]
+      }
+    },
+    "A0036": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0036-A0040.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386109",
+        "bytes": 1683643030,
+        "sha256": "30a38e51d6936963ea3b9bbb728f9c3f03d894783d892b8677fdc7ff0210886e",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 eab8956053f91bae72584b9a92a6ace5"
+      },
+      "labels": {
+        "member": "A0036-A0040/A0036/A0036.nrrd",
+        "target": "raw/mug500_healthy/A0036.nrrd",
+        "bytes": 2766848,
+        "sha256": "938f105e9ab236336ac0663ac3aa0585a952744547316f596c0e68a9553b8b2c"
+      },
+      "stl": {
+        "member": "A0036-A0040/A0036/A0036_clear.stl",
+        "target": "raw/mug500_healthy/A0036_clear.stl",
+        "bytes": 104047584,
+        "sha256": "59ab77c15aacb3bd9c49092718f7653f4c598ab58316739656d635c8bc2af93e"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          333
+        ],
+        "space_directions": [
+          [
+            0.51953125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.51953125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -132.74023437500003,
+          -132.740234375,
+          -124.5
+        ]
+      }
+    },
+    "A0037": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0036-A0040.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386109",
+        "bytes": 1683643030,
+        "sha256": "30a38e51d6936963ea3b9bbb728f9c3f03d894783d892b8677fdc7ff0210886e",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 eab8956053f91bae72584b9a92a6ace5"
+      },
+      "labels": {
+        "member": "A0036-A0040/A0037/A0037.nrrd",
+        "target": "raw/mug500_healthy/A0037.nrrd",
+        "bytes": 2835279,
+        "sha256": "b13d14cfd00f0e92037360fa5a2c4b6ae651597ac070a730c4089cd48dec48b2"
+      },
+      "stl": {
+        "member": "A0036-A0040/A0037/A0037_clear.stl",
+        "target": "raw/mug500_healthy/A0037_clear.stl",
+        "bytes": 147850234,
+        "sha256": "fa2bf4d1b6008927b008a3f27cc0f4b41933307757cf0ba9ecf639134d922fba"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          304
+        ],
+        "space_directions": [
+          [
+            0.48632812500000006,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.48632812500000006,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7500000000000002
+          ]
+        ],
+        "space_origin": [
+          -124.25683593750001,
+          -124.25683593750001,
+          -113.625
+        ]
+      }
+    },
+    "A0038": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0036-A0040.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386109",
+        "bytes": 1683643030,
+        "sha256": "30a38e51d6936963ea3b9bbb728f9c3f03d894783d892b8677fdc7ff0210886e",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 eab8956053f91bae72584b9a92a6ace5"
+      },
+      "labels": {
+        "member": "A0036-A0040/A0038/A0038.nrrd",
+        "target": "raw/mug500_healthy/A0038.nrrd",
+        "bytes": 3834460,
+        "sha256": "6c83eca131376ba67bbf7f918b83de437e0d269ae47769f43b1f8f87aaeced5d"
+      },
+      "stl": {
+        "member": "A0036-A0040/A0038/A0038_clear.stl",
+        "target": "raw/mug500_healthy/A0038_clear.stl",
+        "bytes": 115106684,
+        "sha256": "183a3c6a81e29a661f42db39640db9dc5726fd48bb8d6e3dc495215bfbb19eeb"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          421
+        ],
+        "space_directions": [
+          [
+            0.54296875,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.54296875,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -138.728515625,
+          -138.728515625,
+          -157.50000000000003
+        ]
+      }
+    },
+    "A0039": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0036-A0040.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386109",
+        "bytes": 1683643030,
+        "sha256": "30a38e51d6936963ea3b9bbb728f9c3f03d894783d892b8677fdc7ff0210886e",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 eab8956053f91bae72584b9a92a6ace5"
+      },
+      "labels": {
+        "member": "A0036-A0040/A0039/A0039.nrrd",
+        "target": "raw/mug500_healthy/A0039.nrrd",
+        "bytes": 3211250,
+        "sha256": "c14e2470d601fb3254c7e1dff1094ebb1f812b9fd115da68ff570dace634607e"
+      },
+      "stl": {
+        "member": "A0036-A0040/A0039/A0039_clear.stl",
+        "target": "raw/mug500_healthy/A0039_clear.stl",
+        "bytes": 159502434,
+        "sha256": "509f94d1550dc42b50b22b239a3c07b46da0a0b40bd9b2dafe93541bdcfbc276"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          383
+        ],
+        "space_directions": [
+          [
+            0.470703125,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.470703125,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.75
+          ]
+        ],
+        "space_origin": [
+          -120.2646484375,
+          -120.2646484375,
+          -143.25
+        ]
+      }
+    },
+    "A0040": {
+      "archive": {
+        "dataset_id": "mug500_healthy",
+        "filename": "A0036-A0040.zip",
+        "format": "zip",
+        "url": "https://ndownloader.figshare.com/files/32386109",
+        "bytes": 1683643030,
+        "sha256": "30a38e51d6936963ea3b9bbb728f9c3f03d894783d892b8677fdc7ff0210886e",
+        "hash_basis": "SHA256 of official version-20 archive verified against publisher MD5 eab8956053f91bae72584b9a92a6ace5"
+      },
+      "labels": {
+        "member": "A0036-A0040/A0040/A0040.nrrd",
+        "target": "raw/mug500_healthy/A0040.nrrd",
+        "bytes": 2224467,
+        "sha256": "23f9813e8a35ab561a398321a4408a140566f139b47b2490293c5df6b6d692b2"
+      },
+      "stl": {
+        "member": "A0036-A0040/A0040/A0040_clear.stl",
+        "target": "raw/mug500_healthy/A0040_clear.stl",
+        "bytes": 126248784,
+        "sha256": "d34318110f90e3ec29f737c73c18d4125bae98fdd3ba09050dfac1e86e5bc5a4"
+      },
+      "label_header": {
+        "space": "left-posterior-superior",
+        "sizes": [
+          512,
+          512,
+          310
+        ],
+        "space_directions": [
+          [
+            0.4882812499999999,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.4882812499999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7499999999999998
+          ]
+        ],
+        "space_origin": [
+          -124.75585937499997,
+          -124.75585937499997,
+          -115.87499999999999
+        ]
+      }
+    }
+  }
+}

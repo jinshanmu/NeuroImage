@@ -64,7 +64,7 @@ A dry run performs no download or construction. The individual `acquire`, `build
 
 MIDA uses its official manual access workflow. A dry run supplies the exact archive name, destination, byte count and checksum. Obtain the unchanged archive through that page, save it at the reported destination and repeat the command. Download failures from any publisher retain partial files for a later retry. See the [source table](dataset-installation.md).
 
-Blender is a separate application required only to construct Z-Anatomy; install the recipe's recorded Blender version and make `blender` available on `PATH`. Its embedded Python is separate from the NeuroImage Conda environment. The installed wheel includes the optional HDF5 dependency when installed through this script, supporting original inner-ear CT construction. Viewing an existing atlas needs neither Blender nor original-source inspection tools.
+Blender is a separate application required only to construct Z-Anatomy; install the recipe's recorded Blender version and make `blender` available on `PATH`. Its embedded Python is separate from the NeuroImage Conda environment. The installer also retains optional source-inspection dependencies for development fixtures; these do not enable excluded datasets. Viewing an existing atlas needs neither Blender nor original-source inspection tools.
 
 ## Diagnose and recover
 

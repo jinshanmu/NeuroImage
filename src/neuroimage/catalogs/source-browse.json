@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "retired_parallel_recipes": {
+    "mida_complete": "mida",
+    "z_anatomy_complete": "z_anatomy",
+    "spl_nac_complete": "spl_nac"
+  },
+  "source_menu_aliases": {
+    "spl_nac_sulci": "spl_nac",
+    "brainstem_navigator_iit": "brainstem_navigator_mni"
+  }
+}

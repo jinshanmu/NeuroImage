@@ -1,4 +1,15 @@
 include config/anatomy-release-1.0.0.json
+include config/anatomy-source-completion-2026-10-26.json
+include config/canonical-source-consolidation-2026-10-26.json
+include config/source-recipe-history/mida-3.json config/source-recipe-history/z_anatomy-1.0.0-detail.json
+include config/source-history/spl_nac-v1.json
+include config/spl-nac-canonical-integration-2026-10-26.json
+include src/neuroimage/catalogs/source-browse.json
+include config/thu-mra-verification-2026-10-26.json config/spl-nac-source-inventory-2026-10-26.json
+include config/brainstem-navigator-iit-source-inventory-2026-10-26.json config/mida-source-eligibility-2026-10-26.json
+include config/z-anatomy-complete-scope-2026-10-26.json
+include config/spl-nac-sulci-source-inventory-2026-10-26.json
+include scripts/prepare_thu_mra_cases.py scripts/complete_mug500_cases.py
 include install.sh scripts/install_linux.py
 include config/storage-portable.json
 include CODE_OF_CONDUCT.md GOVERNANCE.md PRIVACY.md

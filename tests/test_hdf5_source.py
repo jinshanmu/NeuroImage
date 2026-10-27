@@ -1,5 +1,4 @@
 """Check exact CT sampling, explicit modality and independently known HDF5 axes."""
-import copy
 import json
 import nibabel as nib
 import numpy as np
@@ -81,17 +80,39 @@ def test_complete_ct_pipeline_contract_and_resume(source, monkeypatch, capsys, s
                 [.00018273917609080796, -.00017676057042150876, .09863248483007425]]
     root = path.parent
     (root / "license.txt").write_text("Generated code-only test fixture, CC0.\n")
-    recipe = copy.deepcopy(adapters.load_recipe("inner_ear_ct_specimen1"))
-    recipe.update(id="ct_fixture", title="Generated CT pipeline fixture", teaching_sequences=[],
-                  inputs={"ct": path.name, "labels": path.name, "license": "license.txt"},
-                  hdf5_volumes={"ct": spec, "labels": {**spec, "dataset": "label/label-0"}},
-                  selection=[{"value": value, "source_name": name, "name": name,
-                              "category": "Fixture", "color": [255, 102, 51], "evidence": "Generated fixture"}
-                             for value, name in [(1, "First"), (2, "Second")]])
+    recipe = {
+        "id": "ct_fixture", "title": "Generated CT pipeline fixture", "version": "synthetic-v1",
+        "description": "Independent generated HDF5 image and two geometric label regions; no human source data.",
+        "adapter": "source-hdf5-ct-labels", "representation": "ct-labels", "teaching_sequences": [],
+        "space": {"id": "synthetic-hdf5-native", "name": "Generated non-axial fixture grid",
+                  "reference": "Independently generated test coordinates.",
+                  "correspondence": "Only the generated image and labels share this fixture grid."},
+        "inputs": {"ct": path.name, "labels": path.name, "license": "license.txt"},
+        "hdf5_volumes": {"ct": spec, "labels": {**spec, "dataset": "label/label-0"}},
+        "require_same_grid": True, "require_full_label_inventory": True,
+        "images": [{"id": "ct", "name": "Generated CT samples", "image_evidence": {
+            "modality": "CT", "source_input": "ct", "source_dataset": "raw/raw-0",
+            "intensity_units": "Generated signed integer samples",
+            "calibration": "Synthetic samples without a physical HU calibration.",
+            "acquisition": "Generated test voxel array; no scanner or participant.",
+            "sampling": "Explicit synthetic grid from the fixture attributes.",
+        }}],
+        "sources": [{"id": "synthetic_ct_fixture", "title": "Generated HDF5 test data",
+                     "version": "synthetic-v1", "url": "https://example.org/synthetic-ct-fixture",
+                     "citation": "Independent generated geometric test data; no anatomical acquisition.",
+                     "license_name": "CC0", "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                     "license_input": "license"}],
+        "selection": [{"value": value, "source_name": name, "name": name,
+                       "category": "Fixture", "color": [255, 102, 51], "evidence": "Generated fixture"}
+                      for value, name in [(1, "First"), (2, "Second")]],
+        "scope_notes": ["Generated test geometry does not represent human anatomy."],
+    }
     monkeypatch.setattr(adapters, "load_recipe", lambda _: recipe)
     manifest_path = build_atlas("ct_fixture", root, minimum_free_gib=0)
     manifest = validate_package(manifest_path)
     assert manifest.schema_version == "1.10" and manifest.representation == "ct-labels"
+    assert manifest.dataset_id == "ct_fixture" and manifest.space.id == "synthetic-hdf5-native"
+    assert [source.id for source in manifest.sources] == ["synthetic_ct_fixture"]
     for volume in manifest.volumes:
         actual = nib.load(manifest_path.parent / volume.file)
         assert np.array_equal(actual.dataobj, labels if volume.kind == "labels" else image)

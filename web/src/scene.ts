@@ -1,20 +1,21 @@
 import { processingRecord } from './provenance'
 import type { Manifest, SceneFile, ViewState } from './types'
 import { validateCutaway } from './cutaway'
-import { scopedStructures, validSurfaceContext } from './atlasBackground'
+import { validSurfaceContext } from './atlasBackground'
 import type { AnatomyScope } from './anatomyNavigation'
 
 export function initialState(manifest: Manifest, scope?: AnatomyScope): ViewState {
-  const structures = scopedStructures(manifest.structures, scope)
-  const first = structures.find(s => s.name.toLowerCase().includes('left caudate')) ?? structures.find(s => s.name.toLowerCase().includes('caudate')) ?? structures[0] ?? manifest.structures[0]
+  const group = scope?.structure_ids.length ? new Set(scope.structure_ids) : null
+  const structures = group ? manifest.structures.filter(structure => group.has(structure.id)) : manifest.structures
+  const first = structures[0] ?? manifest.structures[0]
   const model = manifest.representation === 'label-model'
   const streamlines = manifest.representation === 'mri-streamlines'
   const ct = manifest.representation === 'ct-labels'
   const background = manifest.volumes.find(v => v.kind === (model ? 'labels' : manifest.representation === 'scalar-fields' ? 'scalar' : 'image'))!
   if (['mri-volume', 'scalar-fields'].includes(manifest.representation ?? '')) {
     const position = background.affine_ras_mm.slice(0, 3).map(row => row[3] + background.shape.reduce((sum, size, i) => sum + row[i] * (size - 1) / 2, 0)) as ViewState['position']
-    return { selected: null, visible: [], position, background: background.id, overlay: 'none', labelOpacity: 0, meshOpacity: 1,
-      radiological: true, layout: 'quad', tileLayout: 'auto', camera: [110, 15, .8], pan: [0, 0, 0, 1], imageContext: !scope || scope.id === 'general-anatomy',
+    return { selected: null, visible: [], position, background: background.id, overlay: 'none', labelOpacity: 0, meshOpacity: .5,
+      radiological: true, layout: 'quad', tileLayout: 'auto', camera: [110, 15, .8], zoom3D: 1, pan: [0, 0, 0, 1], imageContext: !scope || scope.id === 'general-anatomy',
       background2D: true, backgroundOpacity2D: 1, backgroundOpacity3D: !scope || scope.id === 'general-anatomy' ? 1 : .2,
       window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '',
       selectionEvidence: { kind: 'image-cursor', candidates: [] } }
@@ -23,13 +24,13 @@ export function initialState(manifest: Manifest, scope?: AnatomyScope): ViewStat
   const imageSpan = Math.max(...background.shape.map((size, i) => size * background.voxel_size_mm[i]))
   const regionZoom = Math.max(1.4, Math.min(8, imageSpan / (2 * regionSpan)))
   return { selected: structures.length ? first.id : null, visible: structures.map(s => s.id), position: [...first.target_ras_mm],
-    background: background.id, overlay: streamlines ? 'streamlines' : first.probability ? 'probability' : 'labels', labelOpacity: model || streamlines ? 1 : .45, meshOpacity: 1, radiological: true, layout: 'quad', tileLayout: 'auto',
-    camera: [110, 15, model && regionSpan > .6 * imageSpan ? .8 : streamlines ? 1.4 : manifest.representation === 'mri-regions' ? regionZoom : 2],
+    background: background.id, overlay: streamlines ? 'streamlines' : first.probability ? 'probability' : 'labels', labelOpacity: .5, meshOpacity: .5, radiological: true, layout: 'quad', tileLayout: 'auto',
+    camera: [110, 15, model && regionSpan > .6 * imageSpan ? .8 : streamlines ? 1.4 : manifest.representation === 'mri-regions' ? regionZoom : 2], zoom3D: 1,
     pan: [0, 0, 0, 1], imageContext: false, fitVisible3D: true,
     background2D: true, backgroundOpacity2D: 1, backgroundOpacity3D: .2,
-    window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '', selectionEvidence: { kind: 'source-target', candidates: [first.id] },
+    window: [background.cal_min, background.cal_max], annotations: [], showMarkers: true, note: '', selectionEvidence: { kind: 'source-target', candidates: structures.length ? [first.id] : [] },
     ...(manifest.representation === 'mri-regions' ? { focus3D: [...first.target_ras_mm] as typeof first.target_ras_mm } : {}),
-    ...(ct ? { show3DCursor: false, labelOpacity: .18 } : {}),
+    ...(ct ? { showCursor: false } : {}),
     ...(streamlines ? { streamlineLevel: 'standard', streamlineSlabMm: 1 } : {}) }
 }
 export function makeScene(manifest: Manifest, state: ViewState, title = 'Anatomy scene'): SceneFile {
@@ -51,7 +52,8 @@ export function readScene(input: unknown, manifest: Manifest): SceneFile {
     throw new Error('This scene belongs to a different atlas version or native space. Open its matching package first.')
   const s = scene.state, ids = new Set(manifest.structures.map(x => x.id))
   if (!s || !Array.isArray(s.visible) || s.visible.length > ids.size || new Set(s.visible).size !== s.visible.length || s.visible.some(x => !ids.has(x)) || (s.selected !== null && !ids.has(s.selected))) throw new Error('Scene contains unknown or duplicate structures.')
-  if (!finiteArray(s.position, 3) || !finiteArray(s.camera, 3) || !finiteArray(s.pan, 4) || !finiteArray(s.window, 2) || s.window[0] >= s.window[1] || s.camera[2] < .1 || s.camera[2] > 20 || s.pan[3] < .1 || s.pan[3] > 20) throw new Error('Scene has invalid coordinates, camera or window settings.')
+  if (!finiteArray(s.position, 3) || !finiteArray(s.camera, 3) || !finiteArray(s.pan, 4) || !finiteArray(s.window, 2) || s.window[0] >= s.window[1] || s.camera[2] < .1 || s.camera[2] > (s.zoom3D === undefined ? 20 : 200) || s.pan[3] < .1 || s.pan[3] > 20) throw new Error('Scene has invalid coordinates, camera or window settings.')
+  if (s.zoom3D !== undefined && (typeof s.zoom3D !== 'number' || !Number.isFinite(s.zoom3D) || s.zoom3D < 1 || s.zoom3D > 10 || Math.abs(s.zoom3D * 10 - Math.round(s.zoom3D * 10)) > 1e-8)) throw new Error('Scene has an invalid 3D zoom factor.')
   if (s.tileLayout !== undefined && !['auto', 'grid', 'row'].includes(s.tileLayout)) throw new Error('Scene has an invalid image panel layout.')
   if (s.focus3D !== undefined && !finiteArray(s.focus3D, 3)) throw new Error('Scene has an invalid physical 3D focus.')
   if (s.fitVisible3D !== undefined && typeof s.fitVisible3D !== 'boolean') throw new Error('Scene has an invalid 3D fitting setting.')
@@ -67,6 +69,7 @@ export function readScene(input: unknown, manifest: Manifest): SceneFile {
   if (s.selectionEvidence?.kind === 'independent-mask' && manifest.representation !== 'mri-regions') throw new Error('Independent memberships require independent source regions.')
   if (s.selectionEvidence?.sectionAxis !== undefined && (s.selectionEvidence.kind !== 'visible-streamline' || ![0, 1, 2].includes(s.selectionEvidence.sectionAxis))) throw new Error('Scene has an invalid streamline selection section.')
   if (s.showMarkers !== undefined && typeof s.showMarkers !== 'boolean') throw new Error('Scene has an invalid marker visibility setting.')
+  if (s.showCursor !== undefined && typeof s.showCursor !== 'boolean') throw new Error('Scene has an invalid cursor visibility setting.')
   if (s.show3DCursor !== undefined && typeof s.show3DCursor !== 'boolean') throw new Error('Scene has an invalid 3D cursor visibility setting.')
   if (s.surfaceOpacity !== undefined && (!s.surfaceOpacity || typeof s.surfaceOpacity !== 'object' || Array.isArray(s.surfaceOpacity) ||
       Object.entries(s.surfaceOpacity).some(([id, value]) => !ids.has(id) || typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 1)))

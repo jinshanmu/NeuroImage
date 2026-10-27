@@ -1,7 +1,38 @@
 import type { Structure, Vec3, ViewState, Volume } from './types'
 
-export function equalAnatomyPanels(width: number, height: number): number[][] {
-  return Array.from({length: 4}, (_, index) => [index * width / 4, 0, width / 4, height])
+export const FULL_CONTEXT_3D_SCALE = .8
+
+/** Shared 1–10 magnification contract for range, wheel and restored controls. */
+export function zoomFactor(value: number): number {
+  return Math.round(Math.max(1, Math.min(10, Number.isFinite(value) ? value : 1)) * 10) / 10
+}
+
+/** The native fitted scale is a base, not a previously magnified camera value. */
+export function zoomScale3D(base: number, factor: number): number {
+  return base * zoomFactor(factor)
+}
+
+export function zoomFactor3D(scale: number, base: number): number {
+  return zoomFactor(scale / base)
+}
+
+/** Older scenes retain raw camera scales until the user changes magnification. */
+export function viewZoom3D(state: Pick<ViewState, 'zoom3D' | 'fitVisible3D' | 'camera'>): number {
+  return state.zoom3D !== undefined ? zoomFactor(state.zoom3D)
+    : state.fitVisible3D ? 1 : zoomFactor3D(state.camera[2], FULL_CONTEXT_3D_SCALE)
+}
+
+/** Use the formal viewer's convention without rewriting a historical scene. */
+export function radiologicalView(state: ViewState): ViewState {
+  return state.radiological ? state : { ...state, radiological: true }
+}
+
+/** Adapt retired display modes at runtime while leaving stored scenes intact. */
+export function atlasDisplayView(state: ViewState): ViewState {
+  const current = radiologicalView(state)
+  return current.layout === 'anatomy'
+    ? { ...current, layout: 'quad', tileLayout: 'row', fitVisible3D: current.fitVisible3D ?? true }
+    : current
 }
 
 /** Fit all source-bound corners inside the current orthographic camera frustum. */

@@ -13,6 +13,20 @@ from neuroimage.build import atomic_json, sha256, utc_now
 from neuroimage.validation import validate_package
 
 
+def landmark_observation(ident, point, image, declared_outside):
+    """Retain delivered crop-external points only when the source inventory agrees."""
+    voxel = np.asarray(image.TransformPhysicalPointToContinuousIndex(tuple(point * [-1, -1, 1])))
+    inside = bool(np.all(voxel >= -.5) and np.all(voxel <= np.asarray(image.GetSize()) - .5))
+    if not inside:
+        evidence = next((item for item in declared_outside if item['id'] == ident), None)
+        if evidence is None or not (np.allclose(point, evidence['ras_mm'], rtol=0, atol=1e-8)
+                and np.allclose(voxel, evidence['original_voxel_index'], rtol=0, atol=1e-8)):
+            raise ValueError('Original landmark falls outside its paired source image without matching source evidence')
+    return {'id': ident, 'ras_mm': point.tolist(), 'original_voxel_index': voxel.tolist(),
+            'inside_source_image': inside,
+            'distance_to_voxel_center_mm': float(np.linalg.norm((voxel - np.rint(voxel)) * image.GetSpacing()))}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--data-root', required=True, type=Path)
@@ -24,6 +38,10 @@ def main():
     recipe = manifest.build['recipe']
     if recipe['adapter'] != 'source-mri-label-volume' or recipe['sources'][0]['id'] != 'thu_cerebral_mra':
         raise ValueError('Select an original THU healthy-volunteer MRA package')
+    for archive in recipe['archives']:
+        for member in archive['members']:
+            if sha256(root / member['target']) != member['sha256']:
+                raise ValueError('Original source bytes differ from the pinned archive: ' + member['target'])
     checks = []
     sources = {}
     for key in ['mra', 'labels']:
@@ -59,13 +77,11 @@ def main():
     points = {int(row[11].split('-')[-1]): np.array(list(map(float, row[1:4])))
               for row in csv.reader(line for line in landmark_text.splitlines() if not line.startswith('#'))}
     image, labels = sources['labels']
-    landmark_checks = []
-    for ident, point in points.items():
-        voxel = np.asarray(image.TransformPhysicalPointToContinuousIndex(tuple(point * [-1, -1, 1])))
-        if np.any(voxel < -.5) or np.any(voxel > np.asarray(image.GetSize()) - .5):
-            raise ValueError('Original landmark falls outside its paired source image')
-        landmark_checks.append({'id': ident, 'ras_mm': point.tolist(), 'original_voxel_index': voxel.tolist(),
-                                'distance_to_voxel_center_mm': float(np.linalg.norm((voxel - np.rint(voxel)) * image.GetSpacing()))})
+    declared_outside = recipe['source_case'].get('landmarks_outside_image', [])
+    landmark_checks = [landmark_observation(ident, point, image, declared_outside) for ident, point in points.items()]
+    observed_outside = [item for item in landmark_checks if not item['inside_source_image']]
+    if {item['id'] for item in observed_outside} != {item['id'] for item in declared_outside}:
+        raise ValueError('Source crop-external landmark inventory differs from original coordinates')
     catalog_path = Path(__file__).resolve().parents[1] / 'src/neuroimage/catalogs/thu-cerebral-mra-segments.json'
     catalog = json.loads(catalog_path.read_text())
     correspondence = []
@@ -83,6 +99,8 @@ def main():
               'package_version': manifest.package_version, 'manifest_sha256': sha256(args.manifest),
               'verifier_sha256': sha256(Path(__file__)), 'voxel_checks': checks,
               'same_original_image_and_label_grid': True, 'landmark_checks': landmark_checks,
+              'all_source_landmarks_inside_image': not observed_outside,
+              'preserved_source_landmarks_outside_crop': observed_outside,
               'correspondence_catalog_sha256': sha256(catalog_path), 'endpoint_observations': correspondence,
               'name_correspondence_status': catalog['status'],
               'scope': 'Engineering preservation of source samples and physical coordinates; name interpretation and introductory teaching suitability are reviewed separately.'}

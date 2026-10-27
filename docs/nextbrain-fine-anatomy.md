@@ -1,6 +1,6 @@
 # NextBrain native fine anatomy
 
-This source guide includes historical teaching-validation records. Curricula, lessons and course workflows described here are retained in `codex/release-testing`; the formal release exposes the same source anatomy through [Browse anatomy](getting-started.md).
+**Archived source guide: NextBrain is excluded from the current application.** The acquisition, construction, browsing and teaching commands below document the former integration. Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Storage statements below refer to the earlier state; the cleanup record defines the current local assets. Curricula, lessons and course records remain historical testing-branch material.
 
 Eleven source-preserving tissue-block packages extend the atlas with hippocampal layers, amygdalar subdivisions, thalamic nuclei, hypothalamic and basal forebrain regions, deep cerebellar nuclei, and detailed brainstem nuclei and pathways. Each block has the matching source-processed ex vivo T2 MRI, categorical labels, unsmoothed surfaces, original source names, citations and acquisition records. The accepted four-panel frontend is unchanged.
 

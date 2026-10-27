@@ -1,5 +1,7 @@
 # Native statistical fields
 
+**Archived source guide: VENAT is excluded from acquisition, construction, discovery and opening.** Source definitions, licenses, exclusion and inspection records, and saved-scene records are retained. User-authorized removal of out-of-scope data is documented in the [local data cleanup record](maintenance/local-data-cleanup-2026-10-24.md). Commands and storage statements below document the earlier implementation. The scalar-field contract remains an implementation record.
+
 Manifest 1.8 adds `scalar-fields`: original scalar NIfTI volumes on one explicitly verified native grid, with no MRI backdrop or structure labels. Every field declares its source input, metric, units, statistic, interpretation, processing basis and reference. Field definitions are separate from spatial millimeter units. A supplied value range, when declared, is checked against actual samples. Byte identity with original source inputs is mandatory.
 
 The same acquisition, construction, local library, validation and browser interfaces apply. Construction writes individual checkpoints, verifies source hashes and reuses complete outputs. Volumes load on demand; switching a field releases the previous renderer volume metadata. A shared template name is not enough to overlay an unrelated source.

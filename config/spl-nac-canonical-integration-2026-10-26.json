@@ -1,0 +1,1766 @@
+{
+  "recorded_utc": "2026-10-26T12:53:08.463956+00:00",
+  "status": "passed",
+  "canonical_dataset_id": "spl_nac",
+  "canonical_package_version": "ad0584ea18912049",
+  "canonical_manifest": "/media/data/NeuroImage/derivatives/spl_nac/ad0584ea18912049/manifest.json",
+  "canonical_manifest_sha256": "f2573fe46465850d9fde5d90d30443fcd1ebddaf0ea56ad876173be2ba63791c",
+  "source_title_unchanged": true,
+  "source_space_unchanged": true,
+  "canonical_structure_count": 236,
+  "all_original_single_label_ids_retained": true,
+  "legacy_recipe_history": "config/source-history/spl_nac-v1.json",
+  "legacy_recipe_sha256": "6b7dbb2675f0e23f92502c410089974da9e30e950a059c6855b937bb7ce34693",
+  "historical_package_manifest_sha256_unchanged": {
+    "/media/data/NeuroImage/derivatives/spl_nac/39ec9bf5fa77140d/manifest.json": "819eb0232828b4dc747ad1a6903a2dc92fed3b5b49d7e3c5e6c78ccc8fc367f0",
+    "/media/data/NeuroImage/derivatives/spl_nac/5540cfe690956d43/manifest.json": "80e999693c9fb16d46cf2311f86c8c1dbdbdeda79f77e8e3a5e723b652fd6f39",
+    "/media/data/NeuroImage/derivatives/spl_nac_complete/946b93b535a34682/manifest.json": "627df1d106fbce91eb942fb871456da771600e38e086b603cb342d0c005f16f9",
+    "/media/data/NeuroImage/derivatives/spl_nac_sulci/0b38777fbd2f9fa1/manifest.json": "4a2b2875ae2357f42d4cc5cf50341bbd9c8d1e5a8fc10236bef9cb01960e6840"
+  },
+  "legacy_union_ids_retained_only_in_historical_packages": [
+    "spl_nac:group:60001",
+    "spl_nac:group:60002",
+    "spl_nac:group:60003",
+    "spl_nac:group:60004"
+  ],
+  "source_model_structure_count": 22,
+  "source_model_integration": "Same canonical SPL/NAC source, independent original source-model representation. Existing source-model geometry and layout remain unchanged; no hybrid MRI/model contract or fitted registration was introduced.",
+  "original_source_scene_frame_evidence": {
+    "scene_version": "Slicer4.4.0",
+    "scene_sha256": "023041f947261759fd4bc99ecb841cc2face8a4aad9c8de4ce9629112f5190d4",
+    "all_model_nodes_without_parent_transforms": true,
+    "model_node_count": 328,
+    "linear_transform_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "sulcal_models": [
+      {
+        "source_value": 5001,
+        "file": "Model_5001_left_calcarine_sulcus1.vtk",
+        "sha256": "26c230fa7dee74dd4d8ff70e58335cf451764940ada933f09664bf2e5a6e5057",
+        "model_node": "vtkMRMLModelNode330",
+        "storage_node": "vtkMRMLModelStorageNode328",
+        "parent_transform": null,
+        "points": 1960,
+        "bounds_source_ras_mm": [
+          [
+            -21.794443130493164,
+            -81.80530548095703,
+            -36.49420928955078
+          ],
+          [
+            4.113344669342041,
+            -31.068082809448242,
+            -14.181890487670898
+          ]
+        ]
+      },
+      {
+        "source_value": 5002,
+        "file": "Model_5002_right_calcarine_sulcus1.vtk",
+        "sha256": "c38d7a5bfed9fb71cb2a99f489c5694d895b6699da229cb3a5bf6d8e36dc2959",
+        "model_node": "vtkMRMLModelNode164",
+        "storage_node": "vtkMRMLModelStorageNode161",
+        "parent_transform": null,
+        "points": 1640,
+        "bounds_source_ras_mm": [
+          [
+            14.358863830566406,
+            -81.30855560302734,
+            -30.794269561767578
+          ],
+          [
+            29.532020568847656,
+            -23.943239212036133,
+            -10.894591331481934
+          ]
+        ]
+      },
+      {
+        "source_value": 5003,
+        "file": "Model_5003_left_central_sulcus1.vtk",
+        "sha256": "b7146297312214df826f05fe4d23d9ec47569612d8eab401a4ca501b9b507ac9",
+        "model_node": "vtkMRMLModelNode321",
+        "storage_node": "vtkMRMLModelStorageNode323",
+        "parent_transform": null,
+        "points": 2280,
+        "bounds_source_ras_mm": [
+          [
+            -55.78754806518555,
+            -41.79623031616211,
+            10.411572456359863
+          ],
+          [
+            1.1411421298980713,
+            -4.949879169464111,
+            51.55554962158203
+          ]
+        ]
+      },
+      {
+        "source_value": 5004,
+        "file": "Model_5004_right_central_sulcus1.vtk",
+        "sha256": "496f76a3f2fa5dc0db6f0c894fe563b3b76d5ac6dbbe0c5f8472853f7632503d",
+        "model_node": "vtkMRMLModelNode170",
+        "storage_node": "vtkMRMLModelStorageNode167",
+        "parent_transform": null,
+        "points": 2620,
+        "bounds_source_ras_mm": [
+          [
+            11.719880104064941,
+            -36.843727111816406,
+            2.7242729663848877
+          ],
+          [
+            56.201751708984375,
+            9.800585746765137,
+            48.92665100097656
+          ]
+        ]
+      },
+      {
+        "source_value": 5005,
+        "file": "Model_5005_left_cingulate_sulcus1.vtk",
+        "sha256": "b1eabf6c7bd716435811afe9cad5ff3ea6d5dfa98017769cd5a1e26471c17592",
+        "model_node": "vtkMRMLModelNode328",
+        "storage_node": "vtkMRMLModelStorageNode326",
+        "parent_transform": null,
+        "points": 3000,
+        "bounds_source_ras_mm": [
+          [
+            -14.252245903015137,
+            -59.334510803222656,
+            16.840194702148438
+          ],
+          [
+            -4.940603256225586,
+            48.631046295166016,
+            43.099300384521484
+          ]
+        ]
+      },
+      {
+        "source_value": 5006,
+        "file": "Model_5006_right_cingulate_sulcus1.vtk",
+        "sha256": "a5b7661c83a5a1014e7626acab9a15c2442438844b0c968d14033f044cecb7d5",
+        "model_node": "vtkMRMLModelNode183",
+        "storage_node": "vtkMRMLModelStorageNode180",
+        "parent_transform": null,
+        "points": 3760,
+        "bounds_source_ras_mm": [
+          [
+            2.981752395629883,
+            -43.37089538574219,
+            -5.416831016540527
+          ],
+          [
+            23.828102111816406,
+            54.26497268676758,
+            47.361637115478516
+          ]
+        ]
+      },
+      {
+        "source_value": 5007,
+        "file": "Model_5007_left_collateral_sulcus1.vtk",
+        "sha256": "1bab7a4da1e5f4a6aa831a47a0db3dbeece5662e462289cb615f008e3ed93388",
+        "model_node": "vtkMRMLModelNode320",
+        "storage_node": "vtkMRMLModelStorageNode322",
+        "parent_transform": null,
+        "points": 2060,
+        "bounds_source_ras_mm": [
+          [
+            -36.73471450805664,
+            -74.84593963623047,
+            -33.208885192871094
+          ],
+          [
+            -16.147449493408203,
+            11.147494316101074,
+            -14.754657745361328
+          ]
+        ]
+      },
+      {
+        "source_value": 5008,
+        "file": "Model_5008_right_collateral_sulcus1.vtk",
+        "sha256": "09b112d19e1743783dd5675503a49038e044bb21e10ca8eb35266cdab1668ec9",
+        "model_node": "vtkMRMLModelNode199",
+        "storage_node": "vtkMRMLModelStorageNode196",
+        "parent_transform": null,
+        "points": 1360,
+        "bounds_source_ras_mm": [
+          [
+            33.12062454223633,
+            -50.95526885986328,
+            -36.355003356933594
+          ],
+          [
+            42.275482177734375,
+            6.015560626983643,
+            -23.570262908935547
+          ]
+        ]
+      },
+      {
+        "source_value": 5009,
+        "file": "Model_5009_left_inferior_frontal_sulcus1.vtk",
+        "sha256": "643416711181ee278fc1722f636734e91042148d2fe0db19e3bd921ae33d83b3",
+        "model_node": "vtkMRMLModelNode323",
+        "storage_node": "vtkMRMLModelStorageNode324",
+        "parent_transform": null,
+        "points": 1300,
+        "bounds_source_ras_mm": [
+          [
+            -42.776824951171875,
+            13.556780815124512,
+            19.788013458251953
+          ],
+          [
+            -31.543928146362305,
+            50.903602600097656,
+            35.197776794433594
+          ]
+        ]
+      },
+      {
+        "source_value": 5010,
+        "file": "Model_5010_right_inferior_frontal_sulcus1.vtk",
+        "sha256": "9d15debcdd241c94ff0c596bac3a1ce56849aaaea62c0776e18a09687e9695db",
+        "model_node": "vtkMRMLModelNode223",
+        "storage_node": "vtkMRMLModelStorageNode220",
+        "parent_transform": null,
+        "points": 700,
+        "bounds_source_ras_mm": [
+          [
+            35.010379791259766,
+            21.245473861694336,
+            1.1194335222244263
+          ],
+          [
+            41.45539474487305,
+            57.904541015625,
+            22.95397186279297
+          ]
+        ]
+      },
+      {
+        "source_value": 5011,
+        "file": "Model_5011_left_intraparietal_sulcus1.vtk",
+        "sha256": "66d11eb4a56cb37f9ead0061c4ea35e524b4dea6668e147f0bbfc677f329574e",
+        "model_node": "vtkMRMLModelNode329",
+        "storage_node": "vtkMRMLModelStorageNode327",
+        "parent_transform": null,
+        "points": 2920,
+        "bounds_source_ras_mm": [
+          [
+            -30.434762954711914,
+            -85.79442596435547,
+            -24.07245445251465
+          ],
+          [
+            -17.031620025634766,
+            -39.87938690185547,
+            23.026742935180664
+          ]
+        ]
+      },
+      {
+        "source_value": 5012,
+        "file": "Model_5012_right_intraparietal_sulcus1.vtk",
+        "sha256": "5bdf28014fe6349ed41e1b9100b038f071b4a0bfbbe24218adf0f40cc90b6950",
+        "model_node": "vtkMRMLModelNode224",
+        "storage_node": "vtkMRMLModelStorageNode221",
+        "parent_transform": null,
+        "points": 1860,
+        "bounds_source_ras_mm": [
+          [
+            20.801342010498047,
+            -82.82311248779297,
+            -18.973926544189453
+          ],
+          [
+            43.33222198486328,
+            -38.929264068603516,
+            16.72850227355957
+          ]
+        ]
+      },
+      {
+        "source_value": 5013,
+        "file": "Model_5013_left_parieto-occipital_sulcus1.vtk",
+        "sha256": "8718c249a279ac64c77f2e88c85b0496ca1c06a27e5ff58da45b27ee4a2d6eb2",
+        "model_node": "vtkMRMLModelNode331",
+        "storage_node": "vtkMRMLModelStorageNode329",
+        "parent_transform": null,
+        "points": 1040,
+        "bounds_source_ras_mm": [
+          [
+            -18.141321182250977,
+            -81.3058090209961,
+            -11.488935470581055
+          ],
+          [
+            -8.418368339538574,
+            -54.07482147216797,
+            13.583687782287598
+          ]
+        ]
+      },
+      {
+        "source_value": 5014,
+        "file": "Model_5014_right_parieto-occipital_sulcus1.vtk",
+        "sha256": "7d510d6fe4bc43972bd0488d364760635b03394db3946ec8573494da519a226c",
+        "model_node": "vtkMRMLModelNode311",
+        "storage_node": "vtkMRMLModelStorageNode309",
+        "parent_transform": null,
+        "points": 1300,
+        "bounds_source_ras_mm": [
+          [
+            22.845062255859375,
+            -78.56241607666016,
+            -15.250777244567871
+          ],
+          [
+            31.937862396240234,
+            -40.08207321166992,
+            12.016573905944824
+          ]
+        ]
+      },
+      {
+        "source_value": 5015,
+        "file": "Model_5015_left_postcentral_sulcus1.vtk",
+        "sha256": "27ce5195c89ceeedab514d7a932e3d222cfe9c7a5b0d01f23f89470b6102b0a9",
+        "model_node": "vtkMRMLModelNode332",
+        "storage_node": "vtkMRMLModelStorageNode330",
+        "parent_transform": null,
+        "points": 2940,
+        "bounds_source_ras_mm": [
+          [
+            -44.588348388671875,
+            -50.19002914428711,
+            11.046806335449219
+          ],
+          [
+            -2.341585397720337,
+            -15.455058097839355,
+            47.22304916381836
+          ]
+        ]
+      },
+      {
+        "source_value": 5016,
+        "file": "Model_5016_right_postcentral_sulcus1.vtk",
+        "sha256": "bbc15b19b9984fb6256f9f148bafb10d1f47f5fc2463f2206c2b50b2ceb27790",
+        "model_node": "vtkMRMLModelNode312",
+        "storage_node": "vtkMRMLModelStorageNode318",
+        "parent_transform": null,
+        "points": 2140,
+        "bounds_source_ras_mm": [
+          [
+            12.063776016235352,
+            -51.29198455810547,
+            10.068190574645996
+          ],
+          [
+            57.435855865478516,
+            -2.3691418170928955,
+            39.75875473022461
+          ]
+        ]
+      },
+      {
+        "source_value": 5017,
+        "file": "Model_5017_left_precentral_sulcus1.vtk",
+        "sha256": "21646328a5772b6080c133c2083082fabdaf5ba9892a9eaa6a90bababa8cfc3e",
+        "model_node": "vtkMRMLModelNode326",
+        "storage_node": "vtkMRMLModelStorageNode325",
+        "parent_transform": null,
+        "points": 2100,
+        "bounds_source_ras_mm": [
+          [
+            -50.18107986450195,
+            -23.04741096496582,
+            10.176400184631348
+          ],
+          [
+            -1.6327673196792603,
+            15.276800155639648,
+            55.55875778198242
+          ]
+        ]
+      },
+      {
+        "source_value": 5018,
+        "file": "Model_5018_right_precentral_sulcus1.vtk",
+        "sha256": "d544cee713851b4184aab18af45bb33b2290ef85a9e75a30fcc4c561416c8a3e",
+        "model_node": "vtkMRMLModelNode315",
+        "storage_node": "vtkMRMLModelStorageNode319",
+        "parent_transform": null,
+        "points": 1600,
+        "bounds_source_ras_mm": [
+          [
+            12.591582298278809,
+            -16.766328811645508,
+            15.670936584472656
+          ],
+          [
+            53.37241744995117,
+            20.906532287597656,
+            50.019317626953125
+          ]
+        ]
+      },
+      {
+        "source_value": 5019,
+        "file": "Model_5019_left_superior_frontal_sulcus1.vtk",
+        "sha256": "05fe633e82fc6db31a3d4abaacc8b43a65a02f7f9a8f29b415b822fe5fa61eb9",
+        "model_node": "vtkMRMLModelNode155",
+        "storage_node": "vtkMRMLModelStorageNode152",
+        "parent_transform": null,
+        "points": 2080,
+        "bounds_source_ras_mm": [
+          [
+            -24.967815399169922,
+            -8.23492431640625,
+            33.5263786315918
+          ],
+          [
+            -14.285703659057617,
+            53.02378463745117,
+            47.59069061279297
+          ]
+        ]
+      },
+      {
+        "source_value": 5020,
+        "file": "Model_5020_right_superior_frontal_sulcus1.vtk",
+        "sha256": "7c7bb5df70d0bfcc9bc385d1ec4a893adbfab4754dcc34775315c8a9dffafd40",
+        "model_node": "vtkMRMLModelNode318",
+        "storage_node": "vtkMRMLModelStorageNode320",
+        "parent_transform": null,
+        "points": 2020,
+        "bounds_source_ras_mm": [
+          [
+            15.149045944213867,
+            -20.57410430908203,
+            30.408517837524414
+          ],
+          [
+            39.76610565185547,
+            43.6088981628418,
+            47.9070930480957
+          ]
+        ]
+      },
+      {
+        "source_value": 5021,
+        "file": "Model_5021_left_superior_temporal_sulcus1.vtk",
+        "sha256": "1187219fc4cb76025d34870b14c659508f8c2440aad6be3c6c496ea5f55593f2",
+        "model_node": "vtkMRMLModelNode157",
+        "storage_node": "vtkMRMLModelStorageNode154",
+        "parent_transform": null,
+        "points": 2040,
+        "bounds_source_ras_mm": [
+          [
+            -47.942535400390625,
+            -59.521236419677734,
+            -23.860904693603516
+          ],
+          [
+            -35.93687057495117,
+            16.040918350219727,
+            -1.014204502105713
+          ]
+        ]
+      },
+      {
+        "source_value": 5022,
+        "file": "Model_5022_right_superior_temporal_sulcus1.vtk",
+        "sha256": "e5e8b12384916f93b71a99b992ea930369836af538745423cbdc7e397fc758a7",
+        "model_node": "vtkMRMLModelNode319",
+        "storage_node": "vtkMRMLModelStorageNode321",
+        "parent_transform": null,
+        "points": 2040,
+        "bounds_source_ras_mm": [
+          [
+            38.433265686035156,
+            -43.97398376464844,
+            -29.55559730529785
+          ],
+          [
+            47.32229995727539,
+            25.314119338989258,
+            4.8397016525268555
+          ]
+        ]
+      }
+    ],
+    "mrml_native_volume_checks": [
+      {
+        "volume": "A1_grayT1",
+        "file": "volumes/imaging/A1_grayT1.nrrd",
+        "mrml_nrrd_affine_equal": true,
+        "affine_ras_mm": [
+          [
+            0.0,
+            0.0,
+            -0.75,
+            77.625
+          ],
+          [
+            -0.75,
+            0.0,
+            0.0,
+            107.625
+          ],
+          [
+            0.0,
+            -0.75,
+            0.0,
+            119.625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      {
+        "volume": "hncma-atlas",
+        "file": "volumes/labels/hncma-atlas.nrrd",
+        "mrml_nrrd_affine_equal": true,
+        "affine_ras_mm": [
+          [
+            0.0,
+            0.0,
+            -1.0,
+            128.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0,
+            128.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            128.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    ],
+    "paired_model_label_position_checks": [
+      {
+        "source_value": 35,
+        "file": "Model_35_pons.vtk",
+        "points": 4918,
+        "bounds_ras_mm": [
+          [
+            -20.908798217773438,
+            -32.85569763183594,
+            -51.68885803222656
+          ],
+          [
+            18.429183959960938,
+            2.5166091918945312,
+            -24.818374633789062
+          ]
+        ],
+        "distance_to_original_label_voxel_centers_mm": {
+          "declared-RAS-identity": {
+            "minimum": 0.0,
+            "median": 0.5127092156326398,
+            "p95": 0.9532257971161405,
+            "maximum": 1.2256624201682829
+          },
+          "incorrect-modern-LPS-flip": {
+            "minimum": 0.0,
+            "median": 17.494739157541645,
+            "p95": 29.983476114166486,
+            "maximum": 33.03277017063182
+          }
+        }
+      },
+      {
+        "source_value": 1003,
+        "file": "Model_1003_posterior_part_of_left_middle_frontal_gyrus.vtk",
+        "points": 6717,
+        "bounds_ras_mm": [
+          [
+            -44.12385559082031,
+            -9.7882080078125,
+            28.029830932617188
+          ],
+          [
+            -15.864410400390625,
+            33.38884735107422,
+            58.490638732910156
+          ]
+        ],
+        "distance_to_original_label_voxel_centers_mm": {
+          "declared-RAS-identity": {
+            "minimum": 0.0,
+            "median": 0.4402338115838518,
+            "p95": 0.934945966223601,
+            "maximum": 1.2348509391190496
+          },
+          "incorrect-modern-LPS-flip": {
+            "minimum": 32.27305793751894,
+            "median": 46.78196129816839,
+            "p95": 57.26861142593123,
+            "maximum": 60.528134616865415
+          }
+        }
+      }
+    ],
+    "coordinate_documentation": [
+      "https://www.slicer.org/wiki/Documentation/4.4/SlicerApplication/SupportedDataFormat",
+      "https://github.com/Slicer/Slicer/blob/v4.4.0/Libs/MRML/Core/vtkMRMLModelStorageNode.cxx"
+    ],
+    "conclusion": "The original Slicer 4.4 MRML/VTK model coordinates are documented RAS millimeters and use the identity source-scene frame, with no project registration or fitted transform. Current independent source-model packages remain unchanged in this integration; no hybrid image/model contract was introduced."
+  },
+  "volume_checks": [
+    {
+      "volume": "t1",
+      "exact_source_samples_in_scope": true,
+      "full_native_shape": [
+        256,
+        256,
+        256
+      ],
+      "full_native_affine_ras_mm": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          127.5
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          127.5
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          127.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "units": "mm",
+      "matches_existing_complete_package": true
+    },
+    {
+      "volume": "t2",
+      "exact_source_samples_in_scope": true,
+      "full_native_shape": [
+        256,
+        256,
+        256
+      ],
+      "full_native_affine_ras_mm": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          127.5
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          127.5
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          127.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "units": "mm",
+      "matches_existing_complete_package": true
+    },
+    {
+      "volume": "labels",
+      "exact_source_samples_in_scope": true,
+      "full_native_shape": [
+        256,
+        256,
+        256
+      ],
+      "full_native_affine_ras_mm": [
+        [
+          0.0,
+          0.0,
+          -1.0,
+          128.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0,
+          128.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "units": "mm",
+      "matches_existing_complete_package": true
+    }
+  ],
+  "mesh_checks": [
+    {
+      "id": "spl_nac:label:2",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:4",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:5",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:7",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:11",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:12",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:13",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:15",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:17",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:18",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:19",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:24",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:25",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:26",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:35",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:40",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:41",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:43",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:44",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:46",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:50",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:51",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:52",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:53",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:54",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:58",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:61",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:66",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:71",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:72",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:77",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:78",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:79",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:83",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:84",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:85",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:96",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:100",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:142",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:200",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:215",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:216",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:300",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:301",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:302",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:303",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:304",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:305",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:306",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:307",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:308",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:309",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:310",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:311",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:312",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:313",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:314",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:315",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:316",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:317",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:318",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:319",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:320",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:321",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:322",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:323",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:324",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:327",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:328",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:329",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:330",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:331",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:332",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:333",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:334",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:335",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:336",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:337",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:338",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:339",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:340",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:341",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:342",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:343",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:344",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:345",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:346",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:347",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:348",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:349",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:350",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:351",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:352",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:353",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:354",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:355",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:356",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:357",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:358",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:361",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:362",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:363",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:364",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:365",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:366",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:367",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:371",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:373",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:375",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:377",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:380",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:381",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:382",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:383",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:384",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:385",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:386",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:387",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:388",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:389",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:390",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:391",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:500",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:501",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:502",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:503",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:504",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:505",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:506",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:507",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:508",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:509",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:510",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:511",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:512",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:513",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:514",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:515",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:516",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:517",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:518",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:519",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:520",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:521",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:522",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:523",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:524",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:525",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1000",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1001",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1002",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1003",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1005",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1006",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1007",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1008",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1009",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1010",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1011",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1012",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1013",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1014",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1015",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1016",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1017",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1018",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1019",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1020",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1021",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1022",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1023",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1024",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1025",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1026",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1027",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1028",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1029",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1030",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1031",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1032",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1033",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1034",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:1035",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2000",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2001",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2002",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2003",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2005",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2006",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2007",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2008",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2009",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2010",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2011",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2012",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2013",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2014",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2015",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2016",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2017",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2018",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2019",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2020",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2021",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2022",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2023",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2024",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2025",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2026",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2027",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2028",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2029",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2030",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2031",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2032",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2033",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2034",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:2035",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3000",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3001",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3002",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3003",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3004",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3005",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3007",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3008",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3011",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3012",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3020",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3021",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3022",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3023",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3030",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3031",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3032",
+      "exact_existing_points_and_triangles": true
+    },
+    {
+      "id": "spl_nac:label:3033",
+      "exact_existing_points_and_triangles": true
+    }
+  ],
+  "case_selection_unchanged": {
+    "mug500": [
+      "A0031",
+      "A0032",
+      "A0033",
+      "A0034",
+      "A0035",
+      "A0101",
+      "A0102",
+      "A0103",
+      "A0104",
+      "A0105"
+    ],
+    "thu_mra": [
+      "001",
+      "006",
+      "007",
+      "009",
+      "010",
+      "014",
+      "015",
+      "019",
+      "021",
+      "030"
+    ]
+  },
+  "legacy_structure_id_checks": [
+    {
+      "manifest": "/media/data/NeuroImage/derivatives/spl_nac/39ec9bf5fa77140d/manifest.json",
+      "original_single_label_count": 101,
+      "all_original_single_label_ids_retained_in_canonical": true,
+      "historical_union_ids": [
+        "spl_nac:group:60001",
+        "spl_nac:group:60002",
+        "spl_nac:group:60003",
+        "spl_nac:group:60004"
+      ]
+    },
+    {
+      "manifest": "/media/data/NeuroImage/derivatives/spl_nac/5540cfe690956d43/manifest.json",
+      "original_single_label_count": 101,
+      "all_original_single_label_ids_retained_in_canonical": true,
+      "historical_union_ids": [
+        "spl_nac:group:60001",
+        "spl_nac:group:60002",
+        "spl_nac:group:60003",
+        "spl_nac:group:60004"
+      ]
+    }
+  ]
+}

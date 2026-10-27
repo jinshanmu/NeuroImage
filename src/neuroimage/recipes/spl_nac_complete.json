@@ -1,0 +1,487 @@
+{
+  "id": "spl_nac_complete",
+  "adapter": "spl-nac-nrrd",
+  "version": "1",
+  "title": "SPL/NAC · complete intracranial source labels",
+  "space": {
+    "id": "spl-nac-a1-native-2017",
+    "name": "SPL/NAC A1 native space",
+    "reference": "January 2017 source NRRD physical coordinates",
+    "correspondence": "Same-volunteer MRI and source labels. Their affine origins differ by 0.5 mm on each world axis; each native grid is retained. No additional registration is applied."
+  },
+  "inputs": {
+    "t1": "raw/spl_nac/brain-2017-01/volumes/imaging/A1_grayT1-1mm_resample.nrrd",
+    "t2": "raw/spl_nac/brain-2017-01/volumes/imaging/A1_grayT2-1mm_resample.nrrd",
+    "labels": "raw/spl_nac/brain-2017-01/volumes/labels/hncma-atlas.nrrd",
+    "label_table": "raw/spl_nac/brain-2017-01/labelinfo/hncma-atlas-lut.tsv",
+    "metadata_table": "raw/spl_nac/brain-2017-01/labelinfo/brain-atlas-labels-with-metadata.tsv",
+    "license": "licenses/spl_nac/official-terms.html",
+    "archive_license": "raw/spl_nac/brain-2017-01/LICENSE.md"
+  },
+  "images": [
+    {
+      "id": "t1",
+      "name": "T1-weighted MRI"
+    },
+    {
+      "id": "t2",
+      "name": "T2-weighted MRI"
+    }
+  ],
+  "nrrd_units": "mm",
+  "source_version": "2017-01",
+  "sources": [
+    {
+      "id": "spl_nac",
+      "title": "SPL/NAC Brain Atlas",
+      "version": "2017-01",
+      "url": "https://www.openanatomy.org/atlas-pages/atlas-spl-nac-brain.html",
+      "citation": "Halle, Talos, Jakab, Makris, Meier, Wald, Fischl and Kikinis. SPL/NAC Brain Atlas, January 2017. BWH and MGH. NIH P41 RR013218, P41 EB015902 and Google Faculty Research Award.",
+      "license_name": "3D Slicer License, Part B",
+      "license_url": "https://www.openanatomy.org/atlas-pages/slicer-license.html",
+      "license_input": "license"
+    }
+  ],
+  "selection": [
+    {
+      "category": "White matter context",
+      "values": [
+        2
+      ]
+    },
+    {
+      "category": "Ventricles",
+      "values": [
+        4,
+        5
+      ]
+    },
+    {
+      "category": "Cerebellum",
+      "values": [
+        7
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "category": "Ventricles",
+      "values": [
+        15
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        17,
+        18
+      ]
+    },
+    {
+      "category": "Ventricles",
+      "values": [
+        19,
+        24
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        25,
+        26
+      ]
+    },
+    {
+      "category": "Brainstem",
+      "values": [
+        35,
+        40
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        41
+      ]
+    },
+    {
+      "category": "Ventricles",
+      "values": [
+        43,
+        44
+      ]
+    },
+    {
+      "category": "Cerebellum",
+      "values": [
+        46
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        58
+      ]
+    },
+    {
+      "category": "Brainstem",
+      "values": [
+        61
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        66,
+        71,
+        72
+      ]
+    },
+    {
+      "category": "Cranial nerves",
+      "values": [
+        77
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        78
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        79,
+        83,
+        84
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        85,
+        96,
+        100,
+        142,
+        200
+      ]
+    },
+    {
+      "category": "Cranial nerves",
+      "values": [
+        215
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        216
+      ]
+    },
+    {
+      "category": "Cerebellum",
+      "values": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        371,
+        373,
+        375,
+        377
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525
+      ]
+    },
+    {
+      "category": "Cerebral cortex",
+      "values": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010,
+        1011,
+        1012,
+        1013,
+        1014,
+        1015,
+        1016,
+        1017,
+        1018,
+        1019,
+        1020,
+        1021,
+        1022,
+        1023,
+        1024,
+        1025,
+        1026,
+        1027,
+        1028,
+        1029,
+        1030,
+        1031,
+        1032,
+        1033,
+        1034,
+        1035,
+        2000,
+        2001,
+        2002,
+        2003,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026,
+        2027,
+        2028,
+        2029,
+        2030,
+        2031,
+        2032,
+        2033,
+        2034,
+        2035
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        3000,
+        3001,
+        3002,
+        3003
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        3004,
+        3005,
+        3007
+      ]
+    },
+    {
+      "category": "Pituitary structures",
+      "values": [
+        3008,
+        3011,
+        3012
+      ]
+    },
+    {
+      "category": "Brainstem",
+      "values": [
+        3020,
+        3021,
+        3022,
+        3023,
+        3030,
+        3031,
+        3032,
+        3033
+      ]
+    }
+  ],
+  "acquisition": "Run neuroimage acquire spl_nac --data-root <existing-data-root>; original archives, selectively expanded inputs and license receipts remain outside the software package.",
+  "archives": [
+    {
+      "dataset_id": "spl_nac",
+      "filename": "brain-2017-01.zip",
+      "url": "https://www.openanatomy.org/atlases/nac/brain-2017-01.zip",
+      "bytes": 197913214,
+      "sha256": "0db330e943c048ffb36aab5c914f699267886af62bac7eb4485267b96c56d234",
+      "hash_basis": "SHA256 pinned from the verified local acquisition; not a publisher signature",
+      "members": [
+        {
+          "member": "brain-2017-01/volumes/imaging/A1_grayT1-1mm_resample.nrrd",
+          "target": "raw/spl_nac/brain-2017-01/volumes/imaging/A1_grayT1-1mm_resample.nrrd",
+          "bytes": 9253307,
+          "sha256": "1fdb69d9a544916bef324ebf600016f41d03d364999c26a863a53cab6c438b51"
+        },
+        {
+          "member": "brain-2017-01/volumes/imaging/A1_grayT2-1mm_resample.nrrd",
+          "target": "raw/spl_nac/brain-2017-01/volumes/imaging/A1_grayT2-1mm_resample.nrrd",
+          "bytes": 6615239,
+          "sha256": "03c08f2fa60c9e538ab496b97e0caf7920c5045f2581209654fb8f2bd48e6f25"
+        },
+        {
+          "member": "brain-2017-01/volumes/labels/hncma-atlas.nrrd",
+          "target": "raw/spl_nac/brain-2017-01/volumes/labels/hncma-atlas.nrrd",
+          "bytes": 466100,
+          "sha256": "d40a8b7d3adc1e8bec3c276a895db6aaed913aa83a2161015da1083face636ae"
+        },
+        {
+          "member": "brain-2017-01/labelinfo/hncma-atlas-lut.tsv",
+          "target": "raw/spl_nac/brain-2017-01/labelinfo/hncma-atlas-lut.tsv",
+          "bytes": 15663,
+          "sha256": "9f15a66b83d1088f8d49fdf23a5c40d28dadc84f6c121ded37f511db7e604b70"
+        },
+        {
+          "member": "brain-2017-01/labelinfo/brain-atlas-labels-with-metadata.tsv",
+          "target": "raw/spl_nac/brain-2017-01/labelinfo/brain-atlas-labels-with-metadata.tsv",
+          "bytes": 20103,
+          "sha256": "13a6a22b3bd7cef6129c9b2474fbc8ff1e22d41562a892e25770181c86088ab4"
+        },
+        {
+          "member": "brain-2017-01/LICENSE.md",
+          "target": "raw/spl_nac/brain-2017-01/LICENSE.md",
+          "bytes": 125,
+          "sha256": "26ab4d622b3df5b7adb145862696f4b6c2c3ff7f4a24f859880050d665a63bec"
+        }
+      ]
+    }
+  ],
+  "license_downloads": [
+    {
+      "target": "licenses/spl_nac/official-terms.html",
+      "url": "https://www.openanatomy.org/atlas-pages/slicer-license.html",
+      "maximum_bytes": 1048576
+    }
+  ],
+  "scope_notes": [
+    "All 236 named nonzero source labels in the current intracranial and cranial-nerve catalogue scope. Original lookup-table names, values, side assignments and native physical grids are retained.",
+    "The source inventory also contains 73 named head/neck muscle and oral/pharyngeal labels plus two eye-globe labels. Those 75 extra-intracranial labels remain in the source audit and are not included in this configuration. Categories are project catalogue routing, not new source segmentation or anatomical review.",
+    "The original left/right optic-nerve labels retain their complete delivered extents. Orbital, intracranial and retinal portions are not independently partitioned or inferred by this project.",
+    "Source value 1 has no entry in the delivered lookup table or metadata table and is not given an invented anatomical name. It is omitted from this named-structure catalogue.",
+    "The four legacy SPL/NAC unions remain available in the separate spl_nac source configuration. This configuration retains their 90 present component labels separately; it does not overwrite them with combined output labels.",
+    "Only original nonempty volume labels are included. Original VTK-only structures and duplicate VTK files are recorded in the source-inventory audit and are not rasterized into this source grid."
+  ]
+}

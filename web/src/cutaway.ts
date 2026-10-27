@@ -14,10 +14,20 @@ export function removedByCutaway(cutaway: SurfaceCutaway | undefined, id: string
   return !!cutaway?.structures.includes(id) && cutaway.side * (point[cutaway.axis] - cutaway.position_mm) > 0
 }
 
+/** Resolve display-only following cuts without changing fixed legacy scenes. */
+export function cursorCutaway(cutaway: SurfaceCutaway | undefined, position: ArrayLike<number>): SurfaceCutaway | undefined {
+  if (!cutaway?.followCursor) return cutaway
+  const coordinate = position[cutaway.axis]
+  if (!Number.isFinite(coordinate) || Math.abs(coordinate) > 1e6 || coordinate === cutaway.position_mm) return cutaway
+  return { ...cutaway, position_mm: coordinate }
+}
+
 export function validateCutaway(value: unknown, ids: Set<string>): value is SurfaceCutaway {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false
   const item = value as SurfaceCutaway
-  return Object.keys(item).sort().join(',') === 'axis,position_mm,side,structures' &&
+  const keys = Object.keys(item).sort().join(',')
+  return (keys === 'axis,position_mm,side,structures' || keys === 'axis,followCursor,position_mm,side,structures') &&
+    (item.followCursor === undefined || typeof item.followCursor === 'boolean') &&
     [0, 1, 2].includes(item.axis) && [-1, 1].includes(item.side) &&
     typeof item.position_mm === 'number' && Number.isFinite(item.position_mm) && Math.abs(item.position_mm) <= 1e6 &&
     Array.isArray(item.structures) && item.structures.length > 0 && new Set(item.structures).size === item.structures.length &&
@@ -25,7 +35,7 @@ export function validateCutaway(value: unknown, ids: Set<string>): value is Surf
 }
 
 export function cutawayAtCursor(position: Vec3, structures: string[], axis: 0 | 1 | 2 = 2): SurfaceCutaway {
-  return { axis, side: 1, position_mm: position[axis], structures: [...new Set(structures)] }
+  return { axis, side: 1, position_mm: position[axis], structures: [...new Set(structures)], followCursor: true }
 }
 
 export function cutawayDescription(cutaway: SurfaceCutaway): string {

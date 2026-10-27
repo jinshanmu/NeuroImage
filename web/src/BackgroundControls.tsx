@@ -1,22 +1,22 @@
+import { FrameRange } from './FrameRange'
+import type { ReactNode } from 'react'
+
 interface BackgroundLayer {
   enabled: boolean
   opacity: number
-  toggle: (enabled: boolean) => void
   adjust: (opacity: number) => void
 }
 
-export function BackgroundControls({ title, image, model, disabled, unavailable }: {
-  title: string; image?: BackgroundLayer; model?: BackgroundLayer; disabled: boolean; unavailable?: string;
+export function BackgroundControls({ image, model, disabled, unavailable, children, className }: {
+  image?: BackgroundLayer; model?: BackgroundLayer; disabled: boolean; unavailable?: string; children?: ReactNode; className?: string;
 }) {
-  return <div className="background-controls" role="group" aria-label={title}>
-    <span>{title}</span>
+  return <div className={`background-controls${className ? ' ' + className : ''}`} role="group" aria-label={children ? 'Background and cursor' : 'Background'}>
     {([['2D', image], ['3D', model]] as const).map(([name, layer]) => layer && <div className="background-layer" key={name}>
-      <button aria-label={`${name} background`} aria-pressed={layer.enabled} disabled={disabled}
-        onClick={() => layer.toggle(!layer.enabled)}>{name} {layer.enabled ? 'on' : 'off'}</button>
-      <label><span className="sr-only">{name} background opacity</span><input aria-label={`${name} background opacity`} type="range" min="0" max="1" step=".05"
-        value={layer.opacity} disabled={disabled || !layer.enabled} onChange={event => layer.adjust(Number(event.target.value))}/></label>
-      <output aria-label={`${name} background opacity value`}>{Math.round(layer.opacity * 100)}%</output>
+      <label>{name} background<FrameRange aria-label={`${name} background`} min="0" max="1" step=".05"
+        value={layer.enabled ? layer.opacity : 0} disabled={disabled} onValueChange={layer.adjust}/>
+        <output aria-label={`${name} background opacity value`}>{Math.round((layer.enabled ? layer.opacity : 0) * 100)}%</output></label>
     </div>)}
+    {children}
     {unavailable && <span className="small muted">{unavailable}</span>}
   </div>
 }

@@ -54,3 +54,9 @@ __pycache__/
 *.hdf5
 *.h5
 /web/public/third-party-notices.txt
+/docs/maintenance/*.json
+/docs/maintenance/*.jsonl
+/docs/research/
+/.agents/
+/.aws/
+/.codex/

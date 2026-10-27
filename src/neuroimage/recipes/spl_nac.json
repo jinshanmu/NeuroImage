@@ -1,7 +1,7 @@
 {
   "id": "spl_nac",
   "adapter": "spl-nac-nrrd",
-  "version": "1",
+  "version": "2",
   "title": "SPL/NAC \u00b7 normal volunteer",
   "space": {
     "id": "spl-nac-a1-native-2017",
@@ -44,15 +44,22 @@
   ],
   "selection": [
     {
+      "category": "White matter context",
+      "values": [
+        2
+      ]
+    },
+    {
       "category": "Ventricles",
       "values": [
         4,
-        5,
-        15,
-        19,
-        24,
-        43,
-        44
+        5
+      ]
+    },
+    {
+      "category": "Cerebellum",
+      "values": [
+        7
       ]
     },
     {
@@ -60,43 +67,243 @@
       "values": [
         11,
         12,
-        13,
+        13
+      ]
+    },
+    {
+      "category": "Ventricles",
+      "values": [
+        15
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
         17,
-        18,
+        18
+      ]
+    },
+    {
+      "category": "Ventricles",
+      "values": [
+        19,
+        24
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
         25,
-        26,
-        50,
-        51,
-        52,
-        53,
-        54,
-        58,
-        83,
-        3000,
-        3001
+        26
       ]
     },
     {
       "category": "Brainstem",
       "values": [
         35,
-        40,
-        61
-      ]
-    },
-    {
-      "category": "Cerebellum",
-      "values": [
-        7,
-        46
+        40
       ]
     },
     {
       "category": "White matter context",
       "values": [
-        2,
-        41,
-        3004
+        41
+      ]
+    },
+    {
+      "category": "Ventricles",
+      "values": [
+        43,
+        44
+      ]
+    },
+    {
+      "category": "Cerebellum",
+      "values": [
+        46
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        50,
+        51,
+        52,
+        53,
+        54,
+        58
+      ]
+    },
+    {
+      "category": "Brainstem",
+      "values": [
+        61
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        66,
+        71,
+        72
+      ]
+    },
+    {
+      "category": "Cranial nerves",
+      "values": [
+        77
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        78
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        79,
+        83,
+        84
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        85,
+        96,
+        100,
+        142,
+        200
+      ]
+    },
+    {
+      "category": "Cranial nerves",
+      "values": [
+        215
+      ]
+    },
+    {
+      "category": "White matter context",
+      "values": [
+        216
+      ]
+    },
+    {
+      "category": "Cerebellum",
+      "values": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        371,
+        373,
+        375,
+        377
+      ]
+    },
+    {
+      "category": "Deep structures",
+      "values": [
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        500,
+        501,
+        502,
+        503,
+        504,
+        505,
+        506,
+        507,
+        508,
+        509,
+        510,
+        511,
+        512,
+        513,
+        514,
+        515,
+        516,
+        517,
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525
       ]
     },
     {
@@ -173,153 +380,43 @@
         2034,
         2035
       ]
-    }
-  ],
-  "unions": [
-    {
-      "label_value": 60001,
-      "name": "Left cerebellar lobules (source union)",
-      "category": "Cerebellum",
-      "laterality": "left",
-      "color": [
-        218,
-        160,
-        67
-      ],
-      "source_values": [
-        300,
-        301,
-        302,
-        303,
-        304,
-        305,
-        306,
-        307,
-        308,
-        309,
-        310,
-        311,
-        312,
-        313,
-        314,
-        315,
-        316,
-        317,
-        318,
-        319,
-        320,
-        321,
-        322,
-        323,
-        324,
-        325,
-        326,
-        327,
-        328,
-        329,
-        330,
-        331,
-        332,
-        333
-      ]
     },
     {
-      "label_value": 60002,
-      "name": "Right cerebellar lobules (source union)",
-      "category": "Cerebellum",
-      "laterality": "right",
-      "color": [
-        229,
-        180,
-        93
-      ],
-      "source_values": [
-        334,
-        335,
-        336,
-        337,
-        338,
-        339,
-        340,
-        341,
-        342,
-        343,
-        344,
-        345,
-        346,
-        347,
-        348,
-        349,
-        350,
-        351,
-        352,
-        353,
-        354,
-        355,
-        356,
-        357,
-        358,
-        359,
-        360,
-        361,
-        362,
-        363,
-        364,
-        365,
-        366,
-        367
-      ]
-    },
-    {
-      "label_value": 60003,
-      "name": "Left thalamic parcellations (source union)",
       "category": "Deep structures",
-      "laterality": "left",
-      "color": [
-        91,
-        184,
-        160
-      ],
-      "source_values": [
-        501,
-        503,
-        505,
-        507,
-        509,
-        511,
-        513,
-        515,
-        517,
-        519,
-        521,
-        523,
-        525
+      "values": [
+        3000,
+        3001,
+        3002,
+        3003
       ]
     },
     {
-      "label_value": 60004,
-      "name": "Right thalamic parcellations (source union)",
-      "category": "Deep structures",
-      "laterality": "right",
-      "color": [
-        91,
-        184,
-        160
-      ],
-      "source_values": [
-        500,
-        502,
-        504,
-        506,
-        508,
-        510,
-        512,
-        514,
-        516,
-        518,
-        520,
-        522,
-        524
+      "category": "White matter context",
+      "values": [
+        3004,
+        3005,
+        3007
+      ]
+    },
+    {
+      "category": "Pituitary structures",
+      "values": [
+        3008,
+        3011,
+        3012
+      ]
+    },
+    {
+      "category": "Brainstem",
+      "values": [
+        3020,
+        3021,
+        3022,
+        3023,
+        3030,
+        3031,
+        3032,
+        3033
       ]
     }
   ],
@@ -378,5 +475,13 @@
       "url": "https://www.openanatomy.org/atlas-pages/slicer-license.html",
       "maximum_bytes": 1048576
     }
+  ],
+  "scope_notes": [
+    "All 236 named nonzero source labels in the current intracranial and cranial-nerve catalogue scope. Original lookup-table names, values, side assignments and native physical grids are retained.",
+    "The source inventory also contains 73 named head/neck muscle and oral/pharyngeal labels plus two eye-globe labels. Those 75 extra-intracranial labels remain in the source audit and are not included in this configuration. Categories are project catalogue routing, not new source segmentation or anatomical review.",
+    "The original left/right optic-nerve labels retain their complete delivered extents. Orbital, intracranial and retinal portions are not independently partitioned or inferred by this project.",
+    "Source value 1 has no entry in the delivered lookup table or metadata table and is not given an invented anatomical name. It is omitted from this named-structure catalogue.",
+    "The four coarse cerebellar/thalamic union groups remain in their original historical spl_nac version-1 packages and scenes. This canonical configuration exposes the 90 nonempty component labels individually without overwriting any of the 236 original source labels.",
+    "Only original nonempty volume labels are included here. The 22 original VTK-only sulcal surfaces remain available as the independent source-model representation within the same SPL/NAC source; no voxels or additional thickness are invented for them."
   ]
 }

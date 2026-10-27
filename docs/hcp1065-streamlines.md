@@ -38,7 +38,7 @@ The format's required corner-to-center and header-defined orientation conversion
 
 ## Browse the evidence
 
-Select a source bundle by name or stable ID. The physical cursor moves to a retained source vertex near its point-weighted centroid. This is a reproducible navigation point, not an independently identified anatomical landmark. Change T1/T2, radiological convention or layout while preserving the physical cursor. Drag the 3D view to rotate and adjust **3D zoom** for context or close inspection.
+Select a source bundle by name or stable ID. The physical cursor moves to a retained source vertex near its point-weighted centroid. This is a reproducible navigation point, not an independently identified anatomical landmark. Change T1/T2 or layout while preserving the physical cursor. Image sections consistently use radiological convention without a switch. Drag the 3D view to rotate and adjust **3D zoom** for context or close inspection.
 
 **Display sampling** selects complete original trajectories by a recorded source-index rule:
 
@@ -51,7 +51,7 @@ Select a source bundle by name or stable ID. The physical cursor moves to a reta
 
 The display levels are nested deterministic subsets. An explicit JSON index list accompanies each subset, so a displayed line can be traced back to its original source record. The UI states both displayed and retained counts. Line density, line thickness and color are display choices, not anatomy, axon count or confidence. Whole-bundle bounding boxes and counts always describe the complete retained source.
 
-The three 2D windows show only segment portions inside the physical **Section slab**, initially 1 mm thick and adjustable from 0.2 to 10 mm. A thicker slab contains more trajectory portions; it does not increase MRI resolution. It is not a projection of the whole bundle. **Section trajectories** controls only this overlay. **3D trajectory opacity** and per-bundle opacity affect only the 3D display. Source arrays and coordinates remain unchanged.
+The three 2D windows show only segment portions inside the physical **Section slab**, initially 1 mm thick and adjustable from 0.2 to 10 mm. A thicker slab contains more trajectory portions; it does not increase MRI resolution. It is not a projection of the whole bundle. **2D overlay** controls only this overlay. **3D opacity** and per-bundle opacity affect only the 3D display. Source arrays and coordinates remain unchanged.
 
 Click a slice or double-click a visible 3D line to locate it. The inspector lists displayed bundles within 1 mm of the picked point or displayed section segment. Overlapping candidates remain separately selectable; choosing one does not move the physical cursor. This is proximity to displayed computational estimates, not an exclusive tissue label. Hidden or transparent geometry is excluded where it is not displayed. Changing sampling or visibility refreshes this evidence.
 

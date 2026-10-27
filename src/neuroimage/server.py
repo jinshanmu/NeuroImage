@@ -13,6 +13,9 @@ from .validation import validate_package
 from .structure_search import search_structures
 from .coverage import source_coverage, source_details
 from .render_cache import RenderCache
+from .contracts import Manifest
+from .dataset_policy import ExcludedDatasetError, require_supported_dataset, dataset_is_excluded
+from .dataset_info import manifest_dataset_info
 
 
 def create_server(manifest_paths, web_root, port=8765, *, content_path=None, workspace=None):
@@ -27,6 +30,14 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                                minimum_free_gib=workspace.state_floor_gib if workspace else 0)
     registry_lock = threading.RLock()
     verification_lock = threading.Lock()
+
+    def require_package_supported(key):
+        require_supported_dataset(key)
+        with registry_lock:
+            registered = next((item for item in packages if item["key"] == key), None)
+            if registered:
+                require_supported_dataset(registered["dataset_id"],
+                    [registered["key"], *[source["id"] for source in registered["sources"]]])
     token = secrets.token_urlsafe(32) if workspace else None
 
     def register_package(path, *, allow_existing=True):
@@ -37,6 +48,7 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
         with verification_lock:
             previous = verified_files.get(path)
             if allow_existing and previous:
+                require_package_supported(previous["key"])
                 try:
                     if (previous["stamp"] == file_stamp(previous["files"], path.parent)
                             and previous["browser_stamp"] == file_stamp(previous["browser_files"], render_cache.root)):
@@ -56,9 +68,13 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
         return result
 
     def verify_and_register(path, *, allow_existing):
+        declared = Manifest.model_validate_json(path.read_bytes())
+        require_supported_dataset(declared.dataset_id, [declared.package_id, *(source.id for source in declared.sources)])
         started = time.monotonic()
         statistics = {}
         manifest = validate_package(path, cache_policy="reuse", statistics=statistics)
+        require_supported_dataset(manifest.dataset_id, [manifest.package_id, *(source.id for source in manifest.sources)])
+        info = manifest_dataset_info(manifest)
         print(json.dumps({"event": "package-validated", "dataset": manifest.dataset_id,
                           "package_version": manifest.package_version, "seconds": round(time.monotonic() - started, 2),
                           **statistics}), flush=True)
@@ -81,6 +97,7 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 packages.append({"key": key, "title": manifest.title, "dataset_id": manifest.dataset_id,
                                  "package_version": manifest.package_version, "space": manifest.space.name,
                                  "representation": manifest.representation,
+                                 "dataset_info": info, "sources": [source.model_dump() for source in manifest.sources],
                                  "created_utc": manifest.build.get("created_utc", ""),
                                  "coverage": source_coverage(manifest.dataset_id, [s.model_dump() for s in manifest.structures]),
                                  "detail_coverage": source_details(manifest.dataset_id, [s.model_dump() for s in manifest.structures]),
@@ -186,7 +203,7 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
             except (BrokenPipeError, ConnectionResetError):
                 pass  # The operation keeps its persisted result after disconnection.
             except (ValueError, OSError) as error:
-                self.json_response({"error": str(error)}, status=400)
+                self.json_response({"error": str(error), **({"code": "dataset_excluded"} if isinstance(error, ExcludedDatasetError) else {})}, status=400)
 
         def respond(self, head):
             # Reject foreign Host headers to reduce DNS rebinding on this local-only API.
@@ -194,10 +211,19 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 self.send_error(403, "Local host only")
                 return
             route = unquote(urlsplit(self.path).path)
+            if route.startswith("/atlas/"):
+                try:
+                    require_package_supported(route.split("/", 3)[2])
+                except ExcludedDatasetError as error:
+                    self.json_response({"error": str(error), "code": "dataset_excluded"}, status=400, head=head)
+                    return
             if route == "/api/atlases":
                 with registry_lock:
-                    api = {"schema_version": "1.0", "atlases": list(packages), "workspace": workspace is not None,
-                           "startup": {"atlas_key": initial_key, "content_url": "/api/startup-content"} if initial_content is not None else None}
+                    available = [item for item in packages if not dataset_is_excluded(
+                        item["dataset_id"], [source["id"] for source in item["sources"]])]
+                    api = {"schema_version": "1.0", "atlases": available, "workspace": workspace is not None,
+                           "startup": {"atlas_key": initial_key, "content_url": "/api/startup-content"}
+                           if initial_content is not None and any(item["key"] == initial_key for item in available) else None}
                 self.json_response(api, head=head)
                 return
             if workspace and route.startswith("/api/workspace"):
@@ -212,6 +238,7 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                     elif route.startswith("/api/workspace/atlases/"):
                         from .workspace import package_key
                         key = route.removeprefix("/api/workspace/atlases/")
+                        require_package_supported(key)
                         matches = [record for record in workspace.package_records()
                                    if record.get("status") == "available" and package_key(record) == key]
                         if len(matches) != 1:
@@ -237,9 +264,14 @@ def create_server(manifest_paths, web_root, port=8765, *, content_path=None, wor
                 except (BrokenPipeError, ConnectionResetError):
                     return
                 except (ValueError, OSError) as error:
-                    self.json_response({"error": str(error)}, status=400, head=head)
+                    self.json_response({"error": str(error), **({"code": "dataset_excluded"} if isinstance(error, ExcludedDatasetError) else {})}, status=400, head=head)
                 return
             if route == "/api/startup-content" and initial_content is not None:
+                try:
+                    require_package_supported(initial_key)
+                except ExcludedDatasetError as error:
+                    self.json_response({"error": str(error), "code": "dataset_excluded"}, status=400, head=head)
+                    return
                 self.headers_for(200, len(initial_content), "application/json")
                 if not head:
                     self.wfile.write(initial_content)

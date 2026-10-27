@@ -4,6 +4,10 @@ from pathlib import Path
 import csv
 import json
 import re
+from .dataset_policy import dataset_is_excluded, require_supported_dataset
+from .browse_policy import source_is_browsable
+from .thu_cases import thu_recipe, thu_recipe_names
+from .mug_cases import mug_recipe, mug_recipe_names
 
 
 @dataclass
@@ -14,13 +18,22 @@ class ImportedDataset:
 
 
 def recipe_names():
-    return sorted(p.stem for p in Path(__file__).with_name("recipes").glob("*.json"))
+    names = {p.stem for p in Path(__file__).with_name("recipes").glob("*.json")}
+    names.update(thu_recipe_names())
+    names.update(mug_recipe_names())
+    return sorted(name for name in names if not dataset_is_excluded(name) and source_is_browsable(name))
 
 
 def load_recipe(name):
-    if name not in recipe_names():
+    require_supported_dataset(name)
+    if not isinstance(name, str) or re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]*", name) is None:
+        raise ValueError("Choose a safe installed source recipe name")
+    path = Path(__file__).with_name("recipes") / f"{name}.json"
+    recipe = json.loads(path.read_text()) if path.is_file() else thu_recipe(name) or mug_recipe(name)
+    if recipe is None:
         raise ValueError(f"Unknown recipe {name!r}; choose from {', '.join(recipe_names())}")
-    return json.loads((Path(__file__).with_name("recipes") / f"{name}.json").read_text())
+    require_supported_dataset(recipe["id"], (source["id"] for source in recipe["sources"]))
+    return recipe
 
 
 def source_path(root: Path, relative: str) -> Path:
@@ -99,7 +112,7 @@ def import_dataset(name: str, data_root: Path) -> ImportedDataset:
         if field.get("source_input") not in paths or type(field.get("source_frame")) is not int or field["source_frame"] < 0:
             raise ValueError("The native frame adapter requires a declared input and zero-based frame")
         return ImportedDataset(recipe, paths, [])
-    elif recipe["adapter"] in {"blender-source-surfaces", "stl-source-surfaces", "gifti-source-surfaces"}:
+    elif recipe["adapter"] in {"blender-source-surfaces", "stl-source-surfaces", "gifti-source-surfaces", "vtk-source-surfaces"}:
         from .model_build import model_catalog
         return ImportedDataset(recipe, paths, model_catalog(recipe))
     else:
